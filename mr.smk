@@ -14,9 +14,7 @@ TraitCode = config['TraitCode']
 TraitBlurb = config['TraitBlurb']
 TraitClump = config['TraitClump']
 
-NbDistribution = config['NbDistribution']
 Pthreshold = config['Pthreshold']
-Cache = config['Cache']
 
 rule all:
     input:
@@ -46,9 +44,7 @@ rule html_Report:
         trait_ab42_path = "2_DerivedData/{TraitCode}/{TraitCode}_ab42_{Pthreshold}_MRdat.csv",
         trait_ptau_path = "2_DerivedData/{TraitCode}/{TraitCode}_ptau_{Pthreshold}_MRdat.csv",
         trait_tau_path = "2_DerivedData/{TraitCode}/{TraitCode}_tau_{Pthreshold}_MRdat.csv",
-        NbDistribution = NbDistribution,
         Pthreshold = '{Pthreshold}',
-        Cache = Cache
     shell:
         "R -e 'rmarkdown::render("
         """"{input.script}", output_file = "{output}", output_dir = "{params.output_dir}", \
@@ -58,6 +54,6 @@ ptau.summary = "{input.ptau_summary}", tau.summary = "{input.tau_summary}", trai
 trait_load.path = "{params.trait_load_path}", trait_aaos.path = "{params.trait_aaos_path}", \
 trait_ab42.path = "{params.trait_ab42_path}", trait_ptau.path = "{params.trait_ptau_path}", \
 trait_tau.path = "{params.trait_tau_path}", out.path = "{params.out_path}", \
-NbDistribution = "{params.NbDistribution}", p.threshold = "{params.Pthreshold}", \
-trait.blurb = "{params.TraitBlurb}", trait.clump = "{params.TraitClump}", Cache = "{params.Cache}"))' --slave
+p.threshold = "{params.Pthreshold}", \
+trait.blurb = "{params.TraitBlurb}", trait.clump = "{params.TraitClump}"))' --slave
         """

@@ -1,0 +1,7 @@
+.DS_Store
+.Rhistory
+.snakemake/*
+2_DerivedData/*
+5_Documents/*
+Drafts*
+BP/*

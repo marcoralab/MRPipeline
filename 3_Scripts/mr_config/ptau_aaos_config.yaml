@@ -1,0 +1,24 @@
+## Config file for MR analysis
+# snakemake -s mr_dos.smk --configfile 3_Scripts/mr_config/ptau_aaos_config.yaml
+
+#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]
+Pleitropy: 'FALSE'
+
+TraitName_1: "CSF Ptau"
+TraitBlurb_1: "***CSF Ptau*** (Deming et al 2017): A GWAS
+  of CSF Ptau levels (pg/mL) was conducted in 3,146 participants.
+  Participants were of Eurpean ancestry."
+TraitCode_1: ptau
+TraitClump_1: None
+
+TraitName_2: AAOS
+TraitBlurb_2: "***Alzheimer’s Age of Onset Surivial*** (Huang et al 2017): A GWAS
+  of age of onset in LOAD was conducted in 14,406 AD case samples and 25,849 control
+  samples from the IGAP using Cox proportional hazard regressions. Participants
+  were of European ancestry, in cases the the average AAO was 74.8 and 61.7% were
+  women, in controls the average AAE was 79.0 and 59.6% were women."
+TraitCode_2: aaos
+TraitClump_2: None

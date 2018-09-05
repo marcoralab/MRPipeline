@@ -1,0 +1,17 @@
+## Config file for MR analysis
+# snakemake -s mr_dos.smk --configfile 3_Scripts/alcc_mvpa_config.yaml
+
+#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]
+
+TraitName_1:
+TraitBlurb_1:
+TraitCode_1:
+TraitClump_1: None
+
+TraitName_2:
+TraitBlurb_2:
+TraitCode_2:
+TraitClump_2: None

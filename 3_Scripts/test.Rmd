@@ -1,0 +1,171 @@
+---
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    number_sections: false
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+params:
+  trait1.summary: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/educ_GWAS.Processed.gz
+  trait1.clump: 'None'
+  trait1.name: 'Education'
+  trait1.blurb: 'Education'
+  trait1.code: educ
+  trait2.summary: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ptau_GWAS.Processed.gz
+  p.threshold: 5e-8
+---
+## Data sources
+`r params$trait1.blurb`
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+### ===== Load packages ===== ###
+
+suppressMessages(library(tidyverse))   ## For data wrangling
+suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+suppressMessages(library(TwoSampleMR)) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
+suppressMessages(library(haploR))
+
+##  ---- Find Proxy SNPs - uses haploR ---- ##
+FindProxys <-function(snplist, dat){
+  ProxySnps <- queryHaploreg(query = snplist, ldThresh = 0.8,
+              ldPop = "EUR", timeout = 100, encoding = "UTF-8", verbose = TRUE) %>% 
+  select(query_snp_rsid, rsID, chr, pos_hg38, r2, `D'`, is_query_snp, ref, alt) %>% 
+  rename(ld.r2 = r2, Dprime = `D'`)
+
+query_snps <- ProxySnps %>% filter(is_query_snp == 1) %>% select(query_snp_rsid, ref, alt)
+
+proxy.snps <- left_join(ProxySnps, dat, by = c('rsID' = 'SNP')) %>% 
+  filter(!is.na(Effect_allele)) %>%                       ## remove snps with missing information
+  filter(is_query_snp == 0) %>%                           ## remove query snps
+  filter(nchar(ref) == 1) %>% filter(nchar(alt) == 1) %>% ## remove indels
+  group_by(query_snp_rsid) %>%                            ## by query snp
+  arrange(-ld.r2) %>%                                     ## arrange by ld
+  slice(1) %>%                                            ## select top proxy snp
+  ungroup() %>% 
+  rename(Effect_allele.proxy = Effect_allele, Non_Effect_allele.proxy = Non_Effect_allele) %>% ## rename alleles
+  select(-chr, -pos_hg38, -is_query_snp) %>%              ## remove uneeded columns
+  ## Join proxy snps to query snps
+  left_join(query_snps, by = 'query_snp_rsid', suffix = c('.proxy', "")) %>% 
+  ## for each proxy snp, coded correlated allels
+  mutate(Effect_allele = ifelse(Effect_allele.proxy == ref.proxy, ref, alt)) %>%
+  mutate(Non_Effect_allele = ifelse(Non_Effect_allele.proxy == ref.proxy, ref, alt)) %>% 
+  rename(SNP = query_snp_rsid) 
+
+proxy.snps
+}
+
+
+```
+
+```{r datain, include=FALSE, echo=FALSE, cache=T}
+### ===== Load Summary Statisitics ===== ###
+## Assumes summayr statsticsts have the following column names:  
+#   1. SNP           
+#   2. CHR    
+#   3. POS 
+#   4. Effect_allele 
+#   5. Non_Effect_allele   
+#   6. EAF    
+#   7. Beta     
+#   8. SE     
+#   9. P       
+#   10. r2     
+#   11. N
+## ---- Trait ---- ##
+trait1.dat <- read_tsv(params$trait1.summary) 
+trait1.exp <- filter(trait1.dat, P < as.numeric(params$p.threshold))
+
+## ---- Trait ---- ##
+trait2.dat <- read_tsv(params$trait2.summary)
+
+```
+
+## Instrumental Variables
+**LD Clumping:** For standard two sample MR it is important to ensure that the instruments for the exposure are independent. LD clumping can be performed using the data_clump function from the TwoSampleMR package, which uses EUR samples from the 1000 genomes project to estimate LD between SNPs and amonst SNPs that have and LD above a given threshold, only the SNP with the lowest p-value will be retained.
+<br>
+
+**Proxy SNPs:** Where SNPs were not available in the outcome GWAS, the EUR thousand genomes was queried to identified potential proxy SNPs that are in linkage disequilibrium (r2 > 0.8) of the missing SNP.
+
+### `r params$trait11.name`
+```{r LD clumpting, echo=F, message=F, warning=F, cache=T}
+Nsnps <- nrow(trait1.exp)
+
+if(params$trait1.clump == 'None'){
+  ## Convert to TwoSampleMR format to apply LD clumping
+  mr_trait1.exp <- format_data(trait1.exp, type = 'exposure',
+                              phenotype_col = 'trait1',
+                              snp_col = 'SNP',
+                              beta_col = "Beta",
+                              se_col = "SE",
+                              eaf_col = "EAF",
+                              effect_allele_col = "Effect_allele",
+                              other_allele_col = "Non_Effect_allele",
+                              pval_col = "P")
+  mr_trait1.exp <- mutate(mr_trait1.exp, exposure = 'trait1')
+  ## Clump 
+  mr_trait1.exp_ld <- clump_data(mr_trait1.exp, clump_r2 = 0.1, clump_kb = 1000)
+  
+} else {
+  ## Plink Pre-clumped
+  mr_trait1.exp_ld <- read_table2(params$trait1.clump) %>% 
+    filter(!is.na(CHR)) %>% 
+    select(CHR, F, SNP, BP, P, TOTAL, NSIG)
+}
+
+#and filter
+trait1.exp <- trait1.exp %>% filter(SNP %in% mr_trait1.exp_ld$SNP)
+```
+
+`r params$trait1.name`: `r Nsnps` SNPs (Table 1) were assoicated with were associated with `r params$trait1.name` at p < `r params$p.threshold`. After LD clumping, `r Nsnps - nrow(trait1.exp)` of `r Nsnps` SNPs were removed.
+<br>
+  
+**Table 1:** Independent SNPS associated with `r params$trait1.name`
+```{r trait1_table, echo=FALSE, message=F}
+as.data.frame(trait1.exp)
+```
+<br>
+
+
+```{r data_joining trait1_trait2, warning=FALSE, echo=FALSE, cache=T}
+trait2.out <- trait2.dat %>%
+  right_join(select(trait1.exp, SNP), by = 'SNP')
+
+miss.trait2.out <- filter(trait2.out, is.na(CHR))
+
+if(nrow(miss.trait2.out) >= 1){
+  # Search for Proxy SNPs
+  proxy.trait <- FindProxys(miss.trait2.out$SNP, trait2.dat)
+  # Combine proxy snps with trait data
+  trait2.out <- trait2.out %>%
+    filter(SNP %nin% miss.trait2.out$SNP) %>%
+    bind_rows(select(proxy.trait, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)) %>%
+    arrange(CHR, POS)
+
+}
+  
+
+```
+
+Of the the `r nrow(trait1.exp)` SNPs associated with `r params$trait1.name`, `r nrow(trait1.exp) - nrow(miss.trait2.out)` were available in the `r params$trait2.name` GWAS (Table 2).
+
+
+**Table 2:** SNPS associated with `r params$trait1.name` avalible in `r params$trait2.name` GWAS
+```{r trait_LOAD_table, echo=FALSE}
+as.data.frame(trait2.out)
+```
+<br>  
+
+
+
+
+
+
+
+
+
+

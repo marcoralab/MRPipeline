@@ -1,0 +1,27 @@
+## Config file for MR analysis
+# snakemake -s mr_dos.smk --configfile 3_Scripts/alcc_mvpa_config.yaml
+
+#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]
+
+TraitName_1: Alcohol Consumption
+TraitBlurb_1: "***Alcohol Consumption*** (Clarke et al 2017): SNPs associated with
+alcohol consumption were selected from a GWAS of alcohol consumption (drinks per
+week adjusted for sex, age and weight) performed in 112,117 individuals from the
+UK Biobank [29]. Participants were of European ancestry, mean age was 59.6 and
+52.7% of the cohort was female."
+TraitCode_1: alcc
+TraitClump_1: None
+
+TraitName_2: Moderate-to-vigorous PA
+TraitBlurb_2: "***Moderate-to-vigorous PA (MVPA)*** [Klimentidis et al Int J Obes 2018](https://www.nature.com/articles/s41366-018-0120-3):
+  We used data from the UK Biobank to perform the largest genome-wide association
+  study of PA to date, using three measures based on self-report (n = 377,234)
+  and two measures based on wrist-worn accelerometry data (nmax = 91,084). MVPA Was
+  calculated by taking the sum of total minutes/week of MPA multiplied by four
+  and the total number of VPA minutes/week multiplied by eight, corresponding to
+  their metabolic equivalents, as previously described."
+TraitCode_2: mvpa
+TraitClump_2: None
