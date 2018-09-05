@@ -18,6 +18,7 @@ params:
   ab42.summary: ab42.summary
   ptau.summary: ptau.summary
   tau.summary: tau.summary
+  tau.summary: hipv.summary
   trait.summary: trait.summary
   trait.clump: trait.clump
   out.path: out.path
@@ -26,9 +27,8 @@ params:
   trait_ab42.path: trait_ab42.path
   trait_ptau.path: trait_ptau.path
   trait_tau.path: trait_tau.path
-  NbDistribution: NbDistribution
+  trait_hipv.path: trait_hipv.path
   p.threshold: p.threshold
-  Cache: Cache
 ---
 
 #Mendelian Randomization Analysis: `r params$trait.name` and Alzheimer\'s Disease

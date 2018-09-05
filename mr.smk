@@ -28,6 +28,7 @@ rule html_Report:
         ab42_summary = DataIn + 'ab42_GWAS.Processed.gz',
         ptau_summary = DataIn + 'ptau_GWAS.Processed.gz',
         tau_summary = DataIn + 'tau_GWAS.Processed.gz',
+        hipv_summary = DataIn + 'hipv_GWAS.Processed.gz',
         trait_summary = DataIn + '{TraitCode}_GWAS.Processed.gz'
     output:
         "4_Output/{TraitCode}_AD_MR_{Pthreshold}_Analaysis.html"
@@ -44,6 +45,7 @@ rule html_Report:
         trait_ab42_path = "2_DerivedData/{TraitCode}/{TraitCode}_ab42_{Pthreshold}_MRdat.csv",
         trait_ptau_path = "2_DerivedData/{TraitCode}/{TraitCode}_ptau_{Pthreshold}_MRdat.csv",
         trait_tau_path = "2_DerivedData/{TraitCode}/{TraitCode}_tau_{Pthreshold}_MRdat.csv",
+        trait_hipv_path = "2_DerivedData/{TraitCode}/{TraitCode}_hipv_{Pthreshold}_MRdat.csv",
         Pthreshold = '{Pthreshold}',
     shell:
         "R -e 'rmarkdown::render("
@@ -51,6 +53,7 @@ rule html_Report:
 params = list(rwd = "{params.rwd}", trait.name = "{params.TraitName}", trait.code = "{params.TraitCode}", \
 load.summary = "{input.load_summary}", aaos.summary = "{input.aaos_summary}", ab42.summary = "{input.ab42_summary}", \
 ptau.summary = "{input.ptau_summary}", tau.summary = "{input.tau_summary}", trait.summary = "{input.trait_summary}", \
+hipv.summary = "{input.hipv_summary}", trait_hipv.path = "{params.trait_hipv_path}", \
 trait_load.path = "{params.trait_load_path}", trait_aaos.path = "{params.trait_aaos_path}", \
 trait_ab42.path = "{params.trait_ab42_path}", trait_ptau.path = "{params.trait_ptau_path}", \
 trait_tau.path = "{params.trait_tau_path}", out.path = "{params.out_path}", \
