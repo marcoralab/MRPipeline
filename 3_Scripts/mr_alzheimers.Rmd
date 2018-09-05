@@ -1,6 +1,7 @@
 ---
 output:
   html_document:
+    keep_md: true
     df_print: paged
     toc: true
     number_sections: false
@@ -18,7 +19,7 @@ params:
   ab42.summary: ab42.summary
   ptau.summary: ptau.summary
   tau.summary: tau.summary
-  tau.summary: hipv.summary
+  hipv.summary: hipv.summary
   trait.summary: trait.summary
   trait.clump: trait.clump
   out.path: out.path

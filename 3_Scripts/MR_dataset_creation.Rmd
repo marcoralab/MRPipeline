@@ -19,14 +19,14 @@ params:
   ab42.summary: 
   ptau.summary: 
   tau.summary: 
-  hipv.summary: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/hipv_GWAS.Processed.gz
-  trait.summary: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alcc_GWAS.Processed.gz
-  trait.clump: None
-  trait.name: Alc
-  trait.blurb: Alc
-  trait.code: alcc
-  out.path: test/
-  p.threshold: 5e-8
+  hipv.summary: 
+  trait.summary: 
+  trait.clump: 
+  trait.name: 
+  trait.blurb: 
+  trait.code: 
+  out.path: 
+  p.threshold: 
 ---
 
 ## Data sources
