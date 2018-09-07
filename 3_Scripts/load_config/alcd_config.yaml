@@ -1,0 +1,14 @@
+## Config file for MR analysis
+# snakemake -s mr.smk --configfile 3_Scripts/alcd_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/alcd_config.yaml
+
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+TraitName: Alcohol Dependence
+TraitBlurb: "***Alcohol Dependnece*** (Walters et al 2018): SNPs associated with
+alcohol dependnece were selected from a GWAS of DSM-IV diagnosed alcohol dependnece
+perfomred in 46,568 individules (11,569 cases and 34,999 controls) of European ancestry."
+TraitCode: alcd
+TraitClump: None
+DataOut: 2_DerivedData/
+Pthreshold: 5e-6

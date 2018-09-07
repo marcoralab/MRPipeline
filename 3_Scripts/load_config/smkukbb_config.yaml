@@ -1,0 +1,14 @@
+## Config file for MR analysis
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/smkukbb_config.yaml
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+TraitName: "Smoking Status"
+TraitBlurb: "***[Smoking Status*** (Canela-Xandri et al BioRxiv 2018)]:
+Summary statisitcs for Smoking Status were genereated from the UK Biobank
+with participatns asked weather they were never, former or current somkers. Results were reported
+in [GeneATLAS](http://geneatlas.roslin.ed.ac.uk/trait/?traits=673), a large
+database of associations between hundreds of traits and millions of variants using
+the UK Biobank cohort."
+TraitCode: smkukbb
+TraitClump: None
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]

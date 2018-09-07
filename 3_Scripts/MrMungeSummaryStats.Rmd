@@ -19,7 +19,7 @@ params:
   bmi.summary: '~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/Meta-analysis_Locke_et_al+UKBiobank_2018_UPDATED.txt.gz'
   smk_ukbb.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/ukbb/'
   evrsmk.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/tag.evrsmk.tbl.gz'
-  cpd.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/tag.cpd.tbl.gz'
+  cpd.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/cpd/cpd_summary.txt.gz'
   mdd.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Depression/Wray2018/PGC_MDD2018_10kSNPs.gz'
   dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Depression/Howard2018/UKBiobank_broad_12Jan18.txt.gz'
   diab.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Diabetes/T2D_Meta/Xue_et_al_T2D_META_Nat_Commun_2018.gz'
@@ -79,7 +79,7 @@ Read:
 hrc.raw <- read_tsv(params$hrc_file, col_types = cols(CHROM = col_character()))
 hrc <- filter(hrc.raw, ID != '.') %>% 
   unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
-  unite(MarkerName, ChromPos, REF, ALT, remove = F)
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F)
 ```
 
 
@@ -2014,7 +2014,71 @@ ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ibd.png', device = 'png', 
 
 ```
 
+## Cigrates per day 
 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+cpd.raw <- read_table2(params$cpd.summary)
+cpd <- cpd.raw %>% 
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>% 
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples) %>% 
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(!is.na(SNP)) %>%
+  filter(CHR != 'X') %>%
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(cpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/cpd_GWAS.Processed.gz'))
+
+```
+
+```{r}
+## Number of Significant SNPs
+cpd_ld <- format_data(filter(cpd, P < 5e-5), type = 'exposure', 
+                      phenotype_col = 'cpd',
+                      snp_col = 'SNP', 
+                      beta_col = "Beta",
+                      se_col = "SE",
+                      eaf_col = "EAF",
+                      effect_allele_col = "Effect_allele",
+                      other_allele_col = "Non_Effect_allele",
+                      pval_col = "P")
+cpd_ld <- clump_data(cpd_ld, clump_r2 = 0.1, clump_kb = 250)
+
+clump.n <- cpd_ld %>% 
+  mutate(p.cut = cut(pval.exposure, breaks = 
+                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
+  left_join(select(cpd, SNP, r2)) %>% 
+  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
+  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
+
+all.n <- cpd %>% 
+  mutate(p.cut = cut(P, breaks = 
+                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
+  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
+
+tab.cpd <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
+```
+
+```{r alc_cons gwas}
+
+p.cpd <- ggman(filter(cpd, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
+               title = "cpd - AUTHOR") + 
+  theme_classic() + 
+  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
+  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
+
+out.cpd <- grid.arrange(p.cpd,  tableGrob(tab.cpd, theme = ttheme_minimal(base_size = 8)), 
+                        ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
+
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/cpd.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.cpd)
+
+```
 
 
 

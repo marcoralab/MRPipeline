@@ -1,0 +1,15 @@
+## Config file for MR analysis
+# snakemake -s mr.smk --configfile 3_Scripts/bmi_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/bmi_config.yaml
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+TraitName: Body Mass Index
+TraitBlurb: "***Body Mass Index*** [(BMI, Yengo et al 2018, BioRxiv)](https://www.biorxiv.org/content/early/2018/03/22/274654):
+  Meta-analysis of Giant Consortium GWAS of BMI (n = 234,069) and a new GWAS of
+  BMI conducted in the UK Biobank (n = 456,426) for a total of 681,275 participants
+  of European ancestry. 716 near independent loci were reported as significanlty
+  associated with BMI (p < 1e-8)."
+TraitCode: bmi
+TraitClump: 2_DerivedData/clumped/bmi.clumped.gz
+DataOut: 2_DerivedData/
+Pthreshold: [5e-8]

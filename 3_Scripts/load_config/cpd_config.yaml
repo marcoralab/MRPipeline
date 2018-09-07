@@ -1,0 +1,15 @@
+## Config file for MR analysis
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/cpd_config.yaml
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+TraitName: "Previous Cigarettes per day"
+TraitBlurb: "***Previous Cigarettes per day***:
+Summary statisitcs for Smoking Status were genereated from the UK Biobank
+with participatns asked how many cigarettes they smoked per day if they were former
+smokers. Results were reported
+in [NealeLab](https://github.com/Nealelab/UK_Biobank_GWAS), a large
+database of associations between hundreds of traits and millions of variants using
+the UK Biobank cohort."
+TraitCode: cpd
+TraitClump: None
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]

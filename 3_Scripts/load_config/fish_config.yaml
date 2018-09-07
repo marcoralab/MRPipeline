@@ -1,0 +1,15 @@
+## Config file for MR analysis
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/fish_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/fish_config.yaml
+DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+TraitName: "Oily Fish Intake"
+TraitBlurb: "***[Oily Fish Intake (Canela-Xandri et al BioRxiv 2018)]:
+Summary statisitcs for Oily Fish Intake were determined from the UK Biobank
+with participatns asked How often do you eat oily fish?. Results were reported
+in [GeneATLAS](http://geneatlas.roslin.ed.ac.uk/trait/?traits=673), a large
+database of associations between hundreds of traits and millions of variants using
+the UK Biobank cohort."
+TraitCode: fish
+TraitClump: None
+DataOut: 2_DerivedData/
+Pthreshold: [5e-6, 5e-8]

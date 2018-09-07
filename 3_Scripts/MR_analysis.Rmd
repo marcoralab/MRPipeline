@@ -627,7 +627,7 @@ as.data.frame(trait_tau.plei)
 
 ```
 
-### `r params$trait.name` ~ hippocampal volume
+### `r params$trait.name` ~ HV
 ```{r MR: trait ~ hipv, echo=F, warning=F, message = FALSE}
 
 ##  Single snp analysis and meta analysis
@@ -686,7 +686,7 @@ funnel.trait_hipv[[1]] + theme_bw() + scale_colour_discrete() +
 ```
 <br>
   
-  **Table 14:** Heterogenity tests for `r params$trait.name` and hippocampal volume
+**Table 14:** Heterogenity tests for `r params$trait.name` and hippocampal volume
 ```{r heterogeneity trait_hipv, echo=F, warning=F}
 trait_hipv.het <- mr_heterogeneity(trait_hipv.MRdat, method_list=c("mr_egger_regression", "mr_ivw"))
 
@@ -701,7 +701,7 @@ trait_hipv.plei <- mr_pleiotropy_test(trait_hipv.MRdat)
 as.data.frame(trait_hipv.plei)
 
 ```
-
+<br>
 
 ## MR analysis results
 ```{r summary_results, echo=F, warning=F}
