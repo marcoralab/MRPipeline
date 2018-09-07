@@ -1,5 +1,5 @@
 ## Config file for MR analysis
-## snakemake -s mr.smk --configfile 3_Scripts/alcc_config.yaml
+## snakemake -s mr.smk --configfile 3_Scripts/load_config/alcc_config.yaml
 ## snakemake -s bmr.smk --configfile 3_Scripts/alcc_config.yaml
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 #DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData

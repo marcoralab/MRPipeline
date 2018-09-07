@@ -1,5 +1,5 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/insom_config.yaml
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/insom_config.yaml
 
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 #DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
@@ -11,6 +11,4 @@ TraitBlurb: "***Insomnia*** [Lane et al Nat Genet 2017](https://www.nature.com/a
 TraitCode: insom
 TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 10000
 Pthreshold: [5e-6]
-Cache: TRUE
