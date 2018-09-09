@@ -18,18 +18,21 @@ params:
   ab42.summary: ab42.summary
   ptau.summary: ptau.summary
   tau.summary: tau.summary
+  hipv.summary: hipv.summary
   trait.summary: trait.summary
   load.clump: load.clump
   aaos.clump: aaos.clump
   ab42.clump: ab42.clump
   ptau.clump: ptau.clump
   tau.clump: tau.clump
+  hipv.clump: hipv.clump
   out.path: out.path
   trait_load.path: trait_load.path
   trait_aaos.path: trait_aaos.path
   trait_ab42.path: trait_ab42.path
   trait_ptau.path: trait_ptau.path
   trait_tau.path: trait_tau.path
+  trait_hipv.path: trait_hipv.path
   p.threshold: p.threshold
 ---
 

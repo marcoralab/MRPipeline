@@ -1,8 +1,8 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/sleep_config.yaml
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/sleep_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/sleep_config.yaml
 
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: 2_DerivedData/
 TraitName: Sleep Duration
 TraitBlurb: "***Sleep Duration*** [Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749):
   We report single- and multiple-trait genome-wide association analyses of
@@ -11,6 +11,4 @@ TraitBlurb: "***Sleep Duration*** [Lane et al Nat Genet 2017](https://www.nature
 TraitCode: sleep
 TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 10000
 Pthreshold: [5e-6]
-Cache: TRUE

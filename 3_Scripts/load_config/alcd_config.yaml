@@ -1,6 +1,6 @@
 ## Config file for MR analysis
 # snakemake -s mr.smk --configfile 3_Scripts/alcd_config.yaml
-# snakemake -s bmr.smk --configfile 3_Scripts/alcd_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/alcd_config.yaml
 
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 #DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
@@ -11,4 +11,4 @@ perfomred in 46,568 individules (11,569 cases and 34,999 controls) of European a
 TraitCode: alcd
 TraitClump: None
 DataOut: 2_DerivedData/
-Pthreshold: 5e-6
+Pthreshold: [5e-6, 5e-8]

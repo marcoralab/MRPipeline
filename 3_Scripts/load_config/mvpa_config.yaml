@@ -1,8 +1,7 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/mvpa_config.yaml
-
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/mvpa_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/mvpa_config.yaml
+DataIn: 2_DerivedData/
 TraitName: Moderate-to-vigorous PA
 TraitBlurb: "***Moderate-to-vigorous PA (MVPA)*** [Klimentidis et al Int J Obes 2018](https://www.nature.com/articles/s41366-018-0120-3):
   We used data from the UK Biobank to perform the largest genome-wide association
@@ -12,7 +11,6 @@ TraitBlurb: "***Moderate-to-vigorous PA (MVPA)*** [Klimentidis et al Int J Obes 
   and the total number of VPA minutes/week multiplied by eight, corresponding to
   their metabolic equivalents, as previously described."
 TraitCode: mvpa
+TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 10000
 Pthreshold: [5e-6, 5e-8]
-Cache: TRUE

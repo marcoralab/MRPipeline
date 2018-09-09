@@ -1,0 +1,83 @@
+#!/usr/bin/Rscript
+
+### ===== Command Line Arguments ===== ##
+args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
+exposure.summary = args[1] # Exposure summary statistics
+outcome.summary = args[2] # Outcome Summary statistics
+out.outcome = args[3]
+
+
+### ===== Load packages ===== ###
+suppressMessages(library(tidyverse))   ## For data wrangling
+suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+suppressMessages(library(haploR))
+
+
+##  ---- Find Proxy SNPs - uses haploR ---- ##
+FindProxys <-function(snplist, dat){
+  ProxySnps <- queryHaploreg(query = snplist, ldThresh = 0.8,
+                             ldPop = "EUR", timeout = 100, encoding = "UTF-8", verbose = TRUE) %>% 
+    select(query_snp_rsid, rsID, chr, pos_hg38, r2, `D'`, is_query_snp, ref, alt) %>% 
+    rename(ld.r2 = r2, Dprime = `D'`)
+  
+  query_snps <- ProxySnps %>% filter(is_query_snp == 1) %>% select(query_snp_rsid, ref, alt)
+  
+  proxy.snps <- left_join(ProxySnps, dat, by = c('rsID' = 'SNP')) %>% 
+    filter(!is.na(Effect_allele)) %>%                       ## remove snps with missing information
+    filter(is_query_snp == 0) %>%                           ## remove query snps
+    filter(nchar(ref) == 1) %>% filter(nchar(alt) == 1) %>% ## remove indels
+    group_by(query_snp_rsid) %>%                            ## by query snp
+    arrange(-ld.r2) %>%                                     ## arrange by ld
+    slice(1) %>%                                            ## select top proxy snp
+    ungroup() %>% 
+    rename(Effect_allele.proxy = Effect_allele, Non_Effect_allele.proxy = Non_Effect_allele) %>% ## rename alleles
+    select(-chr, -pos_hg38, -is_query_snp) %>%              ## remove uneeded columns
+    ## Join proxy snps to query snps
+    left_join(query_snps, by = 'query_snp_rsid', suffix = c('.proxy', "")) %>% 
+    ## for each proxy snp, coded correlated allels
+    mutate(Effect_allele = ifelse(Effect_allele.proxy == ref.proxy, ref, alt)) %>%
+    mutate(Non_Effect_allele = ifelse(Non_Effect_allele.proxy == ref.proxy, ref, alt)) %>% 
+    rename(SNP = query_snp_rsid) 
+  
+  proxy.snps
+}
+
+### ===== Proxy SNPs ===== ###
+message("READING IN EXPOSURE \n")
+exposure.dat <- read_tsv(exposure.summary)
+
+message("READING IN OUTCOME \n")
+outcome.dat.raw <- read_tsv(outcome.summary)
+
+### ===== Proxy SNPs ===== ###
+message("SEARCHING FOR PROXY SNPS \n")
+outcome.dat <- outcome.dat.raw %>%
+  right_join(select(exposure.dat, SNP), by = 'SNP')
+
+miss.outcome <- filter(outcome.dat, is.na(CHR))
+
+# If snps are missing, find proxy snp
+if(nrow(miss.outcome) >= 1){
+  # Search for Proxy SNPs
+  proxy.outcome <- FindProxys(miss.outcome$SNP, outcome.dat.raw)
+  
+  # Combine proxy snps with trait data
+  outcome.dat <- outcome.dat %>%
+    filter(SNP %nin% miss.outcome$SNP) %>%
+    bind_rows(select(proxy.outcome, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)) %>%
+    arrange(CHR, POS)
+}
+
+## Write out outcomes SNPs
+write_tsv(outcome.dat, out.outcome)
+
+
+
+
+
+
+
+
+
+
+

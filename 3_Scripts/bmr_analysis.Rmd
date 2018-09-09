@@ -14,15 +14,16 @@ output:
 editor_options:
   chunk_output_type: console
 params:
-  trait_load.path:
-  trait_aaos.path:
-  trait_ab42.path:
-  trait_ptau.path:
-  trait_tau.path:
-  out.path:
-  trait.name:
-  trait.code:
-  p.threshold:
+  trait_load.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/load_ldl_5e-6_BMRdat.csv
+  trait_aaos.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/aaos_ldl_5e-6_BMRdat.csv
+  trait_ab42.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/ab42_ldl_5e-6_BMRdat.csv
+  trait_ptau.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/ptau_ldl_5e-6_BMRdat.csv
+  trait_tau.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/tau_ldl_5e-6_BMRdat.csv
+  trait_hipv.path: ~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl/hipv_ldl_5e-6_BMRdat.csv
+  out.path: 2_DerivedData/test/
+  trait.name: ldl
+  trait.code: ldl
+  p.threshold: 5e-6
 ---
 
 ```{r setup analysis, include=FALSE}
@@ -41,12 +42,13 @@ library(MRPRESSO)    ## For pleiotropy analysis
 ## ---- Trait ---- ##
 trait_LOAD.MRdat <- read_csv(params$trait_load.path)
 trait_AAOS.MRdat <- read_csv(params$trait_aaos.path)
+trait_hipv.MRdat <- read_csv(params$trait_hipv.path)
 
 ## Data Frame of nsnps and number of iterations 
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
        NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
 
-nsnps <- max(nrow(trait_LOAD.MRdat), nrow(trait_AAOS.MRdat))
+nsnps <- max(nrow(trait_LOAD.MRdat), nrow(trait_AAOS.MRdat), nrow(trait_hipv.MRdat))
 NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
 
 ```
@@ -125,6 +127,38 @@ if("Global Test" %in% names(trait_AAOS_presso$`MR-PRESSO results`)){
 **AAOS ~ `r params$trait.name`:** The MR-PRESSO global test for pleiotropy was `r if(aaos_presso < 0.05){paste('significant', ' (p = ', aaos_presso, ')', sep = "")} else {paste('non-significant')}`. `r if(aaos_presso < 0.05 & any(ls() %in% "aaos_snps")){paste('The following SNPs were removed due to pleiotropy:', paste(aaos_snps, collapse=", ") )}`
 <br>
 
+```{r pleiotropy hipv, echo = F, cache=T}
+## ---- hipv ---- ##
+trait_hipv_presso <- mr_presso(BetaOutcome = "beta.outcome",
+                               BetaExposure = "beta.exposure",
+                               SdOutcome = "se.outcome",
+                               SdExposure = "se.exposure",
+                               OUTLIERtest = TRUE,
+                               DISTORTIONtest = TRUE,
+                               data = as.data.frame(trait_hipv.MRdat),
+                               NbDistribution = NbDistribution,
+                               SignifThreshold = 0.05)
+
+if("Global Test" %in% names(trait_hipv_presso$`MR-PRESSO results`) & "Distortion Test" %in% names(trait_hipv_presso$`MR-PRESSO results`)){
+  if(is.character(trait_hipv_presso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`)){
+    hipv_snps <- trait_hipv_presso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
+  } else {
+    hipv_snps <- trait_hipv.MRdat[trait_hipv_presso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`, ]$SNP
+    trait_hipv.MRdat <- trait_hipv.MRdat[-trait_hipv_presso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`,]
+  }
+}
+
+if("Global Test" %in% names(trait_hipv_presso$`MR-PRESSO results`)){
+  hipv_presso <- trait_hipv_presso$`MR-PRESSO results`$`Global Test`$Pvalue
+} else {
+  hipv_presso <- trait_hipv_presso$`MR-PRESSO results`$Pvalue
+}
+
+```
+
+**HV ~ `r params$trait.name`:** The MR-PRESSO global test for pleiotropy was `r if(hipv_presso < 0.05){paste('significant', ' (p = ', hipv_presso, ')', sep = "")} else {paste('non-significant')}`. `r if(hipv_presso < 0.05 & any(ls() %in% "hipv_snps")){paste('The following SNPs were removed due to pleiotropy:', paste(hipv_snps, collapse=", ") )}`
+<br>
+  
 `r if(params$p.threshold != '5e-6') {"\\begin{comment}"}`
 ```{r pleiotropy ab42, echo = F, cache=T, eval=params$p.threshold == '5e-6'}
 ## ---- AB42 ---- ##
@@ -377,6 +411,78 @@ trait_aaos.plei <- mr_pleiotropy_test(trait_AAOS.MRdat)
 as.data.frame(trait_aaos.plei)
 
 ```
+<br> 
+
+### HV ~ `r params$trait.name`
+
+```{r MR: Trait ~ hipv, echo=F, warning=F, message = FALSE}
+
+single.trait_hipv <- mr_singlesnp(trait_hipv.MRdat,
+                                  single_method = 'mr_wald_ratio',
+                                  all_method=c("mr_ivw_fe", "mr_weighted_median", "mr_egger_regression"))
+
+res.trait_hipv <- mr(trait_hipv.MRdat, method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_egger_regression"))
+```
+\
+
+Figure 4 illustrates the SNP-specific associations with hipv versus the association between each SNP and `r params$trait.name`.
+
+```{r scatter_plot hipv, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 4: Scatterplot of SNP effects for the association of Trait and hipv'}
+
+##  Scatter Plot
+scatter.trait_hipv <- mr_scatter_plot(res.trait_hipv, trait_hipv.MRdat)
+scatter.trait_hipv[[1]] + theme_bw() +
+  theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + scale_colour_discrete() +
+  labs(y = paste0('Per allele change in \n', params$trait.name),
+       x = 'Per allele change in risk of \n HV')
+
+```
+\
+
+Figure 5 and Table 4 shows the SNP-specific effects and overall IVW, weighted median and Egger regression causal estimates of genetically predicted HV on `r params$trait.name`.
+
+```{r forrest_plot hipv, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap="Fig. 5: Forrest plot of Wald ratios and 95% CIs for SNP-specific and overall IVW, Weighted median and Egger associations"}
+
+##  Forest Plot
+forrest.trait_hipv <- mr_forest_plot(single.trait_hipv)
+forrest.trait_hipv[[1]] + theme_classic() +
+  theme(legend.position = "none", text = element_text(family="Times", size=12)) +
+  labs(x = paste0('MR effect size of \nHV on ', params$trait.name))
+
+```
+<br>
+  
+  **Table 4:** MR estimates for HV and `r params$trait.name`
+```{r MR hipv table, echo=F}
+as.data.frame(single.trait_hipv %>% select(SNP, b, se, p))
+
+```
+\
+
+Figure 6 shows a funnel plot to detect pleiotropy and Table 5 show the results of Cochrans Q heterogeneity test to assess for the presence of pleiotropy.
+
+```{r funnel_plot hipv, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap='Fig. 6:  Funnel plot of the traitohol Conumption – hipv causal estimates against their precession'}
+funnel.trait_hipv <- mr_funnel_plot(single.trait_hipv)
+funnel.trait_hipv[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + scale_colour_discrete()
+
+```
+<br>
+  
+  **Table 5:** Heterogenity tests for HV and `r params$trait.name`
+```{r heterogeneity consumption_hipv, echo=F}
+trait_hipv.het <- mr_heterogeneity(trait_hipv.MRdat, method_list=c("mr_egger_regression", "mr_ivw"))
+
+as.data.frame(trait_hipv.het %>% select(exposure, outcome, method, Q, Q_df, Q_pval))
+
+```
+
+**Table 6:** Test for directional pleitropy for HV and `r params$trait.name`
+```{r pleitropy test trait_hipv, echo=F}
+trait_hipv.plei <- mr_pleiotropy_test(trait_hipv.MRdat)
+
+as.data.frame(trait_hipv.plei)
+
+```
 
 `r if(params$p.threshold != '5e-6') {"\\begin{comment}"}`
 
@@ -439,10 +545,10 @@ funnel.trait_ab[[1]] + theme_bw() + scale_colour_discrete() +
 <br>
 
 **Table 8:** Heterogenity tests for AB42 and `r params$trait.name`
-```{r heterogeneity traitumption_AB42, echo=F, eval=params$p.threshold == '5e-6'}
+```{r heterogeneity trait_AB42, echo=F, eval=params$p.threshold == '5e-6'}
 trait_ab.het <- mr_heterogeneity(trait_AB42.MRdat, method_list=c("mr_egger_regression", "mr_ivw"))
 
-as.data.frame(trait_ab.het %>% select(exposure, outcome, method, Q, Q_df, Q_pval))
+as.data.frame(trait_ab.het)
 
 ```
 
@@ -517,7 +623,7 @@ funnel.trait_ptau[[1]] + theme_bw() + scale_colour_discrete() +
 ```{r heterogeneity traitumption_Ptau, echo=F, eval=params$p.threshold == '5e-6'}
 trait_ptau.het <- mr_heterogeneity(trait_Ptau.MRdat, method_list=c("mr_egger_regression", "mr_ivw"))
 
-as.data.frame(trait_ptau.het %>% select(exposure, outcome, method, Q, Q_df, Q_pval))
+as.data.frame(trait_ptau.het)
 
 ```
 
@@ -593,7 +699,7 @@ funnel.trait_tau[[1]] + theme_bw() + scale_colour_discrete() +
 ```{r heterogeneity traitumption_Tau, echo=F, eval=params$p.threshold == '5e-6'}
 trait_tau.het <- mr_heterogeneity(trait_Tau.MRdat, method_list=c("mr_egger_regression", "mr_ivw"))
 
-as.data.frame(trait_tau.het %>% select(exposure, outcome, method, Q, Q_df, Q_pval))
+as.data.frame(trait_tau.het)
 
 ```
 
@@ -612,6 +718,7 @@ as.data.frame(trait_tau.plei)
 
 res_all <- res.trait_ad %>%
   bind_rows(res.trait_aaaos) %>%
+  bind_rows(res.trait_hipv) %>%
   mutate(method = as.character(method)) %>%
   mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
   mutate(Signif = symnum(pval, corr = FALSE, na = FALSE,
@@ -622,6 +729,7 @@ res_all <- res.trait_ad %>%
 if(params$p.threshold == '5e-6'){
 res_all <- res.trait_ad %>%
   bind_rows(res.trait_aaaos) %>%
+  bind_rows(res.trait_hipv) %>%
   bind_rows(res.trait_ab) %>%
   bind_rows(res.trait_ptau) %>%
   bind_rows(res.trait_tau) %>%

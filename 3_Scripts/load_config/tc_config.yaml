@@ -1,8 +1,7 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/tc_config.yaml
-
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/tc_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/tc_config.yaml
+DataIn: 2_DerivedData/
 TraitName: Total Cholesterol
 TraitBlurb: "***Total Cholesterol*** [Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797):
   To identify new loci and refine known loci influencing these lipids, we examined
@@ -12,6 +11,4 @@ TraitBlurb: "***Total Cholesterol*** [Willer et al Nat Genet 2013](https://www.n
 TraitCode: tc
 TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 20000
 Pthreshold: [5e-6, 5e-8]
-Cache: TRUE

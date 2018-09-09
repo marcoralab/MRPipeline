@@ -1,5 +1,7 @@
 ## Config file for MR analysis
 # snakemake -s mr.smk --configfile 3_Scripts/load_config/smkukbb_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/smkukbb_config.yaml
+
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 TraitName: "Smoking Status"
 TraitBlurb: "***[Smoking Status*** (Canela-Xandri et al BioRxiv 2018)]:

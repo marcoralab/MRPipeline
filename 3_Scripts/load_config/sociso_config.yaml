@@ -1,8 +1,8 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/sociso_config.yaml
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/sociso_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/sociso_config.yaml
 
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: 2_DerivedData/
 TraitName: Social Isolation
 TraitBlurb: "***Social Isolation*** [Day et al Nat Commu 2018](https://www.nature.com/articles/s41467-018-04930-1):
   In up to 452,302 UK Biobank study participants, we perform genome-wide association
@@ -10,6 +10,4 @@ TraitBlurb: "***Social Isolation*** [Day et al Nat Commu 2018](https://www.natur
 TraitCode: sociso
 TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 10000
 Pthreshold: [5e-6, 5e-8]
-Cache: TRUE

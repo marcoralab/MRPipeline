@@ -1,6 +1,18 @@
 library(tidyverse)
 library(dotwhisker)
 library(Hmisc)
+
+myspread <- function(df, key, value) {
+  # quote key
+  keyq <- rlang::enquo(key)
+  # break value vector into quotes
+  valueq <- rlang::enquo(value)
+  s <- rlang::quos(!!valueq)
+  df %>% gather(variable, value, !!!s) %>%
+    unite(temp, !!keyq, variable) %>%
+    spread(temp, value)
+}
+
 path <- '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/'
 filenames <- list.files(path, pattern="*_MR_Results.csv", recursive = T)
 files.gws <- paste0(path, grep('5e-8', filenames, value = T))
@@ -11,12 +23,13 @@ res.gns <- map(files.gns, read_csv) %>%
   bind_rows() %>% 
   mutate(z = b/se) %>% 
   filter(exposure %nin% c( "load", "aaos", "ab42", "ptau", "tau")) %>% 
-  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau")) %>% 
+  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau", "hipv")) %>% 
   mutate(p = '5e-6') %>%
   mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence",
                                                         "alcc" = "Alcohol Consumption", 
                                                         "audit" = "AUDIT", 
                                                         "dep" = 'Depressive Symptoms',
+                                                        "cpd" = 'Cigarettes per day',
                                                         'diab' = 'Type 2 Diabetes', 
                                                         'fish' = 'Oily Fish Intake', 
                                                         'hdl' = 'HDL Cholesterol', 
@@ -39,12 +52,13 @@ res.gws <- map(files.gws, read_csv) %>%
   bind_rows() %>% 
   mutate(z = b/se) %>% 
   filter(exposure %nin% c( "load", "aaos", "ab42", "ptau", "tau")) %>% 
-  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau")) %>% 
+  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau", "hipv")) %>% 
   mutate(p = '5e-8') %>%
-  mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence",
+  mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence ",
                                                         "alcc" = "Alcohol Consumption", 
                                                         "audit" = "AUDIT", 
-                                                        "dep" = 'Depressive Symptoms',
+                                                        "dep" = 'Broad Depression Symptoms',
+                                                        "cpd" = 'Cigarettes per day',
                                                         'diab' = 'Type 2 Diabetes', 
                                                         'fish' = 'Oily Fish Intake', 
                                                         'hdl' = 'HDL Cholesterol', 
@@ -64,42 +78,69 @@ res.gws <- map(files.gws, read_csv) %>%
 ## Join Results
 res.all <- bind_rows(res.gns, res.gws)
 
+## =========== Write Out Results =========== ##
+all_gws_mr <- res.all %>% 
+  filter(p == '5e-8') %>%
+  mutate(b = round(b, 2)) %>% 
+  mutate(se = round(se, 2)) %>% 
+  mutate(pval = round(pval, 4)) %>% 
+  mutate(b.se = paste0(b, ' (', se, ')')) %>%
+  select(-Signif, -z, -p, -b, -se) %>% 
+  myspread(method, c(nsnp, pval, b.se)) %>% 
+  select(exposure, outcome, IVW_nsnp, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`) %>% 
+  arrange(outcome, exposure) %>% 
+  write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/all_gws_mr.csv')
+
+## =========== DW Plots =========== ##
 ## Plot LOAD results - IVW, all 
 res.all %>% 
   filter(outcome == c("LOAD"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2)
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/load.png', width = 8.5, height = 4.5, units = 'in')
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load.png', width = 8.5, height = 4.5, units = 'in')
 
 ## Plot AAOS results - IVW, all 
 res.all %>% 
   filter(outcome == c("AAOS"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/aaos.png', width = 8.5, height = 4.5, units = 'in')
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos.png', width = 8.5, height = 4.5, units = 'in')
   
 ## Plot AB42 results - IVW, all 
 res.all %>% 
   filter(outcome == c("ab42"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/ab42.png', width = 8.5, height = 4.5, units = 'in')
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 4.5, units = 'in')
 
 ## Plot Ptau results - IVW, all 
 res.all %>% 
   filter(outcome == c("ptau"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/ptau.png', width = 8.5, height = 4.5, units = 'in')
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau.png', width = 8.5, height = 4.5, units = 'in')
 
 ## Plot Tau results - IVW, all 
 res.all %>% 
   filter(outcome == c("tau"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/tau.png', width = 8.5, height = 4.5, units = 'in')
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau.png', width = 8.5, height = 4.5, units = 'in')
 
-## Plot LOAD results with MR models 
+## Plot HV results - IVW, all 
+res.all %>% 
+  filter(outcome == c("hipv"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 4.5, units = 'in')
+
+## Plot load results with MR models 
 res.gns %>% 
   filter(exposure %nin% c( "load", "aaos", "ab42", "ptau", "tau")) %>% 
   filter(outcome == c("LOAD")) %>% 
@@ -145,7 +186,7 @@ ggplot(filter(res.all, method == 'IVW', p == '5e-6'), aes(x = exposure, y = outc
   theme_classic() + 
   scale_size(range = c(1, 15)) + 
   theme(legend.position = 'none', axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/gns.png', width = 8.5, height = 4.5, units = 'in')
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/gns.png', width = 8.5, height = 4.5, units = 'in')
 
 ggplot(filter(res.all, method == 'IVW', p == '5e-8'), aes(x = exposure, y = outcome, size = -log10(pval), label = Signif)) + 
   geom_tile(fill = 'white', alpha = 0.5) + 
@@ -158,7 +199,7 @@ ggplot(filter(res.all, method == 'IVW', p == '5e-8'), aes(x = exposure, y = outc
   theme_classic() + 
   scale_size(range = c(1, 15)) + 
   theme(legend.position = 'none', axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/gws.png', width = 8.5, height = 4.5, units = 'in')
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/gws.png', width = 8.5, height = 4.5, units = 'in')
 
 
 

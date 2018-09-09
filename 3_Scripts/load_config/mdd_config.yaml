@@ -1,7 +1,8 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/mdd_config.yaml
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/mdd_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/mdd_config.yaml
 
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
+DataIn: 2_DerivedData/
 #DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
 TraitName: Major Depressive Disorder
 TraitBlurb: "***Major Depressive Disorder*** [Wray et al Nature Genet 2018](https://www.nature.com/articles/s41588-018-0090-3):
@@ -12,6 +13,4 @@ TraitBlurb: "***Major Depressive Disorder*** [Wray et al Nature Genet 2018](http
 TraitCode: mdd
 TraitClump: None
 DataOut: 2_DerivedData/
-NbDistribution: 10000
 Pthreshold: [5e-6, 5e-8]
-Cache: TRUE

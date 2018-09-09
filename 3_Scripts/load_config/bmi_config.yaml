@@ -1,6 +1,6 @@
 ## Config file for MR analysis
-# snakemake -s mr.smk --configfile 3_Scripts/bmi_config.yaml
-# snakemake -s bmr.smk --configfile 3_Scripts/bmi_config.yaml
+# snakemake -s mr.smk --configfile 3_Scripts/load_config/bmi_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/bmi_config.yaml
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 #DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
 TraitName: Body Mass Index
@@ -12,4 +12,4 @@ TraitBlurb: "***Body Mass Index*** [(BMI, Yengo et al 2018, BioRxiv)](https://ww
 TraitCode: bmi
 TraitClump: 2_DerivedData/clumped/bmi.clumped.gz
 DataOut: 2_DerivedData/
-Pthreshold: [5e-8]
+Pthreshold: [5e-6, 5e-8]

@@ -1536,7 +1536,8 @@ ldl <- ldl.raw %>%
   filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
 
 write_tsv(ldl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl_GWAS.Processed.gz'))
 
@@ -1598,7 +1599,8 @@ TC <- TC.raw %>%
   filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
 
 write_tsv(TC, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/tc_GWAS.Processed.gz'))
 
@@ -1661,7 +1663,8 @@ trig <- trig.raw %>%
   filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
 
 write_tsv(trig, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/trig_GWAS.Processed.gz'))
 
@@ -1781,7 +1784,8 @@ insom <- insom.raw %>%
   arrange(CHR, POS) %>% 
   mutate(Beta = log(OR)) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs376775068')
 
 write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/insom_GWAS.Processed.gz'))
 

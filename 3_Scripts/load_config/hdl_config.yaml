@@ -1,8 +1,8 @@
 ## Config file for MR analysis
 # snakemake -s mr.smk --configfile 3_Scripts/load_config/hdl_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/hdl_config.yaml
 
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: 2_DerivedData/
 TraitName: HDL Cholesterol
 TraitBlurb: "***HDL Cholesterol*** [Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797):
   To identify new loci and refine known loci influencing these lipids, we examined

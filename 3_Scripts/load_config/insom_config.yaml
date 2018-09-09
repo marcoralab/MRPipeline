@@ -1,8 +1,8 @@
 ## Config file for MR analysis
 # snakemake -s mr.smk --configfile 3_Scripts/load_config/insom_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/insom_config.yaml
 
-DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
-#DataIn: /Users/shea/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
+DataIn: 2_DerivedData/
 TraitName: Insomnia
 TraitBlurb: "***Insomnia*** [Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information):
   We report single- and multiple-trait genome-wide association analyses of
@@ -11,4 +11,4 @@ TraitBlurb: "***Insomnia*** [Lane et al Nat Genet 2017](https://www.nature.com/a
 TraitCode: insom
 TraitClump: None
 DataOut: 2_DerivedData/
-Pthreshold: [5e-6]
+Pthreshold: [5e-6, 5e-8]

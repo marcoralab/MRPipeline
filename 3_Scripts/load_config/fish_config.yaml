@@ -1,6 +1,6 @@
 ## Config file for MR analysis
 # snakemake -s mr.smk --configfile 3_Scripts/load_config/fish_config.yaml
-# snakemake -s bmr.smk --configfile 3_Scripts/fish_config.yaml
+# snakemake -s bmr.smk --configfile 3_Scripts/load_config/fish_config.yaml
 DataIn: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
 TraitName: "Oily Fish Intake"
 TraitBlurb: "***[Oily Fish Intake (Canela-Xandri et al BioRxiv 2018)]:

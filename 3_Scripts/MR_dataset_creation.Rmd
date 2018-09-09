@@ -14,19 +14,19 @@ output:
 editor_options:
   chunk_output_type: console
 params:
-  load.summary: 
-  aaos.summary: 
+  load.summary: 2_DerivedData/load_GWAS.Processed.gz
+  aaos.summary: 2_DerivedData/aaos_GWAS.Processed.gz
   ab42.summary: 
   ptau.summary: 
   tau.summary: 
   hipv.summary: 
-  trait.summary: 
-  trait.clump: 
-  trait.name: 
+  trait.summary: 2_DerivedData/insom_GWAS.Processed.gz
+  trait.clump: None
+  trait.name: insom
   trait.blurb: 
-  trait.code: 
+  trait.code: insom
   out.path: 
-  p.threshold: 
+  p.threshold: 5e-6
 ---
 
 ## Data sources
