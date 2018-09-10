@@ -1,0 +1,166 @@
+---
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    number_sections: false
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+params:
+  rwd: rwd
+  exposure.name: Alcohol
+  trait1.code: alcc
+  trait2.clump: trait2.clump
+  outcome.name: LOAD
+  trait2.code: load
+  out.path: out.path
+  p.threshold: 5e-8
+editor_options: 
+  chunk_output_type: console
+---
+
+# Mendelian Randomization Analysis: `r params$exposure.name` -> `r params$outcome.name`
+By Dr. Shea Andrews, generated on `r Sys.Date()`
+
+---
+
+```{r setup analysis, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)   ## For data wrangling 
+library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ 
+library(ggplot2)     ## For plotting 
+```
+
+Exposure: `r params$exposure.name`
+Outcome: `r params$outcome.name`
+
+
+## Instrumental Vaibles
+**SNP Inclusion:** SNPS associated with  `r params$exposure.name` at a p-value threshold of p < `r params$p.threshold` were inluded in this analysis.  
+
+**LD Clumping:** For standard two sample MR it is important to ensure that the instruments for the exposure are independent. LD clumping was performed in PLINK using the EUR samples from the 1000 Genomes Project to estimate LD between SNPs, and, amongst SNPs that have an LD above a given threshold, retain only the SNP with the lowest p-value. A clumping window of 250kb, r2 of 0.1 and significance level of 1 was used for the index and secondary SNPs.
+<br>
+
+**Proxy SNPs:** Where SNPs were not available in the outcome GWAS, the EUR thousand genomes was queried to identify potential proxy SNPs that are in linkage disequilibrium (r2 > 0.8) of the missing SNP.
+<br> 
+
+**Table 1:** Independent SNPs associated with `r params$exposure.name`
+```{r exposure_table, echo=FALSE, message=F}
+exposure <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/test/alcc_5e-8_SNPs.txt')
+as.data.frame(exposure)
+```
+<br>
+
+
+**Table 2:** SNPs associated with `r params$exposure.name` avaliable in `r params$outcome.name`
+```{r outcome_table, echo=FALSE, message=F}
+outcome <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/test/alcc_load_5e-8_SNPs.txt')
+as.data.frame(outcome)
+```
+<br>
+
+## Data harmonization
+Harmonize the exposure and outcome datasets so that the effect of a SNP on the exposure and the effect of that SNP on the outcome correspond to the same allele. The harmonise_data function from the TwoSampleMR package can be used to perform the harmonization step, by default it try's to infer the forward strand alleles using allele frequency information. EAF were not availbe in the IGAP summary statisitics, as such the allele frequencies reported in the AAOS anaylsis were used.
+<br>
+
+**Table 3:** Harmonized `r params$exposure.name` and `r params$outcome.name` datasets
+```{r harmonized_table, echo=FALSE, message=F}
+mrdat <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/test/alcc_load_5e-8_MRdat.csv')
+as.data.frame(mrdat)
+```
+<br>
+
+## Pleiotropy 
+Pleiotropy was assesed using Mendelian Randomization Pleiotropy RESidual Sum and Outlier (MR-PRESSO), that allows for the evlation of evaluation of horizontal pleiotropy in a standared MR model. MR-PRESSO performs a global test for detection of horizontal pleiotropy and correction of pleiotropy via outlier removal. 
+<br> 
+
+```{r mrpresso, echo = F, cache=F}
+mrpresso <- readRDS(file = '~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/test/hipv_load_5e-8_mrpresso.rds')
+
+if("Global Test" %in% names(mrpresso$`MR-PRESSO results`) & "Distortion Test" %in% names(mrpresso$`MR-PRESSO results`)){
+  if(is.character(mrpresso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`)){
+    trait1_snps <- mrpresso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
+  } else {
+  plei_snps <- mrdat[mrpresso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`, ]$SNP
+  mrdat <- mrdat[-mrpresso$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`,]
+  }
+}
+
+if("Global Test" %in% names(mrpresso$`MR-PRESSO results`)){
+  mrpresso.p <- mrpresso$`MR-PRESSO results`$`Global Test`$Pvalue
+} else {
+    mrpresso.p <- mrpresso$`MR-PRESSO results`$Pvalue
+}
+
+```
+
+```{r write_mrpresso, results='asis'}
+cat('The MR-PRESSO global test for pleiotropy was ', if(mrpresso.p < 0.05){paste('significant', ' (p = ', mrpresso.p, ').', sep = "")}else{paste('non-significant.')}, if(mrpresso.p < 0.05 & any(ls() %in% "trait1_snps")){paste('The following SNPs were removed due to pleiotropy:', paste(trait1_snps, collapse=", ") )}) 
+```
+<br> 
+
+##  Mendelian Randomization Analysis 
+To obtain an overall estimate of causal effect, the SNP-exposure and SNP-outcome coefficients were combined in 1) a fixed-effects meta-analysis using an inverse-variance weighted approach (IVW); 2) a Weighted Median approach; 3) Weighted Mode approach and 4) Egger Regression. **IVW** is equivalent to a weighted regression of the SNP-outcome coefficients on the SNP-exposure coefficients with the intercept constrained to zero. This method assumes that all variants are valid instrumental variables based on the Mendelian randomization assumptions. The causal estimate of the IVW analysis expresses the causal increase in the outcome (or log odds of the outcome for a binary outcome) per unit change in the exposure. **Weighted median MR** allows for 50% of the instrumental variables to be invalid. **MR-Egger regression** allows all the instrumental variables to be subject to direct effects (i.e. horizontal pleiotropy), with the intercept representing bias in the causal estimate due to pleiotropy and the slope representing the causal estimate. **Weighted Mode** ....
+<br> 
+
+```{r MR_analysis, echo=F, warning=F, message = FALSE}
+
+##  Single snp analysis and meta analysis
+res_single <- mr_singlesnp(mrdat,
+                           single_method = 'mr_wald_ratio',
+                           all_method=c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))
+
+res <- mr(mrdat, method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))
+
+```
+
+Table 4 presents the MR causal estimates of genetically predicted `r params$exposure.name` on `r params$outcome.name`. Figure 1 illustrates the SNP-specific associations with `r params$exposure.name` versus the association in `r params$outcome.name` and the corresponding MR estimates.
+
+
+**Table 4** MR causaul estimates for `r params$exposure.name` on `r params$outcome.name`
+```{r MR_table, echo=FALSE, message=F}
+as.data.frame(res)
+```
+<br> 
+
+```{r scatter_plot, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 1: Scatterplot of SNP effects for the association of the Exposure on the Outcome'}
+
+##  Scatter Plot
+scatter_plot <- mr_scatter_plot(res, mrdat)
+scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + 
+  guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +
+  labs(x = paste0('SNP effect on ', params$exposure.name), 
+       y = paste0('SNP effect on ', params$outcome.name))  
+
+```
+<br>
+
+Figure 3 shows a funnel plot to detect pleiotropy and Table 2 show the results of Cochrans Q heterogeneity test to assess for the presence of pleiotropy. 
+<br>
+
+```{r funnel_plot, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap='Fig. 3: Funnel plot of the MR causal estimates against their precession'}
+funnel_plot <- mr_funnel_plot(res_single)
+funnel_plot[[1]] + theme_bw() + scale_colour_discrete() + 
+  theme(legend.position = "bottom", text = element_text(family="Times", size=12))
+
+```
+<br>
+
+**Table 2:** Heterogenity tests for `r params$trait1.name` on `r params$trait2.name`
+```{r heterogeneity trait1, echo=F}
+trait1.het <- mr_heterogeneity(mrdat, method_list=c("mr_egger_regression", "mr_ivw"))
+as.data.frame(trait1.het)
+```
+<br>
+
+**Table 3:** Test for directional pleitropy for `r params$exposure.name` on `r params$outcome.name`
+```{r pleitropy trait1, echo=F}
+mr_plei <- mr_pleiotropy_test(mrdat)
+
+as.data.frame(mr_plei)
+
+```
+<br>
