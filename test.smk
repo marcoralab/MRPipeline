@@ -5,7 +5,7 @@ import os
 RWD = os.getcwd()
 
 ## Configfile - different for each gwas
-REF = '/Users/sheaandrews/Documents/0_Data/1000genomes/EUR/EUR_All_Chr'
+REF = '1_RawData/EUR_All_Chr'
 ExposureCode = 'cpd'
 OutcomeCode = ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv']
 Pthreshold = '5e-8'
