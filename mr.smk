@@ -11,7 +11,7 @@ shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 ## Configfile - different for each gwas
 REF = '1_RawData/EUR_All_Chr'
-ExposureCode = 'dep'
+ExposureCode = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig']
 OutcomeCode = ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']
 Pthreshold = ['5e-6', '5e-8']
 DataIn = '1_RawData/GWAS/'
