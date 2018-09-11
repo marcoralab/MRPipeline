@@ -17,6 +17,9 @@ Pthreshold = ['5e-6', '5e-8']
 DataIn = '1_RawData/GWAS/'
 traits = '1_RawData/MRTraits.csv'
 DataOut = "2_DerivedData/"
+
+localrules: all, OutcomeSnps
+
 rule all:
     input:
         expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
