@@ -1,62 +1,116 @@
 '''Snakefile for Mendelian Randomization'''
-# snakemake -s mr.smk --configfile 3_Scripts/mr_config.yaml
-# snakemake -s mr.smk --dag | dot -Tsvg > dag_mr.svg
+# snakemake -s mr.smk
 
 import os
 RWD = os.getcwd()
 
 ## Configfile - different for each gwas
-DataIn = config['DataIn']
-DataOut = config['DataOut']
-
-TraitName = config['TraitName']
-TraitCode = config['TraitCode']
-TraitBlurb = config['TraitBlurb']
-TraitClump = config['TraitClump']
-
-Pthreshold = config['Pthreshold']
-
+REF = '1_RawData/EUR_All_Chr'
+ExposureCode = 'cpd'
+OutcomeCode = ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']
+Pthreshold = ['5e-6', '5e-8']
+DataIn = '1_RawData/GWAS/'
+traits = '1_RawData/MRTraits.csv'
+DataOut = "2_DerivedData/"
 rule all:
     input:
-        expand("4_Output/{TraitCode}_AD_MR_{Pthreshold}_Analaysis.html", TraitCode=TraitCode, Pthreshold=Pthreshold),
+        expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
+
+rule clump:
+    input: DataIn + '{ExposureCode}_GWAS.Processed.gz'
+    output: DataIn + '{ExposureCode}.clumped'
+    params:
+        ref = REF,
+        out =  DataIn + '{ExposureCode}'
+    shell:
+        "plink --bfile {params.ref}  --clump {input}  --clump-r2 0.1 --clump-kb 250 --clump-p1 1 --clump-p2 1 --out {params.out}"
+
+rule gzip:
+    input: DataIn + '{ExposureCode}.clumped'
+    output: DataIn + '{ExposureCode}.clumped.gz'
+    shell: "gzip {input}"
+
+rule ExposureSnps:
+    input:
+        script = '3_Scripts/ExposureData.R',
+        summary = DataIn + '{ExposureCode}_GWAS.Processed.gz',
+        ExposureClump = DataIn + '{ExposureCode}.clumped.gz'
+    output:
+        out = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
+    params:
+        Pthreshold = '{Pthreshold}'
+    shell:
+        'Rscript {input.script} {input.summary} {params.Pthreshold} {input.ExposureClump} {output.out}'
+
+rule OutcomeSnps:
+    input:
+        script = '3_Scripts/OutcomeData.R',
+        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz"
+    output:
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_proxys.csv",
+    params:
+        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+    shell:
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
+
+rule Harmonize:
+    input:
+        script = '3_Scripts/DataHarmonization.R',
+        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
+    output:
+        Harmonized = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
+    params:
+        ExposureCode = '{ExposureCode}',
+        OutcomeCode = '{OutcomeCode}'
+    shell:
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.ExposureCode} {params.OutcomeCode} {output.Harmonized}'
+
+rule MrPresso:
+    input:
+        script = '3_Scripts/MRPRESSO.R',
+        mrdat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
+    output:
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+    params:
+        out = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
+    shell:
+        'Rscript {input.script} {input.mrdat} {params.out}'
 
 rule html_Report:
     input:
-        script = '3_Scripts/mr_alzheimers.Rmd',
-        load_summary = DataIn + 'load_GWAS.Processed.gz',
-        aaos_summary = DataIn + 'aaos_GWAS.Processed.gz',
-        ab42_summary = DataIn + 'ab42_GWAS.Processed.gz',
-        ptau_summary = DataIn + 'ptau_GWAS.Processed.gz',
-        tau_summary = DataIn + 'tau_GWAS.Processed.gz',
-        hipv_summary = DataIn + 'hipv_GWAS.Processed.gz',
-        trait_summary = DataIn + '{TraitCode}_GWAS.Processed.gz'
+        script = '3_Scripts/mr_report.Rmd',
+        traits = traits,
+        ExposureSnps = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        ProxySnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_proxys.csv",
+        HarmonizedDat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        mrpresso_global = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
     output:
-        "4_Output/{TraitCode}_AD_MR_{Pthreshold}_Analaysis.html"
+        "4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
     params:
         rwd = RWD,
-        output_dir = "4_Output/",
-        TraitBlurb = TraitBlurb,
-        TraitName = TraitName,
-        TraitCode = TraitCode,
-        TraitClump = TraitClump,
-        out_path = DataOut,
-        trait_load_path = "2_DerivedData/{TraitCode}/{TraitCode}_load_{Pthreshold}_MRdat.csv",
-        trait_aaos_path = "2_DerivedData/{TraitCode}/{TraitCode}_aaos_{Pthreshold}_MRdat.csv",
-        trait_ab42_path = "2_DerivedData/{TraitCode}/{TraitCode}_ab42_{Pthreshold}_MRdat.csv",
-        trait_ptau_path = "2_DerivedData/{TraitCode}/{TraitCode}_ptau_{Pthreshold}_MRdat.csv",
-        trait_tau_path = "2_DerivedData/{TraitCode}/{TraitCode}_tau_{Pthreshold}_MRdat.csv",
-        trait_hipv_path = "2_DerivedData/{TraitCode}/{TraitCode}_hipv_{Pthreshold}_MRdat.csv",
-        Pthreshold = '{Pthreshold}',
+        output_dir = "4_Output/{ExposureCode}/{OutcomeCode}/",
+        output_name = "4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        ExposureCode = '{ExposureCode}',
+        OutcomeCode = '{OutcomeCode}',
+        Pthreshold = "{Pthreshold}",
     shell:
         "R -e 'rmarkdown::render("
         """"{input.script}", output_file = "{output}", output_dir = "{params.output_dir}", \
-params = list(rwd = "{params.rwd}", trait.name = "{params.TraitName}", trait.code = "{params.TraitCode}", \
-load.summary = "{input.load_summary}", aaos.summary = "{input.aaos_summary}", ab42.summary = "{input.ab42_summary}", \
-ptau.summary = "{input.ptau_summary}", tau.summary = "{input.tau_summary}", trait.summary = "{input.trait_summary}", \
-hipv.summary = "{input.hipv_summary}", trait_hipv.path = "{params.trait_hipv_path}", \
-trait_load.path = "{params.trait_load_path}", trait_aaos.path = "{params.trait_aaos_path}", \
-trait_ab42.path = "{params.trait_ab42_path}", trait_ptau.path = "{params.trait_ptau_path}", \
-trait_tau.path = "{params.trait_tau_path}", out.path = "{params.out_path}", \
+params = list(rwd = "{params.rwd}", \
+traits = "{input.traits}", \
+exposure.snps = "{input.ExposureSnps}", \
+outcome.snps = "{input.OutcomeSnps}", \
+proxy.snps = "{input.ProxySnps}", \
+harmonized.dat = "{input.HarmonizedDat}", \
+mrpresso_global = "{input.mrpresso_global}", \
+outcome.code = "{params.OutcomeCode}", \
+exposure.code = "{params.ExposureCode}", \
 p.threshold = "{params.Pthreshold}", \
-trait.blurb = "{params.TraitBlurb}", trait.clump = "{params.TraitClump}"))' --slave
+out = "{params.output_name}"))' --slave
         """
