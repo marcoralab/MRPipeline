@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+oW37fw	O8GFar	aaos	cpd	66.85264901955398	0.2184

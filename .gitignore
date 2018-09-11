@@ -2,7 +2,6 @@
 .Rhistory
 .snakemake/*
 1_RawData/*
-2_DerivedData/
 5_Documents/*
 Drafts*
 BP/*

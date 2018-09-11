@@ -1,0 +1,16 @@
+$`Main MR results`
+       Exposure       MR Analysis Causal Estimate         Sd    T-stat
+1 beta.exposure               Raw       0.0433367 0.09701108 0.4467191
+2 beta.exposure Outlier-corrected              NA         NA        NA
+    P-value
+1 0.6568008
+2        NA
+
+$`MR-PRESSO results`
+$`MR-PRESSO results`$RSSobs
+[1] 66.85265
+
+$`MR-PRESSO results`$Pvalue
+[1] 0.2184
+
+
