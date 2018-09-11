@@ -1,0 +1,10 @@
+__default__:
+  project: acc_LOAD
+  partition: bode
+  queue: premium
+  cores: 1
+  mem: 8000
+  time: '60'
+Harmonize:
+  time: '30:00'
+  mem: 8000

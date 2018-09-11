@@ -5,6 +5,9 @@
 import os
 RWD = os.getcwd()
 
+## For running on cluster
+shell.prefix('module load plink/1.90 impute2 R/3.4.3; ')
+
 ## Configfile - different for each gwas
 REF = '1_RawData/EUR_All_Chr'
 ExposureCode = 'cpd'
