@@ -1,0 +1,12 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10800664,T,C,T,C,-0.02591,0.0047,0.478395,0.5006999999999999,FALSE,FALSE,FALSE,Xdz84H,0.0157,0.7669,load,TRUE,reported,0.005653,4.77e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs13255475,T,C,T,C,-0.02793,0.0112,0.34382500000000005,0.3172,FALSE,FALSE,FALSE,Xdz84H,0.0168,0.5053,load,TRUE,reported,0.006049,4.032e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs1513737,T,C,T,C,0.02597,0.0052,0.46224200000000004,0.4701,FALSE,FALSE,FALSE,Xdz84H,0.0163,0.7475,load,TRUE,reported,0.00562,3.986e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs35055419,C,T,C,T,0.04004,0.0431,0.363582,0.6368,FALSE,FALSE,FALSE,Xdz84H,0.0165,0.00908,load,TRUE,reported,0.006006,3.071e-11,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs4674842,G,T,G,T,-0.03081,0.0159,0.238728,0.7632,FALSE,FALSE,FALSE,Xdz84H,0.0182,0.3834,load,TRUE,reported,0.006491,2.158e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs584007,A,G,A,G,-0.02801,-0.3683,0.36639999999999995,0.3403,FALSE,FALSE,FALSE,Xdz84H,0.0191,1.056e-82,load,TRUE,reported,0.005946,2.589e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs624290,C,T,C,T,-0.04421,-0.0649,0.11468999999999996,0.9013,FALSE,FALSE,FALSE,Xdz84H,0.0268,0.0155,load,TRUE,reported,0.009094,1.223e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs6770219,T,C,T,C,-0.032,0.0134,0.25097,0.244,FALSE,FALSE,FALSE,Xdz84H,0.019,0.4784,load,TRUE,reported,0.006982,4.804e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs6859,A,G,A,G,0.02894,0.334,0.42320599999999997,0.4633,FALSE,FALSE,FALSE,Xdz84H,0.016,3.31e-96,load,TRUE,reported,0.0056,2.508e-7,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs769449,A,G,A,G,0.07821,1.2585,0.108285,0.1641,FALSE,FALSE,FALSE,Xdz84H,0.0257,1e-200,load,TRUE,reported,0.006911,4.054e-29,tau,TRUE,reported,yp16YV,2,TRUE,NA
+rs7737716,T,C,T,C,0.04066,0.0354,0.14227,0.1276,FALSE,FALSE,FALSE,Xdz84H,0.024,0.1408,load,TRUE,reported,0.008535,1.984e-6,tau,TRUE,reported,yp16YV,2,TRUE,NA

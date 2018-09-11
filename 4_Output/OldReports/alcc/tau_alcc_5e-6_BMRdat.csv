@@ -1,0 +1,12 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10800664,T,C,T,C,-0.02591,-6.708e-5,0.478395,0.4959,FALSE,FALSE,FALSE,U2bFYi,0.003045,0.9824,alcc,TRUE,reported,0.005653,4.77e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs13255475,T,C,T,C,-0.02793,-0.001693,0.34382500000000005,0.3098,FALSE,FALSE,FALSE,U2bFYi,0.002977,0.5697,alcc,TRUE,reported,0.006049,4.032e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs1513737,T,C,T,C,0.02597,0.003426,0.46224200000000004,0.4702,FALSE,FALSE,FALSE,U2bFYi,0.003028,0.258,alcc,TRUE,reported,0.00562,3.986e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs35055419,C,T,C,T,0.04004,-4.027e-4,0.363582,0.3826,FALSE,FALSE,FALSE,U2bFYi,0.002986,0.8927,alcc,TRUE,reported,0.006006,3.071e-11,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs4674842,G,T,G,T,-0.03081,4.326e-4,0.238728,0.2351,FALSE,FALSE,FALSE,U2bFYi,0.002981,0.8846,alcc,TRUE,reported,0.006491,2.158e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs584007,A,G,A,G,-0.02801,-4.135e-4,0.36639999999999995,0.3609,FALSE,FALSE,FALSE,U2bFYi,0.002975,0.8894,alcc,TRUE,reported,0.005946,2.589e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs624290,C,T,C,T,-0.04421,0.004635,0.11468999999999996,0.09367,FALSE,FALSE,FALSE,U2bFYi,0.002973,0.1191,alcc,TRUE,reported,0.009094,1.223e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs6770219,T,C,T,C,-0.032,0.004639,0.25097,0.2358,FALSE,FALSE,FALSE,U2bFYi,0.00299,0.1207,alcc,TRUE,reported,0.006982,4.804e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs6859,A,G,A,G,0.02894,-0.001644,0.42320599999999997,0.421,FALSE,FALSE,FALSE,U2bFYi,0.002974,0.5803,alcc,TRUE,reported,0.0056,2.508e-7,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs769449,A,G,A,G,0.07821,0.003907,0.108285,0.1261,FALSE,FALSE,FALSE,U2bFYi,0.002974,0.189,alcc,TRUE,reported,0.006911,4.054e-29,Tau,TRUE,reported,gughE1,2,TRUE,NA
+rs7737716,T,C,T,C,0.04066,0.00144,0.14227,0.1267,FALSE,FALSE,FALSE,U2bFYi,0.002984,0.6294,alcc,TRUE,reported,0.008535,1.984e-6,Tau,TRUE,reported,gughE1,2,TRUE,NA
