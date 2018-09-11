@@ -4,14 +4,13 @@
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 exposure.summary = args[1] # Exposure summary statistics
 outcome.summary = args[2] # Outcome Summary statistics
-out.outcome = args[3]
+out = args[3]
 
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
 suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
 suppressMessages(library(haploR))
-
 
 ##  ---- Find Proxy SNPs - uses haploR ---- ##
 FindProxys <-function(snplist, dat){
@@ -46,11 +45,11 @@ FindProxys <-function(snplist, dat){
 message("READING IN EXPOSURE \n")
 exposure.dat <- read_tsv(exposure.summary)
 
-message("READING IN OUTCOME \n")
+message("\n READING IN OUTCOME \n")
 outcome.dat.raw <- read_tsv(outcome.summary)
 
 ### ===== Proxy SNPs ===== ###
-message("SEARCHING FOR PROXY SNPS \n")
+message("\n SEARCHING FOR PROXY SNPS \n")
 outcome.dat <- outcome.dat.raw %>%
   right_join(select(exposure.dat, SNP), by = 'SNP')
 
@@ -68,11 +67,21 @@ if(nrow(miss.outcome) >= 1){
     arrange(CHR, POS)
 }
 
+message("\n EXPORTING \n")
 ## Write out outcomes SNPs
-write_tsv(outcome.dat, out.outcome)
+write_tsv(outcome.dat, paste0(out, '_SNPs.txt'))
 
-
-
+## Write out Proxy SNPs
+if(nrow(miss.outcome) >= 1){
+  left_join(select(miss.outcome, SNP), proxy.outcome, by = 'SNP') %>% 
+    write_csv(paste0(out, '_proxys.csv'))
+}else{
+  tibble(SNP = NA, rsID = NA, ld.r2 = NA, Dprime = NA, ref.proxy = NA, alt.proxy = NA, 
+         CHR = NA, POS = NA, Effect_allele.proxy = NA, Non_Effect_allele.proxy = NA, 
+         EAF = NA, Beta = NA, SE = NA, P = NA, r2 = NA, N = NA, ref = NA, alt = NA, 
+         Effect_allele = NA, Non_Effect_allele = NA) %>% 
+    write_csv(paste0(out, '_proxys.csv'))
+}
 
 
 

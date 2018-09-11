@@ -4,14 +4,13 @@
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 
 infile = args[1] # Exposure summary statistics
-out.txt = args[2] # SPECIFY THE OUTPUT FILE
-out.rds = args[3] # SPECIFY THE OUTPUT FILE
+out = args[2]
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
 suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 
-### ===== Proxy SNPs ===== ###
+### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
 mrdat <- read_csv(infile)
 
@@ -22,7 +21,7 @@ df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
 nsnps <- nrow(mrdat)
 NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
 
-### ===== Proxy SNPs ===== ###
+### ===== MR-PRESSO ===== ###
 message("\n CALCULATING PLEITROPY \n")
 
 mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
@@ -35,11 +34,39 @@ mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
                                NbDistribution = NbDistribution,
                                SignifThreshold = 0.05)
 
+### ===== FORMAT DATA ===== ###
+## extract RSSobs and Pvalue 
+if("Global Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
+  mrpresso.p <- mrpresso.out$`MR-PRESSO results`$`Global Test`$Pvalue
+  RSSobs <- mrpresso.out$`MR-PRESSO results`$`Global Test`$RSSobs
+} else {
+  mrpresso.p <- mrpresso.out$`MR-PRESSO results`$Pvalue
+  RSSobs <- mrpresso.out$`MR-PRESSO results`$RSSobs
+}
+
+# Write RSSobs and Pvalue to tibble
+mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
+       id.outcome = as.character(mrdat[1,'id.outcome']), 
+       outcome = as.character(mrdat[1,'outcome']), 
+       exposure = as.character(mrdat[1,'exposure']) , RSSobs = RSSobs,
+       pval = mrpresso.p)
+
+## If Global test is significant, append outlier tests to mrdat
+if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
+  mrdat.out <- mrdat %>% 
+    bind_cols(mrpresso.out$`MR-PRESSO results`$`Outlier Test`) %>% 
+    rename(mrpresso_RSSobs = RSSobs, mrpresso_pval = Pvalue) %>% 
+    mutate(mrpresso_keep = mrpresso_pval > 0.05) 
+} else {
+  mrdat.out <- mrdat %>% 
+    mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA, mrpresso_keep = TRUE)
+}
+
 ### ===== EXPORTING ===== ###
 message("\n EXPORTING REPORTS \n")
-sink(out.txt, append=FALSE, split=FALSE)
+sink(paste0(out, '.txt'), append=FALSE, split=FALSE)
 mrpresso.out
 sink()
 
-saveRDS(mrpresso.out, file = out.rds)
-
+write_tsv(mrpresso.dat, paste0(out, '_global.txt'))
+write_csv(mrdat.out, paste0(out, '_MRdat.csv'))

@@ -13,6 +13,7 @@ params:
   ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
   tau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_tau_GWAS_summary_statistics.txt.gz'
   hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
+  hipv_2015.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/Hippocampal_Volume/Stein2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
   alc_cons.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_cons/ALC_CONS_GWAS_FORUKB.txt.gz'
   alc_dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_dep/daner_alcdep_eur_jul2017.gz.jul2017.min_n'
   audit.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz'
@@ -84,7 +85,7 @@ hrc <- filter(hrc.raw, ID != '.') %>%
 
 
 ## Format GWAS summary statistics for MR analysis 
-### Hippocampal Volume 
+### Hippocampal Volume - Hilbar 2017
 
 ```{r}
 hipv.raw <- read_table2(params$hipv.summary)
@@ -135,7 +136,7 @@ tab.hipv <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump')
 ```{r alc_cons gwas}
 
 p.hipv <- ggman(filter(hipv.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
-                title = "hipv - Lambert 2013") + 
+                title = "HV - Hilbar 2015") + 
   theme_classic() + 
   geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
   geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
@@ -145,6 +146,66 @@ out.hipv <- grid.arrange(p.hipv,  tableGrob(tab.hipv, theme = ttheme_minimal(bas
                          ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
 
 ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/hipv.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.hipv)
+```
+
+### Hippocampal Volume - Stein 2015
+
+```{r}
+hipv.raw <- read_table2(params$hipv_2015.summary)
+hipv.dat <- hipv.raw %>%
+  rename(SNP = RSID, EAF = Freq_European_1000Genomes, Beta = Effect_Beta, SE = StdErr, P = Pvalue, Effect_allele = Effect_Allele, Non_Effect_allele = Non_Effect_Allele) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  separate(CHR_BP_hg19b37, c('CHR', 'POS'), sep = ":") %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/hipv2015_GWAS.Processed.gz'))
+```
+
+```{r}
+## Number of Significant SNPs
+mr_hipv.dat <- format_data(filter(hipv.dat, P < 5e-5), type = 'exposure', 
+                           phenotype_col = 'hipv',
+                           snp_col = 'SNP', 
+                           beta_col = "Beta",
+                           se_col = "SE",
+                           eaf_col = "EAF",
+                           effect_allele_col = "Effect_allele",
+                           other_allele_col = "Non_Effect_allele",
+                           pval_col = "P")
+hipv_ld <- clump_data(mr_hipv.dat, clump_r2 = 0.1, clump_kb = 250)
+
+clump.n <- hipv_ld %>% 
+  mutate(p.cut = cut(pval.exposure, breaks = 
+                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
+  left_join(select(hipv.dat, SNP, r2)) %>% 
+  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
+  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
+
+all.n <- hipv.dat %>% 
+  mutate(p.cut = cut(P, breaks = 
+                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
+  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
+
+tab.hipv <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
+```
+
+```{r alc_cons gwas}
+
+p.hipv <- ggman(filter(hipv.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
+                title = "HV - Stien 2015") + 
+  theme_classic() + 
+  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
+  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
+p.hipv <- ggmanHighlight(p.hipv, highlight = filter(hipv_ld, pval.exposure < 5e-6)$SNP, shape = 18)
+
+out.hipv <- grid.arrange(p.hipv,  tableGrob(tab.hipv, theme = ttheme_minimal(base_size = 8)), 
+                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
+
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/hipv2015.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.hipv)
 ```
 
 ### Late Onset Alzheimer's Disease
