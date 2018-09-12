@@ -92,7 +92,7 @@ See the ```3_Scripts/MrMungeSummaryStats.Rmd``` file for R code to munge summary
 2. [Across-cohort QC analyses of GWAS summary statistics from complex traits](https://doi.org/10.1038/ejhg.2016.106)
 
 ## Output
-The ```MR Summary``` R script can be used to creat Dot-and-Whisker plots and export a summary table of the results.
+The ```MR Summary``` R script can be used to creat Dot-and-Whisker plots and export a summary table of aggregate results across mutltiple causal models.
 ```r
 # A tibble: 70 x 16
    exposure outcome pt    nsnp  IVW_b.se     IVW_pval `MR Egger_b.se` `MR Egger_pval` `Weighted median_b.se` `Weighted median_pval` `Weighted mode_b.se` `Weighted mode_pval` violated.HeterogeneityIVW violated.HeterogeneityEgger violated.Egger violated.mrpresso
