@@ -1,5 +1,5 @@
 '''Snakefile for Mendelian Randomization'''
-# snakemake -s mr.smk
+# snakemake -s mr.smk --configfile config.yaml
 # snakemake -s mr.smk --dag | dot -Tsvg > dag_mr.svg
 
 import os
@@ -7,16 +7,16 @@ RWD = os.getcwd()
 
 ## For running on cluster
 #mkdir .snakejob; snakejob -s mr.smk -j 100 --until MrPresso --max-jobs-per-second 1 --keep-going
-#shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
+shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
-## Configfile - different for each gwas
-REF = '1_RawData/EUR_All_Chr'
-ExposureCode = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig']
-OutcomeCode = ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']
-Pthreshold = ['5e-6', '5e-8']
-DataIn = '1_RawData/GWAS/'
-traits = '1_RawData/MRTraits.csv'
-DataOut = "2_DerivedData/"
+
+REF = config['REF']
+ExposureCode = config['ExposureCode']
+OutcomeCode = config['OutcomeCode']
+Pthreshold = config['Pthreshold']
+DataIn = config['DataIn']
+traits = config['traits']
+DataOut = config['DataOut']
 
 localrules: all, OutcomeSnps
 
