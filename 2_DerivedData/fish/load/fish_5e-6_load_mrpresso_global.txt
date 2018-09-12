@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+gs80En	emnIWF	load	fish	2998.429996509512	<4e-05

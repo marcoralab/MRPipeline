@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+EHmMt8	BakAa2	ptau	tc	436.09584073849084	<1e-04

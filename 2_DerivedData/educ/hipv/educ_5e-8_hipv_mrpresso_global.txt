@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+gF6cf8	tTZ3Gw	hipv	educ	1453.6849829258422	2e-5

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+15TlIW	vL46OD	ab42	dep	42.805074964023206	0.058

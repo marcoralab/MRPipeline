@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+SOvAUs	aVhrAk	hipv2015	sociso	147.81318668186233	0.0957

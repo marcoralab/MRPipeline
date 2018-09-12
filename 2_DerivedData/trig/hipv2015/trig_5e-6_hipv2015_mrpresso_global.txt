@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ya8SLJ	m5lSFD	hipv2015	trig	352.1199238891818	<1e-04

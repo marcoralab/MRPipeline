@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+10the6	A1Luk0	ptau	mdd	41.40442664091993	0.5386

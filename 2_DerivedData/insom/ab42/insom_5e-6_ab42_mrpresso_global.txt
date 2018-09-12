@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+KCTJNr	BvlGvm	ab42	insom	18.28496981634351	0.822

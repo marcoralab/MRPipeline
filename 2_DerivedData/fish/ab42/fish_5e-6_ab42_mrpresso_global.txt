@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+8H9df6	1HbHmY	ab42	fish	333.5586962382326	0.0768

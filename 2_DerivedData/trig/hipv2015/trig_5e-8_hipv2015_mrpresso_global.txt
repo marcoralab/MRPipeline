@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+MgRO8H	sImbHZ	hipv2015	trig	164.38238210262026	0.1057

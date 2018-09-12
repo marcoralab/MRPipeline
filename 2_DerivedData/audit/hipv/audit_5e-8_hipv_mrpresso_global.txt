@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+zdloLs	DXPhyB	hipv	audit	1.882869154271458	1

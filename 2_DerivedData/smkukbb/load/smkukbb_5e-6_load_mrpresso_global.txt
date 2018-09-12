@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+1XKTaH	vvSsoL	load	smkukbb	859.9430148996915	4e-4

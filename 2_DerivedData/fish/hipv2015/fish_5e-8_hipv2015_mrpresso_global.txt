@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Y495yz	TFcSa5	hipv2015	fish	122.7038620827945	0.143

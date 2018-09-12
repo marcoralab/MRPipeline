@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+8PFdqR	ZcDStp	tau	tc	520.7375030772098	<4e-05

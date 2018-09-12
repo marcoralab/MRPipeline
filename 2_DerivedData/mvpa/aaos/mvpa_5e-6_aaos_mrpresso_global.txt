@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+lnLEnT	G7nPi3	aaos	mvpa	765.5089875729335	<1e-04

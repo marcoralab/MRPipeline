@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+wrvuF1	EU5dXS	hipv2015	hdl	379.67320795002354	0.07508

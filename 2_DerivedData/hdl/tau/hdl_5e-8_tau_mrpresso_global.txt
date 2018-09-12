@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+nlAt44	icUrfF	tau	hdl	330.6995902817719	<1e-04

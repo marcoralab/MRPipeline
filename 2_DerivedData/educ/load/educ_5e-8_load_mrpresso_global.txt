@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ZmRSNf	5rkofL	load	educ	1416.1192801479863	1e-4

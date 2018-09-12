@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+xavL09	fldBnf	ab42	diab	193.6011680947129	0.2439

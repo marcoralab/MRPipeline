@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+dAoLdh	L3Q2uC	aaos	ldl	1539.656000944996	<1e-04

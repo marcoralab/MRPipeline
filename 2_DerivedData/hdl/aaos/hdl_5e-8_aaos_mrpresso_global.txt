@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+rJDTI8	gSLq8s	aaos	hdl	1351.072373184258	<1e-04

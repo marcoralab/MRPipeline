@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+xCeBpx	wQwL9l	ab42	mdd	54.19793129569103	0.102

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+slZuIF	QbnkVM	hipv	sleep	33.823759066370556	0.299

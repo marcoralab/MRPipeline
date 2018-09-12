@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+QkmjN8	uPiKo9	tau	diab	189.6986821928046	0.3141

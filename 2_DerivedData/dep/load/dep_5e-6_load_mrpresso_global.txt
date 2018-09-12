@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ahBNP5	nruU4v	load	dep	161.64210393860577	0.4578

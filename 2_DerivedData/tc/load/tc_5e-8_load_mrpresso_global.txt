@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+meqKNg	SrU088	load	tc	4438.030110817219	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+BQfNBY	MgZEXN	ptau	smkukbb	187.2753894496158	0.8075

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+8N6N82	niC1Ob	aaos	ldl	1680.625584109073	<4e-05

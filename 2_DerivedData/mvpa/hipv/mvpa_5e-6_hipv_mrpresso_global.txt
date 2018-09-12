@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+VXx7rX	skyhDV	hipv	mvpa	265.50799270510186	<1e-04

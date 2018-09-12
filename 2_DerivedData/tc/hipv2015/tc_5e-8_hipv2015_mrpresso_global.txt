@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+L16lm3	VnKH5k	hipv2015	tc	267.131243607373	0.1106

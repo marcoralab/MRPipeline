@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+GCAwV0	gcjMOF	load	mvpa	2567.7925234948925	<2e-04

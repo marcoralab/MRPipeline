@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+jlYqyL	p7KdFz	ptau	mdd	163.4978926431089	0.6454

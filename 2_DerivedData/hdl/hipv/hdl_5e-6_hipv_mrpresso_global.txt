@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+lcLHRA	kR2mlG	hipv	hdl	437.5547406234688	0.00172

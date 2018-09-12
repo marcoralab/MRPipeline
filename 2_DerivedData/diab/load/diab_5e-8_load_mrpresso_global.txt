@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ZJvhuN	H1iXFg	load	diab	300.63185952622587	<1e-04

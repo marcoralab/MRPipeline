@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+g5sHtZ	gnZfV1	load	insom	36.22939528295444	0.4594

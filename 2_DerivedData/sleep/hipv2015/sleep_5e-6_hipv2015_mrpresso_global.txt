@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+iDwM1S	Bhb9K7	hipv2015	sleep	29.446376053584977	0.405

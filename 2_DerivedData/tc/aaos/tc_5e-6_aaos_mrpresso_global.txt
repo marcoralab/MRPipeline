@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ASF7sI	TUhqpi	aaos	tc	1818.8944356284871	<4e-05

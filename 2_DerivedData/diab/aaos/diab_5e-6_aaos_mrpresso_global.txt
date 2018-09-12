@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+snoJiP	rdoBvQ	aaos	diab	612.5438678423844	<4e-05

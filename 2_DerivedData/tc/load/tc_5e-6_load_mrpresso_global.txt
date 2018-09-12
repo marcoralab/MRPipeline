@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+oWWutR	8juh3h	load	tc	4664.998459106988	<4e-05

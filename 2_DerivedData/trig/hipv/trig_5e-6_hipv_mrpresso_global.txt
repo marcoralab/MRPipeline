@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+lrdLnG	oZuzAz	hipv	trig	411.1939212488007	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+rrYp7s	QKC6BN	hipv2015	alcd	26.992528927830175	0.354

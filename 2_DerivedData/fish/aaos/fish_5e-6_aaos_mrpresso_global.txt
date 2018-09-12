@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+sWdGzQ	v0jcbM	aaos	fish	811.3018965090424	<4e-05

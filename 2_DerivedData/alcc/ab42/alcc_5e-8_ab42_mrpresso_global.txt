@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+LbCF0B	g4ZOMU	ab42	alcc	11.976203556531939	0.242

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+4H3NxY	CtO4FU	hipv	ldl	415.4524557600787	1.2e-4

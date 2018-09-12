@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+DfxaOi	NubaWn	ptau	sociso	27.506789143974355	0.126

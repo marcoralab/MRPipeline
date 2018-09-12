@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TNSAW3	ffqo1l	ptau	fish	455.9728412548162	<4e-05

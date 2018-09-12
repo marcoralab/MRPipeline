@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Dbi0OI	gFTOVw	tau	insom	24.554581989300782	0.482

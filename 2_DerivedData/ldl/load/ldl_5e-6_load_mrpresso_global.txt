@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+DnG5wc	YaQCmz	load	ldl	4487.363980721625	<4e-05

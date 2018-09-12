@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+z1z4fO	0n8puW	tau	dep	174.31742874483737	0.0973

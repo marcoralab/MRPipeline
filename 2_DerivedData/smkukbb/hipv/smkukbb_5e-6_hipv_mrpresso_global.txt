@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Ej93mZ	FegKev	hipv	smkukbb	854.7074154236942	9.2e-4

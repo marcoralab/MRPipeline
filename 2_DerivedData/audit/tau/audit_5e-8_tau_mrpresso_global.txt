@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+rhaVWd	hKKjx4	tau	audit	10.29101407489639	0.272

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+cnPSmo	2t0E4q	aaos	sociso	150.325576445679	0.1954
