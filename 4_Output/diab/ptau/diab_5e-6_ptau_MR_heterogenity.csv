@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+H1ZR8s,PSc1sb,ptau,diab,MR Egger,437.8980818574207,422,0.28658509887662414
+H1ZR8s,PSc1sb,ptau,diab,Inverse variance weighted,439.34448600241393,423,0.28173116438052026

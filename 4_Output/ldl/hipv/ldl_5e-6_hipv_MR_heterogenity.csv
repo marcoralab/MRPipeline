@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+4H3NxY,CtO4FU,hipv,ldl,MR Egger,400.8921543399105,303,1.358487779110372e-4
+4H3NxY,CtO4FU,hipv,ldl,Inverse variance weighted,408.102921485506,304,6.042794695225903e-5

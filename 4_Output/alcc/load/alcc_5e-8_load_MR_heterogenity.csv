@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+ovLM7D,5YNi4h,load,alcc,MR Egger,11.322516789905327,9,0.25424817141166917
+ovLM7D,5YNi4h,load,alcc,Inverse variance weighted,12.577168315882458,10,0.2482825544697381

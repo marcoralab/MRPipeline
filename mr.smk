@@ -6,7 +6,7 @@ import os
 RWD = os.getcwd()
 
 ## For running on cluster
-#mkdir .snakejob; snakejob -s mr.smk -j 100 --until MrPresso --max-jobs-per-second 1 --keep-going
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 100 --until OutcomeSnps --max-jobs-per-second 1 --keep-going
 shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 
