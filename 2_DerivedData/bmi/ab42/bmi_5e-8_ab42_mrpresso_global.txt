@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+97gCjn	UmazxU	ab42	bmi	2008.9502360119961	<1.33333333333333e-05
