@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+UhWten,7m1Amp,hipv,diab,MR Egger,262.77879001429585,185,1.481418959502908e-4
+UhWten,7m1Amp,hipv,diab,Inverse variance weighted,264.8217903614954,186,1.292351451239174e-4

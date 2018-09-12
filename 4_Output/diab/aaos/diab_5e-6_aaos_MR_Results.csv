@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+snoJiP,rdoBvQ,aaos,diab,Inverse variance weighted (fixed effects),433,0.06347253286622923,0.01337289805504699,2.0711420939942567e-6
+snoJiP,rdoBvQ,aaos,diab,Weighted median,433,0.05048946478527927,0.02884610708335507,0.08006582220636621
+snoJiP,rdoBvQ,aaos,diab,Weighted mode,433,0.0685171558792863,0.036401794487517916,0.060474437616072026
+snoJiP,rdoBvQ,aaos,diab,MR Egger,433,0.07563939326063619,0.0389993026435286,0.05309187778679569
