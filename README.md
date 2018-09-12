@@ -90,3 +90,22 @@ See the ```3_Scripts/MrMungeSummaryStats.Rmd``` file for R code to munge summary
 #### Further Reading on formating summary statistics
 1. [Tips for Formatting A Lot of GWAS Summary Association Statistics Data](http://huwenboshi.github.io/data%20management/2017/11/23/tips-for-formatting-gwas-summary-stats.html)
 2. [Across-cohort QC analyses of GWAS summary statistics from complex traits](https://doi.org/10.1038/ejhg.2016.106)
+
+## Output
+The ```MR Summary``` R script can be used to creat Dot-and-Whisker plots and export a summary table of the results.
+```r
+# A tibble: 70 x 16
+   exposure outcome pt    nsnp  IVW_b.se     IVW_pval `MR Egger_b.se` `MR Egger_pval` `Weighted median_b.se` `Weighted median_pval` `Weighted mode_b.se` `Weighted mode_pval` violated.HeterogeneityIVW violated.HeterogeneityEgger violated.Egger violated.mrpresso
+   <chr>    <chr>   <chr> <chr> <chr>        <chr>    <chr>           <chr>           <chr>                  <chr>                  <chr>                <chr>                <lgl>                     <lgl>                       <lgl>          <lgl>
+ 1 alcc     aaos    5e-6  56    0.1 (0.16)   0.5378   -0.49 (0.82)    0.5491          -0.01 (0.26)           0.9761                 -0.07 (0.27)         0.7974               TRUE                      TRUE                        FALSE          TRUE
+ 2 alcc     aaos    5e-8  15    -0.14 (0.26) 0.5833   0.62 (1.43)     0.6703          0.02 (0.35)            0.9619                 0.05 (0.27)          0.8612               FALSE                     FALSE                       FALSE          FALSE
+ 3 cpd      aaos    5e-6  53    0.02 (0.09)  0.8164   0.16 (0.19)     0.3997          -0.04 (0.14)           0.7765                 -0.06 (0.13)         0.6445               FALSE                     FALSE                       FALSE          FALSE
+ 4 cpd      aaos    5e-8  21    -0.06 (0.12) 0.631    -0.14 (0.3)     0.6402          -0.04 (0.15)           0.7822                 -0.05 (0.14)         0.7484               FALSE                     FALSE                       FALSE          FALSE
+ 5 diab     aaos    5e-6  433   0.06 (0.01)  0        0.08 (0.04)     0.0531          0.05 (0.03)            0.0801                 0.07 (0.04)          0.0605               TRUE                      TRUE                        FALSE          TRUE
+ 6 diab     aaos    5e-8  189   0.07 (0.02)  1e-04    0.05 (0.05)     0.2863          0.05 (0.03)            0.1111                 0.06 (0.04)          0.1002               TRUE                      TRUE                        FALSE          TRUE
+ 7 hdl      aaos    5e-6  366   -0.05 (0.02) 0.0384   -0.16 (0.1)     0.0959          0.03 (0.04)            0.4947                 0.01 (0.05)          0.758                TRUE                      TRUE                        FALSE          TRUE
+ 8 hdl      aaos    5e-8  245   -0.07 (0.03) 0.0068   -0.18 (0.12)    0.1459          0.03 (0.04)            0.4974                 0.01 (0.05)          0.8358               TRUE                      TRUE                        FALSE          TRUE
+ 9 ldl      aaos    5e-6  319   0.27 (0.02)  0        0.5 (0.09)      0               0 (0.04)               0.9075                 -0.02 (0.04)         0.6019               TRUE                      TRUE                        TRUE           TRUE
+10 ldl      aaos    5e-8  210   0.28 (0.02)  0        0.58 (0.11)     0               0.01 (0.04)            0.8493                 -0.02 (0.04)         0.6374               TRUE                      TRUE                        TRUE           TRUE
+# ... with 60 more rows
+```
