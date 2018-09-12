@@ -7,7 +7,7 @@ RWD = os.getcwd()
 
 ## For running on cluster
 #mkdir .snakejob; snakejob -s mr.smk -j 100 --until MrPresso --max-jobs-per-second 1 --keep-going
-shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
+#shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 ## Configfile - different for each gwas
 REF = '1_RawData/EUR_All_Chr'
