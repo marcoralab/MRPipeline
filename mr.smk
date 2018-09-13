@@ -1,6 +1,6 @@
 '''Snakefile for Mendelian Randomization'''
 # snakemake -s mr.smk --configfile config.yaml
-# snakemake -s mr.smk --dag | dot -Tsvg > dag_mr.svg
+# snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
 
 import os
 RWD = os.getcwd()

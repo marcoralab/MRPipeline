@@ -1,6 +1,7 @@
 #!/usr/bin/Rscript
 
 ### ===== Command Line Arguments ===== ##
+## 180913
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 outcome.summary = args[1] # Outcome Summary statistics
 out = args[2]
