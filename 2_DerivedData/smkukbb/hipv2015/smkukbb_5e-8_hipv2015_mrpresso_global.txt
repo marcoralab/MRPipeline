@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-b7p9OS	1WGmRn	hipv2015	smkukbb	233.06334558841135	0.1596
+ncDNjS	gi48WE	hipv2015	smkukbb	189.17150045962273	0.5066

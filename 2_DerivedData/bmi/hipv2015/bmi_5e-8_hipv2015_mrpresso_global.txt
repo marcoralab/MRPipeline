@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-92bhRB	WerTTd	hipv2015	bmi	1825.8703895648664	3.6e-4

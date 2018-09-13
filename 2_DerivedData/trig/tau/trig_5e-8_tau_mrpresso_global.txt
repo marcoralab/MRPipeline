@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ceE9wq	lUk7rD	tau	trig	286.15763598224015	<1e-04
+wEhimd	V5UTef	tau	trig	271.5369331459951	<1e-04

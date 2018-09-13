@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-44Twkq	InQ02O	ptau	educ	1132.8117356824846	0.45422

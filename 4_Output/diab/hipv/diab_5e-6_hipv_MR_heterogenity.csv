@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-iIOvJP,448a7Q,hipv,diab,MR Egger,561.3158141181802,429,1.706396777494783e-5
-iIOvJP,448a7Q,hipv,diab,Inverse variance weighted,568.4422441508144,430,8.002481866903229e-6
+lm6qUk,CJTDuV,hipv,diab,MR Egger,561.3158141181802,429,1.706396777494783e-5
+lm6qUk,CJTDuV,hipv,diab,Inverse variance weighted,568.4422441508144,430,8.002481866903229e-6

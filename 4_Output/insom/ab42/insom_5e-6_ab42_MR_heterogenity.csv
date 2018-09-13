@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+e1KKzU,ekvK8x,ab42,insom,MR Egger,9.08245542456569,16,0.9099790431679745
+e1KKzU,ekvK8x,ab42,insom,Inverse variance weighted,9.338212353009274,17,0.9290500999654143

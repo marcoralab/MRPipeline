@@ -1,10 +1,7 @@
 $`Main MR results`
-       Exposure       MR Analysis Causal Estimate         Sd     T-stat
-1 beta.exposure               Raw     0.022343824 0.08301306 0.26916035
-2 beta.exposure Outlier-corrected     0.001280741 0.08069789 0.01587082
-   P-value
-1 0.788233
-2 0.987362
+       Exposure       MR Analysis Causal Estimate         Sd    T-stat  P-value
+1 beta.exposure               Raw      0.02234382 0.08301306 0.2691604 0.788233
+2 beta.exposure Outlier-corrected              NA         NA        NA       NA
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -12,7 +9,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 168.9607
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0182
+[1] 0.0166
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -23,14 +20,14 @@ $`MR-PRESSO results`$`Outlier Test`
 4   4.228705e-06      1
 5   2.110992e-08      1
 6   3.218708e-04      1
-7   8.326456e-03 0.0524
+7   8.326456e-03 0.0786
 8   9.354139e-06      1
 9   1.284352e-04      1
 10  2.877284e-05      1
 11  2.072715e-05      1
 12  4.949874e-05      1
 13  7.801877e-05      1
-14  6.810637e-04 0.8253
+14  6.810637e-04 0.7205
 15  1.711702e-04      1
 16  2.209328e-06      1
 17  3.931182e-05      1
@@ -67,7 +64,7 @@ $`MR-PRESSO results`$`Outlier Test`
 48  5.276828e-06      1
 49  1.939031e-04      1
 50  2.042038e-05      1
-51  8.687552e-04 0.0393
+51  8.687552e-04 0.0524
 52  2.092004e-05      1
 53  1.869877e-04      1
 54  1.360193e-04      1
@@ -105,7 +102,7 @@ $`MR-PRESSO results`$`Outlier Test`
 86  1.064441e-08      1
 87  4.383677e-04      1
 88  1.433974e-05      1
-89  1.101099e-03  0.131
+89  1.101099e-03 0.1965
 90  3.238592e-05      1
 91  2.632860e-05      1
 92  2.280872e-04      1
@@ -151,14 +148,13 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 51
+[1] "No significant outliers"
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
-beta.exposure 
-     1644.601 
+[1] NA
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.0122
+[1] NA
 
 
 

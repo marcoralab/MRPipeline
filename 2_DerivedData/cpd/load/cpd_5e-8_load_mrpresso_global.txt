@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7pipn8	Abgqcz	load	cpd	22.74372429288026	0.38
+6eGZ0A	3qCNMj	load	cpd	22.780712400796507	0.308

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+v5LtXT,ldGgfd,hipv2015,sleep,MR Egger,20.3441573780102,21,0.4995653704517514
+v5LtXT,ldGgfd,hipv2015,sleep,Inverse variance weighted,20.5852763288302,22,0.546479218336177

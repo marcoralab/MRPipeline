@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+GdJGHv,LqgI2c,hipv,audit,Inverse variance weighted (fixed effects),61,-0.08419163181898252,0.16131772606607356,0.601740344257855
+GdJGHv,LqgI2c,hipv,audit,Weighted median,61,-0.07150468250630675,0.23619797151814373,0.7620941147710879
+GdJGHv,LqgI2c,hipv,audit,Weighted mode,61,-0.09282599213181797,0.32574105134883424,0.7766494901772758
+GdJGHv,LqgI2c,hipv,audit,MR Egger,61,0.08107319137953915,0.32450839657536423,0.8035836542860078

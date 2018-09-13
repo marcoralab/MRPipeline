@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Pc2lzd	52DHxR	aaos	cpd	21.961108720862853	0.629
+DAPvZF	LKQM6G	aaos	cpd	21.961108720862853	0.597

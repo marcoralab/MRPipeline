@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+6cOiC5,9bEHwk,aaos,smkukbb,MR Egger,799.3709924347515,731,0.039840537125285555
+6cOiC5,9bEHwk,aaos,smkukbb,Inverse variance weighted,800.1571609410951,732,0.04039297054206159

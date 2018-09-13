@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-IuQldc	4nTBKH	ab42	diab	476.73585175708405	0.01076
+mwJOwv	3bWoeq	ab42	diab	433.39151257220715	0.03624

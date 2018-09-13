@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PiUaDy	SRP0fi	hipv	alcc	65.3277395174735	0.1408
+Km0NkR	DfBl3G	hipv	alcc	64.48311315613515	0.139

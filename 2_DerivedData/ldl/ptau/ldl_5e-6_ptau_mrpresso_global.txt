@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-27EcLd	jXq5a7	ptau	ldl	491.17853708393466	<1e-04
+8xl5hc	LUmgE5	ptau	ldl	457.2979437202399	<1e-04

@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+i2lcYl,VyvfP5,ptau,audit,Inverse variance weighted (fixed effects),8,0.2235108734724935,0.22529426523224258,0.3211564693393741
+i2lcYl,VyvfP5,ptau,audit,Weighted median,8,0.4800422679737906,0.3214102600275985,0.1352932974336341
+i2lcYl,VyvfP5,ptau,audit,Weighted mode,8,0.6278042420367116,0.5824473289928871,0.31682710895052435
+i2lcYl,VyvfP5,ptau,audit,MR Egger,8,-0.2246631353660357,0.5302169628597303,0.6865402328378363

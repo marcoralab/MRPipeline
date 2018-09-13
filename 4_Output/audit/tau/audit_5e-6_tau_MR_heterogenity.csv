@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+gur6TS,La3ZVg,tau,audit,MR Egger,29.954210043020595,34,0.6663201976208248
+gur6TS,La3ZVg,tau,audit,Inverse variance weighted,33.10659801787169,35,0.5597628402138635

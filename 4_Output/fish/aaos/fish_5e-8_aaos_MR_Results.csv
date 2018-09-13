@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+Uwanto,EDOHjd,aaos,fish,Inverse variance weighted (fixed effects),113,0.3167930359301729,0.12046159964441992,0.008542860297094097
+Uwanto,EDOHjd,aaos,fish,Weighted median,113,0.34515366568990535,0.18767641985203043,0.06590207599979822
+Uwanto,EDOHjd,aaos,fish,Weighted mode,113,0.7964431450142184,0.4067996884561627,0.052737717786373636
+Uwanto,EDOHjd,aaos,fish,MR Egger,113,0.18047209340719703,1.1571579201067304,0.8763466497123449

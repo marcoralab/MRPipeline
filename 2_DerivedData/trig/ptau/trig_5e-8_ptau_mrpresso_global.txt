@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-N9S600	bK2LiP	ptau	trig	289.6197238947383	<1e-04
+qo7h9t	q4ALq7	ptau	trig	283.71216852809414	<1e-04

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+C8BkGn,oPLIOD,ab42,alcd,MR Egger,5.3890557215834924,11,0.9108719934658973
+C8BkGn,oPLIOD,ab42,alcd,Inverse variance weighted,5.454949333978487,12,0.941034609701737

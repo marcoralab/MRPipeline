@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-pwZPzh	oZxEWA	ab42	cpd	7.584418647605946	0.743
+V4ZIkn	OPvBQn	ab42	cpd	7.5493611431921215	0.651

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-JoUybZ	QMWeaf	hipv2015	mdd	196.60252122550202	0.2657
+8hNSrX	KovnzY	hipv2015	mdd	171.31918321571018	0.3788

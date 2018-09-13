@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-skVWkd	WZIdIp	aaos	bmi	2522.9619239954764	<1.33333333333333e-05

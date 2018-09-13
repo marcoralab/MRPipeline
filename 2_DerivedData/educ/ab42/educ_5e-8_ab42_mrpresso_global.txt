@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PQCER6	mhBQql	ab42	educ	1130.9775678760834	0.11566
+UIg5No	yCetJe	ab42	educ	1014.5031405468384	0.09122

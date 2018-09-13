@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+ICfqwB,HAMZMG,ab42,trig,MR Egger,706.081397947874,225,4.492468157009398e-51
+ICfqwB,HAMZMG,ab42,trig,Inverse variance weighted,706.7366420725941,226,6.380360716167992e-51

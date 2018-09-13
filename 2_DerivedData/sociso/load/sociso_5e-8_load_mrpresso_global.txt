@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Gi46Ld	F0THdH	load	sociso	54.174351732438815	0.002
+669UGX	zRrIhU	load	sociso	53.13363291803315	<0.001

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+PXx3xp,Iksd0j,ab42,fish,MR Egger,256.2853778481382,248,0.3453821773750687
+PXx3xp,Iksd0j,ab42,fish,Inverse variance weighted,260.75295942658664,249,0.2917218730005408

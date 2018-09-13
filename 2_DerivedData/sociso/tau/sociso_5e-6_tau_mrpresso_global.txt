@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-VZqULP	ZRwmCl	tau	sociso	116.301846714923	0.2999
+WDABom	zVftlV	tau	sociso	111.89529045665387	0.2246

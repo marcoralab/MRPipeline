@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UEGWFl	EQHMU9	load	bmi	4207.408295119791	<1.33333333333333e-05

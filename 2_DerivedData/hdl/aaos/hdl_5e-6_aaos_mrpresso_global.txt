@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-SqyivO	5CnkCh	aaos	hdl	1565.4618460257177	<4e-05
+Z6Iyqx	WV11Ud	aaos	hdl	1551.4880462977223	<4e-05

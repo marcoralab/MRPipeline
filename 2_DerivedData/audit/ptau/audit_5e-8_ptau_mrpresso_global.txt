@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-GXhbjb	0qmzht	ptau	audit	10.745995291578192	0.309
+i2lcYl	VyvfP5	ptau	audit	10.745995291578192	0.302

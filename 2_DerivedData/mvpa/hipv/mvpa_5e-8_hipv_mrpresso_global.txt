@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-lhaYT1	ZcunVV	hipv	mvpa	119.26507777483101	<0.001
+5jFMEm	HWWaku	hipv	mvpa	119.26507777483101	<0.001

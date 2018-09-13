@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+rqzxun,VXZRbg,load,fish,Inverse variance weighted (fixed effects),305,0.2071675930462779,0.09333644338052868,0.026447371190898978
+rqzxun,VXZRbg,load,fish,Weighted median,305,-0.09486525491872745,0.1456777119382612,0.5149177053540873
+rqzxun,VXZRbg,load,fish,Weighted mode,305,-0.04604193011584812,0.45758597968595616,0.9199190893808149
+rqzxun,VXZRbg,load,fish,MR Egger,305,0.7956083836580975,1.1127969132225697,0.4751825390363653

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-gQcQlj	2gDXSm	ptau	fish	232.90346252881088	<1e-04
+sAezac	Zg8ix4	ptau	fish	217.06484482309463	<1e-04

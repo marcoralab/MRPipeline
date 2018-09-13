@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-0x9A0l,i4A7QE,tau,alcc,MR Egger,4.896511769642933,6,0.5571532781814388
-0x9A0l,i4A7QE,tau,alcc,Inverse variance weighted,8.749398869921677,7,0.27115246066371346
+yvFKBs,YAORG0,tau,alcc,MR Egger,3.329114798003066,5,0.6493872553045349
+yvFKBs,YAORG0,tau,alcc,Inverse variance weighted,5.218754781070324,6,0.5160779873311148

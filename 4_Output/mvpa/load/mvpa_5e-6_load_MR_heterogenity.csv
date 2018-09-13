@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+73lbmG,y6HmP3,load,mvpa,MR Egger,2473.026736336051,124,0
+73lbmG,y6HmP3,load,mvpa,Inverse variance weighted,2567.2433730137254,125,0

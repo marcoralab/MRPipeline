@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+8hNSrX,KovnzY,hipv2015,mdd,MR Egger,169.13906566609577,163,0.3547030342470891
+8hNSrX,KovnzY,hipv2015,mdd,Inverse variance weighted,169.38997608005542,164,0.3702716598860992

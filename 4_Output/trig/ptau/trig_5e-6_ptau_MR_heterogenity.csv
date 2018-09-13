@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+OZexNz,QGhxUN,ptau,trig,MR Egger,365.147079569951,255,7.107543063851445e-6
+OZexNz,QGhxUN,ptau,trig,Inverse variance weighted,371.08350584703743,256,3.3108278823840992e-6

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-ZJvhuN,H1iXFg,load,diab,MR Egger,291.9322677523684,180,2.5481777991036295e-7
-ZJvhuN,H1iXFg,load,diab,Inverse variance weighted,293.4405389540224,181,2.4263870860886484e-7
+oeaYmr,f9QFui,load,diab,MR Egger,262.45728597688804,172,1.0680272294769077e-5
+oeaYmr,f9QFui,load,diab,Inverse variance weighted,263.6965397098887,173,1.0658743954199237e-5

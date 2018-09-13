@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UO6gon	MgA6lV	hipv2015	tc	410.0285724014987	0.11688
+Vekc7H	I2QNlm	hipv2015	tc	369.0609198534188	0.22452

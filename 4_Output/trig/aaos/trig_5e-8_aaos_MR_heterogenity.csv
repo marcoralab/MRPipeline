@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+pyikYK,NbPhUM,aaos,trig,MR Egger,1056.2525460852366,161,1.8344468618617752e-131
+pyikYK,NbPhUM,aaos,trig,Inverse variance weighted,1056.855808279126,162,3.6469526615112083e-131

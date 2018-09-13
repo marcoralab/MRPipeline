@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-YRagCQ	bE5I2c	tau	diab	425.47388317809293	0.26708
+I8tyGQ	GmGsYm	tau	diab	403.2848567780266	0.21676

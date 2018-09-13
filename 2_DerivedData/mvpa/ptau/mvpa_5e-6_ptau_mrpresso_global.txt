@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nvHncs	jA3H4k	ptau	mvpa	255.0122016739743	<1e-04
+bd92dJ	Z3A7QV	ptau	mvpa	237.45582405224937	<1e-04

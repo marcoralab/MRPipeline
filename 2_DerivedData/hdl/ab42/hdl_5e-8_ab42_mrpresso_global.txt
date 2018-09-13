@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ZLzmfS	OY7GZP	ab42	hdl	697.7258071038984	<1e-04
+WI4Hw6	tlPxDK	ab42	hdl	681.2830593843181	<1e-04

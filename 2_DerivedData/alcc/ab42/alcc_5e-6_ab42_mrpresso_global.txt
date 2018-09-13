@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-cDovPM	qgcIah	ab42	alcc	34.440859486291785	0.6778
+wHWqBA	0Xvquw	ab42	alcc	28.191517217896116	0.7004

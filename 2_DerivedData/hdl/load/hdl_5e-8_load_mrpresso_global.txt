@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-53Xg3s	oRNCys	load	hdl	3439.072816277938	<1e-04
+mlIDW3	WhHZVi	load	hdl	3439.072816277938	<1e-04

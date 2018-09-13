@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+v5LtXT,ldGgfd,hipv2015,sleep,Inverse variance weighted (fixed effects),23,28.36397887080248,46.83633352528024,0.5447818873047027
+v5LtXT,ldGgfd,hipv2015,sleep,Weighted median,23,58.509492354398816,67.13362354298384,0.3834605613726063
+v5LtXT,ldGgfd,hipv2015,sleep,Weighted mode,23,101.62428296470466,118.22218675630172,0.3992776349486672
+v5LtXT,ldGgfd,hipv2015,sleep,MR Egger,23,97.62856245731896,148.62975122975573,0.5184069850828998

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Tfn2rO	SRs0XS	tau	educ	2515.4554092956123	0.01978

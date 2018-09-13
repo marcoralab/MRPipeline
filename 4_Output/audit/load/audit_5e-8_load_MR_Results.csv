@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+Q8ynHQ,RrJRqw,load,audit,Inverse variance weighted (fixed effects),9,-0.8213417571063643,0.5009435214423581,0.1010905397438936
+Q8ynHQ,RrJRqw,load,audit,Weighted median,9,-1.7703903878979295,0.6674258416560329,0.007988275972199478
+Q8ynHQ,RrJRqw,load,audit,Weighted mode,9,-1.8417589632797213,0.7071825405443518,0.03140423580653359
+Q8ynHQ,RrJRqw,load,audit,MR Egger,9,-2.291502725029068,1.6833527229651217,0.21562130745970035

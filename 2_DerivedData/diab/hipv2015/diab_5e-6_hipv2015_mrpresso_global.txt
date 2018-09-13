@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-LdSa3u	Rq4sY7	hipv2015	diab	451.32394088589575	0.26948
+dgACxo	V6uqQ7	hipv2015	diab	434.6365615874272	0.12812

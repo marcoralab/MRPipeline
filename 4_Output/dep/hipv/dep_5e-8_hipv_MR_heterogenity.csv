@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+M6s8ck,v2zqKW,hipv,dep,MR Egger,15.407837470045902,18,0.6337995184417329
+M6s8ck,v2zqKW,hipv,dep,Inverse variance weighted,25.20885865373611,19,0.15378162708206564

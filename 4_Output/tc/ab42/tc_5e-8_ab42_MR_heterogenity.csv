@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+iKJWlG,SfaQ06,ab42,tc,MR Egger,636.7119674238213,191,2.468898195144678e-49
+iKJWlG,SfaQ06,ab42,tc,Inverse variance weighted,677.3742670402227,192,2.3393941071928475e-55

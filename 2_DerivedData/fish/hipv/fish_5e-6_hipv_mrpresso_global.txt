@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0ZsdLc	BxoUeA	hipv	fish	430.59663566427525	1.2e-4
+bsIbUE	5RNExY	hipv	fish	423.9668841419313	5.2e-4

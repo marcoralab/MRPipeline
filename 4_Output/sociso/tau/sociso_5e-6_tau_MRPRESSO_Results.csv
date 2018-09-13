@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+WDABom,zVftlV,tau,sociso,Inverse variance weighted (fixed effects),97,-0.05751673414255613,0.05554434807737592,0.30043074612968707
+WDABom,zVftlV,tau,sociso,Weighted median,97,-0.07092908063691537,0.0820822388384779,0.38752079275753876
+WDABom,zVftlV,tau,sociso,Weighted mode,97,-0.1167305201843194,0.19816856740962793,0.557213596334086
+WDABom,zVftlV,tau,sociso,MR Egger,97,-0.28683215247021576,0.26057668000758505,0.27378282686971184
