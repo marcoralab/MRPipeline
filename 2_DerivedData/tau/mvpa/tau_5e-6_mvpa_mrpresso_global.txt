@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TG1WYh	R92dUN	mvpa	tau	40.81164493452593	<0.001

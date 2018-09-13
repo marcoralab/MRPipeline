@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Ue2IZC	eYFDRy	insom	ptau	16.03711016633415	0.525

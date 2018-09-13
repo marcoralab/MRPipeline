@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+hzeT4O	nn8juW	alcd	load	43.74500295317611	0.4394

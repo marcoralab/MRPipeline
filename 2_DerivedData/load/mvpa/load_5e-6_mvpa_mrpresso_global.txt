@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+p0pg9K	8ArWji	mvpa	load	221.59237135876077	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+JU9TWw	ksGuua	alcc	hipv	53.97512584678346	0.007

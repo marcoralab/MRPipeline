@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+gcRim8	7KO2d0	sociso	tau	6.8866200190383875	0.832

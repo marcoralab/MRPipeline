@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+q56doR	oWN5ui	alcd	ab42	17.661929970637512	0.434

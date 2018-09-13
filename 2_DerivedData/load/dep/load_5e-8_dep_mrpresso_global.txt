@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+xWshYq	4p27En	dep	load	49.43450373097725	0.1804

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+WTxhMP	ebeMa5	ldl	load	4243.070185263603	<2e-04
