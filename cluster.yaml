@@ -6,6 +6,6 @@ __default__:
   mem: 16000
   time: '60'
 MrPresso:
-  time: '30:00'
+  time: '90:00'
   mem: 16000
   cores: 2
