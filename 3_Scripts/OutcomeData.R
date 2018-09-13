@@ -19,7 +19,7 @@ message("\n READING IN OUTCOME \n")
 outcome.dat.raw <- read_tsv(outcome.summary)
 
 ### ===== Proxy SNPs ===== ###
-message("\n SEARCHING FOR PROXY SNPS \n")
+message("\n EXTRACTING SNP EFFECTS FROM OUTCOME GWAS  \n")
 outcome.dat <- outcome.dat.raw %>%
   right_join(select(exposure.dat, SNP), by = 'SNP')
 

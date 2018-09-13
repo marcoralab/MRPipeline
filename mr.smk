@@ -1,5 +1,5 @@
 '''Snakefile for Mendelian Randomization'''
-# snakemake -s mr.smk --configfile config.yaml
+# snakemake -s mr.smk --configfile config.yaml --keep-going --until ProxySnps
 # snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
 
 import os

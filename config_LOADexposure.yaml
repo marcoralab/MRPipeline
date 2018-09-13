@@ -1,0 +1,12 @@
+# snakejob -s mr.smk --configfile config_LOADexposure.yaml -j 2000 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
+
+DataIn: '1_RawData/GWAS/'
+DataOut: "2_DerivedData/"
+
+REF: '1_RawData/EUR_All_Chr'
+traits: '1_RawData/MRTraits.csv'
+Pthreshold: ['5e-6', '5e-8']
+
+## LOAD as exposure
+OutcomeCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig']
+ExposureCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']

@@ -13,7 +13,7 @@ suppressMessages(library(haploR))
 ##  ---- Find Proxy SNPs - uses haploR ---- ##
 FindProxys <-function(snplist, dat){
   ProxySnps <- queryHaploreg(query = snplist, ldThresh = 0.8,
-                             ldPop = "EUR", timeout = 100, encoding = "UTF-8", verbose = TRUE) %>% 
+                             ldPop = "EUR", timeout = 1000, encoding = "UTF-8", verbose = TRUE) %>% 
     select(query_snp_rsid, rsID, chr, pos_hg38, r2, `D'`, is_query_snp, ref, alt) %>% 
     rename(ld.r2 = r2, Dprime = `D'`)
   
