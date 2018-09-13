@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2TfDK0	ymxlb6	load	alcc	16.82464617655317	0.11
+PvyR14	ueIgwm	load	alcc	16.82464617655317	0.104
