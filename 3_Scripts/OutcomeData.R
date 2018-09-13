@@ -33,5 +33,3 @@ write_tsv(outcome.dat, paste0(out, '_SNPs.txt'))
 
 
 
-
-
