@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+K5Q3Oh	7rgHSI	ab42	educ	2568.0522503332654	0.00281
