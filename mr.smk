@@ -6,7 +6,7 @@ import os
 RWD = os.getcwd()
 
 ## For running on cluster
-#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 1000 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going --until ProxySnps
 shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 
@@ -18,7 +18,7 @@ DataIn = config['DataIn']
 traits = config['traits']
 DataOut = config['DataOut']
 
-localrules: all, ProxySnps, html_Report
+localrules: all, ProxySnps
 
 rule all:
     input:
