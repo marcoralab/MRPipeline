@@ -41,7 +41,7 @@ FindProxys <-function(snplist, dat){
 
 message("READING IN EXPOSURE AND OUTCOME \n")
 exposure.dat <- read_tsv(exposure.summary)
-outcome.dat.raw <- read_tsv(outcome.summary)
+outcome.dat <- read_tsv(outcome.summary)
 
 miss.outcome <- filter(outcome.dat, is.na(CHR))
 
