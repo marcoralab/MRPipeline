@@ -1,6 +1,6 @@
 '''Snakefile for Mendelian Randomization'''
 # snakemake -s mr.smk --configfile config.yaml
-# snakemake -s mr.smk --dag | dot -Tsvg > dag_mr.svg
+# snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
 
 import os
 RWD = os.getcwd()
@@ -65,7 +65,6 @@ rule OutcomeSnps:
 rule ProxySnps:
     input:
         script = '3_Scripts/ProxySNPs.R',
-        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
     output:
         "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
@@ -73,7 +72,7 @@ rule ProxySnps:
     params:
         Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
+        'Rscript {input.script} {input.OutcomeSummary} {params.Outcome}'
 
 rule Harmonize:
     input:

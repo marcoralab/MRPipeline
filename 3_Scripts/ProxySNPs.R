@@ -1,10 +1,10 @@
 #!/usr/bin/Rscript
 
 ### ===== Command Line Arguments ===== ##
+## 180913
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
-exposure.summary = args[1] # Exposure summary statistics
-outcome.summary = args[2] # Outcome Summary statistics
-out = args[3]
+outcome.summary = args[1] # Outcome Summary statistics
+out = args[2]
 
 suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
 suppressMessages(library(tidyverse))
@@ -40,16 +40,14 @@ FindProxys <-function(snplist, dat){
 }
 
 message("READING IN EXPOSURE AND OUTCOME \n")
-exposure.dat <- read_tsv(exposure.summary)
 outcome.dat <- read_tsv(outcome.summary)
-
 miss.outcome <- filter(outcome.dat, is.na(CHR))
 
 message("\n SEARCHING FOR PROXY SNPS \n")
 # If snps are missing, find proxy snp
 if(nrow(miss.outcome) >= 1){
   # Search for Proxy SNPs
-  proxy.outcome <- FindProxys(miss.outcome$SNP, outcome.dat.raw)
+  proxy.outcome <- FindProxys(miss.outcome$SNP, outcome.dat)
   
   # Combine proxy snps with trait data
   outcome.dat <- outcome.dat %>%

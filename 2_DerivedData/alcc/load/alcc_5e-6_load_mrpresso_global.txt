@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3X3eln	vHZC15	load	alcc	75.96456926520189	0.0128
+GpGjh2	ROLgat	load	alcc	73.9037766083211	0.0106
