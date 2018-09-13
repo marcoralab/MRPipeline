@@ -18,7 +18,7 @@ DataIn = config['DataIn']
 traits = config['traits']
 DataOut = config['DataOut']
 
-localrules: all, OutcomeSnps
+localrules: all, ProxySnps
 
 rule all:
     input:
@@ -57,6 +57,18 @@ rule OutcomeSnps:
         OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz"
     output:
         "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+    params:
+        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+    shell:
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
+
+rule ProxySnps:
+    input:
+        script = '3_Scripts/ProxySNPs.R',
+        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
+    output:
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
         "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_proxys.csv",
     params:
         Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
@@ -67,7 +79,7 @@ rule Harmonize:
     input:
         script = '3_Scripts/DataHarmonization.R',
         ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
+        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt"
     output:
         Harmonized = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
     params:
