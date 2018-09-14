@@ -1,3 +1,8 @@
+# snakemake -s mr.smk --configfile config.yaml --keep-going --until ProxySnps
+# snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
+## For running on cluster
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
+
 DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/"
 

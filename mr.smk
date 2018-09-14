@@ -1,12 +1,8 @@
 '''Snakefile for Mendelian Randomization'''
-# snakemake -s mr.smk --configfile config.yaml --keep-going --until ProxySnps
-# snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
 
 import os
 RWD = os.getcwd()
 
-## For running on cluster
-#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
 shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 
@@ -22,7 +18,7 @@ localrules: all, ProxySnps
 
 rule all:
     input:
-        expand('4_output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
+        expand('4_Output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
         expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
 
 rule clump:
