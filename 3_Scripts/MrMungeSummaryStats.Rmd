@@ -49,6 +49,11 @@ params:
   sbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_SBPsummaryResults.txt.gz
   hear.summary: ~/Dropbox/Research/Data/Summary_Statisitics/ARHI/NealeLab/2247_0.gwas.imputed_v3.both_sexes.tsv.gz
   height.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Height/Meta-analysis_Wood_et_al+UKBiobank_2018.txt.gz
+  npany.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/np_any.Meta.annotate1.2013May03.txt.gz
+  npord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/np_ord.Meta.annotate1.2013May22.txt.gz
+  braak4.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/braak_4.Meta.annotate1.2013May03.txt.gz
+  braakord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/braak_ord.Meta.annotate1.2013May03.txt.gz
+  hips.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/med_temp_scler_any.Meta.annotate1.2013May03.txt.gz
 ---
 
 ```{r setup, include=FALSE}
@@ -90,8 +95,139 @@ hrc <- filter(hrc.raw, ID != '.') %>%
 
 
 ## Format GWAS summary statistics for MR analysis 
-### Hippocampal Volume - Hilbar 2017
 
+### AD Neuropathology - Beecham 2014
+#### Neuritic Plarques, Any
+```{r}
+npany.raw <- read_table2(params$npany.summary, col_types = cols(Locational_ID = col_character()))
+npany.dat <- npany.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(npany.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/npany_GWAS.Processed.gz'))
+npany.dat; rm(npany.raw, npany.dat)
+```
+
+#### Neuritic Plarques, Ordinal 
+```{r}
+npord.raw <- read_table2(params$npord.summary, col_types = cols(Locational_ID = col_character()))
+npord.dat <- npord.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(npord.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/npord_GWAS.Processed.gz'))
+npord.dat; rm(npord.raw, npord.dat)
+```
+
+#### NFT Braak (four category)
+```{r}
+nft4.raw <- read_table2(params$braak4.summary, col_types = cols(Locational_ID = col_character()))
+nft4.dat <- nft4.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(nft4.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/nft4_GWAS.Processed.gz'))
+nft4.dat; rm(nft4.raw, nft4.dat)
+```
+
+### NFT Braak (seven category)
+```{r}
+nftord.raw <- read_table2(params$braakord.summary, col_types = cols(Locational_ID = col_character()))
+nftord.dat <- nftord.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(nftord.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/nftord_GWAS.Processed.gz'))
+nftord.dat; rm(nftord.raw, nftord.dat)
+```
+
+### Hippocampal Sclerosis, MTS
+```{r}
+hips.raw <- read_table2(params$hips.summary, col_types = cols(Locational_ID = col_character()))
+hips.dat <- hips.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(hips.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hips_GWAS.Processed.gz'))
+hips.dat; rm(hips.raw, hips.dat)
+```
+
+### Hippocampal Volume - Hilbar 2017
 ```{r}
 hipv.raw <- read_table2(params$hipv.summary)
 hipv.dat <- hipv.raw %>%
