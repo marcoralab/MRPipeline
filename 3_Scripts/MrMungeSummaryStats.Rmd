@@ -44,6 +44,11 @@ params:
   neuro.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Neuroticism.txt
   openn.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Openness.txt
   ibd.summary: ~/Dropbox/Research/Data/Summary_Statisitics/IBD/deLange2017/ibd_build37_59957_20161107.txt.gz
+  dbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_DBPsummaryResults.txt.gz
+  pp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_PPsummaryResults.txt.gz
+  sbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_SBPsummaryResults.txt.gz
+  hear.summary: ~/Dropbox/Research/Data/Summary_Statisitics/ARHI/NealeLab/2247_0.gwas.imputed_v3.both_sexes.tsv.gz
+  height.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Height/Meta-analysis_Wood_et_al+UKBiobank_2018.txt.gz
 ---
 
 ```{r setup, include=FALSE}
@@ -102,53 +107,10 @@ hipv.dat <- hipv.raw %>%
   filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Zscore, Beta, SE, P, r2, N)
   
-write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/hipv_GWAS.Processed.gz'))
+write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv_GWAS.Processed.gz'))
 ```
 
-```{r}
-## Number of Significant SNPs
-mr_hipv.dat <- format_data(filter(hipv.dat, P < 5e-5), type = 'exposure', 
-                           phenotype_col = 'hipv',
-                           snp_col = 'SNP', 
-                           beta_col = "Beta",
-                           se_col = "SE",
-                           eaf_col = "EAF",
-                           effect_allele_col = "Effect_allele",
-                           other_allele_col = "Non_Effect_allele",
-                           pval_col = "P")
-hipv_ld <- clump_data(mr_hipv.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- hipv_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(hipv.dat, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- hipv.dat %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.hipv <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.hipv <- ggman(filter(hipv.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
-                title = "HV - Hilbar 2015") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.hipv <- ggmanHighlight(p.hipv, highlight = filter(hipv_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.hipv <- grid.arrange(p.hipv,  tableGrob(tab.hipv, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/hipv.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.hipv)
-```
-
-### Hippocampal Volume - Stein 2015
+### Hippocampal Volume - Hilbar 2015
 
 ```{r}
 hipv.raw <- read_table2(params$hipv_2015.summary)
@@ -162,50 +124,7 @@ hipv.dat <- hipv.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
   
-write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/hipv2015_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_hipv.dat <- format_data(filter(hipv.dat, P < 5e-5), type = 'exposure', 
-                           phenotype_col = 'hipv',
-                           snp_col = 'SNP', 
-                           beta_col = "Beta",
-                           se_col = "SE",
-                           eaf_col = "EAF",
-                           effect_allele_col = "Effect_allele",
-                           other_allele_col = "Non_Effect_allele",
-                           pval_col = "P")
-hipv_ld <- clump_data(mr_hipv.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- hipv_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(hipv.dat, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- hipv.dat %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.hipv <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.hipv <- ggman(filter(hipv.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
-                title = "HV - Stien 2015") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.hipv <- ggmanHighlight(p.hipv, highlight = filter(hipv_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.hipv <- grid.arrange(p.hipv,  tableGrob(tab.hipv, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/hipv2015.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.hipv)
+write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv2015_GWAS.Processed.gz'))
 ```
 
 ### Late Onset Alzheimer's Disease
@@ -225,51 +144,7 @@ igap.dat <- igap.dat.raw %>%
   mutate(r2 = snp.r2(EAF, Beta), N = 54162) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(igap.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/load_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_load.dat <- format_data(filter(igap.dat, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'load',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-load_ld <- clump_data(mr_load.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- load_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(igap.dat, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- igap.dat %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.load <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.load <- ggman(filter(igap.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "LOAD - Lambert 2013") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.load <- ggmanHighlight(p.load, highlight = filter(load_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.load <- grid.arrange(p.load,  
-                         tableGrob(tab.load, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/load.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.load)
+write_tsv(igap.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/load_GWAS.Processed.gz'))
 ```
 
 ### Alzheimer's Age of Onset Surivial
@@ -285,51 +160,7 @@ aaos.dat <- aaos.dat.raw %>%
   mutate(r2 = snp.r2(EAF, Beta), N = 40255) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(aaos.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/aaos_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_aaos.dat <- format_data(filter(aaos.dat, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'aaos',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-aaos_ld <- clump_data(mr_aaos.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- aaos_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(aaos.dat, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- aaos.dat %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.aaos <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.aaos <- ggman(filter(aaos.dat, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "Alzheimer's Age of Onset - Huang 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2) 
-  
-p.aaos <- ggmanHighlight(p.aaos, highlight = filter(aaos_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.aaos <- grid.arrange(p.aaos,  tableGrob(tab.aaos, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/aaos.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.aaos)
+write_tsv(aaos.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/aaos_GWAS.Processed.gz'))
 ```
 
 ## CSF AB42, tau & ptau
@@ -350,50 +181,7 @@ ab42 <- ab42.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(ab42, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ab42_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_ab42.dat <- format_data(filter(ab42, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'ab42',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-ab42_ld <- clump_data(mr_ab42.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- ab42_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(ab42, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- ab42 %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.ab42 <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.ab42 <- ggman(filter(ab42, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "CSF AB42 - Deming 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.ab42 <- ggmanHighlight(p.ab42, highlight = filter(ab42_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.ab42 <- grid.arrange(p.ab42,  tableGrob(tab.ab42, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ab42.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.ab42)
+write_tsv(ab42, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ab42_GWAS.Processed.gz'))
 ```
 
 ### Ptau
@@ -411,50 +199,7 @@ ptau <- ptau.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(ptau, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ptau_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_ptau.dat <- format_data(filter(ptau, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'ptau',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-ptau_ld <- clump_data(mr_ptau.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- ptau_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(ptau, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- ptau %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.ptau <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.ptau <- ggman(filter(ptau, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "CSF Ptau - Deming 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.ptau <- ggmanHighlight(p.ptau, highlight = filter(ptau_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.ptau <- grid.arrange(p.ptau,  tableGrob(tab.ptau, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ptau.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.ptau)
+write_tsv(ptau, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ptau_GWAS.Processed.gz'))
 ```
 
 ### Tau
@@ -472,50 +217,7 @@ tau <- tau.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(tau.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/tau_GWAS.Processed.gz'))
-```
-
-```{r}
-## Number of Significant SNPs
-mr_tau.dat <- format_data(filter(tau, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'tau',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-tau_ld <- clump_data(mr_tau.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- tau_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(tau, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- tau %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.tau <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.tau <- ggman(filter(tau, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
-                title = "CSF Tau - Deming 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.tau <- ggmanHighlight(p.tau, highlight = filter(tau_ld, pval.exposure < 5e-6)$SNP, shape = 18)
-
-out.tau <- grid.arrange(p.tau,  tableGrob(tab.tau, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/tau.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.tau)
+write_tsv(tau.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/tau_GWAS.Processed.gz'))
 ```
 
 ## Alcohol Consumption
@@ -530,40 +232,8 @@ alc_cons <- alc_cons.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(alc_cons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alcc_GWAS.Processed.gz'))
+write_tsv(alc_cons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alcc_GWAS.Processed.gz'))
 
-```
-
-```{r}
-## Number of Significant SNPs
-mr_trait.dat <- format_data(filter(alc_cons, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-mr_trait.dat_ld <- clump_data(mr_trait.dat, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- mr_trait.dat_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  left_join(select(alc_cons, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2))
-all.n <- alc_cons %>% 
-  mutate(p.cut = cut(P, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2))
-
-full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-
-```
-
-```{r alc_cons gwas}
-
-ggman(filter(alc_cons, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, title = "Alcohol Consumption - Clarke 2017") + theme_classic() + geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/alc_cons.png', device = 'png', units = 'in', width = 9, height = 5)
 ```
 
 ## Alcohol Dependence
@@ -581,39 +251,8 @@ alc_dep <- alc_dep.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(alc_dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alcd_GWAS.Processed.gz'))
+write_tsv(alc_dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alcd_GWAS.Processed.gz'))
 
-```
-
-```{r}
-## Number of Significant SNPs
-alc_dep_ld <- format_data(filter(alc_dep, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-alc_dep_ld <- clump_data(alc_dep_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- alc_dep_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  left_join(select(alc_dep, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2))
-all.n <- alc_dep %>% 
-  mutate(p.cut = cut(P, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2))
-
-full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-ggman(filter(alc_dep, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 15, title = "Alcohol Dependence - Walters 2018") + theme_classic() + geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/alc_dep.png', device = 'png', units = 'in', width = 9, height = 5)
 ```
 
 ## AUDIT 
@@ -644,39 +283,8 @@ audit_p <- audit %>%
   rename(CHR = chr, Beta = beta_P, SE = se_P, P = p_P) %>%
   mutate(r2 = snp.r2(EAF, Beta))
 
-write_tsv(audit_t, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/audit_GWAS.Processed.gz'))
+write_tsv(audit_t, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz'))
 
-```
-
-```{r}
-## Number of Significant SNPs
-audit_ld <- format_data(filter(audit_t, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-audit_ld <- clump_data(audit_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- audit_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  left_join(select(audit_t, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2, na.rm = T))
-all.n <- audit_t %>% 
-  mutate(p.cut = cut(P, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = sum(r2, na.rm = T))
-
-full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-ggman(filter(audit_t, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, title = "AUDIT Total - Sanchez-Roige 2018") + theme_classic() + geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2) 
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/audit.png', device = 'png', units = 'in', width = 9, height = 5)
 ```
 
 ### AUDIT Consumption
@@ -694,7 +302,7 @@ audit_c <- audit %>%
   rename(CHR = chr, Beta = beta_C, SE = se_C, P = p_C) %>%
   mutate(r2 = snp.r2(EAF, Beta))
 
-write_tsv(audit_c, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/audit_c_GWAS.Processed.gz'))
+write_tsv(audit_c, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_c_GWAS.Processed.gz'))
 
 ```
 
@@ -713,7 +321,7 @@ audit_p <- audit %>%
   rename(CHR = chr, Beta = beta_P, SE = se_P, P = p_P) %>%
   mutate(r2 = snp.r2(EAF, Beta))
 
-write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/audit_p_GWAS.Processed.gz'))
+write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_p_GWAS.Processed.gz'))
 
 ```
 
@@ -730,42 +338,24 @@ bmi <- bmi.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(bmi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/bmi_GWAS.Processed.gz'))
+write_tsv(bmi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/bmi_GWAS.Processed.gz'))
 ```
 
-```{r}
-## Clump snps
-system('plink --bfile /Users/sheaandrews/Documents/0_Data/1000genomes/EUR/EUR_All_Chr --clump ~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/BMI_gwas.assoc --clump-r2 0.1 --clump-kb 250 --clump-p1 1 --clump-p2 1 --out ~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/bmi_clump')
+## Height
+[Yengo et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/22/274654): Meta-analysis of Giant Consortium GWAS of Height (n = 234,069) and a new GWAS of Height conducted in the UK Biobank (n = 456,426) for a total of 681,275 participants of European ancestry. 
 
-bmi_ld <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/bmi_clump.clumped') %>% 
-  filter(!is.na(CHR))
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+height.raw <- read_table2(params$height.summary)
+height <- height.raw %>% 
+  rename(Effect_allele = Tested_Allele, Non_Effect_allele = Other_Allele, Beta = BETA, EAF = Freq_Tested_Allele_in_HRS) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-clump.n <- bmi_ld %>% 
-  mutate(p.cut = cut(P, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  left_join(select(bmi, SNP, r2)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2), 4))
-
-all.n <- bmi %>% 
-  mutate(p.cut = cut(P, breaks = c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2), 4))
-
-tab.bmi <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
+write_tsv(height, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/height_GWAS.Processed.gz'))
 ```
-
-```{r alc_cons gwas}
-
-p.bim <- ggman(filter(bmi, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-      title = "BMI - Yengo 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.bmi <- grid.arrange(p.bim,  tableGrob(tab.bmi, theme = ttheme_minimal(base_size = 8)), 
-             ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/bmi.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.bmi)
-```
-
 
 ## Major Depressive Disorder
 [Wray et al Nature Genet 2018](https://www.nature.com/articles/s41588-018-0090-3): The Psychiatric Genomics Consortium (PGC) conducted a GWAS meta-analysis across seven cohorts (PGC, deCODE, Generation Scotland, GERA, iPSYCH, UK Biobank, and 23andMe) containing 130,664 MDD cases and 330,470 controls. Participants were of European Ancestry. 
@@ -782,48 +372,8 @@ mdd <- mdd.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(mdd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mdd_GWAS.Processed.gz'))
+write_tsv(mdd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/mdd_GWAS.Processed.gz'))
 
-```
-
-```{r}
-## Number of Significant SNPs
-mdd_ld <- format_data(mdd, type = 'exposure', 
-                          phenotype_col = 'trait',
-                          snp_col = 'SNP', 
-                          beta_col = "Beta",
-                          se_col = "SE",
-                          eaf_col = "EAF",
-                          effect_allele_col = "Effect_allele",
-                          other_allele_col = "Non_Effect_allele",
-                          pval_col = "P")
-mdd_ld <- clump_data(mdd_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- mdd_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(mdd, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- mdd %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.mdd <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r mdd gwas}
-p.mdd <- ggman(mdd, snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-      title = "Major Depressive Disorder - Wray 2018") + 
-  theme_classic() + geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2) 
-
-out.mdd <- grid.arrange(p.mdd,  tableGrob(tab.mdd, theme = ttheme_minimal(base_size = 8)), 
-             ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/mdd.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.mdd)
 ```
 
 ## Broad Depression Symptons
@@ -839,50 +389,7 @@ dep <- dep.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/dep_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-dep_ld <- format_data(filter(dep, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'trait',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-dep_ld <- clump_data(dep_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- dep_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(dep, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), round(sum(r2, na.rm = T), 4))
-
-all.n <- dep %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), round(sum(r2, na.rm = T), 4))
-
-tab.dep <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r dep gwas}
-
-p.dep <- ggman(filter(dep, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-      title = "Broad Depression Symptons - Howard 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2) 
-
-out.dep <- grid.arrange(p.dep,  tableGrob(tab.dep, theme = ttheme_minimal(base_size = 8)), 
-             ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/dep.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.dep)
+write_tsv(dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/dep_GWAS.Processed.gz'))
 
 ```
 
@@ -898,50 +405,8 @@ diab <- diab.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(diab, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/diab_GWAS.Processed.gz'))
+write_tsv(diab, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/diab_GWAS.Processed.gz'))
 
-```
-
-```{r}
-## Number of Significant SNPs
-diab_ld <- format_data(filter(diab, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'trait',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-diab_ld <- clump_data(diab_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- diab_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(diab, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- diab %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.diab <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.diab <- ggman(filter(diab, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-      title = "Type 2 Diabetes - Xu 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.diab <- grid.arrange(p.diab,  tableGrob(tab.diab, theme = ttheme_minimal(base_size = 8)), 
-             ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/diab.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.diab)
 ```
 
 ## Physical Activity
@@ -960,49 +425,7 @@ mvpa <- mvpa.raw %>%
   mutate(N = 377234) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(mvpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-mvpa_ld <- format_data(filter(mvpa, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'trait',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-mvpa_ld <- clump_data(mvpa_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- mvpa_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(mvpa, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- mvpa %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.mvpa <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r mvpa gwas}
-p.mvpa <- ggman(filter(mvpa, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Moderate-to-vigorous PA - Klimentidis 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.mvpa <- grid.arrange(p.mvpa,  tableGrob(tab.mvpa, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/mvpa.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.mvpa)
+write_tsv(mvpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/mvpa_GWAS.Processed.gz'))
 
 ```
 
@@ -1018,50 +441,7 @@ vpa <- vpa.raw %>%
   mutate(N = 98060  + 162995) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(vpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/vpa_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-vpa_ld <- format_data(filter(vpa, P < 5e-5), type = 'exposure', 
-                         phenotype_col = 'trait',
-                         snp_col = 'SNP', 
-                         beta_col = "Beta",
-                         se_col = "SE",
-                         eaf_col = "EAF",
-                         effect_allele_col = "Effect_allele",
-                         other_allele_col = "Non_Effect_allele",
-                         pval_col = "P")
-vpa_ld <- clump_data(vpa_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- vpa_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(vpa, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- vpa %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.vpa <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.vpa <- ggman(filter(vpa, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Vigorous PA - Klimentidis 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.vpa <- grid.arrange(p.vpa,  tableGrob(tab.vpa, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/vpa.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.vpa)
+write_tsv(vpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/vpa_GWAS.Processed.gz'))
 
 ```
 
@@ -1077,50 +457,7 @@ ssoe <- ssoe.raw %>%
   mutate(N = 124842 + 225650) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(ssoe, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ssoe_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-ssoe_ld <- format_data(filter(ssoe, P < 5e-5), type = 'exposure', 
-                         phenotype_col = 'trait',
-                         snp_col = 'SNP', 
-                         beta_col = "Beta",
-                         se_col = "SE",
-                         eaf_col = "EAF",
-                         effect_allele_col = "Effect_allele",
-                         other_allele_col = "Non_Effect_allele",
-                         pval_col = "P")
-ssoe_ld <- clump_data(ssoe_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- ssoe_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(ssoe, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- ssoe %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.ssoe <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r ssoe gwas}
-
-p.ssoe <- ggman(filter(ssoe, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "SSOE - Klimentidis 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.ssoe <- grid.arrange(p.ssoe,  tableGrob(tab.ssoe, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ssoe.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.ssoe)
+write_tsv(ssoe, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ssoe_GWAS.Processed.gz'))
 
 ```
 
@@ -1136,50 +473,7 @@ acc425 <- acc425.raw %>%
   mutate(N = 91084) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(acc425, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/acc425_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-acc425_ld <- format_data(filter(acc425, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'trait',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-acc425_ld <- clump_data(acc425_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- acc425_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(acc425, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- acc425 %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.acc425 <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r acc425 gwas}
-p.acc425 <- ggman(filter(acc425, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 15, 
-                title = "Accelerations > 425 milli-gravities - Klimentidis 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.acc425 <- grid.arrange(p.acc425,  tableGrob(tab.acc425, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/acc425.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.acc425)
+write_tsv(acc425, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/acc425_GWAS.Processed.gz'))
 
 ```
 
@@ -1195,50 +489,7 @@ accave <- accave.raw %>%
   mutate(N = 90667) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(accave, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/accave_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-accave_ld <- format_data(filter(accave, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'trait',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-accave_ld <- clump_data(accave_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- accave_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(accave, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- accave %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.accave <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.accave <- ggman(filter(accave, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Average acceleration - Klimentidis 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.accave <- grid.arrange(p.accave,  tableGrob(tab.accave, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/accave.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.accave)
+write_tsv(accave, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/accave_GWAS.Processed.gz'))
 
 ```
 
@@ -1255,50 +506,7 @@ educ <- educ.raw %>%
   mutate(N = 1131881) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(educ, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/educ_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-educ_ld <- format_data(educ, type = 'exposure', 
-                       phenotype_col = 'trait',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-educ_ld <- clump_data(educ_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- educ_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(educ, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- educ %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.educ <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.educ <- ggman(filter(educ, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "Educational Attainment - Lee 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.educ <- arrangeGrob(p.educ,  tableGrob(tab.educ, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/educ.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.educ)
+write_tsv(educ, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educ_GWAS.Processed.gz'))
 
 ```
 
@@ -1330,50 +538,7 @@ smkukbb <- out %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2)
 
-write_tsv(smkukbb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/smkukbb_GWAS.Processed.gz'))  
-```
-
-```{r}
-## Number of Significant SNPs
-smkukbb_ld <- format_data(filter(smkukbb, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-smkukbb_ld <- clump_data(smkukbb_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- smkukbb_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(smkukbb, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- smkukbb %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.smkukbb <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r smkukbb gwas}
-## Plots
-p.smkukbb <- ggman(filter(smkukbb, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 30, 
-                title = "Smoking UKBB") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.smkukbb <- grid.arrange(p.smkukbb,  tableGrob(tab.smkukbb, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/smkukbb.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.smkukbb)
-
+write_tsv(smkukbb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkukbb_GWAS.Processed.gz'))  
 ```
 
 ## Smoking TAG
@@ -1400,54 +565,9 @@ evrsmk <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisit
   mutate(N = 74053) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/evrsmk_GWAS.Processed.gz'))
+write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/evrsmk_GWAS.Processed.gz'))
 
 ```
-
-```{r}
-## Number of Significant SNPs
-evrsmk_ld <- format_data(filter(evrsmk, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-evrsmk_ld <- clump_data(evrsmk_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- evrsmk_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(evrsmk, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- evrsmk %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.evrsmk <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r evrsmk gwas}
-## Plots
-p.evrsmk <- ggman(filter(evrsmk, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 10, 
-                title = "Ever Smoker - TAG 2010") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.evrsmk <- grid.arrange(p.evrsmk,  tableGrob(tab.evrsmk, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/evrsmk.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.evrsmk)
-
-```
-
-
 
 ## Oily Fish UKB 
 ```{r fish_UKB}
@@ -1476,50 +596,7 @@ fish <- out %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2)
 
-write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/fish_GWAS.Processed.gz'))    
-```
-
-```{r}
-## Number of Significant SNPs
-fish_ld <- format_data(filter(fish, P < 5e-5), type = 'exposure', 
-                               phenotype_col = 'trait',
-                               snp_col = 'SNP', 
-                               beta_col = "Beta",
-                               se_col = "SE",
-                               eaf_col = "EAF",
-                               effect_allele_col = "Effect_allele",
-                               other_allele_col = "Non_Effect_allele",
-                               pval_col = "P")
-fish_ld <- clump_data(fish_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- fish_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(fish, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- fish %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.fish <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r fish gwas}
-## Plots
-p.fish <- ggman(filter(fish, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 25, 
-                title = "Oily Fish Intake") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.fish <- grid.arrange(p.fish,  tableGrob(tab.fish, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/fish.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.fish)
-
+write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fish_GWAS.Processed.gz'))    
 ```
 
 ## HDL Cholesterol 
@@ -1536,50 +613,7 @@ hdl <- hdl.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(hdl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/hdl_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-hdl_ld <- format_data(filter(hdl, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'hdl',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-hdl_ld <- clump_data(hdl_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- hdl_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(hdl, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- hdl %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.hdl <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.hdl <- ggman(filter(hdl, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "HDL Cholesterol - Willer 2013") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.hdl <- grid.arrange(p.hdl,  tableGrob(tab.hdl, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/hdl.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.hdl)
+write_tsv(hdl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hdl_GWAS.Processed.gz'))
 
 ```
 
@@ -1600,50 +634,7 @@ ldl <- ldl.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
   filter(SNP != 'rs377481857') # rs377481857 caused issues
 
-write_tsv(ldl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ldl_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-ldl_ld <- format_data(filter(ldl, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'ldl',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-ldl_ld <- clump_data(ldl_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- ldl_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(ldl, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- ldl %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.ldl <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.ldl <- ggman(filter(ldl, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-               title = "ldl Cholesterol - Willer 2013") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.ldl <- grid.arrange(p.ldl,  tableGrob(tab.ldl, theme = ttheme_minimal(base_size = 8)), 
-                        ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ldl.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.ldl)
+write_tsv(ldl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ldl_GWAS.Processed.gz'))
 
 ```
 
@@ -1663,50 +654,7 @@ TC <- TC.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
   filter(SNP != 'rs377481857') # rs377481857 caused issues
 
-write_tsv(TC, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/tc_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-TC_ld <- format_data(filter(TC, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'TC',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-TC_ld <- clump_data(TC_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- TC_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(TC, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- TC %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.TC <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.TC <- ggman(filter(TC, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-               title = "TC Cholesterol - Willer 2013") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.TC <- grid.arrange(p.TC,  tableGrob(tab.TC, theme = ttheme_minimal(base_size = 8)), 
-                        ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/TC.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.TC)
+write_tsv(TC, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/tc_GWAS.Processed.gz'))
 
 ```
 
@@ -1727,50 +675,7 @@ trig <- trig.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
   filter(SNP != 'rs377481857') # rs377481857 caused issues
 
-write_tsv(trig, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/trig_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-trig_ld <- format_data(filter(trig, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'trig',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-trig_ld <- clump_data(trig_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- trig_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(trig, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- trig %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.trig <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.trig <- ggman(filter(trig, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 80, 
-               title = "Triglycerides - Willer 2013") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.trig <- grid.arrange(p.trig,  tableGrob(tab.trig, theme = ttheme_minimal(base_size = 8)), 
-                        ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/trig.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.trig)
+write_tsv(trig, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/trig_GWAS.Processed.gz'))
 
 ```
 
@@ -1786,50 +691,7 @@ sociso <- sociso.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(sociso, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/sociso_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-sociso_ld <- format_data(filter(sociso, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'sociso',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-sociso_ld <- clump_data(sociso_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- sociso_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(sociso, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- sociso %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.sociso <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.sociso <- ggman(filter(sociso, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Social Isololation - Day 2018") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.sociso <- grid.arrange(p.sociso,  tableGrob(tab.sociso, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/sociso.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.sociso)
+write_tsv(sociso, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sociso_GWAS.Processed.gz'))
 
 ```
 
@@ -1848,50 +710,7 @@ insom <- insom.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
   filter(SNP != 'rs376775068')
 
-write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/insom_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-insom_ld <- format_data(filter(insom, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'insom',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-insom_ld <- clump_data(insom_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- insom_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(insom, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- insom %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.insom <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.insom <- ggman(filter(insom, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Insomnia - Lane 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.insom <- grid.arrange(p.insom,  tableGrob(tab.insom, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/insom.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.insom)
+write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom_GWAS.Processed.gz'))
 
 ```
 
@@ -1908,53 +727,9 @@ sleep <- sleep.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/sleep_GWAS.Processed.gz'))
+write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleep_GWAS.Processed.gz'))
 
 ```
-
-```{r}
-## Number of Significant SNPs
-sleep_ld <- format_data(filter(sleep, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'sleep',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-sleep_ld <- clump_data(sleep_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- sleep_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(sleep, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- sleep %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.sleep <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.sleep <- ggman(filter(sleep, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 20, 
-                title = "Sleep Duration - Lane 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.sleep <- grid.arrange(p.sleep,  tableGrob(tab.sleep, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/sleep.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.sleep)
-
-```
-
 
 ## Personality 
 [Lo et al Nat Genet 2017](https://dx.doi.org/10.1038%2Fng.3736) We identified six genetic loci, including five novel loci2,3, significantly associated with personality traits in a meta-analysis of genome-wide association studies (N=123,132–260,861). Summary statistics of GWAS from 23andMe (available in Supplementary Data Sets 1–5 for the top 10K SNPs) were combined with the two GPC samples separately.
@@ -1968,55 +743,11 @@ agree <- agree.raw %>%
   mutate(N = 1131881) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(agree, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/agree_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-agree_ld <- format_data(filter(agree, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'agree',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-agree_ld <- clump_data(agree_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- agree_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(agree, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- agree %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.agree <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.agree <- ggman(filter(agree, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "Agreebleness - Lo 2017") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.agree <- grid.arrange(p.TRAIT,  tableGrob(tab.TRAIT, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/TRAIT.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.TRAIT)
+write_tsv(agree, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/agree_GWAS.Processed.gz'))
 
 ```
 
 ## IBD 
-
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
 ibd.raw <- read_table2(params$ibd.summary)
 ibd <- ibd.raw %>% 
@@ -2032,55 +763,11 @@ ibd <- ibd.raw %>%
   mutate(N = 59957) %>% 
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(ibd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/ibd_GWAS.Processed.gz'))
-
-```
-
-```{r}
-## Number of Significant SNPs
-ibd_ld <- format_data(filter(ibd, P < 5e-5), type = 'exposure', 
-                       phenotype_col = 'ibd',
-                       snp_col = 'SNP', 
-                       beta_col = "Beta",
-                       se_col = "SE",
-                       eaf_col = "EAF",
-                       effect_allele_col = "Effect_allele",
-                       other_allele_col = "Non_Effect_allele",
-                       pval_col = "P")
-ibd_ld <- clump_data(ibd_ld, clump_r2 = 0.1, clump_kb = 250)
-
-clump.n <- ibd_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(ibd, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- ibd %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.ibd <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.ibd <- ggman(filter(ibd, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-                title = "ibd - AUTHOR") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.ibd <- grid.arrange(p.ibd,  tableGrob(tab.ibd, theme = ttheme_minimal(base_size = 8)), 
-                         ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/ibd.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.ibd)
+write_tsv(ibd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ibd_GWAS.Processed.gz'))
 
 ```
 
 ## Cigrates per day 
-
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
 cpd.raw <- read_table2(params$cpd.summary)
 cpd <- cpd.raw %>% 
@@ -2098,54 +785,105 @@ cpd <- cpd.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(cpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/cpd_GWAS.Processed.gz'))
+write_tsv(cpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/cpd_GWAS.Processed.gz'))
 
 ```
 
-```{r}
-## Number of Significant SNPs
-cpd_ld <- format_data(filter(cpd, P < 5e-5), type = 'exposure', 
-                      phenotype_col = 'cpd',
-                      snp_col = 'SNP', 
-                      beta_col = "Beta",
-                      se_col = "SE",
-                      eaf_col = "EAF",
-                      effect_allele_col = "Effect_allele",
-                      other_allele_col = "Non_Effect_allele",
-                      pval_col = "P")
-cpd_ld <- clump_data(cpd_ld, clump_r2 = 0.1, clump_kb = 250)
+## Hearing Difficulties/Problems
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+hear.raw <- read_table2(params$hear.summary)
+hear <- hear.raw %>% 
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>% 
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples) %>% 
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(!is.na(SNP)) %>%
+  filter(CHR != 'X') %>%
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-clump.n <- cpd_ld %>% 
-  mutate(p.cut = cut(pval.exposure, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>%
-  left_join(select(cpd, SNP, r2)) %>% 
-  select(SNP, effect_allele.exposure, other_allele.exposure, eaf.exposure, beta.exposure, se.exposure, p.cut, r2) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-all.n <- cpd %>% 
-  mutate(p.cut = cut(P, breaks = 
-                       c(Inf, 0.05, 5e-5, 5e-6, 5e-7, 5e-8, -Inf), lablels = F)) %>% 
-  group_by(p.cut) %>% summarise(n = n(), r2 = round(sum(r2, na.rm = T), 4))
-
-tab.cpd <- full_join(all.n, clump.n, by = 'p.cut', suffix = c('.all', '.clump'))
-```
-
-```{r alc_cons gwas}
-
-p.cpd <- ggman(filter(cpd, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = 60, 
-               title = "cpd - AUTHOR") + 
-  theme_classic() + 
-  geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
-  geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-
-out.cpd <- grid.arrange(p.cpd,  tableGrob(tab.cpd, theme = ttheme_minimal(base_size = 8)), 
-                        ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
-
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/cpd.png', device = 'png', units = 'in', width = 10, height = 5, plot = out.cpd)
+write_tsv(hear, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hear_GWAS.Processed.gz'))
 
 ```
 
+## Diastolic Blood Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+dbp.raw <- read_table2(params$dbp.summary)
+dbp <- dbp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
+write_tsv(dbp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/dbp_GWAS.Processed.gz'))
 
+```
+
+## Systolic Blood Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sbp.raw <- read_table2(params$sbp.summary)
+sbp <- sbp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sbp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sbp_GWAS.Processed.gz'))
+
+```
+
+## Pulse Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+pp.raw <- read_table2(params$pp.summary)
+pp <- pp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(pp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/pp_GWAS.Processed.gz'))
+
+```
 
 

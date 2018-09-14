@@ -22,6 +22,7 @@ localrules: all, ProxySnps
 
 rule all:
     input:
+        expand('4_output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode)
         expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
 
 rule clump:
@@ -49,6 +50,18 @@ rule ExposureSnps:
         Pthreshold = '{Pthreshold}'
     shell:
         'Rscript {input.script} {input.summary} {params.Pthreshold} {input.ExposureClump} {output.out}'
+
+rule manhattan_plot:
+    input:
+        script = '3_Scripts/manhattan_plot.R',
+        ingwas = DataIn + '{ExposureCode}_GWAS.Processed.gz',
+        inclump = DataIn + '{ExposureCode}.clumped.gz'
+    params:
+        PlotTitle = "{ExposureCode}"
+    output:
+        out = '4_output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png'
+    shell:
+        "Rscript {input.script} {input.ingwas} {input.inclump} {output.out} \"{params.PlotTitle}\""
 
 rule OutcomeSnps:
     input:
