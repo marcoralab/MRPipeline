@@ -43,17 +43,19 @@ message("READING IN EXPOSURE AND OUTCOME \n")
 outcome.dat <- read_tsv(outcome.summary)
 miss.outcome <- filter(outcome.dat, is.na(CHR))
 
-message("\n SEARCHING FOR PROXY SNPS \n")
 # If snps are missing, find proxy snp
 if(nrow(miss.outcome) >= 1){
+  message("\n SEARCHING FOR PROXY SNPS \n")
   # Search for Proxy SNPs
   proxy.outcome <- FindProxys(miss.outcome$SNP, outcome.dat)
   
   # Combine proxy snps with trait data
-  outcome.dat <- outcome.dat %>%
-    filter(SNP %nin% miss.outcome$SNP) %>%
-    bind_rows(select(proxy.outcome, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)) %>%
-    arrange(CHR, POS)
+  if(nrow(proxy.outcome) >= 1){
+    outcome.dat <- outcome.dat %>%
+      filter(SNP %nin% miss.outcome$SNP) %>%
+      bind_rows(select(proxy.outcome, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)) %>%
+      arrange(CHR, POS)
+  }
 }
 
 message("\n EXPORTING \n")

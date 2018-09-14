@@ -15,7 +15,7 @@ params:
   rwd: rwd
   traits: traits
   exposure.code: exposure.code
-  exposure.snps:  exposure.snps
+  exposure.snps: exposure.snps
   outcome.code: outcome.code
   outcome.snps: outcome.snps
   proxy.snps: proxy.snps
@@ -39,11 +39,11 @@ library(ggplot2)     ## For plotting
 ## Read in trait information
 traits <- read_csv(params$traits)
 
-exposure.name <- as.character(traits[grep(paste0("\\b",params$exposure.code , "\\b"), traits$code), 'name'])
-exposure.blurb <- as.character(traits[grep(paste0("\\b",params$exposure.code , "\\b"), traits$code), 'blurb'])
+exposure.name <- as.character(traits[grep(paste0("\\b", params$exposure.code, "\\b"), traits$code), 'name'])
+exposure.blurb <- as.character(traits[grep(paste0("\\b", params$exposure.code, "\\b"), traits$code), 'blurb'])
 
-outcome.name <- as.character(traits[grep(paste0("\\b",params$outcome.code , "\\b"), traits$code), 'name'])
-outcome.blurb <- as.character(traits[grep(paste0("\\b",params$outcome.code , "\\b"), traits$code), 'blurb'])
+outcome.name <- as.character(traits[grep(paste0("\\b", params$outcome.code, "\\b"), traits$code), 'name'])
+outcome.blurb <- as.character(traits[grep(paste0("\\b", params$outcome.code, "\\b"), traits$code), 'blurb'])
 ```
 
 ## Instrumental Variables
@@ -183,7 +183,7 @@ as.data.frame(mrpresso_gloabl)
 
 **Table 9:** MR Estimates after MR-PRESSO outlier removal
 ```{r mrpresso_res, echo=F, cache=F, message=F}
-if(sum(mrdat$mrpresso_keep, na.rm=TRUE) > 1){
+if(nrow(mrdat) - sum(mrdat$mrpresso_keep, na.rm=TRUE) >= 1){
   mrdat_mrpresso <- filter(mrdat, mrpresso_keep == T)
   res_mrpresso <- mr(mrdat_mrpresso, method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))
   as.data.frame(res_mrpresso)
@@ -197,6 +197,7 @@ if(sum(mrdat$mrpresso_keep, na.rm=TRUE) > 1){
              b = NA,
              se = NA,
              pval = NA)
+  res_mrpresso
 }
 ```
 <br> 

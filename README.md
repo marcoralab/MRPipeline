@@ -6,11 +6,13 @@ Estimating causal Association of environmental and lifestyle risk factors on ris
 **mr.smk** is a snakemake/R pipeline for estimating the causal association of a given exposure with an outcome using the [TwoSampleMR](https://mrcieu.github.io/TwoSampleMR) R package. The steps in the pipeline include:
 
 1. Clump GWAS summary statistics using clumping window of 250kb, r2 of 0.1 and significance level of 1 was used for the index and secondary SNPs.
-2. Obstain genetic variants (Instruments) below a given P<sub>T</sub> from the exposure GWAS.
-3. Extract SNP effects from the outcome GWAS, and if exposure instrument is not avaliable in the outcome GWAS then look for LD proxies in the 1000 genomes EUR samples.
-4. Harmonize exposure and outcome effects using ```TwoSampleMR::harmonise_data```
-5. Perform a Global Test of Pelietropy and idenfity outliers using ```MR-PRESSO```
-6. Run MR analysis, senstivity analysis and write a Rmarkdown html report.
+2. Plot a Manhattan plot
+3. Obstain genetic variants (Instruments) below a given P<sub>T</sub> from the exposure GWAS.
+4. Extract SNP effects from the outcome GWAS, and if exposure instrument is not avaliable in the outcome GWAS.
+5. For Exposure instruments missing in the Outcome GWAS, look for LD proxies in the 1000 genomes EUR samples.
+6. Harmonize exposure and outcome effects using ```TwoSampleMR::harmonise_data```
+7. Perform a Global Test of Pelietropy and idenfity outliers using ```MR-PRESSO```
+8. Run MR analysis, senstivity analysis and write a Rmarkdown html report.
 
 <img align="center" src=dag_mr.svg alt="DAG">
 

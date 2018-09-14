@@ -9,3 +9,5 @@ MrPresso:
   time: '90:00'
   mem: 16000
   cores: 2
+html_Report:
+  partition: manda
