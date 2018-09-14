@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+Byw60l,fNFsdR,sociso,tau,Inverse variance weighted (fixed effects),11,-0.008917112241765363,0.019903053323322747,0.654133458025871
+Byw60l,fNFsdR,sociso,tau,Weighted median,11,-6.390240771186328e-4,0.027362322562336585,0.9813677695172139
+Byw60l,fNFsdR,sociso,tau,Weighted mode,11,0.012499655260519021,0.03701972649840961,0.7426086921701665
+Byw60l,fNFsdR,sociso,tau,MR Egger,11,-0.02618863069316916,0.05965644378175201,0.6710183645847649

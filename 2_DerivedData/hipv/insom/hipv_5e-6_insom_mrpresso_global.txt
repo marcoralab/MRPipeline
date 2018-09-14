@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+RkUHXe	MaA3Bf	insom	hipv	52.98241075371228	0.013

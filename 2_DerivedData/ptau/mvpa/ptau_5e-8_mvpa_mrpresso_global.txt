@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+z8Uq9b	rLVe6O	mvpa	ptau	40.17198645456751	<0.001

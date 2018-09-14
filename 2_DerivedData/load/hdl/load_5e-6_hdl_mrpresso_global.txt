@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ep8o35	tmyFBn	hdl	load	149.54511445415562	<0.001

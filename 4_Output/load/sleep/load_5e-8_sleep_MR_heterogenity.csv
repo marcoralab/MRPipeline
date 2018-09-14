@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+2oG1Wo,dHfqDi,sleep,load,MR Egger,48.46426241895576,41,0.19720660335600695
+2oG1Wo,dHfqDi,sleep,load,Inverse variance weighted,49.07697579739411,42,0.2105640565186186

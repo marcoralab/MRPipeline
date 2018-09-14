@@ -1,0 +1,7 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs2268894,C,T,C,T,23.743,-0.0203,0.4459,0.47463631771849,FALSE,FALSE,FALSE,saSqQ8,0.0079,0.009852,diab,TRUE,reported,4.6293,2.915e-7,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA
+rs2289881,T,G,T,G,-23.183,0.0158,0.3536,0.357163450026562,FALSE,FALSE,FALSE,saSqQ8,0.0082,0.05334,diab,TRUE,reported,4.7982,1.355e-6,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA
+rs6060507,G,A,G,A,28.5005,0.026,0.153,0.146815905818587,FALSE,FALSE,FALSE,saSqQ8,0.011,0.01826,diab,TRUE,reported,6.2191,4.59e-6,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA
+rs7396827,T,C,T,C,-23.0675,-0.0054,0.4723,0.46292697216544,FALSE,FALSE,FALSE,saSqQ8,0.0078,0.4926,diab,TRUE,reported,4.6564,7.275e-7,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA
+rs77956314,C,T,C,T,54.2058,0.0144,0.0752,0.0816454579049781,FALSE,FALSE,FALSE,saSqQ8,0.0143,0.3112,diab,TRUE,reported,8.3684,9.331e-11,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA
+rs78587286,T,C,T,C,36.8599,0.0255,0.09367,0.0947371094226944,FALSE,FALSE,FALSE,saSqQ8,0.0133,0.05563,diab,TRUE,reported,7.8758,2.867e-6,hipv2015,TRUE,reported,MYQ9g8,2,TRUE,NA

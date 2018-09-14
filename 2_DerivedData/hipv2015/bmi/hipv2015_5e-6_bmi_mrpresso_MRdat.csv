@@ -1,0 +1,5 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs2268894,C,T,C,T,23.743,-0.0033,0.4459,0.46440000000000003,FALSE,FALSE,FALSE,1RAhYf,0.0017,0.056,bmi,TRUE,reported,4.6293,2.915e-7,hipv2015,TRUE,reported,UgeYVt,2,TRUE,NA,NA,NA,TRUE
+rs2289881,T,G,T,G,-23.183,0.0052,0.3536,0.3545,FALSE,FALSE,FALSE,1RAhYf,0.0018,0.0042,bmi,TRUE,reported,4.7982,1.355e-6,hipv2015,TRUE,reported,UgeYVt,2,TRUE,NA,NA,NA,TRUE
+rs6060507,G,A,G,A,28.5005,2e-4,0.153,0.1492,FALSE,FALSE,FALSE,1RAhYf,0.0024,0.94,bmi,TRUE,reported,6.2191,4.59e-6,hipv2015,TRUE,reported,UgeYVt,2,TRUE,NA,NA,NA,TRUE
+rs7396827,T,C,T,C,-23.0675,0.006,0.4723,0.4614,FALSE,FALSE,FALSE,1RAhYf,0.0017,5.8e-4,bmi,TRUE,reported,4.6564,7.275e-7,hipv2015,TRUE,reported,UgeYVt,2,TRUE,NA,NA,NA,TRUE

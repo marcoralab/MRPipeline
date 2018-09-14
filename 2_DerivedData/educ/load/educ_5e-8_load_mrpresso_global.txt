@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Skmbgg	nt6jgi	load	educ	1337.312641793621	5.4e-4

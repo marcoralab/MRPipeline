@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ENBsOU	LLut9t	sleep	load	112.38986478722444	0.0585
+WR5HWw	heA2ul	sleep	load	112.38986478722444	0.0577

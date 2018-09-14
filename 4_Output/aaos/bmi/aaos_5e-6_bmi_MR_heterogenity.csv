@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+jzDCgD,M20TRP,bmi,aaos,MR Egger,121.41383158809096,18,2.2692322825629874e-17
+jzDCgD,M20TRP,bmi,aaos,Inverse variance weighted,151.52470913794514,19,1.112912544138873e-22

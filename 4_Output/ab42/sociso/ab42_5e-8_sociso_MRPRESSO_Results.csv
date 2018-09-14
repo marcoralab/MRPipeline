@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+akDhkE,TcSJaf,sociso,ab42,Inverse variance weighted (fixed effects),5,7.317225022111022e-4,0.02305223094441841,0.9746778494543142
+akDhkE,TcSJaf,sociso,ab42,Weighted median,5,-0.005592965115428776,0.025651999304393117,0.8274039235218822
+akDhkE,TcSJaf,sociso,ab42,Weighted mode,5,-0.00677630205077942,0.02945869457681504,0.829355297611307
+akDhkE,TcSJaf,sociso,ab42,MR Egger,5,-0.016203711606049283,0.04678657571160583,0.7519599894126758

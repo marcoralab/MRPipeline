@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KhJiUN	7DLDVX	mvpa	aaos	15.397019698628037	0.841
+zqXcJA	B6jEle	mvpa	aaos	15.397019698628037	0.821

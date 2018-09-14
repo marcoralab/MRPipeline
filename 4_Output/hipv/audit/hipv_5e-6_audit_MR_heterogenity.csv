@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+Gmkrr5,MrFdTN,audit,hipv,MR Egger,41.38818093336725,26,0.02835343578157191
+Gmkrr5,MrFdTN,audit,hipv,Inverse variance weighted,42.40222303370064,27,0.0300297964486699

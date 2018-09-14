@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+rtrodP,XDYCpJ,sociso,ab42,MR Egger,10.595496620080548,14,0.717479739093513
+rtrodP,XDYCpJ,sociso,ab42,Inverse variance weighted,11.855401012791086,15,0.689939500760534

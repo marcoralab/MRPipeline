@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+zGymLM,VhJcbc,sleep,ptau,Inverse variance weighted (fixed effects),16,-0.04502167714700385,0.03389289042994832,0.18406196207270237
+zGymLM,VhJcbc,sleep,ptau,Weighted median,16,-0.06628366248930777,0.048882185038489796,0.17510294604299212
+zGymLM,VhJcbc,sleep,ptau,Weighted mode,16,-0.06592568812583344,0.07206424703952863,0.37475920005182395
+zGymLM,VhJcbc,sleep,ptau,MR Egger,16,0.06451222432776181,0.10314177951621506,0.5417240467548012

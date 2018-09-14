@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+jzDCgD	M20TRP	bmi	aaos	243.91165469439144	<0.001

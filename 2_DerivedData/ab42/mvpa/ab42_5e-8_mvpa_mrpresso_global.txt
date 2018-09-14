@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+mEgdYo	2kXPHl	mvpa	ab42	20.092642192852406	0.039

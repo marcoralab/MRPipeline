@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ODC4UN	dxFOJg	trig	ab42	81.20282228717721	<0.001

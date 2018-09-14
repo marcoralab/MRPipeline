@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+AKWqIV,XKT63I,mvpa,hipv,MR Egger,102.97913152936846,25,1.9667727342503637e-11
+AKWqIV,XKT63I,mvpa,hipv,Inverse variance weighted,103.5564599227415,26,3.2647010137256106e-11

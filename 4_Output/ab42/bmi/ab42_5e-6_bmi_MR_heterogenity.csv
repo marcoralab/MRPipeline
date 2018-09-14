@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+4B3doe,OdoKMm,bmi,ab42,MR Egger,38.03057868279512,7,2.9898813388879703e-6
+4B3doe,OdoKMm,bmi,ab42,Inverse variance weighted,51.54043918374182,8,2.0644278360996507e-8

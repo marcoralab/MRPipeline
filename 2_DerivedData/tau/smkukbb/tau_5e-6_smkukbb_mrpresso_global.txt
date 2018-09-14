@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+1SbmsK	QjxjVA	smkukbb	tau	27.1998145206804	0.015

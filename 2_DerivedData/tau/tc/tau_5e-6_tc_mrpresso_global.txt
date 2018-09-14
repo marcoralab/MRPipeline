@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+i337xl	xjg5fe	tc	tau	544.865988318359	<0.001

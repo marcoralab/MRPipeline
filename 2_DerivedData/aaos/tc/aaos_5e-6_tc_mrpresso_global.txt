@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+jcHeLu	r7R4gR	tc	aaos	344.2199639404999	<0.001

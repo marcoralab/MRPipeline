@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+MrxwVY	8Jhatf	bmi	hipv	29.439332962740867	0.005

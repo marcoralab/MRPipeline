@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+Afv3dY,ANTBzw,trig,ptau,MR Egger,15.33203869583529,2,4.6847896874254645e-4
+Afv3dY,ANTBzw,trig,ptau,Inverse variance weighted,15.461009732174627,3,0.001462206360498201

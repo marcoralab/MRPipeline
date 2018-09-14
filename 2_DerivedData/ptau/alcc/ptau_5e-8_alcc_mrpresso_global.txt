@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+bWC9Yd	zXdNnQ	alcc	ptau	10.918236461498868	0.183

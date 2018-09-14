@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+U2DrIs,mtFWdR,cpd,load,MR Egger,122.4005613225711,79,0.0012672176444375306
+U2DrIs,mtFWdR,cpd,load,Inverse variance weighted,123.14472109450209,80,0.001396045725560287

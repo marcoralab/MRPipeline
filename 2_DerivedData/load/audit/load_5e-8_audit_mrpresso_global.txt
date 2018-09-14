@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TESaOz	6RjJyu	audit	load	75.13893746167224	0.0024

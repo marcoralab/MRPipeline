@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+ODC4UN,dxFOJg,trig,ab42,MR Egger,52.87312880078417,7,3.927238978692881e-9
+ODC4UN,dxFOJg,trig,ab42,Inverse variance weighted,63.05424158738056,8,1.168922972436497e-10

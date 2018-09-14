@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+sPxXQv	4Uby8g	trig	hipv	4.372480102151542	0.487

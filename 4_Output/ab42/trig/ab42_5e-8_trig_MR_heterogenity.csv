@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+6MA2WI,fe4M3o,trig,ab42,MR Egger,33.60849101379307,2,5.035109315494172e-8
+6MA2WI,fe4M3o,trig,ab42,Inverse variance weighted,34.10111717386601,3,1.8861587522065637e-7

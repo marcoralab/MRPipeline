@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+sBlqPC,4f2cVS,fish,tau,MR Egger,12.87335574482127,9,0.1684210147492199
+sBlqPC,4f2cVS,fish,tau,Inverse variance weighted,14.349323479078125,10,0.15764581066493563

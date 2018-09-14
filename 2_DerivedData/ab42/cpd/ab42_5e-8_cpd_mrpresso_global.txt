@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+SORLj9	0luh81	cpd	ab42	22.842217261261	0.01

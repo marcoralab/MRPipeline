@@ -1,3 +1,3 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs61921502,G,T,G,T,-43.4029,0.0033721,0.1425,0.174568,FALSE,FALSE,FALSE,7niYYL,0.0015624,0.0309100708126162,dep,TRUE,reported,6.886,2.918e-10,hipv2015,TRUE,reported,oLTPsZ,2,TRUE,NA
-rs77956314,C,T,C,T,54.2058,-0.0023305,0.0752,0.0815533,FALSE,FALSE,FALSE,7niYYL,0.0021506,0.278515904263208,dep,TRUE,reported,8.3684,9.331e-11,hipv2015,TRUE,reported,oLTPsZ,2,TRUE,NA
+rs61921502,G,T,G,T,-43.4029,0.0033721,0.1425,0.174568,FALSE,FALSE,FALSE,5cIgZa,0.0015624,0.0309100708126162,dep,TRUE,reported,6.886,2.918e-10,hipv2015,TRUE,reported,FxQJ22,2,TRUE,NA
+rs77956314,C,T,C,T,54.2058,-0.0023305,0.0752,0.0815533,FALSE,FALSE,FALSE,5cIgZa,0.0021506,0.278515904263208,dep,TRUE,reported,8.3684,9.331e-11,hipv2015,TRUE,reported,FxQJ22,2,TRUE,NA

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+RVAhTN,ZosnBJ,trig,load,MR Egger,91.67267095503686,23,3.717912749366145e-10
+RVAhTN,ZosnBJ,trig,load,Inverse variance weighted,110.0961580370336,24,5.425230992454468e-13

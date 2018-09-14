@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+6YNbB0	a0krsr	dep	hipv	37.55062586207326	0.191

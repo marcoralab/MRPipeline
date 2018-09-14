@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-HCiEad	RjT23W	alcc	aaos	52.63879655304799	0.5098
+jNxWTU	fFW22y	alcc	aaos	46.33833574158543	0.6338

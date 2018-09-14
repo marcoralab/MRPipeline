@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+lJnvqd	YW82ew	dep	aaos	77.97619569699187	0.0372

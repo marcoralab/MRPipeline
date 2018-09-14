@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+bRZoO1	j4sBC0	diab	load	82.81025350654727	<0.001

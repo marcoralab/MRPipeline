@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+CQXnul,Wnj6ng,fish,hipv2015,MR Egger,12.292265354037351,9,0.19732975085110188
+CQXnul,Wnj6ng,fish,hipv2015,Inverse variance weighted,12.398944765837923,10,0.2592432998369268

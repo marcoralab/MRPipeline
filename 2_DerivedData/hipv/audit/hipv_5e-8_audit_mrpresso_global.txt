@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+rPwP8p	Vfudbo	audit	hipv	12.352580813456818	0.298

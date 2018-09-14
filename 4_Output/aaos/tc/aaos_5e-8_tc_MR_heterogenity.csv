@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+PpJA3Z,BgxYek,tc,aaos,MR Egger,74.62458687334036,5,1.1141865021626957e-14
+PpJA3Z,BgxYek,tc,aaos,Inverse variance weighted,75.2158174829133,6,3.465026668989406e-14

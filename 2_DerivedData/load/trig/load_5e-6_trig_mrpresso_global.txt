@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+RVAhTN	ZosnBJ	trig	load	210.55388539666671	<0.001

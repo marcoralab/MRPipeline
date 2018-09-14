@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+CmlmFu	jY9n0Y	cpd	ab42	29.733270087969668	0.043

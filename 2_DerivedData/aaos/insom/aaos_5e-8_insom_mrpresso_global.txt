@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+IJ8JNj	kD0qk1	insom	aaos	12.855182062165513	0.909

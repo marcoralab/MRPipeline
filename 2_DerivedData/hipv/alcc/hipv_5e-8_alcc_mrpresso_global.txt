@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+HBafFY	Q1z67m	alcc	hipv	26.703896206372168	0.008

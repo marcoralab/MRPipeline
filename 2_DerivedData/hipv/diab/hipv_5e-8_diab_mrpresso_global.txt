@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+MWCj2L	6xgzgI	diab	hipv	24.975091225143164	0.003

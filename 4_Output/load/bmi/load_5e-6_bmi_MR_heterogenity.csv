@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+IEgakN,7gP6Wu,bmi,load,MR Egger,104.36158419564242,15,1.933505102546015e-15
+IEgakN,7gP6Wu,bmi,load,Inverse variance weighted,108.9991919625552,16,6.948114408089047e-16

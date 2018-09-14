@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+rYj6hz	RNWzZN	tc	load	270.1117086119772	<0.001

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+4B3doe	OdoKMm	bmi	ab42	76.74446498668884	<0.001

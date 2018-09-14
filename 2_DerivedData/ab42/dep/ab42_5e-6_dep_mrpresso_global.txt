@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-8c4yZQ	P1zW8M	dep	ab42	22.590027790752295	0.196
+BbHPYv	tyS2TN	dep	ab42	22.590027790752295	0.169

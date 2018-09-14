@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+JDhMDu	MhTsKw	alcc	tau	13.239402852899241	0.25

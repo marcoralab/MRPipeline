@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+fbdWnm	J5LU3f	tc	ab42	465.0976132459176	<0.001

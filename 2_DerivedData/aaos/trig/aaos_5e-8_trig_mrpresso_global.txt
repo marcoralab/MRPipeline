@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+buoin2	6CNiDh	trig	aaos	68.97559166703839	<0.001

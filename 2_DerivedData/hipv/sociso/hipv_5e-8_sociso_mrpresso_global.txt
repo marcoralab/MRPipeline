@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+FKKkCM	ucnECH	sociso	hipv	15.971588068631329	0.148

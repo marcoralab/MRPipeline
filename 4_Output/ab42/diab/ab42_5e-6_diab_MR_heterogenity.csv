@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+7fSYgr,EwLyu8,diab,ab42,MR Egger,15.034514237689688,8,0.058477816357982645
+7fSYgr,EwLyu8,diab,ab42,Inverse variance weighted,17.32882462890788,9,0.043808820007323813

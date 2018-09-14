@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Ytnp2O	fpptMd	diab	hipv	46.58196452677411	0.001

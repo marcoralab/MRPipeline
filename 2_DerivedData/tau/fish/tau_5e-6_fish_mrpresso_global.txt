@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+sBlqPC	4f2cVS	fish	tau	19.916488501617202	0.124

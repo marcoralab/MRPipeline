@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+fs5Ug4	NQsY9Y	fish	ptau	35.21993812491592	0.001

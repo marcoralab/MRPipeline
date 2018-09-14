@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+UgeYVt	1RAhYf	bmi	hipv2015	11.01385365480536	0.153

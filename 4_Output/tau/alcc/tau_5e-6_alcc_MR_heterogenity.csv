@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+JDhMDu,MhTsKw,alcc,tau,MR Egger,7.758161806471821,7,0.35440133901886967
+JDhMDu,MhTsKw,alcc,tau,Inverse variance weighted,8.511455103364657,8,0.38516716236972615

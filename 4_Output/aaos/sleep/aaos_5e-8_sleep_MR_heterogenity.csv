@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+OYCEaE,AgnAPa,sleep,aaos,MR Egger,9.191718448628237,18,0.9551346711564209
+OYCEaE,AgnAPa,sleep,aaos,Inverse variance weighted,10.27129591689733,19,0.9459328963821774

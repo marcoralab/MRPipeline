@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+JNy27q,0GQ4hs,audit,tau,MR Egger,17.627613849667785,9,0.03974807823558209
+JNy27q,0GQ4hs,audit,tau,Inverse variance weighted,22.182224828119832,10,0.014202720656765727

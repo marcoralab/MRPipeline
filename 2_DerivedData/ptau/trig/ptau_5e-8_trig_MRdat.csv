@@ -1,7 +1,5 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs12961169,T,C,T,C,0.05004,3e-4,0.167123,0.1715,FALSE,FALSE,FALSE,S687DJ,0.0069,0.6323,trig,TRUE,reported,0.008013,5.117e-10,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
-rs35055419,C,T,C,T,0.0349,0.0033,0.363582,0.3879,FALSE,FALSE,FALSE,S687DJ,0.0049,0.5831,trig,TRUE,reported,0.005653,7.624e-10,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
-rs514716,C,T,C,T,-0.04876,0.0029,0.13977499999999998,0.1464,FALSE,FALSE,FALSE,S687DJ,0.0071,0.8813,trig,TRUE,reported,0.008764,2.935e-8,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
-rs6859,A,G,A,G,0.03105,0.0141,0.42320599999999997,0.442,FALSE,FALSE,FALSE,S687DJ,0.0035,8.101e-5,trig,TRUE,reported,0.005268,4.204e-9,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
-rs769449,A,G,A,G,0.0793,0.0423,0.108285,0.1201,FALSE,FALSE,FALSE,S687DJ,0.0069,3.15e-9,trig,TRUE,reported,0.006542,5.299e-33,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
-rs9527039,C,T,C,T,-0.06098,-0.0079,0.0780259,0.07387999999999995,FALSE,FALSE,FALSE,S687DJ,0.0089,0.3888,trig,TRUE,reported,0.01045,5.947e-9,ptau,TRUE,reported,gIIsj3,2,TRUE,NA
+rs514716,C,T,C,T,-0.04876,0.0029,0.13977499999999998,0.1464,FALSE,FALSE,FALSE,ANTBzw,0.0071,0.8813,trig,TRUE,reported,0.008764,2.935e-8,ptau,TRUE,reported,Afv3dY,2,TRUE,NA
+rs6859,A,G,A,G,0.03105,0.0141,0.42320599999999997,0.442,FALSE,FALSE,FALSE,ANTBzw,0.0035,8.101e-5,trig,TRUE,reported,0.005268,4.204e-9,ptau,TRUE,reported,Afv3dY,2,TRUE,NA
+rs769449,A,G,A,G,0.0793,0.0423,0.108285,0.1201,FALSE,FALSE,FALSE,ANTBzw,0.0069,3.15e-9,trig,TRUE,reported,0.006542,5.299e-33,ptau,TRUE,reported,Afv3dY,2,TRUE,NA
+rs9527039,C,T,C,T,-0.06098,-0.0079,0.0780259,0.07387999999999995,FALSE,FALSE,FALSE,ANTBzw,0.0089,0.3888,trig,TRUE,reported,0.01045,5.947e-9,ptau,TRUE,reported,Afv3dY,2,TRUE,NA

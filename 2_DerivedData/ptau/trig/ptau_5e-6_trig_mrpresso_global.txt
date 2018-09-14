@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ZHJ85Z	rDCW0W	trig	ptau	113.93676847569594	<0.001

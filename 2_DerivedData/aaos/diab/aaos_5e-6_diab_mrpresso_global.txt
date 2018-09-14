@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+BKvf88	CgG6cI	diab	aaos	77.40637458525556	<0.001

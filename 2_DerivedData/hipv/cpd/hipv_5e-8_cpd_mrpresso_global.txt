@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+V1boMS	x2lvvK	cpd	hipv	2.815318412392126	0.973

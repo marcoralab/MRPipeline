@@ -1,2 +1,2 @@
 SNP,rsID,ld.r2,Dprime,ref.proxy,alt.proxy,CHR,POS,Effect_allele.proxy,Non_Effect_allele.proxy,EAF,Beta,SE,P,r2,N,ref,alt,Effect_allele,Non_Effect_allele
-rs35055419,rs1158947,0.97,1,G,A,3,190660837,G,A,0.6121,0.0056,0.005,0.07991,1.4891834764799999e-5,94311,T,C,T,C
+rs35055419,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
