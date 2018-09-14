@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Ew2DBP	BmazJr	load	bmi	4168.084068546501	<1.33333333333333e-05

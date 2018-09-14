@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+bKqEOg	IuxX5O	aaos	educ	1357.4693986838863	0.03184
