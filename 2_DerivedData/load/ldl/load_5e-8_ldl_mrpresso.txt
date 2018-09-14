@@ -17,8 +17,8 @@ $`MR-PRESSO results`$`Global Test`$Pvalue
 
 $`MR-PRESSO results`$`Outlier Test`
          RSSobs Pvalue
-1  1.780504e-04  0.242
-2  2.626085e-03   0.11
+1  1.780504e-04   0.22
+2  2.626085e-03  0.055
 3  2.535844e-06      1
 4  2.063551e-03 <0.011
 5  8.836950e-03 <0.011
@@ -26,8 +26,8 @@ $`MR-PRESSO results`$`Outlier Test`
 7  1.043074e-03 <0.011
 8  2.354322e-03 <0.011
 9  5.234750e-04      1
-10 3.999263e-03  0.979
-11 1.500955e-04  0.385
+10 3.999263e-03  0.957
+11 1.500955e-04  0.495
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
