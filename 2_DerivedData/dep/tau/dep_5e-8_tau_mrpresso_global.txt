@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KOZEII	lFJNTA	tau	dep	16.65258555293982	0.786
+tsqM8i	0oHKMJ	tau	dep	16.65258555293982	0.799

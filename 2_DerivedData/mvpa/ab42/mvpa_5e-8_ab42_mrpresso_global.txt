@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-etttZv	nxg0Cx	ab42	mvpa	26.18236515787534	0.231
+9FHQJV	2V2DW7	ab42	mvpa	26.18236515787534	0.221

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-NMOe9w	KSXmgZ	load	tc	4424.4494477251965	<1e-04
+6f0mpm	6EyJI7	load	tc	4424.4494477251965	<1e-04

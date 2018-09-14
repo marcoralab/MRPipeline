@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7QMfzN	Y8CDUx	aaos	trig	1318.4189326911412	<1e-04

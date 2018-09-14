@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-yaJGCq,MjR92u,tau,fish,Inverse variance weighted (fixed effects),89,-0.12585403664916092,0.051231384223167455,0.014026624146420053
-yaJGCq,MjR92u,tau,fish,Weighted median,89,-0.14321530718866832,0.07637604988527665,0.06077432846736116
-yaJGCq,MjR92u,tau,fish,Weighted mode,89,0.10342182516397314,0.18293292348874118,0.5732717436743626
-yaJGCq,MjR92u,tau,fish,MR Egger,89,-0.39806059607435057,0.20873452635751863,0.059818240840757306
+D83exa,NCdw8T,tau,fish,mrpresso,NA,NA,NA,NA

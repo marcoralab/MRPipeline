@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Ag2bcG	IUFeSb	ptau	bmi	1603.9242580869213	0.09578666666666667

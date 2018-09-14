@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-cZsLyx,75DmAg,hipv,hdl,Inverse variance weighted (fixed effects),348,0.0017823246693355864,0.014321667120032399,0.9009593628661281
-cZsLyx,75DmAg,hipv,hdl,Weighted median,348,-0.011203331634707641,0.02450161513355454,0.6474922988882119
-cZsLyx,75DmAg,hipv,hdl,Weighted mode,348,-0.0016456848739521135,0.027086114067437328,0.9515873068083259
-cZsLyx,75DmAg,hipv,hdl,MR Egger,348,0.015250155961674675,0.027955283880773858,0.5857476894419293
+3Rx9ss,jK0oor,hipv,hdl,mrpresso,NA,NA,NA,NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-EyXWlW	GxLMtH	ab42	sleep	10.09700188292867	0.938
+tA2tWI	KuFWYI	ab42	sleep	10.09700188292867	0.944

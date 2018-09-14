@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WWEaDO	RTwvVx	hipv	ldl	235.2945406298229	0.0856
+4ZlUhE	K2GclH	hipv	ldl	234.59808473161885	0.0828

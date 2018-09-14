@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-ugNL8w,iQx2ss,hipv2015,fish,Inverse variance weighted (fixed effects),93,98.54203668409097,40.791188215577336,0.015702073566846234
-ugNL8w,iQx2ss,hipv2015,fish,Weighted median,93,134.2033314570636,59.93186249306371,0.025138668569917248
-ugNL8w,iQx2ss,hipv2015,fish,Weighted mode,93,152.67230715218443,142.00132812709504,0.28512049764303893
-ugNL8w,iQx2ss,hipv2015,fish,MR Egger,93,298.67855493680275,182.6923003134098,0.10553059095321153
+jFfLG3,fngrJe,hipv2015,fish,mrpresso,NA,NA,NA,NA

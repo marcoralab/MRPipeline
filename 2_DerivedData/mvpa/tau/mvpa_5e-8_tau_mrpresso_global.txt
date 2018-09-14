@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-5u5e4J	1Z70fB	tau	mvpa	28.17888682343042	0.161
+K5db7k	wh6X75	tau	mvpa	28.17888682343042	0.16

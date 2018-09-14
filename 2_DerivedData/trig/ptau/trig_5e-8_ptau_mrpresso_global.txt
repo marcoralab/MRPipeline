@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-qo7h9t	q4ALq7	ptau	trig	283.71216852809414	<1e-04
+OIFzV4	OlLZoB	ptau	trig	283.71216852809414	<1e-04

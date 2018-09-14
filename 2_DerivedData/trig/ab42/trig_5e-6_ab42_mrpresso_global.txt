@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ICfqwB	HAMZMG	ab42	trig	717.8982000190157	<1e-04
+JwOhpO	a7Rr5B	ab42	trig	717.8982000190157	<1e-04

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2q8q3S	WYQdgd	hipv	smkukbb	257.21754537632546	0.0306
+LEs6Bn	TkTIPl	hipv	smkukbb	257.21754537632546	0.0261

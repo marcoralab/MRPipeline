@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Zm98uc	YdiFEW	hipv	sleep	33.70389189201792	0.259
+rJhHdY	GZHrKJ	hipv	sleep	33.70389189201792	0.259

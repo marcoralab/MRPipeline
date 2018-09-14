@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-6tS15Q	HHOgQA	aaos	mvpa	628.9231381067558	<2e-04
+V5btFn	NuqX04	aaos	mvpa	628.9231381067558	<2e-04

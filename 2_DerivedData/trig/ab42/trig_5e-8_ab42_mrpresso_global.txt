@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PQHVVI	of2ZOZ	ab42	trig	615.0743834451773	<1e-04
+fD4svl	Y5Tlo5	ab42	trig	615.0743834451773	<1e-04

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UjY79n	5iwLBe	hipv	trig	403.790152375352	<1e-04
+HjfPzZ	SCH7wd	hipv	trig	403.790152375352	<1e-04

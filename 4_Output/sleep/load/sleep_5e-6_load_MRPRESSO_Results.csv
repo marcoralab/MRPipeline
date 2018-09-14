@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-HwDC41,vbiaxH,load,sleep,Inverse variance weighted (fixed effects),24,-0.06199283005145896,0.1563791654681502,0.6917904915072074
-HwDC41,vbiaxH,load,sleep,Weighted median,24,-0.134902228957175,0.21608397925798917,0.5324275431126589
-HwDC41,vbiaxH,load,sleep,Weighted mode,24,-0.16441678514216607,0.3624957083354365,0.6543897262092546
-HwDC41,vbiaxH,load,sleep,MR Egger,24,0.5222927454147904,0.5910985952356668,0.3864682298657566
+aS0zmI,K5wMKq,load,sleep,mrpresso,NA,NA,NA,NA

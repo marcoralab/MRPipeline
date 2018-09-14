@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xgo7YU	iKmpxM	ptau	smkukbb	556.7685628217635	0.87428
+EKB5AZ	dykxxG	ptau	smkukbb	556.7685628217635	0.87232

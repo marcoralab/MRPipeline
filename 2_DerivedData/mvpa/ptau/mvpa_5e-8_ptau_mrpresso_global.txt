@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UZMOEd	cDIL5S	ptau	mvpa	169.71701897224622	<0.001
+7YCwY1	AQwMDP	ptau	mvpa	169.71701897224622	<0.001

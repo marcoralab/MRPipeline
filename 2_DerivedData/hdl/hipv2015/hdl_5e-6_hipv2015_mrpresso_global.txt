@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rlAed6	QClI5k	hipv2015	hdl	371.8772027120581	0.07304

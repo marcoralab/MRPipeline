@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-X4q7ZR	J5BFmO	ab42	audit	44.33230416720835	0.2408
+m5JyYx	iqc099	ab42	audit	44.33230416720835	0.236

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-AmnI7T,EXqh3R,ptau,sleep,MR Egger,23.03435006813682,20,0.28711102592985666
-AmnI7T,EXqh3R,ptau,sleep,Inverse variance weighted,23.128059891074287,21,0.33718868286875897
+jMguDk,iycHCf,ptau,sleep,MR Egger,23.03435006813682,20,0.28711102592985666
+jMguDk,iycHCf,ptau,sleep,Inverse variance weighted,23.128059891074287,21,0.33718868286875897

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-iKJWlG	SfaQ06	ab42	tc	730.865211256818	<1e-04
+eUj8ei	h4XO7q	ab42	tc	730.865211256818	<1e-04

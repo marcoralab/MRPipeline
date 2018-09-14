@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Rwwfun	eIZPET	hipv	diab	273.14938203215985	2e-4
+BrRc4e	jBW42O	hipv	diab	273.14938203215985	<1e-04

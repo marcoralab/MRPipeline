@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rqzxun	VXZRbg	load	fish	2980.3602220053626	<4e-05
+i8jP6W	HF8rnM	load	fish	2980.3602220053626	<4e-05

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-gjyWd2	xsZwo5	ab42	audit	7.070030077599011	0.43

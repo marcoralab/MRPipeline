@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BizmIz	ItiInN	aaos	mvpa	763.260128278586	<1e-04
+JMyvTO	hS4Mzo	aaos	mvpa	763.260128278586	<1e-04

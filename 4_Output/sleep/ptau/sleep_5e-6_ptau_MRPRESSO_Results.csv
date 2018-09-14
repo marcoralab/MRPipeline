@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-AmnI7T,EXqh3R,ptau,sleep,Inverse variance weighted (fixed effects),22,-0.03979015952817446,0.05570319704475096,0.4750265330903213
-AmnI7T,EXqh3R,ptau,sleep,Weighted median,22,-0.06938801599858362,0.07890998560242869,0.3792216986249754
-AmnI7T,EXqh3R,ptau,sleep,Weighted mode,22,-0.055177018472240325,0.13425189840879173,0.6852391205492754
-AmnI7T,EXqh3R,ptau,sleep,MR Egger,22,0.019112337728472987,0.2149760197190242,0.9300420434392658
+jMguDk,iycHCf,ptau,sleep,mrpresso,NA,NA,NA,NA

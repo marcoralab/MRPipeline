@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-w6aGCQ	NrrGFO	tau	dep	148.31459907456133	0.1503
+aBFaMW	lDmamf	tau	dep	148.31459907456133	0.1515

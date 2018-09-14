@@ -23,7 +23,7 @@ $`MR-PRESSO results`$`Outlier Test`
 4  4.394603e-05      1
 5  2.076992e-05      1
 6  7.086351e-05      1
-7  4.005083e-04  0.364
+7  4.005083e-04   0.26
 8  1.837347e-05      1
 9  1.168985e-05      1
 10 2.515424e-06      1
@@ -41,7 +41,7 @@ $`MR-PRESSO results`$`Outlier Test`
 22 3.195230e-05      1
 23 1.116657e-05      1
 24 1.969311e-04      1
-25 2.628460e-04  0.156
+25 2.628460e-04  0.234
 26 6.295976e-08      1
 
 $`MR-PRESSO results`$`Distortion Test`
@@ -53,7 +53,7 @@ beta.exposure
      180.8249 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.161
+[1] 0.179
 
 
 

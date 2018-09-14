@@ -75,7 +75,7 @@ $`MR-PRESSO results`$`Outlier Test`
 59  5.492059e-05       1
 60  2.537788e-03       1
 61  2.657867e-04       1
-62  3.013547e-03   0.126
+62  3.013547e-03  0.0756
 63  9.877240e-06       1
 64  3.539156e-04       1
 65  1.153638e-03       1
@@ -138,8 +138,8 @@ $`MR-PRESSO results`$`Outlier Test`
 122 1.206534e-03       1
 123 1.332774e-04       1
 124 5.421639e-05       1
-125 2.675090e-03  0.7812
-126 3.737353e-03   0.126
+125 2.675090e-03    0.63
+126 3.737353e-03  0.1512
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`

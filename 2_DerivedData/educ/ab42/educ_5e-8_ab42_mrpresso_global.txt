@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UIg5No	yCetJe	ab42	educ	1014.5031405468384	0.09122

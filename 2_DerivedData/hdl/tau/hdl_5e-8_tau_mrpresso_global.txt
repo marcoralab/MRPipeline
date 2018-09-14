@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2GueY4	HXSLdi	tau	hdl	313.4863124593463	<1e-04
+0KUzk4	OoZtPJ	tau	hdl	313.4863124593463	<1e-04

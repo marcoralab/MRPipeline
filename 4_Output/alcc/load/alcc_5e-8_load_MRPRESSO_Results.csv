@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-FojZIb,PMcB49,load,alcc,Inverse variance weighted (fixed effects),9,0.07717118052410532,0.3357028298813182,0.8181854484332576
-FojZIb,PMcB49,load,alcc,Weighted median,9,0.008037286196886734,0.47343644334874796,0.9864553761330788
-FojZIb,PMcB49,load,alcc,Weighted mode,9,-0.11722250077349639,0.48401480413717685,0.8147277286935746
-FojZIb,PMcB49,load,alcc,MR Egger,9,2.4706561662975934,1.926955455275652,0.2406148712740528
+AS32uO,A9odIt,load,alcc,mrpresso,NA,NA,NA,NA

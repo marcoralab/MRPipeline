@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-aStVJZ	wqi7B7	aaos	ldl	1534.0854895838472	<1e-04

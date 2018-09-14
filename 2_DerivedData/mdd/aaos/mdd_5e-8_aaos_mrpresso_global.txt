@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-q0d6Nt	rn8uzA	aaos	mdd	54.50866712847106	0.2482
+nT2dk4	mga7VG	aaos	mdd	54.50866712847106	0.2444

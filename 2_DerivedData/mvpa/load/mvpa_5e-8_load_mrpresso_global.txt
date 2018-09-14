@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-u7xBwH	XDt2P1	load	mvpa	2578.3346653305075	<0.001
+3jfnvp	Df7lzY	load	mvpa	2578.3346653305075	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-aCFbRG	6caXCW	ab42	mdd	163.60030989627163	0.0443

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-yaJGCq	MjR92u	tau	fish	86.23319618547332	0.6301
+D83exa	NCdw8T	tau	fish	86.23319618547332	0.6226

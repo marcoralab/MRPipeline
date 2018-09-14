@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-eMMubP	EjKpGH	tau	bmi	1512.5454675983397	0.07522666666666666

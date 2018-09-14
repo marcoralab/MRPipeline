@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2YvRwC	TtXOUr	load	insom	35.737169198726534	0.44
+sa4EmX	ELDBTy	load	insom	35.737169198726534	0.4324

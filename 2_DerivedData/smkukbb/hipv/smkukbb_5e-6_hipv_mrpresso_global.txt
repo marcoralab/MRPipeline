@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xH2d8A	dtPaLt	hipv	smkukbb	854.1716004804845	7.2e-4
+koPux4	t2HPB0	hipv	smkukbb	854.1716004804845	7.6e-4

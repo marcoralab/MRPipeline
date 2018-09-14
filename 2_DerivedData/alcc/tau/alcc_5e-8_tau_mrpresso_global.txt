@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-yvFKBs	YAORG0	tau	alcc	6.26684589509105	0.614
+wm2XFL	vMPPoc	tau	alcc	6.26684589509105	0.59

@@ -1,2 +1,2 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs62158211,T,G,T,G,0.039007,5.0916,0.21355,0.2111,FALSE,FALSE,FALSE,hj9TzV,5.5759,0.3612,hipv2015,TRUE,reported,0.005173,4.7186e-14,sleep,TRUE,reported,2opafI,2,TRUE,NA
+rs62158211,T,G,T,G,0.039007,5.0916,0.21355,0.2111,FALSE,FALSE,FALSE,pdssk7,5.5759,0.3612,hipv2015,TRUE,reported,0.005173,4.7186e-14,sleep,TRUE,reported,pWKQE5,2,TRUE,NA

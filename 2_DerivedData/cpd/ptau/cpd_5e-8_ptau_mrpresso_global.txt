@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3pvdxa	EXCM6v	ptau	cpd	14.079900638386746	0.226
+VrFAmz	cdVjlb	ptau	cpd	14.079900638386746	0.243

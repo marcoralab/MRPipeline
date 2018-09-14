@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-lwzFNt	czkE4f	aaos	sociso	47.613302939852986	0.01
+pSj5Od	yEEvha	aaos	sociso	47.613302939852986	0.01

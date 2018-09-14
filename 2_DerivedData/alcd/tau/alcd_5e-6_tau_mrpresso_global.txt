@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-eZONzT	CNKIBf	tau	alcd	18.072067065119562	0.397
+xNdVLV	unnwSt	tau	alcd	18.072067065119562	0.402

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-8VydAl	uRIshw	tau	ldl	391.1243193924317	<1e-04
+MsYNYA	NMKUa5	tau	ldl	391.7416082228182	<1e-04

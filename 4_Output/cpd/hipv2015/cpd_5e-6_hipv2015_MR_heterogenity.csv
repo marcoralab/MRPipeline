@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-bxIz5j,TGc28d,hipv2015,cpd,MR Egger,37.19632786586023,35,0.368211006588429
-bxIz5j,TGc28d,hipv2015,cpd,Inverse variance weighted,37.75093818134963,36,0.3891809706261578
+CNGMdl,c9Ouss,hipv2015,cpd,MR Egger,37.19632786586023,35,0.368211006588429
+CNGMdl,c9Ouss,hipv2015,cpd,Inverse variance weighted,37.75093818134963,36,0.3891809706261578

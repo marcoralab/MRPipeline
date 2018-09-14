@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-QaRWYh	Ntmoqq	hipv2015	bmi	1625.5561428260485	2.4e-4

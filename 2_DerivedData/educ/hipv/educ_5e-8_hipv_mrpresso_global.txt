@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-AclmUv	mvd4AP	hipv	educ	1449.5966728080784	2e-5

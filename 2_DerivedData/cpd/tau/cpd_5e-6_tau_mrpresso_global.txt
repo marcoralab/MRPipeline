@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BNcitG	64YS50	tau	cpd	28.95883688509735	0.482
+IgbWmt	LXbJQv	tau	cpd	28.95883688509735	0.484

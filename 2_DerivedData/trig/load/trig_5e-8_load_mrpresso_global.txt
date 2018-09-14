@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xkdI87	0NqvmO	load	trig	2807.941205825541	<1e-04
+2ORJfI	HS6w3y	load	trig	2807.941205825541	<1e-04

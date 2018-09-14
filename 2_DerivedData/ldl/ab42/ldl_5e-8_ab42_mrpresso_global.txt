@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-REMEaN	mFZBNq	ab42	ldl	662.2179289024941	<1e-04
+xgVg0O	a1PSkJ	ab42	ldl	664.1161027280019	<1e-04
