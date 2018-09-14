@@ -22,7 +22,7 @@ localrules: all, ProxySnps
 
 rule all:
     input:
-        expand('4_output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode)
+        expand('4_output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
         expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
 
 rule clump:
