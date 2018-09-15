@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+qk1l0u	jlRBLW	tau	dbp	1195.1038180737698	0.07576

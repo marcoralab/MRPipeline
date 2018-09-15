@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+Mhd156,EKxPPm,hipv2015,bmi,MR Egger,1616.0294553713097,1425,2.8848912826576255e-4
+Mhd156,EKxPPm,hipv2015,bmi,Inverse variance weighted,1623.2035280437503,1426,1.9458131240041306e-4

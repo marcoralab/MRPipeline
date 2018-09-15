@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+W5DLrh	HoC8qE	load	hear	30.43997573856179	0.474

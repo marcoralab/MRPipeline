@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+95PA0u	yAJ5mV	aaos	diab	279.78538952419643	<1e-04

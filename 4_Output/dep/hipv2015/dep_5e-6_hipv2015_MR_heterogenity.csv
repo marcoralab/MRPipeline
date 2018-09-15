@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-1jfUjY,j51Pkv,hipv2015,dep,MR Egger,117.19831132353725,122,0.6059149273455114
-1jfUjY,j51Pkv,hipv2015,dep,Inverse variance weighted,118.92097228521668,123,0.5872049969640794
+MPSGY7,ZA7cP6,hipv2015,dep,MR Egger,117.19831132353725,122,0.6059149273455114
+MPSGY7,ZA7cP6,hipv2015,dep,Inverse variance weighted,118.92097228521668,123,0.5872049969640794

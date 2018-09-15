@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+f57FfS,E8SJD2,ab42,hear,MR Egger,129.26074418757014,88,0.0027730226272076938
+f57FfS,E8SJD2,ab42,hear,Inverse variance weighted,131.25536541901806,89,0.002407135287419919

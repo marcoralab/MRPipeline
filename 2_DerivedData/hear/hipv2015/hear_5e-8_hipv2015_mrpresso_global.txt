@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+m6HqUU	M86Vtp	hipv2015	hear	25.048530049930644	0.8846

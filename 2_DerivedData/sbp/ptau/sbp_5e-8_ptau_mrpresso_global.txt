@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+tH3sYQ	S4pNfk	ptau	sbp	1234.4970704158984	0.17884

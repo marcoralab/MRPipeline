@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+MPSGY7	ZA7cP6	hipv2015	dep	120.884454566477	0.5882

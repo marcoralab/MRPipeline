@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Y0vcWj	HJDWFC	ab42	sbp	1166.3577975513101	0.01312

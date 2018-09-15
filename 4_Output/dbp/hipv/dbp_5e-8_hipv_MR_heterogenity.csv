@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+WLb30m,OGG3gN,hipv,dbp,MR Egger,1774.8003413476292,1523,6.975333947457021e-6
+WLb30m,OGG3gN,hipv,dbp,Inverse variance weighted,1781.3757219946392,1524,4.614098637031623e-6

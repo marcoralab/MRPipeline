@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Am34km	eY8DDx	hipv	hear	133.19230707051832	0.5014

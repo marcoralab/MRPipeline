@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TZ2BHs	GBWA1D	aaos	pp	1927.5244120729371	<2e-05

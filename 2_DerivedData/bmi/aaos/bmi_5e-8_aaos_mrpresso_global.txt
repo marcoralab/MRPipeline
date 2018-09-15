@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+KQiPgQ	6hAbbD	aaos	bmi	2522.9619239954764	<1.33333333333333e-05

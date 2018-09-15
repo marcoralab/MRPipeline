@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+k3O0Sv	hEpx0o	aaos	dbp	1869.6314167915539	2.6666666666666667e-5

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+f57FfS	E8SJD2	ab42	hear	134.70241139517495	0.0054

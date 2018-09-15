@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Hlp8H6	REh9JQ	tau	hear	31.068159957258636	0.346

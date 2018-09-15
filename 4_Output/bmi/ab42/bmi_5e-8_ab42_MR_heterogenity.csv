@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+jDeZUz,ANGTKk,ab42,bmi,MR Egger,1878.2169433630868,1400,1.3391748405390415e-16
+jDeZUz,ANGTKk,ab42,bmi,Inverse variance weighted,1880.0919580164752,1401,1.21996191425997e-16
