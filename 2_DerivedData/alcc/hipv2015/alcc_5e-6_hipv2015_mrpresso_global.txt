@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-RdhCIk	PxFNtH	hipv2015	alcc	38.862289270407935	0.5696
+j7pTcM	B0rIOK	hipv2015	alcc	56.998500572793745	0.2042

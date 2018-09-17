@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-CDEEO7	WoElio	tau	alcc	29.66896273378428	0.6392
+Jc64h4	rokWUN	tau	alcc	42.80687447842609	0.3172
