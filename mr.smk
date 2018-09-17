@@ -71,17 +71,30 @@ rule OutcomeSnps:
     shell:
         'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
 
-rule ProxySnps:
+rule FindProxySnps:
     input:
-        script = '3_Scripts/ProxySNPs.R',
+        script = '3_Scripts/FindProxySNPs.R',
         OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_proxys.csv",
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt",
     params:
         Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
         'Rscript {input.script} {input.OutcomeSummary} {params.Outcome}'
+
+rule ExtractProxySnps:
+    input:
+        script = '3_Scripts/ExtractProxySNPs.R',
+        OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz",
+        OutcomeSNPs = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        OutcomeProxys = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt"
+    output:
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
+        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
+    params:
+        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+    shell:
+        'Rscript {input.script} {input.OutcomeSummary} {input.OutcomeProxys} {input.OutcomeSNPs} {params.Outcome}'
 
 rule Harmonize:
     input:
@@ -115,7 +128,7 @@ rule html_Report:
         traits = traits,
         ExposureSnps = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        ProxySnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_proxys.csv",
+        ProxySnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
         HarmonizedDat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
         mrpresso_global = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
     output:
