@@ -13,8 +13,9 @@ myspread <- function(df, key, value) {
     spread(temp, value)
 }
 
-path <- '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/'
+path <- '~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/'
 filenames <- list.files(path, pattern="*_MR_Results.csv", recursive = T)
+filenames <- filenames[grepl('OldReports', filenames) == F]
 files.gws <- paste0(path, grep('5e-8', filenames, value = T))
 files.gns <- paste0(path, grep('5e-6', filenames, value = T))
 
@@ -23,27 +24,31 @@ res.gns <- map(files.gns, read_csv) %>%
   bind_rows() %>% 
   mutate(z = b/se) %>% 
   filter(exposure %nin% c( "load", "aaos", "ab42", "ptau", "tau")) %>% 
-  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau", "hipv")) %>% 
+  filter(outcome %in% c( "load", "aaos", "ab42", "ptau", "tau", "hipv", "hipv2015")) %>% 
   mutate(p = '5e-6') %>%
   mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence",
-                                                        "alcc" = "Alcohol Consumption", 
-                                                        "audit" = "AUDIT", 
-                                                        "dep" = 'Depressive Symptoms',
-                                                        "cpd" = 'Cigarettes per day',
-                                                        'diab' = 'Type 2 Diabetes', 
-                                                        'fish' = 'Oily Fish Intake', 
-                                                        'hdl' = 'HDL Cholesterol', 
-                                                        'ldl' = 'LDL Cholesterol', 
-                                                        'tc' = 'Total Cholesterol', 
-                                                        'trig' = 'Triglycerides', 
-                                                        'insom' = 'Insomnia', 
-                                                        'sleep' = 'Sleep Duration', 
-                                                        'mdd' = 'Major Depression Disorder', 
-                                                        'mvpa' = 'Moderate to Vigorous PA', 
-                                                        'smkukbb' = 'Smoking Status', 
-                                                        'sociso' = 'Social Isolation', 
-                                                        'bmi' = 'BMI',
-                                                        'educ' = 'Educational Attainment')))
+                                                "alcc" = "Alcohol Consumption", 
+                                                "audit" = "AUDIT", 
+                                                'bmi' = 'BMI',
+                                                "cpd" = 'Cigarettes per day',
+                                                "dbp" = 'Diastolyic Blood Pressure',
+                                                "dep" = 'Depressive Symptoms',
+                                                'diab' = 'Type 2 Diabetes', 
+                                                'educ' = 'Educational Attainment',
+                                                'fish' = 'Oily Fish Intake',
+                                                'hdl' = 'HDL Cholesterol',
+                                                'hear' = 'Hearing Problems',
+                                                'ldl' = 'LDL Cholesterol',
+                                                'tc' = 'Total Cholesterol',
+                                                'trig' = 'Triglycerides',
+                                                'insom' = 'Insomnia',
+                                                'sleep' = 'Sleep Duration',
+                                                'mdd' = 'Major Depression Disorder',
+                                                'mvpa' = 'Moderate to Vigorous PA',
+                                                'smkukbb' = 'Smoking Status',
+                                                'sociso' = 'Social Isolation',
+                                                'sbp' = 'Systolic Blood Pressure',
+                                                'pp' = 'Pulse Pressure')))
  
 
 
@@ -52,31 +57,36 @@ res.gws <- map(files.gws, read_csv) %>%
   bind_rows() %>% 
   mutate(z = b/se) %>% 
   filter(exposure %nin% c( "load", "aaos", "ab42", "ptau", "tau")) %>% 
-  filter(outcome %in% c( "LOAD", "AAOS", "ab42", "ptau", "tau", "hipv")) %>% 
+  filter(outcome %in% c( "load", "aaos", "ab42", "ptau", "tau", "hipv", "hipv2015")) %>% 
   mutate(p = '5e-8') %>%
-  mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence ",
-                                                        "alcc" = "Alcohol Consumption", 
-                                                        "audit" = "AUDIT", 
-                                                        "dep" = 'Depressive Symptoms',
-                                                        "cpd" = 'Cigarettes per day',
-                                                        'diab' = 'Type 2 Diabetes', 
-                                                        'fish' = 'Oily Fish Intake', 
-                                                        'hdl' = 'HDL Cholesterol', 
-                                                        'ldl' = 'LDL Cholesterol', 
-                                                        'tc' = 'Total Cholesterol', 
-                                                        'trig' = 'Triglycerides', 
-                                                        'insom' = 'Insomnia', 
-                                                        'sleep' = 'Sleep Duration', 
-                                                        'mdd' = 'Major Depression Disorder', 
-                                                        'mvpa' = 'Moderate to Vigorous PA', 
-                                                        'smkukbb' = 'Smoking Status', 
-                                                        'sociso' = 'Social Isolation', 
-                                                        'bmi' = 'BMI',
-                                                        'educ' = 'Educational Attainment')))
+  mutate(exposure = str_replace_all(exposure, c("alcd" = "Alcohol Dependence",
+                                                "alcc" = "Alcohol Consumption", 
+                                                "audit" = "AUDIT", 
+                                                'bmi' = 'BMI',
+                                                "cpd" = 'Cigarettes per day',
+                                                "dbp" = 'Diastolyic Blood Pressure',
+                                                "dep" = 'Depressive Symptoms',
+                                                'diab' = 'Type 2 Diabetes', 
+                                                'educ' = 'Educational Attainment',
+                                                'fish' = 'Oily Fish Intake',
+                                                'hdl' = 'HDL Cholesterol',
+                                                'hear' = 'Hearing Problems',
+                                                'ldl' = 'LDL Cholesterol',
+                                                'tc' = 'Total Cholesterol',
+                                                'trig' = 'Triglycerides',
+                                                'insom' = 'Insomnia',
+                                                'sleep' = 'Sleep Duration',
+                                                'mdd' = 'Major Depression Disorder',
+                                                'mvpa' = 'Moderate to Vigorous PA',
+                                                'smkukbb' = 'Smoking Status',
+                                                'sociso' = 'Social Isolation',
+                                                'sbp' = 'Systolic Blood Pressure',
+                                                'pp' = 'Pulse Pressure')))
 
 
 ## Join Results
-res.all <- bind_rows(res.gns, res.gws)
+res.all <- bind_rows(res.gns, res.gws) %>% 
+  mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) 
 
 ## =========== Write Out Results =========== ##
 all_gws_mr <- res.all %>% 
@@ -115,7 +125,7 @@ write_csv(test, '~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/all_sig_mr.csv')
 ## =========== DW Plots - p models =========== ##
 ## Plot LOAD results - IVW, all 
 res.all %>% 
-  filter(outcome == c("LOAD"), method == 'IVW') %>% 
+  filter(outcome == c("load"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
@@ -123,7 +133,7 @@ ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load.png', width 
 
 ## Plot AAOS results - IVW, all 
 res.all %>% 
-  filter(outcome == c("AAOS"), method == 'IVW') %>% 
+  filter(outcome == c("aaos"), method == 'IVW') %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
@@ -161,17 +171,24 @@ res.all %>%
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
 
+res.all %>% 
+  filter(outcome == c("hipv2015"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = p) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
+
 ## =========== DW Plots - method models =========== ##
 ## Plot load results with MR models 
 res.all %>% 
-  filter(outcome == c("LOAD")) %>% 
+  filter(outcome == c("load")) %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ p) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
 ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load_all.png', width = 8.5, height = 5.5, units = 'in')
 
 res.all %>% 
-  filter(outcome == c("AAOS")) %>% 
+  filter(outcome == c("aaos")) %>% 
   rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ p) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 

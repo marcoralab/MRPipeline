@@ -49,8 +49,13 @@ p.TRAIT <- ggman(filter(trait.gwas, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 
   theme_classic() + theme(text = element_text(size=10)) + 
   geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
   geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
-p.TRAIT <- ggmanHighlight(p.TRAIT, highlight = IndexSnps1, shape = 18, colour = 'red')
-p.TRAIT <- ggmanHighlight(p.TRAIT, highlight = IndexSnps2, shape = 18, colour = 'blue')
+
+if(length(IndexSnps1) >= 1){
+  p.TRAIT <- ggmanHighlight(p.TRAIT, highlight = IndexSnps1, shape = 18, colour = 'red')
+}
+if(length(IndexSnps2) >= 1){
+  p.TRAIT <- ggmanHighlight(p.TRAIT, highlight = IndexSnps2, shape = 18, colour = 'blue')
+}
 
 out.TRAIT <- arrangeGrob(p.TRAIT,  tableGrob(tab.TRAIT, theme = ttheme_minimal(base_size = 8)), 
                           ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))

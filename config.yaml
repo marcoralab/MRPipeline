@@ -1,4 +1,4 @@
-# snakemake -s mr.smk --configfile config.yaml --keep-going --until ProxySnps
+# snakemake -s mr.smk --configfile config.yaml --keep-going --until manhattan_plot
 # snakemake -s mr.smk --configfile config.yaml --dag | dot -Tsvg > dag_mr.svg
 ## For running on cluster
 #mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
@@ -12,4 +12,4 @@ Pthreshold: ['5e-6', '5e-8']
 
 ## LOAD as outcome
 ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear'\]
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']
+OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']

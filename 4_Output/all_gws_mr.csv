@@ -84,6 +84,25 @@ Triglycerides,hipv,NA,NA,NA,0.05 (0.04),0.2168,0.01 (0.03),0.8409
 Triglycerides,hipv,144,0.02 (0.02),0.3674,0.04 (0.04),0.2734,0.01 (0.03),0.8699
 Type 2 Diabetes,hipv,NA,NA,NA,-0.03 (0.03),0.3194,-0.03 (0.02),0.103
 Type 2 Diabetes,hipv,190,0 (0.01),0.9338,-0.03 (0.03),0.3416,-0.03 (0.02),0.0886
+Alcohol Consumption,hipv2015,NA,NA,NA,-207.67 (545.75),0.7192,-77.95 (121.1),0.5198
+AUDIT,hipv2015,NA,NA,NA,-501.52 (344.88),0.1892,-460.3 (205.47),0.0251
+BMI,hipv2015,NA,NA,NA,86.53 (31.19),0.0056,24.57 (15.81),0.1202
+Cigarettes per day,hipv2015,NA,NA,NA,-58.78 (89.26),0.5237,-16.43 (49.22),0.7386
+Depressive Symptoms,hipv2015,NA,NA,NA,1703.82 (759.45),0.0416,17.12 (225.83),0.9396
+Diastolyic Blood Pressure,hipv2015,NA,NA,NA,3.23 (2.69),0.2292,1.57 (1.57),0.3155
+Educational Attainment,hipv2015,NA,NA,NA,-3.19 (55.93),0.9545,31.28 (23.33),0.18
+HDL Cholesterol,hipv2015,NA,NA,NA,14.81 (18.14),0.4152,3.36 (15.13),0.8241
+Hearing Problems,hipv2015,NA,NA,NA,-599.74 (521.74),0.2589,75.85 (165.76),0.6473
+LDL Cholesterol,hipv2015,NA,NA,NA,-26.21 (12.74),0.0409,-27.69 (15.01),0.0651
+Major Depression Disorder,hipv2015,NA,NA,NA,-21.84 (144.36),0.8805,55.34 (33.5),0.0985
+Moderate to Vigorous PA,hipv2015,NA,NA,NA,-32.6 (612.15),0.9579,99.26 (118.96),0.4041
+Oily Fish Intake,hipv2015,NA,NA,NA,298.68 (182.69),0.1055,134.2 (59.65),0.0245
+Smoking Status,hipv2015,NA,NA,NA,119.3 (185.17),0.5202,-21.05 (62.3),0.7355
+Social Isolation,hipv2015,NA,NA,NA,-457.01 (419.57),0.2878,-227.73 (111.99),0.042
+Systolic Blood Pressure,hipv2015,NA,NA,NA,1.27 (1.66),0.442,-0.17 (0.96),0.8623
+Total Cholesterol,hipv2015,NA,NA,NA,-33 (16.44),0.0459,-27.05 (14.62),0.0642
+Triglycerides,hipv2015,NA,NA,NA,28.78 (19.38),0.1398,11.37 (16.22),0.4833
+Type 2 Diabetes,hipv2015,NA,NA,NA,11.69 (14.71),0.428,6.47 (10.16),0.5243
 Alcohol Consumption,LOAD,9,0.21 (0.31),0.5142,1.84 (1.49),0.2572,0.1 (0.44),0.8234
 AUDIT,LOAD,9,0.78 (0.71),0.2681,-2.45 (6.62),0.7227,0.25 (1.29),0.8476
 BMI,LOAD,1596,-0.04 (0.03),0.2271,0.02 (0.11),0.8214,0.02 (0.06),0.7451
