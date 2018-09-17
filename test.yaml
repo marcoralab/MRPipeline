@@ -10,5 +10,5 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-6', '5e-8']
 
 ## LOAD as exposure
-ExposureCode: ['ldl']
-OutcomeCode: ['load', 'npany', 'npord', 'nft4', 'nftord', 'hips'] 
+ExposureCode: ['alcc', ]
+OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips']

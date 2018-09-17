@@ -11,5 +11,5 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-6', '5e-8']
 
 ## LOAD as outcome
-ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'height']
+ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear'\]
 OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015']
