@@ -14,7 +14,7 @@ DataIn = config['DataIn']
 traits = config['traits']
 DataOut = config['DataOut']
 
-localrules: all, ProxySnps
+localrules: all, FindProxySnps
 
 rule all:
     input:
