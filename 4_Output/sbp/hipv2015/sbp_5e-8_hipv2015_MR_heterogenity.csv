@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+Vrd2EL,0yEqAL,hipv2015,sbp,MR Egger,1309.9932547274466,1244,0.09448118576319905
+Vrd2EL,0yEqAL,hipv2015,sbp,Inverse variance weighted,1311.1206152156662,1245,0.0941523443925566

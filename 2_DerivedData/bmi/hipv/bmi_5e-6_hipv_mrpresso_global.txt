@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+EteNUe	eJQ72p	hipv	bmi	3971.6800489851203	<1e-05

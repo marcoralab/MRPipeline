@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+V7Vucu	pdY33k	load	dbp	1959.070653060049	<1.33333333333333e-05

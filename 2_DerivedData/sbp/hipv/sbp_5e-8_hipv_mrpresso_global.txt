@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+XvqV8v	hGVbW2	hipv	sbp	1730.7502198322984	<1.33333333333333e-05

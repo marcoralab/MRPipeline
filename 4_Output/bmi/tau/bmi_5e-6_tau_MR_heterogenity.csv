@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+BRJAcB,1uRWvM,tau,bmi,MR Egger,2974.251199509219,2822,0.022745234892987416
+BRJAcB,1uRWvM,tau,bmi,Inverse variance weighted,2979.1074239603167,2823,0.02021714548796227

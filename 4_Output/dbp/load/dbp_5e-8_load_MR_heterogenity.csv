@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+V7Vucu,pdY33k,load,dbp,MR Egger,1910.3992006070273,1466,2.9263891699599545e-14
+V7Vucu,pdY33k,load,dbp,Inverse variance weighted,1915.5757332807393,1467,1.81092414199701e-14

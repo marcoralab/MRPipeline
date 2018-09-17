@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+Yei56B,pkSlMe,hipv,dbp,MR Egger,3502.0156273163702,2995,2.445985004598966e-10
+Yei56B,pkSlMe,hipv,dbp,Inverse variance weighted,3515.3732775185927,2996,9.741319812381601e-11

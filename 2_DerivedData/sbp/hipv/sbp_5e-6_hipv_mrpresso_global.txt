@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+jCP7KU	Uk2TJC	hipv	sbp	3311.3115922675997	<1e-05

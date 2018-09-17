@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+oU36T5	7zO0Io	aaos	sbp	3383.689648788496	<1e-05

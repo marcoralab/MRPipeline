@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ocFBpD	sDWpb2	ptau	bmi	3200.4811746488326	0.05401

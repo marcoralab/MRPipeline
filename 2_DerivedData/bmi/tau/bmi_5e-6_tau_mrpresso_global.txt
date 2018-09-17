@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+BRJAcB	1uRWvM	tau	bmi	3024.7825929017395	0.02315
