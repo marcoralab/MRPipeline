@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-5Tn0Wd	sT92R8	load	bmi	4168.084068546501	<1.33333333333333e-05
+vPMEdO	KMxUAD	load	bmi	4207.408295119791	<1.33333333333333e-05

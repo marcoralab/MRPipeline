@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-4Brb4t	EHbpJn	ab42	dbp	1227.8752761378444	0.01822
+K97MOL	5VRxnL	ab42	dbp	1421.864317265605	0.002946666666666667

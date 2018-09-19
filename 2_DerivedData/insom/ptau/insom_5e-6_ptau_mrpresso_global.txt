@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WUbj1j	CBDsf6	ptau	insom	15.473060181208435	0.855
+68vwoS	tL2yIe	ptau	insom	21.38300373060342	0.7

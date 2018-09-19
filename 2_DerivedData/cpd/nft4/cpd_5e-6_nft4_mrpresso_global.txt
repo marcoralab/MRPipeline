@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+xkIckG	cVKmfa	nft4	cpd	47.107590086521945	0.67

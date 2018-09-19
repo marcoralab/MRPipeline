@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+FCfDkt	vGEyLG	pp	hipv	107.71947490370648	<0.001

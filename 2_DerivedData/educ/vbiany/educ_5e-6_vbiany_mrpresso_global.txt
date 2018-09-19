@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+AcIcBO	dV7uwH	vbiany	educ	2948.891678169192	0.06261

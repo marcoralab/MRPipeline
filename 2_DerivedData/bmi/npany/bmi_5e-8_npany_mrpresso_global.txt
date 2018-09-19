@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+okPLsl	J4D4JS	npany	bmi	1620.1231966079304	0.5514666666666667

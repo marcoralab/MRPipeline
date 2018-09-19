@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-grrPU8	vK2i4L	load	audit	92.29309146431626	0.0034
+87eimw	0wZYRC	load	audit	117.1164929043698	<2e-04

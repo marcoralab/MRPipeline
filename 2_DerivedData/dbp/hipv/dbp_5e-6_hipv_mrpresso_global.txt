@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Yei56B	pkSlMe	hipv	dbp	3611.4499728961323	<1e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+k3uffe	X4laBM	dbp	aaos	46.471254069112476	<0.001

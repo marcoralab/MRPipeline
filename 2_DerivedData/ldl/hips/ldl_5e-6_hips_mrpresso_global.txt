@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+qd4PJZ	A1Mtb5	hips	ldl	341.8142208257376	0.20348

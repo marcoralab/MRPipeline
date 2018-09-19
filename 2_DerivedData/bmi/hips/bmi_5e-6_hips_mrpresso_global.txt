@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+YMoO02	WktCYJ	hips	bmi	3175.620360949453	0.9247

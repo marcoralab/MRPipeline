@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KSgyH6	3ybeTs	alcd	aaos	55.70795878329631	0.5214
+ToGHiN	AKgNrm	alcd	aaos	55.70795878329631	0.518

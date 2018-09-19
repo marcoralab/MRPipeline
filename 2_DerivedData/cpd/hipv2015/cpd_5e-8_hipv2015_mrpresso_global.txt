@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PAcAdI	FJNwsm	hipv2015	cpd	13.192338076155243	0.53
+Xjg3Wv	J3HPA0	hipv2015	cpd	20.546482777298294	0.275

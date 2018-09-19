@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Nbp7iJ	QAnFC1	bmi	aaos	13.462253802714214	0.267
+bPYnNo	dJmBc5	bmi	aaos	97.20752056130965	<0.001

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-HLvDNM	O5iGb8	ptau	dep	144.63884519466095	0.3078
+lZruAy	qbtOqg	ptau	dep	162.09808409989918	0.3914

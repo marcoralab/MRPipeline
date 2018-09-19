@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+NoxJSS	hP61Ro	vbiany	mdd	204.92309735206211	0.1451

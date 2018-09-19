@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+R5ILNN	l3SVPo	dbp	hipv	136.07750709856631	<0.001

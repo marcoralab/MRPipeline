@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7Pucqm	VKZPoR	tc	load	295.01861021607203	<0.001
+YOiqYT	jdXssm	tc	load	3163.838586102934	<2e-04

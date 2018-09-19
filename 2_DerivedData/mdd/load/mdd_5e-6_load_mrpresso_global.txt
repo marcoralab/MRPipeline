@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-g95ZV7	Dz1tKX	load	mdd	204.92250744504003	0.063
+yPQ8M9	31Eubg	load	mdd	219.1755960133372	0.0571

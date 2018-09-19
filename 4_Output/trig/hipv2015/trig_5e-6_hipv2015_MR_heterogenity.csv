@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-gQUcNN,Gj6mID,hipv2015,trig,MR Egger,335.2752640949337,246,1.3120695994583276e-4
-gQUcNN,Gj6mID,hipv2015,trig,Inverse variance weighted,339.26242627245864,247,8.730896233136569e-5
+pULA84,p1mtJD,hipv2015,trig,MR Egger,342.5248392089503,253,1.4881830777687053e-4
+pULA84,p1mtJD,hipv2015,trig,Inverse variance weighted,346.64944583655813,254,9.773635853315634e-5

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+E4nDmm	BClHKX	pp	load	416.8341048608993	<1e-04

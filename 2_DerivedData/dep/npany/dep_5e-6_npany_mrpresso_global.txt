@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+SPorol	Dz6Gl2	npany	dep	198.65002770699908	0.1164

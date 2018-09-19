@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+zTHFwd	MMfv7I	vbiany	cpd	60.4118882266834	0.2136

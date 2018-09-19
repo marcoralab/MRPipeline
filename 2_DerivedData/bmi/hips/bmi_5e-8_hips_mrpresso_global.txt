@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Y2MhsY	ZFnsmE	hips	bmi	1548.4061740668542	0.9186933333333334

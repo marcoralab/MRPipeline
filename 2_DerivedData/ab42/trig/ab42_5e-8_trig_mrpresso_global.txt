@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-6MA2WI	fe4M3o	trig	ab42	60.120938414113475	<0.001
+412JRH	Rsylut	trig	ab42	64.07444623207512	<0.001

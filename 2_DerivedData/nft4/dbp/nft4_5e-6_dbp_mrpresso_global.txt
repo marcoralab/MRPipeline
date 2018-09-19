@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+T7uYql	Mj80tz	dbp	nft4	31.23729443897116	0.006

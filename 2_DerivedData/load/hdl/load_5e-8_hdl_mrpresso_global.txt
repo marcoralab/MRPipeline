@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-AaktAk	zgQTh7	hdl	load	31.224593415098578	0.007
+HGDsl4	xGhycZ	hdl	load	646.8422053744415	<0.001

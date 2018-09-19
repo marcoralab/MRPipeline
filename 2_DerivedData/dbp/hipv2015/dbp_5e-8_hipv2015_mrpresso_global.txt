@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-31aLSN	Z5xDor	hipv2015	dbp	1405.7318801613333	0.06709333333333334
+BbPkYN	6Nppp1	hipv2015	dbp	1594.2927005319352	0.0688

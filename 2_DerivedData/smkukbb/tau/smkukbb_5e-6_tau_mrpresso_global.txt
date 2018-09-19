@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-DomZwM	oQPUPj	tau	smkukbb	544.0981722616382	0.4924
+RugcjT	GsXuDx	tau	smkukbb	596.7707524962912	0.57136

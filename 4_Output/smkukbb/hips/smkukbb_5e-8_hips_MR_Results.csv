@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+Bvzijz,OuKes3,hips,smkukbb,Inverse variance weighted (fixed effects),204,0.5438767517928728,0.7675565054940122,0.47858388698979054
+Bvzijz,OuKes3,hips,smkukbb,Weighted median,204,0.01952783048277848,1.1236706892422126,0.9861345763041912
+Bvzijz,OuKes3,hips,smkukbb,Weighted mode,204,-1.5835364632826057,3.400768788792725,0.6419718632261302
+Bvzijz,OuKes3,hips,smkukbb,MR Egger,204,-1.111474607846836,3.35959913014443,0.7411116714697483

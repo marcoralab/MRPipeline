@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Wvyyjl	pzuYEW	hips	smkukbb	730.6885762100394	0.49336

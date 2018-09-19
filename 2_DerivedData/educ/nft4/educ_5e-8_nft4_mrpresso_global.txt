@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+46sqpe	zOLgAL	nft4	educ	1168.2824877631117	0.80106

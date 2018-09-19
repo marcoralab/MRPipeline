@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-bmpOAK	YJXXtC	hipv2015	dep	21.783585896087114	0.213
+sTid8C	PaWWck	hipv2015	dep	21.739995575684336	0.387

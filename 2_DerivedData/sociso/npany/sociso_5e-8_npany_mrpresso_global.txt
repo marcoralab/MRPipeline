@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+QCJhml	CTFE9E	npany	sociso	19.988327636714967	0.779

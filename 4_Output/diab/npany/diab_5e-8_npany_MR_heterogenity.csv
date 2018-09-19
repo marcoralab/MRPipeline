@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+ChPiCf,T942BZ,npany,diab,MR Egger,163.97290114636894,184,0.8529977572630064
+ChPiCf,T942BZ,npany,diab,Inverse variance weighted,164.12208667342523,185,0.8630520893691598

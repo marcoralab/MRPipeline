@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+R0jXxC	XTtmTs	vbiany	audit	69.10852155576202	0.3438

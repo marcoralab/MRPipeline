@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-jlduGE	k4060Z	ptau	hear	125.71714359570389	0.1653
+0sLHi9	MJdfxw	ptau	hear	141.1911184318516	0.0809

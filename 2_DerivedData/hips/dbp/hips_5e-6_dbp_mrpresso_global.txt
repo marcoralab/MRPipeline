@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+iuu8nF	5R9MUD	dbp	hips	31.23729443897116	0.011

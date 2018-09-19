@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BjpEWb	wkcIzl	ab42	bmi	3507.7157330768755	<1e-05

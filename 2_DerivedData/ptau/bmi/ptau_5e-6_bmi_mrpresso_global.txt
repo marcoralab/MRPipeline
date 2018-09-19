@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-4Q9Kj2	GMP8Qn	bmi	ptau	131.83036470352553	<0.001
+G93H3l	k4A6VA	bmi	ptau	194.28207816202794	<0.001

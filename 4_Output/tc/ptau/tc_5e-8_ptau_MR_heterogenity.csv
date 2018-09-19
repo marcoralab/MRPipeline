@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-WD1rr7,S4NY6c,ptau,tc,MR Egger,370.77849015208244,221,1.102021810726143e-9
-WD1rr7,S4NY6c,ptau,tc,Inverse variance weighted,384.46020996040056,222,7.890430617158658e-11
+xDR213,cAwhxA,ptau,tc,MR Egger,395.85394062584305,230,6.360850211673703e-11
+xDR213,cAwhxA,ptau,tc,Inverse variance weighted,413.2357598384358,231,1.8351046144596034e-12

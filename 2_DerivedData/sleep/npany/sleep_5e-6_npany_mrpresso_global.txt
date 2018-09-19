@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ypQH0P	X0bS58	npany	sleep	30.483638846930553	0.259

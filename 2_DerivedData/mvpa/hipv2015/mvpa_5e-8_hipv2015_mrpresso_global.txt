@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-JnNbp2	dZ8pOm	hipv2015	mvpa	71.28389261892484	<0.001
+F48U9s	w3Izwi	hipv2015	mvpa	74.07921032627462	<0.001

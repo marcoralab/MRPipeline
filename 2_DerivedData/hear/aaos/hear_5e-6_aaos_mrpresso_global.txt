@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-hXYg8x	iNLeRU	aaos	hear	147.74342432584237	0.3619
+2UiSU3	9PW0bU	aaos	hear	149.90486780574497	0.3731

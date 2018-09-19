@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-HRnVg1	sz5TVC	aaos	educ	1357.4693986838863	0.03206666666666667
+5hTeAA	tlwTN7	aaos	educ	1357.4693986838863	0.03338666666666667

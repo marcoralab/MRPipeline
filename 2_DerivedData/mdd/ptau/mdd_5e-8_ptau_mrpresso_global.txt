@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-68FUnt	OnMqAV	ptau	mdd	33.679285286621656	0.5776
+TiJNVj	OX4vJT	ptau	mdd	41.40442664091993	0.5398

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-OM44rm	vtCoJi	dep	load	49.43450373097725	0.1916
+VPZdQ0	AB1QAV	dep	load	49.43450373097725	0.1812

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PuJybn	6ytj6I	hdl	ab42	8.92738856258265	0.292
+aJvIIy	kuHfXV	hdl	ab42	59.308162417903986	<0.001

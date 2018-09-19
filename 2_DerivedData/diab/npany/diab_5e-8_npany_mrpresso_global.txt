@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ChPiCf	T942BZ	npany	diab	169.18716730707288	0.8475

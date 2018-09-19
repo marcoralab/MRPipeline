@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+THcoPp	RV04G3	sbp	aaos	79.84656151969439	<0.001

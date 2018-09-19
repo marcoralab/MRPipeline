@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+uK9D1P	T63QSz	hips	fish	347.30293153290273	0.56672

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+8igUA3	NldlG4	npany	hdl	364.7604693317626	<1e-04

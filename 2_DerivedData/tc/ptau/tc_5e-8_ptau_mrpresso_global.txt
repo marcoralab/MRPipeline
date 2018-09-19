@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WD1rr7	S4NY6c	ptau	tc	407.51470032065055	<1e-04
+xDR213	cAwhxA	ptau	tc	436.09584073849084	<1e-04

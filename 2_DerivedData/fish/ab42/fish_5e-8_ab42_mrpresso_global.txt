@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Q2EhEA	huJdXx	ab42	fish	129.01791317556675	0.007
+0coWLg	lXlGdi	ab42	fish	160.56502453782937	5e-4

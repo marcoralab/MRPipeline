@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+0Xar2B,8UlsQY,bmi,hips,MR Egger,34.607546703577334,6,5.133485531576127e-6
+0Xar2B,8UlsQY,bmi,hips,Inverse variance weighted,57.90707725212293,7,3.9454688157857944e-10

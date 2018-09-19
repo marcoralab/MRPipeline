@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+6SeVMA	DYVAtI	hips	tc	404.68829473275116	0.50696

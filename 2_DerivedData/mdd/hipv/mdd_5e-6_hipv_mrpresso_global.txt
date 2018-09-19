@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-VE3E8n	q8TH5T	hipv	mdd	197.3732962789455	0.3037
+UY0CiQ	o6uOcS	hipv	mdd	197.3732962789455	0.3039

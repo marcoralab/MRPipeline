@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Tnkfni	XY75Nb	ptau	mvpa	237.45582405224937	<1e-04
+4tj4CM	gA4biQ	ptau	mvpa	255.0122016739743	<1e-04

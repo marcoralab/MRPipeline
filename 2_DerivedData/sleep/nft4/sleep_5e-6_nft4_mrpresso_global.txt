@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ghuIji	11lnTy	nft4	sleep	31.267599480470153	0.237

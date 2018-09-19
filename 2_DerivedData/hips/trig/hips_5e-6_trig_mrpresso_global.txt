@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+32HEst	NDmjjg	trig	hips	283.18027924847144	<0.001

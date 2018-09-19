@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+s7DKVx	PLZ9CY	nft4	smkukbb	710.9655743240296	0.70612

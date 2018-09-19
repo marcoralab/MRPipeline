@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+9WzJC5	tjmGkl	vbiany	pp	2454.872945067601	0.02915

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+SNG1aX,t3YHgT,trig,nft4,MR Egger,154.36218204223778,6,9.24533318593485e-31
+SNG1aX,t3YHgT,trig,nft4,Inverse variance weighted,179.57353965330634,7,2.3970697100566943e-35

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-MYQ9g8,saSqQ8,diab,hipv2015,MR Egger,15.247873655331075,4,0.00421378013984945
-MYQ9g8,saSqQ8,diab,hipv2015,Inverse variance weighted,20.758678141550625,5,8.996495615465639e-4
+3wkOd2,w3I1w8,diab,hipv2015,MR Egger,15.317015362068936,5,0.009090281866879091
+3wkOd2,w3I1w8,diab,hipv2015,Inverse variance weighted,21.000974482630717,6,0.0018338764773899497

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+NYJt8w	beopz3	vbiany	hdl	327.88465924988776	0.83748

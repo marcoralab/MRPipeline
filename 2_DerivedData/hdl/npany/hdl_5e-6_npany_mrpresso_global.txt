@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+WS1MYc	nPv30L	npany	hdl	505.8916864359025	<4e-05

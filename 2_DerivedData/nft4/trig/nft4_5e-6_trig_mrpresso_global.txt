@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+SNG1aX	t3YHgT	trig	nft4	283.18027924847144	<0.001

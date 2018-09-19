@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+fgGVY9	VAIn66	ldl	ab42	873.5315560618907	<0.001

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-wlkvS0,rEmS82,tc,ab42,MR Egger,123.8268502705963,2,1.2922338346313422e-27
-wlkvS0,rEmS82,tc,ab42,Inverse variance weighted,126.5824780231437,3,2.9476924109604545e-27
+pNJ0P1,KeZibb,tc,ab42,MR Egger,179.07031045942455,3,1.4003393081374127e-38
+pNJ0P1,KeZibb,tc,ab42,Inverse variance weighted,179.27636443901304,4,1.0664568331284084e-37

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+qMECum	eWmqhA	vbiany	smkukbb	206.9472837218469	0.6227

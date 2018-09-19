@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TW6tRh	5GJ28b	diab	nft4	14.18656180089772	0.045

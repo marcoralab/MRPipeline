@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Yb4rbk	P5Q3Q9	hipv	cpd	55.17701165205506	0.2048
+vcsxXJ	iMGPQz	hipv	cpd	55.17701165205506	0.206

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+PqNr78,Zpcl5P,nft4,audit,MR Egger,8.44676161211389,13,0.8133267190471045
+PqNr78,Zpcl5P,nft4,audit,Inverse variance weighted,8.457797060996752,14,0.8641398981676485

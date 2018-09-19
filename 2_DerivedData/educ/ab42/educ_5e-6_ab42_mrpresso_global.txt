@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-knROIL	QHbTDj	ab42	educ	2278.8579702908137	0.00322
+eKCKqb	Dho30D	ab42	educ	2567.5488456822095	0.00258

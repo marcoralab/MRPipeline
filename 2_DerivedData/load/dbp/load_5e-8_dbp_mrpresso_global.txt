@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+xAr0Z8	3mUJ83	dbp	load	47.236830355242496	0.1548

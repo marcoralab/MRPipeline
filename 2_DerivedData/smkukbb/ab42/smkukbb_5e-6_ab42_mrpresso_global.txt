@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-AoBsl3	yBVmRG	ab42	smkukbb	595.1311044952413	0.06528
+NOpd6H	edkCw0	ab42	smkukbb	665.5646026559338	0.04064

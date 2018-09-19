@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+LCZc4L	mA5MPX	vbiany	tc	228.06730991480063	0.9028

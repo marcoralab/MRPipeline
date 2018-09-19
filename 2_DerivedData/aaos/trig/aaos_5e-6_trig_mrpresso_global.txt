@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-VYnqg6	U7Rfn3	trig	aaos	110.75847184335301	<0.001
+die3fd	HgiKmL	trig	aaos	391.64617660984857	<2e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TMLAN2	2laSgw	nft4	sociso	133.2830195789535	0.4058

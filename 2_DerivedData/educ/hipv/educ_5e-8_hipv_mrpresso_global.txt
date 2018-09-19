@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Xz0ITm	iNAUz3	hipv	educ	1449.5966728080784	<2e-05
+AVuCZI	nVfCBJ	hipv	educ	1453.6849829258422	<2e-05

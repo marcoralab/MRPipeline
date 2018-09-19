@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+7EULaj	cHH4IQ	vbiany	diab	149.4663537365906	0.9881

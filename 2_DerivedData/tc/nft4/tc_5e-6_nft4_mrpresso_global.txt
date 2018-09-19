@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+goFK06	VZJZ0F	nft4	tc	712.1231029030278	<4e-05

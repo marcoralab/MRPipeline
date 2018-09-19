@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-r1HDHx	C2HyK1	load	smkukbb	259.330505470618	0.0081
+OtJ2f9	KP0cmN	load	smkukbb	265.0787389338024	0.0131

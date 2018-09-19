@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-OIFzV4,OlLZoB,ptau,trig,MR Egger,277.23263658418665,145,2.456798601776322e-10
-OIFzV4,OlLZoB,ptau,trig,Inverse variance weighted,279.5880350683651,146,1.9245242455605084e-10
+slEmE2,B1MXYk,ptau,trig,MR Egger,283.2169775549113,151,4.145646994056475e-10
+slEmE2,B1MXYk,ptau,trig,Inverse variance weighted,285.5408241074597,152,3.2794660361605664e-10

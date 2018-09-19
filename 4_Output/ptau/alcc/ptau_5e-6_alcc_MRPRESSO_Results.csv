@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-ond4g7,29kGeF,alcc,ptau,Inverse variance weighted (fixed effects),15,0.01602543020429213,0.014330645635283775,0.2634547015593559
-ond4g7,29kGeF,alcc,ptau,Weighted median,15,0.024261834971629433,0.021766718452131448,0.2650090566521087
-ond4g7,29kGeF,alcc,ptau,Weighted mode,15,0.03883689611140645,0.025177466882745882,0.14524261552586296
-ond4g7,29kGeF,alcc,ptau,MR Egger,15,0.021157901125602466,0.04718808759745701,0.6612654859371238
+v66wXJ,Qzm2dL,alcc,ptau,mrpresso,NA,NA,NA,NA

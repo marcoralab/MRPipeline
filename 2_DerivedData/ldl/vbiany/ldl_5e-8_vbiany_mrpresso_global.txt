@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+6ltbEz	LZvUxw	vbiany	ldl	201.46618192233566	0.654

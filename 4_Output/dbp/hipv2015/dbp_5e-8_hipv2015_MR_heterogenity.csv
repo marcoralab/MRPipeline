@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-31aLSN,Z5xDor,hipv2015,dbp,MR Egger,1402.5216153483034,1324,0.0655670769803682
-31aLSN,Z5xDor,hipv2015,dbp,Inverse variance weighted,1403.5611547251385,1325,0.0655427339822677
+BbPkYN,6Nppp1,hipv2015,dbp,MR Egger,1565.4347596543303,1474,0.04819374805309653
+BbPkYN,6Nppp1,hipv2015,dbp,Inverse variance weighted,1566.754405773772,1475,0.0476839430883874

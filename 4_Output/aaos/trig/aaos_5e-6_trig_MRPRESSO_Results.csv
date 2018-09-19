@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+die3fd,HgiKmL,trig,aaos,Inverse variance weighted (fixed effects),25,0.10056618259609103,0.005900376469442701,3.871255700394944e-65
+die3fd,HgiKmL,trig,aaos,Weighted median,25,0.07387501831798512,0.00988618590388853,7.865547639277306e-14
+die3fd,HgiKmL,trig,aaos,Weighted mode,25,0.06962291382892571,0.009801463920239022,2.420067167438973e-7
+die3fd,HgiKmL,trig,aaos,MR Egger,25,0.13211306546981316,0.030096862121688845,2.1319306599136808e-4

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+S51T92	anpLgf	hips	audit	65.34214637183523	0.4746

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+nstms5	hLqwvJ	npany	mvpa	272.09499287181177	<1e-04

@@ -1,0 +1,12 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10166461,A,G,A,G,-0.2636,-0.0789,0.1733,0.1912,FALSE,FALSE,FALSE,EDXtD8,0.0382,0.03899,sbp,TRUE,reported,0.057,3.816e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs10402271,T,G,T,G,-0.2747,-0.1071,0.6155,0.6725,FALSE,FALSE,FALSE,EDXtD8,0.0319,7.995e-4,sbp,TRUE,reported,0.0462,2.675e-9,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs116351076,T,C,T,C,-0.6753,-0.0213,0.0358,0.0323,FALSE,FALSE,FALSE,EDXtD8,0.092,0.8165,sbp,TRUE,reported,0.1461,3.826e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs11654699,T,C,T,C,0.2055,0.007,0.5243,0.5053,FALSE,FALSE,FALSE,EDXtD8,0.0306,0.8201,sbp,TRUE,reported,0.0449,4.628e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs11675119,A,C,A,C,-0.2541,0.0115,0.2699,0.2559,FALSE,FALSE,FALSE,EDXtD8,0.0347,0.7409,sbp,TRUE,reported,0.0488,1.931e-7,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs12595161,A,G,A,G,-0.4178,0.0489,0.0511,0.0403,FALSE,FALSE,FALSE,EDXtD8,0.0771,0.5259,sbp,TRUE,reported,0.0914,4.883e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs157595,A,G,A,G,-0.3872,-0.0351,0.3228,0.3852,FALSE,FALSE,FALSE,EDXtD8,0.033,0.2885,sbp,TRUE,reported,0.0551,2.041e-12,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs34487851,A,G,A,G,0.2523,-0.0451,0.7314,0.7161,FALSE,FALSE,FALSE,EDXtD8,0.0345,0.1906,sbp,TRUE,reported,0.055,4.459e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs62117160,A,G,A,G,-0.9888,-0.3635,0.0227,0.0429,FALSE,FALSE,FALSE,EDXtD8,0.08,5.538e-6,sbp,TRUE,reported,0.1949,3.891e-7,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs6857,T,C,T,C,0.7871,0.1564,0.3219,0.1681,FALSE,FALSE,FALSE,EDXtD8,0.0412,1.471e-4,sbp,TRUE,reported,0.0565,4.83e-44,hips,TRUE,reported,aFyEMs,2,TRUE,NA
+rs75680843,T,C,T,C,-0.3709,0.1896,0.0721,0.0648,FALSE,FALSE,FALSE,EDXtD8,0.0613,0.001984,sbp,TRUE,reported,0.0809,4.59e-6,hips,TRUE,reported,aFyEMs,2,TRUE,NA

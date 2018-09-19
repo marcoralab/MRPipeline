@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+DlTeiD	gJ4cKK	nft4	dep	32.749266495989595	0.5284

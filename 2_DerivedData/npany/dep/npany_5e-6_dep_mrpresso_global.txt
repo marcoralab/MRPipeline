@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+D42VYv	U0GZ2R	dep	npany	20.828966017733727	0.222

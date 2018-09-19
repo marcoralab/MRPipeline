@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-V5btFn,NuqX04,aaos,mvpa,MR Egger,571.2420038018935,32,5.012654885255753e-100
-V5btFn,NuqX04,aaos,mvpa,Inverse variance weighted,603.3075688914862,33,5.413429508055053e-106
+R0jdaV,Yca9SL,aaos,mvpa,MR Egger,580.5855314977447,37,7.556144237799978e-99
+R0jdaV,Yca9SL,aaos,mvpa,Inverse variance weighted,606.5890684205021,38,1.4947022752121149e-103

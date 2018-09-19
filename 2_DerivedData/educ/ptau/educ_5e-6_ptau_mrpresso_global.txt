@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-1FcHYE	tlFEGY	ptau	educ	2367.421587795886	0.25851
+FYAPqL	UVICUd	ptau	educ	2546.3105731437136	0.37238

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Cqu2B3	Aabt3F	aaos	audit	19.035251304528384	0.153
+J2CyG6	VAqn45	aaos	audit	20.125938748841712	0.158

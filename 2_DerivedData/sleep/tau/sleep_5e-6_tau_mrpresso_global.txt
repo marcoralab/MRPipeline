@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9NJZCC	bKnw4Q	tau	sleep	15.64148880106548	0.673
+irS9YE	jmxa9o	tau	sleep	22.141469307205835	0.407

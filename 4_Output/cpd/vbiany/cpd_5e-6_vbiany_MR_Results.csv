@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+zTHFwd,MMfv7I,vbiany,cpd,Inverse variance weighted (fixed effects),47,-0.7028675370313368,0.3485699639501084,0.04375484988541522
+zTHFwd,MMfv7I,vbiany,cpd,Weighted median,47,-0.6701373186077328,0.579143992339055,0.24722459051224827
+zTHFwd,MMfv7I,vbiany,cpd,Weighted mode,47,-0.38625227966508646,0.5604143951151591,0.4941430445680921
+zTHFwd,MMfv7I,vbiany,cpd,MR Egger,47,0.4355866417770921,0.7020822073353081,0.5381101427940047

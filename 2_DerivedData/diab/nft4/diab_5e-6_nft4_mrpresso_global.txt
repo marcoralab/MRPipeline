@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+HzgFnG	Whio8P	nft4	diab	430.51292699977336	0.5534

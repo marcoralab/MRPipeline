@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-IX6f5J	E1EZeM	aaos	sleep	37.78281972169512	0.185
+80PGFu	JcdvPh	aaos	sleep	37.78281972169512	0.192

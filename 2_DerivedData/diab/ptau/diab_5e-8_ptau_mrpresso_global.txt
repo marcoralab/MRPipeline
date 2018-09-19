@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-iSSBFM	fuDdVj	ptau	diab	195.7050704393398	0.2361
+kxB2dO	3LJCHt	ptau	diab	202.07590934882919	0.2792

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+vAdaVK	fHjc3Y	npany	tc	532.019909340245	4e-5

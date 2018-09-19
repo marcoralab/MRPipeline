@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-qG0Dps	emckre	diab	aaos	22.703804747503398	0.012
+OyFkHx	zuiOLh	diab	aaos	21.791616071256644	0.034

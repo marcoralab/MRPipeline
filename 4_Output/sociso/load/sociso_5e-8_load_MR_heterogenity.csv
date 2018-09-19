@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-xM9dfC,EOK4Ja,load,sociso,MR Egger,48.296489888730505,21,6.265181700922404e-4
-xM9dfC,EOK4Ja,load,sociso,Inverse variance weighted,48.89990845389784,22,8.241039594907984e-4
+nWOBS2,KBe7CS,load,sociso,MR Egger,49.609340240282734,22,6.620919175916144e-4
+nWOBS2,KBe7CS,load,sociso,Inverse variance weighted,50.03628388466514,23,9.1127859785683e-4

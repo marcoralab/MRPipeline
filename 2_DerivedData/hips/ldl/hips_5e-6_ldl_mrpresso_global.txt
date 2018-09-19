@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+6Nw7IP	iWM6DS	ldl	hips	678.8750847916813	<0.001

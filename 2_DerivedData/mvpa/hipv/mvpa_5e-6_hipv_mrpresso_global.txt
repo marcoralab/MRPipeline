@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-laMZ39	h2XMbp	hipv	mvpa	257.2299223423861	<1e-04
+ovLLNJ	k2nCHs	hipv	mvpa	265.50799270510186	<1e-04

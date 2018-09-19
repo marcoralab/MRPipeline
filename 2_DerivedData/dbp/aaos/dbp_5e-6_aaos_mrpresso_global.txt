@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-zBFCbT	QZRwFg	aaos	dbp	3570.2425435597256	1e-5
+bQatzm	I8AoHk	aaos	dbp	3603.4727805576063	2e-5

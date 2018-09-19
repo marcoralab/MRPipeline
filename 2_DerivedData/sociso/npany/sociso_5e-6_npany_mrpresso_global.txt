@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+ngn19Y	iWn91t	npany	sociso	131.68524403162465	0.3803

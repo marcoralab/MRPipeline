@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-4Q9Kj2,GMP8Qn,bmi,ptau,MR Egger,89.91629392246723,7,1.2871911505582918e-16
-4Q9Kj2,GMP8Qn,bmi,ptau,Inverse variance weighted,89.93922797454572,8,4.784440383830452e-16
+G93H3l,k4A6VA,bmi,ptau,MR Egger,141.79902627135917,11,7.011637154213925e-25
+G93H3l,k4A6VA,bmi,ptau,Inverse variance weighted,150.5550237157382,12,4.374810515771884e-26

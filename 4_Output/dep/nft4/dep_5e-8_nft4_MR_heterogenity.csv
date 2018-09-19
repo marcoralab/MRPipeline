@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+DlTeiD,gJ4cKK,nft4,dep,MR Egger,24.085903359681822,31,0.807023525270071
+DlTeiD,gJ4cKK,nft4,dep,Inverse variance weighted,30.482850597030655,32,0.543374845235734

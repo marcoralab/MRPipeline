@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+V5XzJo	jrMejw	npany	trig	392.06687735456484	6e-4

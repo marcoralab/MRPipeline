@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+OI9tPZ	WJi2sx	pp	hips	60.97087388687685	<0.001

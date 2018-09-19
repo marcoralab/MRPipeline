@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+k8x7Zl,BxpET4,nft4,pp,MR Egger,2291.812559167212,2269,0.3641443777755932
+k8x7Zl,BxpET4,nft4,pp,Inverse variance weighted,2294.9026090397606,2270,0.35266712725706295

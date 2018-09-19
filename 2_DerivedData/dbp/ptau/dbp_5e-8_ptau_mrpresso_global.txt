@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-6hgwxO	k8b8lq	ptau	dbp	1282.4975624900828	0.2134
+dcA7Ra	va7vL4	ptau	dbp	1383.4905729698003	0.35830666666666666

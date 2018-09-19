@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+oPtHf5	6m2hFC	hips	pp	1135.546736561173	0.76108

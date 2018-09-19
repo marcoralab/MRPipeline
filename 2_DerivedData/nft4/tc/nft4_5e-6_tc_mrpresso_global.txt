@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+cof4Vy	XZzRYj	tc	nft4	375.3294708302436	<0.001

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+PBxx54	ePZluV	vbiany	dep	31.397229768571734	0.5936

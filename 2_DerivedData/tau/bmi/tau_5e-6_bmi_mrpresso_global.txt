@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-pm9NAr	Y9Msfl	bmi	tau	63.83626476463841	<0.001
+E6vkXg	0WqSEw	bmi	tau	135.96136954300854	<0.001

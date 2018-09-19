@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-OvppYV	IkEqfJ	hipv	audit	48.85606257916459	0.9138
+BXYU8g	9GFp7C	hipv	audit	48.85606257916459	0.9136

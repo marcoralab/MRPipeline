@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+FKt4TU,qaXlcw,hear,load,MR Egger,120.3342683186547,80,0.002392936476931032
+FKt4TU,qaXlcw,hear,load,Inverse variance weighted,121.19278121321541,81,0.0025615426334494513

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-JnNbp2,dZ8pOm,hipv2015,mvpa,MR Egger,65.38384984374314,25,1.8216981922133663e-5
-JnNbp2,dZ8pOm,hipv2015,mvpa,Inverse variance weighted,65.40690409246459,26,3.0189218212053063e-5
+F48U9s,w3Izwi,hipv2015,mvpa,MR Egger,68.20817438107173,27,2.0130245118605686e-5
+F48U9s,w3Izwi,hipv2015,mvpa,Inverse variance weighted,68.37389242766787,28,3.130213138147441e-5

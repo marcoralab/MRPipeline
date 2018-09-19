@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
+jsZJJy,QcdPRS,vbiany,fish,Inverse variance weighted (fixed effects),124,-0.40368442903470986,0.47386951941937355,0.39427547072831826
+jsZJJy,QcdPRS,vbiany,fish,Weighted median,124,-1.2013493970897822,0.6821622738187653,0.0782231121887346
+jsZJJy,QcdPRS,vbiany,fish,Weighted mode,124,-2.083393614444441,1.6444809576335284,0.20758454225122502
+jsZJJy,QcdPRS,vbiany,fish,MR Egger,124,-0.024601509499142003,2.116876895638762,0.9907464916738671

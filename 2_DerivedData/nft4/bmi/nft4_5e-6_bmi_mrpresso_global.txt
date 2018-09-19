@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+akYCMc	KOZqR3	bmi	nft4	118.75453522478848	<0.001

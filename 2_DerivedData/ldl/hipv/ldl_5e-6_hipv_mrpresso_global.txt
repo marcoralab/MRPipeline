@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-GrdCZm	b0NCY9	hipv	ldl	415.84433424638576	8e-5
+Rk2a3w	O806Bk	hipv	ldl	415.84433424638576	<4e-05

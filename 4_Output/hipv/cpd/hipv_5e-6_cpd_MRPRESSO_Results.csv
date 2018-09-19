@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-waxBos,V1eSpd,cpd,hipv,Inverse variance weighted (fixed effects),27,-0.004105525904991822,0.015807544301536934,0.7950802278002019
-waxBos,V1eSpd,cpd,hipv,Weighted median,27,0.0020151927626611277,0.022218902269139782,0.9277331762354641
-waxBos,V1eSpd,cpd,hipv,Weighted mode,27,0.00862216073377653,0.02963860932745711,0.7734283734210043
-waxBos,V1eSpd,cpd,hipv,MR Egger,27,0.03368990442699497,0.044148271329534236,0.4525402452904317
+06M1Tx,joEud6,cpd,hipv,mrpresso,NA,NA,NA,NA

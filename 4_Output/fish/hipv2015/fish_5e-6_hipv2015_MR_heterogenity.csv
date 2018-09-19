@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-c30Ghc,QYeoG8,hipv2015,fish,MR Egger,298.5749002546163,278,0.18942010412885504
-c30Ghc,QYeoG8,hipv2015,fish,Inverse variance weighted,302.48083522613325,279,0.15975504139942662
+QtuUJE,GllCoR,hipv2015,fish,MR Egger,322.2243252295752,306,0.25097650849643094
+QtuUJE,GllCoR,hipv2015,fish,Inverse variance weighted,325.89433084616456,307,0.21941153460967758

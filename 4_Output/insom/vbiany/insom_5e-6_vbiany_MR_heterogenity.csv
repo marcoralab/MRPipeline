@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+XU5pFG,iwN46W,vbiany,insom,MR Egger,35.98455306162287,32,0.28726015362669677
+XU5pFG,iwN46W,vbiany,insom,Inverse variance weighted,38.34916046255719,33,0.23977907603725668

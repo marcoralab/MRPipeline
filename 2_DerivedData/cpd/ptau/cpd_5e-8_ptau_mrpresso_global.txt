@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-VrFAmz	cdVjlb	ptau	cpd	14.079900638386746	0.243
+llzfaK	BMAEKI	ptau	cpd	14.12107055657119	0.351

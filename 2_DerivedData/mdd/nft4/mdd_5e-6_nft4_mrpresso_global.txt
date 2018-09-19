@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+zAUiS8	M7FtYY	nft4	mdd	192.29730394340044	0.3452

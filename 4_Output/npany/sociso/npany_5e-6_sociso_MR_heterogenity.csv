@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+UYtH8H,erSz6l,sociso,npany,MR Egger,25.37117902311481,13,0.020622224468663884
+UYtH8H,erSz6l,sociso,npany,Inverse variance weighted,26.636429967618355,14,0.02145799781753192

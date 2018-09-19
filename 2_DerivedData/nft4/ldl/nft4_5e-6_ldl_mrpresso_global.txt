@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Hg8wYM	u9diia	ldl	nft4	678.8750847916813	<0.001

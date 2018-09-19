@@ -1,0 +1,13 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10166461,A,G,A,G,-0.2636,3.567e-4,0.1733,0.1891,FALSE,FALSE,FALSE,RK2kac,0.002986,0.9049,alcc,TRUE,reported,0.057,3.816e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs10402271,T,G,T,G,-0.2747,-3.091e-4,0.6155,0.6783,FALSE,FALSE,FALSE,RK2kac,0.003003,0.918,alcc,TRUE,reported,0.0462,2.675e-9,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs114498064,T,C,T,C,-1.51,0.001196,0.0131,0.01131,FALSE,FALSE,FALSE,RK2kac,0.002988,0.689,alcc,TRUE,reported,0.3137,1.48e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs116351076,T,C,T,C,-0.6753,-9.437e-4,0.0358,0.02886,FALSE,FALSE,FALSE,RK2kac,0.003002,0.7532,alcc,TRUE,reported,0.1461,3.826e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs11654699,T,C,T,C,0.2055,0.004832,0.5243,0.5510999999999999,FALSE,FALSE,FALSE,RK2kac,0.002974,0.1042,alcc,TRUE,reported,0.0449,4.628e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs11675119,A,C,A,C,-0.2541,-0.00187,0.2699,0.2486,FALSE,FALSE,FALSE,RK2kac,0.00299,0.5317,alcc,TRUE,reported,0.0488,1.931e-7,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs117530689,A,C,A,C,-4.0337,1.09e-4,0.0178,0.02202,FALSE,FALSE,FALSE,RK2kac,0.003058,0.9716,alcc,TRUE,reported,0.8423,1.678e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs12595161,A,G,A,G,-0.4178,-0.001265,0.0511,0.04069,FALSE,FALSE,FALSE,RK2kac,0.002974,0.6706,alcc,TRUE,reported,0.0914,4.883e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs157595,A,G,A,G,-0.3872,-4.135e-4,0.3228,0.3609,FALSE,FALSE,FALSE,RK2kac,0.002975,0.8894,alcc,TRUE,reported,0.0551,2.041e-12,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs34487851,A,G,A,G,0.2523,-0.003124,0.7314,0.7269,FALSE,FALSE,FALSE,RK2kac,0.003078,0.3103,alcc,TRUE,reported,0.055,4.459e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs62117160,A,G,A,G,-0.9888,-0.002619,0.0227,0.04604,FALSE,FALSE,FALSE,RK2kac,0.002974,0.3785,alcc,TRUE,reported,0.1949,3.891e-7,nft4,TRUE,reported,9d9Ade,2,TRUE,NA
+rs75680843,T,C,T,C,-0.3709,-0.001957,0.0721,0.06405,FALSE,FALSE,FALSE,RK2kac,0.002976,0.5109,alcc,TRUE,reported,0.0809,4.59e-6,nft4,TRUE,reported,9d9Ade,2,TRUE,NA

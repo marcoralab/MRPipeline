@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+vfAlDR	UQuTW6	npany	mvpa	145.6858161945098	<2e-04

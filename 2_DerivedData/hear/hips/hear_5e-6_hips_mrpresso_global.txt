@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+WCnX0f	8kAUaM	hips	hear	138.16234533337558	0.3599

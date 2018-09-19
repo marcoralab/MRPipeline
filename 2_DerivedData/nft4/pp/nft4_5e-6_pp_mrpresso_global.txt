@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+TU1rzN	SWlfme	pp	nft4	60.97087388687685	<0.001

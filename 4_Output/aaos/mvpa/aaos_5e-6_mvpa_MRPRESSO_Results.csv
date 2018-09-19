@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-o1kzPG,DXdUJr,mvpa,aaos,Inverse variance weighted (fixed effects),59,0.017355746750741512,0.0022284966276744575,6.8026228672925035e-15
-o1kzPG,DXdUJr,mvpa,aaos,Weighted median,59,0.01777035304731003,0.0038108629457044335,3.1151386373392137e-6
-o1kzPG,DXdUJr,mvpa,aaos,Weighted mode,59,0.023583644460460226,0.004716171953558757,5.606422326296528e-6
-o1kzPG,DXdUJr,mvpa,aaos,MR Egger,59,0.014356773419526127,0.003971800358525069,6.375650345961112e-4
+gpJZNX,p7kxEz,mvpa,aaos,mrpresso,NA,NA,NA,NA

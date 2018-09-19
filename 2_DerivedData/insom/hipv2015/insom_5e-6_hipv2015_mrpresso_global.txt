@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-L35yCn	AwN1WM	hipv2015	insom	32.18134174965886	0.258
+BJNVuz	YdPDjy	hipv2015	insom	41.89755819688943	0.128

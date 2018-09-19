@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-MsYNYA,NMKUa5,tau,ldl,MR Egger,368.0465847804953,241,2.4571133618992244e-7
-MsYNYA,NMKUa5,tau,ldl,Inverse variance weighted,372.5403944253606,242,1.360342978283521e-7
+He7Gtn,ovudXw,tau,ldl,MR Egger,397.3908610079604,264,1.9888350028714373e-7
+He7Gtn,ovudXw,tau,ldl,Inverse variance weighted,404.7734395850003,265,6.680749701840432e-8

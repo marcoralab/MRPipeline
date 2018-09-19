@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+O9zVlT	5x5Yjq	alcc	npany	7.54028781971366	0.279

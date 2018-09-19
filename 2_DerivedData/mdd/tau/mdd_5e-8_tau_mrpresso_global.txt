@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KzEolL	6jtYsQ	tau	mdd	37.570702245398785	0.354
+H3Myod	nmlfpL	tau	mdd	42.67742724453168	0.4322

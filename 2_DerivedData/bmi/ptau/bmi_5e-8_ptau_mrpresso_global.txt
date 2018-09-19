@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-K74cDQ	CF6hQD	ptau	bmi	1603.9242580869213	0.09545333333333333
+oxnXDB	2baKXF	ptau	bmi	1675.051059957571	0.0738

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-L35yCn,AwN1WM,hipv2015,insom,MR Egger,29.993687367102247,25,0.22452546007234728
-L35yCn,AwN1WM,hipv2015,insom,Inverse variance weighted,30.028585789818692,26,0.2664284283017912
+BJNVuz,YdPDjy,hipv2015,insom,MR Egger,35.24777864507526,28,0.16276912468715365
+BJNVuz,YdPDjy,hipv2015,insom,Inverse variance weighted,35.249491044398354,29,0.19646389046875523

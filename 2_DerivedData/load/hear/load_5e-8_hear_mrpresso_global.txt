@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+inRiTV	dpPB0Y	hear	load	55.698404130282015	0.0828

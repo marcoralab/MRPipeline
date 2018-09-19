@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+cpHp0J	RI0rEK	npany	diab	403.08143651307716	0.85532

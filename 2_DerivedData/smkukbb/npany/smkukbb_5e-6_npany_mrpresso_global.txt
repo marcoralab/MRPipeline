@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+E01GhJ	cIZ7rU	npany	smkukbb	750.6732006963009	0.29964

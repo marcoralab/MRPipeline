@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-bmpOAK,YJXXtC,hipv2015,dep,MR Egger,14.229839238034081,14,0.4327320253895952
-bmpOAK,YJXXtC,hipv2015,dep,Inverse variance weighted,19.150638581739006,15,0.2069886748505758
+sTid8C,PaWWck,hipv2015,dep,MR Egger,15.115745840935364,18,0.6540047912925868
+sTid8C,PaWWck,hipv2015,dep,Inverse variance weighted,19.670113484581844,19,0.41466867392149104

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+thiguv	4jG71i	vbiany	mvpa	106.08477320437375	0.9966

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+LaM0VK,cvq0OZ,tc,ptau,MR Egger,792.8843430533694,11,6.386313728099364e-163
+LaM0VK,cvq0OZ,tc,ptau,Inverse variance weighted,792.9700072302849,12,5.323544558652803e-162

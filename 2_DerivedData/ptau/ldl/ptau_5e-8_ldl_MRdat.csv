@@ -1,5 +1,7 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs514716,C,T,C,T,-0.04876,-0.002,0.13977499999999998,0.14639999999999997,FALSE,FALSE,FALSE,K5Ruzn,0.0079,0.827,ldl,TRUE,reported,0.008764,2.935e-8,ptau,TRUE,reported,u2Wp0a,2,TRUE,NA
-rs6859,A,G,A,G,0.03105,0.0835,0.42320599999999997,0.442,FALSE,FALSE,FALSE,K5Ruzn,0.0039,4.646e-88,ldl,TRUE,reported,0.005268,4.204e-9,ptau,TRUE,reported,u2Wp0a,2,TRUE,NA
-rs769449,A,G,A,G,0.0793,0.2141,0.108285,0.1201,FALSE,FALSE,FALSE,K5Ruzn,0.0076,4.9e-161,ldl,TRUE,reported,0.006542,5.299e-33,ptau,TRUE,reported,u2Wp0a,2,TRUE,NA
-rs9527039,C,T,C,T,-0.06098,-0.0068,0.0780259,0.07387999999999995,FALSE,FALSE,FALSE,K5Ruzn,0.0098,0.6745,ldl,TRUE,reported,0.01045,5.947e-9,ptau,TRUE,reported,u2Wp0a,2,TRUE,NA
+rs12961169,T,C,T,C,0.05004,0.0043,0.167123,0.1715,FALSE,FALSE,FALSE,AzuP8A,0.0078,0.3422,ldl,TRUE,reported,0.008013,5.117e-10,ptau,TRUE,reported,f1q7JU,2,TRUE,NA
+rs35055419,C,T,C,T,0.0349,0.0036,0.363582,0.3879,FALSE,FALSE,FALSE,AzuP8A,0.0055,0.7354,ldl,TRUE,reported,0.005653,7.624e-10,ptau,TRUE,reported,f1q7JU,2,TRUE,NA
+rs514716,C,T,C,T,-0.04876,-0.002,0.13977499999999998,0.14639999999999997,FALSE,FALSE,FALSE,AzuP8A,0.0079,0.827,ldl,TRUE,reported,0.008764,2.935e-8,ptau,TRUE,reported,f1q7JU,2,TRUE,NA
+rs6859,A,G,A,G,0.03105,0.0835,0.42320599999999997,0.442,FALSE,FALSE,FALSE,AzuP8A,0.0039,4.646e-88,ldl,TRUE,reported,0.005268,4.204e-9,ptau,TRUE,reported,f1q7JU,2,TRUE,NA
+rs769449,A,G,A,G,0.0793,0.2141,0.108285,0.1201,FALSE,FALSE,FALSE,AzuP8A,0.0076,4.9e-161,ldl,TRUE,reported,0.006542,5.299e-33,ptau,TRUE,reported,f1q7JU,2,TRUE,NA
+rs9527039,C,T,C,T,-0.06098,-0.0068,0.0780259,0.07387999999999995,FALSE,FALSE,FALSE,AzuP8A,0.0098,0.6745,ldl,TRUE,reported,0.01045,5.947e-9,ptau,TRUE,reported,f1q7JU,2,TRUE,NA

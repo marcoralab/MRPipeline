@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-IJMuG4	PDlXp8	ldl	load	385.0899663958842	<0.001
+NWZIDX	50O8oy	ldl	load	4291.424224319024	<2e-04

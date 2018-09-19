@@ -1,0 +1,2 @@
+query_snp_rsid,rsID,chr,ld.r2,Dprime,is_query_snp,ref,alt
+NA,NA,NA,NA,NA,NA,NA,NA

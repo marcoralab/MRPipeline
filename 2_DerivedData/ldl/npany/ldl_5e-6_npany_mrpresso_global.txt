@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+vZk1PP	7AlU6D	npany	ldl	458.9500455593868	<4e-05

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-jCP7KU,Uk2TJC,hipv,sbp,MR Egger,3213.155489894798,2800,6.477186484244607e-8
-jCP7KU,Uk2TJC,hipv,sbp,Inverse variance weighted,3218.893386025095,2801,4.740901441308969e-8
+3nbDIU,SKC3sn,hipv,sbp,MR Egger,3225.2609306162717,2811,6.33646811461062e-8
+3nbDIU,SKC3sn,hipv,sbp,Inverse variance weighted,3231.5034214067505,2812,4.4850415099124366e-8

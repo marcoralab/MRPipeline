@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+FS1hL2	ixxskH	hdl	nft4	61.40789720745147	<0.001

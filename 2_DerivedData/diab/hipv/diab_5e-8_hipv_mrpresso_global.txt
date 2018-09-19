@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BrRc4e	jBW42O	hipv	diab	273.14938203215985	<1e-04
+I1twjQ	0cKhGF	hipv	diab	273.14938203215985	1e-4

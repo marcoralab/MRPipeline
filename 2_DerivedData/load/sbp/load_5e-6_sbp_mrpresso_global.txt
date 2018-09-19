@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+4m0e4d	HaObCd	sbp	load	425.6377654236529	<1e-04

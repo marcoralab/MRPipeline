@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ivL0zV	bXS7j6	hdl	tau	93.70745910001135	<0.001
+HGkWcA	KJmBRY	hdl	tau	104.20459484597504	<0.001

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-o7Qkcr,SjopnZ,hipv2015,sleep,MR Egger,20.3441573780102,21,0.4995653704517514
-o7Qkcr,SjopnZ,hipv2015,sleep,Inverse variance weighted,20.5852763288302,22,0.546479218336177
+9xO6Fx,3oID6K,hipv2015,sleep,MR Egger,27.35228172242823,25,0.3385183131742083
+9xO6Fx,3oID6K,hipv2015,sleep,Inverse variance weighted,27.412442726993262,26,0.3879604300674714

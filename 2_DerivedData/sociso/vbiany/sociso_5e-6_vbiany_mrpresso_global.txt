@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+jfqTSf	oqdDd5	vbiany	sociso	128.58697527400685	0.5161

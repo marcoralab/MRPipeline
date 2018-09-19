@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-5BzcLS,MsZeaF,load,educ,MR Egger,1268.7695606689215,1109,5.650011486015433e-4
-5BzcLS,MsZeaF,load,educ,Inverse variance weighted,1270.3687393824266,1110,5.448676351460241e-4
+0yK449,jSp6fB,load,educ,MR Egger,1346.6693166934328,1158,9.224114432941917e-5
+0yK449,jSp6fB,load,educ,Inverse variance weighted,1347.1555436725455,1159,9.640596158193389e-5

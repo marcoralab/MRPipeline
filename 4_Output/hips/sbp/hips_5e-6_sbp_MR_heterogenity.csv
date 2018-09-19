@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
+aFyEMs,EDXtD8,sbp,hips,MR Egger,35.312259777144256,9,5.248000261732523e-5
+aFyEMs,EDXtD8,sbp,hips,Inverse variance weighted,41.18460669535174,10,1.0465805751267771e-5

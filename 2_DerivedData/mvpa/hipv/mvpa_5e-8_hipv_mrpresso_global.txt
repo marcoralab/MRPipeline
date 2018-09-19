@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-tnuibH	FWEr4X	hipv	mvpa	119.26507777483101	<0.001
+3WKdDN	gGQM6Y	hipv	mvpa	119.26507777483101	<0.001

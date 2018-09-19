@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-gxVbv7	ifwvRz	ptau	sociso	27.506789143974355	0.126
+JLiZrv	cJYHrz	ptau	sociso	27.506789143974355	0.134

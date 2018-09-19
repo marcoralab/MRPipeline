@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ij32Or	HbGFVP	ab42	tc	834.8431418469114	<4e-05
+xeV6ML	WhErFJ	ab42	tc	891.8273532723856	<4e-05

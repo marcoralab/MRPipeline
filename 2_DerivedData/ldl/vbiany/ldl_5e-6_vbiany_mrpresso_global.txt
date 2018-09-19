@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+MRX1A5	fsywnv	vbiany	ldl	299.7558688797517	0.7854
