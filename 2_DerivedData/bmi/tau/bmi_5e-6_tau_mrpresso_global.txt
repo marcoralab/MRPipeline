@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+045Hfx	gQANLE	tau	bmi	3245.997011031358	0.00701

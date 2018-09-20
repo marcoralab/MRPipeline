@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+n5BzUJ	mP8v1A	load	sbp	3563.106353318187	<1e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+Z6QJ6z	tEub2y	vbiany	dbp	3089.5642707040392	0.36738

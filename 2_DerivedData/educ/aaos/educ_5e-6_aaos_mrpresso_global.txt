@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+aHL7in	szvp48	aaos	educ	3285.7592891977674	1.7e-4

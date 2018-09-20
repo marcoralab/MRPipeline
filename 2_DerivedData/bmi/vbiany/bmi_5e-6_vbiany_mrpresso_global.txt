@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	RSSobs	pval
+hLNQfB	sJe9cf	vbiany	bmi	3220.1568864758756	0.80697
