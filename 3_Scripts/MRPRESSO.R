@@ -44,23 +44,25 @@ if("Global Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
   RSSobs <- mrpresso.out$`MR-PRESSO results`$RSSobs
 }
 
-# Write RSSobs and Pvalue to tibble
-mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
-       id.outcome = as.character(mrdat[1,'id.outcome']), 
-       outcome = as.character(mrdat[1,'outcome']), 
-       exposure = as.character(mrdat[1,'exposure']) , RSSobs = RSSobs,
-       pval = mrpresso.p)
-
 ## If Global test is significant, append outlier tests to mrdat
 if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
   mrdat.out <- mrdat %>% 
     bind_cols(mrpresso.out$`MR-PRESSO results`$`Outlier Test`) %>% 
     rename(mrpresso_RSSobs = RSSobs, mrpresso_pval = Pvalue) %>% 
-    mutate(mrpresso_keep = mrpresso_pval > 0.05) 
+    mutate(mrpresso_keep = as.numeric(str_replace_all(mrpresso_pval, pattern="<", repl="")) > 0.05) 
 } else {
   mrdat.out <- mrdat %>% 
     mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA, mrpresso_keep = TRUE)
 }
+
+# Write n outliers, RSSobs and Pvalue to tibble
+mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
+                       id.outcome = as.character(mrdat[1,'id.outcome']), 
+                       outcome = as.character(mrdat[1,'outcome']), 
+                       exposure = as.character(mrdat[1,'exposure']), 
+                       n_outliers = sum(mrdat.out$mrpresso_keep == F),
+                       RSSobs = RSSobs,
+                       pval = mrpresso.p)
 
 ### ===== EXPORTING ===== ###
 message("\n EXPORTING REPORTS \n")
