@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-0p2osC,wnEpil,hips,dep,Inverse variance weighted (fixed effects),32,-2.918116042993946,2.4325512981035406,0.23029033302253143
-0p2osC,wnEpil,hips,dep,Weighted median,32,-1.8708375552336935,3.7757654902765805,0.6202573607541236
-0p2osC,wnEpil,hips,dep,Weighted mode,32,-0.40927517199186525,5.607821289195988,0.9422885864301703
-0p2osC,wnEpil,hips,dep,MR Egger,32,-35.22737646133545,11.488613690037825,0.0045589260806409215
+0p2osC,wnEpil,hips,dep,mrpresso,NA,NA,NA,NA
