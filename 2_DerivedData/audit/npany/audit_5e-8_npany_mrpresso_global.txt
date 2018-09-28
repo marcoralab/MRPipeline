@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-N0fBOc	JXpUus	npany	audit	6.911771252701254	0.972
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+N0fBOc	JXpUus	npany	audit	0	6.911771252701254	0.971

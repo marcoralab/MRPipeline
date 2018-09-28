@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-gfJXhI	ojOLhh	hipv	smkukbb	257.21754537632546	0.0291
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gfJXhI	ojOLhh	hipv	smkukbb	1	257.21754537632546	0.0286

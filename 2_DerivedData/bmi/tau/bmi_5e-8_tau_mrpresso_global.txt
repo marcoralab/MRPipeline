@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-NAPnsC	8LyFod	tau	bmi	1619.9646779686302	0.05250666666666667
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+NAPnsC	8LyFod	tau	bmi	0	1619.9646779686302	0.053173333333333336

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dVVNBQ	xrjOx5	aaos	tc	1611.1375635854301	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dVVNBQ	xrjOx5	aaos	tc	12	1611.1375635854301	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-aN73FF	KUOZJD	nft4	hdl	498.05280333603554	<1e-04

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9tbEMn	RLKDUr	bmi	hipv	58.85871608829182	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9tbEMn	RLKDUr	bmi	hipv	3	58.85871608829182	<0.001

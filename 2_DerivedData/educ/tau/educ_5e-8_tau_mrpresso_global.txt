@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Slfw0O	bnBLjy	tau	educ	1129.1555089245865	0.11942

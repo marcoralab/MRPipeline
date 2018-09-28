@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-cpHp0J	RI0rEK	npany	diab	403.08143651307716	0.85532
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+cpHp0J	RI0rEK	npany	diab	0	403.08143651307716	0.85724

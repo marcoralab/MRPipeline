@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-hKrGBf	5m8BlQ	aaos	dep	150.6627163506494	0.9406
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+hKrGBf	5m8BlQ	aaos	dep	0	150.6627163506494	0.9404

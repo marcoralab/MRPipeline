@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ipdo9r	xsxUKh	nft4	dbp	3116.2383620736973	0.33976

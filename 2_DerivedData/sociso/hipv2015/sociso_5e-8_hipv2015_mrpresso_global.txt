@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-MhL23P	V2cdVg	hipv2015	sociso	21.048582379248653	0.716
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MhL23P	V2cdVg	hipv2015	sociso	0	21.048582379248653	0.735

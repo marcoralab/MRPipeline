@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-qMd2ic	RKd2c3	hipv2015	educ	2931.1439815561516	0.04591
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qMd2ic	RKd2c3	hipv2015	educ	1	2931.1439815561516	0.0454

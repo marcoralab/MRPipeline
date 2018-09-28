@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-l6bJ1S	1n66Er	ab42	dep	42.805074964023206	0.069
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+l6bJ1S	1n66Er	ab42	dep	0	42.805074964023206	0.07

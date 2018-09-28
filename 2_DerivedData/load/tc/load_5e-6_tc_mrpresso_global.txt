@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-YOiqYT	jdXssm	tc	load	3163.838586102934	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+YOiqYT	jdXssm	tc	load	14	3163.838586102934	<2e-04

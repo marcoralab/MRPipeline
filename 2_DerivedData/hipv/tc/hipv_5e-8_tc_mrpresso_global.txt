@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-B8kuTG	AClmRe	tc	hipv	11.966613658413753	0.155

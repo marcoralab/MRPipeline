@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KCb5KR	8bd4fO	ptau	tc	583.2748528719698	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KCb5KR	8bd4fO	ptau	tc	2	583.2748528719698	<4e-05

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-eKCKqb	Dho30D	ab42	educ	2567.5488456822095	0.00258
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+eKCKqb	Dho30D	ab42	educ	1	2567.5488456822095	0.00271

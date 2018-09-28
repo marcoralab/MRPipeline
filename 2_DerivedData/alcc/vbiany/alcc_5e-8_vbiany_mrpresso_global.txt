@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-O6deFm	7dkAG0	vbiany	alcc	10.781246906650807	0.687

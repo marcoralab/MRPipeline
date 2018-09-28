@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-aw433c	TsRYYv	ab42	mvpa	640.820477994016	<1e-04

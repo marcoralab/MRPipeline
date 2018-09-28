@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Jc64h4	rokWUN	tau	alcc	42.80687447842609	0.3172

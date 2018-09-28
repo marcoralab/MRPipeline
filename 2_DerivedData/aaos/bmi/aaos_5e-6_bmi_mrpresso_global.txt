@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BnMn7p	4xMt7s	bmi	aaos	269.12044406823577	<2e-04

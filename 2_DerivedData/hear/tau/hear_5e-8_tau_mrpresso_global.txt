@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2L1ohD	iUcyTq	tau	hear	31.383387388530508	0.501
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2L1ohD	iUcyTq	tau	hear	0	31.383387388530508	0.4906

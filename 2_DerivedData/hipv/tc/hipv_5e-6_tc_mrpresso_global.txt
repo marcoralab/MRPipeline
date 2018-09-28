@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-NTe07O	vfszQX	tc	hipv	549.5641956254592	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+NTe07O	vfszQX	tc	hipv	4	549.5641956254592	<0.001

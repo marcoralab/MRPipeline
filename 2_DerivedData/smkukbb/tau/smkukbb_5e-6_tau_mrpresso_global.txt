@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-RugcjT	GsXuDx	tau	smkukbb	596.7707524962912	0.57136
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+RugcjT	GsXuDx	tau	smkukbb	0	596.7707524962912	0.57508

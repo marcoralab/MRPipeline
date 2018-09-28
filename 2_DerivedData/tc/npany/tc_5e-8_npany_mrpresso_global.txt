@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-X321AZ	Dy2KMb	npany	tc	404.61064953608604	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+X321AZ	Dy2KMb	npany	tc	3	404.61064953608604	<1e-04

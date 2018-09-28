@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ti0t3b	7TXB9d	hipv2015	hear	111.31349425348652	0.8938
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ti0t3b	7TXB9d	hipv2015	hear	0	111.31349425348652	0.8944

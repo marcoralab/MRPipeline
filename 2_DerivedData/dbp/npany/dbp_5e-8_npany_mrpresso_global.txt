@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-uGKMBi	Bu58C8	npany	dbp	1523.6011448852817	0.8632666666666666
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+uGKMBi	Bu58C8	npany	dbp	0	1523.6011448852817	0.8628133333333333

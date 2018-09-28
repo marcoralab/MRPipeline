@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3rUPKe	AHOs2a	hipv2015	sbp	2949.242512770787	0.00392
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+3rUPKe	AHOs2a	hipv2015	sbp	0	2949.242512770787	0.00385

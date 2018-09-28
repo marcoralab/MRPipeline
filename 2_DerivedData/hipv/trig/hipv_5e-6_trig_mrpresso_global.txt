@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-byFNa8	LP3Cfz	trig	hipv	69.57755943762731	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+byFNa8	LP3Cfz	trig	hipv	2	69.57755943762731	<0.001

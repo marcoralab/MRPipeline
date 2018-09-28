@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-st4kGF	thBGoy	ldl	hipv	11.494289487699916	0.151
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+st4kGF	thBGoy	ldl	hipv	0	11.494289487699916	0.153

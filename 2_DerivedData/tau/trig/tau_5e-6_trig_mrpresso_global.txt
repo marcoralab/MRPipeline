@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-TvlfMk	IzTW4g	trig	tau	131.59567489519918	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TvlfMk	IzTW4g	trig	tau	2	131.59567489519918	<0.001

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-cXxccS	vyhrDb	npany	cpd	11.575161537272642	0.975
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+cXxccS	vyhrDb	npany	cpd	0	11.575161537272642	0.968

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-pFOOTN	qxry6g	npany	cpd	33.288525873595155	0.9658
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+pFOOTN	qxry6g	npany	cpd	0	33.288525873595155	0.9604

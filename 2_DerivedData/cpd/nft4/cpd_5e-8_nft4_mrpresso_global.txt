@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Pbm7dd	Ep3zxo	nft4	cpd	20.91879506362004	0.652

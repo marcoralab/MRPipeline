@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-P6Ppmm	Uobv7X	ab42	dbp	2685.0605893892734	1.4e-4
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+P6Ppmm	Uobv7X	ab42	dbp	0	2685.0605893892734	1.2e-4

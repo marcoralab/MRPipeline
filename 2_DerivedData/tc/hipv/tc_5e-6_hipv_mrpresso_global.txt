@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-o6Qvjk	FHyw8w	hipv	tc	478.50073534362895	4.8e-4
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+o6Qvjk	FHyw8w	hipv	tc	1	478.50073534362895	4.4e-4

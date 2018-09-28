@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-zCcaRB	sfN1Ip	hipv	audit	1.842948785260425	0.998
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+zCcaRB	sfN1Ip	hipv	audit	0	1.842948785260425	0.996

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Jh1MmG	MvkBUM	ab42	mdd	190.92832797006074	0.0603
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Jh1MmG	MvkBUM	ab42	mdd	0	190.92832797006074	0.0639

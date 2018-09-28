@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-RBXlKG	8rwzPE	vbiany	sbp	1505.905938545171	0.19977333333333333

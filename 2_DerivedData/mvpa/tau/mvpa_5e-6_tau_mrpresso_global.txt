@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-4f3eTQ	qm1FOQ	tau	mvpa	261.3699114498452	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+4f3eTQ	qm1FOQ	tau	mvpa	1	261.3699114498452	<1e-04

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-IOEp9h	a6Yvat	hipv2015	bmi	3573.997587424418	1.5e-4
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+IOEp9h	a6Yvat	hipv2015	bmi	0	3573.997587424418	2e-4

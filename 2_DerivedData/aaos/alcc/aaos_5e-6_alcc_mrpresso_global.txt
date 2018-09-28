@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UjDM4L	K32JeV	alcc	aaos	52.63879655304799	0.5022
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UjDM4L	K32JeV	alcc	aaos	0	52.63879655304799	0.5014

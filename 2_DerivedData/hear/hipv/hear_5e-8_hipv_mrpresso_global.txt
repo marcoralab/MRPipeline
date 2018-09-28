@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-1zTume	xsl6mT	hipv	hear	28.675288552709237	0.7938

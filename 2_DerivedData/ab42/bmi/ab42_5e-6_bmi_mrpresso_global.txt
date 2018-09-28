@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-fiNUnz	3T4pES	bmi	ab42	98.01903211862984	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fiNUnz	3T4pES	bmi	ab42	2	98.01903211862984	<0.001

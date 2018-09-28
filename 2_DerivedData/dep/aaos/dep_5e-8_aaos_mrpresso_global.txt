@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-XHIitu	95fDSo	aaos	dep	27.101685560713065	0.693
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+XHIitu	95fDSo	aaos	dep	0	27.101685560713065	0.7112

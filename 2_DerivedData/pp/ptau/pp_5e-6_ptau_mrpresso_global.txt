@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-eFh0BP	BW9seO	ptau	pp	2125.7912152933877	0.01432
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+eFh0BP	BW9seO	ptau	pp	1	2125.7912152933877	0.0141

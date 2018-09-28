@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-vJyBzX	eu0lOO	nft4	bmi	1795.510686013291	0.002373333333333333
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+vJyBzX	eu0lOO	nft4	bmi	1	1795.510686013291	0.00228

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-8CK4ok	bnQq6o	ab42	alcd	9.474679161207344	0.889
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8CK4ok	bnQq6o	ab42	alcd	0	9.474679161207344	0.881

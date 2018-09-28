@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-wseQVk	UAGS47	tau	dep	22.818379069429586	0.793
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+wseQVk	UAGS47	tau	dep	0	22.818379069429586	0.8

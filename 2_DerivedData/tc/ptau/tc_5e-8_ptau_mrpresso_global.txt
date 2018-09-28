@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xDR213	cAwhxA	ptau	tc	436.09584073849084	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xDR213	cAwhxA	ptau	tc	2	436.09584073849084	<1e-04

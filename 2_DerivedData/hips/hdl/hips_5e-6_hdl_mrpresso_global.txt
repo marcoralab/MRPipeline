@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ZIOC6w	21obA5	hdl	hips	61.40789720745147	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZIOC6w	21obA5	hdl	hips	2	61.40789720745147	<0.001

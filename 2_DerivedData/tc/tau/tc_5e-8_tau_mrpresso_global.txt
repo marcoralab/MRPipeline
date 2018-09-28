@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rtWXc4	JeGuIm	tau	tc	368.572307671642	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rtWXc4	JeGuIm	tau	tc	3	368.572307671642	<1e-04

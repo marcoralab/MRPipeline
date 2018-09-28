@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Urtdgz	srf2Im	ptau	dbp	2632.6311984467966	0.39154

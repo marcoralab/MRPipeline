@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Ak2nmg	0KdpdR	aaos	alcc	19.34214094190666	0.276
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Ak2nmg	0KdpdR	aaos	alcc	0	19.34214094190666	0.274

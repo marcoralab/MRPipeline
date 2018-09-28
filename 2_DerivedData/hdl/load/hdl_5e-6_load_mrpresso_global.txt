@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-bze3kT	MmK9ZK	load	hdl	3996.970882383812	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+bze3kT	MmK9ZK	load	hdl	9	3996.970882383812	<4e-05

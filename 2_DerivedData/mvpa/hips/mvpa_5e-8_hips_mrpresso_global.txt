@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-5w4QwQ	e4msb1	hips	mvpa	49.28728863335391	0.1348
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5w4QwQ	e4msb1	hips	mvpa	0	49.28728863335391	0.1366

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-fnw0jt	KB46c1	aaos	mvpa	765.5089875729335	<1e-04

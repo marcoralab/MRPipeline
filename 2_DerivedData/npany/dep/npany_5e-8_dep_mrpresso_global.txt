@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KJ08HG	FLaUAT	dep	npany	2.1217329136313414	0.775
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KJ08HG	FLaUAT	dep	npany	0	2.1217329136313414	0.751

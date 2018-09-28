@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xRvZCQ	fjwKfa	hipv2015	ldl	357.77647686177164	0.03184
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xRvZCQ	fjwKfa	hipv2015	ldl	0	357.77647686177164	0.03472

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dOCPr7	rf0xlT	nft4	sociso	21.752815115723664	0.675
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dOCPr7	rf0xlT	nft4	sociso	0	21.752815115723664	0.681

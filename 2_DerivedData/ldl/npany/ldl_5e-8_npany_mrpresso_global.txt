@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-COZD53	IeAPD2	npany	ldl	375.06553968082466	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+COZD53	IeAPD2	npany	ldl	4	375.06553968082466	<1e-04

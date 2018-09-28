@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-tiEtJY	h5RJ0D	npany	bmi	3183.6085611550457	0.91175
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+tiEtJY	h5RJ0D	npany	bmi	0	3183.6085611550457	0.91109

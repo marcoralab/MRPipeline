@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-5tM4NI	k0HqGt	nft4	insom	40.48807924491388	0.2974
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5tM4NI	k0HqGt	nft4	insom	0	40.48807924491388	0.292

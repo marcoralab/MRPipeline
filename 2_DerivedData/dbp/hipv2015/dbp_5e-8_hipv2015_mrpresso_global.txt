@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-BbPkYN	6Nppp1	hipv2015	dbp	1594.2927005319352	0.0688
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+BbPkYN	6Nppp1	hipv2015	dbp	0	1594.2927005319352	0.06850666666666666

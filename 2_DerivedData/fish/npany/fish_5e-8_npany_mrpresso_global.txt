@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-kniTCC	BRIIK6	npany	fish	241.21841374432287	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kniTCC	BRIIK6	npany	fish	1	241.21841374432287	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-lRkOri	fvSoon	tau	dbp	2511.644339412066	0.09397

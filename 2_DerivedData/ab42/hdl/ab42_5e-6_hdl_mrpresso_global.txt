@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-4lqmMl	x67LNJ	hdl	ab42	133.7418430958573	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+4lqmMl	x67LNJ	hdl	ab42	5	133.7418430958573	<0.001

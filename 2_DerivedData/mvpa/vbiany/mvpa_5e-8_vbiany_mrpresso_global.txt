@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-vp88Q0	8itngZ	vbiany	mvpa	24.755219233555625	0.9496
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+vp88Q0	8itngZ	vbiany	mvpa	0	24.755219233555625	0.9526

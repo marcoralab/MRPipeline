@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-llzfaK	BMAEKI	ptau	cpd	14.12107055657119	0.351

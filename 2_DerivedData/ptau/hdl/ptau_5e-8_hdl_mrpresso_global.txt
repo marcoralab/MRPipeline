@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-bOddn2	v5WTo7	hdl	ptau	87.46604282708311	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+bOddn2	v5WTo7	hdl	ptau	3	87.46604282708311	<0.001

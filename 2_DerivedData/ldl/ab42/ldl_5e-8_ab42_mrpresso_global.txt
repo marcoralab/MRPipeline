@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7Bf2dq	Jewvcv	ab42	ldl	694.0048739248455	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7Bf2dq	Jewvcv	ab42	ldl	4	694.0048739248455	<1e-04

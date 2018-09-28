@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-K5xiPT	IGL6lU	hdl	aaos	200.9935605197109	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+K5xiPT	IGL6lU	hdl	aaos	6	200.9935605197109	<2e-04

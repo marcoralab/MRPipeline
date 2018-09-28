@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-VPZdQ0	AB1QAV	dep	load	49.43450373097725	0.1812
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+VPZdQ0	AB1QAV	dep	load	0	49.43450373097725	0.1818

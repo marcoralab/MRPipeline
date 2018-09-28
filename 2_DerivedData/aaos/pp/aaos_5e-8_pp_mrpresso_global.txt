@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-weSpyW	1fQr63	pp	aaos	74.53145159848175	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+weSpyW	1fQr63	pp	aaos	2	74.53145159848175	<0.001

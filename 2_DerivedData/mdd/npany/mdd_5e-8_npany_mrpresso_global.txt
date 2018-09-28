@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3Q07V9	Gdt5Zr	npany	mdd	51.77179988916813	0.3418
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+3Q07V9	Gdt5Zr	npany	mdd	0	51.77179988916813	0.332

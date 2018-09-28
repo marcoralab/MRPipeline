@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ZRFoH1	hzBCq0	hipv	pp	2844.9625157282912	<1e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZRFoH1	hzBCq0	hipv	pp	2	2844.9625157282912	<1e-05

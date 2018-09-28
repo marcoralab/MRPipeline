@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-TU1rzN	SWlfme	pp	nft4	60.97087388687685	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TU1rzN	SWlfme	pp	nft4	1	60.97087388687685	<0.001

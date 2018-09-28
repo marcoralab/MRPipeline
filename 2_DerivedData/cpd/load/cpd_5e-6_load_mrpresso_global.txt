@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-z6Dvqt	LUTv4Q	load	cpd	58.61677286949352	0.1776
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+z6Dvqt	LUTv4Q	load	cpd	0	58.61677286949352	0.1722

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-oSXMEe	aAViw2	aaos	ldl	1520.8283783824918	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+oSXMEe	aAViw2	aaos	ldl	10	1520.8283783824918	<1e-04

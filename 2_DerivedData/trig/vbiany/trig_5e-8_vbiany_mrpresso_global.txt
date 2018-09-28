@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3eSVSj	vDa9Lm	vbiany	trig	145.64909091136914	0.8661

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-EM1diF	ErLsVz	hipv	trig	411.1939212488007	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EM1diF	ErLsVz	hipv	trig	2	411.1939212488007	<1e-04

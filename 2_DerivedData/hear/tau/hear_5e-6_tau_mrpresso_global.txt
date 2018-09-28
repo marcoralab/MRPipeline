@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-laCdTG	Aruly4	tau	hear	107.51659946756016	0.5025
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+laCdTG	Aruly4	tau	hear	0	107.51659946756016	0.4846

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Eg4q7d	sP8RdX	diab	ptau	25.05220481730462	0.039
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Eg4q7d	sP8RdX	diab	ptau	0	25.05220481730462	0.025

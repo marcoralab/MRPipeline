@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-4FNPu4	Wy7gPy	tau	ldl	327.9853927958491	<1e-04

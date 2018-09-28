@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-8d2TbZ	DIzt21	sbp	hipv	84.71912182370912	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8d2TbZ	DIzt21	sbp	hipv	3	84.71912182370912	<0.001

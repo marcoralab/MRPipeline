@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-t9lqcQ	oSsbzw	nft4	pp	1310.0081476391986	0.00326
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+t9lqcQ	oSsbzw	nft4	pp	1	1310.0081476391986	0.00302

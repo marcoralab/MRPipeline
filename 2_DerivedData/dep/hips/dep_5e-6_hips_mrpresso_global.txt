@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UzqUp2	pLoHuB	hips	dep	208.47090808915198	0.0511
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UzqUp2	pLoHuB	hips	dep	0	208.47090808915198	0.0557

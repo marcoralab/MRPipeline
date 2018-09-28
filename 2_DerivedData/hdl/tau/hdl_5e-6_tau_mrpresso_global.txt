@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ZjeJLM	me5HlW	tau	hdl	442.0608036546862	4e-5

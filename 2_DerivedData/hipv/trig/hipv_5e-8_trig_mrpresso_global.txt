@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nNOchp	akdHHs	trig	hipv	7.540558432078462	0.42
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+nNOchp	akdHHs	trig	hipv	0	7.540558432078462	0.394

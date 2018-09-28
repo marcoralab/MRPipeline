@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7n9NUt	iBEMfz	load	pp	4034.7505781505984	<2e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7n9NUt	iBEMfz	load	pp	7	4034.7505781505984	<2e-05

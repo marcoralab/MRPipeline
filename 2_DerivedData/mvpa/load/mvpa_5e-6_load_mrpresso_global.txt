@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nrf5x6	DcU1s7	load	mvpa	2625.454421993272	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+nrf5x6	DcU1s7	load	mvpa	1	2625.454421993272	<1e-04

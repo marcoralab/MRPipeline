@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-hsWpEX	4sXJDe	ab42	mvpa	589.2882664972841	<0.001

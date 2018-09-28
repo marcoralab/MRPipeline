@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-yjT4AX	4dhRta	nft4	hear	114.43870279607144	0.905

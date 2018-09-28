@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-to4u5Y	n0PJjI	tau	alcd	19.57830001385595	0.36

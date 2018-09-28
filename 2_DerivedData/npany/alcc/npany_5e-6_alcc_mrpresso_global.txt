@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-vQDxKe	DMTsu0	alcc	npany	16.94045524665113	0.392

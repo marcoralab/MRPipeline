@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KxKrqb	Q3Pjr0	nft4	fish	297.79552094049023	<1e-04

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-c3u0hy	IbxPlx	diab	ab42	21.21948209149535	0.04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+c3u0hy	IbxPlx	diab	ab42	0	21.21948209149535	0.052

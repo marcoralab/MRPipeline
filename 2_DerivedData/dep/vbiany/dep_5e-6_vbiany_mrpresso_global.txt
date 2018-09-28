@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-oQJBiT	oVW7Ll	vbiany	dep	178.96671676947446	0.4204
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+oQJBiT	oVW7Ll	vbiany	dep	0	178.96671676947446	0.4173

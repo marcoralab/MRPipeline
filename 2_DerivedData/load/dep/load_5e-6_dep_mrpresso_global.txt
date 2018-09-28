@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-jNBTXY	vCPrgi	dep	load	117.35796091980585	0.0086

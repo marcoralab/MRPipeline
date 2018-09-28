@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-tk443Z	8h8nhr	alcc	hipv	53.97512584678346	0.01
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+tk443Z	8h8nhr	alcc	hipv	1	53.97512584678346	0.008
