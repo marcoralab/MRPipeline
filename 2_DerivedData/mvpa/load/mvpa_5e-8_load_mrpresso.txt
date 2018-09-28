@@ -34,7 +34,7 @@ $`MR-PRESSO results`$`Outlier Test`
 18 8.485903e-04       1
 19 1.813541e+00 <0.0062
 20 2.792895e-04       1
-21 1.508253e-03       1
+21 1.508253e-03       1/Users/sheaandrews/Dropbox/src/MitoImputePrep/data/STRANDS/BDCHP-1X10-HUMANHAP240S_11216501_A-b37/kHAP_Experiments/kHAP100/chrMT_1kg_BDCHP-1X10-HUMANHAP240S_11216501_A-b37_imputed_kHAP100.map
 22 7.421326e-03  0.5704
 23 3.467878e-03       1
 24 8.258372e-04       1

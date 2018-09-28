@@ -225,7 +225,7 @@ res.out %>%
 ### LOAD
 
 ```{r}
-res.out <- res_comb %>% 
+res.plot <- res_comb %>% 
   group_by(pt) %>%
   mutate(b = round(b, 2)) %>% 
   mutate(se = round(se, 2)) %>% 
@@ -242,18 +242,6 @@ res.out <- res_comb %>%
   slice(1) %>% 
   ungroup()
 
-res <- res.out %>% 
-  filter(outcome == 'load') %>% 
-  arrange(-IVW_b) %>%
-  as.data.frame()
-  
-forest_plot_1_to_many(res,b="IVW_b",se="IVW_se",
-                      exponentiate=T,ao_slc=F, by = NULL,
-                      TraitM="exposure2", col1_title="Risk factor",
-                      trans="log2", 
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", 
-                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
-                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
 ```
 
 ```{r , echo=FALSE}
@@ -265,13 +253,18 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 
-res_test <- res_comb %>% 
-  filter(outcome == c("load"))
-forest_plot_1_to_many(res_comb,b="b",se="se",
-    exponentiate=T,ao_slc=F,lo=0.3,up=2.5,
-    TraitM="exposure",col1_width=1.2,by=NULL,
-    trans="log2",xlab="OR for CHD per SD increase in risk factor (95% confidence interval)")
-
+res.load <- res.plot %>% 
+  filter(outcome == 'load') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.load,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
 ```
 
 ### AAOS
@@ -282,6 +275,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos.png', width = 8.5, height = 5.5, units = 'in')
+
+res.aaos <- res.plot %>% 
+  filter(outcome == 'aaos') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.aaos,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="HR for AAOS per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### Ab42
@@ -292,6 +299,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
+
+res.ab42 <- res.plot %>% 
+  filter(outcome == 'ab42') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.ab42,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Ab42 per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### NP any
@@ -302,6 +323,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
+
+res.npany <- res.plot %>% 
+  filter(outcome == 'npany') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.npany,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for Neuritic Plaques per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### Ptau
@@ -312,6 +347,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau.png', width = 8.5, height = 5.5, units = 'in')
+
+res.ptau <- res.plot %>% 
+  filter(outcome == 'ptau') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.ptau,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Ptau per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### Tau
@@ -322,6 +371,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau.png', width = 8.5, height = 5.5, units = 'in')
+
+res.tau <- res.plot %>% 
+  filter(outcome == 'tau') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.tau,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for NFT per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### ntf4
@@ -332,6 +395,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
+
+res.nft4 <- res.plot %>% 
+  filter(outcome == 'nft4') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.nft4,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Ptau per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### HV 2017
@@ -342,6 +419,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
+
+res.hipv <- res.plot %>% 
+  filter(outcome == 'hipv') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hipv,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### HV 2015
@@ -352,6 +443,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
+
+res.hipv2015 <- res.plot %>% 
+  filter(outcome == 'hipv2015') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hipv2015,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### HS 2015
@@ -372,6 +477,20 @@ res_comb %>%
   dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
   theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
 #ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
+
+res.vbi <- res.plot %>% 
+  filter(outcome == 'vbiany') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.vbi,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for VBI per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ## Plot load results with all MR models
