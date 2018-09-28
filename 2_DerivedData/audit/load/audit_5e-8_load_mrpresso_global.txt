@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-hXNNy0	CXo9v4	load	audit	50.15201338447926	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+hXNNy0	CXo9v4	load	audit	2	50.15201338447926	<0.001

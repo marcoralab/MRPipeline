@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-FzczC9	0uhQXp	nft4	sbp	1393.0417842635925	0.90832

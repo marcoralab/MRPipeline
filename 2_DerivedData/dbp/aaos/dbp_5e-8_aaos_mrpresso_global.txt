@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-EpUirv	0mkdEm	aaos	dbp	1896.4105984345122	1.3333333333333333e-5
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EpUirv	0mkdEm	aaos	dbp	0	1896.4105984345122	1.3333333333333333e-5

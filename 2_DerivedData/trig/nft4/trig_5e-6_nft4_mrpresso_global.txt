@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KCz4HK	92xpNO	nft4	trig	513.5302827702283	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KCz4HK	92xpNO	nft4	trig	2	513.5302827702283	<1e-04

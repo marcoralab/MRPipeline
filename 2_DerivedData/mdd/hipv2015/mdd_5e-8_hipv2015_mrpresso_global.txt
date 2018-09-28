@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-vzgwe4	pxhwzd	hipv2015	mdd	34.91295613765662	0.9008
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+vzgwe4	pxhwzd	hipv2015	mdd	0	34.91295613765662	0.8984

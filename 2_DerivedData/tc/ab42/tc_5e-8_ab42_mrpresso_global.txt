@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dGvWfF	bO9FQ4	ab42	tc	770.3912555023255	<1e-04

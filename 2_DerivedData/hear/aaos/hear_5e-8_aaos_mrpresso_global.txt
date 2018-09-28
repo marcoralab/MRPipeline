@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KchM0E	ss4Rg1	aaos	hear	34.88591965838544	0.507
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KchM0E	ss4Rg1	aaos	hear	0	34.88591965838544	0.508

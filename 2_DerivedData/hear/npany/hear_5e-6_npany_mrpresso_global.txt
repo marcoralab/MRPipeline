@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UXBTU7	Xg68RD	npany	hear	125.4593129975366	0.7601

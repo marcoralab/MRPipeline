@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-LviIq6	hfa8s4	nft4	educ	2855.872246390341	0.42625999999999997

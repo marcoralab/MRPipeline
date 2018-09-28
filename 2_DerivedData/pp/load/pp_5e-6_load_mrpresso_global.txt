@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Gy9hIT	EsFhwd	load	pp	5377.881849251187	<1e-05

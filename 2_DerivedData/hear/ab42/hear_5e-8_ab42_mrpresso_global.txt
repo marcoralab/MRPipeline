@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-mxwtzz	gklHg4	ab42	hear	60.331237088826775	0.0026
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+mxwtzz	gklHg4	ab42	hear	0	60.331237088826775	0.0022

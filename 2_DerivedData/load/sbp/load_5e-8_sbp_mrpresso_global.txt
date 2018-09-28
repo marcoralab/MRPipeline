@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-CvH14b	v0jbzo	sbp	load	171.55459124323275	<2e-04

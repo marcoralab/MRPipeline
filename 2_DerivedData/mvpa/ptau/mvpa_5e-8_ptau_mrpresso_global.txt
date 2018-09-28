@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ArD1HN	KYxMlI	ptau	mvpa	172.65019393516025	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ArD1HN	KYxMlI	ptau	mvpa	1	172.65019393516025	<2e-04

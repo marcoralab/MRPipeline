@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-g6iIWE	tXJt1Y	alcc	tau	12.053447595694626	0.451
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+g6iIWE	tXJt1Y	alcc	tau	0	12.053447595694626	0.502

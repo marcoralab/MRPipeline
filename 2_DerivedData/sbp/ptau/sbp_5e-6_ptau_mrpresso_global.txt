@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-zsHL0J	AyLs7c	ptau	sbp	2264.276261117714	0.92591

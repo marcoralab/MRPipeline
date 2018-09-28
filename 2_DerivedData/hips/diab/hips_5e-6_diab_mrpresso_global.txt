@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-sWyTqb	vy73PK	diab	hips	14.18656180089772	0.051
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+sWyTqb	vy73PK	diab	hips	0	14.18656180089772	0.059

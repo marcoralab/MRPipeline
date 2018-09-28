@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-LnwVI1	WhyLMi	alcc	aaos	19.250488048973274	0.208

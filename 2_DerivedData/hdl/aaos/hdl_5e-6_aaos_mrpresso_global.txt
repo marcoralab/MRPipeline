@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xgTRIM	0fQdfz	aaos	hdl	1565.4618460257177	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xgTRIM	0fQdfz	aaos	hdl	5	1565.4618460257177	<4e-05

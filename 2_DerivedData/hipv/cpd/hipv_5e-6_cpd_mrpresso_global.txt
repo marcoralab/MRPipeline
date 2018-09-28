@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-06M1Tx	joEud6	cpd	hipv	26.382489140282754	0.704

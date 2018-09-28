@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-59YVGt	pywg31	hips	mvpa	179.17799772327703	0.0571
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+59YVGt	pywg31	hips	mvpa	0	179.17799772327703	0.0522

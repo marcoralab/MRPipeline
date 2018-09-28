@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-thiguv	4jG71i	vbiany	mvpa	106.08477320437375	0.9966
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+thiguv	4jG71i	vbiany	mvpa	0	106.08477320437375	0.9956

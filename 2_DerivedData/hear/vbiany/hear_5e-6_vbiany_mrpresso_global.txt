@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3jvsDB	1RM5hB	vbiany	hear	138.0222449104995	0.3665

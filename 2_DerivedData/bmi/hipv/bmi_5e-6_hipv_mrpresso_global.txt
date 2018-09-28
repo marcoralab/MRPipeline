@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-h7A96a	KQp5fh	hipv	bmi	3971.6800489851203	<1e-05

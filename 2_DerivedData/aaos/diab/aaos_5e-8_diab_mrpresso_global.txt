@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-OyFkHx	zuiOLh	diab	aaos	21.791616071256644	0.034
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+OyFkHx	zuiOLh	diab	aaos	1	21.791616071256644	0.019

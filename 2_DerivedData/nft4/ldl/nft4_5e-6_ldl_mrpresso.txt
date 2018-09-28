@@ -24,7 +24,7 @@ $`MR-PRESSO results`$`Outlier Test`
 5 0.0037348021 <0.008
 6 0.0015689908  0.032
 7 0.0102106240 <0.008
-8 0.0012546486  0.224
+8 0.0012546486  0.256
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`

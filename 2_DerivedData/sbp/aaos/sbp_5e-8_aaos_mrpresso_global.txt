@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2gw5pk	HagR8W	aaos	sbp	1790.1062809923712	<1.33333333333333e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2gw5pk	HagR8W	aaos	sbp	0	1790.1062809923712	1.3333333333333333e-5

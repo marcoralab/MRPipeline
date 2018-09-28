@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-iEza8s	NcGANb	nft4	mvpa	211.26799716920183	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+iEza8s	NcGANb	nft4	mvpa	2	211.26799716920183	<2e-04

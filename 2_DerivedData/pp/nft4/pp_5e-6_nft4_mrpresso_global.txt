@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-k8x7Zl	BxpET4	nft4	pp	2366.362923755617	0.29538
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+k8x7Zl	BxpET4	nft4	pp	0	2366.362923755617	0.29661

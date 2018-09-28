@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rKuPYx	q8G18U	hipv	dbp	1848.0342217558882	1.3333333333333333e-5

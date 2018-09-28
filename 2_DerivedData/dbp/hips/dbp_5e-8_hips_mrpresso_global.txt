@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-M8DAYY	8SrsWQ	hips	dbp	1469.2756588430207	0.9782133333333334
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+M8DAYY	8SrsWQ	hips	dbp	0	1469.2756588430207	0.9779466666666666

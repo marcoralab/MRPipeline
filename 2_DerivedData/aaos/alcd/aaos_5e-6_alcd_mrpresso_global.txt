@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ToGHiN	AKgNrm	alcd	aaos	55.70795878329631	0.518
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ToGHiN	AKgNrm	alcd	aaos	0	55.70795878329631	0.5176

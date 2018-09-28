@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ZloLel	iMO6lj	aaos	sbp	3399.0391740070777	1e-5
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZloLel	iMO6lj	aaos	sbp	1	3399.0391740070777	<1e-05

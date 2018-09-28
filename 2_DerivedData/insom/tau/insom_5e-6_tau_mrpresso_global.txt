@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-zR7aKT	qErIlr	tau	insom	24.554581989300782	0.498
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+zR7aKT	qErIlr	tau	insom	0	24.554581989300782	0.487

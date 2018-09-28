@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-A0hubt	WeMCu3	sbp	aaos	199.45177985759074	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+A0hubt	WeMCu3	sbp	aaos	4	199.45177985759074	<2e-04

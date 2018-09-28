@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-FKbxx9	xDxaoI	aaos	trig	1353.3658284969838	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FKbxx9	xDxaoI	aaos	trig	8	1353.3658284969838	<4e-05

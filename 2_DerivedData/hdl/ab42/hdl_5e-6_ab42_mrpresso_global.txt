@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-k1BThP	ZcX4Tg	ab42	hdl	821.1418831544529	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+k1BThP	ZcX4Tg	ab42	hdl	2	821.1418831544529	<4e-05

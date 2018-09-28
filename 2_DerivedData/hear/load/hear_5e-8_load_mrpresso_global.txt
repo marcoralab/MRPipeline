@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KJqS6o	tbcjKY	load	hear	31.297954245475708	0.5942
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KJqS6o	tbcjKY	load	hear	0	31.297954245475708	0.5958

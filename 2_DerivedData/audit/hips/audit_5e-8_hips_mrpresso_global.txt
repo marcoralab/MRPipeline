@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rIXfiI	hnMfKE	hips	audit	17.41063097463943	0.254
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rIXfiI	hnMfKE	hips	audit	0	17.41063097463943	0.254

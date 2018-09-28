@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-2UiSU3	9PW0bU	aaos	hear	149.90486780574497	0.3731
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2UiSU3	9PW0bU	aaos	hear	0	149.90486780574497	0.3757

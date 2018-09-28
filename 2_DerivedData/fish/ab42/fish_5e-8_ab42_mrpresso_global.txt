@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0coWLg	lXlGdi	ab42	fish	160.56502453782937	5e-4
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0coWLg	lXlGdi	ab42	fish	0	160.56502453782937	6e-4

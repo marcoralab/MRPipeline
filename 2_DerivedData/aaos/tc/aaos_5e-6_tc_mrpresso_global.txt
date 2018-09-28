@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Vh62tl	PCKRjO	tc	aaos	582.0118941264305	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Vh62tl	PCKRjO	tc	aaos	8	582.0118941264305	<2e-04

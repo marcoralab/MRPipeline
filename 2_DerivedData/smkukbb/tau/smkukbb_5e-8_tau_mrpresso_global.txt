@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-pvYUt1	GiwKSY	tau	smkukbb	167.05270689959673	0.9239
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+pvYUt1	GiwKSY	tau	smkukbb	0	167.05270689959673	0.9241

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0yK449	jSp6fB	load	educ	1416.1192801479863	8e-5
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0yK449	jSp6fB	load	educ	0	1416.1192801479863	8e-5

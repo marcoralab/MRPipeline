@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-reJJY8	rGOCzR	ab42	sbp	1305.9498616469252	0.00996
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+reJJY8	rGOCzR	ab42	sbp	0	1305.9498616469252	0.0097

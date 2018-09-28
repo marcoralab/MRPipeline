@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-80PGFu	JcdvPh	aaos	sleep	37.78281972169512	0.192
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+80PGFu	JcdvPh	aaos	sleep	0	37.78281972169512	0.185

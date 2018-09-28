@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-PFqI7E	Xj1PwN	trig	load	449.0970031262895	<2e-04

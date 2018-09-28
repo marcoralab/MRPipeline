@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-e6AODz	ASGjH9	alcc	load	98.32780010633806	0.0252
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+e6AODz	ASGjH9	alcc	load	1	98.32780010633806	0.0294

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Pi7SiK	MsKOTy	trig	load	428.632387810652	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Pi7SiK	MsKOTy	trig	load	4	428.632387810652	<0.001

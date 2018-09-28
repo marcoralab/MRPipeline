@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0sLHi9	MJdfxw	ptau	hear	141.1911184318516	0.0809

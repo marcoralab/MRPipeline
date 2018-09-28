@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-wySq6k	ZFvfxt	npany	educ	2846.0009413391167	0.4489

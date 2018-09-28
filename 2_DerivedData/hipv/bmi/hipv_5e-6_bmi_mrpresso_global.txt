@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-RfWO3F	5c7tkK	bmi	hipv	194.16189832764096	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+RfWO3F	5c7tkK	bmi	hipv	6	194.16189832764096	<0.001

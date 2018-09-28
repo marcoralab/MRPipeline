@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-gww4HM	dLHE9o	ab42	educ	1130.4615355025217	0.1126
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gww4HM	dLHE9o	ab42	educ	0	1130.4615355025217	0.11392

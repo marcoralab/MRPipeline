@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9Vh6i1	VsMPzU	ab42	ldl	777.4433032561011	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9Vh6i1	VsMPzU	ab42	ldl	4	777.4433032561011	<1e-04

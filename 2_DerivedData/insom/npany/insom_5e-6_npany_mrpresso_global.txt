@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9jIQ0a	ZzUvEi	npany	insom	19.737512450416578	0.9836
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9jIQ0a	ZzUvEi	npany	insom	0	19.737512450416578	0.9802

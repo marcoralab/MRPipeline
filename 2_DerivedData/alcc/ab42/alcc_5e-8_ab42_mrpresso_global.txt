@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0l7ovQ	i6Zxk8	ab42	alcc	11.976203556531939	0.232
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0l7ovQ	i6Zxk8	ab42	alcc	0	11.976203556531939	0.239

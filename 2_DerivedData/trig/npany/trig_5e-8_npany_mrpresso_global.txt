@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-mO63ww	tEOLYq	npany	trig	268.92710907219015	<1e-04

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-0p2osC	wnEpil	hips	dep	71.70974407176519	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0p2osC	wnEpil	hips	dep	0	71.70974407176519	<2e-04

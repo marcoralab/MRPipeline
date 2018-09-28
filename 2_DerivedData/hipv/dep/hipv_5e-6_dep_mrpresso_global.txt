@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-jXfScB	YHEfy7	dep	hipv	37.55062586207326	0.231
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+jXfScB	YHEfy7	dep	hipv	0	37.55062586207326	0.214

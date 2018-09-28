@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dBZ12T	9w1qdF	npany	alcd	14.870647121728261	0.782

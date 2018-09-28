@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dLS7PJ	qogFEO	cpd	aaos	79.27693281386864	0.053
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dLS7PJ	qogFEO	cpd	aaos	0	79.27693281386864	0.0608

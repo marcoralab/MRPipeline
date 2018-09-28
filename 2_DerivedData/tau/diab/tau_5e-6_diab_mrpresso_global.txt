@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-5drHrz	XWxVnW	diab	tau	42.46272915937753	0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5drHrz	XWxVnW	diab	tau	1	42.46272915937753	<0.001

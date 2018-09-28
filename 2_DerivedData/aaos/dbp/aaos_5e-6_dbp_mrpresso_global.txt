@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9BqeYs	wGW9H5	dbp	aaos	125.48998664287853	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9BqeYs	wGW9H5	dbp	aaos	3	125.48998664287853	<2e-04

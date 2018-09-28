@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-9sUvd0	4fhC05	hips	hdl	392.36705839872747	0.08456

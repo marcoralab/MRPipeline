@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KlBu1G	ndzwhZ	tc	aaos	280.45738946363167	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KlBu1G	ndzwhZ	tc	aaos	6	280.45738946363167	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-QumVPw	HPM5tv	ptau	educ	1131.683466538551	0.45586

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-87eimw	0wZYRC	load	audit	117.1164929043698	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+87eimw	0wZYRC	load	audit	2	117.1164929043698	<2e-04

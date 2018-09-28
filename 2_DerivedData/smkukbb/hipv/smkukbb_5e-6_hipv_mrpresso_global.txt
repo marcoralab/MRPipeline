@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-6CTMTO	mE5vkw	hipv	smkukbb	854.7021444392313	9.6e-4
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6CTMTO	mE5vkw	hipv	smkukbb	2	854.7021444392313	8.4e-4

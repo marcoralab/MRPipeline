@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-mVXROp	wZZ604	npany	smkukbb	272.63202485559117	0.0054
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+mVXROp	wZZ604	npany	smkukbb	1	272.63202485559117	0.0039

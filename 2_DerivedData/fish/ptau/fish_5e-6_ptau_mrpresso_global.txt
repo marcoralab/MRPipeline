@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-ePzpwr	0895zP	ptau	fish	455.9728412548162	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ePzpwr	0895zP	ptau	fish	1	455.9728412548162	<4e-05

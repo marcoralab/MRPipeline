@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Xjg3Wv	J3HPA0	hipv2015	cpd	20.546482777298294	0.275
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Xjg3Wv	J3HPA0	hipv2015	cpd	0	20.546482777298294	0.291

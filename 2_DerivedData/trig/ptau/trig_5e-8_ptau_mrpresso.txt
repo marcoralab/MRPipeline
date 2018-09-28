@@ -180,7 +180,7 @@ beta.exposure
      130.6726 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.356
+[1] 0.3584
 
 
 

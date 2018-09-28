@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-412JRH	Rsylut	trig	ab42	64.07444623207512	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+412JRH	Rsylut	trig	ab42	3	64.07444623207512	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-qUADtM	shmzns	load	tc	4438.030110817218	<1e-04

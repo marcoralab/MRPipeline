@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-45ynTQ	KHBOYZ	diab	load	49.73203549820794	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+45ynTQ	KHBOYZ	diab	load	2	49.73203549820794	<0.001

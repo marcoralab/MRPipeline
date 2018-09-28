@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-bPYnNo	dJmBc5	bmi	aaos	97.20752056130965	<0.001

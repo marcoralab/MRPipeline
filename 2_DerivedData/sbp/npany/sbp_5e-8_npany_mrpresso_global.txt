@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WEGFFe	NEa8jJ	npany	sbp	1377.4157689129495	0.9467333333333333

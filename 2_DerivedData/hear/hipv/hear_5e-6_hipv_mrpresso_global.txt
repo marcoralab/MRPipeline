@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-pEc2ll	flVHIY	hipv	hear	134.82178507217608	0.5016

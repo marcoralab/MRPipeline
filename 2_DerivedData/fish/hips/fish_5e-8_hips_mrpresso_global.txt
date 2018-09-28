@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-jOwRt4	ue8p46	hips	fish	142.00152906993156	0.1761

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-SZkFuC	WQmDpz	ab42	trig	744.7111191038133	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+SZkFuC	WQmDpz	ab42	trig	3	744.7111191038133	<1e-04

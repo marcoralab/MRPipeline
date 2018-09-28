@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-UY0CiQ	o6uOcS	hipv	mdd	197.3732962789455	0.3039
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UY0CiQ	o6uOcS	hipv	mdd	0	197.3732962789455	0.3046

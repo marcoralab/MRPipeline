@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-lcyorv	ES9Qif	hips	trig	327.75327490321405	0.1344

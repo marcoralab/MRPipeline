@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-dREl48	lHWgJa	nft4	alcc	10.01142037011564	0.803

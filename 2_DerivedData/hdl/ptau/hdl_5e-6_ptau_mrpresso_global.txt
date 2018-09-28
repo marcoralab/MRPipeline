@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-lHaoJR	qkE8vx	ptau	hdl	492.02143829939774	<4e-05

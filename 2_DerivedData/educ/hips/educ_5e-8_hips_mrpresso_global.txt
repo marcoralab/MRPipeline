@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-MbzwSS	4reagb	hips	educ	1222.722311062141	0.37194

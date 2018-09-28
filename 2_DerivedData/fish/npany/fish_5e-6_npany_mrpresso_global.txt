@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-QGUewd	rZ5CeC	npany	fish	481.67047802184334	<4e-05

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WThPv9	l19zOc	tau	sbp	2144.0763224450257	0.73989
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WThPv9	l19zOc	tau	sbp	0	2144.0763224450257	0.7413

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-rjCEoF	JaR40g	sociso	aaos	57.920959794730315	0.4266
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rjCEoF	JaR40g	sociso	aaos	0	57.920959794730315	0.4398

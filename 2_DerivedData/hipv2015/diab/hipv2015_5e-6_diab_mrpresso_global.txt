@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-3wkOd2	w3I1w8	diab	hipv2015	28.02339480997544	0.002
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+3wkOd2	w3I1w8	diab	hipv2015	1	28.02339480997544	0.003

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nyRXHR	pcItkK	cpd	load	71.30730954228336	0.004
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+nyRXHR	pcItkK	cpd	load	1	71.30730954228336	0.0048

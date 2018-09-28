@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-He7Gtn	ovudXw	tau	ldl	423.2088581682492	<1e-04

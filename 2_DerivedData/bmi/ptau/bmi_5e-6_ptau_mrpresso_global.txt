@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-DMnAZP	lrZsiK	ptau	bmi	3324.1044373352256	0.03846
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+DMnAZP	lrZsiK	ptau	bmi	2	3324.1044373352256	0.03843

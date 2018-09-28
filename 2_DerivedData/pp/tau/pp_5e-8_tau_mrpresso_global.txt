@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-mnK8na	2LQmQ1	tau	pp	1087.8399814100833	0.00568
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+mnK8na	2LQmQ1	tau	pp	1	1087.8399814100833	0.0055

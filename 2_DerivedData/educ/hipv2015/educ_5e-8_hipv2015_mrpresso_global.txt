@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Ho19xR	fcOrkN	hipv2015	educ	1278.9363778669813	0.06422
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Ho19xR	fcOrkN	hipv2015	educ	0	1278.9363778669813	0.06384

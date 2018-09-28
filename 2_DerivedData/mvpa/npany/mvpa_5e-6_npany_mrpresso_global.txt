@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nstms5	hLqwvJ	npany	mvpa	272.09499287181177	<1e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+nstms5	hLqwvJ	npany	mvpa	1	272.09499287181177	<1e-04

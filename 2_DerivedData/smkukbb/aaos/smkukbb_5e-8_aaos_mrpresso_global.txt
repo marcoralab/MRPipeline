@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-7DUE34	FnDP8g	aaos	smkukbb	241.36497895219367	0.1773
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7DUE34	FnDP8g	aaos	smkukbb	0	241.36497895219367	0.1802

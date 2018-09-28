@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-veuVp4	u1aLFR	alcd	load	114.1160229508002	0.0414

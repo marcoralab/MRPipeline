@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-X7EQrt	YoH02E	bmi	ptau	168.4541410069664	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+X7EQrt	YoH02E	bmi	ptau	4	168.4541410069664	<0.001

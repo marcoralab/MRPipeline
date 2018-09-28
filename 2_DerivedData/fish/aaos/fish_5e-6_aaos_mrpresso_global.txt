@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-La2deW	KuCV1x	aaos	fish	811.3018965090424	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+La2deW	KuCV1x	aaos	fish	1	811.3018965090424	<4e-05

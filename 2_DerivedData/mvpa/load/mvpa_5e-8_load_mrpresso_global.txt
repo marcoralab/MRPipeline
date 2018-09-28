@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-NKjeKD	0uZdLF	load	mvpa	2567.7925234948925	<2e-04
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+NKjeKD	0uZdLF	load	mvpa	3	2567.7925234948925	<2e-04

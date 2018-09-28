@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-xAr0Z8	3mUJ83	dbp	load	47.236830355242496	0.1548
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xAr0Z8	3mUJ83	dbp	load	0	47.236830355242496	0.1632

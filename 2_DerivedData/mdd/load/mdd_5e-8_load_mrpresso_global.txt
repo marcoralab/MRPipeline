@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-C9SC6L	aizWni	load	mdd	72.32194119299953	0.0126
