@@ -1,4 +1,4 @@
-# snakemake -s mr.smk --configfile test.yaml --keep-going --until ProxySnps
+# snakemake -s mr.smk --configfile test.yaml --keep-going
 # snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
 # snakejob -s mr.smk --configfile test.yaml -j 1000 --max-jobs-per-second 1 --keep-going --until ProxySnps
 
@@ -10,5 +10,5 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-6', '5e-8']
 
 ## LOAD as exposure
-ExposureCode: ['alcc', ]
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips']
+ExposureCode: ['mvpa']
+OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']

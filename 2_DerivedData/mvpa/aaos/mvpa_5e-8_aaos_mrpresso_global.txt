@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FMKS7s	WWTJHF	aaos	mvpa	1	629.1550741952916	<2e-04

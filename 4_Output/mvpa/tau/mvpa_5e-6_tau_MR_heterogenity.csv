@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-4f3eTQ,qm1FOQ,tau,mvpa,MR Egger,251.61253145241128,110,4.196182117280123e-13
-4f3eTQ,qm1FOQ,tau,mvpa,Inverse variance weighted,252.7616915222624,111,4.606029370828677e-13
+8zcCDk,NOlj7s,tau,mvpa,MR Egger,251.6253945189827,110,4.1806526960183664e-13
+8zcCDk,NOlj7s,tau,mvpa,Inverse variance weighted,252.65566006093835,111,4.748452488149773e-13

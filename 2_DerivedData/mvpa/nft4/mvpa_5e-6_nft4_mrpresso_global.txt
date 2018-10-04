@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QGC3YZ	iFvN4H	nft4	mvpa	1	310.24067460766645	<1e-04
+4q9Geo	TaI2Rh	nft4	mvpa	1	310.10648517036657	<1e-04

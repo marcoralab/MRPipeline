@@ -26,6 +26,29 @@ params:
 editor_options: 
   chunk_output_type: console
 ---
+```{r test, include=FALSE, eval= FALSE}
+## For testing 
+rwd <- 'out'
+out <- 'out'
+exposure.code <- 'mvpa'
+outcome.code <- 'load'
+p.threshold <- '5e-8'
+
+traits <- '~/LOAD_minerva/dummy/shea/Projects/2_MR/1_RawData/MRTraits.csv'
+
+exposure.snps <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', exposure.code, '_', p.threshold, '_SNPs.txt')
+outcome.snps <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', outcome.code, '/', 
+                       exposure.code, '_', p.threshold, '_', outcome.code, '_SNPs.txt')
+proxy.snps <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', outcome.code, '/', 
+                       exposure.code, '_', p.threshold, '_', outcome.code, '_MatchedProxys.csv')
+harmonized.dat <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', outcome.code, '/', 
+                       exposure.code, '_', p.threshold, '_', outcome.code, '_mrpresso_MRdat.csv')
+mrpresso_global <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', outcome.code, '/', 
+                       exposure.code, '_', p.threshold, '_', outcome.code, '_mrpresso_global.txt')
+params <- list(rwd, out, exposure.code, outcome.code, p.threshold, traits, exposure.snps, outcome.snps, proxy.snps, harmonized.dat, mrpresso_global)
+names(params) <- c('rwd', 'out', 'exposure.code', 'outcome.code', 'p.threshold', 'traits', 'exposure.snps', 'outcome.snps', 'proxy.snps', 'harmonized.dat', 'mrpresso_global')
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = params$rwd)
@@ -184,10 +207,12 @@ as.data.frame(mrpresso_gloabl)
 **Table 9:** MR Estimates after MR-PRESSO outlier removal
 ```{r mrpresso_res, echo=F, cache=F, message=F}
 if(nrow(mrdat) - sum(mrdat$mrpresso_keep, na.rm=TRUE) >= 1){
+  plot_outlier = TRUE
   mrdat_mrpresso <- filter(mrdat, mrpresso_keep == T)
   res_mrpresso <- mr(mrdat_mrpresso, method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))
   as.data.frame(res_mrpresso)
 }else{
+  plot_outlier = FALSE
   res_mrpresso <- data.frame(id.exposure = as.character(mrdat[1,'id.exposure']),
              id.outcome = as.character(mrdat[1,'id.outcome']), 
              outcome = as.character(mrdat[1,'outcome']), 
@@ -202,6 +227,16 @@ if(nrow(mrdat) - sum(mrdat$mrpresso_keep, na.rm=TRUE) >= 1){
 ```
 <br> 
 
+```{r scatter_plot_outlier, eval = plot_outlier, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 3: Scatterplot of SNP effects for the association of the Exposure on the Outcome after outlier removal'}
+
+##  Scatter Plot
+scatter_plot <- mr_scatter_plot(res_mrpresso, mrdat_mrpresso)
+scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + 
+  guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +
+  labs(x = paste0('SNP effect on ', exposure.name), 
+       y = paste0('SNP effect on ', outcome.name))  
+
+```
 
 ```{r write_out_MR_results, echo=F}
 write_csv(heterogenity, paste0(params$out, '_MR_heterogenity.csv'))

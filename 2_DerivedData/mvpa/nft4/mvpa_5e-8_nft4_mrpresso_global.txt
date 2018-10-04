@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-iEza8s	NcGANb	nft4	mvpa	2	211.26799716920183	<2e-04
+dPF0K5	efqpwz	nft4	mvpa	2	211.31125698413584	<2e-04

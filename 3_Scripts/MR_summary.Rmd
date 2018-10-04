@@ -96,25 +96,16 @@ mrpresso_5e6 <- map(grep('5e-6', filenames_mrpresso, value = T), read_tsv) %>%
   map(function(x){mutate(x,pval=as.character(pval))}) %>%
   bind_rows() %>% 
   mutate(pt = '5e-6')
-mroutliers_5e6 <- map(grep('5e-6', filenames_mrdat, value = T), read_csv) %>% 
-  map(summarise, exposure = nth(exposure, 1), outcome = nth(outcome, 1), outliers = sum(mrpresso_keep == F)) %>%
-  bind_rows() %>% 
-  mutate(pt = '5e-6')
-mrpresso_5e6 <- left_join(mrpresso_5e6, mroutliers_5e6, by = c('outcome', 'exposure', 'pt'))
 
 mrpresso_5e8 <- map(grep('5e-8', filenames_mrpresso, value = T), read_tsv) %>% 
   map(function(x){mutate(x,pval=as.character(pval))}) %>%
   bind_rows() %>% 
   mutate(pt = '5e-8')
-mroutliers_5e8 <- map(grep('5e-8', filenames_mrdat, value = T), read_csv) %>% 
-  map(summarise, exposure = nth(exposure, 1), outcome = nth(outcome, 1), outliers = sum(mrpresso_keep == F)) %>%
-  bind_rows() %>% 
-  mutate(pt = '5e-8')
-mrpresso_5e8 <- left_join(mrpresso_5e8, mroutliers_5e8, by = c('outcome', 'exposure', 'pt'))
 
 mrpresso <- bind_rows(mrpresso_5e6, mrpresso_5e8) %>% 
-  select(exposure, outcome, pt, outliers, RSSobs, pval) %>% 
-  mutate(violated = pval < 0.05)
+  select(exposure, outcome, pt, n_outliers, RSSobs, pval) %>% 
+  mutate(violated = pval < 0.05) %>% 
+  mutate(n_outliers = ifelse(is.na(n_outliers), 0, n_outliers))
 ```
 
 ### MR Results
@@ -184,11 +175,11 @@ resmrpresso <- bind_rows(resmrpresso_5e6, resmrpresso_5e8) %>%
 ```{r}
 
 res_noOutliers <- res %>% filter(exposure %nin% outcomes) %>% 
-  left_join(select(mrpresso, exposure, outcome, pt, outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
-  filter(!(violated == T & outliers > 0)) 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(!(violated == T & n_outliers > 0)) 
 
 presso_outliers <- resmrpresso %>% filter(exposure %nin% outcomes) %>% filter(method != 'mrpresso') %>% 
-  left_join(select(mrpresso, exposure, outcome, pt, outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
   filter(violated == T) %>% 
   mutate(mrpresso = TRUE)
 
@@ -206,7 +197,7 @@ res.out <- res_comb %>%
   select(-Signif, -b, -se) %>% 
   myspread(method, c(nsnp, pval, b.se)) %>% 
   rename(nsnp = IVW_nsnp) %>% 
-  select(exposure, outcome, pt, nsnp, outliers, mrpresso, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`, `Weighted mode_b.se`, `Weighted mode_pval`) %>% 
+  select(exposure, outcome, pt, nsnp, n_outliers, mrpresso, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`, `Weighted mode_b.se`, `Weighted mode_pval`) %>% 
   arrange(outcome, exposure)
 
 
@@ -231,7 +222,7 @@ res.plot <- res_comb %>%
   mutate(se = round(se, 2)) %>% 
   mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
   mutate(exposure2 = ifelse(is.na(mrpresso), exposure, paste0(exposure, '*'))) %>% 
-  select(-Signif, -outliers, -violated, -mrpresso) %>%
+  select(-Signif, -n_outliers, -violated, -mrpresso) %>%
   mutate(method = str_replace_all(method, pattern=" ", repl="_")) %>%
   myspread(method, c(nsnp, pval, b, se)) %>% 
   mutate(IVW_b = as.numeric(IVW_b)) %>%
