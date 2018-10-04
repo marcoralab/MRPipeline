@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+OUHGgJ	VeXaGi	load	smkukbb	1	859.9430148996915	5.2e-4

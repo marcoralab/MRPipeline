@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vqjrlt	40KyfA	vbiany	mvpa	0	105.52367256556509	0.9963
+Txn3QE	hK6jQB	vbiany	mvpa	0	105.52367256556509	0.9981

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vRI14U	s13kmb	load	mvpa	3	2567.148994443168	<2e-04
+3PICM0	ea43FE	load	mvpa	3	2567.148994443168	<2e-04

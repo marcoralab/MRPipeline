@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ecO4aT	IBgUta	load	tc	18	4664.998459106988	<4e-05

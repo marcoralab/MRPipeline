@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8KEZc1	oTOIcd	ab42	mvpa	1	640.5748977752856	<1e-04
+e1kJwe	0JyH9B	ab42	mvpa	1	640.5748977752856	<1e-04

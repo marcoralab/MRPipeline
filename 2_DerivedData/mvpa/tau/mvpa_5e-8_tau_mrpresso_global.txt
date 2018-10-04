@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DzJ6fH	GfPTk6	tau	mvpa	1	191.90761283873096	<0.001

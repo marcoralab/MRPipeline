@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+RgamDy	sdPsQI	tau	cpd	0	29.216196083639574	0.6082

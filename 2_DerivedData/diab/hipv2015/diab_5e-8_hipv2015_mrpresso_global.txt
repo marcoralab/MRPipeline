@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+RbsYOC	kTGLHO	hipv2015	diab	0	194.5238737156771	0.3713

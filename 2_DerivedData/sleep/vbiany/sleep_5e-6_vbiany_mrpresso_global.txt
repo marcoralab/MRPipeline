@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UZQu50	393gzm	vbiany	sleep	0	21.331289983304494	0.7

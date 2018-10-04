@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+3PWFhR	r0Sn2R	nft4	fish	1	513.5137676012218	<4e-05

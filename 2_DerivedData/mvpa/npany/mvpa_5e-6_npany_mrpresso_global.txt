@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BNp9ls	pEn8RO	npany	mvpa	1	272.05159577769354	<1e-04
+BKcvQ6	3i2Zeg	npany	mvpa	1	272.05159577769354	<1e-04

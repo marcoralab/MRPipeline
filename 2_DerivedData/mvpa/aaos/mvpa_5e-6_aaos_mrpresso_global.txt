@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ahpbTq	ZwOqmJ	aaos	mvpa	1	765.0720996364066	<1e-04
+KtJ2f1	bzVLR6	aaos	mvpa	1	765.0720996364066	<1e-04
