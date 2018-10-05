@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-PdrWj4,BRs4eg,hips,sociso,Inverse variance weighted (fixed effects),25,-3.2575280080064153,1.5129037261680762,0.03130588692338356
-PdrWj4,BRs4eg,hips,sociso,Weighted median,25,-2.2498353242113227,2.0032471595522674,0.26139747684419123
-PdrWj4,BRs4eg,hips,sociso,Weighted mode,25,-0.7630611513838303,3.291103741745947,0.8186156386227662
-PdrWj4,BRs4eg,hips,sociso,MR Egger,25,-5.103817640102559,8.116359430078745,0.535655704268512

@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-1SbmsK,QjxjVA,smkukbb,tau,Inverse variance weighted (fixed effects),10,-0.02762698267911201,0.012872203441628958,0.031852939006634134
-1SbmsK,QjxjVA,smkukbb,tau,Weighted median,10,-0.03067550774610251,0.018009098305233336,0.08850559898976422
-1SbmsK,QjxjVA,smkukbb,tau,Weighted mode,10,-0.03228002069763347,0.01847776762475453,0.11458945278386572
-1SbmsK,QjxjVA,smkukbb,tau,MR Egger,10,-0.07550362514602539,0.04801104616353256,0.1544490593550549

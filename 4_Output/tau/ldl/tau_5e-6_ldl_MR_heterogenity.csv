@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-H9AzMO,DWGmQg,ldl,tau,MR Egger,572.7829658806037,9,1.448093996627937e-117
-H9AzMO,DWGmQg,ldl,tau,Inverse variance weighted,720.1138858828438,10,3.0155611031065247e-148

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-aHL7in,szvp48,aaos,educ,MR Egger,3198.3349078434476,2894,5.2933077286981444e-5
-aHL7in,szvp48,aaos,educ,Inverse variance weighted,3201.7651607306484,2895,4.691994925293952e-5

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-K5xiPT,IGL6lU,hdl,aaos,MR Egger,107.50268708858475,28,2.978015808685048e-11
-K5xiPT,IGL6lU,hdl,aaos,Inverse variance weighted,159.68263646170217,29,5.261644050968692e-20

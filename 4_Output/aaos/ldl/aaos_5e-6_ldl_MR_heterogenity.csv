@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-SyIxm4,E2KH8Y,ldl,aaos,MR Egger,675.3259457250829,27,5.547211417930291e-125
-SyIxm4,E2KH8Y,ldl,aaos,Inverse variance weighted,764.944919998953,28,4.884498665560736e-143

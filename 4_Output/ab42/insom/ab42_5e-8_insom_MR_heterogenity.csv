@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-FezmaQ,iCVMV7,insom,ab42,MR Egger,1.8926063461545912,3,0.5949929654631116
-FezmaQ,iCVMV7,insom,ab42,Inverse variance weighted,2.9705746188076936,4,0.5627616828805956

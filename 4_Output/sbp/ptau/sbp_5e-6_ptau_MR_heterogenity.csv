@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-zsHL0J,AyLs7c,ptau,sbp,MR Egger,2184.5660615755532,2298,0.9546481180113072
-zsHL0J,AyLs7c,ptau,sbp,Inverse variance weighted,2187.481824557443,2299,0.9517538088091498

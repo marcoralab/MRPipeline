@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-3rUPKe,AHOs2a,hipv2015,sbp,MR Egger,2882.1660067262437,2686,0.004358506935858697
-3rUPKe,AHOs2a,hipv2015,sbp,Inverse variance weighted,2883.761901713189,2687,0.00426613259747983

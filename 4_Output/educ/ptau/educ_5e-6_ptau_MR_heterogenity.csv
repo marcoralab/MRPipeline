@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-FYAPqL,UVICUd,ptau,educ,MR Egger,2429.911455715715,2433,0.5138550575827623
-FYAPqL,UVICUd,ptau,educ,Inverse variance weighted,2434.312897823968,2434,0.49439919719751957

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-S51T92,anpLgf,hips,audit,MR Egger,57.76355571234178,59,0.521174092804179
-S51T92,anpLgf,hips,audit,Inverse variance weighted,59.197291022570454,60,0.5050394325637626

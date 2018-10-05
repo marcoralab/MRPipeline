@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-Byw60l,fNFsdR,sociso,tau,MR Egger,5.63299764936704,9,0.776012856652357
-Byw60l,fNFsdR,sociso,tau,Inverse variance weighted,5.727315704769551,10,0.8376290426403782

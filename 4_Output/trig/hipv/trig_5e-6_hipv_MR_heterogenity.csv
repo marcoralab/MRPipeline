@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-EM1diF,ErLsVz,hipv,trig,MR Egger,402.5640046769839,256,1.2950184067472417e-8
-EM1diF,ErLsVz,hipv,trig,Inverse variance weighted,407.31355814938536,257,6.664716220250951e-9

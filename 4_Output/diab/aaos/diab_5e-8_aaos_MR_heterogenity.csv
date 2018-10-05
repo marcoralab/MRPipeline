@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-95PA0u,yAJ5mV,aaos,diab,MR Egger,276.4950056867478,187,2.2682381781538042e-5
-95PA0u,yAJ5mV,aaos,diab,Inverse variance weighted,276.68218567744873,188,2.7020291632723323e-5

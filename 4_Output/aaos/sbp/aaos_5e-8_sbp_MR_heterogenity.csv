@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-THcoPp,RV04G3,sbp,aaos,MR Egger,69.49589544261244,16,1.2226656574074546e-8
-THcoPp,RV04G3,sbp,aaos,Inverse variance weighted,70.46869302647654,17,1.790767146610917e-8

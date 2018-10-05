@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-011qqu,zPBiRG,sleep,hipv,MR Egger,2.7756723755149664,7,0.9049500838687681
-011qqu,zPBiRG,sleep,hipv,Inverse variance weighted,2.8360027840084507,8,0.9442237487354308

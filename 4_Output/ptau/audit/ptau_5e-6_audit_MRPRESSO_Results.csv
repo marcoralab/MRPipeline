@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-TvVaBy,iOXshz,audit,ptau,Inverse variance weighted (fixed effects),16,-0.0412614590195262,0.00963014522249801,1.8305638726804186e-5
-TvVaBy,iOXshz,audit,ptau,Weighted median,16,-0.04179316315117836,0.015221764959254237,0.006039690667864925
-TvVaBy,iOXshz,audit,ptau,Weighted mode,16,-0.05336600784031395,0.023807152593256567,0.040536853059951576
-TvVaBy,iOXshz,audit,ptau,MR Egger,16,-0.05019555030324035,0.042544731734685724,0.25772806634646783

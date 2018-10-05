@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-8d2TbZ,DIzt21,sbp,hipv,MR Egger,78.1930803659202,24,1.1774356645599657e-7
-8d2TbZ,DIzt21,sbp,hipv,Inverse variance weighted,78.29461714273563,25,2.1062728450748843e-7

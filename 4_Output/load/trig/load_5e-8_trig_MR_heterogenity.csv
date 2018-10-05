@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-Pi7SiK,MsKOTy,trig,load,MR Egger,140.3789679970031,18,5.413008955760526e-21
-Pi7SiK,MsKOTy,trig,load,Inverse variance weighted,141.61881067778938,19,8.946359043979534e-21

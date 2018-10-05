@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-UjDM4L,K32JeV,alcc,aaos,MR Egger,49.04739584178447,49,0.4712256910335388
-UjDM4L,K32JeV,alcc,aaos,Inverse variance weighted,50.27621687230144,50,0.4624472899671727

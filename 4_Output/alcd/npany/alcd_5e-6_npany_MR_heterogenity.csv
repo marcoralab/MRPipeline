@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-dBZ12T,9w1qdF,npany,alcd,MR Egger,12.548928074578143,16,0.7054079200330631
-dBZ12T,9w1qdF,npany,alcd,Inverse variance weighted,12.677110113629423,17,0.7575188046402827

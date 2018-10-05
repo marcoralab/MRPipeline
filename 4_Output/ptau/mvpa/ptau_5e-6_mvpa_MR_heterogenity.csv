@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-XEfiV1,T9dKo0,mvpa,ptau,MR Egger,57.040402284544186,14,3.8492272285945877e-7
-XEfiV1,T9dKo0,mvpa,ptau,Inverse variance weighted,58.898503806776745,15,3.896572285988006e-7

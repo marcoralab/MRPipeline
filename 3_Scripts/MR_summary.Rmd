@@ -238,12 +238,6 @@ res.plot <- res_comb %>%
 ```{r , echo=FALSE}
 ## =========== DW Plots - p models =========== ##
 ## Plot LOAD results - IVW, all 
-res_comb %>% 
-  filter(outcome == c("load"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-
 res.load <- res.plot %>% 
   filter(outcome == 'load') %>% 
   arrange(-IVW_b) %>%
@@ -260,13 +254,6 @@ forest_plot_1_to_many(res.load,b="IVW_b",se="IVW_se",
 
 ### AAOS
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("aaos"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos.png', width = 8.5, height = 5.5, units = 'in')
-
 res.aaos <- res.plot %>% 
   filter(outcome == 'aaos') %>% 
   arrange(-IVW_b) %>%
@@ -284,13 +271,6 @@ forest_plot_1_to_many(res.aaos,b="IVW_b",se="IVW_se",
 
 ### Ab42
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("ab42"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
-
 res.ab42 <- res.plot %>% 
   filter(outcome == 'ab42') %>% 
   arrange(-IVW_b) %>%
@@ -404,13 +384,6 @@ forest_plot_1_to_many(res.nft4,b="IVW_b",se="IVW_se",
 
 ### HV 2017
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hipv"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
-
 res.hipv <- res.plot %>% 
   filter(outcome == 'hipv') %>% 
   arrange(-IVW_b) %>%
@@ -428,13 +401,6 @@ forest_plot_1_to_many(res.hipv,b="IVW_b",se="IVW_se",
 
 ### HV 2015
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hipv2015"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
-
 res.hipv2015 <- res.plot %>% 
   filter(outcome == 'hipv2015') %>% 
   arrange(-IVW_b) %>%
@@ -452,23 +418,23 @@ forest_plot_1_to_many(res.hipv2015,b="IVW_b",se="IVW_se",
 
 ### HS 2015
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hips"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
+res.hips<- res.plot %>% 
+  filter(outcome == 'hips') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hips, b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HS per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+
 ```
 
 ### VBI
 ```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("vbiany"), method == 'IVW') %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv.png', width = 8.5, height = 5.5, units = 'in')
-
 res.vbi <- res.plot %>% 
   filter(outcome == 'vbiany') %>% 
   arrange(-IVW_b) %>%

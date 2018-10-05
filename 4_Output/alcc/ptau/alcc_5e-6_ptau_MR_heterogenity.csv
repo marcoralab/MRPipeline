@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-wkTNiP,Vrbm5D,ptau,alcc,MR Egger,30.21681234276017,36,0.7396075565209199
-wkTNiP,Vrbm5D,ptau,alcc,Inverse variance weighted,30.50178916480267,37,0.7660819227426803

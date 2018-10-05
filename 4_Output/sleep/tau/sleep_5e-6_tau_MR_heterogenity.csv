@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-irS9YE,jmxa9o,tau,sleep,MR Egger,18.612872479971255,18,0.4160172565037512
-irS9YE,jmxa9o,tau,sleep,Inverse variance weighted,19.967945214066308,19,0.3965093748790659

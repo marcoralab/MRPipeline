@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-87eimw,0wZYRC,load,audit,MR Egger,99.58902074272864,55,2.2006634225453083e-4
-87eimw,0wZYRC,load,audit,Inverse variance weighted,105.58615902997704,56,6.930146891803135e-5

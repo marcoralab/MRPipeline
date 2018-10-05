@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-tRluyB,86Or5F,bmi,load,MR Egger,283.43940612221553,37,9.616368929666814e-40
-tRluyB,86Or5F,bmi,load,Inverse variance weighted,396.46684580963233,38,3.106454303564768e-61

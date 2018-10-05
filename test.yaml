@@ -11,4 +11,4 @@ Pthreshold: ['5e-6', '5e-8']
 
 ## LOAD as exposure
 ExposureCode: ['mvpa']
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+OutcomeCode: ['load']

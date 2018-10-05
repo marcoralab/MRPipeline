@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-qEKP8R,nOLuzl,dep,ab42,MR Egger,1.0674469380047826,3,0.784937756755347
-qEKP8R,nOLuzl,dep,ab42,Inverse variance weighted,1.6611348198010785,4,0.7977648245447645

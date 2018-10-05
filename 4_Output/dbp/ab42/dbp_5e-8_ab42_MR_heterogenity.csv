@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-K97MOL,5VRxnL,ab42,dbp,MR Egger,1375.8349694441472,1244,0.005109741470325859
-K97MOL,5VRxnL,ab42,dbp,Inverse variance weighted,1380.879930984119,1245,0.004107621842400555

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-CmlmFu,jY9n0Y,cpd,ab42,MR Egger,25.02702420863416,14,0.034301538968227
-CmlmFu,jY9n0Y,cpd,ab42,Inverse variance weighted,25.74380181016515,15,0.0408033660116455

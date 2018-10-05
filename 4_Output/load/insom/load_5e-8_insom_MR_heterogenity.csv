@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-4TYF2L,35kqFL,insom,load,MR Egger,44.49860182187007,41,0.32668660551793516
-4TYF2L,35kqFL,insom,load,Inverse variance weighted,45.38652089194507,42,0.33274084488148237

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-Rz5IiG,puc5A8,vbiany,diab,MR Egger,369.22549947028347,427,0.9798596862362368
-Rz5IiG,puc5A8,vbiany,diab,Inverse variance weighted,369.2258466394941,428,0.9815063271684783

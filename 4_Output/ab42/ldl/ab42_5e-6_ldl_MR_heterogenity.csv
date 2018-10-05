@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-fgGVY9,VAIn66,ldl,ab42,MR Egger,503.62791184228354,12,3.7452510866367627e-100
-fgGVY9,VAIn66,ldl,ab42,Inverse variance weighted,705.3847944794843,13,2.431662759027901e-142

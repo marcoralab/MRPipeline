@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-pNGOH7,fjP5eC,cpd,load,MR Egger,122.71068601699315,80,0.001519008673957488
-pNGOH7,fjP5eC,cpd,load,Inverse variance weighted,123.36840261459257,81,0.0016969894780861528

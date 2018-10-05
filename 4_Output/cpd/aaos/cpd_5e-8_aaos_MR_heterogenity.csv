@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-BAKmCy,GunFBW,aaos,cpd,MR Egger,17.54940289946857,19,0.5526994380039003
-BAKmCy,GunFBW,aaos,cpd,Inverse variance weighted,17.64054970681999,20,0.6110737461705057

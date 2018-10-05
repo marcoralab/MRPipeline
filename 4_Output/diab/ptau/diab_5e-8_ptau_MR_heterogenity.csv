@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-kxB2dO,3LJCHt,ptau,diab,MR Egger,198.39019019958974,185,0.2374694728016576
-kxB2dO,3LJCHt,ptau,diab,Inverse variance weighted,199.7158613006209,186,0.23308151336273247

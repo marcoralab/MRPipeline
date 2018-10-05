@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-4vaUmX,aW9zwC,diab,hipv,MR Egger,13.605915463070323,4,0.008665073500730994
-4vaUmX,aW9zwC,diab,hipv,Inverse variance weighted,17.978993459819204,5,0.002972847155820259

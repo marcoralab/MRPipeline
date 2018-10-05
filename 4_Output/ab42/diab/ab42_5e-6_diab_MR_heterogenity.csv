@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-c3u0hy,IbxPlx,diab,ab42,MR Egger,15.034514237689677,8,0.058477816357982874
-c3u0hy,IbxPlx,diab,ab42,Inverse variance weighted,17.32882462890788,9,0.043808820007323813

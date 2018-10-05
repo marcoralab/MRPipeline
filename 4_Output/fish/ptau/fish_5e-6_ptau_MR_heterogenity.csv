@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-ePzpwr,0895zP,ptau,fish,MR Egger,433.4643723594145,298,4.6756793933994814e-7
-ePzpwr,0895zP,ptau,fish,Inverse variance weighted,441.2388663382324,299,1.5764895990433467e-7

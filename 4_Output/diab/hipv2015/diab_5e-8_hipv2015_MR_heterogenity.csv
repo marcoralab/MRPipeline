@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-RbsYOC,kTGLHO,hipv2015,diab,MR Egger,191.5783693640932,183,0.3169303314039997
-RbsYOC,kTGLHO,hipv2015,diab,Inverse variance weighted,191.5814854422066,184,0.33558063127418214

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-WR5HWw,heA2ul,sleep,load,MR Egger,105.74012604463155,86,0.07307266802928
-WR5HWw,heA2ul,sleep,load,Inverse variance weighted,108.10352261104637,87,0.0622928508785019

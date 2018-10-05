@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-MbzwSS,4reagb,hips,educ,MR Egger,1160.9795000975198,1154,0.4368900676385939
-MbzwSS,4reagb,hips,educ,Inverse variance weighted,1163.705724804209,1155,0.42287528928663737

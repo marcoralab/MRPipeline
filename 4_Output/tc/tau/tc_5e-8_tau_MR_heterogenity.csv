@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-rtWXc4,JeGuIm,tau,tc,MR Egger,330.56499710857986,211,2.653387999379282e-7
-rtWXc4,JeGuIm,tau,tc,Inverse variance weighted,341.73735745994367,212,3.913335342447224e-8

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-71Nnkr,fp6Wsu,ptau,sleep,MR Egger,23.03435006813682,20,0.28711102592985666
-71Nnkr,fp6Wsu,ptau,sleep,Inverse variance weighted,23.128059891074287,21,0.33718868286875897

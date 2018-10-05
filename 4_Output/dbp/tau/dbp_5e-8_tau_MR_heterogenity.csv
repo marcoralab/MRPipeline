@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-QHH9BS,27IBTe,tau,dbp,MR Egger,1311.3789210827076,1244,0.0900438043409849
-QHH9BS,27IBTe,tau,dbp,Inverse variance weighted,1322.4872979976928,1245,0.06238543377427429

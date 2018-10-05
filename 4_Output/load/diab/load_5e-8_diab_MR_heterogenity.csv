@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-45ynTQ,KHBOYZ,diab,load,MR Egger,31.372384045379896,13,0.002973399273951943
-45ynTQ,KHBOYZ,diab,load,Inverse variance weighted,39.83071789989119,14,2.71098206727869e-4

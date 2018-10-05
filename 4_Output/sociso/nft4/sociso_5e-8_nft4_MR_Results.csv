@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-dOCPr7,rf0xlT,nft4,sociso,Inverse variance weighted (fixed effects),25,1.3871806073223476,0.753916302740843,0.0657731817298385
-dOCPr7,rf0xlT,nft4,sociso,Weighted median,25,1.4785381590614008,1.0709985072624955,0.16742564808485644
-dOCPr7,rf0xlT,nft4,sociso,Weighted mode,25,1.2321005111860899,1.5569951758405247,0.43650140833389217
-dOCPr7,rf0xlT,nft4,sociso,MR Egger,25,-0.2596483798535393,4.065927691225464,0.9496338203062011

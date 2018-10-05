@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-HSHOQM,G3BT8L,nft4,mvpa,MR Egger,292.24104489043896,148,1.6193302527703414e-11
-HSHOQM,G3BT8L,nft4,mvpa,Inverse variance weighted,304.0561376544268,149,1.1072077291847406e-12

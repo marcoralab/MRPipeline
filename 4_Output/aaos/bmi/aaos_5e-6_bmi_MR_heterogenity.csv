@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-BnMn7p,4xMt7s,bmi,aaos,MR Egger,174.9212939340641,30,2.1675054445703434e-22
-BnMn7p,4xMt7s,bmi,aaos,Inverse variance weighted,212.1629756503785,31,6.909296959693014e-29

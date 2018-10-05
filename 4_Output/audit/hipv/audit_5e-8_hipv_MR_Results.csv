@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-zCcaRB,sfN1Ip,hipv,audit,Inverse variance weighted (fixed effects),10,-0.1834992489030655,0.2635372174224716,0.48624504916321903
-zCcaRB,sfN1Ip,hipv,audit,Weighted median,10,-0.09204376410606094,0.3253852075012014,0.7772716614898173
-zCcaRB,sfN1Ip,hipv,audit,Weighted mode,10,-0.1174717218319421,0.37124893543680854,0.7588972487415989
-zCcaRB,sfN1Ip,hipv,audit,MR Egger,10,-0.08721985973040286,0.3975064376321942,0.8318197384734656

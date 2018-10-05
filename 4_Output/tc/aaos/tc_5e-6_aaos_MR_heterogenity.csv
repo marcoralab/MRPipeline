@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-ODj64b,qSPf8d,aaos,tc,MR Egger,1709.4047061239883,398,1.330689448273945e-161
-ODj64b,qSPf8d,aaos,tc,Inverse variance weighted,1739.7520261382772,399,2.323134502748694e-166

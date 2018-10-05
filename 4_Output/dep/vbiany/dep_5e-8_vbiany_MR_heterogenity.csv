@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-PBxx54,ePZluV,vbiany,dep,MR Egger,27.858023478849034,31,0.6284849077718557
-PBxx54,ePZluV,vbiany,dep,Inverse variance weighted,29.538466496592456,32,0.5917142796449869

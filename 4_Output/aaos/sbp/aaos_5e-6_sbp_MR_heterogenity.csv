@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-A0hubt,WeMCu3,sbp,aaos,MR Egger,193.3502950358752,49,4.87743416164126e-19
-A0hubt,WeMCu3,sbp,aaos,Inverse variance weighted,193.51790436253535,50,9.202605553059567e-19

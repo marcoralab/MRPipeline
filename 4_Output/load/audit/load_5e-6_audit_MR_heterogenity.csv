@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-nRt7Pb,GF1AAx,audit,load,MR Egger,192.17414227890688,86,4.3441634140457436e-10
-nRt7Pb,GF1AAx,audit,load,Inverse variance weighted,192.22182101846374,87,6.482951539058648e-10

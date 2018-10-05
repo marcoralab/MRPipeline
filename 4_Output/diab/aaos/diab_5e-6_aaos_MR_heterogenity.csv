@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-unQUH4,g34bw6,aaos,diab,MR Egger,606.031837371155,431,5.008666011339467e-8
-unQUH4,g34bw6,aaos,diab,Inverse variance weighted,606.1958009930199,432,5.830278934833897e-8

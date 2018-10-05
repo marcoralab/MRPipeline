@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-EPMvut,GPHmNo,bmi,hipv2015,MR Egger,6.3334093884565394,6,0.3868958613210972
-EPMvut,GPHmNo,bmi,hipv2015,Inverse variance weighted,32.101948849214565,7,3.888586444273934e-5

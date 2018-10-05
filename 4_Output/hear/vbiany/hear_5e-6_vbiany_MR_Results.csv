@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-3jvsDB,1RM5hB,vbiany,hear,Inverse variance weighted (fixed effects),128,-1.2959973291751758,0.8698945610954495,0.1362682408805182
-3jvsDB,1RM5hB,vbiany,hear,Weighted median,128,-0.7935378993027132,1.6160663565858966,0.623404863402465
-3jvsDB,1RM5hB,vbiany,hear,Weighted mode,128,0.19547493464928323,1.920971013432644,0.9191089330481197
-3jvsDB,1RM5hB,vbiany,hear,MR Egger,128,-3.336134871079623,2.082123504014692,0.1115988273419983

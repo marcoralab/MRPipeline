@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-gi3NiQ,bCA6Mu,smkukbb,hipv2015,MR Egger,70.59214595245874,9,1.1653458560260585e-11
-gi3NiQ,bCA6Mu,smkukbb,hipv2015,Inverse variance weighted,70.59823414031845,10,3.397886949851703e-11

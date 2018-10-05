@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-mNTezN,TrJSmu,trig,ab42,MR Egger,102.0203502257656,12,2.2360911765860045e-16
-mNTezN,TrJSmu,trig,ab42,Inverse variance weighted,118.61345052521612,13,3.7821918898144203e-19

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-ToGHiN,AKgNrm,alcd,aaos,MR Egger,50.63405179672474,53,0.5668103130503541
-ToGHiN,AKgNrm,alcd,aaos,Inverse variance weighted,50.89476240962356,54,0.594916778878292

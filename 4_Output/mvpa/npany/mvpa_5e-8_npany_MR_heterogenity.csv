@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-5SoEtg,5BGmY1,npany,mvpa,MR Egger,129.61177658280204,36,1.70066277283741e-12
-5SoEtg,5BGmY1,npany,mvpa,Inverse variance weighted,137.77551267360687,37,1.5804286959392695e-13

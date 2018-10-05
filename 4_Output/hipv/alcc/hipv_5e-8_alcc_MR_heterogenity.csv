@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-HBafFY,Q1z67m,alcc,hipv,MR Egger,19.595321001188143,7,0.006513421623999314
-HBafFY,Q1z67m,alcc,hipv,Inverse variance weighted,23.738862967140072,8,0.002534512933334114

@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-zvhpzU,BEcCff,insom,tau,Inverse variance weighted (fixed effects),11,-0.2362856191857196,0.11658163491836511,0.042684659424819985
-zvhpzU,BEcCff,insom,tau,Weighted median,11,-0.2270865293656005,0.1632096686076011,0.16411048489260152
-zvhpzU,BEcCff,insom,tau,Weighted mode,11,-0.5503117014655518,0.227707242700796,0.036262475017291226
-zvhpzU,BEcCff,insom,tau,MR Egger,11,-1.0290600365440326,0.3495466082932025,0.016380276221884378

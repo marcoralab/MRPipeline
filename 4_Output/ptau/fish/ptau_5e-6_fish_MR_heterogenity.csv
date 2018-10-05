@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-5l5ekI,aIVjzH,fish,ptau,MR Egger,39.36682021885997,14,3.200382433596749e-4
-5l5ekI,aIVjzH,fish,ptau,Inverse variance weighted,39.37941935846636,15,5.622895789414612e-4
