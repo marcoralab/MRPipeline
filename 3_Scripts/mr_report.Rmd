@@ -239,8 +239,8 @@ scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = elemen
 ```
 
 ```{r write_out_MR_results, echo=F}
-write_csv(heterogenity, paste0(params$out, '_MR_heterogenity.csv'))
-write_csv(mr_plei, paste0(params$out, '_MR_egger_plei.csv'))
-write_csv(res, paste0(params$out, '_MR_Results.csv'))
-write_csv(res_mrpresso, paste0(params$out, '_MRPRESSO_Results.csv'))
+heterogenity %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_heterogenity.csv'))
+mr_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_egger_plei.csv'))
+res %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_Results.csv'))
+res_mrpresso %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_Results.csv'))
 ```
