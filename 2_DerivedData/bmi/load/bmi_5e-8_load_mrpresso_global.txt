@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+vPMEdO	KMxUAD	load	bmi	5	4207.408295119791	<1.33333333333333e-05

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-TnGd1u,tHFOAo,tau,cpd,MR Egger,9.843042465882293,6,0.13141936569156146
+TnGd1u,tHFOAo,tau,cpd,MR Egger,9.843042465882297,6,0.1314193656915613
 TnGd1u,tHFOAo,tau,cpd,Inverse variance weighted,11.041066922108497,7,0.1368377058979837

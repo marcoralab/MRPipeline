@@ -1,5 +1,2 @@
 id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval
-Sh60g0,KcUQF8,aaos,audit,Inverse variance weighted (fixed effects),63,-0.41720441340305875,0.3018349610051158,0.16690203186119784
-Sh60g0,KcUQF8,aaos,audit,Weighted median,63,-0.15045427302671413,0.4466811150447644,0.7362472960387889
-Sh60g0,KcUQF8,aaos,audit,Weighted mode,63,-0.10794476249592577,0.9156184812530122,0.9065337629626976
-Sh60g0,KcUQF8,aaos,audit,MR Egger,63,-2.6326044123212555,0.7319203497413197,6.459296568519811e-4
+Sh60g0,KcUQF8,aaos,audit,mrpresso,NA,NA,NA,NA

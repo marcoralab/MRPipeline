@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+QumVPw	HPM5tv	ptau	educ	0	1131.683466538551	0.4541

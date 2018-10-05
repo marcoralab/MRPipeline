@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval
-vRI14U,s13kmb,load,mvpa,MR Egger,2199.4311577248614,29,0
-vRI14U,s13kmb,load,mvpa,Inverse variance weighted,2386.081616172501,30,0
+3PICM0,ea43FE,load,mvpa,MR Egger,2199.4311577248614,29,0
+3PICM0,ea43FE,load,mvpa,Inverse variance weighted,2386.081616172501,30,0
