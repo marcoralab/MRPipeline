@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+3jvsDB,1RM5hB,vbiany,hear,MR Egger,131.29245486315975,126,0.3554291303237078,2018-10-05
+3jvsDB,1RM5hB,vbiany,hear,Inverse variance weighted,132.515265320556,127,0.35090835095960576,2018-10-05

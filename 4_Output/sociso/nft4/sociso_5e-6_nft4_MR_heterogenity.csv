@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+TMLAN2,2laSgw,nft4,sociso,MR Egger,127.50863448822966,125,0.42084950859759834,2018-10-05
+TMLAN2,2laSgw,nft4,sociso,Inverse variance weighted,129.78170941842242,126,0.3905864242901612,2018-10-05

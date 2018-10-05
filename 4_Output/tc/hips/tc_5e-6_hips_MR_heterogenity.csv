@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+6SeVMA,DYVAtI,hips,tc,MR Egger,396.4311042383384,393,0.4420420241193991,2018-10-05
+6SeVMA,DYVAtI,hips,tc,Inverse variance weighted,396.51218935306326,394,0.4549982863749159,2018-10-05

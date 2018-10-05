@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MhL23P,V2cdVg,hipv2015,sociso,MR Egger,18.88979547843212,23,0.7076022527937255,2018-10-05
+MhL23P,V2cdVg,hipv2015,sociso,Inverse variance weighted,19.40480723819377,24,0.7300705229407023,2018-10-05

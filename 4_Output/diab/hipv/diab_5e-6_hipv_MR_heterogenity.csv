@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+iUwIA2,9gniKa,hipv,diab,MR Egger,561.3158141181802,429,1.706396777494783e-5,2018-10-05
+iUwIA2,9gniKa,hipv,diab,Inverse variance weighted,568.4422441508144,430,8.002481866903229e-6,2018-10-05

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+COZD53,IeAPD2,npany,ldl,MR Egger,341.3118344764293,205,7.096388798037171e-9,2018-10-05
+COZD53,IeAPD2,npany,ldl,Inverse variance weighted,352.0390434178511,206,9.741587076585254e-10,2018-10-05
