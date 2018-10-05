@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+mNTezN	TrJSmu	trig	ab42	3	137.7899675875368	<0.001

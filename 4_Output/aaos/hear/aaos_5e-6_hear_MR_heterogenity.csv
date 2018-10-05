@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+yld5GF,2xNexv,hear,aaos,MR Egger,76.75911563739425,56,0.03420366913930747,2018-10-05
+yld5GF,2xNexv,hear,aaos,Inverse variance weighted,76.76777659910542,57,0.0415237756597936,2018-10-05

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+YQp05R,joEFgD,mvpa,load,MR Egger,173.95316481574474,80,6.385762936639136e-9,2018-10-05
+YQp05R,joEFgD,mvpa,load,Inverse variance weighted,181.19186014404505,81,1.2411441507839571e-9,2018-10-05

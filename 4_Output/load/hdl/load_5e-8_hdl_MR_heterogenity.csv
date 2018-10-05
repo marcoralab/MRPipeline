@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+HGDsl4,xGhycZ,hdl,load,MR Egger,180.8949374184406,18,6.375812959354956e-29,2018-10-05
+HGDsl4,xGhycZ,hdl,load,Inverse variance weighted,227.41502068418652,19,1.1180626648245568e-37,2018-10-05

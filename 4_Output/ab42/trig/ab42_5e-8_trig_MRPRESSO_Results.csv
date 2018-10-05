@@ -1,0 +1,2 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+412JRH,Rsylut,trig,ab42,Inverse variance weighted (fixed effects),2,-0.43336673275629733,0.05915268718551677,2.3670123993638037e-13,2018-10-05

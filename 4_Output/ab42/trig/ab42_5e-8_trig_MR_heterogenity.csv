@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+412JRH,Rsylut,trig,ab42,MR Egger,44.377872316157685,3,1.2544861277967157e-9,2018-10-05
+412JRH,Rsylut,trig,ab42,Inverse variance weighted,44.409933764955625,4,5.273347182799135e-9,2018-10-05

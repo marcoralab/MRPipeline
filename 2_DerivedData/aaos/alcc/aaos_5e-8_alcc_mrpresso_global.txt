@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+LnwVI1	WhyLMi	alcc	aaos	0	19.250488048973274	0.199

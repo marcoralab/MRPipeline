@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+jNBTXY	vCPrgi	dep	load	1	117.35796091980585	0.0097
