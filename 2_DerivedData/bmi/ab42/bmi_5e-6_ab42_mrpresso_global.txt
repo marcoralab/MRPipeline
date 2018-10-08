@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WrLssO	7AXije	ab42	bmi	2	3742.595415131904	<1e-05

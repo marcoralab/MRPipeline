@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FYAPqL	UVICUd	ptau	educ	0	2546.3105731437136	0.37252999999999997
