@@ -26,7 +26,7 @@ if(nrow(miss.outcome) >= 1){
 } else {
   tibble(query_snp_rsid = NA, rsID = NA, chr = NA, ld.r2 = NA, Dprime = NA, 
          is_query_snp = NA, ref = NA, alt = NA) %>% 
-    write_csv(paste0(out, '_Proxys.txt'))
+    write_tsv(paste0(out, '_Proxys.txt'))
 }
 
 
