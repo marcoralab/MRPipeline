@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+jfqTSf,oqdDd5,vbiany,sociso,Inverse variance weighted (fixed effects),127,0.3772816082848445,0.5147504054956838,0.4635944965199335,2018-10-11
+jfqTSf,oqdDd5,vbiany,sociso,Weighted median,127,0.21075273041160644,0.784651387614746,0.7882420558311315,2018-10-11
+jfqTSf,oqdDd5,vbiany,sociso,Weighted mode,127,-0.813831806150688,1.8737039852896535,0.6647816551959599,2018-10-11
+jfqTSf,oqdDd5,vbiany,sociso,MR Egger,127,-1.4942410307568195,2.1858983947254753,0.4955042747222388,2018-10-11

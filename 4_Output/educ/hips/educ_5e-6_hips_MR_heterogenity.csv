@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+I4JFsz,dmJSWI,hips,educ,MR Egger,2592.9082630770276,2747,0.9825736291227326,2018-10-11
+I4JFsz,dmJSWI,hips,educ,Inverse variance weighted,2595.7299272051314,2748,0.9814260215664647,2018-10-11

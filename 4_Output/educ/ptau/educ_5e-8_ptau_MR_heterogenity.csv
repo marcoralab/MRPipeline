@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+QumVPw,HPM5tv,ptau,educ,MR Egger,1064.1783953213244,1069,0.535860339213097,2018-10-11
+QumVPw,HPM5tv,ptau,educ,Inverse variance weighted,1064.9127854671926,1070,0.5381312522786211,2018-10-11

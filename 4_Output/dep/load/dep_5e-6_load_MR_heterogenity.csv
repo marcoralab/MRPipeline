@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+FRmf32,gIFgDS,load,dep,MR Egger,151.89903293505137,148,0.39614270258841644,2018-10-11
+FRmf32,gIFgDS,load,dep,Inverse variance weighted,152.6220427607005,149,0.40257148971116313,2018-10-11

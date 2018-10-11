@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+41vsPU,VTd2DH,tau,tc,MR Egger,489.99164927820675,333,4.362321878824842e-8,2018-10-11
+41vsPU,VTd2DH,tau,tc,Inverse variance weighted,494.5951004518993,334,2.4726793283040123e-8,2018-10-11

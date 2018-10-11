@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+QtuUJE,GllCoR,hipv2015,fish,MR Egger,322.2243252295752,306,0.25097650849643094,2018-10-11
+QtuUJE,GllCoR,hipv2015,fish,Inverse variance weighted,325.89433084616456,307,0.21941153460967758,2018-10-11

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+GFSSow,bgtUjA,vbiany,tc,MR Egger,359.3493800430503,393,0.887320251022429,2018-10-11
+GFSSow,bgtUjA,vbiany,tc,Inverse variance weighted,360.2193432969989,394,0.8879468601572315,2018-10-11

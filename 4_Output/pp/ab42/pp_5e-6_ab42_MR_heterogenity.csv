@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+79tuDu,LkZUya,ab42,pp,MR Egger,2385.2960440885645,1789,7.313971311790185e-20,2018-10-11
+79tuDu,LkZUya,ab42,pp,Inverse variance weighted,2385.506700458458,1790,8.238012865232741e-20,2018-10-11

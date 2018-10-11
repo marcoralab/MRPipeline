@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+1zTume,xsl6mT,hipv,hear,MR Egger,26.28458566429579,33,0.7901087419069394,2018-10-11
+1zTume,xsl6mT,hipv,hear,Inverse variance weighted,26.950446129090935,34,0.7995169468004537,2018-10-11

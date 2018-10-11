@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Z8jolA,anS9cP,hips,sociso,MR Egger,127.14505614169013,125,0.42974757214032,2018-10-11
+Z8jolA,anS9cP,hips,sociso,Inverse variance weighted,127.1519524509344,126,0.4544895511066959,2018-10-11
