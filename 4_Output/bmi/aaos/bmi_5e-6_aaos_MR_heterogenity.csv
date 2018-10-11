@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-B2kzK3,o1ofPl,aaos,bmi,MR Egger,4539.189412270923,3299,5.3082567302281846e-43,2018-10-07
-B2kzK3,o1ofPl,aaos,bmi,Inverse variance weighted,4542.616700718097,3300,3.891034959247673e-43,2018-10-07

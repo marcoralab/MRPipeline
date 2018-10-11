@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ec8Ubp,CEQkvV,hips,sleep,MR Egger,13.780880602129095,23,0.9329745741048185,2018-10-05
-ec8Ubp,CEQkvV,hips,sleep,Inverse variance weighted,15.779995075684452,24,0.8958528532074836,2018-10-05

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Cdch6b,2USMX3,hipv,fish,MR Egger,195.21788188082596,106,2.994662301959953e-7,2018-10-05
-Cdch6b,2USMX3,hipv,fish,Inverse variance weighted,200.42414275791896,107,1.1806454178181049e-7,2018-10-05

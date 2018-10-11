@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AVuCZI,nVfCBJ,hipv,educ,MR Egger,1387.1991354734246,1175,1.647372960197162e-5,2018-10-08
-AVuCZI,nVfCBJ,hipv,educ,Inverse variance weighted,1388.1504466409508,1176,1.6653273121574874e-5,2018-10-08

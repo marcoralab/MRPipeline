@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-5hTeAA,tlwTN7,aaos,educ,MR Egger,1291.0790014738632,1200,0.03380406327118375,2018-10-05
-5hTeAA,tlwTN7,aaos,educ,Inverse variance weighted,1299.941037085239,1201,0.023886633654740932,2018-10-05

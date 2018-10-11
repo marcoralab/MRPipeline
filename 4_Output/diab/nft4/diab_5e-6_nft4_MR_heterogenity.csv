@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HzgFnG,Whio8P,nft4,diab,MR Egger,421.10726234598474,427,0.5713211433717478,2018-10-05
-HzgFnG,Whio8P,nft4,diab,Inverse variance weighted,421.56531355740043,428,0.5785664955937924,2018-10-05

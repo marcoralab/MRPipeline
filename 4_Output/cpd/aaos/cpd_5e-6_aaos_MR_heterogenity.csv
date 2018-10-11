@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CH0fO4,ixewrk,aaos,cpd,MR Egger,57.83853009333296,51,0.23749517330887523,2018-10-05
-CH0fO4,ixewrk,aaos,cpd,Inverse variance weighted,58.68291684617376,52,0.24386163190890786,2018-10-05

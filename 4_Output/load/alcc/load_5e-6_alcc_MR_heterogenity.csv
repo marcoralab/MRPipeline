@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-e6AODz,ASGjH9,alcc,load,MR Egger,91.26903227518272,69,0.03765338332728976,2018-10-05
-e6AODz,ASGjH9,alcc,load,Inverse variance weighted,91.41708176370334,70,0.04383769472504501,2018-10-05

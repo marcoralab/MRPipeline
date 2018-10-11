@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QCJhml,CTFE9E,npany,sociso,MR Egger,18.39370852123372,23,0.7357974956511413,2018-10-05
-QCJhml,CTFE9E,npany,sociso,Inverse variance weighted,18.42376485938446,24,0.78198125951566555,2018-10-05

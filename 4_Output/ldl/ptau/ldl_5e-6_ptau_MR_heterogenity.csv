@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EPkDxL,41PBkA,ptau,ldl,MR Egger,444.6886148351398,280,1.2845679925251812e-9,2018-10-05
-EPkDxL,41PBkA,ptau,ldl,Inverse variance weighted,457.59014885423,281,1.3310220075030435e-10,2018-10-05

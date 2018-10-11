@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-akYCMc,KOZqR3,bmi,nft4,MR Egger,34.60754670357735,6,5.133485531576098e-6,2018-10-05
-akYCMc,KOZqR3,bmi,nft4,Inverse variance weighted,57.90707725212293,7,3.9454688157857944e-10,2018-10-05

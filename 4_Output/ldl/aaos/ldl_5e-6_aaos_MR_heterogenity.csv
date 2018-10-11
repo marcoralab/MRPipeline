@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oPa48e,TIXkAz,aaos,ldl,MR Egger,1532.0691549496757,316,1.4878050266280897e-158,2018-10-05
-oPa48e,TIXkAz,aaos,ldl,Inverse variance weighted,1576.1421944883339,317,7.629825850451172e-166,2018-10-05

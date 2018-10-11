@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-KJ08HG,FLaUAT,dep,npany,MR Egger,0.30778773050991476,2,0.857363012187417,2018-10-05
-KJ08HG,FLaUAT,dep,npany,Inverse variance weighted,1.0183113757276803,3,0.7968212627319488,2018-10-05

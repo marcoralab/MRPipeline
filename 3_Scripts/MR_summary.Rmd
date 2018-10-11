@@ -250,6 +250,7 @@ forest_plot_1_to_many(res.load,b="IVW_b",se="IVW_se",
                       xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### AAOS
@@ -266,7 +267,7 @@ forest_plot_1_to_many(res.aaos,b="IVW_b",se="IVW_se",
                       xlab="HR for AAOS per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### Ab42
@@ -283,7 +284,7 @@ forest_plot_1_to_many(res.ab42,b="IVW_b",se="IVW_se",
                       xlab="Estimate for CSF Ab42 per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### NP any
@@ -307,7 +308,7 @@ forest_plot_1_to_many(res.npany,b="IVW_b",se="IVW_se",
                       xlab="OR for Neuritic Plaques per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/NP_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### Ptau
@@ -331,7 +332,7 @@ forest_plot_1_to_many(res.ptau,b="IVW_b",se="IVW_se",
                       xlab="Estimate for CSF Ptau per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### Tau
@@ -352,10 +353,10 @@ forest_plot_1_to_many(res.tau,b="IVW_b",se="IVW_se",
                       exponentiate=F,ao_slc=F, by = NULL,
                       TraitM="exposure2", col1_title="Risk factor",
                       trans="identity", 
-                      xlab="Estimate for NFT per SD increase in risk factor (95% confidence interval)", 
+                      xlab="Estimate for CSF Tau per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### ntf4
@@ -376,10 +377,10 @@ forest_plot_1_to_many(res.nft4,b="IVW_b",se="IVW_se",
                       exponentiate=F,ao_slc=F, by = NULL,
                       TraitM="exposure2", col1_title="Risk factor",
                       trans="identity", 
-                      xlab="Estimate for CSF Ptau per SD increase in risk factor (95% confidence interval)", 
+                      xlab="Estimate for NFT per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/nft_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### HV 2017
@@ -396,7 +397,7 @@ forest_plot_1_to_many(res.hipv,b="IVW_b",se="IVW_se",
                       xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### HV 2015
@@ -413,7 +414,7 @@ forest_plot_1_to_many(res.hipv2015,b="IVW_b",se="IVW_se",
                       xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv2015_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### HS 2015
@@ -430,7 +431,7 @@ forest_plot_1_to_many(res.hips, b="IVW_b",se="IVW_se",
                       xlab="Estimate for HS per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/HS_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ### VBI
@@ -447,7 +448,7 @@ forest_plot_1_to_many(res.vbi,b="IVW_b",se="IVW_se",
                       xlab="OR for VBI per SD increase in risk factor (95% confidence interval)", 
                       addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
                       addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
-
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/vbi_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
 ## Plot load results with all MR models

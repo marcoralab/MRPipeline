@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-iMIPHi,FPrpSm,hipv,dbp,MR Egger,3528.3516249328995,3012,1.350008788168745e-10,2018-10-07
-iMIPHi,FPrpSm,hipv,dbp,Inverse variance weighted,3543.6055608106158,3013,4.607963061066638e-11,2018-10-07

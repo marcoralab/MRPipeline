@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-kniTCC,BRIIK6,npany,fish,MR Egger,236.68839996016487,122,2.357404498234583e-9,2018-10-05
-kniTCC,BRIIK6,npany,fish,Inverse variance weighted,236.9945858994057,123,3.0741529865451152e-9,2018-10-05

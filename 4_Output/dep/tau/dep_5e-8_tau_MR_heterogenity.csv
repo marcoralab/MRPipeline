@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-wseQVk,UAGS47,tau,dep,MR Egger,14.702145068647285,26,0.9625408887078762,2018-10-05
-wseQVk,UAGS47,tau,dep,Inverse variance weighted,21.125861024439505,27,0.7803579986627098,2018-10-05

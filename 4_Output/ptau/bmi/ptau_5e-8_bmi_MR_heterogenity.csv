@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-X7EQrt,YoH02E,bmi,ptau,MR Egger,92.61208189204622,4,3.668246752360361e-19,2018-10-05
-X7EQrt,YoH02E,bmi,ptau,Inverse variance weighted,101.05704084136534,5,3.164015915882805e-20,2018-10-05

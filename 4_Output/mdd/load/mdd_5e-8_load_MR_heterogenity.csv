@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-C9SC6L,aizWni,load,mdd,MR Egger,69.1476796982863,42,0.005218202792522377,2018-10-05
-C9SC6L,aizWni,load,mdd,Inverse variance weighted,69.29782632510268,43,0.006707815019172231,2018-10-05

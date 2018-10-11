@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Ho19xR,fcOrkN,hipv2015,educ,MR Egger,1225.85195003759,1152,0.06416782015723688,2018-10-05
-Ho19xR,fcOrkN,hipv2015,educ,Inverse variance weighted,1226.7207110919883,1153,0.0645774908191585,2018-10-05
