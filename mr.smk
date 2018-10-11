@@ -142,7 +142,7 @@ rule html_Report:
         Pthreshold = "{Pthreshold}",
     shell:
         "R -e 'rmarkdown::render("
-        """"{input.script}", output_file = "{output}", output_dir = "{params.output_dir}", \
+        """"{input.script}", clean = TRUE, intermediates_dir = "{params.output_dir}", output_file = "{output}", output_dir = "{params.output_dir}", \
 params = list(rwd = "{params.rwd}", \
 traits = "{input.traits}", \
 exposure.snps = "{input.ExposureSnps}", \
