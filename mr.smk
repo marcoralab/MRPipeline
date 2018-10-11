@@ -16,10 +16,25 @@ DataOut = config['DataOut']
 
 localrules: all, FindProxySnps
 
+# Filter forbidden wild card combinations
+## https://stackoverflow.com/questions/41185567/how-to-use-expand-in-snakemake-when-some-particular-combinations-of-wildcards-ar
+def filter_combinator(combinator, blacklist):
+    def filtered_combinator(*args, **kwargs):
+        for wc_comb in combinator(*args, **kwargs):
+            # Use frozenset instead of tuple
+            # in order to accomodate
+            # unpredictable wildcard order
+            if frozenset(wc_comb) not in blacklist:
+                yield wc_comb
+    return filtered_combinator
+
+forbidden = {frozenset(wc_comb.items()) for wc_comb in config["missing"]}
+filtered_product = filter_combinator(product, forbidden)
+
 rule all:
     input:
         expand('4_Output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
-        expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
+        expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
 
 rule clump:
     input: DataIn + '{ExposureCode}_GWAS.Processed.gz'

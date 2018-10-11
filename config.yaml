@@ -3,7 +3,7 @@
 ## For running on cluster
 ## find . -name "*stdout" -type f -delete
 ## find . -name "*stderr" -type f -delete
-#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going 
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 2000 --max-jobs-per-second 1 --keep-going
 
 DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/"
@@ -15,3 +15,40 @@ Pthreshold: ['5e-6', '5e-8']
 ## LOAD as outcome
 ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
 OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+
+## Forbidden wildcard combinations
+missing : [
+   {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "insom", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
+ ]
