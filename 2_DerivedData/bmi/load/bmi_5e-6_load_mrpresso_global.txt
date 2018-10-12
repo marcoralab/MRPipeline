@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KR7jVH	6KmGae	load	bmi	8	7233.2879783233975	<1e-05

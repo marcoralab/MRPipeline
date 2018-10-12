@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aHL7in	szvp48	aaos	educ	1	3285.7592891977674	1e-4

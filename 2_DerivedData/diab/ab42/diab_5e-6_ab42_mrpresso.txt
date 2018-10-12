@@ -1,10 +1,10 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate          Sd     T-stat
 1 beta.exposure               Raw   -0.0008166047 0.004544716 -0.1796822
-2 beta.exposure Outlier-corrected              NA          NA         NA
+2 beta.exposure Outlier-corrected    0.0005091506 0.004419665  0.1152012
     P-value
 1 0.8574917
-2        NA
+2 0.9083429
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 476.7359
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0102
+[1] 0.01132
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -31,7 +31,7 @@ $`MR-PRESSO results`$`Outlier Test`
 12  3.498133e-05       1
 13  1.107337e-06       1
 14  1.696646e-04       1
-15  5.378127e-04 0.06512
+15  5.378127e-04 0.04884
 16  2.841499e-05       1
 17  4.725687e-06       1
 18  5.816603e-06       1
@@ -314,7 +314,7 @@ $`MR-PRESSO results`$`Outlier Test`
 295 1.144476e-05       1
 296 7.082046e-05       1
 297 3.241934e-05       1
-298 2.090008e-04  0.7326
+298 2.090008e-04 0.86284
 299 4.477151e-06       1
 300 2.663230e-04       1
 301 5.628640e-05       1
@@ -373,7 +373,7 @@ $`MR-PRESSO results`$`Outlier Test`
 354 3.566294e-05       1
 355 1.161586e-05       1
 356 4.124986e-06       1
-357 1.263528e-03 0.06512
+357 1.263528e-03 0.01628
 358 2.605925e-07       1
 359 7.653870e-05       1
 360 2.369315e-06       1
@@ -406,7 +406,7 @@ $`MR-PRESSO results`$`Outlier Test`
 387 7.107966e-06       1
 388 1.195588e-07       1
 389 5.658573e-06       1
-390 1.808677e-04   0.814
+390 1.808677e-04       1
 391 9.961565e-05       1
 392 2.744122e-07       1
 393 1.426546e-05       1
@@ -427,13 +427,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] "No significant outliers"
+[1]  15 357
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
-[1] NA
+beta.exposure 
+    -260.3857 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] NA
+[1] 0.0684
 
 
 

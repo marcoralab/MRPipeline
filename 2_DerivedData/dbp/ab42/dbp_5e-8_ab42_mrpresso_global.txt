@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-K97MOL	5VRxnL	ab42	dbp	0	1421.864317265605	0.0029733333333333335
+HCJMnk	N7gHVO	ab42	dbp	0	1421.864317265605	0.00332

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-I4JFsz	dmJSWI	hips	educ	0	2682.4587393729953	0.97708

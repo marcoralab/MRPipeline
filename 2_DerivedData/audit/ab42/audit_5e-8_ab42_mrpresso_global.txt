@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-22pVAI	xO93bk	ab42	audit	0	10.660942828074331	0.25
+FX9PHC	Asr25Z	ab42	audit	0	10.660942828074331	0.257

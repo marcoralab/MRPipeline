@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-erndhd	8xmlRP	ptau	trig	2	392.34027896853155	<1e-04
+xnGwwV	uYxfNx	ptau	trig	2	392.34027896853155	<1e-04

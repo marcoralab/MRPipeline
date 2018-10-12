@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jsZJJy	QcdPRS	vbiany	fish	0	102.47751696636345	0.9451
+huGeyy	gdSMxi	vbiany	fish	0	102.47751696636345	0.9445

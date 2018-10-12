@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-VzmAi0	vqcH0O	hips	insom	0	26.609720617025136	0.7992
+KBiNhP	NhrNMU	hips	insom	0	26.609720617025136	0.8056

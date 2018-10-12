@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MlOFw0,iZSlXb,ptau,fish,MR Egger,226.62854755976144,111,6.20356565815054e-10,2018-10-11
-MlOFw0,iZSlXb,ptau,fish,Inverse variance weighted,228.38025174758673,112,5.659164890638775e-10,2018-10-11
+KAOXy7,IptxRI,ptau,fish,MR Egger,226.62854755976144,111,6.20356565815054e-10,2018-10-11
+KAOXy7,IptxRI,ptau,fish,Inverse variance weighted,228.38025174758673,112,5.659164890638775e-10,2018-10-11

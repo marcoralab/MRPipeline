@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-41vsPU	VTd2DH	tau	tc	2	520.7375030772098	<4e-05
+kM0fKN	g5S4Tz	tau	tc	2	520.7375030772098	<4e-05

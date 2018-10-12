@@ -8,6 +8,6 @@ $`MR-PRESSO results`$RSSobs
 [1] 42.32572
 
 $`MR-PRESSO results`$Pvalue
-[1] 0.8266
+[1] 0.8248
 
 

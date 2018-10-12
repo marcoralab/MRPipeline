@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-unQUH4	g34bw6	aaos	diab	612.5438678423844	<4e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FlbA1T	VCkYwV	aaos	diab	0	612.5438678423844	<4e-05

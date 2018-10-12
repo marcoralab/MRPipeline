@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9xO6Fx	3oID6K	hipv2015	sleep	0	29.446376053584977	0.374
+ealcvZ	5WcjnD	hipv2015	sleep	0	29.446376053584977	0.393

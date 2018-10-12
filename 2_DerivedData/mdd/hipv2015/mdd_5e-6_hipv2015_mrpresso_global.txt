@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3442wO	nkfDFS	hipv2015	mdd	0	196.60252122550202	0.2631
+fsxm12	EMeCNR	hipv2015	mdd	0	196.60252122550202	0.2698

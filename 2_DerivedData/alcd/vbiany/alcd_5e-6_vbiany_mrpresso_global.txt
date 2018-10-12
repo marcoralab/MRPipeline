@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-hhzUjI	lKna7Y	vbiany	alcd	0	11.19554786694879	0.935
+466fZF	gPPHtw	vbiany	alcd	0	11.19554786694879	0.933

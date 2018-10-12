@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-nT2dk4	mga7VG	aaos	mdd	54.50866712847106	0.2444
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fydcf1	n7zDcR	aaos	mdd	0	54.50866712847106	0.2472

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7EULaj	cHH4IQ	vbiany	diab	0	149.4663537365906	0.9861
+2u3Cas	2KlvNq	vbiany	diab	0	149.4663537365906	0.9857

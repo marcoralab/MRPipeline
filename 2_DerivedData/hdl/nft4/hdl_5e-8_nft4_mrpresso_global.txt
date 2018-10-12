@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aN73FF	KUOZJD	nft4	hdl	4	498.05280333603554	<1e-04
+d1G7wB	rKWWMG	nft4	hdl	4	498.05280333603554	<1e-04

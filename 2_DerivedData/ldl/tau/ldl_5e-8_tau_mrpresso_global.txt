@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4FNPu4	Wy7gPy	tau	ldl	1	327.9853927958491	<1e-04
+0tgtnb	WHh1Q7	tau	ldl	2	327.9853927958491	<1e-04

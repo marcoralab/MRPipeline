@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YMoO02	WktCYJ	hips	bmi	0	3175.620360949453	0.92666

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-XWurV4,icrjwu,hipv2015,dep,MR Egger,136.8115456483764,140,0.5604388971533658,2018-10-11
-XWurV4,icrjwu,hipv2015,dep,Inverse variance weighted,140.0130183990369,141,0.5076494645496746,2018-10-11
+XBz4cz,ZCCJH1,hipv2015,dep,MR Egger,136.8115456483764,140,0.5604388971533658,2018-10-11
+XBz4cz,ZCCJH1,hipv2015,dep,Inverse variance weighted,140.0130183990369,141,0.5076494645496746,2018-10-11

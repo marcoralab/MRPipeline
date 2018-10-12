@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mO63ww	tEOLYq	npany	trig	2	268.92710907219015	<1e-04
+6CtOwk	MVIPIy	npany	trig	2	268.92710907219015	<1e-04

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yjT4AX	4dhRta	nft4	hear	0	114.43870279607144	0.912
+rAsk9U	Gr8oip	nft4	hear	0	114.43870279607144	0.9096

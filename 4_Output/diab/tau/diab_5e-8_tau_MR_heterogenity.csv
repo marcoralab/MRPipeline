@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-8Vv41y,IbgTKo,tau,diab,MR Egger,186.1053602915681,174,0.25143085897993644,2018-10-11
-8Vv41y,IbgTKo,tau,diab,Inverse variance weighted,186.23869691809261,175,0.26638185163499145,2018-10-11
+EOb2qR,TpbGzF,tau,diab,MR Egger,186.1053602915681,174,0.25143085897993644,2018-10-11
+EOb2qR,TpbGzF,tau,diab,Inverse variance weighted,186.23869691809261,175,0.26638185163499145,2018-10-11

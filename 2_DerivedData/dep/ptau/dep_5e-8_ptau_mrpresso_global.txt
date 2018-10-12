@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9u9dcM	vLbaVL	ptau	dep	0	22.211639598259204	0.827
+dF2GWv	rfGbx2	ptau	dep	0	22.211639598259204	0.824

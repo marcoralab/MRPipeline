@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-fU6Ddg	3UQY00	hipv	fish	1	430.6058396062684	2.8e-4
+JicNFG	CTzlb0	hipv	fish	1	430.6058396062684	2e-4

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3jvsDB	1RM5hB	vbiany	hear	0	138.0222449104995	0.3667
+Tb2xld	DpTNja	vbiany	hear	0	138.0222449104995	0.375

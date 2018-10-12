@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-2fKJ58	p8c19N	load	dbp	3	2045.4055466006782	<1.33333333333333e-05
+KeHv6f	1S910F	load	dbp	3	2045.4055466006782	<1.33333333333333e-05

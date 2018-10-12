@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Jc64h4	rokWUN	tau	alcc	0	42.80687447842609	0.3164
+IBDKPA	Nvabv1	tau	alcc	0	42.80687447842609	0.3206

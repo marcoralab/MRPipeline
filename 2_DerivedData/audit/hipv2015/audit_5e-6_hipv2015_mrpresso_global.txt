@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3uqlKL	rzFde3	hipv2015	audit	0	63.99039868521952	0.4442
+j27fnl	nAmtlh	hipv2015	audit	0	63.99039868521952	0.4496

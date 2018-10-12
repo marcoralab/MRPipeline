@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FRmf32	gIFgDS	load	dep	0	161.6421039386058	0.4517
+x9kiks	Ss2Atd	load	dep	0	161.6421039386058	0.4546

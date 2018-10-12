@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-KQiPgQ	6hAbbD	aaos	bmi	2522.9619239954764	<1.33333333333333e-05
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+e2G8eI	vBFgmI	aaos	bmi	1	2522.9619239954764	<1.33333333333333e-05

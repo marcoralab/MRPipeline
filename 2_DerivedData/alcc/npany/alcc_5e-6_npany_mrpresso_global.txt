@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-h0pSUz	hd7oT4	npany	alcc	0	49.936548625445774	0.6214
+oATvsd	HuGy6J	npany	alcc	0	49.936548625445774	0.6302

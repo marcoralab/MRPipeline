@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vzgwe4	pxhwzd	hipv2015	mdd	0	34.91295613765662	0.8984
+47bjdV	7ISWTf	hipv2015	mdd	0	34.91295613765662	0.8936

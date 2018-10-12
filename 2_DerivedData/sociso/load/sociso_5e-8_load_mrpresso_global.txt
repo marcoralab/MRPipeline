@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-nWOBS2	KBe7CS	load	sociso	2	54.174351732438815	0.003
+UyPOHr	MhG9Rk	load	sociso	2	54.174351732438815	0.001

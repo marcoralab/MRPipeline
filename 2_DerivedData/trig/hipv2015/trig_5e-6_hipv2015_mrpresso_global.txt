@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pULA84	p1mtJD	hipv2015	trig	1	352.1199238891818	2e-4
+sSFr5a	BXLFvf	hipv2015	trig	1	352.1199238891818	1e-4

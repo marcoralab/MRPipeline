@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PdrWj4	BRs4eg	hips	sociso	0	18.601167831055083	0.839
+QpiNjW	NmEmIv	hips	sociso	0	18.601167831055083	0.855

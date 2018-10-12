@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-nbjN4f	AzflWa	hips	dbp	0	3052.739299025279	0.55615

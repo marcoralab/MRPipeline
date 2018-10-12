@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mvTXec	yrG6Z3	ab42	sleep	0	10.490245059294471	0.965
+8reqwX	zxCAPz	ab42	sleep	0	10.490245059294471	0.952

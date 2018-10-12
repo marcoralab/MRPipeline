@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SiYoeQ	ZVdNJH	aaos	hdl	4	1351.072373184258	<1e-04
+wrfo4L	gefTPW	aaos	hdl	4	1351.072373184258	<1e-04

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SfBkzC	ssE9ti	vbiany	trig	0	268.7541601038974	0.8899
+qsk1yU	PCFkH2	vbiany	trig	0	268.7541601038974	0.8938

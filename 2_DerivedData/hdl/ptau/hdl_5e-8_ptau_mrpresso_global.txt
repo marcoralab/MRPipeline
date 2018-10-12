@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8CGvqE	JS7qOc	ptau	hdl	3	392.16213261952163	<1e-04
+xvhnao	uO2z2t	ptau	hdl	3	392.16213261952163	<1e-04
