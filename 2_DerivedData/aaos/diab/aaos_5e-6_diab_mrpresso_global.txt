@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pkvzBq	X7nkm1	diab	aaos	2	78.87101420199538	<0.001
+auedB3	oHTjMA	diab	aaos	2	78.87101420199538	<0.001

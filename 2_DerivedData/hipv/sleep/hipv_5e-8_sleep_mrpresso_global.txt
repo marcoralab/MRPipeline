@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-011qqu	zPBiRG	sleep	hipv	3.827996346465737	0.926
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+O9upBE	21n0k8	sleep	hipv	0	3.827996346465737	0.943

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+DhubvQ,hMd3V5,mvpa,aaos,MR Egger,81.36845650963893,57,0.018742460474920418,2018-10-12
+DhubvQ,hMd3V5,mvpa,aaos,Inverse variance weighted,82.84658842298207,58,0.01780841732970038,2018-10-12

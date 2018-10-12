@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-32HEst	NDmjjg	trig	hips	5	283.18027924847144	<0.001
+Ot4Vfl	e05VF6	trig	hips	4	283.18027924847144	<0.001

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+xfNcMl,vKfe9A,audit,vbiany,MR Egger,0.4489698681219076,2,0.798927613203974,2018-10-12
+xfNcMl,vKfe9A,audit,vbiany,Inverse variance weighted,0.4504505580944068,3,0.92963427074382,2018-10-12

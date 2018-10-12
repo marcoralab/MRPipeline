@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-veuVp4	u1aLFR	alcd	load	0	114.1160229508002	0.0415
+X1uwSn	vytf64	alcd	load	0	114.1160229508002	0.0399

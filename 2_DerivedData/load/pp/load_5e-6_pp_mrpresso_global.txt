@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-E4nDmm	BClHKX	pp	load	5	416.8341048608993	<1e-04
+VTobkp	SOiCSA	pp	load	5	416.8341048608993	<1e-04

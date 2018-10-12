@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+4MYvOX,NoGW0E,smkukbb,ptau,MR Egger,32.20444219870236,14,0.003746387937573924,2018-10-12
+4MYvOX,NoGW0E,smkukbb,ptau,Inverse variance weighted,32.28147652777384,15,0.005893277814437349,2018-10-12

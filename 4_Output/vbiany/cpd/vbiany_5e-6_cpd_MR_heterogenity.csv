@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+8KSeAf,C5rG15,cpd,vbiany,MR Egger,2.4905555344761177,2,0.28786093868695456,2018-10-12
+8KSeAf,C5rG15,cpd,vbiany,Inverse variance weighted,2.5285911089010127,3,0.47014618191894475,2018-10-12

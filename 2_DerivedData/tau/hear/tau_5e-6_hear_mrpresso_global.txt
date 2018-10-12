@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Bp6NXP	lWw8le	hear	tau	0	13.53173235251675	0.341

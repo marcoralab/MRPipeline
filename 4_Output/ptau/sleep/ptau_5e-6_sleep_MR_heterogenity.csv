@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+IxNE2O,1LuLs4,sleep,ptau,MR Egger,17.376246683658255,14,0.23668149233087069,2018-10-12
+IxNE2O,1LuLs4,sleep,ptau,Inverse variance weighted,18.992646991911222,15,0.2140672789749634,2018-10-12

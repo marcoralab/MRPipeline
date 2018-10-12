@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-NV3duO	DemOTg	sleep	aaos	77.27235137058615	0.0988
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JXaLF9	Zho1PE	sleep	aaos	0	77.27235137058615	0.0984

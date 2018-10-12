@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9gm1cZ	zO69jt	fish	nft4	1	119.47551274536418	<0.001

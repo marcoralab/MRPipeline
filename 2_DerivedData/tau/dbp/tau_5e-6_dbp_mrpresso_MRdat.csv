@@ -1,0 +1,12 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs10800664,T,C,T,C,-0.02591,9e-4,0.478395,0.4905,FALSE,FALSE,FALSE,3QlS0w,0.0173,0.9578,dbp,TRUE,reported,0.005653,4.77e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs13255475,T,C,T,C,-0.02793,0.0206,0.34382500000000005,0.3171,FALSE,FALSE,FALSE,3QlS0w,0.0186,0.2681,dbp,TRUE,reported,0.006049,4.032e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs1513737,T,C,T,C,0.02597,0.0234,0.46224200000000004,0.4689,FALSE,FALSE,FALSE,3QlS0w,0.0178,0.1866,dbp,TRUE,reported,0.00562,3.986e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs35055419,C,T,C,T,0.04004,0.0018,0.363582,0.37670000000000003,FALSE,FALSE,FALSE,3QlS0w,0.018,0.9202,dbp,TRUE,reported,0.006006,3.071e-11,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs4674842,G,T,G,T,-0.03081,-0.0067,0.238728,0.2399,FALSE,FALSE,FALSE,3QlS0w,0.0202,0.7415,dbp,TRUE,reported,0.006491,2.158e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs584007,A,G,A,G,-0.02801,0.0105,0.36639999999999995,0.3598,FALSE,FALSE,FALSE,3QlS0w,0.0186,0.5708,dbp,TRUE,reported,0.005946,2.589e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs624290,C,T,C,T,-0.04421,-0.0082,0.11468999999999996,0.09599999999999997,FALSE,FALSE,FALSE,3QlS0w,0.0295,0.7812,dbp,TRUE,reported,0.009094,1.223e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs6770219,T,C,T,C,-0.032,0.0171,0.25097,0.2378,FALSE,FALSE,FALSE,3QlS0w,0.0204,0.4029,dbp,TRUE,reported,0.006982,4.804e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs6859,A,G,A,G,0.02894,-0.0204,0.42320599999999997,0.4252,FALSE,FALSE,FALSE,3QlS0w,0.0178,0.2513,dbp,TRUE,reported,0.0056,2.508e-7,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs769449,A,G,A,G,0.07821,-0.053900000000000003,0.108285,0.1261,FALSE,FALSE,FALSE,3QlS0w,0.0268,0.04401,dbp,TRUE,reported,0.006911,4.054e-29,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE
+rs7737716,T,C,T,C,0.04066,0.0033,0.14227,0.1277,FALSE,FALSE,FALSE,3QlS0w,0.0261,0.8984,dbp,TRUE,reported,0.008535,1.984e-6,tau,TRUE,reported,kbYyRa,2,TRUE,NA,NA,NA,TRUE

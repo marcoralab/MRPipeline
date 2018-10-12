@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fD9YFF	A01ilC	hear	ab42	0	21.295230667381215	0.236

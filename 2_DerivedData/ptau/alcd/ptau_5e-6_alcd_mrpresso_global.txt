@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-uic7SF	M2xcR6	alcd	ptau	16.551390155005805	0.485
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+sv6iir	GYCO1h	alcd	ptau	0	16.551390155005805	0.48

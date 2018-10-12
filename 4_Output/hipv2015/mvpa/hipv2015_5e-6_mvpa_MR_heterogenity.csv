@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Z5KRBE,HIvfTK,mvpa,hipv2015,MR Egger,31.767955655874655,9,2.1837821771455483e-4,2018-10-12
+Z5KRBE,HIvfTK,mvpa,hipv2015,Inverse variance weighted,36.069900363701365,10,8.187922487192468e-5,2018-10-12

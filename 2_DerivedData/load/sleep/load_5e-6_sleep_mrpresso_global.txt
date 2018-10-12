@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-WR5HWw	heA2ul	sleep	load	112.38986478722444	0.0577
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6cVtrL	63Nikr	sleep	load	0	112.38986478722444	0.0587

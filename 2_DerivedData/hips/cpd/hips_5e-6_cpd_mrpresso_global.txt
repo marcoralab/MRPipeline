@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JdW1hE	JTmlTk	cpd	hips	0	8.670145338512732	0.815

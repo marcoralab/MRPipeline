@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-zvhpzU	BEcCff	insom	tau	15.747488428653163	0.237
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+YjeKz1	7f4Z7W	insom	tau	0	15.747488428653163	0.228

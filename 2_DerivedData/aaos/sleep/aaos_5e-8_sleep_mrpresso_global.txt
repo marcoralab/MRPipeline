@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-OYCEaE	AgnAPa	sleep	aaos	10.881633400494373	0.957
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TC7KmE	sZaySf	sleep	aaos	0	10.881633400494373	0.95

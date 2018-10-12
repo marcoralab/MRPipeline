@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-j0afHC	r49qbH	trig	ptau	3	129.59086184940807	<0.001
+OOkZ7P	NC8VTp	trig	ptau	3	129.59086184940807	<0.001

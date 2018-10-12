@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+0oFZfs,dqAERG,hear,nft4,MR Egger,16.610629923515216,11,0.1199322518199154,2018-10-12
+0oFZfs,dqAERG,hear,nft4,Inverse variance weighted,16.8345721224947,12,0.1559268332312678,2018-10-12

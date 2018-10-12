@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+UMG84n,NerurB,diab,ptau,MR Egger,18.8670600101437,9,0.026347283117458035,2018-10-12
+UMG84n,NerurB,diab,ptau,Inverse variance weighted,19.896269524140003,10,0.03024921125427017,2018-10-12

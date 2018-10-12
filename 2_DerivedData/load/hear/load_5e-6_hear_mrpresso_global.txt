@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FKt4TU	qaXlcw	hear	load	0	123.59558094844587	0.0048
+iQ26iN	cgaf6A	hear	load	0	123.59558094844587	0.0049

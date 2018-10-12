@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+zH8qdE,i8Srml,bmi,load,MR Egger,119.84485551736329,15,2.0283142068559085e-18,2018-10-12
+zH8qdE,i8Srml,bmi,load,Inverse variance weighted,188.9926563982766,16,1.3160661508875863e-31,2018-10-12

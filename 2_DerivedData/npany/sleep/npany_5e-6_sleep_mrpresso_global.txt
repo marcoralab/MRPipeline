@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+1XOpzS	lQ0BBe	sleep	npany	0	13.823115957285	0.678

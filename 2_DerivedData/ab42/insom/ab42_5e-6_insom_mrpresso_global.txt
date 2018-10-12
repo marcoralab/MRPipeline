@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-IHee6l	d7ca6E	insom	ab42	10.232919741159439	0.885
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5rEUfx	XR7b0N	insom	ab42	0	10.232919741159439	0.889

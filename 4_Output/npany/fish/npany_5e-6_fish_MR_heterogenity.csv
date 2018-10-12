@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+4aHeCo,PlCDvf,fish,npany,MR Egger,56.318681588089845,14,5.13162910156207e-7,2018-10-12
+4aHeCo,PlCDvf,fish,npany,Inverse variance weighted,58.09233263097365,15,5.350348246208404e-7,2018-10-12

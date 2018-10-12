@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-vYZgW1	HXS45e	fish	ab42	52.265992334036696	<0.001
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JF19u3	Z81Jzf	fish	ab42	1	52.265992334036696	<0.001

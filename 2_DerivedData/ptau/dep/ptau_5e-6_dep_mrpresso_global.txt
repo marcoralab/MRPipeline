@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-yue8EA	tWheRP	dep	ptau	18.816211060568087	0.358
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TuMmcw	xnmgVn	dep	ptau	0	18.816211060568087	0.359

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+VMJJNM,cRSoi1,dbp,npany,MR Egger,23.616623739537257,14,0.0509471493280817,2018-10-12
+VMJJNM,cRSoi1,dbp,npany,Inverse variance weighted,23.69232394339397,15,0.07050597294335209,2018-10-12

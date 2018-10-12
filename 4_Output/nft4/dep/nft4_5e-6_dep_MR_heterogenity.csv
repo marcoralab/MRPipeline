@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+trKe34,JDnt3V,dep,nft4,MR Egger,14.231747316362737,11,0.22043419447968568,2018-10-12
+trKe34,JDnt3V,dep,nft4,Inverse variance weighted,16.107390182857912,12,0.18636676596115087,2018-10-12

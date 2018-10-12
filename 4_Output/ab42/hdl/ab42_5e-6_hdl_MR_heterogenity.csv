@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+DPELYX,E45lFy,hdl,ab42,MR Egger,80.05110176674131,12,4.035707883415037e-12,2018-10-12
+DPELYX,E45lFy,hdl,ab42,Inverse variance weighted,106.06634006506577,13,1.0972869215162581e-16,2018-10-12

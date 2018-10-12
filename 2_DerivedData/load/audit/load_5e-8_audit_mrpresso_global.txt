@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-TESaOz	6RjJyu	audit	load	75.13893746167224	0.0024
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JySNGf	DJgxSH	audit	load	1	75.13893746167224	0.0042

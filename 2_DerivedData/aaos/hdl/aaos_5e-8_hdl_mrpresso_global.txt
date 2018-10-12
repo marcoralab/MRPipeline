@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PGQLWT	IElrhf	hdl	aaos	3	108.26464448963033	<0.001
+qlijUH	rpg3mR	hdl	aaos	4	108.26464448963033	<0.001

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-cRiC3T	gXoTKk	mvpa	hipv	18.118168957913934	0.08
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kgLHnY	0vxXd5	mvpa	hipv	0	18.118168957913934	0.077

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+yIxyYL,bk3c1D,insom,load,MR Egger,90.13727127116118,86,0.35897373520392534,2018-10-12
+yIxyYL,bk3c1D,insom,load,Inverse variance weighted,90.44831697806397,87,0.3788725660739146,2018-10-12

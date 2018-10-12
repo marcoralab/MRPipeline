@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Gmkrr5	MrFdTN	audit	hipv	51.96845244966628	0.0186
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EqvVzI	gwHmpO	audit	hipv	0	51.96845244966628	0.0212

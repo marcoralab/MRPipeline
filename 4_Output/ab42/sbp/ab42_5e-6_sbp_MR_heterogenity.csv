@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+WNyqat,qlBGRh,sbp,ab42,MR Egger,25.214075670415788,14,0.03251187067158028,2018-10-12
+WNyqat,qlBGRh,sbp,ab42,Inverse variance weighted,27.26902191951399,15,0.02661937398044357,2018-10-12

@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-JNy27q	0GQ4hs	audit	tau	27.764239492626686	0.014
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+U2perX	svriFl	audit	tau	1	27.764239492626686	0.011

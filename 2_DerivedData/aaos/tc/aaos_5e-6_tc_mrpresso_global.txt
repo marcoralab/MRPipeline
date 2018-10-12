@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Vh62tl	PCKRjO	tc	aaos	8	582.0118941264305	<2e-04
+E3kqzl	2NCyKY	tc	aaos	8	582.0118941264305	<2e-04

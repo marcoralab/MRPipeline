@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-0Xar2B	8UlsQY	bmi	hips	2	118.75453522478848	<0.001
+3c75zC	VQG4Qh	bmi	hips	3	118.75453522478848	<0.001

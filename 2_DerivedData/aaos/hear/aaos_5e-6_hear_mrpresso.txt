@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 79.88327
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0464
+[1] 0.0444
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -43,7 +43,7 @@ $`MR-PRESSO results`$`Outlier Test`
 24 9.317771e-07      1
 25 1.800275e-05      1
 26 4.192329e-05      1
-27 7.125949e-06 0.8968
+27 7.125949e-06 0.8732
 28 9.189703e-07      1
 29 4.009967e-06      1
 30 1.487653e-06      1

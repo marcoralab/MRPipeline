@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+1XOpzS,lQ0BBe,sleep,npany,MR Egger,11.6196173068583,14,0.6368207509623799,2018-10-12
+1XOpzS,lQ0BBe,sleep,npany,Inverse variance weighted,11.867208477231392,15,0.6890513019798765,2018-10-12

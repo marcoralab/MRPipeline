@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+xBSKBt,jqltXP,dep,load,MR Egger,114.24912068273397,79,0.00583728646312944,2018-10-12
+xBSKBt,jqltXP,dep,load,Inverse variance weighted,114.27794163538258,80,0.007165514871691358,2018-10-12

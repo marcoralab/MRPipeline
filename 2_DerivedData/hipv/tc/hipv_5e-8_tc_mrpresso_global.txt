@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-B8kuTG	AClmRe	tc	hipv	0	11.966613658413753	0.158
+DYTZup	DHRoDA	tc	hipv	0	11.966613658413753	0.144

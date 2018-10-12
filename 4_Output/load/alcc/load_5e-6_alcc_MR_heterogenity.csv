@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+vYLbAZ,ck9t26,alcc,load,MR Egger,91.26903227518272,69,0.03765338332728976,2018-10-12
+vYLbAZ,ck9t26,alcc,load,Inverse variance weighted,91.41708176370334,70,0.04383769472504501,2018-10-12

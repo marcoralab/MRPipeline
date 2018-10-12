@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+FMu1Et,NG2EWN,audit,hips,MR Egger,22.1268919390054,11,0.023408418275672367,2018-10-12
+FMu1Et,NG2EWN,audit,hips,Inverse variance weighted,24.636079925189705,12,0.01664470265509052,2018-10-12

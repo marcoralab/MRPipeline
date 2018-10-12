@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sv6iir,GYCO1h,alcd,ptau,MR Egger,14.407042707993348,14,0.41984711805896496,2018-10-12
+sv6iir,GYCO1h,alcd,ptau,Inverse variance weighted,14.561890393011048,15,0.4834103710596738,2018-10-12

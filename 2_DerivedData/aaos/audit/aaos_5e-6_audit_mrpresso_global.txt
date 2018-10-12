@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-DN3mAy	B1oVkD	audit	aaos	80.40372362415137	0.0672
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+XNvPLf	h4nCHb	audit	aaos	0	80.40372362415137	0.0654

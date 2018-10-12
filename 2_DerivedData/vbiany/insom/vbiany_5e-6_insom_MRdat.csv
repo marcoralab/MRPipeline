@@ -1,0 +1,5 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs11144781,T,G,T,G,0.8393,0.0026331999999974092,0.0316,0.025544,FALSE,FALSE,FALSE,AVMgyp,0.038261,0.94513,insom,TRUE,reported,0.1793,2.869e-6,vbiany,TRUE,reported,XNuJ4Y,2,TRUE,NA
+rs11769293,T,C,T,C,1.0518,0.008869799999999768,0.0291,0.029959,FALSE,FALSE,FALSE,AVMgyp,0.036181,0.80632,insom,TRUE,reported,0.2179,1.383e-6,vbiany,TRUE,reported,XNuJ4Y,2,TRUE,NA
+rs117911677,T,G,T,G,-2.5402,0.18546999999999972,0.9892,0.9933907,FALSE,FALSE,FALSE,AVMgyp,0.080008,0.020449,insom,TRUE,reported,0.5447,3.106e-6,vbiany,TRUE,reported,XNuJ4Y,2,TRUE,NA
+rs34660913,T,C,T,C,-0.6319,0.02010900000000489,0.0931,0.1053,FALSE,FALSE,FALSE,AVMgyp,0.020062,0.31609,insom,TRUE,reported,0.1355,3.127e-6,vbiany,TRUE,reported,XNuJ4Y,2,TRUE,NA

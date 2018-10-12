@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-eCqvUn	uTgxbE	sociso	load	2	154.79941216312554	<1e-04
+a8SVGZ	7Ol01c	sociso	load	2	154.79941216312554	<1e-04

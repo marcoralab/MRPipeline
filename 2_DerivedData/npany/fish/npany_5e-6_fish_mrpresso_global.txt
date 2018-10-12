@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+4aHeCo	PlCDvf	fish	npany	3	75.46430438067273	<0.001

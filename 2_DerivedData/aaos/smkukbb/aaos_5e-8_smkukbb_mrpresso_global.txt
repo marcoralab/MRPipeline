@@ -1,2 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-Kn1Drq	ZvBmws	smkukbb	aaos	19.48201502805198	0.556
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+hmLGhp	Y26ilt	smkukbb	aaos	0	19.48201502805198	0.555

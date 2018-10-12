@@ -1,0 +1,2 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+0zo9OP,6hXDXU,tc,ptau,Inverse variance weighted (fixed effects),2,0.19708294653115022,0.14545551094285658,0.17543786459695931,2018-10-12

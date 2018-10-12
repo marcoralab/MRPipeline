@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8rZ2DK	OWESDU	ab42	pp	1	2436.084981188939	<1e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WNyqat	qlBGRh	sbp	ab42	0	29.459594822323087	0.057

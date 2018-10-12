@@ -1,0 +1,14 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10166461,A,G,A,G,-0.2636,-0.0090022,0.1733,0.19055,FALSE,FALSE,FALSE,rLpnqF,0.0053595,0.093025,sleep,TRUE,reported,0.057,3.816e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs10402271,T,G,T,G,-0.2747,0.0032842,0.6155,0.67672,FALSE,FALSE,FALSE,rLpnqF,0.0045254,0.468,sleep,TRUE,reported,0.0462,2.675e-9,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs114498064,T,C,T,C,-1.51,0.0011286,0.0131,0.013406,FALSE,FALSE,FALSE,rLpnqF,0.019187,0.95309,sleep,TRUE,reported,0.3137,1.48e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs116351076,T,C,T,C,-0.6753,-0.014383,0.0358,0.033221,FALSE,FALSE,FALSE,rLpnqF,0.012296,0.24213,sleep,TRUE,reported,0.1461,3.826e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs11654699,T,C,T,C,0.2055,-0.0041668,0.5243,0.49612,FALSE,FALSE,FALSE,rLpnqF,0.0042417,0.32593,sleep,TRUE,reported,0.0449,4.628e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs11675119,A,C,A,C,-0.2541,0.0033711,0.2699,0.24936,FALSE,FALSE,FALSE,rLpnqF,0.0048964,0.49115,sleep,TRUE,reported,0.0488,1.931e-7,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs117530689,A,C,A,C,-4.0337,-0.0035783,0.0178,0.0374,FALSE,FALSE,FALSE,rLpnqF,0.012245,0.77011,sleep,TRUE,reported,0.8423,1.678e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs12595161,A,G,A,G,-0.4178,-2.0431e-4,0.0511,0.040737,FALSE,FALSE,FALSE,rLpnqF,0.010685,0.98474,sleep,TRUE,reported,0.0914,4.883e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs157595,A,G,A,G,-0.3872,0.0018176,0.3228,0.62037,FALSE,FALSE,FALSE,rLpnqF,0.0040886,0.65665,sleep,TRUE,reported,0.0551,2.041e-12,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs34487851,A,G,A,G,0.2523,0.0016031,0.7314,0.72028,FALSE,FALSE,FALSE,rLpnqF,0.0047984,0.73832,sleep,TRUE,reported,0.055,4.459e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs62117160,A,G,A,G,-0.9888,-0.0027255,0.0227,0.046037,FALSE,FALSE,FALSE,rLpnqF,0.010041,0.78605,sleep,TRUE,reported,0.1949,3.891e-7,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs6857,T,C,T,C,0.7871,-0.0074894,0.3219,0.15310000000000001,FALSE,FALSE,FALSE,rLpnqF,0.0052466,0.15345,sleep,TRUE,reported,0.0565,4.83e-44,hips,TRUE,reported,rQMLSG,2,TRUE,NA
+rs75680843,T,C,T,C,-0.3709,0.0056501,0.0721,0.064263,FALSE,FALSE,FALSE,rLpnqF,0.0086172,0.51203,sleep,TRUE,reported,0.0809,4.59e-6,hips,TRUE,reported,rQMLSG,2,TRUE,NA

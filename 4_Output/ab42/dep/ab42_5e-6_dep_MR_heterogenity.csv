@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+pVYJax,bpUUHE,dep,ab42,MR Egger,18.617386990406672,14,0.18009025907311627,2018-10-12
+pVYJax,bpUUHE,dep,ab42,Inverse variance weighted,20.845667214853332,15,0.14183320283049955,2018-10-12
