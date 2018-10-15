@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qgDcmY	bQp37I	tau	pp	1	1995.3015304636544	0.0085

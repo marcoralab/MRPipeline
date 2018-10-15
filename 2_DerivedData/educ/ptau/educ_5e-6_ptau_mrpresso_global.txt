@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+I63LwA	pmIW10	ptau	educ	0	2546.3105731437136	0.37277
