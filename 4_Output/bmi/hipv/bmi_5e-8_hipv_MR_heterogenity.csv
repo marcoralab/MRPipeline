@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xUMyda,5Gcd72,hipv,bmi,MR Egger,2023.914659636345,1608,5.4409689770486346e-12,2018-10-12
-xUMyda,5Gcd72,hipv,bmi,Inverse variance weighted,2028.085325885288,1609,3.945612895702165e-12,2018-10-12
+xUMyda,5Gcd72,hipv,bmi,MR Egger,2023.914659636345,1608,5.4409689770486346e-12,2018-10-18
+xUMyda,5Gcd72,hipv,bmi,Inverse variance weighted,2028.085325885288,1609,3.945612895702165e-12,2018-10-18

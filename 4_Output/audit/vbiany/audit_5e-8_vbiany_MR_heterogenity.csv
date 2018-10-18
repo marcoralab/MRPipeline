@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QBene4,M1ytet,vbiany,audit,MR Egger,9.343738478476318,11,0.5901961848182924,2018-10-11
-QBene4,M1ytet,vbiany,audit,Inverse variance weighted,9.60842530572475,12,0.6502702218010923,2018-10-11
+QBene4,M1ytet,vbiany,audit,MR Egger,9.343738478476318,11,0.5901961848182924,2018-10-18
+QBene4,M1ytet,vbiany,audit,Inverse variance weighted,9.60842530572475,12,0.6502702218010923,2018-10-18

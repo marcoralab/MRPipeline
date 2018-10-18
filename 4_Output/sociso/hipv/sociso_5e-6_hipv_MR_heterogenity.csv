@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NZukes,hp5F0k,hipv,sociso,MR Egger,154.35538083125078,126,0.04374942575159391,2018-10-11
-NZukes,hp5F0k,hipv,sociso,Inverse variance weighted,154.52011289053533,127,0.048769690685711055,2018-10-11
+NZukes,hp5F0k,hipv,sociso,MR Egger,154.35538083125078,126,0.04374942575159391,2018-10-18
+NZukes,hp5F0k,hipv,sociso,Inverse variance weighted,154.52011289053533,127,0.048769690685711055,2018-10-18

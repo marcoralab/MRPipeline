@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NMjQhz,jasxUN,ab42,hdl,MR Egger,686.6692484855114,206,5.061559669573688e-53,2018-10-11
-NMjQhz,jasxUN,ab42,hdl,Inverse variance weighted,687.0800463808365,207,8.025198940462857e-53,2018-10-11
+NMjQhz,jasxUN,ab42,hdl,MR Egger,686.6692484855114,206,5.061559669573688e-53,2018-10-18
+NMjQhz,jasxUN,ab42,hdl,Inverse variance weighted,687.0800463808365,207,8.025198940462857e-53,2018-10-18

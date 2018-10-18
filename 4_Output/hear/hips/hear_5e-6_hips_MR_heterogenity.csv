@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-8hfBjl,HP2FRn,hips,hear,MR Egger,131.39192024451006,126,0.3531626345600969,2018-10-11
-8hfBjl,HP2FRn,hips,hear,Inverse variance weighted,131.67243852840573,127,0.3701809003502694,2018-10-11
+8hfBjl,HP2FRn,hips,hear,MR Egger,131.39192024451006,126,0.3531626345600969,2018-10-18
+8hfBjl,HP2FRn,hips,hear,Inverse variance weighted,131.67243852840573,127,0.3701809003502694,2018-10-18

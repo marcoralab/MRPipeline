@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FBwkeh,FkgL4u,nft4,mdd,MR Egger,45.010350569403435,43,0.38775116077953853,2018-10-11
-FBwkeh,FkgL4u,nft4,mdd,Inverse variance weighted,45.23765832526496,44,0.4200770552476085,2018-10-11
+FBwkeh,FkgL4u,nft4,mdd,MR Egger,45.010350569403435,43,0.38775116077953853,2018-10-18
+FBwkeh,FkgL4u,nft4,mdd,Inverse variance weighted,45.23765832526496,44,0.4200770552476085,2018-10-18

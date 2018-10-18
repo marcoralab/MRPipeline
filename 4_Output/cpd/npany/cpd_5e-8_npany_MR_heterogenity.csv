@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-porwfS,26kvRY,npany,cpd,MR Egger,9.542691111663352,18,0.9458155191846803,2018-10-11
-porwfS,26kvRY,npany,cpd,Inverse variance weighted,10.666961530688097,19,0.9345334593573353,2018-10-11
+porwfS,26kvRY,npany,cpd,MR Egger,9.542691111663352,18,0.9458155191846803,2018-10-18
+porwfS,26kvRY,npany,cpd,Inverse variance weighted,10.666961530688097,19,0.9345334593573353,2018-10-18

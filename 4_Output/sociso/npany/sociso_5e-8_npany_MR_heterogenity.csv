@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-H70irF,fCYgVr,npany,sociso,MR Egger,18.39370852123372,23,0.7357974956511413,2018-10-11
-H70irF,fCYgVr,npany,sociso,Inverse variance weighted,18.42376485938446,24,0.78198125951566555,2018-10-11
+H70irF,fCYgVr,npany,sociso,MR Egger,18.39370852123372,23,0.7357974956511413,2018-10-18
+H70irF,fCYgVr,npany,sociso,Inverse variance weighted,18.42376485938446,24,0.78198125951566555,2018-10-18

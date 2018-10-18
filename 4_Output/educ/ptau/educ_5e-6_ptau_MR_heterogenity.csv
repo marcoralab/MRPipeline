@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-I63LwA,pmIW10,ptau,educ,MR Egger,2429.911455715715,2433,0.5138550575827623,2018-10-12
-I63LwA,pmIW10,ptau,educ,Inverse variance weighted,2434.312897823968,2434,0.49439919719751957,2018-10-12
+I63LwA,pmIW10,ptau,educ,MR Egger,2429.911455715715,2433,0.5138550575827623,2018-10-18
+I63LwA,pmIW10,ptau,educ,Inverse variance weighted,2434.312897823968,2434,0.49439919719751957,2018-10-18

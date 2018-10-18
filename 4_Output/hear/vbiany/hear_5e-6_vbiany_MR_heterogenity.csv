@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Tb2xld,DpTNja,vbiany,hear,MR Egger,131.29245486315975,126,0.3554291303237078,2018-10-11
-Tb2xld,DpTNja,vbiany,hear,Inverse variance weighted,132.515265320556,127,0.35090835095960576,2018-10-11
+Tb2xld,DpTNja,vbiany,hear,MR Egger,131.29245486315975,126,0.3554291303237078,2018-10-18
+Tb2xld,DpTNja,vbiany,hear,Inverse variance weighted,132.515265320556,127,0.35090835095960576,2018-10-18

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Qa0SMp,kX38w9,ptau,alcc,MR Egger,30.21681234276017,36,0.7396075565209199,2018-10-11
-Qa0SMp,kX38w9,ptau,alcc,Inverse variance weighted,30.50178916480267,37,0.7660819227426803,2018-10-11
+Qa0SMp,kX38w9,ptau,alcc,MR Egger,30.21681234276017,36,0.7396075565209199,2018-10-18
+Qa0SMp,kX38w9,ptau,alcc,Inverse variance weighted,30.50178916480267,37,0.7660819227426803,2018-10-18

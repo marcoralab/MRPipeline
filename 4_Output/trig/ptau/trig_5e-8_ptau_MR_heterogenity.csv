@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xLdaGI,PkeVny,ptau,trig,MR Egger,283.2169775549113,151,4.145646994056475e-10,2018-10-11
-xLdaGI,PkeVny,ptau,trig,Inverse variance weighted,285.5408241074597,152,3.2794660361605664e-10,2018-10-11
+xLdaGI,PkeVny,ptau,trig,MR Egger,283.2169775549113,151,4.145646994056475e-10,2018-10-18
+xLdaGI,PkeVny,ptau,trig,Inverse variance weighted,285.5408241074597,152,3.2794660361605664e-10,2018-10-18

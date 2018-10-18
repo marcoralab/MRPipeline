@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BoWGuk,ArMNTD,hips,alcc,MR Egger,12.45256866067782,11,0.33060345610323444,2018-10-11
-BoWGuk,ArMNTD,hips,alcc,Inverse variance weighted,12.71218963269326,12,0.3903023927110345,2018-10-11
+BoWGuk,ArMNTD,hips,alcc,MR Egger,12.45256866067782,11,0.33060345610323444,2018-10-18
+BoWGuk,ArMNTD,hips,alcc,Inverse variance weighted,12.71218963269326,12,0.3903023927110345,2018-10-18
