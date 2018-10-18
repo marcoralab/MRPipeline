@@ -172,6 +172,7 @@ resmrpresso <- bind_rows(resmrpresso_5e6, resmrpresso_5e8) %>%
 ```
 
 #### Remove tests where MR-PRESSO is avaliable
+##### LOAD as outcome
 ```{r}
 
 res_noOutliers <- res %>% filter(exposure %nin% outcomes) %>% 
@@ -187,12 +188,11 @@ res_comb <- bind_rows(res_noOutliers, presso_outliers)
 
 ```
 
-
 ```{r}
 res.out <- res_comb %>% 
   mutate(b = round(b, 2)) %>% 
   mutate(se = round(se, 2)) %>% 
-  mutate(pval = round(pval, 4)) %>% 
+  #mutate(pval = round(pval, 4)) %>% 
   mutate(b.se = paste0(b, ' (', se, ')')) %>%
   select(-Signif, -b, -se) %>% 
   myspread(method, c(nsnp, pval, b.se)) %>% 
@@ -201,13 +201,66 @@ res.out <- res_comb %>%
   arrange(outcome, exposure)
 
 
-res.out %>% 
+test <- res.out %>% 
   left_join(select(het, exposure, outcome, pt, violated.IVW, violated.Egger), by = c('exposure', 'outcome', 'pt')) %>% 
   rename(violated.HeterogeneityIVW = violated.IVW, violated.HeterogeneityEgger = violated.Egger) %>% 
   left_join(select(egger, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
   rename(violated.Egger = violated) %>% 
   left_join(select(mrpresso, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
-  rename(violated.mrpresso = violated) 
+  rename(violated.mrpresso = violated) %>% 
+  mutate(IVW_pval_fdr = p.adjust(IVW_pval, method = 'fdr')) %>% 
+  mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4) %>% 
+  group_by(exposure, outcome) %>% slice(which.min(IVW_pval)) %>%
+  arrange(IVW_pval) 
+
+test %>% filter(IVW_pval_fdr < 0.05) %>% print(n = Inf) %>% write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/Results/sig_res_LoadOutcome.csv')
+test %>% mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4)
+
+```
+
+##### LOAD as Exposure
+```{r}
+
+res_noOutliers <- res %>% filter(exposure %in% outcomes) %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(!(violated == T & n_outliers > 0)) 
+
+presso_outliers <- resmrpresso %>% filter(exposure %in% outcomes) %>% filter(method != 'mrpresso') %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(violated == T) %>% 
+  mutate(mrpresso = TRUE)
+
+res_comb <- bind_rows(res_noOutliers, presso_outliers)
+
+```
+
+```{r}
+res.out <- res_comb %>% 
+  mutate(b = round(b, 2)) %>% 
+  mutate(se = round(se, 2)) %>% 
+  #mutate(pval = round(pval, 4)) %>% 
+  mutate(b.se = paste0(b, ' (', se, ')')) %>%
+  select(-Signif, -b, -se) %>% 
+  myspread(method, c(nsnp, pval, b.se)) %>% 
+  rename(nsnp = IVW_nsnp) %>% 
+  select(exposure, outcome, pt, nsnp, n_outliers, mrpresso, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`, `Weighted mode_b.se`, `Weighted mode_pval`) %>% 
+  arrange(outcome, exposure)
+
+
+test <- res.out %>% 
+  left_join(select(het, exposure, outcome, pt, violated.IVW, violated.Egger), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.HeterogeneityIVW = violated.IVW, violated.HeterogeneityEgger = violated.Egger) %>% 
+  left_join(select(egger, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.Egger = violated) %>% 
+  left_join(select(mrpresso, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.mrpresso = violated) %>% 
+  mutate(IVW_pval_fdr = p.adjust(IVW_pval, method = 'fdr')) %>% 
+  mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4) %>% 
+  group_by(exposure, outcome) %>% slice(which.min(IVW_pval)) %>%
+  arrange(IVW_pval) 
+
+test %>% filter(IVW_pval_fdr < 0.05) %>% print(n = Inf) %>% write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/Results/sig_res_LoadExposure.csv')
+test %>% mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4)
 
 ```
 

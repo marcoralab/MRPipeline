@@ -7,11 +7,11 @@ DataOut: "2_DerivedData/"
 
 REF: '1_RawData/EUR_All_Chr'
 traits: '1_RawData/MRTraits.csv'
-Pthreshold: ['5e-8']
+Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
-ExposureCode: ['bmi']
-OutcomeCode: ['aaos']
+ExposureCode: ['mvpa']
+OutcomeCode: ['load']
 
 missing : [
  ]
