@@ -8,6 +8,7 @@ editor_options:
 params: 
   hrc_file: '~/Dropbox/Research/Data/Summary_Statisitics/HRC/HRC_AF.tsv.gz'
   load.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP2013/IGAP_stage_1.txt'
+  adpx.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/3_UK_Biobank_parental_17May2018.gz'
   aaos.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt'
   ab42.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_AB42_GWAS_summary_statistics.txt.gz'
   ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
@@ -56,6 +57,9 @@ params:
   hips.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/med_temp_scler_any.Meta.annotate1.2013May03.txt.gz
   vbiany.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/VBI_any.Meta.annotate1.2013May03.txt.gz 
   vbiord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/vbi_ord.Meta.annotate1.2013May03.txt.gz 
+  ggt.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/GGT.txt 
+  alp.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ALP.txt 
+  alt.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ALT.txt 
 ---
 
 ```{r setup, include=FALSE}
@@ -311,6 +315,48 @@ hipv.dat <- hipv.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
   
 write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv2015_GWAS.Processed.gz'))
+```
+
+### Late Onset Alzheimer's Disease - Proxy Case/Control Status
+[Marioni et al Translational Psychiatry 2018](https://www.nature.com/articles/s41398-018-0150-6): We show that self-report of parental history of Alzheimer’s dementia for case ascertainment in a genome-wide association study of 314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data (n = 74,046 with 25,580 cases across the discovery and replication analyses), three new AD-associated loci (P < 5 × 10−8) are identified.
+
+```{r}
+adpx.raw <- read_table2(params$adpx.summary)
+adpx.dat <- adpx.raw %>%
+  unite(ChromPos, CHR, BP, sep = ':', remove = F) %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = BETA, POS = BP) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(SNP = str_replace_all(SNP, '_', ':')) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('ChromPos' = 'ChromPos')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 314278 ) %>%
+  select(-SNP) %>% rename(SNP = ID) %>%
+  filter(!is.na(SNP)) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(adpx.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/adpx_GWAS.Processed.gz'))
+
+```
+
+Marioni with IGAP
+```{r}
+adpxigap.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/4_UK_Biobank_IGAP_17May2018.gz')
+adpxigap.dat <- adpxigap.raw %>%
+  unite(ChromPos, CHR, BP, sep = ':', remove = F) %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = BETA, POS = BP) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(SNP = str_replace_all(SNP, '_', ':')) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('ChromPos' = 'ChromPos')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 314278 ) %>%
+  select(-SNP) %>% rename(SNP = ID) %>%
+  filter(!is.na(SNP)) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(adpxigap.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/adpxigap_GWAS.Processed.gz'))
+
 ```
 
 ### Late Onset Alzheimer's Disease
@@ -1072,4 +1118,138 @@ write_tsv(pp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/pp_GWA
 
 ```
 
+## GGT
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_ggt.raw <- read_table2(params$ggt.summary)
 
+## Convert summary stats to a .bed format
+ggt.bed <- dat_ggt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(ggt.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_ggt.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_ggt.hg19 <- dat_ggt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_ggt.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_ggt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ggt_GWAS.Processed.gz'))
+
+
+```
+
+## ALP
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_alp.raw <- read_table2(params$alp.summary)
+
+## Convert summary stats to a .bed format
+alp.bed <- dat_alp.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(alp.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_alp.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_alp.hg19 <- dat_alp.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_alp.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_alp.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alp_GWAS.Processed.gz'))
+
+
+```
+
+
+## ALT
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_alt.raw <- read_table2(params$alt.summary)
+
+## Convert summary stats to a .bed format
+alt.bed <- dat_alt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(alt.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_alt.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_alt.hg19 <- dat_alt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_alt.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_alt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alt_GWAS.Processed.gz'))
+
+
+```
