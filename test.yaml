@@ -10,8 +10,11 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
-ExposureCode: ['mvpa']
-OutcomeCode: ['load']
+ExposureCode: ['alcc', 'alcd', 'audit']
+OutcomeCode: ['ggt', 'alp', 'alt']
 
 missing : [
+{"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "alcd", "OutcomeCode" : "alp", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "alcd", "OutcomeCode" : "alt", "Pthreshold" : "5e-8"},
  ]
