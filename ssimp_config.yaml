@@ -1,0 +1,4 @@
+DataIn: '1_RawData/GWAS/'
+DataOut: "2_DerivedData/"
+
+REF: '1_RawData/EUR_All_Chr'
