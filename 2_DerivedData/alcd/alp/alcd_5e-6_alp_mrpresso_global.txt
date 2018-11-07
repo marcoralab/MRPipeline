@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+I6N3ni	GCjzjW	alp	alcd	0	21.507818808590194	0.351

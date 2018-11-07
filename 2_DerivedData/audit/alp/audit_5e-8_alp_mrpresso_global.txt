@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+20wl13	cCaPPT	alp	audit	1	17.024838612378428	0.027

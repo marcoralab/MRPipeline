@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Tajgry,chUK8m,alt,alcd,MR Egger,9.719751669577338,12,0.640531561811394,2018-10-25
+Tajgry,chUK8m,alt,alcd,Inverse variance weighted,10.826836253982254,13,0.6253214678003647,2018-10-25
