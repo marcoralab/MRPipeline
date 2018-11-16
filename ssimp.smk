@@ -1,19 +1,23 @@
-# snakemake -s ssimp.smk
+# snakemake -s ssimp.smk --configfile ssimp_config.yaml
+# snakejob -s ssimp.smk --configfile ssimp_config.yaml -j 4000 --max-jobs-per-second 1
 
-CHUNKS = ['22:17000000-22:17500000', '22:17500001-22:18000000', '22:18000001-22:18500000', '22:18500001-22:19000000']
+CHUNKS = config['chunks']
+GWAS = config['GWAS']
+DATAOUT = config['DataOut']
 
 rule all:
     input:
-        expand("/sc/orga/projects/LOAD/shea/bin/ssimp_software/output/ssimp_{chunks}.txt", chunks=CHUNKS),
+        expand(DATAOUT + "ssimp_{chunks}.txt", chunks=CHUNKS),
 
 rule ssimp:
-    input: "/sc/orga/projects/LOAD/shea/bin/ssimp_software/gwas/small.random.txt",
-    output: "/sc/orga/projects/LOAD/shea/bin/ssimp_software/output/ssimp_{chunks}.txt"
+    input:
+        gwas = GWAS,
+    output: DATAOUT + "ssimp_{chunks}.txt"
     params:
         imp_range = '{chunks}'
     shell:
         '/sc/orga/projects/LOAD/shea/bin/ssimp_software/ssimp \
-        --gwas {input} \
+        --gwas {input.gwas} \
         --ref ~/reference_panels/1000genomes/ALL.chr{{CHRM}}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz \
         --out {output} \
         --impute.range {params.imp_range} \

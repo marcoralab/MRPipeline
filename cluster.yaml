@@ -11,3 +11,6 @@ MrPresso:
   cores: 2
 html_Report:
   partition: manda
+ssimp:
+  mem: 8000
+  cores: 2
