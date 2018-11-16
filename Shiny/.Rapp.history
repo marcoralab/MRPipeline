@@ -1,0 +1,581 @@
+sample
+test <- sample %>% #
+filter(POS == 72)
+test
+test <- sample %>% #
+filter(POS == 72) %>% #
+select(`#CHROM`, -ID, -REF, -ALT, -QUAL, -FILTER, -INFO, -FORMAT)
+test
+test <- sample %>% #
+filter(POS == 72) %>% #
+select(-`#CHROM`, -ID, -REF, -ALT, -QUAL, -FILTER, -INFO, -FORMAT)
+test
+test <- sample %>% #
+filter(POS == 72) %>% #
+select(-`#CHROM`, -POS, -ID, -REF, -ALT, -QUAL, -FILTER, -INFO, -FORMAT)
+test
+t(test)
+test2 <- t(test)
+test2
+head(test2)
+test2 <- as.tibble(t(test))
+test2
+filter(V1 == 1)
+test2 <- as.tibble(t(test)) %>% #
+filter(V1 == 1)
+test2
+test2 <- as.tibble(t(test)) %>% #
+filter(V2 == 1)
+test2
+sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT.vcf.gz', col_names = T, comment = "##") %>% #
+select(`#CHROM`, POS, ID, REF, ALT, QUAL, FILTER, INFO)
+semi_join(sample, array.snps, by = c('POS' = 'pos'))
+sample %>% semi_join(array.snps, by = c('POS' = 'pos')) print(n = Inf)
+sample %>% semi_join(array.snps, by = c('POS' = 'pos')) %>% print(n = Inf)
+sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT_multi_decomposed.vcf.gz', col_names = T, comment = "##") %>%
+asd
+sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT_multi_decomposed.vcf.gz', col_names = T, comment = "##")
+sample
+read_tsv('/Users/sheaandrews/Dropbox/src/MitoImpute/DerivedData/Refence_panal.vcf.gz', comment = '##')
+read_tsv('/Users/sheaandrews/Documents/Test2/GSA-24v1-0_A1-b37-strand.zip', comment = '##')
+test <- read_tsv('/Users/sheaandrews/Documents/Test2/GSA-24v1-0_A1-b37-strand.zip', col_names =F, comment = '##')
+test
+library(forign)
+library(foreign)
+read.spss('~/Dropbox/Research/Data/Original (PATH)/Genetics/PATH_genes_total_070916.sav')
+? read.spss
+dat <- read.spss('~/Dropbox/Research/Data/Original (PATH)/Genetics/PATH_genes_total_070916.sav', to.data.frame = T)
+dat
+dat <- as.tibble(dat)
+library(tidyverse)
+dat <- as.tibble(dat)
+dat
+load("/Users/sheaandrews/Dropbox/src/MitoImputePrep/Shiny/imp.info005.rds")
+107586 + 11123 + 3002 + 46322
+13-7
+read_excel_allsheets <- function(filename) {#
+  sheets <- readxl::excel_sheets(filename)#
+  x <-    lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))#
+  names(x) <- sheets#
+  x#
+}#
+#
+##============================================###
+##  Study Characterisitcs#
+#
+dat <- read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/4_Output/StudyCharacteristics/Study.xlsx", na = c("-" ,"", "NA"))#
+qr <- read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/4_Output/Q-Genie/Q-Genie_ratings.xlsx", sheet = 1)#
+dat <- left_join(dat, qr, by = 'Study')
+library(Hmisc)#
+library(zoo)#
+library(tidyverse)#
+library(readxl)#
+#
+read_excel_allsheets <- function(filename) {#
+  sheets <- readxl::excel_sheets(filename)#
+  x <-    lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))#
+  names(x) <- sheets#
+  x#
+}
+library(tidyverse)#
+library(pbapply)#
+library(HiMC); data(nodes)#
+library(taRifx)#
+#
+##  Function#
+generate_snp_data_fixed <- function (map_file, ped_file) #
+{#
+  map <- read.csv(map_file, sep = "\t", header = FALSE, stringsAsFactors = FALSE)#
+  header_row <- c("Family", "Individual", "Father", "Mother", #
+                  "Sex", "Phenotype")#
+  snps = map[, 4]#
+  new_header = c(header_row, snps)#
+  ped <- read.csv(ped_file, sep = " ", header = FALSE, stringsAsFactors = FALSE, colClasses = 'character')#
+  range1 = seq(1, 6, by = 1)#
+  snp_data = data.frame(seq(1, nrow(ped), by = 1))#
+  for (i in range1) {#
+    snp_data[, i] = ped[, i]#
+  }#
+  range2 = seq(7, ncol(ped), by = 2)#
+  for (i in range2) {#
+    index = ((i - 7)/2) + 1#
+    snp_data[, index + 6] = paste(ped[, i], ped[, i + 1])#
+  }#
+  names(snp_data) <- new_header#
+  return(snp_data)#
+}#
+#
+##===============================###
+##  Read in Typed and WGS haplogroups #
+##===============================###
+#
+mt.haps <- readRDS('~/Dropbox/src/MitoImputePrep/Shiny/MT_haps.rds')#
+#
+wd.path <- '~/Dropbox/src/MitoImputePrep/data/STRANDS/'
+dat <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF1pc.csv') #
+dat2 <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF0-1pc.csv')#
+#
+out <- left_join(dat, dat2, by = 'array', suffix = c('.1pc', '.01pc')) %>% #
+  mutate(improvment = Imputed.hg.Conc.1pc - Typed.hg.Conc.1pc)#
+#
+select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
+  arrange(improvment) %>% #
+  summarise(mean.improvment = mean(improvment, na.rm = T), #
+            mean.typed = mean(Typed.hg.Conc.1pc, na.rm = T), #
+            mean.imputed = mean(Imputed.hg.Conc.1pc, na.rm = T))#
+#
+ggplot(out, aes(y = Imputed.hg.Conc.1pc, x = Typed.hg.Conc.1pc)) + #
+  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
+  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + labs(x = "Haplogroup Concordance \n Typed vs WGS", y = "Haplogroup Concordance \n Typed + Imputed vs WGS")
+out
+select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
+  arrange(improvment)
+select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Typed.hg.Conc.1pc) %>% #
+  arrange(Imputed.hg.Conc.1pc)
+select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Typed.hg.Conc.1pc) %>% #
+  arrange(-Imputed.hg.Conc.1pc)
+library(tidyverse)#
+library(pbapply)#
+library(HiMC); data(nodes)#
+library(taRifx)#
+#
+##  Function#
+generate_snp_data_fixed <- function (map_file, ped_file) #
+{#
+  map <- read.csv(map_file, sep = "\t", header = FALSE, stringsAsFactors = FALSE)#
+  header_row <- c("Family", "Individual", "Father", "Mother", #
+                  "Sex", "Phenotype")#
+  snps = map[, 4]#
+  new_header = c(header_row, snps)#
+  ped <- read.csv(ped_file, sep = " ", header = FALSE, stringsAsFactors = FALSE, colClasses = 'character')#
+  range1 = seq(1, 6, by = 1)#
+  snp_data = data.frame(seq(1, nrow(ped), by = 1))#
+  for (i in range1) {#
+    snp_data[, i] = ped[, i]#
+  }#
+  range2 = seq(7, ncol(ped), by = 2)#
+  for (i in range2) {#
+    index = ((i - 7)/2) + 1#
+    snp_data[, index + 6] = paste(ped[, i], ped[, i + 1])#
+  }#
+  names(snp_data) <- new_header#
+  return(snp_data)#
+}#
+#
+##===============================###
+##  Read in Typed and WGS haplogroups #
+##===============================###
+#
+mt.haps <- readRDS('~/Dropbox/src/MitoImputePrep/Shiny/MT_haps.rds')#
+#
+wd.path <- '~/Dropbox/src/MitoImputePrep/data/STRANDS/'#
+#
+##===============================###
+##  Read in reference #
+##===============================###
+#
+dat <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF1pc.csv') #
+dat2 <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF0-1pc.csv')#
+#
+out <- left_join(dat, dat2, by = 'array', suffix = c('.1pc', '.01pc')) %>% #
+  mutate(improvment = Imputed.hg.Conc.1pc - Typed.hg.Conc.1pc)#
+#
+select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
+  arrange(improvment) %>% #
+  summarise(mean.improvment = mean(improvment, na.rm = T), #
+            mean.typed = mean(Typed.hg.Conc.1pc, na.rm = T), #
+            mean.imputed = mean(Imputed.hg.Conc.1pc, na.rm = T))#
+#
+ggplot(out, aes(y = Imputed.hg.Conc.1pc, x = Typed.hg.Conc.1pc)) + #
+  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
+  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + labs(x = "Haplogroup Concordance \n Typed vs WGS", y = "Haplogroup Concordance \n Typed + Imputed vs WGS")#
+#
+ggplot(out, aes(x = Imputed.hg.Conc.1pc, y = Imputed.hg.Conc.01pc)) + #
+  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
+  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + #
+  labs(x = "Haplogroup Concordance \n MAF > 1%", y = "Haplogroup Concordance \n MAF > 0.1%")#
+##===============================###
+##  Imputed plink files #
+##===============================###
+#
+## file names#
+imp.map <- list.files(path = wd.path, recursive = TRUE, pattern = "*.map") %>% #
+  grep('kHAP', ., value = T)#
+imp.ped <- list.files(path = wd.path, recursive = TRUE, pattern = "*.ped") %>% #
+  grep('kHAP', ., value = T)#
+imp.names <- imp.map %>% as.tibble() %>% separate(value, c('platform', 'experiment', 'kHAP', 'file'), sep = '/')#
+imp.dat <- mapply(generate_snp_data_fixed, paste0(wd.path, imp.map), paste0(wd.path, imp.ped), SIMPLIFY = F)#
+#
+imp.dat <- lapply(imp.dat, function(x){#
+  out <- x[,-c(grep("\\<57\\>", colnames(x)),#
+               grep("\\<62\\>", colnames(x)),#
+               grep("\\<63\\>", colnames(x)),#
+               grep("\\<72\\>", colnames(x)),#
+               grep("\\<185\\>", colnames(x)),#
+               grep("\\<186\\>", colnames(x)),#
+               grep("\\<189\\>", colnames(x)),#
+               grep("\\<195\\>", colnames(x)),#
+               grep("\\<228\\>", colnames(x)),#
+               grep("\\<295\\>", colnames(x)),#
+               grep("\\<723\\>", colnames(x)),#
+               grep("\\<750\\>", colnames(x)),#
+               grep("\\<930\\>", colnames(x)),#
+               grep("\\<961\\>", colnames(x)),#
+               grep("\\<1692\\>", colnames(x)),#
+               grep("\\<2831\\>", colnames(x)),#
+               grep("\\<3200\\>", colnames(x)),#
+               grep("\\<3552\\>", colnames(x)),#
+               grep("\\<3796\\>", colnames(x)),#
+               grep("\\<3921\\>", colnames(x)),#
+               grep("\\<4454\\>", colnames(x)),#
+               grep("\\<4562\\>", colnames(x)),#
+               grep("\\<4769\\>", colnames(x)),#
+               grep("\\<5774\\>", colnames(x)),#
+               grep("\\<5894\\>", colnames(x)),#
+               grep("\\<6221\\>", colnames(x)),#
+               grep("\\<7196\\>", colnames(x)),#
+               grep("\\<7624\\>", colnames(x)),#
+               grep("\\<8014\\>", colnames(x)),#
+               grep("\\<8080\\>", colnames(x)),#
+               grep("\\<8860\\>", colnames(x)),#
+               grep("\\<9824\\>", colnames(x)),#
+               grep("\\<10097\\>", colnames(x)),#
+               grep("\\<10410\\>", colnames(x)),#
+               grep("\\<10754\\>", colnames(x)),#
+               grep("\\<12633\\>", colnames(x)),#
+               grep("\\<12738\\>", colnames(x)),#
+               grep("\\<12930\\>", colnames(x)),#
+               grep("\\<12950\\>", colnames(x)),#
+               grep("\\<14470\\>", colnames(x)),#
+               grep("\\<15884\\>", colnames(x)),#
+               grep("\\<15954\\>", colnames(x)),#
+               grep("\\<16111\\>", colnames(x)),#
+               grep("\\<16114\\>", colnames(x)),#
+               grep("\\<16129\\>", colnames(x)),#
+               grep("\\<16147\\>", colnames(x)),#
+               grep("\\<16166\\>", colnames(x)),#
+               grep("\\<16176\\>", colnames(x)),#
+               grep("\\<16182\\>", colnames(x)),#
+               grep("\\<16183\\>", colnames(x)),#
+               grep("\\<16188\\>", colnames(x)),#
+               grep("\\<16232\\>", colnames(x)),#
+               grep("\\<16240\\>", colnames(x)),#
+               grep("\\<16257\\>", colnames(x)),#
+               grep("\\<16258\\>", colnames(x)),#
+               grep("\\<16265\\>", colnames(x)),#
+               grep("\\<16266\\>", colnames(x)),#
+               grep("\\<16286\\>", colnames(x)),#
+               grep("\\<16291\\>", colnames(x)),#
+               grep("\\<16293\\>", colnames(x)),#
+               grep("\\<16318\\>", colnames(x)),#
+               grep("\\<16327\\>", colnames(x)))]#
+  out#
+})#
+imp.dat <- lapply(imp.dat, as.tibble)#
+names(imp.dat) <- paste0(imp.names$platform, "_", imp.names$kHAP)#
+#
+##===============================###
+##  Info Score Files #
+##===============================###
+HiMC <- tibble(#
+  himc = 'yes',#
+  pos = as.numeric(c('10115', '1018', '10398', '10400', '10550', '11177', '11251', '11719', '11947', '12007', '12308', '12414', '12705', '13263', '13368', '13506', '13708', '13789', '14178', '14318', '1438', '14470', '14560', '14668', '14766', '14905', '15043', '15326', '15452', '15535', '16111', '16189', '16271', '16362', '16390', '16391', '16391', '1719', '1736', '2092', '3505', '3552', '3594', '4580', '4769', '4883', '4917', '4977', '5178', '5442', '6371', '7028', '825', '8251', '8414', '8468', '8703', '9042', '9055', '9347', '9950')),#
+  Haplogroup = c("L2", "L3", "K1", "M", "K", "B2", "JT", "R0", "W", "A2", "U", "N2", "R", "C", "T", "L2'3'4'6", "J", "L1", "L1", "C", "H2", "K", ".", "D4", "HV", "T", "N1a1b", "H2a2a", "JT", "B4b'd'e", "A2", "T1", "JT", "L4", "L2", "I", "I", "X2", "A", "D1", "W", "C", "L3'4", "V", "H2a", "M80'D", "T", "B2", "D ", "L0", "X ", "H", "L2'3'4'6", "N1a1b", "D4", "L2'3'4'6", "D2", "L0", "U8b", "L0", "B2"))#
+#
+# 0.01 MAF Reference; MCMC 30#
+info <- list.files(path = wd.path, recursive = TRUE, pattern = "*_info") %>% #
+  grep('kHAP', ., value = T)#
+info <- info[grepl("sample", info) == F]#
+info.names <- info %>% as.tibble() %>% separate(value, c('platform', 'experiment', 'kHAP', 'file'), sep = '/')#
+info.dat <- lapply(paste0(wd.path, info), read_delim, delim = " ")#
+names(info.dat) <- paste0(info.names$platform, "_", info.names$kHAP)#
+#
+info.dat <- lapply(info.dat, function(x){#
+  out <- x %>% mutate(info_comb = ifelse(info_type0 == -1, info,info_type0 )) %>% #
+    left_join(HiMC, by = c('position' = 'pos')) %>%#
+    mutate(himc = ifelse(is.na(himc), 'no', himc))#
+  out#
+})
+test <- loadRDS('~/Dropbox/imp_haps_kHAP.RDS')
+test <- readRDS('~/Dropbox/imp_haps_kHAP.RDS')
+head(test)
+161 + 169
+417 + 651
+24771 + 35324
+249 + 250
+144  +173
+(Alzheimer's OR Dementia OR "amyloid protein" OR "tau protein") AND (Protective OR protect OR protects AND (Genetic OR SNP OR “Single Nucleotide Polymorphism*” OR Polymorphism, Single Nucleotide OR mutation OR allele)) english [LA]
+asdfasdf
+asdf))))
+))))
+''
+49414 + 73933
+11490 + 16094
+16254 + 20052
+223/24
+860/24
+1075/24
+browseVignettes(package = "qvalue")
+1439 + 489 + 564 + 239
+163 + 155
+203 + 239
+(195 + 217) + (211 + 261)
+(211 + 261) / (195 + 217) + (211 + 261)
+(211 + 261) / ((195 + 217) + (211 + 261))
+311 + 330
+1030 + 417
+1109 + 121
+113 + 1230
+1113 + 1230
+71 + 120
+183 + 225
+408 = 191
+408 + 191
+211 + 173
+152 + 136
+188 + 273
+83 + 35 + 5
+46 + 12 + 3
+122 - 61
+251 + 201
+2842 + 2571
+33*24
+103 + 157
+27 + 28
+69 + 83
+data.frame(AD = c(5, 69-5), CN = c(19, 83-19))
+fishers.exact(data.frame(AD = c(5, 69-5), CN = c(19, 83-19)))
+?exact
+fisher.test(data.frame(AD = c(5, 69-5), CN = c(19, 83-19)))
+fisher.test(data.frame(AD = c(4, 69-4), CN = c(14, 83-14)))
+244 + 971 + 872
+1020 + 3623 + 3135
+2087 +	7778
+158	+195
+fisher.test(data.frame(AD = c(8, 150), CN = c(20, 175)))
+107 + 115
+2336 +	2004
+426+	350
+139+	152
+798	+ 401
+376	+369
+231+	194
+352	+438
+473	+345
+fisher.test(data.frame(AD = c(750, 196), CN = c(506, 184)))
+1.39/1
+1/1.39
+127-68
+166 +	184
+82 + 182
+79	+145
+68+	72
+fisher.test(data.frame(AD = c(82, 74), CN = c(96, 58)))
+174	+ 147
+24 + 52
+24 + 33
+431+	301
+1 - 0.56
+1 - 0.47
+1 - 0.53
+1 - 0.45
+37 + 28
+347	+291
+geno2allele <- function(AA, AB, BB){#
+	tibble(allele = c('A', 'B'), #
+		   n = c(AA*2 + AB, BB*2 + AB), #
+		   freq = c((AA*2 + AB) / ((AA*2 + AB) + (BB*2 + AB)),#
+		   			(BB*2 + AB) / ((AA*2 + AB) + (BB*2 + AB))#
+		   			))#
+#
+}
+geno2allele(6, 3, 1)
+library(tidyverse)
+geno2allele(6, 3, 1)
+210*63.8
+210*0.638
+geno2allele(210*0.638, 210*0.304, 210*0.068)
+geno2allele(206*0.519, 206*0.413, 206*0.068)
+fisher.test(data.frame(AD = c(332, 92), CN = c(299, 113)))
+chi(data.frame(AD = c(332, 92), CN = c(299, 113)))
+chisq.test(data.frame(AD = c(332, 92), CN = c(299, 113)))
+data.frame(AD = c(332, 92), CN = c(299, 113))
+geno2allele(118, 519, 542)
+336 + 110
+geno2allele(50, 50, 10)
+geno2allele(9, 22, 7)
+fisher.test(data.frame(AD = c(150, 70), CN = c(40, 36)))
+1 / 1.9
+geno2allele(241, 182, 38)
+geno2allele(227, 155, 19)
+125+	109
+290	+222
+geno2allele(249, 41, 0)
+geno2allele(177, 42, 1)
+fisher.test(data.frame(AD = c(539, 41), CN = c(396, 44)))
+fisher.test(data.frame(AD = c(539, 41), CN = c(396, 48)))
+fisher.test(data.frame(AD = c(41, 539), CN = c(48, 396)))
+521	+578
+318	+ 324
+128+	92
+229+	253
+314	+294
+67+ 53+ 40 + 107 +239+ 24
+4466.71 - 1600
+45.68 + 11.21
+237+	237
+5316	+10757
+156	+ 138
+216+	323
+992 +	1358
+229	+318
+376*2
+geno2allele(225, 130, 21)
+geno2allele(194, 146, 36)
+fisher.test(data.frame(AD = c(580, 172), CN = c(534, 218)))
+fisher.test(data.frame(AD = c(172, 580), CN = c(218, 534)))
+432 +	106
+174	+176
+fisher.test(data.frame(AD = c(98, 70), CN = c(130, 166)))
+fisher.test(data.frame(AD = c(70, 98), CN = c(166,130)))
+84	+148
+324	+250
+199+	165
+120	+412
+1046	+372
+96+	120
+## AF AD#
+geno2allele(2, 61, 398)#
+## AF Controls#
+geno2allele(3, 64, 280)
+## https://en.wikipedia.org/wiki/Allele_frequency#
+geno2allele <- function(AA, AB, BB){#
+	tibble(allele = c('A', 'B'), #
+		   n = c(AA*2 + AB, BB*2 + AB), #
+		   freq = c((AA*2 + AB) / ((AA*2 + AB) + (BB*2 + AB)),#
+		   			(BB*2 + AB) / ((AA*2 + AB) + (BB*2 + AB))#
+		   			))#
+#
+}
+# Chen2017#
+## AF AD#
+geno2allele(2, 61, 398)#
+## AF Controls#
+geno2allele(3, 64, 280)
+library(tidyverse)
+# Chen2017#
+## AF AD#
+geno2allele(2, 61, 398)#
+## AF Controls#
+geno2allele(3, 64, 280)
+# Dai2018#
+## AF AD#
+geno2allele(2, 39, 125)#
+## AF Controls#
+geno2allele(7, 58, 119)
+1-0.73
+# Ladgreen#
+## AF AD#
+geno2allele(34, 330, 453)#
+## AF Controls#
+geno2allele(49, 313, 465)
+17008	+ 37154
+read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(samp.ssim, source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/output1.txt') %>% filter(source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/output2.txt') %>% filter(source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/output3.txt') %>% filter(source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(source == 'GWAS')
+read_tsv('~/Programs/ssimp_software-master/gwas/small.random.txt')
+read_table2('~/Programs/ssimp_software-master/gwas/small.random.txt')
+read_table2('~/Programs/ssimp_software-master/gwas/small.random.txt') %>% filter(MarkerName == 'rs9617600')
+read_table2('~/Programs/ssimp_software-master/output_snps.tx')
+read_table2('~/Programs/ssimp_software-master/output_snps.txt')
+fam <- read_table2('~/LOAD_minerva/dummy/Brian/projects/ADGC/data/postImpute_vcf0.8/newids/ADGC.fam')
+fam <- read_table2('~/LOAD_minerva/dummy/Brian/projects/ADGC/data/postImpute_vcf0.8/newids/ADGC.fam', col_names = F)
+fam
+fam %>% separate(X1, c('Cohort', 'FID'), sep = '-') %>% count(Cohort) %>% print(n = Inf)
+1/0.48
+3 + 5 + 7 + 4 + 1 + 5 + 3 + 3 +2 + 1 + 5
+3 + 5 + 6 + 5 + 1 + 5 + 2 + 5 + 4 + 2. +6
+dat <- read_tsv('~/Programs/ssimp_software-master/output.txt')
+librar
+library(tidyverse)
+dat <- read_tsv('~/Programs/ssimp_software-master/output.txt')
+dat
+dat %>% fitler(source == 'GWAS')
+dat %>% filter(source == 'GWAS')
+dat %>% filter(source == 'GWAS') %>% print(n = Inf)
+dat <- read_tsv('~/LOAD_minerva/dummy/shea/bin/ssimp_software/output.txt')
+dat
+dat %>% filter(source == 'GWAS') %>% print(n = Inf)
+2771 - 258
+1/0.73
+dat_res <- read_tsv('MRdat_results.txt')
+library(tidyverse)
+dat_res <- read_tsv('MRdat_results.txt')
+setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
+library(tidyverse)   ## For data wrangling #
+library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ #
+library(RadialMR)    ## For Radial MR plots  #
+library(ggplot2)     ## For plotting
+dat_res <- read_tsv('MRdat_results.txt')
+mrdat_res <- dat_res %>% #
+  filter(method == 'Inverse variance weighted (fixed effects)') %>% #
+  filter(outcome == input_outcome) %>% #
+  filter(pt == input_pt) %>% #
+  arrange(-b) %>%#
+  mutate(pval = round(pval, 4)) %>% #
+  as.data.frame()
+input_exposure <- 'alcc'#
+input_outcome <- 'load'#
+input_pt <- 5e-8
+mrdat_res <- dat_res %>% #
+  filter(method == 'Inverse variance weighted (fixed effects)') %>% #
+  filter(outcome == input_outcome) %>% #
+  filter(pt == input_pt) %>% #
+  arrange(-b) %>%#
+  mutate(pval = round(pval, 4)) %>% #
+  as.data.frame()
+forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.5, 0.5, 0.5),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
+8forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
+forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
+forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
+forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
+forest_plot_1_to_many(mrdat_res,b="b",se="se",#
+                      exponentiate=T,ao_slc=F, by = NULL,#
+                      TraitM="outcome", col1_title="Risk factor",#
+                      trans="log2", #
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
+                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
+                      addcol_titles=c("Exposure", "No. SNPs","P-val"))

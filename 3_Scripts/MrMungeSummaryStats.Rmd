@@ -930,8 +930,8 @@ write_tsv(sociso, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/so
 ## Insomnia 
 [Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information): We report single- and multiple-trait genome-wide association analyses of self-reported sleep duration, insomnia symptoms and excessive daytime sleepiness in the UK Biobank (n = 112,586).
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
-insom.raw <- read_table2(params$insom.summary)
-insom <- insom.raw %>% 
+insom.raw.2017 <- read_table2(params$insom.summary)
+insom2017 <- insom.raw.2017 %>% 
   rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF) %>% 
   filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
@@ -942,7 +942,7 @@ insom <- insom.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
   filter(SNP != 'rs376775068')
 
-write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom_GWAS.Processed.gz'))
+write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom2017_GWAS.Processed.gz'))
 
 ```
 
@@ -960,6 +960,24 @@ sleep <- sleep.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
 write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleep_GWAS.Processed.gz'))
+
+```
+
+## Insomnia 
+[Jansen et al 2018](https://www.nature.com/articles/ng.3749#supplementary-information): Here, we use an unprecedented large genetic association sample (N=1,331,010 - 23andME + UKBB) to allow detection of a substantial number of genetic variants and gain insight into biological functions, cell types and tissues involved in insomnia complaints. This file includes GWAS summary statistics of insomnia in UK Biobank (N=386,533 individuals).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+insom.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Sleep/Jansen2018/Insomnia_sumstats_Jansenetal.txt.gz')
+insom <- insom.raw %>% 
+  mutate(Beta = log(OR)) %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF, MarkerName = UNIQUE_ID) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom_GWAS.Processed.gz'))
 
 ```
 
