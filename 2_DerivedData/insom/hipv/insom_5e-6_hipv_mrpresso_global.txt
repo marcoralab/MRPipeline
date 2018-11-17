@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gXMPkj	FobGin	hipv	insom	0	146.35865700779243	0.0309
