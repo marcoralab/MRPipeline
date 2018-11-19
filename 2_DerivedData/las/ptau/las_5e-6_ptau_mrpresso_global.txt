@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+LVf8Q0	AIflXL	ptau	las	0	19.094984499661447	0.646

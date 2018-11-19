@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gtiXAI	X1Fch5	npany	ais	0	6.510860346700903	0.936

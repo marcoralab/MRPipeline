@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+JoSAWL,4WiLen,aaos,svs,MR Egger,32.18011745529787,35,0.604960894858632,2018-11-19
+JoSAWL,4WiLen,aaos,svs,Inverse variance weighted,33.025630852690256,36,0.6108207877910515,2018-11-19

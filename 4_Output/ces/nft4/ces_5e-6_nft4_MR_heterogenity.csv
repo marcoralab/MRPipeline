@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Azv4XN,SBXjUA,nft4,ces,MR Egger,27.306703489391207,36,0.8509742197291674,2018-11-19
+Azv4XN,SBXjUA,nft4,ces,Inverse variance weighted,27.63818346771227,37,0.868049587136706,2018-11-19

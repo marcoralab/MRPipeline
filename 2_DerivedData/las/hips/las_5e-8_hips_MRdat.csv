@@ -1,0 +1,5 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10820405,A,G,A,G,-0.1812,0.0248,0.1847,0.1934,FALSE,FALSE,FALSE,u5x75q,0.1092,0.8207,hips,TRUE,reported,0.0331,4.508e-8,las,TRUE,reported,B50LGE,2,TRUE,NA
+rs2107595,A,G,A,G,0.2358,-0.0977,0.1677,0.1612,FALSE,FALSE,FALSE,u5x75q,0.1212,0.4199,hips,TRUE,reported,0.0319,1.442e-13,las,TRUE,reported,B50LGE,2,TRUE,NA
+rs476762,A,T,A,T,0.201,-0.0854,0.133,0.1327,FALSE,TRUE,FALSE,u5x75q,0.1351,0.5272,hips,TRUE,reported,0.0353,1.222e-8,las,TRUE,reported,B50LGE,2,TRUE,NA
+rs77927000,C,G,C,G,-0.2109,0.0487,0.8525,0.8493999999999999,FALSE,TRUE,FALSE,u5x75q,0.1323,0.7129,hips,TRUE,reported,0.0344,8.916e-10,las,TRUE,reported,B50LGE,2,TRUE,NA

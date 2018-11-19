@@ -1,0 +1,1 @@
+SNP	CHR	POS	Effect_allele	Non_Effect_allele	EAF	Zscore	Beta	SE	P	r2	N

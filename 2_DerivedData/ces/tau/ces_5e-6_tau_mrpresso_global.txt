@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+GZJ7w3	tnRzKf	tau	ces	0	26.563252176587394	0.479

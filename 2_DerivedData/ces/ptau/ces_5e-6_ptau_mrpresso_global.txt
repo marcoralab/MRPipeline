@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+weJQcC	FJniBO	ptau	ces	0	23.991733562570612	0.76

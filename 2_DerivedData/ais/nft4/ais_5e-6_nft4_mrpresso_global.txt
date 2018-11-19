@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ODtrcY	327UM2	nft4	ais	0	49.207692826213375	0.6548

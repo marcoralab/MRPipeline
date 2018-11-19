@@ -1,0 +1,14 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs11065822,T,G,T,G,0.0636,-0.1394,0.3624,0.3629,FALSE,FALSE,FALSE,1gre6v,0.1003,0.1649,hips,TRUE,reported,0.0112,1.345e-8,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs11066188,A,G,A,G,0.0764,-0.1546,0.4171,0.4376,FALSE,FALSE,FALSE,1gre6v,0.0918,0.09202,hips,TRUE,reported,0.0102,8.112e-14,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs11066309,A,G,A,G,0.0716,-0.1428,0.4191,0.4201,FALSE,FALSE,FALSE,1gre6v,0.0972,0.1417,hips,TRUE,reported,0.0102,2.468e-12,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs11242678,T,C,T,C,0.0723,0.2958,0.255,0.257,FALSE,FALSE,FALSE,1gre6v,0.0992,0.002859,hips,TRUE,reported,0.0114,2.703e-10,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs2066864,A,G,A,G,0.0634,0.0837,0.2452,0.2239,FALSE,FALSE,FALSE,1gre6v,0.10780000000000001,0.4374,hips,TRUE,reported,0.0115,3.514e-8,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs2107595,A,G,A,G,0.0882,-0.0977,0.1673,0.1612,FALSE,FALSE,FALSE,1gre6v,0.1212,0.4199,hips,TRUE,reported,0.0132,2.328e-11,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs2634074,A,T,A,T,-0.0941,0.152,0.7877,0.8042,FALSE,TRUE,FALSE,1gre6v,0.1168,0.1929,hips,TRUE,reported,0.0121,5.905e-15,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs2758612,T,C,T,C,0.0653,-0.0484,0.6453,0.6501,FALSE,FALSE,FALSE,1gre6v,0.097,0.6175,hips,TRUE,reported,0.0111,3.677e-9,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs3184504,T,C,T,C,0.0779,-0.1807,0.4722,0.5028,FALSE,FALSE,FALSE,1gre6v,0.0886,0.0413,hips,TRUE,reported,0.0101,1.229e-14,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs473238,T,C,T,C,0.0831,-0.0683,0.1326,0.1304,FALSE,FALSE,FALSE,1gre6v,0.1361,0.6156,hips,TRUE,reported,0.0147,1.651e-8,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs4766897,T,C,T,C,0.0826,-0.1817,0.3389,0.3731,FALSE,FALSE,FALSE,1gre6v,0.1104,0.09971,hips,TRUE,reported,0.0117,1.607e-12,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs4942561,T,G,T,G,0.0655,0.1294,0.759,0.7551,FALSE,FALSE,FALSE,1gre6v,0.1065,0.2246,hips,TRUE,reported,0.0116,1.771e-8,ais,TRUE,reported,Nlw9d3,2,TRUE,NA
+rs635634,T,C,T,C,0.0772,0.0618,0.1921,0.1911,FALSE,FALSE,FALSE,1gre6v,0.108,0.5671,hips,TRUE,reported,0.0134,9.179e-9,ais,TRUE,reported,Nlw9d3,2,TRUE,NA

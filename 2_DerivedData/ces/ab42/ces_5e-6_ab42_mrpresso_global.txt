@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Ng1smv	rDAGu7	ab42	ces	0	28.028952125964143	0.405

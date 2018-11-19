@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+XJFDK6,DFSwOB,aaos,as,MR Egger,78.61829476837238,62,0.07559714364728505,2018-11-19
+XJFDK6,DFSwOB,aaos,as,Inverse variance weighted,79.89797169789448,63,0.07397637880693213,2018-11-19

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FdSLRa	CeCm0z	load	ces	0	5.054286231425791	0.45

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+LrENmO	RBxs7l	npany	las	0	3.5058060945303797	0.708

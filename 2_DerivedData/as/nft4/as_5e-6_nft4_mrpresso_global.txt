@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+PETpp7	7PCgEr	nft4	as	0	71.07224921187125	0.2264

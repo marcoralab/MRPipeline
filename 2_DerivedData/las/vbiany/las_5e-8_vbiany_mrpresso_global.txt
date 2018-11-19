@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2F7qYP	enCJtv	vbiany	las	0	4.228237256282534	0.602

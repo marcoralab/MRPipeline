@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2LMkeH	t0OJOH	ab42	as	0	11.144453822658473	0.377

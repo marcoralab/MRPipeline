@@ -1,0 +1,82 @@
+$`Main MR results`
+       Exposure       MR Analysis Causal Estimate        Sd    T-stat   P-value
+1 beta.exposure               Raw      -0.1124357 0.2797485 -0.401917 0.6893923
+2 beta.exposure Outlier-corrected              NA        NA        NA        NA
+
+$`MR-PRESSO results`
+$`MR-PRESSO results`$`Global Test`
+$`MR-PRESSO results`$`Global Test`$RSSobs
+[1] 74.33511
+
+$`MR-PRESSO results`$`Global Test`$Pvalue
+[1] 0.0392
+
+
+$`MR-PRESSO results`$`Outlier Test`
+         RSSobs Pvalue
+1  1.917279e-02      1
+2  1.020059e-02      1
+3  1.832325e-02      1
+4  2.311478e-02      1
+5  1.933976e-02      1
+6  4.897025e-01      1
+7  9.825505e-02 0.0954
+8  2.214199e-02      1
+9  1.812986e-03      1
+10 7.915193e-03      1
+11 1.646066e-03      1
+12 9.882454e-03      1
+13 1.048223e-03      1
+14 4.253205e-02      1
+15 4.234628e-05      1
+16 4.433716e-01      1
+17 6.440238e-01      1
+18 2.024749e-02      1
+19 2.421811e-02      1
+20 4.697278e-02      1
+21 1.492522e-03      1
+22 2.022370e-05      1
+23 2.328358e-03      1
+24 5.215538e-02      1
+25 3.089295e-03      1
+26 8.586320e-03      1
+27 8.195023e-03      1
+28 8.011185e-01 0.9752
+29 6.167739e-03      1
+30 2.157219e-02      1
+31 1.776707e-03      1
+32 3.683317e-02      1
+33 3.236362e-02      1
+34 1.692753e-02      1
+35 1.822531e-01      1
+36 5.583532e-02      1
+37 5.944809e-03      1
+38 1.689937e-02      1
+39 2.781377e-04      1
+40 3.629060e-03      1
+41 3.172607e-02      1
+42 1.670351e-02      1
+43 1.954128e-02      1
+44 9.508718e-03      1
+45 1.403551e-02      1
+46 5.271157e-03      1
+47 7.485812e-06      1
+48 8.789934e-02      1
+49 1.971003e-02      1
+50 1.643420e-02      1
+51 1.001616e-02      1
+52 3.228372e-05      1
+53 1.352038e-03      1
+
+$`MR-PRESSO results`$`Distortion Test`
+$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
+[1] "No significant outliers"
+
+$`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
+[1] NA
+
+$`MR-PRESSO results`$`Distortion Test`$Pvalue
+[1] NA
+
+
+

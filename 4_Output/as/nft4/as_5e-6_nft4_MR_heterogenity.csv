@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+PETpp7,7PCgEr,nft4,as,MR Egger,66.91559676431493,59,0.22386628296418318,2018-11-19
+PETpp7,7PCgEr,nft4,as,Inverse variance weighted,68.69662043387042,60,0.20648281712984462,2018-11-19

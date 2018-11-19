@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+J7WR7h	Zl4Skz	vbiany	as	0	10.1902086664784	0.603

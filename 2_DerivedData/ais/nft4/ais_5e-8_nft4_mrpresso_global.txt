@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kSwVPW	bL5wag	nft4	ais	0	8.699651911583784	0.814
