@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fC4O5l	kSLNcP	as	load	0	120.05604997615323	0.0145

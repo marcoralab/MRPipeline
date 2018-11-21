@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-HRKY4J	VYoTlt	mvpa	load	1	167.41603123897335	<2e-04
+VyctcG	1qvLMN	mvpa	load	1	167.4160312389734	<2e-04

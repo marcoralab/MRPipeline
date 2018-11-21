@@ -21,6 +21,17 @@ MRsummary <- read_tsv('MR_Results_summary.txt')
 ## Blurbs
 traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')
 
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 
+                        'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 
+                        'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 
+                        'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
+
+## LOAD, CSF and Neuropath
+outcomes <- c('load', 'aaos', 
+                       'ab42', 'ptau', 'tau', 
+                       'hipv', 'hipv2015', 
+                       'npany', 'nft4', 'hips', 'vbiany')
+
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
   
@@ -49,12 +60,12 @@ ui <- fluidPage(
                                  "Insomnia" = "insom", 
                                  "Low-density lipoproteins" = "ldl", 
                                  "Major Depressive Disorder" = "mdd", 
-                                 "Mild-vigrous physical activity" = "mvpa",
+                                 "Moderate-to-vigorous PA" = "mvpa",
                                  "Pulse Pressure" = "pp", 
                                  "Systolic Blood Pressure" = "sbp", 
                                  "Sleep duration" = "sleep", 
                                  "Smoking Status" = "smkukbb", 
-                                 "Social Isoloation" = "sociso", 
+                                 "Social Isolation" = "sociso", 
                                  "Total Cholesterol" = "tc", 
                                  "Triglycerides" = "trig"), 
                   selected = 'alcc'),
@@ -65,7 +76,7 @@ ui <- fluidPage(
                                  "Alzheimer's Age of Onset" = "aaos", 
                                  "CSF Ab42" = "ab42", 
                                  "Hippocampul Sclerosis" = "hips", 
-                                 "Hippocampul Volume - 2018" = "hipv",
+                                 "Hippocampul Volume - 2017" = "hipv",
                                  "Hippocampul Volume - 2015" = "hipv2015", 
                                  "Neurofibrillary tangles" = "nft4", 
                                  "Neuritic Plaques" = "npany", 
@@ -76,7 +87,9 @@ ui <- fluidPage(
       
       radioButtons("pt", label = h3("Pvalue Threshold"),
                    choices = list("5e-8" = 1, "5e-6" = 2), 
-                   selected = 1)
+                   selected = 1),
+      
+      checkboxInput("checkbox", label = "Best Model", value = FALSE)
       
       
     ),
@@ -90,7 +103,9 @@ ui <- fluidPage(
                   tabPanel("Summary",
                            plotOutput(outputId = "mr_summaryPlot"), 
                            htmlOutput("SummaryTabText"),
-                           DT::dataTableOutput("SummaryTab")),
+                           DT::dataTableOutput("SummaryTab"), 
+                           htmlOutput("SummaryTabPRESSOText"),
+                           DT::dataTableOutput("SummaryPRESSOTab")),
                   tabPanel("Instruments", 
                            htmlOutput("exposure_blurb"),
                            htmlOutput("tab1"),
@@ -129,6 +144,7 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram ----
 server <- function(input, output) {
+  
   ## Exract exposure and outcome names/blurbs
   exposure.name <- reactive({as.character(traits[grep(paste0("\\b", input$exposure, "\\b"), traits$code), 'name'])})
   exposure.blurb <- reactive({as.character(traits[grep(paste0("\\b", input$exposure, "\\b"), traits$code), 'blurb'])})
@@ -184,49 +200,160 @@ server <- function(input, output) {
     HTML(paste0(tags$br(), h4(outcome.name()),outcome.blurb(), tags$br(), tags$br()))
    })
   
+  ##=======================================##
+  mr_best <- reactive({
+    mr_best <- MRsummary %>% 
+      filter(outcome %in% outcomes) %>% 
+      filter(exposure %in% exposures) %>%
+      filter(method == 'IVW') %>% 
+      group_by(outcome, exposure) %>% 
+      filter(MR_PRESSO == ifelse(TRUE %in% MR_PRESSO, TRUE, FALSE)) %>% 
+      ungroup()
+    
+    qobj <- qvalue(p = mr_best$pval, fdr.level = 0.1)
+    qvales.df <- tibble(pvalues = qobj$pvalues, lfdr = qobj$lfdr, qval = qobj$qvalues, significant = qobj$significant)
+    
+    mr_best <- mr_best %>% 
+      bind_cols(select(qvales.df, qval)) %>% 
+      group_by(outcome, exposure) %>% 
+      arrange(pval) %>% 
+      slice(1) %>% 
+      ungroup() %>%
+      rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, 
+             v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW) %>%
+      select(outcome, exposure, pt, MR_PRESSO, nsnp, n_outliers, b, se, pval, qval, 
+             v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)
+    
+  })
+  
   ##===============================================##  
   ## Summary
   ##===============================================## 
+    
   output$mr_summaryPlot <- renderPlot({
     input_outcome <- input$outcome
     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)
-    res.load <- MRsummary %>% 
-      filter(outcome  == input_outcome) %>% 
-      filter(method == 'IVW') %>% 
-      filter(pt == input_pt) %>% 
-      arrange(-b) %>%
-      as.data.frame()
     
-    forest_plot_1_to_many(res.load,b="b",se="se",
-                          exponentiate=T,ao_slc=F, by = NULL,
-                          TraitM="outcome", col1_title="Risk factor",
-                          trans="log2")
+    trans = ifelse(input_outcome %in% c('load', 'aaos', 'nft4', 'npany', 'hips', 'vbiany'), 'log2', 'identity')
+    exponentiate = ifelse(input_outcome %in% c('load', 'aaos', 'nft4', 'npany', 'hips', 'vbiany'), TRUE, FALSE)
+    
+    if(input$checkbox == FALSE){
+      res.load <- MRsummary %>% 
+        filter(outcome %in% outcomes) %>% 
+        filter(exposure %in% exposures) %>%
+        filter(outcome == input_outcome) %>% 
+        filter(MR_PRESSO == F) %>%
+        filter(method == 'IVW') %>% 
+        filter(pt == input_pt) %>% 
+        arrange(-b) %>%
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%
+        as.data.frame()
+      
+      forest_plot_1_to_many(res.load,b="b",se="se",
+                            exponentiate=exponentiate,ao_slc=F, by = NULL,
+                            TraitM="name", 
+                            col1_title="Risk factor",
+                            trans=trans)
+    } else {
+      res.plot <- mr_best() %>% 
+        filter(outcome == input_outcome) %>% 
+        mutate(b = round(b, 2)) %>% 
+        mutate(se = round(se, 2)) %>% 
+        mutate(sig = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
+        mutate(sig = ifelse(qval < 0.05, paste0(sig, ' †'), sig)) %>% 
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% 
+        mutate(name = ifelse(MR_PRESSO == FALSE, name, paste0(name, '*'))) %>% 
+        arrange(-b) %>%
+        as.data.frame()
+      
+      forest_plot_1_to_many(res.load,b="b",se="se",
+                            exponentiate=exponentiate,ao_slc=F, by = NULL,
+                            TraitM="name", col1_title="Risk factor", col1_width = 1.1,
+                            trans=trans, 
+                            addcols=c('pt', "nsnp", 'sig'), 
+                            addcol_widths=c(0.5,0.75,0.75), addcol_titles=c("Pt", "No. SNPs","P-value"))
+      
+    }
+    
   })
-  
-
+    
   output$SummaryTabText = renderUI({
-    HTML(paste0(tags$br(), "Causal associations of modifiable risk factors with ", outcome.name()))
+   
+      HTML(paste0(tags$br(), "Causal associations of modifiable risk factors with ", outcome.name()))
+    
   })
   
    output$SummaryTab <- DT::renderDataTable(DT::datatable({
     input_outcome <- input$outcome
     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)
-    MRsummary %>% 
-      filter(outcome == input_outcome) %>% 
-      filter(pt == input_pt) %>% 
-      mutate(b = round(b, 3)) %>% 
-      mutate(se = round(se, 3)) %>% 
-      mutate(pval = round(pval, 4)) %>% 
-      mutate(exposure = as.factor(exposure)) %>%
-      mutate(method = as.factor(method)) %>%
-      rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, 
-             v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW) %>% 
-      select(-pt, -outcome)
+    
+    if(input$checkbox == FALSE){
+      MRsummary %>% 
+        filter(outcome %in% outcomes) %>% 
+        filter(exposure %in% exposures) %>%
+        filter(outcome == input_outcome) %>% 
+        filter(MR_PRESSO == FALSE) %>% 
+        filter(pt == input_pt) %>% 
+        mutate(b = round(b, 3)) %>% 
+        mutate(se = round(se, 3)) %>% 
+        mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
+        mutate(method = as.factor(method)) %>%
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%
+        select(-exposure, -pt, -outcome) %>% 
+        rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, 
+               v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW, exposure = name) %>% 
+        mutate(exposure = as.factor(exposure)) %>%
+        select(exposure, method, nsnp, n_outliers, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)
+    } else {
+      
+      mr_best() %>% 
+        filter(outcome == input_outcome) %>% 
+        mutate(b = round(b, 3)) %>% 
+        mutate(se = round(se, 4)) %>% 
+        mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% 
+        select(-exposure) %>%
+        rename(exposure = name) %>% 
+        mutate(exposure = as.factor(exposure)) %>% 
+        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)
+    }
+       
+
   }, filter = 'top', rownames = FALSE
   ))
  
   
-  
+   output$SummaryTabPRESSOText = renderUI({
+     if(input$checkbox == FALSE){
+       HTML(paste0(tags$br(), "Causal associations of modifiable risk factors with ", outcome.name(), " after outlier removal"))
+     }
+   })
+   
+   output$SummaryPRESSOTab <- DT::renderDataTable(DT::datatable({
+     input_outcome <- input$outcome
+     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)
+     
+     if(input$checkbox == FALSE){
+     MRsummary %>% 
+       filter(outcome %in% outcomes) %>% 
+       filter(exposure %in% exposures) %>%
+       filter(outcome == input_outcome) %>% 
+       filter(MR_PRESSO == TRUE) %>%
+       filter(pt == input_pt) %>% 
+       mutate(b = round(b, 3)) %>% 
+       mutate(se = round(se, 3)) %>% 
+       mutate(pval = round(pval, 4)) %>% 
+       mutate(exposure = as.factor(exposure)) %>%
+       mutate(method = as.factor(method)) %>%
+       left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%
+       select(-exposure, -pt, -outcome) %>% 
+       rename(exposure = name) %>%
+       select(exposure, method, nsnp, b, se, pval)
+     }
+
+   }, filter = 'top', rownames = FALSE
+   ))
+   
   ##===============================================##  
   ## Instruments
   ##===============================================## 
@@ -262,6 +389,7 @@ server <- function(input, output) {
       select(-exposure, -outcome, -pt, -r2)
   }))
 
+
   output$tab3 = renderUI({
     HTML(paste0(tags$br(), "Table 3: Proxy SNPs for ", outcome.name()))
   })
@@ -278,6 +406,8 @@ server <- function(input, output) {
              EA.proxy = Effect_allele.proxy, NEA.proxy = Non_Effect_allele.proxy) %>% 
       select(-exposure, -outcome, -pt, -r2)
   }))
+  
+  
   
   ##===============================================##  
   ## MR analysis

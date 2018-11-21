@@ -264,20 +264,72 @@ if(nrow(mrdat) - sum(mrdat$mrpresso_keep, na.rm=TRUE) >= 1){
 ```
 <br> 
 
-```{r scatter_plot_outlier, eval = plot_outlier, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 4: Scatterplot of SNP effects for the association of the Exposure on the Outcome after outlier removal'}
+```{r scatter_plot_outlier, echo=F, message = FALSE, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 5: Scatterplot of SNP effects for the association of the Exposure on the Outcome after outlier removal'}
 
-##  Scatter Plot
+if(plot_outlier == TRUE){
 scatter_plot <- mr_scatter_plot(res_mrpresso, mrdat_mrpresso)
 scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + 
   guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +
   labs(x = paste0('SNP effect on ', exposure.name), 
        y = paste0('SNP effect on ', outcome.name))  
+}else{
+  ggplot(mrdat, aes(x = beta.exposure, y = beta.outcome)) + geom_blank() + theme_bw() +
+  labs(x = paste0('SNP effect on ', exposure.name), 
+       y = paste0('SNP effect on ', outcome.name), 
+       title = 'No Outliers Detected') 
+}
 
 ```
+<br> 
+
+**Table 10:** Heterogenity Tests after outlier removal
+```{r heterogeneity_mrpresso, echo=F, warning=F}
+if(plot_outlier == TRUE){
+  heterogenity_plei <- mr_heterogeneity(mrdat_mrpresso, method_list=c("mr_egger_regression", "mr_ivw"))
+}else{
+  heterogenity_plei <- data.frame(
+    id.exposure = as.character(mrdat[1,'id.exposure']),
+    id.outcome = as.character(mrdat[1,'id.outcome']),
+    outcome = as.character(mrdat[1,'outcome']),
+    exposure = as.character(mrdat[1,'exposure']),
+    method = 'mrpresso',
+    Q = NA,
+    Q_df = NA,
+    Q_pval = NA)
+}
+
+as.data.frame(heterogenity_plei)
+
+```
+<br>
+
+**Table 11:** MR Egger test for directional pleitropy after outlier removal
+```{r pleitropy_mrpresso, echo=F}
+if(plot_outlier == TRUE){
+  mrpresso_plei <- mr_pleiotropy_test(mrdat_mrpresso)
+}else{
+  mrpresso_plei <- data.frame(
+    id.exposure = as.character(mrdat[1,'id.exposure']),
+    id.outcome = as.character(mrdat[1,'id.outcome']),
+    outcome = as.character(mrdat[1,'outcome']),
+    exposure = as.character(mrdat[1,'exposure']),
+    method = 'mrpresso',
+    egger_intercept = NA,
+    se = NA,
+    pval = NA)
+}
+
+as.data.frame(mrpresso_plei)
+
+```
+<br>
+
 
 ```{r write_out_MR_results, echo=F}
 heterogenity %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_heterogenity.csv'))
+heterogenity_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_heterogenity.csv'))
 mr_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_egger_plei.csv'))
+mrpresso_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_egger_plei.csv'))
 mf.out %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_mean_F.csv'))
 res %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_Results.csv'))
 res_mrpresso %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_Results.csv'))

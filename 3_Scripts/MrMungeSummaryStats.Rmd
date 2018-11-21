@@ -1268,6 +1268,94 @@ dat_alt.hg19 <- dat_alt.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
 
 write_tsv(dat_alt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alt_GWAS.Processed.gz'))
+```
 
+## Stroke
+### All Stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+as.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.1.AS.EUR.out')
+as <- as.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(as, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/as_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Any ischemic stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ais.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.2.AIS.EUR.out')
+ais <- ais.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ais, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ais_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Large-artery stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+las.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.3.LAS.EUR.out')
+las <- las.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%o
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(las, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/las_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Cardioembolic stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ces.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.4.CES.EUR.out')
+ces <- ces.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ces, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ces_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Small-vessel stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+svs.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.5.SVS.EUR.out')
+svs <- svs.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(svs, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/svs_GWAS.Processed.gz'))
 
 ```

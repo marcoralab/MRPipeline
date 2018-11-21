@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tiUIJ9	uPVPh7	load	as	0	93.73604760022094	0.01
+Temw2o	RIFAvr	load	as	0	93.73604760022094	0.0074
