@@ -39,5 +39,16 @@ missing : [
    {"ExposureCode" : "sleep", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "svs", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
  ]
