@@ -504,119 +504,36 @@ forest_plot_1_to_many(res.vbi,b="IVW_b",se="IVW_se",
 ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/vbi_mr.png', width = 10, height = 5.5, units = 'in')
 ```
 
-## Plot load results with all MR models
-### LOAD
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("load")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load_all.png', width = 8.5, height = 5.5, units = 'in')
+## =========== Heat Maps =========== ##
+
+```{r}
+dat %>% 
+  #mutate(z = ifelse(qval > 0.1, 0, z)) %>% 
+  ggplot(., aes(x = exposure, y = outcome, label = Signif, fill = z)) + 
+  geom_raster() + 
+  geom_text(size = 8) +
+  scale_fill_gradient2(low="blue", high="red", mid = "white") + 
+  coord_equal() + theme_classic() +
+  geom_vline(xintercept=seq(0.5, 23.5, 1),color="white") +
+  geom_hline(yintercept=seq(0.5, 11.5, 1),color="white") +
+  theme(legend.position = 'none', axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/mrbest_heat.png', width = 9, height = 5.5, units = 'in')
+
+dat %>% 
+  ggplot(., aes(x = exposure, y = outcome, size = -log10(qval), label = Signif)) + 
+  #ggplot(., aes(x = exposure, y = outcome, label = Signif)) + 
+  geom_tile(fill = 'white', alpha = 0.5) + 
+  geom_point(aes(color = z), shape = 15) +
+  geom_text(size = 8) + 
+  coord_equal() + 
+  scale_color_gradient2(low="blue", high="red", mid = "white") + 
+  geom_vline(xintercept=seq(0.5, 23.5, 1),color="#DEEBF7") +
+  geom_hline(yintercept=seq(0.5, 11.5, 1),color="#DEEBF7") +
+  theme_classic() + 
+  scale_size(range = c(1, 12)) + 
+  theme(legend.position = 'none', axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/gns.png', width = 8.5, height = 6, units = 'in')
 ```
-
-### AAOS
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("aaos")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### ab42
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("ab42")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### NP any
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("npany")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### ptau
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("ptau")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### tau
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("tau")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### NFT4
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("nft4")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### HV 2017
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hipv")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### HV 2015
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hipv2015")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### HS
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("hips")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-### VBI
-```{r , echo=FALSE}
-res_comb %>% 
-  filter(outcome == c("vbiany")) %>% 
-  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
-  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
-  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
-#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
-```
-
-
-
 
 
 

@@ -2,8 +2,11 @@ library(tidyverse)   ## For data wrangling
 library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ 
 library(RadialMR)    ## For Radial MR plots  
 library(ggplot2)     ## For plotting 
+library(qvalue)
 
-#setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
+# library(shiny)
+# setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
+# runApp()
 
 # Read in Data
 ## Summary Statistics
@@ -89,7 +92,8 @@ ui <- fluidPage(
                    choices = list("5e-8" = 1, "5e-6" = 2), 
                    selected = 1),
       
-      checkboxInput("checkbox", label = "Best Model", value = FALSE)
+      checkboxInput("checkbox", label = "Best Model", value = FALSE) 
+      #checkboxInput("single_ex", label = "Single Exposure", value = FALSE)
       
       
     ),
@@ -135,7 +139,11 @@ ui <- fluidPage(
                            htmlOutput("mr_PressoPlotText"),
                            plotOutput("mr_PressoPlot"),
                            htmlOutput("mr_PressoTabText"),
-                           DT::dataTableOutput("mr_PressoRes"))
+                           DT::dataTableOutput("mr_PressoRes"),
+                           htmlOutput("mrpresso_QText"),
+                           DT::dataTableOutput("mrpresso_Q"),
+                           htmlOutput("mrpresso_EggerText"),
+                           DT::dataTableOutput("mrpresso_Egger"))
                            
       )
     )
@@ -266,7 +274,7 @@ server <- function(input, output) {
         arrange(-b) %>%
         as.data.frame()
       
-      forest_plot_1_to_many(res.load,b="b",se="se",
+      forest_plot_1_to_many(res.plot,b="b",se="se",
                             exponentiate=exponentiate,ao_slc=F, by = NULL,
                             TraitM="name", col1_title="Risk factor", col1_width = 1.1,
                             trans=trans, 
@@ -286,11 +294,13 @@ server <- function(input, output) {
    output$SummaryTab <- DT::renderDataTable(DT::datatable({
     input_outcome <- input$outcome
     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)
+    #input_exposure <- ifelse(input$single_ex == FALSE, input$exposure, exposures)
+    input_exposure <- exposures
     
     if(input$checkbox == FALSE){
       MRsummary %>% 
         filter(outcome %in% outcomes) %>% 
-        filter(exposure %in% exposures) %>%
+        filter(exposure %in% input_exposure) %>%
         filter(outcome == input_outcome) %>% 
         filter(MR_PRESSO == FALSE) %>% 
         filter(pt == input_pt) %>% 
@@ -303,19 +313,20 @@ server <- function(input, output) {
         rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, 
                v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW, exposure = name) %>% 
         mutate(exposure = as.factor(exposure)) %>%
-        select(exposure, method, nsnp, n_outliers, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)
+        select(exposure, method, nsnp, n_outliers, b, se, pval)
     } else {
-      
       mr_best() %>% 
         filter(outcome == input_outcome) %>% 
+        filter(exposure %in% input_exposure) %>% 
         mutate(b = round(b, 3)) %>% 
-        mutate(se = round(se, 4)) %>% 
+        mutate(se = round(se, 3)) %>% 
+        mutate(pt = ifelse(pt == 5e-6, '5e-6', '5e-8')) %>% 
         mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
         left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% 
         select(-exposure) %>%
         rename(exposure = name) %>% 
         mutate(exposure = as.factor(exposure)) %>% 
-        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)
+        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval)
     }
        
 
@@ -420,10 +431,10 @@ server <- function(input, output) {
   output$mr_res <- DT::renderDataTable(DT::datatable({
     res() %>% 
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
-      mutate(b = round(b, 2)) %>% 
-      mutate(se = round(se, 2)) %>% 
-      mutate(pval = round(pval, 3))
-  }))
+      mutate(b = round(b, 3)) %>% 
+      mutate(se = round(se, 3)) %>% 
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
   
   output$mr_scatterText = renderUI({
     HTML(paste0(tags$br(), "Scatterplot of SNP effects for the association of ", exposure.name(), ' on ', outcome.name()))
@@ -448,8 +459,8 @@ server <- function(input, output) {
     mr_heterogeneity(mrdat(), method_list=c("mr_egger_regression", "mr_ivw")) %>% 
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
       mutate(Q = round(Q, 2)) %>% 
-      mutate(Q_pval = round(Q_pval, 4))
-  }))
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
   
   output$mr_FunnelText = renderUI({
     HTML(paste0(tags$br(), "Funnel plot of the MR causal estimates against their precession"))
@@ -482,8 +493,8 @@ server <- function(input, output) {
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
       mutate(egger_intercept = round(egger_intercept, 4)) %>% 
       mutate(se = round(se, 4)) %>% 
-      mutate(pval = round(pval, 4)) 
-  }))
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
   
   output$mr_PressoGloablText = renderUI({
     HTML(paste0(tags$br(), "MR-PRESSO Global Test for pleitropy"))
@@ -498,9 +509,9 @@ server <- function(input, output) {
       filter(outcome == input_outcome) %>% 
       filter(pt == input_pt) %>% 
       mutate(RSSobs = round(RSSobs, 4)) %>% 
-      select(-id.exposure, -id.outcome, -exposure, -outcome, -pt) 
+      select(-id.exposure, -id.outcome, -exposure, -outcome, -pt, -violated) 
 
-  }))
+  }, options = list(paging = FALSE, searching = FALSE)))
   
   ##===============================================##  
   ## Outlier Removal
@@ -539,13 +550,36 @@ server <- function(input, output) {
   output$mr_PressoRes <- DT::renderDataTable(DT::datatable({
     res_mrpresso() %>% 
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
-      mutate(b = round(b, 2)) %>% 
-      mutate(se = round(se, 2)) %>% 
-      mutate(pval = round(pval, 4))
-  }))
+      mutate(b = round(b, 3)) %>% 
+      mutate(se = round(se, 3)) %>% 
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
   
-
+  output$mrpresso_QText = renderUI({
+    HTML(paste0(tags$br(), "Cochrans Q heterogeneity test for ", exposure.name(), ' on ', outcome.name(), ' after outlier removal'))
+  })
+  
+  output$mrpresso_Q <- DT::renderDataTable(DT::datatable({
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()
+    mr_heterogeneity(mrdat_mrpresso, method_list=c("mr_egger_regression", "mr_ivw")) %>% 
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
+      mutate(Q = round(Q, 2)) %>% 
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
  
+  output$mrpresso_EggerText = renderUI({
+    HTML(paste0(tags$br(), "MR Egger test for directional pleitropy after outlier removal"))
+  })
+  
+  output$mrpresso_Egger <- DT::renderDataTable(DT::datatable({
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()
+    mr_pleiotropy_test(mrdat_mrpresso) %>% 
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% 
+      mutate(egger_intercept = round(egger_intercept, 4)) %>% 
+      mutate(se = round(se, 4)) %>% 
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))
+  }, options = list(paging = FALSE, searching = FALSE)))
+  
 }
 
 shinyApp(ui, server)

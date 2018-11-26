@@ -14,7 +14,7 @@ params:
   ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
   tau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_tau_GWAS_summary_statistics.txt.gz'
   hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
-  hipv_2015.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/Hippocampal_Volume/Stein2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
+  hipv_2015.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
   alc_cons.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_cons/ALC_CONS_GWAS_FORUKB.txt.gz'
   alc_dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_dep/daner_alcdep_eur_jul2017.gz.jul2017.min_n'
   audit.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz'
