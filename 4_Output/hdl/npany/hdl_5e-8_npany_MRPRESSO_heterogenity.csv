@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Oht2hQ,MzsFDF,npany,hdl,MR Egger,216.81675802342264,230,0.7242733677177098,2018-11-26
+Oht2hQ,MzsFDF,npany,hdl,Inverse variance weighted,216.81708690481378,231,0.7397822933660871,2018-11-26

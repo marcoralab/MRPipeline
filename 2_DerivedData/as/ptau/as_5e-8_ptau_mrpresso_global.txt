@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tjwGsZ	FG10nw	ptau	as	0	4.05370226079984	0.927
+7lsLoA	dOOkYU	ptau	as	0	4.05370226079984	0.904

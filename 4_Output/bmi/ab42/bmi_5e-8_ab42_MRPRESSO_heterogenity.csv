@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+7iFQPU,GJv5rs,ab42,bmi,MR Egger,1609.6970574736736,1488,0.014448643317444554,2018-11-26
+7iFQPU,GJv5rs,ab42,bmi,Inverse variance weighted,1609.7020148145941,1489,0.015122037999805093,2018-11-26

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-hyRf8S,mUz1qU,aaos,ldl,MR Egger,1366.7085702835302,207,7.175338146850407e-170,2018-10-18
-hyRf8S,mUz1qU,aaos,ldl,Inverse variance weighted,1429.9182283551163,208,3.62947348327981e-181,2018-10-18
+hyRf8S,mUz1qU,aaos,ldl,MR Egger,1366.7085702835302,207,7.175338146850407e-170,2018-11-26
+hyRf8S,mUz1qU,aaos,ldl,Inverse variance weighted,1429.9182283551163,208,3.62947348327981e-181,2018-11-26

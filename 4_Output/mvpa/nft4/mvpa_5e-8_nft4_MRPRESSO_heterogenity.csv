@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+UOLKoz,Gw6Mnl,nft4,mvpa,MR Egger,34.63237981979213,34,0.43760285019427547,2018-11-26
+UOLKoz,Gw6Mnl,nft4,mvpa,Inverse variance weighted,41.35557278519278,35,0.2128305648108276,2018-11-26

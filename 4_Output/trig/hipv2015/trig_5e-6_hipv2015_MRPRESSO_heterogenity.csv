@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sSFr5a,BXLFvf,hipv2015,trig,MR Egger,325.7326511956591,252,0.0011884576155115152,2018-11-26
+sSFr5a,BXLFvf,hipv2015,trig,Inverse variance weighted,328.6443557098412,253,9.509072531071304e-4,2018-11-26

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-GLwvEy,otngNo,tau,sleep,MR Egger,18.612872479971255,18,0.4160172565037512,2018-10-18
-GLwvEy,otngNo,tau,sleep,Inverse variance weighted,19.967945214066308,19,0.3965093748790659,2018-10-18
+GLwvEy,otngNo,tau,sleep,MR Egger,18.612872479971255,18,0.4160172565037512,2018-11-26
+GLwvEy,otngNo,tau,sleep,Inverse variance weighted,19.967945214066308,19,0.3965093748790659,2018-11-26

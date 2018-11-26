@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Me0gk0	XHWcKT	ptau	mvpa	1	255.52389000882053	<1e-04
+uDNWyM	mtWqjW	ptau	mvpa	1	255.0122016739743	<1e-04

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Crkp8q,rLeVZi,npany,fish,MR Egger,465.61550744577323,338,4.851229880783403e-6,2018-10-18
-Crkp8q,rLeVZi,npany,fish,Inverse variance weighted,465.8651082049148,339,5.537225306988831e-6,2018-10-18
+Crkp8q,rLeVZi,npany,fish,MR Egger,465.61550744577323,338,4.851229880783403e-6,2018-11-26
+Crkp8q,rLeVZi,npany,fish,Inverse variance weighted,465.8651082049148,339,5.537225306988831e-6,2018-11-26

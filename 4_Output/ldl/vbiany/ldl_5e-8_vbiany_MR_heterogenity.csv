@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CLXI7p,AERUfg,vbiany,ldl,MR Egger,194.4388220036012,203,0.6546100180715496,2018-10-18
-CLXI7p,AERUfg,vbiany,ldl,Inverse variance weighted,194.43939716213566,204,0.6728440689190391,2018-10-18
+CLXI7p,AERUfg,vbiany,ldl,MR Egger,194.4388220036012,203,0.6546100180715496,2018-11-26
+CLXI7p,AERUfg,vbiany,ldl,Inverse variance weighted,194.43939716213566,204,0.6728440689190391,2018-11-26

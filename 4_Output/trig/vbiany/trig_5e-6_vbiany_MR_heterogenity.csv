@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-qsk1yU,PCFkH2,vbiany,trig,MR Egger,260.67026232883984,292,0.9062634698234766,2018-10-18
-qsk1yU,PCFkH2,vbiany,trig,Inverse variance weighted,260.67302398230856,293,0.9131082701615445,2018-10-18
+qsk1yU,PCFkH2,vbiany,trig,MR Egger,260.67026232883984,292,0.9062634698234766,2018-11-26
+qsk1yU,PCFkH2,vbiany,trig,Inverse variance weighted,260.67302398230856,293,0.9131082701615445,2018-11-26

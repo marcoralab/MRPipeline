@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-gtiXAI,X1Fch5,npany,ais,MR Egger,4.92461058871109,11,0.9347625434829325,2018-11-19
-gtiXAI,X1Fch5,npany,ais,Inverse variance weighted,5.661035259713552,12,0.9321962340231364,2018-11-19
+gtiXAI,X1Fch5,npany,ais,MR Egger,4.924610588711094,11,0.9347625434829323,2018-11-26
+gtiXAI,X1Fch5,npany,ais,Inverse variance weighted,5.661035259713552,12,0.9321962340231364,2018-11-26

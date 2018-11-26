@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-RoCnEY,W5JumG,hipv,smkukbb,MR Egger,788.9635144618227,707,0.01707470754350001,2018-10-18
-RoCnEY,W5JumG,hipv,smkukbb,Inverse variance weighted,791.5289345414367,708,0.01555876074435314,2018-10-18
+RoCnEY,W5JumG,hipv,smkukbb,MR Egger,788.9635144618227,707,0.01707470754350001,2018-11-26
+RoCnEY,W5JumG,hipv,smkukbb,Inverse variance weighted,791.5289345414367,708,0.01555876074435314,2018-11-26

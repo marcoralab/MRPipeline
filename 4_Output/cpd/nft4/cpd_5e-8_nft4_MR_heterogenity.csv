@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-k1NlPg,iqC5kr,nft4,cpd,MR Egger,14.923030125742319,19,0.7274766539498105,2018-10-18
-k1NlPg,iqC5kr,nft4,cpd,Inverse variance weighted,17.117992935868497,20,0.6452991116805011,2018-10-18
+k1NlPg,iqC5kr,nft4,cpd,MR Egger,14.923030125742319,19,0.7274766539498105,2018-11-26
+k1NlPg,iqC5kr,nft4,cpd,Inverse variance weighted,17.117992935868497,20,0.6452991116805011,2018-11-26

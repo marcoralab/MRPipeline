@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CBPkyN,iRzIO6,vbiany,ais,MR Egger,50.98081586864281,50,0.4348382963027835,2018-11-19
-CBPkyN,iRzIO6,vbiany,ais,Inverse variance weighted,51.155539978764544,51,0.46754624717786747,2018-11-19
+CBPkyN,iRzIO6,vbiany,ais,MR Egger,50.98081586864281,50,0.4348382963027835,2018-11-26
+CBPkyN,iRzIO6,vbiany,ais,Inverse variance weighted,51.155539978764544,51,0.46754624717786747,2018-11-26

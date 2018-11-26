@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+yS351P,hGvvcf,load,dbp,MR Egger,3605.850669053707,2988,2.9972347352933205e-14,2018-11-26
+yS351P,hGvvcf,load,dbp,Inverse variance weighted,3606.6958031906834,2989,3.0638094423775345e-14,2018-11-26

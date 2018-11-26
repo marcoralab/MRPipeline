@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-mpe7Me,CNInnU,npany,diab,MR Egger,387.60995388877745,426,0.908886178681404,2018-10-18
-mpe7Me,CNInnU,npany,diab,Inverse variance weighted,389.64895766049267,427,0.9022420124526516,2018-10-18
+mpe7Me,CNInnU,npany,diab,MR Egger,387.60995388877745,426,0.908886178681404,2018-11-26
+mpe7Me,CNInnU,npany,diab,Inverse variance weighted,389.64895766049267,427,0.9022420124526516,2018-11-26

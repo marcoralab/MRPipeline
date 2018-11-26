@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Ilr5AC,sg3TEn,hipv,educ,MR Egger,1315.5939883372218,1172,0.002075875897123157,2018-11-26
+Ilr5AC,sg3TEn,hipv,educ,Inverse variance weighted,1316.33928517903,1173,0.0021155823779412802,2018-11-26

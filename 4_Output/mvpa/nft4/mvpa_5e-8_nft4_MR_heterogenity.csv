@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-S558Se,bhc7SS,nft4,mvpa,MR Egger,151.81343271343744,36,3.5967159826316336e-16,2018-10-18
-S558Se,bhc7SS,nft4,mvpa,Inverse variance weighted,194.6483012808055,37,2.7274693282227184e-23,2018-10-18
+UOLKoz,Gw6Mnl,nft4,mvpa,MR Egger,151.6740537570675,36,3.7975280145961247e-16,2018-11-26
+UOLKoz,Gw6Mnl,nft4,mvpa,Inverse variance weighted,194.58459005635115,37,2.799863199225188e-23,2018-11-26

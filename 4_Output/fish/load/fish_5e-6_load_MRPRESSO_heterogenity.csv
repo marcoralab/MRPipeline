@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+vxACs5,DVLLMw,load,fish,MR Egger,337.02599255230825,319,0.23363889367957413,2018-11-26
+vxACs5,DVLLMw,load,fish,Inverse variance weighted,337.0613808074919,320,0.24540372347643846,2018-11-26

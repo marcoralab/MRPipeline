@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8ebPvg	e2SNgN	ab42	mvpa	1	640.5748977752856	<1e-04
+dapoZt	FbrfhT	ab42	mvpa	1	640.820477994016	<1e-04

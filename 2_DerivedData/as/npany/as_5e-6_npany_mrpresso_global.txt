@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ctTEx4	lYomtF	npany	as	0	45.133225821964956	0.9528
+R8rh4g	ERYtc2	npany	as	0	45.133225821964956	0.9508

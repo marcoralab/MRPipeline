@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+B39E5a,MiJU4p,aaos,fish,MR Egger,124.31372451891596,119,0.3510404459279542,2018-11-26
+B39E5a,MiJU4p,aaos,fish,Inverse variance weighted,124.66336109209264,120,0.36688374593282325,2018-11-26

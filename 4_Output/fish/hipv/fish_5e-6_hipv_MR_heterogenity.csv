@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JicNFG,CTzlb0,hipv,fish,MR Egger,410.9980940420425,317,2.8754545301768966e-4,2018-10-18
-JicNFG,CTzlb0,hipv,fish,Inverse variance weighted,416.00313419323845,318,1.7715587738911673e-4,2018-10-18
+JicNFG,CTzlb0,hipv,fish,MR Egger,410.9980940420425,317,2.8754545301768966e-4,2018-11-26
+JicNFG,CTzlb0,hipv,fish,Inverse variance weighted,416.00313419323845,318,1.7715587738911673e-4,2018-11-26

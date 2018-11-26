@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-x8kYNC,2PtODG,aaos,hear,MR Egger,32.805612892551494,33,0.4767776197369916,2018-10-18
-x8kYNC,2PtODG,aaos,hear,Inverse variance weighted,32.826572414762865,34,0.5250291018415909,2018-10-18
+x8kYNC,2PtODG,aaos,hear,MR Egger,32.805612892551494,33,0.4767776197369916,2018-11-26
+x8kYNC,2PtODG,aaos,hear,Inverse variance weighted,32.826572414762865,34,0.5250291018415909,2018-11-26

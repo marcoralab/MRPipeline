@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Ah5nIJ,SfLA2S,load,audit,MR Egger,99.58902074272864,55,2.2006634225453083e-4,2018-10-18
-Ah5nIJ,SfLA2S,load,audit,Inverse variance weighted,105.58615902997704,56,6.930146891803135e-5,2018-10-18
+Ah5nIJ,SfLA2S,load,audit,MR Egger,99.58902074272864,55,2.2006634225453083e-4,2018-11-26
+Ah5nIJ,SfLA2S,load,audit,Inverse variance weighted,105.58615902997704,56,6.930146891803135e-5,2018-11-26

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HVNEc1,auzLJv,nft4,alcd,MR Egger,27.933160087958075,16,0.03220576615698379,2018-10-18
-HVNEc1,auzLJv,nft4,alcd,Inverse variance weighted,28.141770947697342,17,0.04330869140342478,2018-10-18
+HVNEc1,auzLJv,nft4,alcd,MR Egger,27.933160087958075,16,0.03220576615698379,2018-11-26
+HVNEc1,auzLJv,nft4,alcd,Inverse variance weighted,28.141770947697342,17,0.04330869140342478,2018-11-26

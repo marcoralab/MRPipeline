@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-slP708,BY3sRi,vbiany,las,MR Egger,26.959187175670564,34,0.7991698489348302,2018-11-19
-slP708,BY3sRi,vbiany,las,Inverse variance weighted,26.964679169725052,35,0.8325344021085624,2018-11-19
+slP708,BY3sRi,vbiany,las,MR Egger,26.959187175670564,34,0.7991698489348302,2018-11-26
+slP708,BY3sRi,vbiany,las,Inverse variance weighted,26.964679169725052,35,0.8325344021085624,2018-11-26

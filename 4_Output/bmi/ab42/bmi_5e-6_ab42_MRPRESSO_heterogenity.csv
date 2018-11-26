@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+PPJKL5,EIWe3A,ab42,bmi,MR Egger,3288.650560806201,2991,9.339095956728494e-5,2018-11-26
+PPJKL5,EIWe3A,ab42,bmi,Inverse variance weighted,3289.873203814246,2992,9.260851923002912e-5,2018-11-26

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+lkgreL,cDDzjl,load,mdd,MR Egger,55.28967483888525,41,0.06724975899597745,2018-11-26
+lkgreL,cDDzjl,load,mdd,Inverse variance weighted,55.61596426244968,42,0.07766176819386186,2018-11-26

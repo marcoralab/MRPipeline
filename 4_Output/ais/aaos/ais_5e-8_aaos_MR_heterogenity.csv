@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-5swsgz,sM6s9D,aaos,ais,MR Egger,8.04528865440045,12,0.7815812849504351,2018-11-19
-5swsgz,sM6s9D,aaos,ais,Inverse variance weighted,9.331087270929178,13,0.7475036144123812,2018-11-19
+5swsgz,sM6s9D,aaos,ais,MR Egger,8.04528865440045,12,0.7815812849504351,2018-11-26
+5swsgz,sM6s9D,aaos,ais,Inverse variance weighted,9.33108727092918,13,0.7475036144123811,2018-11-26

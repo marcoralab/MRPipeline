@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-huGeyy,gdSMxi,vbiany,fish,MR Egger,100.62233741294166,122,0.9213875740073906,2018-10-18
-huGeyy,gdSMxi,vbiany,fish,Inverse variance weighted,100.65609753548534,123,0.9303144282295026,2018-10-18
+huGeyy,gdSMxi,vbiany,fish,MR Egger,100.62233741294166,122,0.9213875740073906,2018-11-26
+huGeyy,gdSMxi,vbiany,fish,Inverse variance weighted,100.65609753548534,123,0.9303144282295026,2018-11-26

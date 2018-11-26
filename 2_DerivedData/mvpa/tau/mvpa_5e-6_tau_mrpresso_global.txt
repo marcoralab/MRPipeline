@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bPZzqw	5pF5EM	tau	mvpa	1	261.2796044439208	<1e-04
+de1BwX	gAyEqD	tau	mvpa	1	261.3699114498452	<1e-04

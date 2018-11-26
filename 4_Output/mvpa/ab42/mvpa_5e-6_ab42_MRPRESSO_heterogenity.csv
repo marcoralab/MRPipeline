@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+dapoZt,FbrfhT,ab42,mvpa,MR Egger,141.16401115157356,109,0.020725315987349405,2018-11-26
+dapoZt,FbrfhT,ab42,mvpa,Inverse variance weighted,145.54764257714118,110,0.01313525491313105,2018-11-26

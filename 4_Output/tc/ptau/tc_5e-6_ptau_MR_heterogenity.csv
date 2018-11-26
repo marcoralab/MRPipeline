@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-P5Mgbz,YS5igF,ptau,tc,MR Egger,547.4636550700728,362,9.828162533499239e-10,2018-10-18
-P5Mgbz,YS5igF,ptau,tc,Inverse variance weighted,558.38438501714,363,1.763812493533027e-10,2018-10-18
+P5Mgbz,YS5igF,ptau,tc,MR Egger,547.4636550700728,362,9.828162533499239e-10,2018-11-26
+P5Mgbz,YS5igF,ptau,tc,Inverse variance weighted,558.38438501714,363,1.763812493533027e-10,2018-11-26

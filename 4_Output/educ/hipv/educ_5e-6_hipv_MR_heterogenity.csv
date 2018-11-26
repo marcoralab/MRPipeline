@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-XMEnKB,GiIrTr,hipv,educ,MR Egger,3227.4643991793873,2804,3.30263418603625e-8,2018-10-18
-XMEnKB,GiIrTr,hipv,educ,Inverse variance weighted,3228.891827576672,2805,3.223973076008048e-8,2018-10-18
+XMEnKB,GiIrTr,hipv,educ,MR Egger,3227.4643991793873,2804,3.30263418603625e-8,2018-11-26
+XMEnKB,GiIrTr,hipv,educ,Inverse variance weighted,3228.891827576672,2805,3.223973076008048e-8,2018-11-26

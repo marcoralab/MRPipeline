@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+cHmINo,BXfHDV,npany,ldl,MR Egger,235.79952013427564,202,0.05168363188127862,2018-11-26
+cHmINo,BXfHDV,npany,ldl,Inverse variance weighted,238.05507154612897,203,0.046355332230875124,2018-11-26
