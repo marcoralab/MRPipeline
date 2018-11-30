@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JcvNnV	Fxgay8	npany	oilfish	1	188.62992365619615	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2dDovC	01IdoS	evrsmk	hipv	1	61.54782148033066	0.001

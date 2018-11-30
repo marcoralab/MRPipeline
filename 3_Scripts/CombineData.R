@@ -1,3 +1,6 @@
+library(qvalue)
+library(tidyverse)
+
 ## To pull the derived data sets from MR analysis and combine them into single dataframes
 ## Useful for reading into R Shiny 
 
@@ -42,6 +45,7 @@ MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData'
                                           ref.proxy = col_character(), 
                                           alt.proxy = col_character(),
                                           Effect_allele.proxy = col_character(), 
+                                          Zscore = col_character(),
                                           Non_Effect_allele.proxy = col_character())) %>% 
       mutate(exposure = dat.model$exposure) %>% 
       mutate(outcome = dat.model$outcome) %>% 
@@ -134,7 +138,7 @@ MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', 
   filter(!is.na(b)) %>% 
   mutate(nsnp = as.numeric(nsnp), b = as.numeric(b), se = as.numeric(se), pval = as.numeric(pval))
 
-write_tsv(MRdat_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRdat_results.txt')
+write_tsv(MRPRESSO_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRPRESSO_results.txt')
 
 ## ===============================================## 
 ## Heterogenity
@@ -238,82 +242,6 @@ write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summ
 
 
 
-
-traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')
-MRsummary <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
-exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 
-               'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 
-               'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 
-               'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
-
-## LOAD, CSF and Neuropath
-outcomes <- c('load', 'aaos', 
-              'ab42', 'ptau', 'tau', 
-              'hipv', 'hipv2015', 
-              'npany', 'nft4', 'hips', 'vbiany')
-
-mr_best <- MRsummary %>% 
-  filter(outcome %in% outcomes) %>% 
-  filter(exposure %in% exposures) %>%
-  filter(method == 'IVW') %>% 
-  group_by(outcome, exposure) %>% 
-  filter(MR_PRESSO == ifelse(TRUE %in% MR_PRESSO, TRUE, FALSE)) %>% 
-  ungroup()
-
-qobj <- qvalue(p = mr_best$pval, fdr.level = 0.1)
-qvales.df <- tibble(pvalues = qobj$pvalues, lfdr = qobj$lfdr, qval = qobj$qvalues, significant = qobj$significant)
-
-dat <- mr_best %>% 
-  bind_cols(select(qvales.df, qval)) %>% 
-  group_by(outcome, exposure) %>% 
-  arrange(pval) %>% 
-  slice(1) %>% 
-  ungroup() %>%
-  rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, 
-         v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW) %>%
-  select(outcome, exposure, pt, MR_PRESSO, nsnp, n_outliers, b, se, pval, qval, 
-         v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW) %>% 
-  mutate(Signif = symnum(qval, corr = FALSE, na = FALSE,
-                         cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
-                         symbols = c("***", "**", "*", ".", " "))) %>% 
-  mutate(z = b/se) %>% 
-  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv2015', 'hipv', 'hips', 'npany', 'nft4', 'vbiany')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alcc', 'alcd', 'audit', 'bmi', 'cpd', 'smkukbb', 'dbp', 'sbp', 'pp', 'diab', 'educ', "fish", "hdl", "ldl", "tc", "trig", "hear", "insom", "sleep", "mvpa", "sociso")) %>% 
-  mutate(exposure = fct_recode(exposure, 
-                               "Alcohol Consumption" = "alcc", 
-                               "Alcohol Dependence" = "alcd", 
-                               "AUDIT" = "audit", 'BMI' = "bmi", 
-                               "Cigarettes per Day" = "cpd", 
-                               "Diastolic Blood Pressure" = "dbp", 
-                               "Depressive Symptoms" = "dep", 
-                               "Type 2 Diabetes" = "diab", 
-                               "Educational Attainment" = "educ", 
-                               "Oily Fish Intake" = "fish", 
-                               "High-density lipoproteins" = "hdl", 
-                               "Hearing Problems" = "hear", 
-                               "Insomnia" = "insom", 
-                               "Low-density lipoproteins" = "ldl", 
-                               "Major Depressive Disorder" = "mdd", 
-                               "Moderate-to-vigorous PA" = "mvpa",
-                               "Pulse Pressure" = "pp", 
-                               "Systolic Blood Pressure" = "sbp", 
-                               "Sleep duration" = "sleep", 
-                               "Smoking Status" = "smkukbb", 
-                               "Social Isolation" = "sociso", 
-                               "Total Cholesterol" = "tc", 
-                               "Triglycerides" = "trig")) %>% 
-  mutate(outcome = fct_recode(outcome, 
-                              "LOAD" = "load", 
-                              "AAOS" = "aaos", 
-                              "CSF Ab42" = "ab42", 
-                              "Hipp. Scle." = "hips", 
-                              "Hipp. Vol. - 2017" = "hipv",
-                              "Hipp. Vol. - 2015" = "hipv2015", 
-                              "NFT" = "nft4", 
-                              "NP" = "npany", 
-                              "CSF Tau" = "tau", 
-                              "CSF Ptau" = "ptau", 
-                              "VBI" = "vbiany"))
 
 
 

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ObiuH4,ixHDiw,load,oilfish,MR Egger,253.63245606153654,234,0.18037999762001825,2018-11-27
+ObiuH4,ixHDiw,load,oilfish,Inverse variance weighted,254.48785048834847,235,0.18253497581108694,2018-11-27

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+AFI6wl,ocAIkd,nft4,evrsmk,MR Egger,296.47716294100456,269,0.1199883706954782,2018-11-27
+AFI6wl,ocAIkd,nft4,evrsmk,Inverse variance weighted,296.54103757539394,270,0.1281467128125852,2018-11-27

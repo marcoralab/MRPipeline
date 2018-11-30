@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+z1UnbV	4GjUMO	hips	oilfish	0	109.2722595180809	0.0792

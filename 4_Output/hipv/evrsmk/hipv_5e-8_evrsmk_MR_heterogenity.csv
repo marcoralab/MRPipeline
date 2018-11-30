@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+hCHMsX,F3gdLp,evrsmk,hipv,MR Egger,29.459887370162665,7,1.1924879640112678e-4,2018-11-27
+hCHMsX,F3gdLp,evrsmk,hipv,Inverse variance weighted,29.95554241084853,8,2.1523762086883119e-4,2018-11-27

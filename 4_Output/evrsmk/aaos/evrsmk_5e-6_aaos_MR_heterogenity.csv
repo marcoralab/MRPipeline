@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+emHzv1,EE6gAA,aaos,evrsmk,MR Egger,319.8836385464035,282,0.05977623126982551,2018-11-27
+emHzv1,EE6gAA,aaos,evrsmk,Inverse variance weighted,319.8974376447429,283,0.06476600141479161,2018-11-27

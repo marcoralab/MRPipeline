@@ -24,7 +24,7 @@ MRsummary <- read_tsv('MR_Results_summary.txt')
 ## Blurbs
 traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')
 
-exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', 
                         'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 
                         'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 
                         'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
@@ -53,6 +53,8 @@ ui <- fluidPage(
                                  "Alcohol Dependence" = "alcd", 
                                  "AUDIT" = "audit", 'BMI' = "bmi", 
                                  "Cigarettes per Day" = "cpd", 
+                                 "Ever Smoker" = "evrsmk", 
+                                 "Smoking Status" = "smkukbb",
                                  "Diastolic Blood Pressure" = "dbp", 
                                  "Depressive Symptoms" = "dep", 
                                  "Type 2 Diabetes" = "diab", 
@@ -67,7 +69,6 @@ ui <- fluidPage(
                                  "Pulse Pressure" = "pp", 
                                  "Systolic Blood Pressure" = "sbp", 
                                  "Sleep duration" = "sleep", 
-                                 "Smoking Status" = "smkukbb", 
                                  "Social Isolation" = "sociso", 
                                  "Total Cholesterol" = "tc", 
                                  "Triglycerides" = "trig"), 
