@@ -10,8 +10,11 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
-ExposureCode: ['oilfish']
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
+'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
+'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'as', 'ais', 'ces', 'las', 
+'svs', 'load', 'aaos', 'hipv']
+OutcomeCode: ['alcc', 'alcd', 'audit']
 
 missing : [
 {"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
