@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+tc	fish	-0.0449	0.0333	-1.3468	0.1781	0.0639	0.0033	1.0067	0.0138	0.0177	0.0113

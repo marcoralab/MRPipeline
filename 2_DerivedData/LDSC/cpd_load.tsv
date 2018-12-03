@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+cpd	load	0.0819	0.0951	0.8616	0.3889	0.0437	0.0215	1.0671	0.0298	-0.0019	0.0048

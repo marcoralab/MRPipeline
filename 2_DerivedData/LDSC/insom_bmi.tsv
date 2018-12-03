@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+insom	bmi	0.1723	0.0231	7.4735	7.8074e-14	0.2113	0.0066	1.0249	0.0277	0.0496	0.0095

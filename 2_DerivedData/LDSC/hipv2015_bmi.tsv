@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hipv2015	bmi	0.034	0.0556	0.6113	0.541	0.2115	0.0067	1.0221	0.029	-0.0013	0.0083

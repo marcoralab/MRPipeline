@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+load	npany	"NA"	"NA"	"NA"	"NA"	-0.098	0.0904	0.9788	0.0073	0.1251	0.009

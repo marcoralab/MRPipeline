@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+alcd	bmi	0.1127	0.053	2.1287	0.0333	0.2121	0.0066	1.0146	0.0287	0.0044	0.0074

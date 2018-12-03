@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+vbiany	audit	0.1072	0.1269	0.8444	0.3984	0.091	0.0058	1.0046	0.0073	0.0001	0.0047

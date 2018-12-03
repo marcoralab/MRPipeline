@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+diab	audit	-0.1503	0.0352	-4.2702	1.9526e-05	0.0917	0.0065	1.0001	0.0099	-0.0164	0.0083

@@ -1,0 +1,47 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.0
+* (C) 2014-2015 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/ \
+--out 2_DerivedData/LDSC/tau_hipv \
+--rg 1_RawData/LDSC/tau_GWAS.sumstats.gz,1_RawData/LDSC/hipv_GWAS.sumstats.gz \
+--w-ld-chr /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/ 
+
+Beginning analysis at Fri Nov 30 11:33:53 2018
+Reading summary statistics from 1_RawData/LDSC/tau_GWAS.sumstats.gz ...
+Read summary statistics for 1007523 SNPs.
+Reading reference panel LD Score from /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/[1-22] ...
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/[1-22] ...
+Read regression weight LD Scores for 1290028 SNPs.
+After merging with reference panel LD, 1003938 SNPs remain.
+After merging with regression SNP LD, 1003938 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from 1_RawData/LDSC/hipv_GWAS.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1003938 SNPs remain.
+1001898 SNPs with valid alleles.
+ERROR computing rg for phenotype 2/2, from file 1_RawData/LDSC/hipv_GWAS.sumstats.gz.
+Traceback (most recent call last):
+  File "/Users/sheaandrews/Programs/ldsc/ldscore/sumstats.py", line 410, in estimate_rg
+    rghat = _rg(loop, args, log, M_annot, ref_ld_cnames, w_ld_cname, i)
+  File "/Users/sheaandrews/Programs/ldsc/ldscore/sumstats.py", line 537, in _rg
+    intercept_gencov=intercepts[2], n_blocks=n_blocks, twostep=args.two_step)
+  File "/Users/sheaandrews/Programs/ldsc/ldscore/regressions.py", line 705, in __init__
+    np.multiply(hsq1.tot_delete_values, hsq2.tot_delete_values))
+FloatingPointError: invalid value encountered in sqrt
+
+
+
+Summary of Genetic Correlation Results
+p1                                    p2  rg  se   z   p h2_obs h2_obs_se h2_int h2_int_se gcov_int gcov_int_se
+1_RawData/LDSC/tau_GWAS.sumstats.gz  1_RawData/LDSC/hipv_GWAS.sumstats.gz  NA  NA  NA  NA     NA        NA     NA        NA       NA          NA
+
+Analysis finished at Fri Nov 30 11:34:05 2018
+Total time elapsed: 12.25s

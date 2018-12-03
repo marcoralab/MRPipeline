@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+dbp	diab	0.1472	0.0226	6.5061	7.7112e-11	0.0533	0.0034	1.043	0.0184	-0.023	0.0133

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educ	sleep	-0.2292	0.3096	-0.7402	0.4592	0.0909	0.0452	1.0993	0.092	0.6895	0.3391

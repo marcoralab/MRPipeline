@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+mvpa	hipv	-0.0556	0.0604	-0.9202	0.3575	0.1439	0.024	1.0026	0.0078	-0.0039	0.0053

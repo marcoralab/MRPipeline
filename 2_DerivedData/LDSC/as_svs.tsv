@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+as	svs	1.0949	0.178	6.152	7.6534e-10	0.0025	0.0012	1.0709	0.0066	0.4165	0.0052

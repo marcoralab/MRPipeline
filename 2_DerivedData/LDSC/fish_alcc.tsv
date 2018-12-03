@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+fish	alcc	0.19	0.0412	4.6065	4.0957e-06	0.0796	0.006	1.0128	0.0078	0.0413	0.0063

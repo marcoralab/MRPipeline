@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+trig	audit	-0.1314	0.037	-3.5478	0.0004	0.0906	0.006	1.0061	0.0079	0.0061	0.0063

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hipv2015	mvpa	-0.0421	0.0782	-0.5377	0.5908	0.046	0.0024	1.0143	0.0093	-0.0075	0.0053

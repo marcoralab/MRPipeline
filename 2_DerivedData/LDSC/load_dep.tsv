@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+load	dep	-0.0718	0.0689	-1.0431	0.2969	0.0628	0.003	1.004	0.0092	0.0073	0.0056

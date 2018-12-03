@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+cpd	as	0.2424	0.0599	4.048	5.1657e-05	0.0127	0.0014	1.0355	0.0073	0.001	0.0049

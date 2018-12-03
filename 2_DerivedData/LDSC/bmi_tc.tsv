@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+bmi	tc	0.011	0.0263	0.4167	0.6769	0.2249	0.0424	0.846	0.0561	0.0073	0.0157

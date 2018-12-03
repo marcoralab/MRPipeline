@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educall	hipv	0.0856	0.0336	2.5505	0.0108	0.1431	0.0242	1.0032	0.008	-0.0024	0.0063

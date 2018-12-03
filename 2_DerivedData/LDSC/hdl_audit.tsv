@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hdl	audit	0.152	0.0319	4.7598	1.9382e-06	0.0907	0.0059	1.0057	0.0078	0.0056	0.0055

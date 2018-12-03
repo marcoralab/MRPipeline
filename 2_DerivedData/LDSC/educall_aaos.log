@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.0
+* (C) 2014-2015 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/ \
+--out 2_DerivedData/LDSC/educall_aaos \
+--rg 1_RawData/LDSC/educall_GWAS.sumstats.gz,1_RawData/LDSC/aaos_GWAS.sumstats.gz \
+--w-ld-chr /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/ 
+
+Beginning analysis at Fri Nov 30 17:38:00 2018
+Reading summary statistics from 1_RawData/LDSC/educall_GWAS.sumstats.gz ...
+Read summary statistics for 1177103 SNPs.
+Reading reference panel LD Score from /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/[1-22] ...
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/sheaandrews/Programs/ldsc/eur_w_ld_chr/[1-22] ...
+Read regression weight LD Scores for 1290028 SNPs.
+After merging with reference panel LD, 1167771 SNPs remain.
+After merging with regression SNP LD, 1167771 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from 1_RawData/LDSC/aaos_GWAS.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1167771 SNPs remain.
+1164667 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1122 (0.0031)
+Lambda GC: 2.1026
+Mean Chi^2: 2.656
+Intercept: 0.9805 (0.0164)
+Ratio < 0 (usually indicates GC correction).
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0933 (0.0203)
+Lambda GC: 1.0649
+Mean Chi^2: 1.0715
+Intercept: 0.9984 (0.0181)
+Ratio < 0 (usually indicates GC correction).
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: -0.0306 (0.0034)
+Mean z1*z2: -0.0929
+Intercept: 0.0131 (0.0062)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: -0.2989 (0.0442)
+Z-score: -6.7627
+P: 1.3541e-11
+
+
+Summary of Genetic Correlation Results
+p1                                    p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+1_RawData/LDSC/educall_GWAS.sumstats.gz  1_RawData/LDSC/aaos_GWAS.sumstats.gz -0.2989  0.0442 -6.7627  1.3541e-11  0.0933     0.0203  0.9984     0.0181    0.0131       0.0062
+
+Analysis finished at Fri Nov 30 17:38:14 2018
+Total time elapsed: 14.09s

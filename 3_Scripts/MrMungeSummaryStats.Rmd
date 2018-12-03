@@ -579,13 +579,15 @@ write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/a
 [Yengo et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/22/274654): Meta-analysis of Giant Consortium GWAS of BMI (n = 234,069) and a new GWAS of BMI conducted in the UK Biobank (n = 456,426) for a total of 681,275 participants of European ancestry. 
 
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
-bmi.raw <- read_table2(params$bmi.summary)
+
+bmi.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/Meta-analysis_Locke_et_al+UKBiobank_2018_UPDATED.txt.gz')
 bmi <- bmi.raw %>% 
   rename(Effect_allele = Tested_Allele, Non_Effect_allele = Other_Allele, Beta = BETA, EAF = Freq_Tested_Allele_in_HRS) %>% 
   filter(nchar(Effect_allele) == 1) %>% 
   filter(nchar(Non_Effect_allele) == 1) %>% 
   arrange(CHR, POS) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Z = Beta / SE) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
 write_tsv(bmi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/bmi_GWAS.Processed.gz'))
@@ -783,10 +785,11 @@ smkukbb <- out %>%
   filter(`HWE-P` > 1e-6) %>% 
   filter(MAF > 1e-4) %>% 
   filter(iscores >= 0.8) %>%
+  mutate(N = 452264) %>%
   mutate(A2 = ifelse(ALLELE == ALT, REF, ALLELE)) %>% 
   rename(CHR = CHROM, Effect_allele = ALLELE, Non_Effect_allele = A2, Beta = `NBETA-20116-0.0`, SE = `NSE-20116-0.0`, P = `PV-20116-0.0`, EAF = MAF) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2)
+  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N, r2)
 
 write_tsv(smkukbb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkukbb_GWAS.Processed.gz'))  
 ```
@@ -843,9 +846,10 @@ fish <- out %>%
   filter(MAF > 1e-4) %>% 
   filter(iscores >= 0.8) %>%
   mutate(A2 = ifelse(ALLELE == ALT, REF, ALLELE)) %>% 
+  mutate(N = 452264) %>%
   rename(CHR = CHROM, Effect_allele = ALLELE, Non_Effect_allele = A2, Beta = `NBETA-1329-0.0`, SE = `NSE-1329-0.0`, P = `PV-1329-0.0`, EAF = MAF) %>% 
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2)
+  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N, r2)
 
 write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fish_GWAS.Processed.gz'))    
 ```

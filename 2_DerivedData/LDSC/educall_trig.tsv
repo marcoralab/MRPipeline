@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educall	trig	-0.1418	0.0251	-5.6444	1.6571e-08	0.2683	0.0571	0.7583	0.035	-0.0142	0.0077

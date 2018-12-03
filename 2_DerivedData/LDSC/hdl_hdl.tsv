@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hdl	hdl	0.9992	0.0005	2130.1132	0.0	0.2361	0.0362	0.8115	0.027	0.8117	0.0269

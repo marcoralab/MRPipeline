@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+fish	sleep	0.0307	0.0498	0.6166	0.5375	0.058	0.0059	1.0122	0.0076	4.6845e-06	0.0067

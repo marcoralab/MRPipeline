@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+dep	sociso	0.5384	0.025	21.5797	2.7851e-103	0.0419	0.002	0.9859	0.008	0.169	0.0062

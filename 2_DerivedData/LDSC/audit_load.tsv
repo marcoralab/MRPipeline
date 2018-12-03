@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+audit	load	-0.0531	0.0854	-0.6222	0.5338	0.0443	0.0214	1.0664	0.0297	-0.0039	0.0053

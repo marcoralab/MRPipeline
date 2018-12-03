@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+dep	hips	"NA"	"NA"	"NA"	"NA"	-0.096	0.0837	0.9745	0.0069	-0.0015	0.0045

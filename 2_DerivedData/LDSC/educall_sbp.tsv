@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educall	sbp	-0.1181	0.0132	-8.9551	3.3928e-19	0.1395	0.0058	1.0762	0.0328	-0.0382	0.0091

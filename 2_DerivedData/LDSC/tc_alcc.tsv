@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+tc	alcc	-0.0734	0.043	-1.7073	0.0878	0.0807	0.0062	1.0085	0.008	0.0078	0.0061

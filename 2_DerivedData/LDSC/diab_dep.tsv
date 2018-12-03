@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+diab	dep	0.1516	0.03	5.0545	4.3147e-07	0.063	0.0033	1.0026	0.0126	0.0337	0.0087

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educ	dep	-0.1322	0.1869	-0.7073	0.4794	0.0963	0.0293	1.3557	0.1636	-1.3039	0.3857

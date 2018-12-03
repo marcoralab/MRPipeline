@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+sleep	audit	-0.0597	0.0515	-1.1597	0.2462	0.0915	0.0058	1.0035	0.0073	0.0037	0.0049

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+trig	sociso	0.11	0.0265	4.1565	3.2315e-05	0.0414	0.0021	0.991	0.0085	-0.0024	0.0064

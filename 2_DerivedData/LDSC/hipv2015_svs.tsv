@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hipv2015	svs	0.2426	0.2358	1.0287	0.3036	0.0024	0.0012	1.0725	0.0073	-0.0079	0.0049

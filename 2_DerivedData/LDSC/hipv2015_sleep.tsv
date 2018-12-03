@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+hipv2015	sleep	-0.0659	0.1265	-0.521	0.6023	0.058	0.0059	1.0125	0.0083	0.0049	0.0056

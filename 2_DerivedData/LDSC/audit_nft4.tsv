@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+audit	nft4	-0.4059	1.2519	-0.3242	0.7458	0.024	0.089	0.9772	0.0078	0.0027	0.0047

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+mdd	dep	1.6572	0.1945	8.5201	1.5937e-17	0.2366	0.0338	0.9572	0.1172	0.2274	0.1799

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+fish	sociso	-0.1394	0.0277	-5.0314	4.8688e-07	0.0419	0.002	0.9865	0.008	-0.0405	0.006

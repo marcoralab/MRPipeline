@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+audit	tc	0.0053	0.0298	0.177	0.8595	0.2148	0.0465	0.8665	0.065	-0.002	0.0057

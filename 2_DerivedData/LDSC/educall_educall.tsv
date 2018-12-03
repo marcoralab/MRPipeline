@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educall	educall	1.0	1.0833e-08	9.2309e+07	0.0	0.1123	0.003	0.9793	0.016	0.9793	0.016

@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+alcd	load	0.1049	0.1866	0.5623	0.5739	0.0466	0.0212	1.0628	0.0302	0.0216	0.0051

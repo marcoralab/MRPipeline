@@ -3,12 +3,12 @@ import os
 from itertools import product
 RWD = os.getcwd()
 
-sstat = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish',
+sstat = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'educall', 'fish',
 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk', 'sociso',
 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'as', 'ais', 'ces', 'las', 'svs',
 'load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4',
 'hips', 'vbiany']
-sstat2 = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish',
+sstat2 = ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'educall','fish',
 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk', 'sociso',
 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'as', 'ais', 'ces', 'las', 'svs',
 'load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4',
@@ -44,7 +44,7 @@ rule munge:
   --a2 Non_Effect_allele \
   --p P \
   --frq EAF \
-  --ignore Z \
+  --ignore Z,Zscore,MarkerName \
   --merge-alleles /Users/sheaandrews/Programs/ldsc/w_hm3.snplist"
 
 rule ldsc:

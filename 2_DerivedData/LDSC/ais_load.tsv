@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+ais	load	-0.1915	0.1119	-1.7103	0.0872	0.045	0.0207	1.0657	0.0291	0.0287	0.005

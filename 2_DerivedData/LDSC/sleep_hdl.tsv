@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+sleep	hdl	0.0052	0.037	0.141	0.8879	0.2361	0.036	0.8112	0.0274	0.0029	0.0049

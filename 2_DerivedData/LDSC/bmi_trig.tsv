@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+bmi	trig	0.2232	0.0333	6.7004	2.0788e-11	0.2703	0.058	0.7525	0.0365	0.0318	0.0088

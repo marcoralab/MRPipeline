@@ -1,0 +1,2 @@
+p1	p2	rg	se	z	p	h2_obs	h2_obs_se	h2_int	h2_int_se	gcov_int	gcov_int_se
+educall	ldl	-0.0924	0.0246	-3.7593	0.0002	0.2007	0.0492	0.886	0.0585	-0.0035	0.0077
