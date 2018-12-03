@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+6N7fTi,fWTURk,hips,evrsmk,MR Egger,43.49456467454096,56,0.8885611576760462,2018-11-27
+6N7fTi,fWTURk,hips,evrsmk,Inverse variance weighted,44.265449626492284,57,0.8909375756909148,2018-11-27

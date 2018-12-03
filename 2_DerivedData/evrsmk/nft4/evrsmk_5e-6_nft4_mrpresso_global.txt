@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+AFI6wl	ocAIkd	nft4	evrsmk	0	302.0368503199757	0.1721

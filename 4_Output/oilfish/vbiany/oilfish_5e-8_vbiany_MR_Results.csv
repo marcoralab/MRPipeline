@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+ejto9s,tZTtUV,vbiany,oilfish,Inverse variance weighted (fixed effects),86,-0.5993129666519093,0.503538678888901,0.23396683253444706,2018-11-27
+ejto9s,tZTtUV,vbiany,oilfish,Weighted median,86,-0.8752212607631759,0.7481258703877893,0.24204723660681604,2018-11-27
+ejto9s,tZTtUV,vbiany,oilfish,Weighted mode,86,-1.316927683205705,1.5661411811736539,0.4027777079210191,2018-11-27
+ejto9s,tZTtUV,vbiany,oilfish,MR Egger,86,-1.7701711038187085,2.201410761507105,0.42360468857107736,2018-11-27

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6N7fTi	fWTURk	hips	evrsmk	0	47.12260584701723	0.934

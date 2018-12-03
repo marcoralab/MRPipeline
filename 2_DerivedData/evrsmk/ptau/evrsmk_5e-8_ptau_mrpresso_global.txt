@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+GOwys5	dZlayP	ptau	evrsmk	0	53.824234083256734	0.7414

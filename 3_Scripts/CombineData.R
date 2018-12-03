@@ -1,3 +1,6 @@
+library(qvalue)
+library(tidyverse)
+
 ## To pull the derived data sets from MR analysis and combine them into single dataframes
 ## Useful for reading into R Shiny 
 
@@ -42,6 +45,7 @@ MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData'
                                           ref.proxy = col_character(), 
                                           alt.proxy = col_character(),
                                           Effect_allele.proxy = col_character(), 
+                                          Zscore = col_character(),
                                           Non_Effect_allele.proxy = col_character())) %>% 
       mutate(exposure = dat.model$exposure) %>% 
       mutate(outcome = dat.model$outcome) %>% 
@@ -134,7 +138,7 @@ MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', 
   filter(!is.na(b)) %>% 
   mutate(nsnp = as.numeric(nsnp), b = as.numeric(b), se = as.numeric(se), pval = as.numeric(pval))
 
-write_tsv(MRdat_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRdat_results.txt')
+write_tsv(MRPRESSO_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRPRESSO_results.txt')
 
 ## ===============================================## 
 ## Heterogenity
@@ -232,6 +236,25 @@ MRsummary <- MRdat_results  %>%
   arrange(outcome, exposure, pt, method, MR_PRESSO)
   
 write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

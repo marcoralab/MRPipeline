@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+eTuoTF,Kj7jsb,evrsmk,ab42,MR Egger,10.974345756407226,14,0.6880501573779889,2018-11-27
+eTuoTF,Kj7jsb,evrsmk,ab42,Inverse variance weighted,11.066228161716648,15,0.7478855870481207,2018-11-27

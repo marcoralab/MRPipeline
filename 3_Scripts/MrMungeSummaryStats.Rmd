@@ -14,7 +14,7 @@ params:
   ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
   tau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_tau_GWAS_summary_statistics.txt.gz'
   hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
-  hipv_2015.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/Hippocampal_Volume/Stein2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
+  hipv_2015.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
   alc_cons.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_cons/ALC_CONS_GWAS_FORUKB.txt.gz'
   alc_dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_dep/daner_alcdep_eur_jul2017.gz.jul2017.min_n'
   audit.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz'
@@ -78,6 +78,22 @@ snp.r2 <- function(eaf, beta){
 ## n = effective sample size
 ## z = Z score
 z2se <- function(p, n, z){1/sqrt(2*p*(1-p)*(n+z^2))}
+
+
+findAF <- function(EA, NEA, REF, ALT, AF){
+  ifelse(is.na(REF), NA,
+         ifelse(!((EA == REF | EA ==  ALT) & (NEA == REF | NEA == ALT)), NA, 
+                ifelse(EA == ALT, AF, 
+                       ifelse(EA == REF, 1-AF, 
+                              ifelse(NEA == REF, AF, 
+                                     ifelse(NEA == ALT, 1-AF, NA)
+                              )
+                       )
+                )
+         )
+  )
+}
+
 ```
 
 Read: 
@@ -92,7 +108,9 @@ Read:
 hrc.raw <- read_tsv(params$hrc_file, col_types = cols(CHROM = col_character()))
 hrc <- filter(hrc.raw, ID != '.') %>% 
   unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
-  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F)
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F)
+
 ```
 
 
@@ -801,7 +819,8 @@ write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ev
 
 ```
 
-## Oily Fish UKB 
+## Oily Fish Intake UKB 
+### GeneAtlas 
 ```{r fish_UKB}
 path <- '~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/'
 filenames <- list.files(path, pattern="*.csv.gz")
@@ -830,6 +849,52 @@ fish <- out %>%
 
 write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fish_GWAS.Processed.gz'))    
 ```
+
+### NealeLab 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+oilfish.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/1329_gwas_imputed_v3_both_sexes_tsv.gz')
+oilfish <- oilfish.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != 'rs382362') %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(oilfish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/oilfish_GWAS.Processed.gz'))
+
+```
+
+## Fish Consumer 
+### NealeLab 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+fishcons.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/103140.gwas.imputed_v3.both_sexes.tsv.gz')
+fishcons <- fishcons.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(fishcons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fishcons_GWAS.Processed.gz'))
+```
+
 
 ## HDL Cholesterol 
 [Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797): To identify new loci and refine known loci influencing these lipids, we examined 188,577 individuals using genome-wide and custom genotyping arrays. We identify and annotate 157 loci associated with lipid levels at P < 5 × 10−8, including 62 loci not previously associated with lipid levels in humans. 
@@ -1038,6 +1103,30 @@ cpd <- cpd.raw %>%
 write_tsv(cpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/cpd_GWAS.Processed.gz'))
 
 ```
+
+
+## Ever Smoker 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+evrsmk.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/evrsmk/20160.gwas.imputed_v3.both_sexes.tsv.gz')
+evrsmk <- evrsmk.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/evrsmk_GWAS.Processed.gz'))
+
+```
+
 
 ## Hearing Difficulties/Problems
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
