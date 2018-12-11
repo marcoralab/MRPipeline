@@ -510,7 +510,7 @@ write_tsv(alc_dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/a
 
 ### AUDIT Total Score
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
-audit.raw <- read_table2(params$audit.summary)
+audit.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Alcohol/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz')
 audit <- audit.raw %>% 
   rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
   filter(nchar(Effect_allele) == 1) %>% 
@@ -759,6 +759,20 @@ educ <- educ.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
 write_tsv(educ, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educ_GWAS.Processed.gz'))
+
+```
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+educall.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Education/Lee2018/GWAS_EA_excl23andMe.txt')
+educall <- educall.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = A1, Non_Effect_allele = A2, P = Pval) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 766345) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(educall, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educall_GWAS.Processed.gz'))
 
 ```
 

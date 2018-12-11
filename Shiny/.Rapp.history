@@ -1,568 +1,645 @@
-t(test)
-test2 <- t(test)
-test2
-head(test2)
-test2 <- as.tibble(t(test))
-test2
-filter(V1 == 1)
-test2 <- as.tibble(t(test)) %>% #
-filter(V1 == 1)
-test2
-test2 <- as.tibble(t(test)) %>% #
-filter(V2 == 1)
-test2
-sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT.vcf.gz', col_names = T, comment = "##") %>% #
-select(`#CHROM`, POS, ID, REF, ALT, QUAL, FILTER, INFO)
-semi_join(sample, array.snps, by = c('POS' = 'pos'))
-sample %>% semi_join(array.snps, by = c('POS' = 'pos')) print(n = Inf)
-sample %>% semi_join(array.snps, by = c('POS' = 'pos')) %>% print(n = Inf)
-sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT_multi_decomposed.vcf.gz', col_names = T, comment = "##") %>%
-asd
-sample <- read_tsv('~/Dropbox/src/MitoImpute/data/ThousandGenomes/ALL.chrMT_multi_decomposed.vcf.gz', col_names = T, comment = "##")
-sample
-read_tsv('/Users/sheaandrews/Dropbox/src/MitoImpute/DerivedData/Refence_panal.vcf.gz', comment = '##')
-read_tsv('/Users/sheaandrews/Documents/Test2/GSA-24v1-0_A1-b37-strand.zip', comment = '##')
-test <- read_tsv('/Users/sheaandrews/Documents/Test2/GSA-24v1-0_A1-b37-strand.zip', col_names =F, comment = '##')
-test
-library(forign)
-library(foreign)
-read.spss('~/Dropbox/Research/Data/Original (PATH)/Genetics/PATH_genes_total_070916.sav')
-? read.spss
-dat <- read.spss('~/Dropbox/Research/Data/Original (PATH)/Genetics/PATH_genes_total_070916.sav', to.data.frame = T)
-dat
-dat <- as.tibble(dat)
+221/258
+exp(0.68)
+install.packages("devtools")#
+devtools::install_github("bcm-uga/pcadapt")
+library(pcadapt)
+browseVignettes("pcadapt")
+pcadapt
+? pcadapt
+exp
+exp(0.37)
+exp(0.23)
+exp(1.77)
+exp(0.8)
+library(tidyverse)#
+library(parallel)#
+library(pbapply)#
+library(filesstrings)#
+library(TwoSampleMR)#
+library(MendelianRandomization)#
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+library(TwoSampleMR)
+##----------------------------------------##
+##  Import Alzheimer's Age of Onset Survival summary stats #
+aos.dat.raw <- read_tsv('~/Dropbox/Research/Data/Summary Statisitics/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt')#
+aos.dat <- aos.dat.raw %>% #
+  arrange(CHR, BP) %>% #
+  select(SNP, CHR, BP, Allele1, Allele2, Freq1, Effect, StdErr, P) %>%#
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2))#
+#
+colnames(aos.dat) <- paste0('aaos.', colnames(aos.dat))
+aos.dat.raw <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt')
+aos.dat <- aos.dat.raw %>%
+arrange(CHR, BP) %>% #
+  select(SNP, CHR, BP, Allele1, Allele2, Freq1, Effect, StdErr, P) %>%#
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2))
+colnames(aos.dat) <- paste0('aaos.', colnames(aos.dat))
+dat.alc <- read_csv('~/Dropbox/Research/PostDoc/Mendleian_Randomization/Alcohol/(1) Raw Data/Alc_consumption_snps.csv')
+#split b and se#
+dat.alc <- tidyr::separate(dat.alc, alc.b_se, c('alc.beta', 'alc.se'), sep = " \\(")#
+dat.alc$alc.se <- gsub(')', '', dat.alc$alc.se)#
+dat.alc$alc.beta <- as.numeric(dat.alc$alc.beta); dat.alc$alc.se <- as.numeric(dat.alc$alc.se)
+#split effect and other allele#
+dat.alc <- tidyr::separate(dat.alc, alc.allele, c('alc.effect_allele', 'alc.other_allele'), sep = "/")#
+dat.alc$alc.other_allele <- trim(dat.alc$alc.other_allele)#
+#
+#conver pvalues to numeric #
+dat.alc$alc.p <- as.numeric(gsub(' x 10', 'e', dat.alc$alc.p))
+##----------------------------------------##
+##  Match alcohol consumptoin SNPs to AAOS#
+match.alc.cons <- sapply(dat.alc$alc.snp, function(y){#
+  out <- aos.dat[grep(paste("^",y,"$", sep=""), x = aos.dat$aaos.SNP),]#
+}, simplify = F)#
+match.alc.cons <- do.call(rbind, match.alc.cons)#
+alc.cons_aos <- left_join(dat.alc, match.alc.cons, by = c('alc.snp' = 'aaos.SNP'))
+alc.cons_aos <- alc.cons_aos %>% #
+  filter(alc.snp %nin% c('rs35081954', 'rs375507729', '18:72124965', 'rs145329623')) %>%#
+  select(Genes, alc.snp, alc.chr, alc.pos, alc.effect_allele, alc.other_allele, alc.freq, alc.beta, alc.se, alc.p, aaos.Allele1, aaos.Allele2, aaos.Freq1, aaos.Effect, aaos.StdErr, aaos.P)
+library(Hmisc)
+alc.cons_aos <- alc.cons_aos %>% #
+  filter(alc.snp %nin% c('rs35081954', 'rs375507729', '18:72124965', 'rs145329623')) %>%#
+  select(Genes, alc.snp, alc.chr, alc.pos, alc.effect_allele, alc.other_allele, alc.freq, alc.beta, alc.se, alc.p, aaos.Allele1, aaos.Allele2, aaos.Freq1, aaos.Effect, aaos.StdErr, aaos.P)
+alc.cons_aaos_exposure_dat <- format_data(with(alc.cons_aos, #
+                                             data.frame(SNP = alc.snp, #
+                                                        beta = alc.beta, #
+                                                        se = alc.se,#
+                                                        effect_allele = alc.effect_allele,#
+                                                        other_allele = alc.other_allele, #
+                                                        eaf = alc.freq, #
+                                                        pval = alc.p,#
+                                                        Phenotype = 'alcohol_consumption')), type="exposure")
+alc.cons_aaos_outcome_dat <- format_data(with(alc.cons_aos, #
+                                            data.frame(SNP = alc.snp,#
+                                                       beta = aaos.Effect,#
+                                                       se = aaos.StdErr,#
+                                                       eaf = aaos.Freq1,#
+                                                       effect_allele = aaos.Allele1,#
+                                                       other_allele = aaos.Allele2,#
+                                                       pval = aaos.P,#
+                                                       Phenotype = 'AAOS')), type="outcome")
+alc.cons_aaos_outcome_dat
+alc.cons_aaos_exposure_dat
+alc.cons_aaos_MRdat <- harmonise_data(alc.cons_aaos_exposure_dat, alc.cons_aaos_outcome_dat)
+alc.cons_aaos_MRdat
+c.alc.cons_aaos_MRdat <- clump_data(alc.cons_aaos_MRdat, clump_r2 = 0.1, clump_kb = 500)
+snps = SNP))
+alc.cons_aaos_MRinput <- with(alc.cons_aaos_MRdat, mr_input(#
+  bx = beta.exposure, #beta of exposure#
+  bxse = se.exposure, #se of exposure#
+  by = beta.outcome,  #beta of outcome#
+  byse = se.outcome,  #se of outcome#
+  exposure = 'alcohol consumption',#
+  outcome = 'LOAD',#
+  snps = SNP))
+##  IVW estimates #
+alc.cons_aaos_IVWObject <- MendelianRandomization:::mr_ivw(alc.cons_aaos_MRinput,#
+                                                         model = "fixed",#
+                                                         robust = FALSE,#
+                                                         penalized = FALSE,#
+                                                         correl = T,#
+                                                         weights = "simple",#
+                                                         psi = 0,#
+                                                         distribution = "normal",#
+                                                         alpha = 0.05)#
+#
+alc.cons_aaos_IVWObject
+alc.cons_aaos_IVWObject <- MendelianRandomization:::mr_ivw(alc.cons_aaos_MRinput,#
+                                                         model = "fixed",#
+                                                         robust = FALSE,#
+                                                         penalized = FALSE,#
+                                                         weights = "simple",#
+                                                         psi = 0,#
+                                                         distribution = "normal",#
+                                                         alpha = 0.05)#
+#
+alc.cons_aaos_IVWObject
+alc.cons_aaos_MRinput <- with(c.alc.cons_aaos_MRdat, mr_input(#
+  bx = beta.exposure, #beta of exposure#
+  bxse = se.exposure, #se of exposure#
+  by = beta.outcome,  #beta of outcome#
+  byse = se.outcome,  #se of outcome#
+  exposure = 'alcohol consumption',#
+  outcome = 'LOAD',#
+  snps = SNP))
+alc.cons_aaos_IVWObject <- MendelianRandomization:::mr_ivw(alc.cons_aaos_MRinput,#
+                                                         model = "fixed",#
+                                                         robust = FALSE,#
+                                                         penalized = FALSE,#
+                                                         weights = "simple",#
+                                                         psi = 0,#
+                                                         distribution = "normal",#
+                                                         alpha = 0.05)#
+#
+alc.cons_aaos_IVWObject#
+#MendelianRandomization:::mr_plot(alc.cons_ad_MRinput, error = TRUE, orientate = FALSE, line =
+single.cons_aaos <- mr_singlesnp(c.alc.cons_aaos_MRdat, all_method=c("mr_meta_fixed"))
+single.cons_aaos
+weights = "delta",
+alc.cons_aaos_IVWObject <- MendelianRandomization:::mr_ivw(alc.cons_aaos_MRinput,#
+                                                         model = "fixed",#
+                                                         robust = FALSE,#
+                                                         penalized = FALSE,#
+                                                         weights = "delta",#
+                                                         psi = 0,#
+                                                         distribution = "normal",#
+                                                         alpha = 0.05)#
+#
+alc.cons_aaos_IVWObject
+mr_forest_plot(single.cons_aaos)
+res.alc_cons <- mr(c.alc.cons_aaos_MRdat, method_list = c("mr_ivw"))#
+res.alc_cons[res.alc_cons$method == 'Inverse variance weighted', c('b', 'se','pval')] <- single.cons_aaos[single.cons_aaos$SNP == 'All - ', c('b', 'se','p')]
+res.alc_cons
+mr_scatter_plot(res.alc_cons, alc.cons_aaos_MRdat)
+scatter.cons_aaos <- mr_scatter_plot(res.alc_cons, c.alc.cons_aaos_MRdat)
+mr_scatter_plot(res.alc_cons, c.alc.cons_aaos_MRdat)
+mr_forest_plot(single.cons_aaos)
+test <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/all_chrall_filtered_magma.covar')
 library(tidyverse)
-dat <- as.tibble(dat)
-dat
-load("/Users/sheaandrews/Dropbox/src/MitoImputePrep/Shiny/imp.info005.rds")
-107586 + 11123 + 3002 + 46322
-13-7
-read_excel_allsheets <- function(filename) {#
-  sheets <- readxl::excel_sheets(filename)#
-  x <-    lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))#
-  names(x) <- sheets#
-  x#
-}#
+write_tsv(test2, '~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/all_chrall_filtered_magma2.covar')
+gwag <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/mitoGWAG_covaried.genes.out', col_names = T)
+mitocarta.raw <- read_xls('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/Human.MitoCarta2.0.xls', sheet = 2)
+mitocarta <- select(mitocarta.raw, HumanGeneID, Symbol)
+library(readr)
+mitocarta.raw <- read_xls('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/Human.MitoCarta2.0.xls', sheet = 2)
+??read_xls
+library(readxl)
+mitocarta.raw <- read_xls('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/Human.MitoCarta2.0.xls', sheet = 2)
+mitocarta <- select(mitocarta.raw, HumanGeneID, Symbol)
+out <- gwag %>%
+inner_join(mitocarta, by = c('GENE' = 'HumanGeneID')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr'))
+gwag.j2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/J/mitoGWAG_J2.interact.genes.out', col_names = T)
+gwag.j2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/J/mitoGWAG_J2.interact.genes.out', col_names = T)#
+out.j2 <- mitocarta %>% #
+  inner_join(gwag.j2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'J')#
 #
-##============================================###
-##  Study Characterisitcs#
+arrange(out.j2, P_INTERACT_JOINT_fdr)
+gwag.t2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/T/mitoGWAG_T2.interact.genes.out', col_names = T)#
+out.t2 <- mitocarta %>% #
+  inner_join(gwag.t2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'T')#
 #
-dat <- read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/4_Output/StudyCharacteristics/Study.xlsx", na = c("-" ,"", "NA"))#
-qr <- read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/4_Output/Q-Genie/Q-Genie_ratings.xlsx", sheet = 1)#
-dat <- left_join(dat, qr, by = 'Study')
-library(Hmisc)#
-library(zoo)#
+arrange(out.t2, P_INTERACT_JOINT_fdr)
+gwag.k2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/K/mitoGWAG_K2.interact.genes.out', col_names = T)#
+out.k2 <- mitocarta %>% #
+  inner_join(gwag.k2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'K')#
+#
+arrange(out.k2, P_INTERACT_JOINT_fdr)
+gwag.u2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/U/mitoGWAG_U2.interact.genes.out', col_names = T)#
+out.u2 <- mitocarta %>% #
+  inner_join(gwag.u2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'U')#
+#
+arrange(out.u2, P_INTERACT_JOINT_fdr)
+gwag.i2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/I/mitoGWAG_I2.interact.genes.out', col_names = T)#
+out.i2 <- mitocarta %>% #
+  inner_join(gwag.i2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'I')#
+#
+arrange(out.i2, P_INTERACT_JOINT_fdr)
+gwag.w2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/W/mitoGWAG_W2.interact.genes.out', col_names = T)#
+out.w2 <- mitocarta %>% #
+  inner_join(gwag.w2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'W')#
+#
+arrange(out.w2, P_INTERACT_JOINT_fdr)
+gwag.x2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/X/mitoGWAG_X2.interact.genes.out', col_names = T)#
+out.x2 <- mitocarta %>% #
+  inner_join(gwag.x2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'X')#
+#
+arrange(out.x2, P_INTERACT_JOINT_fdr)
+out.haplogroups2 <- out.h %>% #
+  filter(P_INTERACT_JOINT_fdr < 0.05) %>% #
+  bind_rows(filter(out.v2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.j2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.t2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.u2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.k2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.i2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.w2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.x2, P_INTERACT_JOINT_fdr < 0.05))
+## ---- H ----- ###
+gwag.h <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/H/mitoGWAG_H.interact.genes.out', col_names = T)#
+out.h <- mitocarta %>% #
+  inner_join(gwag.h, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'H')#
+#
+arrange(out.h, P_INTERACT_JOINT_fdr)
+out.haplogroups2 <- out.h %>% #
+  filter(P_INTERACT_JOINT_fdr < 0.05) %>% #
+  bind_rows(filter(out.v2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.j2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.t2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.u2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.k2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.i2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.w2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.x2, P_INTERACT_JOINT_fdr < 0.05))
+gwag.v2 <- read_table('~/Dropbox/Research/PostDoc-MSSM/3_mitoWAX/2_DerivedData/MAGMA/GWAG/V/mitoGWAG_V2.interact.genes.out', col_names = T)#
+out.v2 <- mitocarta %>% #
+  inner_join(gwag.v2, by = c('HumanGeneID' = 'GENE')) %>% #
+  arrange(P_FULL_JOINT) %>% #
+  mutate(P_FULL_JOINT_fdr = p.adjust(P_FULL_JOINT, method = 'fdr')) %>% #
+  mutate(P_INTERACT_JOINT_fdr = p.adjust(P_INTERACT_JOINT, method = 'fdr')) %>% #
+  mutate(P_MAIN_JOINT_fdr = p.adjust(P_MAIN_JOINT, method = 'fdr')) %>% #
+  mutate(haplogroup = 'V')#
+#
+arrange(out.v2, P_INTERACT_JOINT_fdr)
+out.haplogroups2 <- out.h %>% #
+  filter(P_INTERACT_JOINT_fdr < 0.05) %>% #
+  bind_rows(filter(out.v2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.j2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.t2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.u2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.k2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.i2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.w2, P_INTERACT_JOINT_fdr < 0.05)) %>% #
+  bind_rows(filter(out.x2, P_INTERACT_JOINT_fdr < 0.05))
+out.haplogroups2
 library(tidyverse)#
 library(readxl)#
+library(HiMC); data(nodes)
+##  Function#
+source('~/Dropbox/Research/PostDoc/MitoWax/3_Scripts/import_snps.R', chdir = TRUE)#
 #
-read_excel_allsheets <- function(filename) {#
-  sheets <- readxl::excel_sheets(filename)#
-  x <-    lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))#
-  names(x) <- sheets#
-  x#
+##  Function for calculating mathews correlation coefficent (MCC)#
+mccr <- function (act, pred) #
+{#
+  TP <- sum(act %in% 1 & pred %in% 1)#
+  TN <- sum(act %in% 0 & pred %in% 0)#
+  FP <- sum(act %in% 0 & pred %in% 1)#
+  FN <- sum(act %in% 1 & pred %in% 0)#
+  denom <- as.double(TP + FP) * (TP + FN) * (TN + FP) * (TN + FN)#
+  if (any((TP + FP) == 0, (TP + FN) == 0, (TN + FP) == 0, (TN + FN) == 0)) #
+    denom <- 1#
+  mcc <- ((TP * TN) - (FP * FN))/sqrt(denom)#
+  return(mcc)#
 }
-library(tidyverse)#
-library(pbapply)#
-library(HiMC); data(nodes)#
-library(taRifx)#
+library(ggforce)
+adni_mt_haps <- read_csv('~/Dropbox/Research/PostDoc/MitoWax/2_Derived_Data/Impute/Imputed/adni_haps.csv')
+###---------------------------------------------------###
+###                 Read in Data                      ###
+###---------------------------------------------------###
+## Read in info scores from impute2#
+info.score <- read_delim('~/Dropbox/Research/PostDoc/MitoWax/2_Derived_Data/Impute/Imputed/ADNI1_MTsnps_imputed_info', delim = " ")#
 #
-##  Function#
-generate_snp_data_fixed <- function (map_file, ped_file) #
-{#
-  map <- read.csv(map_file, sep = "\t", header = FALSE, stringsAsFactors = FALSE)#
-  header_row <- c("Family", "Individual", "Father", "Mother", #
-                  "Sex", "Phenotype")#
-  snps = map[, 4]#
-  new_header = c(header_row, snps)#
-  ped <- read.csv(ped_file, sep = " ", header = FALSE, stringsAsFactors = FALSE, colClasses = 'character')#
-  range1 = seq(1, 6, by = 1)#
-  snp_data = data.frame(seq(1, nrow(ped), by = 1))#
-  for (i in range1) {#
-    snp_data[, i] = ped[, i]#
-  }#
-  range2 = seq(7, ncol(ped), by = 2)#
-  for (i in range2) {#
-    index = ((i - 7)/2) + 1#
-    snp_data[, index + 6] = paste(ped[, i], ped[, i + 1])#
-  }#
-  names(snp_data) <- new_header#
-  return(snp_data)#
-}#
+##  Readin .ped files #
+MTwgs <- generate_snp_data("~/Dropbox/Research/PostDoc/MitoWax/1_Raw_Data/ADNI_mito_wgs/adni_mito_genomes_180214.map",#
+                               "~/Dropbox/Research/PostDoc/MitoWax/1_Raw_Data/ADNI_mito_wgs/adni_mito_genomes_180214.ped")#
+MTadni <- generate_snp_data("~/Dropbox/Research/PostDoc/MitoWax/2_Derived_Data/Impute/Imputed/ADNI1_MTsnps_imputed_plink.map",#
+                            "~/Dropbox/Research/PostDoc/MitoWax/2_Derived_Data/Impute/Imputed/ADNI1_MTsnps_imputed_plink.ped")#
 #
-##===============================###
-##  Read in Typed and WGS haplogroups #
-##===============================###
+##  Read in vcf files#
+adni_imputed.raw <- read_tsv('~/Dropbox/Research/PostDoc/MitoWax/2_Derived_Data/Impute/Imputed/ADNI1_MTsnps_imputed.vcf', comment = '##')#
+adni_wgs.raw <- read_tsv('~/Dropbox/Research/PostDoc/MitoWax/1_Raw_Data/ADNI_mito_wgs/adni_mito_genomes_plink_180221.vcf', comment = '##')#
 #
-mt.haps <- readRDS('~/Dropbox/src/MitoImputePrep/Shiny/MT_haps.rds')#
+##  Sample names for ADNI wgs samples and Phy-mer haplotypes#
+dat.hap <- read_excel('~/Dropbox/Research/PostDoc/MitoWax/1_Raw_Data/ADNI_mito_wgs/ADNI_Mitochondrial_Haplotypes.xlsx')
+###---------------------------------------------------###
+###             Munge Dataframes                      ###
+###---------------------------------------------------###
 #
-wd.path <- '~/Dropbox/src/MitoImputePrep/data/STRANDS/'
-dat <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF1pc.csv') #
-dat2 <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF0-1pc.csv')#
+##  subset imputed SNPs that are present in the MT WGS (mt wgs does not contain control region)#
+imputed.snps <- info.score %>% filter(type == 0) %>% filter(position <= 15693) %>% select(position) %>% mutate(position = paste0('mt', position))#
 #
-out <- left_join(dat, dat2, by = 'array', suffix = c('.1pc', '.01pc')) %>% #
-  mutate(improvment = Imputed.hg.Conc.1pc - Typed.hg.Conc.1pc)#
+##  Munge imputed dataframe#
+# Drop all columns but position and genotypes#
+adni_imputed <- adni_imputed.raw %>% #
+  select(-`#CHROM`, -ID, -REF, -ALT, -QUAL, -FILTER, -INFO, -FORMAT) %>% #
+  distinct(adni_imputed, POS, .keep_all = T) %>% #
+  mutate(POS = paste0('mt', POS))#
+# Transpose dataframe#
+adni_imputed <- adni_imputed %>%#
+  gather(key = var_name, value = value, 2:ncol(adni_imputed)) %>% #
+  spread_(key = names(adni_imputed)[1],value = 'value')#
+# recode sample anmes#
+adni_imputed <- adni_imputed %>% separate(var_name,c('SID', 'var_name') ,'_S_', ) %>% #
+  mutate(var_name = as.integer(var_name)) %>% #
+  select(-SID) %>% #
+  arrange(var_name)#
+# substitute allels for NA, 0, 1 calls, change formate to interger#
+adni_imputed[adni_imputed == './.'] <- NA#
+adni_imputed[adni_imputed == '0/0'] <- 0#
+adni_imputed[adni_imputed == '1/1'] <- 1#
+adni_imputed <- adni_imputed %>% mutate_if(is.character, as.integer)
+##  Munge ADNI wgs dataframe#
+# Drop all columns but position and genotypes#
+adni_wgs <- adni_wgs.raw %>% #
+  select(-`#CHROM`, -ID, -REF, -ALT, -QUAL, -FILTER, -INFO, -FORMAT) %>% #
+  distinct(adni_imputed, POS, .keep_all = T) %>% #
+  mutate(POS = paste0('mt', POS))#
+# Transpose dataframe#
+adni_wgs <- adni_wgs %>%#
+  gather(key = var_name, value = value, 2:ncol(adni_wgs)) %>% #
+  spread_(key = names(adni_wgs)[1],value = 'value')#
+##  correct sample names #
+adni_wgs <- left_join(adni_wgs, dat.hap, by = c('var_name' = 'SAMPLE_NUMBER')) %>% #
+  separate(PATNO,c('SID', 'PATNO') ,'_S_', )  %>% #
+  mutate(var_name = as.integer(PATNO)) %>%#
+  select(-SID) %>% select(-PATNO) %>%#
+  arrange(var_name)#
+# substitute allels for NA, 0, 1 calls, change formate to interger#
+adni_wgs[adni_wgs == './.'] <- NA#
+adni_wgs[adni_wgs == '0/0'] <- 0#
+adni_wgs[adni_wgs == '1/1'] <- 1#
+adni_wgs <- adni_wgs %>% mutate_if(is.character, as.integer)
+##  obtain intersect of samples from ADNI1 and WGS; select imputed SNPs only#
+adni1_sample <- semi_join(adni_imputed, adni_wgs, by = 'var_name') %>% select(var_name, imputed.snps$position)#
+wgs_sample <- adni_wgs %>% semi_join(adni_imputed, by = 'var_name') %>% select(var_name, imputed.snps$position)
+##  Filter SNPs that have an info score > 0.4#
+inc.snps <- info.score %>% filter(info > 0.4) %>% select(position)#
+keep.columns <- c('Family', 'Individual', 'Father', 'Mother', 'Sex', 'Phenotype', inc.snps$position)#
+MTadni <- MTadni[,keep.columns]#
 #
-select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
-  arrange(improvment) %>% #
-  summarise(mean.improvment = mean(improvment, na.rm = T), #
-            mean.typed = mean(Typed.hg.Conc.1pc, na.rm = T), #
-            mean.imputed = mean(Imputed.hg.Conc.1pc, na.rm = T))#
+##  Hi-MC MT haplogroups classifications#
+MTadni.classifications <- HiMC::getClassifications(MTadni)#
+MTwgs.classifications <- HiMC::getClassifications(MTwgs)
+adni_mt_haps <- MTwgs.classifications %>% #
+  left_join(dat.hap, by = c('Individual' = 'SAMPLE_NUMBER')) %>% #
+  rename(full_path_wgs = full_path, haplogroup_wgs = haplogroup) %>% #
+  inner_join(MTadni.classifications, by = c('PATNO' = 'Individual')) %>% #
+  rename(full_path_impute = full_path, haplogroup_impute = haplogroup) %>%#
+  select(PATNO, haplogroup_impute, haplogroup_wgs, HAPLOTYPE) %>% #
+  as.tibble()
+test <- adni_mt_haps %>%#
+  count(haplogroup_impute, haplogroup_wgs) %>% #
+  mutate(match = haplogroup_impute == haplogroup_wgs)
+dat_ggforce <- test  %>%#
+  gather_set_data(1:2) %>%       #
+  arrange(x,haplogroup_wgs,desc(haplogroup_impute))
+dat_ggforce$z <- factor(dat_ggforce$y,#
+                        levels = c("L0", "L1", "L1b", "L2", "L3", "L3'4", "M", "N", "N1a1", "N1a1b", "A", "A2", "W", "X2", "R", "H", "H2a", "H2a2a", "HV", "V", "JT", "J", "T", "T1", "U", "U8b", "K", "K1", "B2", "B4b'd'e", "unclassified"))#
 #
-ggplot(out, aes(y = Imputed.hg.Conc.1pc, x = Typed.hg.Conc.1pc)) + #
-  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
-  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + labs(x = "Haplogroup Concordance \n Typed vs WGS", y = "Haplogroup Concordance \n Typed + Imputed vs WGS")
-out
-select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
-  arrange(improvment)
-select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Typed.hg.Conc.1pc) %>% #
-  arrange(Imputed.hg.Conc.1pc)
-select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Typed.hg.Conc.1pc) %>% #
-  arrange(-Imputed.hg.Conc.1pc)
-library(tidyverse)#
-library(pbapply)#
-library(HiMC); data(nodes)#
-library(taRifx)#
+dat_ggforce$y <- as.numeric(factor(dat_ggforce$y,#
+                                   levels = c("L0", "L1", "L1b", "L2", "L3", "L3'4", "M", "N", "N1a1", "N1a1b", "A", "A2", "W", "X2", "R", "H", "H2a", "H2a2a", "HV", "V", "JT", "J", "T", "T1", "U", "U8b", "K", "K1", "B2", "B4b'd'e", "unclassified")))#
+dat_ggforce$y <- str_pad(dat_ggforce$y, 3, pad = "0")#
 #
-##  Function#
-generate_snp_data_fixed <- function (map_file, ped_file) #
-{#
-  map <- read.csv(map_file, sep = "\t", header = FALSE, stringsAsFactors = FALSE)#
-  header_row <- c("Family", "Individual", "Father", "Mother", #
-                  "Sex", "Phenotype")#
-  snps = map[, 4]#
-  new_header = c(header_row, snps)#
-  ped <- read.csv(ped_file, sep = " ", header = FALSE, stringsAsFactors = FALSE, colClasses = 'character')#
-  range1 = seq(1, 6, by = 1)#
-  snp_data = data.frame(seq(1, nrow(ped), by = 1))#
-  for (i in range1) {#
-    snp_data[, i] = ped[, i]#
-  }#
-  range2 = seq(7, ncol(ped), by = 2)#
-  for (i in range2) {#
-    index = ((i - 7)/2) + 1#
-    snp_data[, index + 6] = paste(ped[, i], ped[, i + 1])#
-  }#
-  names(snp_data) <- new_header#
-  return(snp_data)#
-}#
+labs1 <- dat_ggforce %>% #
+  filter(x == 'haplogroup_impute') %>% #
+  arrange(y) %>% #
+  dplyr::distinct(z)#
+labs1 <- as.character(labs1$z)#
 #
-##===============================###
-##  Read in Typed and WGS haplogroups #
-##===============================###
-#
-mt.haps <- readRDS('~/Dropbox/src/MitoImputePrep/Shiny/MT_haps.rds')#
-#
-wd.path <- '~/Dropbox/src/MitoImputePrep/data/STRANDS/'#
-#
-##===============================###
-##  Read in reference #
-##===============================###
-#
-dat <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF1pc.csv') #
-dat2 <- read_csv('~/Dropbox/src/MitoImputePrep/metadata/ConcordanceTables_MAF0-1pc.csv')#
-#
-out <- left_join(dat, dat2, by = 'array', suffix = c('.1pc', '.01pc')) %>% #
-  mutate(improvment = Imputed.hg.Conc.1pc - Typed.hg.Conc.1pc)#
-#
-select(out, array, TOTAL.1pc, TOTAL.01pc, Imputed.hg.Conc.1pc, Imputed.hg.Conc.01pc, Typed.hg.Conc.1pc, improvment) %>% #
-  arrange(improvment) %>% #
-  summarise(mean.improvment = mean(improvment, na.rm = T), #
-            mean.typed = mean(Typed.hg.Conc.1pc, na.rm = T), #
-            mean.imputed = mean(Imputed.hg.Conc.1pc, na.rm = T))#
-#
-ggplot(out, aes(y = Imputed.hg.Conc.1pc, x = Typed.hg.Conc.1pc)) + #
-  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
-  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + labs(x = "Haplogroup Concordance \n Typed vs WGS", y = "Haplogroup Concordance \n Typed + Imputed vs WGS")#
-#
-ggplot(out, aes(x = Imputed.hg.Conc.1pc, y = Imputed.hg.Conc.01pc)) + #
-  geom_point() + geom_abline(intercept = 0, slope = 1, colour = 'red', linetype = 2) +#
-  xlim(0,1) + ylim(0,1) + theme_bw() + theme(aspect.ratio=1) + #
-  labs(x = "Haplogroup Concordance \n MAF > 1%", y = "Haplogroup Concordance \n MAF > 0.1%")#
-##===============================###
-##  Imputed plink files #
-##===============================###
-#
-## file names#
-imp.map <- list.files(path = wd.path, recursive = TRUE, pattern = "*.map") %>% #
-  grep('kHAP', ., value = T)#
-imp.ped <- list.files(path = wd.path, recursive = TRUE, pattern = "*.ped") %>% #
-  grep('kHAP', ., value = T)#
-imp.names <- imp.map %>% as.tibble() %>% separate(value, c('platform', 'experiment', 'kHAP', 'file'), sep = '/')#
-imp.dat <- mapply(generate_snp_data_fixed, paste0(wd.path, imp.map), paste0(wd.path, imp.ped), SIMPLIFY = F)#
-#
-imp.dat <- lapply(imp.dat, function(x){#
-  out <- x[,-c(grep("\\<57\\>", colnames(x)),#
-               grep("\\<62\\>", colnames(x)),#
-               grep("\\<63\\>", colnames(x)),#
-               grep("\\<72\\>", colnames(x)),#
-               grep("\\<185\\>", colnames(x)),#
-               grep("\\<186\\>", colnames(x)),#
-               grep("\\<189\\>", colnames(x)),#
-               grep("\\<195\\>", colnames(x)),#
-               grep("\\<228\\>", colnames(x)),#
-               grep("\\<295\\>", colnames(x)),#
-               grep("\\<723\\>", colnames(x)),#
-               grep("\\<750\\>", colnames(x)),#
-               grep("\\<930\\>", colnames(x)),#
-               grep("\\<961\\>", colnames(x)),#
-               grep("\\<1692\\>", colnames(x)),#
-               grep("\\<2831\\>", colnames(x)),#
-               grep("\\<3200\\>", colnames(x)),#
-               grep("\\<3552\\>", colnames(x)),#
-               grep("\\<3796\\>", colnames(x)),#
-               grep("\\<3921\\>", colnames(x)),#
-               grep("\\<4454\\>", colnames(x)),#
-               grep("\\<4562\\>", colnames(x)),#
-               grep("\\<4769\\>", colnames(x)),#
-               grep("\\<5774\\>", colnames(x)),#
-               grep("\\<5894\\>", colnames(x)),#
-               grep("\\<6221\\>", colnames(x)),#
-               grep("\\<7196\\>", colnames(x)),#
-               grep("\\<7624\\>", colnames(x)),#
-               grep("\\<8014\\>", colnames(x)),#
-               grep("\\<8080\\>", colnames(x)),#
-               grep("\\<8860\\>", colnames(x)),#
-               grep("\\<9824\\>", colnames(x)),#
-               grep("\\<10097\\>", colnames(x)),#
-               grep("\\<10410\\>", colnames(x)),#
-               grep("\\<10754\\>", colnames(x)),#
-               grep("\\<12633\\>", colnames(x)),#
-               grep("\\<12738\\>", colnames(x)),#
-               grep("\\<12930\\>", colnames(x)),#
-               grep("\\<12950\\>", colnames(x)),#
-               grep("\\<14470\\>", colnames(x)),#
-               grep("\\<15884\\>", colnames(x)),#
-               grep("\\<15954\\>", colnames(x)),#
-               grep("\\<16111\\>", colnames(x)),#
-               grep("\\<16114\\>", colnames(x)),#
-               grep("\\<16129\\>", colnames(x)),#
-               grep("\\<16147\\>", colnames(x)),#
-               grep("\\<16166\\>", colnames(x)),#
-               grep("\\<16176\\>", colnames(x)),#
-               grep("\\<16182\\>", colnames(x)),#
-               grep("\\<16183\\>", colnames(x)),#
-               grep("\\<16188\\>", colnames(x)),#
-               grep("\\<16232\\>", colnames(x)),#
-               grep("\\<16240\\>", colnames(x)),#
-               grep("\\<16257\\>", colnames(x)),#
-               grep("\\<16258\\>", colnames(x)),#
-               grep("\\<16265\\>", colnames(x)),#
-               grep("\\<16266\\>", colnames(x)),#
-               grep("\\<16286\\>", colnames(x)),#
-               grep("\\<16291\\>", colnames(x)),#
-               grep("\\<16293\\>", colnames(x)),#
-               grep("\\<16318\\>", colnames(x)),#
-               grep("\\<16327\\>", colnames(x)))]#
-  out#
-})#
-imp.dat <- lapply(imp.dat, as.tibble)#
-names(imp.dat) <- paste0(imp.names$platform, "_", imp.names$kHAP)#
-#
-##===============================###
-##  Info Score Files #
-##===============================###
-HiMC <- tibble(#
-  himc = 'yes',#
-  pos = as.numeric(c('10115', '1018', '10398', '10400', '10550', '11177', '11251', '11719', '11947', '12007', '12308', '12414', '12705', '13263', '13368', '13506', '13708', '13789', '14178', '14318', '1438', '14470', '14560', '14668', '14766', '14905', '15043', '15326', '15452', '15535', '16111', '16189', '16271', '16362', '16390', '16391', '16391', '1719', '1736', '2092', '3505', '3552', '3594', '4580', '4769', '4883', '4917', '4977', '5178', '5442', '6371', '7028', '825', '8251', '8414', '8468', '8703', '9042', '9055', '9347', '9950')),#
-  Haplogroup = c("L2", "L3", "K1", "M", "K", "B2", "JT", "R0", "W", "A2", "U", "N2", "R", "C", "T", "L2'3'4'6", "J", "L1", "L1", "C", "H2", "K", ".", "D4", "HV", "T", "N1a1b", "H2a2a", "JT", "B4b'd'e", "A2", "T1", "JT", "L4", "L2", "I", "I", "X2", "A", "D1", "W", "C", "L3'4", "V", "H2a", "M80'D", "T", "B2", "D ", "L0", "X ", "H", "L2'3'4'6", "N1a1b", "D4", "L2'3'4'6", "D2", "L0", "U8b", "L0", "B2"))#
-#
-# 0.01 MAF Reference; MCMC 30#
-info <- list.files(path = wd.path, recursive = TRUE, pattern = "*_info") %>% #
-  grep('kHAP', ., value = T)#
-info <- info[grepl("sample", info) == F]#
-info.names <- info %>% as.tibble() %>% separate(value, c('platform', 'experiment', 'kHAP', 'file'), sep = '/')#
-info.dat <- lapply(paste0(wd.path, info), read_delim, delim = " ")#
-names(info.dat) <- paste0(info.names$platform, "_", info.names$kHAP)#
-#
-info.dat <- lapply(info.dat, function(x){#
-  out <- x %>% mutate(info_comb = ifelse(info_type0 == -1, info,info_type0 )) %>% #
-    left_join(HiMC, by = c('position' = 'pos')) %>%#
-    mutate(himc = ifelse(is.na(himc), 'no', himc))#
-  out#
-})
-test <- loadRDS('~/Dropbox/imp_haps_kHAP.RDS')
-test <- readRDS('~/Dropbox/imp_haps_kHAP.RDS')
-head(test)
-161 + 169
-417 + 651
-24771 + 35324
-249 + 250
-144  +173
-(Alzheimer's OR Dementia OR "amyloid protein" OR "tau protein") AND (Protective OR protect OR protects AND (Genetic OR SNP OR “Single Nucleotide Polymorphism*” OR Polymorphism, Single Nucleotide OR mutation OR allele)) english [LA]
-asdfasdf
-asdf))))
-))))
-''
-49414 + 73933
-11490 + 16094
-16254 + 20052
-223/24
-860/24
-1075/24
-browseVignettes(package = "qvalue")
-1439 + 489 + 564 + 239
-163 + 155
-203 + 239
-(195 + 217) + (211 + 261)
-(211 + 261) / (195 + 217) + (211 + 261)
-(211 + 261) / ((195 + 217) + (211 + 261))
-311 + 330
-1030 + 417
-1109 + 121
-113 + 1230
-1113 + 1230
-71 + 120
-183 + 225
-408 = 191
-408 + 191
-211 + 173
-152 + 136
-188 + 273
-83 + 35 + 5
-46 + 12 + 3
-122 - 61
-251 + 201
-2842 + 2571
-33*24
-103 + 157
-27 + 28
-69 + 83
-data.frame(AD = c(5, 69-5), CN = c(19, 83-19))
-fishers.exact(data.frame(AD = c(5, 69-5), CN = c(19, 83-19)))
-?exact
-fisher.test(data.frame(AD = c(5, 69-5), CN = c(19, 83-19)))
-fisher.test(data.frame(AD = c(4, 69-4), CN = c(14, 83-14)))
-244 + 971 + 872
-1020 + 3623 + 3135
-2087 +	7778
-158	+195
-fisher.test(data.frame(AD = c(8, 150), CN = c(20, 175)))
-107 + 115
-2336 +	2004
-426+	350
-139+	152
-798	+ 401
-376	+369
-231+	194
-352	+438
-473	+345
-fisher.test(data.frame(AD = c(750, 196), CN = c(506, 184)))
-1.39/1
-1/1.39
-127-68
-166 +	184
-82 + 182
-79	+145
-68+	72
-fisher.test(data.frame(AD = c(82, 74), CN = c(96, 58)))
-174	+ 147
-24 + 52
-24 + 33
-431+	301
-1 - 0.56
-1 - 0.47
-1 - 0.53
-1 - 0.45
-37 + 28
-347	+291
+labs2 <- dat_ggforce %>% #
+  filter(x == 'haplogroup_wgs') %>% #
+  arrange(y) %>% #
+  dplyr::distinct(z)#
+labs2 <- as.character(labs2$z)
+ggplot(dat_ggforce, aes(x = x, id = id, split = y, value = n)) +#
+  geom_parallel_sets(aes(fill = match), alpha = 0.5, axis.width = 0.2) +#
+  geom_parallel_sets_labels(colour = 'black', angle = 0, label = c(labs1, labs2)) + #
+  theme_classic() + theme(legend.position = 'bottom') + #
+  theme(axis.title.y=element_blank(),#
+        axis.text.y=element_blank(),#
+        axis.ticks.y=element_blank()) + #
+  scale_x_discrete(labels=c("Imputed", "WGS")) + #
+  labs(x = "Mitochondrial Haplogroups") + scale_fill_brewer(palette = 'Set1')
+library(tidyverse)
+read_tsv('~/Dropbox/HiMC_snps.txt')
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F)
+snps
+bim <- read_delim('/Users/shea/Dropbox/Research/Collaboration/MitoWAX/UKBB/ukb_snp_chrMT_v2.bim', col_names = F)
+bim <- read_delim('/Users/shea/Dropbox/Research/Collaboration/MitoWAX/UKBB/ukb_snp_chrMT_v2.bim', col_names = F, delim = " ")
+bim
+bim <- read_tsv('/Users/shea/Dropbox/Research/Collaboration/MitoWAX/UKBB/ukb_snp_chrMT_v2.bim', col_names = F)
+bim
+snps
+mutate(X1 = gsub('[[:digit:]]+', '', X1))
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F) %>% mutate(X1 = gsub('[[:digit:]]+', '', X1))
+snps
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F) %>% mutate(X1 = gsub('[[^0-9\\.]]', '', X1))
+snps
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F) %>% mutate(X1 = gsub('[[:alpha:]] +', '', X1))
+snps
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F) %>% mutate(X1 = gsub('[[:alpha:]] ', '', X1))
+snps
+as.numeric(gsub("([0-9]+).*$", "\\1", snps$X1))
+bim
+muatate(pos = as.numeric(gsub("([0-9]+).*$", "\\1", X1)))
+mutate(pos = as.numeric(gsub("([0-9]+).*$", "\\1", X1)))
+snps <- read_tsv('~/Dropbox/HiMC_snps.txt', col_names = F) %>% #
+mutate(pos = as.numeric(gsub("([0-9]+).*$", "\\1", X1)))
+snps
+anti_join(bim, snps, by = c('X4' = 'pos'))
+semi_join(bim, snps, by = c('X4' = 'pos'))
+library(tidyverse)
+library(readr)
+?read_xlsx
+library(readxl)
+?read_xlsx
+read_xlsx("~Dropbox/Research/PostDoc/Systematic_Review/3) Files/Full Texts/Reviewers/Hill/41380_2017_1_MOESM2_ESM.xlsx", sheet = 4, skip = 1)
+read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/3) Files/Full Texts/Reviewers/Hill/41380_2017_1_MOESM2_ESM.xlsx", sheet = 4, skip = 1)
+hill <- read_xlsx("~/Dropbox/Research/PostDoc/Systematic_Review/3) Files/Full Texts/Reviewers/Hill/41380_2017_1_MOESM2_ESM.xlsx", sheet = 4, skip = 1)
+filter(hill, Gene %in% c('ABCA7', 'BIN1', 'CD2AP', 'CD33', 'CLU', 'CR1', 'EPHA1', 'MS4A4A', 'MS4A4E', 'MS4A6A', 'PICALM', 'HLA-DRB', 'PTK2B', 'SORL1', 'SLC24A4', 'RIN3', 'DSG2', 'INPP5D', 'MEF2C', 'NME8', 'ZCWPW1', 'CELF1', 'FERMT2', 'CASS4', 'HBEGF', 'ECHDC3', 'SPPL2A', 'SCIMP'))
+print(res, n = Inf)
+res <- filter(hill, Gene %in% c('ABCA7', 'BIN1', 'CD2AP', 'CD33', 'CLU', 'CR1', 'EPHA1', 'MS4A4A', 'MS4A4E', 'MS4A6A', 'PICALM', 'HLA-DRB', 'PTK2B', 'SORL1', 'SLC24A4', 'RIN3', 'DSG2', 'INPP5D', 'MEF2C', 'NME8', 'ZCWPW1', 'CELF1', 'FERMT2', 'CASS4', 'HBEGF', 'ECHDC3', 'SPPL2A', 'SCIMP'))
+print(res, n = Inf)
+filter(hill, Gene %in% 'HLA')
+grep('HLA', hill$gene, value = T)
+grep('HLA', hill$Gene, value = T)
+res <- filter(hill, Gene %in% c('ABCA7', 'BIN1', 'CD2AP', 'CD33', 'CLU', 'CR1', 'EPHA1', 'MS4A4A', 'MS4A4E', 'MS4A6A', 'PICALM', 'HLA-DRB1', 'HLA-DRB5', 'PTK2B', 'SORL1', 'SLC24A4', 'RIN3', 'DSG2', 'INPP5D', 'MEF2C', 'NME8', 'ZCWPW1', 'CELF1', 'FERMT2', 'CASS4', 'HBEGF', 'ECHDC3', 'SPPL2A', 'SCIMP'))
+print(res, n = Inf)
+2.90e- 2
+2.90e-2
+length(c('ABCA7', 'BIN1', 'CD2AP', 'CD33', 'CLU', 'CR1', 'EPHA1', 'MS4A4A', 'MS4A4E', 'MS4A6A', 'PICALM', 'HLA-DRB1', 'HLA-DRB5', 'PTK2B', 'SORL1', 'SLC24A4', 'RIN3', 'DSG2', 'INPP5D', 'MEF2C', 'NME8', 'ZCWPW1', 'CELF1', 'FERMT2', 'CASS4', 'HBEGF', 'ECHDC3', 'SPPL2A', 'SCIMP'))
+9.13e-2
+4.98e-2
+write_csv("~/Dropbox/Research/PostDoc/Systematic_Review/3) Files/Full Texts/Reviewers/Hill/hill_results.csv")
+write_csv(res, "~/Dropbox/Research/PostDoc/Systematic_Review/3) Files/Full Texts/Reviewers/Hill/hill_results.csv")
+davies <- read_xlsx('~/Dropbox/Research/PostDoc/Systematic_Review/3_Files/FullTexts/Reviewers/Davies_2018/41467_2018_4362_MOESM9_ESM.xlsx', sheet = 1, skip = 1)
+davies
+res <- filter(davies, Gene %in% c('ABCA7', 'BIN1', 'CD2AP', 'CD33', 'CLU', 'CR1', 'EPHA1', 'MS4A4A', 'MS4A4E', 'MS4A6A', 'PICALM', 'HLA-DRB1', 'HLA-DRB5', 'PTK2B', 'SORL1', 'SLC24A4', 'RIN3', 'DSG2', 'INPP5D', 'MEF2C', 'NME8', 'ZCWPW1', 'CELF1', 'FERMT2', 'CASS4', 'HBEGF', 'ECHDC3', 'SPPL2A', 'SCIMP'))
+res
+dat <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt')
+dat
+ldsc <- dat %>% #
+select(CHR, BP, SNP, Allele1, Allele2)
+ldsc
+dat %>% #
+select(CHR, BP, SNP, Allele1, Allele2) %>%#
+filter(CHR == 6 & BP > 26000000 & BP < 34000000)
+ldsc <- dat %>% #
+arrange(CHR, BP) %>%#
+select(CHR, BP, SNP, Allele1, Allele2) %>%#
+filter(CHR == 6 & BP > 26000000 & BP < 34000000)
+ldsc
+tail(ldsc)
+ldsc <- dat %>% #
+#arrange(CHR, BP) %>%#
+select(CHR, BP, SNP, Allele1, Allele2) %>%#
+filter(!(CHR == 6 & BP > 26000000 & BP < 34000000))
+ldsc
+dat
+ldsc <- dat %>% #
+arrange(CHR, BP) %>%#
+filter(!(CHR == 6 & BP > 26000000 & BP < 34000000)) %>%#
+mutate(Zscore = Effect/StdErr) %>%#
+mutate(N = 14406 + 25849) %>%#
+rename(snpid = SNP, A1 = Allele1, A2 = Allele2)#
+select(SNP, A1, A2, Zscore, N, P)
+ldsc <- dat %>% #
+arrange(CHR, BP) %>%#
+filter(!(CHR == 6 & BP > 26000000 & BP < 34000000)) %>%#
+mutate(Zscore = Effect/StdErr) %>%#
+mutate(N = 14406 + 25849) %>%#
+rename(snpid = SNP, A1 = Allele1, A2 = Allele2)#
+select(snpid, A1, A2, Zscore, N, P)
+ldsc <- dat %>% #
+arrange(CHR, BP) %>%#
+filter(!(CHR == 6 & BP > 26000000 & BP < 34000000)) %>%#
+mutate(Zscore = Effect/StdErr) %>%#
+mutate(N = 14406 + 25849) %>%#
+rename(snpid = SNP, A1 = Allele1, A2 = Allele2) %>%#
+select(snpid, A1, A2, Zscore, N, P)
+ldsc
+?to_upper
+? toupper
+ldsc <- dat %>% #
+arrange(CHR, BP) %>%#
+filter(!(CHR == 6 & BP > 26000000 & BP < 34000000)) %>%#
+filter(Allele1 %in% c('a', 'c', 't', 'g')) %>% #
+filter(Allele2 %in% c('a', 'c', 't', 'g')) %>% #
+mutate(Zscore = Effect/StdErr) %>%#
+mutate(N = 14406 + 25849) %>%#
+mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2)) %>%#
+rename(snpid = SNP, A1 = Allele1, A2 = Allele2) %>%#
+select(snpid, A1, A2, Zscore, N, P)
+ldsc
+count(ldsc, A1)
+count(ldsc, A2)
+count(dat, A2)
+count(dat, Allele2)
+count(dat, Allele1)
+ldsc
+write_tsv(ldsc, '~/Dropbox/Research/Data/Summary_Statisitics/IGAP_AAOS/IGAP_AAOS_ldsc.txt')
+721 - 55
+150 + 300
+150 + 350
+3049*0.37
+1554 - 2892 + 1128.13
+3049*0.63
+1554 - 2892 + 1920.87
+2051-127
+2051-127-99
+1/515
+148+137
+library(RadialMR)
+?ivw>radial
+?ivw_radial
+? Iterative_ivw
+?Iterative_ivw
+?? Iterative_ivw
+?Bhat1.Iterative
+ivw_radial
+library(tidyverse)
+dat <- read_csv('~/Downloads/Chase9138_Activity_20181026.CSV')
+dat
+dat <- read_csv('~/Downloads/Chase9138_Activity_20181026.CSV')
+dat
+dat <- read_csv('~/Downloads/Chase9138_Activity_20181026.CSV')
+income <- filter(dat, Details == 'CREDIT')
+spend <- filter(dat, Details == 'DEBIT')
+income
+spend
+filter(dat, Details == 'DEBIT') %>% mutate(Amount = Amount * -1)
+spend <- filter(dat, Details == 'DEBIT') %>% mutate(Amount = Amount * -1)
+spend %>% group_by(Category) %>% summarize(total = Sum(Amount))
+spend %>% group_by(Category) %>% summarize(total = sum(Amount))
+income %>% summarize(total = sum(Amount))
+spend %>% arrange(Category) %>% print(n = Inf)
+income
+1/1.258; 1/2.340; 1/1.234; 1/2.344
+1825	+3784
+1/0.68
+1/0.612
+geno2allele(815, 194, 16)#
+## AF Controls#
+geno2allele(916, 281, 28)
+# https://en.wikipedia.org/wiki/Allele_frequency#
 geno2allele <- function(AA, AB, BB){#
 	tibble(allele = c('A', 'B'), #
 		   n = c(AA*2 + AB, BB*2 + AB), #
 		   freq = c((AA*2 + AB) / ((AA*2 + AB) + (BB*2 + AB)),#
 		   			(BB*2 + AB) / ((AA*2 + AB) + (BB*2 + AB))#
 		   			))#
-#
 }
-geno2allele(6, 3, 1)
+geno2allele(815, 194, 16)#
+## AF Controls#
+geno2allele(916, 281, 28)
 library(tidyverse)
-geno2allele(6, 3, 1)
-210*63.8
-210*0.638
-geno2allele(210*0.638, 210*0.304, 210*0.068)
-geno2allele(206*0.519, 206*0.413, 206*0.068)
+geno2allele(815, 194, 16)#
+## AF Controls#
+geno2allele(916, 281, 28)
+fisher.test(data.frame(CN = c(114, 518), CN = c(84, 302)))
+# Boiocchi2013#
+## AF AD#
+geno2allele(34, 40, 27)#
+## AF Controls#
+geno2allele(49, 93, 39)
 fisher.test(data.frame(AD = c(332, 92), CN = c(299, 113)))
-chi(data.frame(AD = c(332, 92), CN = c(299, 113)))
-chisq.test(data.frame(AD = c(332, 92), CN = c(299, 113)))
-data.frame(AD = c(332, 92), CN = c(299, 113))
-geno2allele(118, 519, 542)
-336 + 110
-geno2allele(50, 50, 10)
-geno2allele(9, 22, 7)
-fisher.test(data.frame(AD = c(150, 70), CN = c(40, 36)))
-1 / 1.9
-geno2allele(241, 182, 38)
-geno2allele(227, 155, 19)
-125+	109
-290	+222
-geno2allele(249, 41, 0)
-geno2allele(177, 42, 1)
-fisher.test(data.frame(AD = c(539, 41), CN = c(396, 44)))
-fisher.test(data.frame(AD = c(539, 41), CN = c(396, 48)))
-fisher.test(data.frame(AD = c(41, 539), CN = c(48, 396)))
-521	+578
-318	+ 324
-128+	92
-229+	253
-314	+294
-67+ 53+ 40 + 107 +239+ 24
-4466.71 - 1600
-45.68 + 11.21
-237+	237
-5316	+10757
-156	+ 138
-216+	323
-992 +	1358
-229	+318
-376*2
-geno2allele(225, 130, 21)
-geno2allele(194, 146, 36)
-fisher.test(data.frame(AD = c(580, 172), CN = c(534, 218)))
-fisher.test(data.frame(AD = c(172, 580), CN = c(218, 534)))
-432 +	106
-174	+176
-fisher.test(data.frame(AD = c(98, 70), CN = c(130, 166)))
-fisher.test(data.frame(AD = c(70, 98), CN = c(166,130)))
-84	+148
-324	+250
-199+	165
-120	+412
-1046	+372
-96+	120
-## AF AD#
-geno2allele(2, 61, 398)#
-## AF Controls#
-geno2allele(3, 64, 280)
-## https://en.wikipedia.org/wiki/Allele_frequency#
-geno2allele <- function(AA, AB, BB){#
-	tibble(allele = c('A', 'B'), #
-		   n = c(AA*2 + AB, BB*2 + AB), #
-		   freq = c((AA*2 + AB) / ((AA*2 + AB) + (BB*2 + AB)),#
-		   			(BB*2 + AB) / ((AA*2 + AB) + (BB*2 + AB))#
-		   			))#
-#
-}
-# Chen2017#
-## AF AD#
-geno2allele(2, 61, 398)#
-## AF Controls#
-geno2allele(3, 64, 280)
-library(tidyverse)
-# Chen2017#
-## AF AD#
-geno2allele(2, 61, 398)#
-## AF Controls#
-geno2allele(3, 64, 280)
-# Dai2018#
-## AF AD#
-geno2allele(2, 39, 125)#
-## AF Controls#
-geno2allele(7, 58, 119)
-1-0.73
-# Ladgreen#
-## AF AD#
-geno2allele(34, 330, 453)#
-## AF Controls#
-geno2allele(49, 313, 465)
-17008	+ 37154
-read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(samp.ssim, source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/output1.txt') %>% filter(source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/output2.txt') %>% filter(source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/output3.txt') %>% filter(source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/output.txt') %>% filter(source == 'GWAS')
-read_tsv('~/Programs/ssimp_software-master/gwas/small.random.txt')
-read_table2('~/Programs/ssimp_software-master/gwas/small.random.txt')
-read_table2('~/Programs/ssimp_software-master/gwas/small.random.txt') %>% filter(MarkerName == 'rs9617600')
-read_table2('~/Programs/ssimp_software-master/output_snps.tx')
-read_table2('~/Programs/ssimp_software-master/output_snps.txt')
-fam <- read_table2('~/LOAD_minerva/dummy/Brian/projects/ADGC/data/postImpute_vcf0.8/newids/ADGC.fam')
-fam <- read_table2('~/LOAD_minerva/dummy/Brian/projects/ADGC/data/postImpute_vcf0.8/newids/ADGC.fam', col_names = F)
-fam
-fam %>% separate(X1, c('Cohort', 'FID'), sep = '-') %>% count(Cohort) %>% print(n = Inf)
-1/0.48
-3 + 5 + 7 + 4 + 1 + 5 + 3 + 3 +2 + 1 + 5
-3 + 5 + 6 + 5 + 1 + 5 + 2 + 5 + 4 + 2. +6
-dat <- read_tsv('~/Programs/ssimp_software-master/output.txt')
+1/1.89
+1/1.37
+1/2.61
+fisher.test(data.frame(AD = c(70, 70), CN = c(166,130)))
+208716 / (208716 + 177817)
+library(ggman)
+?ggman
 librar
-library(tidyverse)
-dat <- read_tsv('~/Programs/ssimp_software-master/output.txt')
-dat
-dat %>% fitler(source == 'GWAS')
-dat %>% filter(source == 'GWAS')
-dat %>% filter(source == 'GWAS') %>% print(n = Inf)
-dat <- read_tsv('~/LOAD_minerva/dummy/shea/bin/ssimp_software/output.txt')
-dat
-dat %>% filter(source == 'GWAS') %>% print(n = Inf)
-2771 - 258
-1/0.73
-dat_res <- read_tsv('MRdat_results.txt')
-library(tidyverse)
-dat_res <- read_tsv('MRdat_results.txt')
-setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
-library(tidyverse)   ## For data wrangling #
-library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ #
-library(RadialMR)    ## For Radial MR plots  #
-library(ggplot2)     ## For plotting
-dat_res <- read_tsv('MRdat_results.txt')
-mrdat_res <- dat_res %>% #
-  filter(method == 'Inverse variance weighted (fixed effects)') %>% #
-  filter(outcome == input_outcome) %>% #
-  filter(pt == input_pt) %>% #
-  arrange(-b) %>%#
-  mutate(pval = round(pval, 4)) %>% #
-  as.data.frame()
-input_exposure <- 'alcc'#
-input_outcome <- 'load'#
-input_pt <- 5e-8
-mrdat_res <- dat_res %>% #
-  filter(method == 'Inverse variance weighted (fixed effects)') %>% #
-  filter(outcome == input_outcome) %>% #
-  filter(pt == input_pt) %>% #
-  arrange(-b) %>%#
-  mutate(pval = round(pval, 4)) %>% #
-  as.data.frame()
-forest_plot_1_to_many(mrdat_res,b="b",se="se",#
-                      exponentiate=T,ao_slc=F, by = NULL,#
-                      TraitM="outcome", col1_title="Risk factor",#
-                      trans="log2", #
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
-                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.5, 0.5, 0.5),#
-                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
-8forest_plot_1_to_many(mrdat_res,b="b",se="se",#
-                      exponentiate=T,ao_slc=F, by = NULL,#
-                      TraitM="outcome", col1_title="Risk factor",#
-                      trans="log2", #
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
-                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
-                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
-forest_plot_1_to_many(mrdat_res,b="b",se="se",#
-                      exponentiate=T,ao_slc=F, by = NULL,#
-                      TraitM="outcome", col1_title="Risk factor",#
-                      trans="log2", #
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
-                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
-                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
-forest_plot_1_to_many(mrdat_res,b="b",se="se",#
-                      exponentiate=T,ao_slc=F, by = NULL,#
-                      TraitM="outcome", col1_title="Risk factor",#
-                      trans="log2", #
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
-                      addcols=c("exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
-                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
-forest_plot_1_to_many(mrdat_res,b="b",se="se",#
-                      exponentiate=T,ao_slc=F, by = NULL,#
-                      TraitM="outcome", col1_title="Risk factor",#
-                      trans="log2", #
-                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", #
-                      addcols=c("id.exposure", "nsnp","pval"),addcol_widths=c(0.8, 0.8, 0.8),#
-                      addcol_titles=c("Exposure", "No. SNPs","P-val"))
-setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
+library(TwoSampleMR)
+library(ggiraph)
+install.packages('ggiraph')
+library(ggiraph)
+library(gdtools)
+ggiraph
+? geom_point_interactive
+install.packages(gdtools)
+install.packages('gdtools')
+library(gdtools)
 library(tidyverse)   ## For data wrangling #
 library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ #
 library(RadialMR)    ## For Radial MR plots  #
 library(ggplot2)     ## For plotting #
+library(qvalue)#
 #
-#setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')#
+# library(shiny)#
+# setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')#
+# runApp()#
 #
 # Read in Data#
 ## Summary Statistics#
@@ -580,7 +657,7 @@ MRsummary <- read_tsv('MR_Results_summary.txt')#
 ## Blurbs#
 traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')#
 #
-exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', #
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', #
                         'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', #
                         'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', #
                         'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')#
@@ -605,6 +682,8 @@ ui <- fluidPage(#
                                  "Alcohol Dependence" = "alcd", #
                                  "AUDIT" = "audit", 'BMI' = "bmi", #
                                  "Cigarettes per Day" = "cpd", #
+                                 "Ever Smoker" = "evrsmk", #
+                                 "Smoking Status" = "smkukbb",#
                                  "Diastolic Blood Pressure" = "dbp", #
                                  "Depressive Symptoms" = "dep", #
                                  "Type 2 Diabetes" = "diab", #
@@ -619,7 +698,6 @@ ui <- fluidPage(#
                                  "Pulse Pressure" = "pp", #
                                  "Systolic Blood Pressure" = "sbp", #
                                  "Sleep duration" = "sleep", #
-                                 "Smoking Status" = "smkukbb", #
                                  "Social Isolation" = "sociso", #
                                  "Total Cholesterol" = "tc", #
                                  "Triglycerides" = "trig"), #
@@ -641,7 +719,8 @@ ui <- fluidPage(#
       radioButtons("pt", label = h3("Pvalue Threshold"),#
                    choices = list("5e-8" = 1, "5e-6" = 2), #
                    selected = 1),#
-      checkboxInput("checkbox", label = "Best Model", value = FALSE)#
+      checkboxInput("checkbox", label = "Best Model", value = FALSE) #
+      #checkboxInput("single_ex", label = "Single Exposure", value = FALSE)#
     ),#
     # Main panel for displaying outputs ----#
     mainPanel(#
@@ -682,7 +761,11 @@ ui <- fluidPage(#
                            htmlOutput("mr_PressoPlotText"),#
                            plotOutput("mr_PressoPlot"),#
                            htmlOutput("mr_PressoTabText"),#
-                           DT::dataTableOutput("mr_PressoRes"))#
+                           DT::dataTableOutput("mr_PressoRes"),#
+                           htmlOutput("mrpresso_QText"),#
+                           DT::dataTableOutput("mrpresso_Q"),#
+                           htmlOutput("mrpresso_EggerText"),#
+                           DT::dataTableOutput("mrpresso_Egger"))#
       )#
     )#
   )#
@@ -794,7 +877,7 @@ server <- function(input, output) {#
         mutate(name = ifelse(MR_PRESSO == FALSE, name, paste0(name, '*'))) %>% #
         arrange(-b) %>%#
         as.data.frame()#
-      forest_plot_1_to_many(res.load,b="b",se="se",#
+      forest_plot_1_to_many(res.plot,b="b",se="se",#
                             exponentiate=exponentiate,ao_slc=F, by = NULL,#
                             TraitM="name", col1_title="Risk factor", col1_width = 1.1,#
                             trans=trans, #
@@ -808,10 +891,12 @@ server <- function(input, output) {#
    output$SummaryTab <- DT::renderDataTable(DT::datatable({#
     input_outcome <- input$outcome#
     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    #input_exposure <- ifelse(input$single_ex == FALSE, input$exposure, exposures)#
+    input_exposure <- exposures#
     if(input$checkbox == FALSE){#
       MRsummary %>% #
         filter(outcome %in% outcomes) %>% #
-        filter(exposure %in% exposures) %>%#
+        filter(exposure %in% input_exposure) %>%#
         filter(outcome == input_outcome) %>% #
         filter(MR_PRESSO == FALSE) %>% #
         filter(pt == input_pt) %>% #
@@ -824,18 +909,20 @@ server <- function(input, output) {#
         rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, #
                v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW, exposure = name) %>% #
         mutate(exposure = as.factor(exposure)) %>%#
-        select(exposure, method, nsnp, n_outliers, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)#
+        select(exposure, method, nsnp, n_outliers, b, se, pval)#
     } else {#
       mr_best() %>% #
         filter(outcome == input_outcome) %>% #
+        filter(exposure %in% input_exposure) %>% #
         mutate(b = round(b, 3)) %>% #
-        mutate(se = round(se, 4)) %>% #
+        mutate(se = round(se, 3)) %>% #
+        mutate(pt = ifelse(pt == 5e-6, '5e-6', '5e-8')) %>% #
         mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%#
         left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% #
         select(-exposure) %>%#
         rename(exposure = name) %>% #
         mutate(exposure = as.factor(exposure)) %>% #
-        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval, v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)#
+        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval)#
     }#
   }, filter = 'top', rownames = FALSE#
   ))#
@@ -921,10 +1008,10 @@ server <- function(input, output) {#
   output$mr_res <- DT::renderDataTable(DT::datatable({#
     res() %>% #
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
-      mutate(b = round(b, 2)) %>% #
-      mutate(se = round(se, 2)) %>% #
-      mutate(pval = round(pval, 3))#
-  }))#
+      mutate(b = round(b, 3)) %>% #
+      mutate(se = round(se, 3)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
   output$mr_scatterText = renderUI({#
     HTML(paste0(tags$br(), "Scatterplot of SNP effects for the association of ", exposure.name(), ' on ', outcome.name()))#
   })#
@@ -945,8 +1032,8 @@ server <- function(input, output) {#
     mr_heterogeneity(mrdat(), method_list=c("mr_egger_regression", "mr_ivw")) %>% #
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
       mutate(Q = round(Q, 2)) %>% #
-      mutate(Q_pval = round(Q_pval, 4))#
-  }))#
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
   output$mr_FunnelText = renderUI({#
     HTML(paste0(tags$br(), "Funnel plot of the MR causal estimates against their precession"))#
   })#
@@ -972,8 +1059,8 @@ server <- function(input, output) {#
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
       mutate(egger_intercept = round(egger_intercept, 4)) %>% #
       mutate(se = round(se, 4)) %>% #
-      mutate(pval = round(pval, 4)) #
-  }))#
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
   output$mr_PressoGloablText = renderUI({#
     HTML(paste0(tags$br(), "MR-PRESSO Global Test for pleitropy"))#
   })#
@@ -986,9 +1073,9 @@ server <- function(input, output) {#
       filter(outcome == input_outcome) %>% #
       filter(pt == input_pt) %>% #
       mutate(RSSobs = round(RSSobs, 4)) %>% #
-      select(-id.exposure, -id.outcome, -exposure, -outcome, -pt) #
+      select(-id.exposure, -id.outcome, -exposure, -outcome, -pt, -violated) #
 #
-  }))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
   ##===============================================##  #
   ## Outlier Removal#
   ##===============================================##  #
@@ -1020,18 +1107,550 @@ server <- function(input, output) {#
   output$mr_PressoRes <- DT::renderDataTable(DT::datatable({#
     res_mrpresso() %>% #
       select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
-      mutate(b = round(b, 2)) %>% #
-      mutate(se = round(se, 2)) %>% #
-      mutate(pval = round(pval, 4))#
-  }))#
+      mutate(b = round(b, 3)) %>% #
+      mutate(se = round(se, 3)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mrpresso_QText = renderUI({#
+    HTML(paste0(tags$br(), "Cochrans Q heterogeneity test for ", exposure.name(), ' on ', outcome.name(), ' after outlier removal'))#
+  })#
+  output$mrpresso_Q <- DT::renderDataTable(DT::datatable({#
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()#
+    mr_heterogeneity(mrdat_mrpresso, method_list=c("mr_egger_regression", "mr_ivw")) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(Q = round(Q, 2)) %>% #
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mrpresso_EggerText = renderUI({#
+    HTML(paste0(tags$br(), "MR Egger test for directional pleitropy after outlier removal"))#
+  })#
+  output$mrpresso_Egger <- DT::renderDataTable(DT::datatable({#
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()#
+    mr_pleiotropy_test(mrdat_mrpresso) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(egger_intercept = round(egger_intercept, 4)) %>% #
+      mutate(se = round(se, 4)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
 }#
 #
 shinyApp(ui, server)
 library(shiny)
-runApp()
-setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
-library(shiny)
-runApp()
+library(tidyverse)   ## For data wrangling #
+library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/ #
+library(RadialMR)    ## For Radial MR plots  #
+library(ggplot2)     ## For plotting #
+library(qvalue)#
+#
+# library(shiny)#
+# setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')#
+# runApp()#
+#
+# Read in Data#
+## Summary Statistics#
+ss <- read_tsv('MR_summary_stats.txt.gz')#
+## Proxy SNPs#
+px <- read_tsv('MR_MatchedProxys.txt.gz')#
+## Harmonized data #
+dat <- read_tsv('MR_mrpresso_MRdat.txt.gz')#
+## MR Results - w/ outliers#
+dat_res <- read_tsv('MRdat_results.txt')#
+## MR-PRESSO global #
+mrpresso <- read_tsv('mrpresso_global.txt.gz')#
+## MR summary#
+MRsummary <- read_tsv('MR_Results_summary.txt')#
+## Blurbs#
+traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')#
+#
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', #
+                        'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', #
+                        'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', #
+                        'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')#
+#
+## LOAD, CSF and Neuropath#
+outcomes <- c('load', 'aaos', #
+                       'ab42', 'ptau', 'tau', #
+                       'hipv', 'hipv2015', #
+                       'npany', 'nft4', 'hips', 'vbiany')#
+#
+# Define UI for app that draws a histogram ----#
+ui <- fluidPage(#
+  # App title ----#
+  titlePanel("Causal Relationships in the Alzheimer's endophenome"),#
+  # Sidebar layout with input and output definitions ----#
+  sidebarLayout(#
+    # Sidebar panel for inputs ----#
+    sidebarPanel(#
+      # Input: Dropdown for exposure ----#
+      selectInput("exposure", label = h3("Select Exposure"), #
+                  choices = list("Alcohol Consumption" = "alcc", #
+                                 "Alcohol Dependence" = "alcd", #
+                                 "AUDIT" = "audit", 'BMI' = "bmi", #
+                                 "Cigarettes per Day" = "cpd", #
+                                 "Ever Smoker" = "evrsmk", #
+                                 "Smoking Status" = "smkukbb",#
+                                 "Diastolic Blood Pressure" = "dbp", #
+                                 "Depressive Symptoms" = "dep", #
+                                 "Type 2 Diabetes" = "diab", #
+                                 "Educational Attainment" = "educ", #
+                                 "Oily Fish Intake" = "fish", #
+                                 "High-density lipoproteins" = "hdl", #
+                                 "Hearing Problems" = "hear", #
+                                 "Insomnia" = "insom", #
+                                 "Low-density lipoproteins" = "ldl", #
+                                 "Major Depressive Disorder" = "mdd", #
+                                 "Moderate-to-vigorous PA" = "mvpa",#
+                                 "Pulse Pressure" = "pp", #
+                                 "Systolic Blood Pressure" = "sbp", #
+                                 "Sleep duration" = "sleep", #
+                                 "Social Isolation" = "sociso", #
+                                 "Total Cholesterol" = "tc", #
+                                 "Triglycerides" = "trig"), #
+                  selected = 'alcc'),#
+      # Input: Dropdown for outcome ----#
+      selectInput("outcome", label = h3("Select Outcome"), #
+                  choices = list("Late-Onset Alzheimer's disease" = "load", #
+                                 "Alzheimer's Age of Onset" = "aaos", #
+                                 "CSF Ab42" = "ab42", #
+                                 "Hippocampul Sclerosis" = "hips", #
+                                 "Hippocampul Volume - 2017" = "hipv",#
+                                 "Hippocampul Volume - 2015" = "hipv2015", #
+                                 "Neurofibrillary tangles" = "nft4", #
+                                 "Neuritic Plaques" = "npany", #
+                                 "CSF Tau" = "tau", #
+                                 "CSF Ptau" = "ptau", #
+                                 "Vascular Brain Injury" = "vbiany"), #
+                  selected = 'load'), #
+      radioButtons("pt", label = h3("Pvalue Threshold"),#
+                   choices = list("5e-8" = 1, "5e-6" = 2), #
+                   selected = 1),#
+      checkboxInput("checkbox", label = "Best Model", value = FALSE) #
+      #checkboxInput("single_ex", label = "Single Exposure", value = FALSE)#
+    ),#
+    # Main panel for displaying outputs ----#
+    mainPanel(#
+      # Output: Tabset w/ plot, summary, and table ----#
+      tabsetPanel(type = "tabs",#
+                  tabPanel("Summary",#
+                           plotOutput(outputId = "mr_summaryPlot"), #
+                           htmlOutput("SummaryTabText"),#
+                           DT::dataTableOutput("SummaryTab"), #
+                           htmlOutput("SummaryTabPRESSOText"),#
+                           DT::dataTableOutput("SummaryPRESSOTab")),#
+                  tabPanel("Instruments", #
+                           htmlOutput("exposure_blurb"),#
+                           htmlOutput("tab1"),#
+                           DT::dataTableOutput("exposure_instruments"), #
+                           htmlOutput("outcome_blurb"),#
+                           htmlOutput("tab2"),#
+                           DT::dataTableOutput("outcome_instruments"), #
+                           htmlOutput("tab3"),#
+                           DT::dataTableOutput("proxy_tab")),#
+                  tabPanel("MR analysis", #
+                           htmlOutput("mr_scatterText"),#
+                           plotOutput(outputId = "mr_scatterPlot"), #
+                           htmlOutput("mr_tabText"),#
+                           DT::dataTableOutput("mr_res")), #
+                  tabPanel("Pleitropy", #
+                           htmlOutput("mr_QText"),#
+                           DT::dataTableOutput("mr_Q"), #
+                           htmlOutput("mr_FunnelText"),#
+                           plotOutput(outputId = "mr_FunnelPlot"),#
+                           htmlOutput("mr_RadialText"),#
+                           plotOutput(outputId = "mr_RadialPlot"),#
+                           htmlOutput("mr_EggerText"),#
+                           DT::dataTableOutput("mr_Egger"),#
+                           htmlOutput("mr_PressoGloablText"),#
+                           DT::dataTableOutput("mr_PressoGloabl")),#
+                  tabPanel("Outlier Removal", #
+                           htmlOutput("mr_PressoPlotText"),#
+                           plotOutput("mr_PressoPlot"),#
+                           htmlOutput("mr_PressoTabText"),#
+                           DT::dataTableOutput("mr_PressoRes"),#
+                           htmlOutput("mrpresso_QText"),#
+                           DT::dataTableOutput("mrpresso_Q"),#
+                           htmlOutput("mrpresso_EggerText"),#
+                           DT::dataTableOutput("mrpresso_Egger"))#
+      )#
+    )#
+  )#
+)#
+#
+# Define server logic required to draw a histogram ----#
+server <- function(input, output) {#
+  ## Exract exposure and outcome names/blurbs#
+  exposure.name <- reactive({as.character(traits[grep(paste0("\\b", input$exposure, "\\b"), traits$code), 'name'])})#
+  exposure.blurb <- reactive({as.character(traits[grep(paste0("\\b", input$exposure, "\\b"), traits$code), 'blurb'])})#
+  outcome.name <- reactive({as.character(traits[grep(paste0("\\b", input$outcome, "\\b"), traits$code), 'name'])})#
+  outcome.blurb <- reactive({as.character(traits[grep(paste0("\\b", input$outcome, "\\b"), traits$code), 'blurb'])})#
+  ## Extract exposure - outcome data#
+  mrdat <- reactive({#
+    input_exposure <- input$exposure#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    dat %>% #
+      filter(exposure == input_exposure) %>% #
+      filter(outcome == input_outcome) %>% #
+      filter(pt == input_pt)#
+   })#
+  ## Calculate mr results - main#
+  res <- reactive({#
+      mr(mrdat(), method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))#
+  })#
+  ## Calculate mr results - main#
+  res_single <- reactive({ #
+      mr_singlesnp(mrdat(),#
+                   single_method = 'mr_wald_ratio',#
+                   all_method=c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))#
+  })#
+  res_mrpresso <- reactive({#
+    if(nrow(mrdat()) - sum(mrdat()$mrpresso_keep, na.rm=TRUE) >= 1){#
+      mrdat() %>% filter(mrpresso_keep == T) %>%#
+        mr(., method_list = c("mr_ivw_fe", "mr_weighted_median", "mr_weighted_mode", "mr_egger_regression"))#
+    }else{#
+      data.frame(id.exposure = as.character(mrdat()[1,'id.exposure']),#
+                 id.outcome = as.character(mrdat()[1,'id.outcome']), #
+                 outcome = as.character(mrdat()[1,'outcome']), #
+                 exposure = as.character(mrdat()[1,'exposure']),#
+                 method = 'mrpresso', #
+                 nsnp = NA,#
+                 b = NA,#
+                 se = NA,#
+                 pval = NA)#
+    }    #
+  })#
+  output$exposure_blurb = renderText({#
+    HTML(paste0( tags$br(), h4(exposure.name()), exposure.blurb(), tags$br(), tags$br()))#
+   })#
+  output$outcome_blurb = renderText({#
+    HTML(paste0(tags$br(), h4(outcome.name()),outcome.blurb(), tags$br(), tags$br()))#
+   })#
+  ##=======================================###
+  mr_best <- reactive({#
+    mr_best <- MRsummary %>% #
+      filter(outcome %in% outcomes) %>% #
+      filter(exposure %in% exposures) %>%#
+      filter(method == 'IVW') %>% #
+      group_by(outcome, exposure) %>% #
+      filter(MR_PRESSO == ifelse(TRUE %in% MR_PRESSO, TRUE, FALSE)) %>% #
+      ungroup()#
+    qobj <- qvalue(p = mr_best$pval, fdr.level = 0.1)#
+    qvales.df <- tibble(pvalues = qobj$pvalues, lfdr = qobj$lfdr, qval = qobj$qvalues, significant = qobj$significant)#
+    mr_best <- mr_best %>% #
+      bind_cols(select(qvales.df, qval)) %>% #
+      group_by(outcome, exposure) %>% #
+      arrange(pval) %>% #
+      slice(1) %>% #
+      ungroup() %>%#
+      rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, #
+             v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW) %>%#
+      select(outcome, exposure, pt, MR_PRESSO, nsnp, n_outliers, b, se, pval, qval, #
+             v.MRPRESSO, v.Egger, v.Q.Egger, v.Q.IVW)#
+  })#
+  ##===============================================##  #
+  ## Summary#
+  ##===============================================## #
+  output$mr_summaryPlot <- renderPlot({#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    trans = ifelse(input_outcome %in% c('load', 'aaos', 'nft4', 'npany', 'hips', 'vbiany'), 'log2', 'identity')#
+    exponentiate = ifelse(input_outcome %in% c('load', 'aaos', 'nft4', 'npany', 'hips', 'vbiany'), TRUE, FALSE)#
+    if(input$checkbox == FALSE){#
+      res.load <- MRsummary %>% #
+        filter(outcome %in% outcomes) %>% #
+        filter(exposure %in% exposures) %>%#
+        filter(outcome == input_outcome) %>% #
+        filter(MR_PRESSO == F) %>%#
+        filter(method == 'IVW') %>% #
+        filter(pt == input_pt) %>% #
+        arrange(-b) %>%#
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%#
+        as.data.frame()#
+      forest_plot_1_to_many(res.load,b="b",se="se",#
+                            exponentiate=exponentiate,ao_slc=F, by = NULL,#
+                            TraitM="name", #
+                            col1_title="Risk factor",#
+                            trans=trans)#
+    } else {#
+      res.plot <- mr_best() %>% #
+        filter(outcome == input_outcome) %>% #
+        mutate(b = round(b, 2)) %>% #
+        mutate(se = round(se, 2)) %>% #
+        mutate(sig = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%#
+        mutate(sig = ifelse(qval < 0.05, paste0(sig, ' †'), sig)) %>% #
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% #
+        mutate(name = ifelse(MR_PRESSO == FALSE, name, paste0(name, '*'))) %>% #
+        arrange(-b) %>%#
+        as.data.frame()#
+      forest_plot_1_to_many(res.plot,b="b",se="se",#
+                            exponentiate=exponentiate,ao_slc=F, by = NULL,#
+                            TraitM="name", col1_title="Risk factor", col1_width = 1.1,#
+                            trans=trans, #
+                            addcols=c('pt', "nsnp", 'sig'), #
+                            addcol_widths=c(0.5,0.75,0.75), addcol_titles=c("Pt", "No. SNPs","P-value"))#
+    }#
+  })#
+  output$SummaryTabText = renderUI({#
+      HTML(paste0(tags$br(), "Causal associations of modifiable risk factors with ", outcome.name()))#
+  })#
+   output$SummaryTab <- DT::renderDataTable(DT::datatable({#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    #input_exposure <- ifelse(input$single_ex == FALSE, input$exposure, exposures)#
+    input_exposure <- exposures#
+    if(input$checkbox == FALSE){#
+      MRsummary %>% #
+        filter(outcome %in% outcomes) %>% #
+        filter(exposure %in% input_exposure) %>%#
+        filter(outcome == input_outcome) %>% #
+        filter(MR_PRESSO == FALSE) %>% #
+        filter(pt == input_pt) %>% #
+        mutate(b = round(b, 3)) %>% #
+        mutate(se = round(se, 3)) %>% #
+        mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%#
+        mutate(method = as.factor(method)) %>%#
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%#
+        select(-exposure, -pt, -outcome) %>% #
+        rename(v.MRPRESSO = violated.MRPRESSO, v.Egger = violated.Egger, #
+               v.Q.Egger = violated.Q.Egger, v.Q.IVW = violated.Q.IVW, exposure = name) %>% #
+        mutate(exposure = as.factor(exposure)) %>%#
+        select(exposure, method, nsnp, n_outliers, b, se, pval)#
+    } else {#
+      mr_best() %>% #
+        filter(outcome == input_outcome) %>% #
+        filter(exposure %in% input_exposure) %>% #
+        mutate(b = round(b, 3)) %>% #
+        mutate(se = round(se, 3)) %>% #
+        mutate(pt = ifelse(pt == 5e-6, '5e-6', '5e-8')) %>% #
+        mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%#
+        left_join(select(traits, code, name), by = c('exposure' = 'code')) %>% #
+        select(-exposure) %>%#
+        rename(exposure = name) %>% #
+        mutate(exposure = as.factor(exposure)) %>% #
+        select(exposure, pt, MR_PRESSO, nsnp, b, se, pval)#
+    }#
+  }, filter = 'top', rownames = FALSE#
+  ))#
+   output$SummaryTabPRESSOText = renderUI({#
+     if(input$checkbox == FALSE){#
+       HTML(paste0(tags$br(), "Causal associations of modifiable risk factors with ", outcome.name(), " after outlier removal"))#
+     }#
+   })#
+   output$SummaryPRESSOTab <- DT::renderDataTable(DT::datatable({#
+     input_outcome <- input$outcome#
+     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+     if(input$checkbox == FALSE){#
+     MRsummary %>% #
+       filter(outcome %in% outcomes) %>% #
+       filter(exposure %in% exposures) %>%#
+       filter(outcome == input_outcome) %>% #
+       filter(MR_PRESSO == TRUE) %>%#
+       filter(pt == input_pt) %>% #
+       mutate(b = round(b, 3)) %>% #
+       mutate(se = round(se, 3)) %>% #
+       mutate(pval = round(pval, 4)) %>% #
+       mutate(exposure = as.factor(exposure)) %>%#
+       mutate(method = as.factor(method)) %>%#
+       left_join(select(traits, code, name), by = c('exposure' = 'code')) %>%#
+       select(-exposure, -pt, -outcome) %>% #
+       rename(exposure = name) %>%#
+       select(exposure, method, nsnp, b, se, pval)#
+     }#
+#
+   }, filter = 'top', rownames = FALSE#
+   ))#
+  ##===============================================##  #
+  ## Instruments#
+  ##===============================================## #
+  output$tab1 = renderUI({#
+    HTML(paste0("Table 1: Independent SNPs associated with ", exposure.name()))#
+  })#
+  output$exposure_instruments <- DT::renderDataTable(DT::datatable({#
+    input_exposure <- input$exposure#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    ss %>% #
+      filter(exposure == input_exposure) %>% #
+      filter(is.na(outcome)) %>% #
+      filter(pt == input_pt) %>% #
+      rename(EA = Effect_allele, NEA = Non_Effect_allele) %>% #
+      select(-exposure, -outcome, -pt, -r2)#
+  }))#
+  output$tab2 = renderUI({#
+    HTML(paste0("Table 2: Independent SNPs associated with ", outcome.name()))#
+  })#
+  output$outcome_instruments <- DT::renderDataTable(DT::datatable({#
+    input_exposure <- input$exposure#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    ss %>% #
+      filter(exposure == input_exposure) %>% #
+      filter(outcome == input_outcome) %>% #
+      filter(pt == input_pt) %>% #
+      rename(EA = Effect_allele, NEA = Non_Effect_allele) %>% #
+      select(-exposure, -outcome, -pt, -r2)#
+  }))#
+  output$tab3 = renderUI({#
+    HTML(paste0(tags$br(), "Table 3: Proxy SNPs for ", outcome.name()))#
+  })#
+  output$proxy_tab <- DT::renderDataTable(DT::datatable({#
+    input_exposure <- input$exposure#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    px %>% #
+      filter(exposure == input_exposure) %>% #
+      filter(outcome == input_outcome) %>% #
+      filter(pt == input_pt) %>% #
+      rename(EA = Effect_allele, NEA = Non_Effect_allele, #
+             EA.proxy = Effect_allele.proxy, NEA.proxy = Non_Effect_allele.proxy) %>% #
+      select(-exposure, -outcome, -pt, -r2)#
+  }))#
+  ##===============================================##  #
+  ## MR analysis#
+  ##===============================================## #
+  output$mr_tabText = renderUI({#
+    HTML(paste0(tags$br(), "MR causaul estimates for ", exposure.name(), ' on ', outcome.name()))#
+  })#
+  output$mr_res <- DT::renderDataTable(DT::datatable({#
+    res() %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(b = round(b, 3)) %>% #
+      mutate(se = round(se, 3)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mr_scatterText = renderUI({#
+    HTML(paste0(tags$br(), "Scatterplot of SNP effects for the association of ", exposure.name(), ' on ', outcome.name()))#
+  })#
+  output$mr_scatterPlot <- renderPlot({#
+    scatter_plot <- mr_scatter_plot(res(), mrdat())#
+    scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + #
+        guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +#
+        labs(x = paste0('SNP effect on ', exposure.name()), #
+             y = paste0('SNP effect on ', outcome.name()))  #
+  })#
+  ##===============================================##  #
+  ## Pleitropy#
+  ##===============================================##  #
+  output$mr_QText = renderUI({#
+    HTML(paste0(tags$br(), "Cochrans Q heterogeneity test for ", exposure.name(), ' on ', outcome.name()))#
+  })#
+  output$mr_Q <- DT::renderDataTable(DT::datatable({#
+    mr_heterogeneity(mrdat(), method_list=c("mr_egger_regression", "mr_ivw")) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(Q = round(Q, 2)) %>% #
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mr_FunnelText = renderUI({#
+    HTML(paste0(tags$br(), "Funnel plot of the MR causal estimates against their precession"))#
+  })#
+  output$mr_FunnelPlot <- renderPlot({#
+    funnel_plot <- mr_funnel_plot(res_single())#
+    funnel_plot[[1]] + theme_bw() + scale_colour_discrete() + #
+      theme(legend.position = "bottom", text = element_text(family="Times", size=12))#
+  })#
+  output$mr_RadialText = renderUI({#
+    HTML(paste0(tags$br(), "Radial Plot showing influential data points using Radial IVW"))#
+  })#
+  output$mr_RadialPlot <- renderPlot({#
+    radial.dat <- mrdat() %>% filter(mr_keep == TRUE) %>%  #
+      with(., format_radial(beta.exposure, beta.outcome, se.exposure, se.outcome, SNP))#
+    radial.ivw <- ivw_radial(radial.dat, alpha = 0.05/nrow(radial.dat), weights = 1)#
+    plot_radial(radial.ivw, radial_scale = F)#
+  })#
+  output$mr_EggerText = renderUI({#
+    HTML(paste0(tags$br(), "MR Egger test for directional pleitropy"))#
+  })#
+  output$mr_Egger <- DT::renderDataTable(DT::datatable({#
+    mr_pleiotropy_test(mrdat()) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(egger_intercept = round(egger_intercept, 4)) %>% #
+      mutate(se = round(se, 4)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mr_PressoGloablText = renderUI({#
+    HTML(paste0(tags$br(), "MR-PRESSO Global Test for pleitropy"))#
+  })#
+  output$mr_PressoGloabl <- DT::renderDataTable(DT::datatable({#
+    input_exposure <- input$exposure#
+    input_outcome <- input$outcome#
+    input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)#
+    mrpresso %>%   #
+      filter(exposure == input_exposure) %>% #
+      filter(outcome == input_outcome) %>% #
+      filter(pt == input_pt) %>% #
+      mutate(RSSobs = round(RSSobs, 4)) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome, -pt, -violated) #
+#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  ##===============================================##  #
+  ## Outlier Removal#
+  ##===============================================##  #
+  output$mr_PressoPlotText = renderUI({#
+    HTML(paste0(tags$br(), "MR causaul estimates for ", exposure.name(), ' on ', outcome.name(), " after outlier removal"))#
+  })#
+  output$mr_PressoPlot <- renderPlot({#
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()#
+    if(nrow(mrdat()) - sum(mrdat()$mrpresso_keep, na.rm=TRUE) >= 1){#
+      scatter_plot <- mr_scatter_plot(res_mrpresso(), mrdat_mrpresso)#
+      scatter_plot[[1]] + theme_bw() + theme(legend.position = "bottom", text = element_text(family="Times", size=12)) + #
+        guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +#
+        labs(x = paste0('SNP effect on ', exposure.name()), #
+             y = paste0('SNP effect on ', outcome.name()))  #
+    }else{#
+      scatter_plot <- mr_scatter_plot(res_mrpresso(), mrdat_mrpresso)#
+      scatter_plot[[1]] + theme_bw() + #
+        theme(legend.position = "none", text = element_text(family="Times", size=12)) + geom_point(alpha = 0.5) + #
+        guides(col = guide_legend(nrow = 1)) + scale_colour_discrete() +#
+        labs(x = paste0('SNP effect on ', exposure.name()), #
+             y = paste0('SNP effect on ', outcome.name()))  +#
+        annotation_custom(grid::grid.text("No Outliers Detected", gp=grid::gpar(col="firebrick", fontsize=36, fontface="bold")), #
+                          xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)#
+    }#
+  })#
+  output$mr_PressoTabText = renderUI({#
+    HTML(paste0(tags$br(), "MR causaul estimates for ", exposure.name(), ' on ', outcome.name(), " after outlier removal"))#
+  })#
+  output$mr_PressoRes <- DT::renderDataTable(DT::datatable({#
+    res_mrpresso() %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(b = round(b, 3)) %>% #
+      mutate(se = round(se, 3)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mrpresso_QText = renderUI({#
+    HTML(paste0(tags$br(), "Cochrans Q heterogeneity test for ", exposure.name(), ' on ', outcome.name(), ' after outlier removal'))#
+  })#
+  output$mrpresso_Q <- DT::renderDataTable(DT::datatable({#
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()#
+    mr_heterogeneity(mrdat_mrpresso, method_list=c("mr_egger_regression", "mr_ivw")) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(Q = round(Q, 2)) %>% #
+      mutate(Q_pval = ifelse(Q_pval > 0.0001, round(Q_pval, 4), format(Q_pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+  output$mrpresso_EggerText = renderUI({#
+    HTML(paste0(tags$br(), "MR Egger test for directional pleitropy after outlier removal"))#
+  })#
+  output$mrpresso_Egger <- DT::renderDataTable(DT::datatable({#
+    mrdat_mrpresso <- mrdat() %>% filter(mrpresso_keep == T) %>% as.data.frame()#
+    mr_pleiotropy_test(mrdat_mrpresso) %>% #
+      select(-id.exposure, -id.outcome, -exposure, -outcome) %>% #
+      mutate(egger_intercept = round(egger_intercept, 4)) %>% #
+      mutate(se = round(se, 4)) %>% #
+      mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE)))#
+  }, options = list(paging = FALSE, searching = FALSE)))#
+}#
+#
+shinyApp(ui, server)
+bind_rows()
+library(tidyverse)
+summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/LDSC/', recursive = T, pattern = '.tsv', #
+           full.names = T) %>% #
+  map(., read_tsv) %>% #
+  bind_rows()
+dat <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/LDSC/', recursive = T, pattern = '.tsv', #
+           full.names = T) %>% #
+  map(., read_tsv) %>% #
+  bind_rows()
+dat
 library(shiny)
 setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
 runApp()

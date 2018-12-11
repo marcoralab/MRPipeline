@@ -27,7 +27,66 @@ summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
   bind_rows() %>%
   filter(p1 %in% traits) %>% 
   filter(p2 %in% traits) %>% 
-  mutate(rg = round(rg, 2))
+  mutate(rg = round(rg, 2)) %>% 
+  mutate(p1 = fct_recode(p1, 
+                               "Alcohol Consumption" = "alcc", 
+                               "Alcohol Dependence" = "alcd", 
+                               "AUDIT" = "audit", 'BMI' = "bmi", 
+                               "Cigarettes per Day" = "cpd", 
+                               "Ever Smoker" = "evrsmk", 
+                               "Diastolic Blood Pressure" = "dbp", 
+                               "Depressive Symptoms" = "dep", 
+                               "Type 2 Diabetes" = "diab", 
+                               "Educational Attainment" = "educ", 
+                               "Educational Attainment" = "educall", 
+                               "Oily Fish Intake" = "oilfish",
+                               "High-density lipoproteins" = "hdl", 
+                               "Hearing Problems" = "hear", 
+                               "Insomnia" = "insom", 
+                               "Low-density lipoproteins" = "ldl", 
+                               "Major Depressive Disorder" = "mdd", 
+                               "Moderate-to-vigorous PA" = "mvpa",
+                               "Pulse Pressure" = "pp", 
+                               "Systolic Blood Pressure" = "sbp", 
+                               "Social Isolation" = "sociso", 
+                               "Total Cholesterol" = "tc", 
+                               "Triglycerides" = "trig", 
+                               "LOAD" = "load", 
+                               "AAOS" = "aaos", 
+                               "CSF Ab42" = "ab42", 
+                               "Hipp. Vol." = "hipv",
+                               "CSF Tau" = "tau", 
+                               "CSF Ptau" = "ptau")) %>% 
+  mutate(p2 = fct_recode(p2, 
+                               "Alcohol Consumption" = "alcc", 
+                               "Alcohol Dependence" = "alcd", 
+                               "AUDIT" = "audit", 'BMI' = "bmi", 
+                               "Cigarettes per Day" = "cpd", 
+                               "Ever Smoker" = "evrsmk", 
+                               "Diastolic Blood Pressure" = "dbp", 
+                               "Depressive Symptoms" = "dep", 
+                               "Type 2 Diabetes" = "diab", 
+                               "Educational Attainment" = "educ", 
+                         "Educational Attainment" = "educall", 
+                               "Oily Fish Intake" = "oilfish",
+                               "High-density lipoproteins" = "hdl", 
+                               "Hearing Problems" = "hear", 
+                               "Insomnia" = "insom", 
+                               "Low-density lipoproteins" = "ldl", 
+                               "Major Depressive Disorder" = "mdd", 
+                               "Moderate-to-vigorous PA" = "mvpa",
+                               "Pulse Pressure" = "pp", 
+                               "Systolic Blood Pressure" = "sbp", 
+                               "Social Isolation" = "sociso", 
+                               "Total Cholesterol" = "tc", 
+                               "Triglycerides" = "trig", 
+                               "LOAD" = "load", 
+                               "AAOS" = "aaos", 
+                               "CSF Ab42" = "ab42", 
+                               "Hipp. Vol." = "hipv",
+                               "CSF Tau" = "tau", 
+                               "CSF Ptau" = "ptau"))
+
 
 ## convert to matrix
 sum_mat <- summary_stats %>% 
@@ -94,11 +153,15 @@ ggheatmap +
   guides(fill = guide_colorbar(barwidth = 7, barheight = 1, title.position = "top", title.hjust = 0.5))
 
 
-ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", method = "circle")
+ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", method = "circle", insig = 'blank', p.mat = pmat)
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ldsc_circ.png', width = 20, height = 20, units = 'cm')
 ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", lab = TRUE)
-ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", insig = 'blank', p.mat = pmat)
-
-
+ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", insig = 'blank', p.mat = pmat) + 
+  theme(text = element_text(size=10))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ldsc_sig.png', width = 20, height = 20, units = 'cm')
+ggcorrplot(sum_mat, hc.order = TRUE, type = "lower",  outline.col = "white", insig = 'pch') + 
+  theme(text = element_text(size=10))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ldsc_all.png', width = 20, height = 20, units = 'cm')
 
 
 
