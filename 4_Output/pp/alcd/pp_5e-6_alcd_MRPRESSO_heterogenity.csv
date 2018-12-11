@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+qGBKAG,jyulsa,alcd,pp,MR Egger,2483.1452284301154,2390,0.09016453257283023,2018-12-11
+qGBKAG,jyulsa,alcd,pp,Inverse variance weighted,2483.234272954041,2391,0.09231626212489032,2018-12-11
