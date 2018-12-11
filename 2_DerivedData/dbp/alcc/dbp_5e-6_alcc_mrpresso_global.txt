@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+H7pFY8	C61rNE	alcc	dbp	5	4264.438091270715	<1e-05

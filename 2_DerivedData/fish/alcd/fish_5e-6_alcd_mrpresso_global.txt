@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2c6xfE	ylPoRJ	alcd	fish	0	389.5092398698266	0.27724

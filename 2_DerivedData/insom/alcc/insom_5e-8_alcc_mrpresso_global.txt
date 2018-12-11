@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+D4Z6bl	lfZSRL	alcc	insom	3	57.713057747446236	<0.001

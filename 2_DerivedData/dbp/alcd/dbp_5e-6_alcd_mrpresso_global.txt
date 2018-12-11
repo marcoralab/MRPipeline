@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+eEx9tp	PvjanE	alcd	dbp	0	3522.7956465562584	7.8e-4

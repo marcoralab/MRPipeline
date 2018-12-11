@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+w2qKdI,FtmTVW,alcc,ces,MR Egger,43.0275581647365,41,0.38448341241971595,2018-12-08
+w2qKdI,FtmTVW,alcc,ces,Inverse variance weighted,44.5099157256519,42,0.3665334758110196,2018-12-08

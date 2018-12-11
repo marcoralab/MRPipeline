@@ -1,0 +1,14 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs11065822,T,G,T,G,0.0636,-4.616e-4,0.3624,0.3503,FALSE,FALSE,FALSE,Oub1N3,0.003133,0.8829,alcc,TRUE,reported,0.0112,1.345e-8,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs11066188,A,G,A,G,0.0764,0.00237,0.4171,0.4046,FALSE,FALSE,FALSE,Oub1N3,0.002997,0.4291,alcc,TRUE,reported,0.0102,8.112e-14,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs11066309,A,G,A,G,0.0716,0.002704,0.4191,0.4047,FALSE,FALSE,FALSE,Oub1N3,0.002995,0.3667,alcc,TRUE,reported,0.0102,2.468e-12,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs11242678,T,C,T,C,0.0723,0.00242,0.255,0.2528,FALSE,FALSE,FALSE,Oub1N3,0.002974,0.4159,alcc,TRUE,reported,0.0114,2.703e-10,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs2066864,A,G,A,G,0.0634,-0.001598,0.2452,0.2401,FALSE,FALSE,FALSE,Oub1N3,0.002982,0.5921,alcc,TRUE,reported,0.0115,3.514e-8,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs2107595,A,G,A,G,0.0882,-0.002906,0.1673,0.1499,FALSE,FALSE,FALSE,Oub1N3,0.002987,0.3306,alcc,TRUE,reported,0.0132,2.328e-11,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs2634074,A,T,A,T,-0.0941,-0.003176,0.7877,0.8107,FALSE,TRUE,FALSE,Oub1N3,0.002998,0.2894,alcc,TRUE,reported,0.0121,5.905e-15,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs2758612,T,C,T,C,0.0653,0.001265,0.6453,0.6405000000000001,FALSE,FALSE,FALSE,Oub1N3,0.003021,0.6754,alcc,TRUE,reported,0.0111,3.677e-9,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs34311906,T,C,T,C,-0.0649,-0.002582,0.5976,0.6,FALSE,FALSE,FALSE,Oub1N3,0.00318,0.4167,alcc,TRUE,reported,0.0113,1.0660000000000001e-08,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs473238,T,C,T,C,0.0831,-0.00284,0.1326,0.1256,FALSE,FALSE,FALSE,Oub1N3,0.002975,0.3399,alcc,TRUE,reported,0.0147,1.651e-8,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs4766897,T,C,T,C,0.0826,0.001082,0.3389,0.34,FALSE,FALSE,FALSE,Oub1N3,0.002976,0.7163,alcc,TRUE,reported,0.0117,1.607e-12,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs4942561,T,G,T,G,0.0655,-0.005188,0.759,0.754,FALSE,FALSE,FALSE,Oub1N3,0.002983,0.08203,alcc,TRUE,reported,0.0116,1.771e-8,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE
+rs635634,T,C,T,C,0.0772,0.002676,0.1921,0.1862,FALSE,FALSE,FALSE,Oub1N3,0.00298,0.3692,alcc,TRUE,reported,0.0134,9.179e-9,ais,TRUE,reported,yd3bto,2,TRUE,NA,NA,NA,TRUE

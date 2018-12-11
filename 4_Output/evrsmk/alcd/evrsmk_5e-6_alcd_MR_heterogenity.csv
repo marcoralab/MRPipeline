@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+5Bbxwc,bzEUO2,alcd,evrsmk,MR Egger,5.29803226737051,6,0.5061951006934048,2018-12-07
+5Bbxwc,bzEUO2,alcd,evrsmk,Inverse variance weighted,5.298894251007188,7,0.6235383986990547,2018-12-07

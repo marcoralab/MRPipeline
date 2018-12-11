@@ -1,0 +1,11 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs11066283,A,G,A,G,-0.0692,-0.002698,0.5885,0.5943,FALSE,FALSE,FALSE,emdqdy,0.003004,0.3691,alcc,TRUE,reported,0.0104,2.36e-11,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs11242678,T,C,T,C,0.0643,0.00242,0.2551,0.2528,FALSE,FALSE,FALSE,emdqdy,0.002974,0.4159,alcc,TRUE,reported,0.0105,8.708e-10,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs11587860,C,G,C,G,-0.0689,8.239e-4,0.3545,0.3538,FALSE,TRUE,FALSE,emdqdy,0.003045,0.7867,alcc,TRUE,reported,0.0098,2.542e-12,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs1537375,T,C,T,C,-0.0519,0.001738,0.4979,0.4989,FALSE,FALSE,FALSE,emdqdy,0.002988,0.5609,alcc,TRUE,reported,0.0091,1.241e-8,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs17696736,A,G,A,G,-0.0556,-0.002624,0.5693,0.5731999999999999,FALSE,FALSE,FALSE,emdqdy,0.002977,0.378,alcc,TRUE,reported,0.0094,3.341e-9,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs2107595,A,G,A,G,0.0803,-0.002906,0.1671,0.1499,FALSE,FALSE,FALSE,emdqdy,0.002987,0.3306,alcc,TRUE,reported,0.0121,3.586e-11,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs2634074,A,T,A,T,-0.084,-0.003176,0.7885,0.8107,FALSE,TRUE,FALSE,emdqdy,0.002998,0.2894,alcc,TRUE,reported,0.0112,6.558e-14,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs475937,A,C,A,C,0.0757,-0.002084,0.1318,0.1207,FALSE,FALSE,FALSE,emdqdy,0.003,0.4873,alcc,TRUE,reported,0.0137,2.916e-8,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs4766897,T,C,T,C,0.0714,0.001082,0.3382,0.34,FALSE,FALSE,FALSE,emdqdy,0.002976,0.7163,alcc,TRUE,reported,0.0109,6.133e-11,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE
+rs4942561,T,G,T,G,0.064,-0.005188,0.7581,0.754,FALSE,FALSE,FALSE,emdqdy,0.002983,0.08203,alcc,TRUE,reported,0.0107,2.048e-9,as,TRUE,reported,n6QKtt,2,TRUE,NA,NA,NA,TRUE

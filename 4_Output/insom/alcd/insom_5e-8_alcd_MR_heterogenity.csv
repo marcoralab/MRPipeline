@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+82UaNU,H0krYC,alcd,insom,MR Egger,18.95080659591827,13,0.1246368224036027,2018-12-08
+82UaNU,H0krYC,alcd,insom,Inverse variance weighted,18.986994896481935,14,0.165446769966932,2018-12-08

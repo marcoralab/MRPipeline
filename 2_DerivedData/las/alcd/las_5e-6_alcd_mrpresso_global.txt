@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+OuxvEF	M3Deu5	alcd	las	0	41.583698741079694	0.5382

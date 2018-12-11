@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+tBOs4U,HKMzVO,alcc,smkukbb,MR Egger,1118.8594360798338,736,2.4933900280822133e-18,2018-12-08
+tBOs4U,HKMzVO,alcc,smkukbb,Inverse variance weighted,1156.388135011827,737,3.800377649916648e-21,2018-12-08

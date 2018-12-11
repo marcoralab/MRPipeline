@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+wpUBsv	cynAhn	alcc	as	1	92.82409798539847	0.0198

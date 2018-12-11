@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+zIyUZC	7g0PAT	alcc	hdl	3	562.3760984436125	<4e-05

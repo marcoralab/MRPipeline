@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fC1Rlh	L7h5ue	audit	cpd	0	34.398771120145334	0.082

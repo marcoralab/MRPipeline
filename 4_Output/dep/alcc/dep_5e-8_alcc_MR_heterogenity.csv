@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+qif8Cb,PoA64W,alcc,dep,MR Egger,31.435601006577805,29,0.3451835841146499,2018-12-08
+qif8Cb,PoA64W,alcc,dep,Inverse variance weighted,31.4869995693751,30,0.39175793547228355,2018-12-08

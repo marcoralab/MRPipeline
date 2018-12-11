@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+kfJSXZ,lzzci4,alcc,sociso,MR Egger,38.24258840759632,20,0.00827018820066095,2018-12-08
+kfJSXZ,lzzci4,alcc,sociso,Inverse variance weighted,38.98353904477314,21,0.009859850323019038,2018-12-08

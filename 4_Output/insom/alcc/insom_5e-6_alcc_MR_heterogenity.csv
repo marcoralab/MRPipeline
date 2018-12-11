@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ui4Lzi,pOmWCc,alcc,insom,MR Egger,204.0103501736412,120,2.685899194211606e-6,2018-12-08
+ui4Lzi,pOmWCc,alcc,insom,Inverse variance weighted,205.00257439673075,121,2.8654308413331614e-6,2018-12-08

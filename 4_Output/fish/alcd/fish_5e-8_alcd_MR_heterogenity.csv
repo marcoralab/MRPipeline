@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+TEto7S,5lWxTP,alcd,fish,MR Egger,109.78553272729458,128,0.8759924356685767,2018-12-08
+TEto7S,5lWxTP,alcd,fish,Inverse variance weighted,110.16019507568765,129,0.8836408825980044,2018-12-08
