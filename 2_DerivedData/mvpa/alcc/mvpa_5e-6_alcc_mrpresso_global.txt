@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Hs9MsD	EV2Lex	alcc	mvpa	0	196.87885142099685	0.0457

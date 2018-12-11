@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kWoSyK	Mf8KU5	alcd	mdd	0	210.11884187745213	0.1559

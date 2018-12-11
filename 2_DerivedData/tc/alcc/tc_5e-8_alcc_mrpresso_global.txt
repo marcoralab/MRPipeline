@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+BPOp2d	acsfjw	alcc	tc	3	504.1330425936644	<1e-04

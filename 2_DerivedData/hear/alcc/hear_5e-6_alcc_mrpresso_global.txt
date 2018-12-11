@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MhfIp4	88Zsrw	alcc	hear	0	200.7994779386542	0.0022

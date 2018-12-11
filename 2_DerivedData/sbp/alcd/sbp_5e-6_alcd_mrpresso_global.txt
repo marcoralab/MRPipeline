@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+atvquZ	OgcS08	alcd	sbp	1	3119.17486083084	0.04199

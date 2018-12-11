@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+36X5IR	FCxsuL	audit	ces	0	10.952039086532011	0.161

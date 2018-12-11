@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Z2zt4G	j8h77M	alcd	dbp	0	1745.7374489940387	0.07809333333333333

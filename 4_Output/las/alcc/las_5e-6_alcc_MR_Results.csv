@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+CFQpka,SyKmpg,alcc,las,Inverse variance weighted (fixed effects),43,-7.851522823317886e-4,9.085700115058308e-4,0.3874985386780314,2018-12-08
+CFQpka,SyKmpg,alcc,las,Weighted median,43,-8.235832642142483e-4,0.0013725379129068643,0.548476851524961,2018-12-08
+CFQpka,SyKmpg,alcc,las,Weighted mode,43,-7.046068631800309e-4,0.001759316442998255,0.690818044031459,2018-12-08
+CFQpka,SyKmpg,alcc,las,MR Egger,43,-9.985233478882246e-4,0.0020921425707012757,0.6357021072737251,2018-12-08

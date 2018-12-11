@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+bizdCV,vP4PvD,alcd,smkukbb,MR Egger,238.77889526996643,208,0.0704073739794418,2018-12-08
+bizdCV,vP4PvD,alcd,smkukbb,Inverse variance weighted,240.21405703342904,209,0.0682495818100094,2018-12-08

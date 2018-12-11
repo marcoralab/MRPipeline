@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+SAaNkF	IXW64F	alcd	diab	0	529.5612222261294	0.00224

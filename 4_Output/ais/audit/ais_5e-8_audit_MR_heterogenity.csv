@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+99f7hZ,Mx6pY3,audit,ais,MR Egger,12.987152605005686,12,0.36997518088982545,2018-12-08
+99f7hZ,Mx6pY3,audit,ais,Inverse variance weighted,16.840127529677286,13,0.20671598799514906,2018-12-08

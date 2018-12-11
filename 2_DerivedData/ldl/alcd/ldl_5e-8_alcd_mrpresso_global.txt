@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+puOr8e	31TKDW	alcd	ldl	0	227.09833798841618	0.2602

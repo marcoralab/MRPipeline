@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+jvpAec,352jNS,alcd,svs,MR Egger,40.428399027397724,35,0.2429554047718447,2018-12-08
+jvpAec,352jNS,alcd,svs,Inverse variance weighted,40.45951544572909,36,0.2798809440698235,2018-12-08

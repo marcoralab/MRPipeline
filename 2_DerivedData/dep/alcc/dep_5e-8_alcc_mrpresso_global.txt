@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qif8Cb	PoA64W	alcc	dep	0	32.92732340405235	0.4682

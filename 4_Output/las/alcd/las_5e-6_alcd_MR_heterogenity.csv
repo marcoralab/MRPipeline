@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+OuxvEF,M3Deu5,alcd,las,MR Egger,39.22285692890254,40,0.5050714181732573,2018-12-08
+OuxvEF,M3Deu5,alcd,las,Inverse variance weighted,39.7808943308744,41,0.5247572548757639,2018-12-08

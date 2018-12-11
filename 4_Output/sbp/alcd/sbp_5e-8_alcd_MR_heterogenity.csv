@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+VvHF6R,kd6NVO,alcd,sbp,MR Egger,1595.305253234369,1487,0.025475912329674572,2018-12-08
+VvHF6R,kd6NVO,alcd,sbp,Inverse variance weighted,1598.11959392336,1488,0.023684440874802794,2018-12-08

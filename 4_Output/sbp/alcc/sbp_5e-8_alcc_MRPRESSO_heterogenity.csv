@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+yYIMpn,ddvZD3,alcc,sbp,MR Egger,2045.604899702045,1465,4.891040255996999e-22,2018-12-08
+yYIMpn,ddvZD3,alcc,sbp,Inverse variance weighted,2045.604976573597,1466,5.790205941828944e-22,2018-12-08

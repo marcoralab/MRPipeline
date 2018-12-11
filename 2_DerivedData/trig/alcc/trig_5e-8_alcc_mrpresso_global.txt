@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+h7udma	oSRduZ	alcc	trig	4	409.19685203968254	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+VUua4q	FCNEY7	alcd	tc	0	439.3046377515211	0.152

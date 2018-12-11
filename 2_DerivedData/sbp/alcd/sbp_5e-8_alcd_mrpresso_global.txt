@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+VvHF6R	kd6NVO	alcd	sbp	1	1642.6275834312626	0.020906666666666667

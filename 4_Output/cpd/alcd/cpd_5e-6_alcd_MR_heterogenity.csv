@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+AFGEE7,dwdXHv,alcd,cpd,MR Egger,75.03793682645433,49,0.009761417770740856,2018-12-08
+AFGEE7,dwdXHv,alcd,cpd,Inverse variance weighted,79.03594533357425,50,0.005506659795313455,2018-12-08

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+mbWVvr,DXGcNG,audit,load,MR Egger,132.38207101606415,83,4.656855224955278e-4,2018-12-08
+mbWVvr,DXGcNG,audit,load,Inverse variance weighted,134.58115777809167,84,3.8405028068767697e-4,2018-12-08

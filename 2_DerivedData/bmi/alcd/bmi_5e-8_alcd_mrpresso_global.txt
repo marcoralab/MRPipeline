@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6SgVKp	4K36il	alcd	bmi	0	1810.1548967788542	0.00384

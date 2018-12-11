@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0tZxSe	aG3pyC	alcc	educ	3	2042.4888293379279	<2e-05

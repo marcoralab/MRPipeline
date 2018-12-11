@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+phzOPm	uh4chd	alcc	sbp	3	3819.036561563078	<1e-05
