@@ -13,7 +13,7 @@ Pthreshold: ['5e-8', '5e-6']
 ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
-OutcomeCode: ['alcc', 'alcd', 'audit']
+OutcomeCode: ['alcd']
 
 missing : [
 {"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
