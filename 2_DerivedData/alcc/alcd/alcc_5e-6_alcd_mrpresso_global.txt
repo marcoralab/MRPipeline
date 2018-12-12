@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fnAS5z	I04x5T	alcd	alcc	8	197.0372865581759	<2e-04

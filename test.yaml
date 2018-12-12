@@ -10,9 +10,10 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
-ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
-'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
-'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
+#ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
+#'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
+#'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
+ExposureCode: ['alcc']
 OutcomeCode: ['alcd']
 
 missing : [
