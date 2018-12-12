@@ -11,12 +11,10 @@ Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
 ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
-'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
+'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
 OutcomeCode: ['alcd']
 
 missing : [
-{"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
-{"ExposureCode" : "alcd", "OutcomeCode" : "alp", "Pthreshold" : "5e-8"},
-{"ExposureCode" : "alcd", "OutcomeCode" : "alt", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "sleep", "OutcomeCode" : "alcd", "Pthreshold" : "5e-8"},
  ]
