@@ -84,7 +84,7 @@ write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/0_Summary/res_out.csv')
 ```
 
 ```{r}
-res_comb %>% filter(significant == T) %>% 
+res_comb %>% filter(significant == T)
   
 
 ```

@@ -24,7 +24,7 @@ summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData'
   }) %>% 
   bind_rows() %>% 
   select(-P_GC_MA_adj, -Zscore)
-write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_summary_stats.txt.gz'))
+#write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_summary_stats.txt.gz'))
 
 ## ===============================================## 
 ## Proxy SNPs for Exposure associated SNPs in Outcome
@@ -52,7 +52,7 @@ MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData'
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows() %>% select(-P_GC_MA_adj, -Zscore)
-write_tsv(MatchedProxys, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_MatchedProxys.txt.gz'))
+#write_tsv(MatchedProxys, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_MatchedProxys.txt.gz'))
 
 ## ===============================================## 
 ## harmonized MR datasets with MR presso Results
@@ -74,7 +74,7 @@ mrpresso_MRdat <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows()
-write_tsv(mrpresso_MRdat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_mrpresso_MRdat.txt.gz'))
+#write_tsv(mrpresso_MRdat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_mrpresso_MRdat.txt.gz'))
 
 ## ===============================================## 
 ## MR-PRESSO Global results  
@@ -95,7 +95,7 @@ mrpresso_global <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedDat
   bind_rows() %>% 
   mutate(violated = pval < 0.05)
 
-write_tsv(mrpresso_global, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt.gz'))
+#write_tsv(mrpresso_global, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt.gz'))
 
 ## ===============================================## 
 ## MR results - w/ outliers
@@ -115,7 +115,7 @@ MRdat_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', rec
   }) %>% 
   bind_rows()
 
-write_tsv(MRdat_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRdat_results.txt')
+#write_tsv(MRdat_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRdat_results.txt')
 
 ## ===============================================## 
 ## MR results - w/o outliers
@@ -138,7 +138,7 @@ MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', 
   filter(!is.na(b)) %>% 
   mutate(nsnp = as.numeric(nsnp), b = as.numeric(b), se = as.numeric(se), pval = as.numeric(pval))
 
-write_tsv(MRPRESSO_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRPRESSO_results.txt')
+#write_tsv(MRPRESSO_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRPRESSO_results.txt')
 
 ## ===============================================## 
 ## Heterogenity
@@ -235,7 +235,7 @@ MRsummary <- MRdat_results  %>%
          violated.MRPRESSO, violated.Egger, violated.Q.Egger, violated.Q.IVW) %>% 
   arrange(outcome, exposure, pt, method, MR_PRESSO)
   
-write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
+#write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
 
 
 
