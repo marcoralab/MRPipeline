@@ -13,8 +13,8 @@ Pthreshold: ['5e-8', '5e-6']
 #ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
 #'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
 #'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
-ExposureCode: ['alcc']
-OutcomeCode: ['alcd']
+ExposureCode: ['mvpa', 'cpd']
+OutcomeCode: ['load']
 
 missing : [
 {"ExposureCode" : "sleep", "OutcomeCode" : "alcd", "Pthreshold" : "5e-8"},
