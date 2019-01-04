@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Vcul0u	vLab3P	ptau	hdl	3	337.1571245108275	0.50128

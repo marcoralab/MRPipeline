@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+PPJKL5	EIWe3A	ab42	bmi	2	3343.493918759347	9e-5

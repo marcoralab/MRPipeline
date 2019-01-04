@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+FXfEsE	LIZ7ny	tau	hdl	2	210.96456055307044	0.4241

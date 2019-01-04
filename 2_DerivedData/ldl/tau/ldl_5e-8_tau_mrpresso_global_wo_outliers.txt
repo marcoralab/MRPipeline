@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+0tgtnb	WHh1Q7	tau	ldl	2	208.52478073053996	0.0442

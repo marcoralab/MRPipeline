@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+p1V9dh	vl8KbD	npany	ldl	3	342.75717630529147	0.18456

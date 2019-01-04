@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+R7Ox4e	laicau	nft4	mvpa	1	162.03584922296565	0.2289

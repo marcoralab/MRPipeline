@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+eQx243	Tintbu	tau	evrsmk	0	NA	NA

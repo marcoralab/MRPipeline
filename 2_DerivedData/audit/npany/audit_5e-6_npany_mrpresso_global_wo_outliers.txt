@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Uk6EnR	MAmnvm	npany	audit	0	NA	NA

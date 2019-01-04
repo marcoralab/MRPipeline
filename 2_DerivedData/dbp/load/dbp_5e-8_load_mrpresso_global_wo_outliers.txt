@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+KeHv6f	1S910F	load	dbp	3	1984.0112352952929	<1.33333333333333e-05

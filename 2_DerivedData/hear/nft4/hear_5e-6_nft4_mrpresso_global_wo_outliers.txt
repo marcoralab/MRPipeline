@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+rAsk9U	Gr8oip	nft4	hear	0	NA	NA
