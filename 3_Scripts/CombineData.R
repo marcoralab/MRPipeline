@@ -93,9 +93,42 @@ mrpresso_global <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedDat
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows() %>% 
-  mutate(violated = pval < 0.05)
+  mutate(violated = pval < 0.05) %>% 
+  mutate(outliers_removed = FALSE)
 
 #write_tsv(mrpresso_global, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt.gz'))
+
+## ===============================================## 
+## MR-PRESSO Global results w/o outliers
+mrpresso_global_wo_outliers <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, 
+                              pattern = '_mrpresso_global_wo_outliers.txt', 
+                              full.names = T) %>% 
+  map(., function(x){
+    dat.model <- tibble(file = x) %>% 
+      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
+      mutate(file = ifelse(is.na(file), outcome, file)) %>% 
+      mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
+      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
+      select(-X1, -X2, -X3)
+    datin <- read_tsv(x, col_types = list(pval = col_character(), 
+                                          RSSobs = col_character())) %>% 
+      mutate(pt = dat.model$pt)
+  }) %>% 
+  bind_rows() %>% 
+  mutate(RSSobs = as.numeric(RSSobs)) %>% 
+  mutate(violated = pval < 0.05) %>% 
+  mutate(outliers_removed = TRUE)
+
+#write_tsv(mrpresso_global_wo_outliers, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global_wo_outliers.txt.gz'))
+
+## ===============================================## 
+## Combine MR-PRESSO Global results w/o outliers
+
+mrpresso_global_comb <- mrpresso_global_wo_outliers %>% 
+  rename(n_outliers = n.outlier) %>% 
+  bind_rows(mrpresso_global)
+
 
 ## ===============================================## 
 ## MR results - w/ outliers
@@ -220,8 +253,8 @@ MRsummary <- MRdat_results  %>%
   left_join(select(het, outcome, exposure, pt, violated.Egger, violated.IVW),  
             by = c('outcome', 'exposure', 'pt')) %>% 
   rename(violated.Q.Egger = violated.Egger, violated.Q.IVW = violated.IVW) %>% 
-  left_join(select(mrpresso_global, outcome, exposure, pt, n_outliers, violated), 
-            by = c('outcome', 'exposure', 'pt')) %>% 
+  left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, violated, outliers_removed), 
+            by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
   rename(violated.MRPRESSO = violated) %>% 
   left_join(select(egger, outcome, exposure, pt, violated), 
             by = c('outcome', 'exposure', 'pt')) %>% 
@@ -238,11 +271,16 @@ MRsummary <- MRdat_results  %>%
 #write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
 
 
+MRsummary %>% left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, violated, outliers_removed), 
+          by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
+  filter(exposure == 'sbp') %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(method == 'IVW') %>%
+  print(n = Inf)
 
 
-
-
-
+mrpresso_global_wo_outliers
+mrpresso_global_comb
 
 
 

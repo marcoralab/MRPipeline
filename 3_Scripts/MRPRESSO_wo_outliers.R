@@ -6,7 +6,7 @@ args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 infile = args[1] # Exposure summary statistics
 out = args[2]
 
-#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa/load/mvpa_5e-6_load_mrpresso_MRdat.csv"
+#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/sbp/aaos/sbp_5e-6_aaos_mrpresso_MRdat.csv"
 #infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/cpd/load/cpd_5e-6_load_mrpresso_MRdat.csv"
 #out = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa/load/mvpa_5e-6_load"
 
@@ -16,7 +16,7 @@ suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 
 ### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
-mrdat.raw <- read_csv(infile)
+mrdat.raw <- read_csv(infile, col_types = list(mrpresso_pval = col_character()))
 mrdat <- filter(mrdat.raw, mrpresso_keep == TRUE)
 
 if(nrow(mrdat) < nrow(mrdat.raw)){
