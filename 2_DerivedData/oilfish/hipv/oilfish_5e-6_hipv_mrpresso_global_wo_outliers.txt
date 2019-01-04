@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+AX2Sic	zut7qK	hipv	oilfish	1	262.46787504299687	0.113

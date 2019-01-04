@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+BQo45y	5olWrN	nft4	oilfish	1	246.2516820565606	0.759

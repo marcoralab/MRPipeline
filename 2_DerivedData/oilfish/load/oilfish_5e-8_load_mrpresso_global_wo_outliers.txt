@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+FCqUKp	lpD20l	load	oilfish	1	57.49964480164152	0.9206
