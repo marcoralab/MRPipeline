@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-XUVADq	lsw2Zw	load	mvpa	3	17.388177403839777	0.941
+I1oi0B	pHKgro	ab42	diab	2	447.1499248505455	0.08

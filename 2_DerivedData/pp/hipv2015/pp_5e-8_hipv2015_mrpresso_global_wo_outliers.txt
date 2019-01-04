@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-XUVADq	lsw2Zw	load	mvpa	3	17.388177403839777	0.941
+3skQEc	sMjZR6	hipv2015	pp	0	NA	NA

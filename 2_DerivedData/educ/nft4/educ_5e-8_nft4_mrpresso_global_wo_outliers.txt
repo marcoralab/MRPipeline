@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-XUVADq	lsw2Zw	load	mvpa	3	17.388177403839777	0.941
+s7ji4O	BR8QIt	nft4	educ	0	NA	NA

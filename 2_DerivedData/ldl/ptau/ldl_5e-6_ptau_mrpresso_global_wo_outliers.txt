@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-XUVADq	lsw2Zw	load	mvpa	3	17.388177403839777	0.941
+y1kK2C	bTP5Jg	ptau	ldl	2	345.71910298018406	0.0094
