@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+AUwIM5	7j0gs4	nft4	bmi	1	1639.5221639863157	0.416

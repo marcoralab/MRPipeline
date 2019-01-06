@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Ilr5AC	sg3TEn	hipv	educ	3	1381.7119190454364	0.00184

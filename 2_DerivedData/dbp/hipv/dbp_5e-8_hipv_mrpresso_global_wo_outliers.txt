@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+pZhPKA	PANPVl	hipv	dbp	2	1812.7936821923258	4e-5
