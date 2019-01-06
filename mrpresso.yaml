@@ -9,13 +9,14 @@ DataOut: "2_DerivedData/"
 
 REF: '1_RawData/EUR_All_Chr'
 traits: '1_RawData/MRTraits.csv'
-Pthreshold: ['5e-6', '5e-8']
+#Pthreshold: ['5e-6', '5e-8']
+Pthreshold: ['5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
-#ExposureCode: ['diab']
-#OutcomeCode: ['load']
+#ExposureCode: ['alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
+#OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+ExposureCode: ['dbp']
+OutcomeCode: ['load']
 
 ## Forbidden wildcard combinations
 missing : [

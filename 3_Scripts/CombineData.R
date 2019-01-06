@@ -273,11 +273,15 @@ MRsummary <- MRdat_results  %>%
 
 MRsummary %>% left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, violated, outliers_removed), 
           by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
-  filter(exposure == 'sbp') %>% 
+  filter(exposure == 'hear') %>% 
   filter(outcome %in% outcomes) %>% 
   filter(method == 'IVW') %>%
   print(n = Inf)
 
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', 
+               'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 
+               'mdd', 'mvpa', 'sociso', 
+               'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
 
 mrpresso_global_wo_outliers
 mrpresso_global_comb
