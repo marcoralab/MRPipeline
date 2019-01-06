@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Y2GNzB	Z9VuOs	hipv	bmi	1	3952.778700414376	<1e-05
