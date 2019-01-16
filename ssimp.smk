@@ -1,5 +1,5 @@
 # snakemake -s ssimp.smk --configfile ssimp_config.yaml
-# snakejob -s ssimp.smk --configfile ssimp_config.yaml -j 4000 --max-jobs-per-second 1
+# snakejob -s ssimp.smk --configfile ssimp_config.yaml -j 250 --max-jobs-per-second 1
 
 CHUNKS = config['chunks']
 GWAS = config['GWAS']
