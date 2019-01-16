@@ -1,7 +1,3 @@
-221/258
-exp(0.68)
-install.packages("devtools")#
-devtools::install_github("bcm-uga/pcadapt")
 library(pcadapt)
 browseVignettes("pcadapt")
 pcadapt
@@ -1651,6 +1647,9 @@ dat <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/LDSC/', re
   map(., read_tsv) %>% #
   bind_rows()
 dat
+library(shiny)
+setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
+runApp()
 library(shiny)
 setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/')
 runApp()

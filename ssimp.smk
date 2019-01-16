@@ -16,7 +16,7 @@ rule ssimp:
     params:
         imp_range = '{chunks}'
     shell:
-        '/sc/orga/projects/LOAD/shea/bin/ssimp_software/ssimp \
+        '/sc/orga/projects/LOAD/shea/bin/ssimp_software/compiled/ssimp-linux-issue88 \
         --gwas {input.gwas} \
         --ref ~/reference_panels/1000genomes/ALL.chr{{CHRM}}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz \
         --out {output} \

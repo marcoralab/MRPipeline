@@ -271,20 +271,6 @@ MRsummary <- MRdat_results  %>%
 #write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
 
 
-MRsummary %>% left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, violated, outliers_removed), 
-          by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
-  filter(exposure == 'hear') %>% 
-  filter(outcome %in% outcomes) %>% 
-  filter(method == 'IVW') %>%
-  print(n = Inf)
-
-exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', 
-               'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 
-               'mdd', 'mvpa', 'sociso', 
-               'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
-
-mrpresso_global_wo_outliers
-mrpresso_global_comb
 
 
 
