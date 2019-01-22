@@ -10,8 +10,8 @@ ggt.imp <- read_tsv('/Users/sheaandrews/LOAD_minerva/dummy/shea/bin/ssimp_softwa
 
 
 dat.imp <- ggt.imp %>% 
-  filter(r2.pred > 0.7) %>% 
-  filter(maf > 0.05) %>% 
+  filter(r2.pred > 0.3) %>% 
+  filter(maf > 0.01) %>% 
   filter(nchar(effect_allele) == 1) %>%
   filter(nchar(other_allele) == 1) %>% 
   mutate(SE = z2se(maf, N.imp, z_imp)) %>% 

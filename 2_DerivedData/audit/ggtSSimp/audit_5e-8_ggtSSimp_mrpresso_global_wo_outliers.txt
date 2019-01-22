@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+ntNkE3	2ysTPc	ggtSSimp	audit	1	8.449852303379775	0.845

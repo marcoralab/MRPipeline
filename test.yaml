@@ -6,6 +6,8 @@ DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/"
 
 REF: '1_RawData/EUR_All_Chr'
+clumpr2: 0.1
+clumpkb: 250
 traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
@@ -13,9 +15,10 @@ Pthreshold: ['5e-8', '5e-6']
 #ExposureCode: ['bmi', 'cpd', 'dep', 'diab', 'educ',
 #'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'evrsmk',
 #'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'hipv']
-ExposureCode: ['mvpa', 'cpd']
-OutcomeCode: ['load']
+ExposureCode: ['alc_gscan']
+OutcomeCode: ['load', 'aaos']
 
 missing : [
-{"ExposureCode" : "sleep", "OutcomeCode" : "alcd", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "alcd", "OutcomeCode" : "ggtSSimp", "Pthreshold" : "5e-8"},
  ]

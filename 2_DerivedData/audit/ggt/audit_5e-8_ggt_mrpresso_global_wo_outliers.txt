@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+GK6pwU	bPGLci	ggt	audit	1	NA	NA

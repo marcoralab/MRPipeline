@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Ma4UY6	cLcCIB	ggtSSimp	alc_gscan	2	178.81966100169956	<1e-04

@@ -7,6 +7,7 @@ editor_options:
   chunk_output_type: console
 params: 
   hrc_file: '~/Dropbox/Research/Data/Summary_Statisitics/HRC/HRC_AF.tsv.gz'
+  kg_file: '~/Dropbox/Research/Data/Summary_Statisitics/EUR_SNPs.txt'
   load.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP2013/IGAP_stage_1.txt'
   adpx.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/3_UK_Biobank_parental_17May2018.gz'
   aaos.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt'
@@ -113,6 +114,18 @@ hrc <- filter(hrc.raw, ID != '.') %>%
 
 ```
 
+### 1000 Genomes EUR Allele Freq
+```{r hrc}
+kg.raw <- read_tsv(params$kg_file, col_names = F, col_types = cols(X2 = col_character())) %>% 
+   rename(ID = X1, CHROM = X2, POS = X3, REF = X4, ALT = X5,  AF = X6)
+kg <- filter(kg.raw, ID != '.') %>% 
+     filter(nchar(ALT) == 1) %>%
+  unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F) %>% 
+  mutate(AF = as.numeric(AF))
+
+```
 
 ## Format GWAS summary statistics for MR analysis 
 
@@ -486,6 +499,24 @@ write_tsv(alc_cons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/
 
 ```
 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alcc
+alc_gscan.raw <- read_csv('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/GSCAN.csv')
+alc_gscan <- alc_gscan.raw %>% 
+  rename(Effect_allele = 'Alternate Allele', Non_Effect_allele = 'Reference Allele', CHR = Chr, POS = Position, SNP = rsID, P = Pvalue, EAF = 'Alternate Allele Frequency') %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(alc_gscan, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alc_gscan_GWAS.Processed.gz'))
+
+```
+
+
+
+
+
+
 ## Alcohol Dependence
 [Walters et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/10/257311): SNPs associated with alcohol dependnece were selected from a GWAS of DSM-IV diagnosed alcohol dependnece perfomred in 46,568 individules (11,569 cases and 34,999 controls) of European ancestry.  
 
@@ -516,7 +547,7 @@ audit <- audit.raw %>%
   filter(nchar(Effect_allele) == 1) %>% 
   filter(nchar(Non_Effect_allele) == 1) %>% 
   left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
-  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) 
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF))
 
 audit_t <- audit %>% 
   select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_T, se_T, p_T, N) %>% 

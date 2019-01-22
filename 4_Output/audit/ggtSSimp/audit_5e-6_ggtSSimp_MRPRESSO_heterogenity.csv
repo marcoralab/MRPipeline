@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+O93Cyu,dDcpOJ,ggtSSimp,audit,MR Egger,31.34736061809933,57,0.9977302584796371,2019-01-22
+O93Cyu,dDcpOJ,ggtSSimp,audit,Inverse variance weighted,31.999124081578213,58,0.9978122690246088,2019-01-22

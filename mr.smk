@@ -8,6 +8,8 @@ shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
 
 
 REF = config['REF']
+r2 = config['clumpr2']
+kb = config['clumpkb']
 ExposureCode = config['ExposureCode']
 OutcomeCode = config['OutcomeCode']
 Pthreshold = config['Pthreshold']
@@ -42,9 +44,11 @@ rule clump:
     output: DataIn + '{ExposureCode}.clumped'
     params:
         ref = REF,
-        out =  DataIn + '{ExposureCode}'
+        out =  DataIn + '{ExposureCode}',
+        r2 = r2,
+        kb = kb
     shell:
-        "plink --bfile {params.ref}  --clump {input}  --clump-r2 0.1 --clump-kb 250 --clump-p1 1 --clump-p2 1 --out {params.out}"
+        "plink --bfile {params.ref}  --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
 
 rule gzip:
     input: DataIn + '{ExposureCode}.clumped'

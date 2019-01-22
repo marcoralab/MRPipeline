@@ -33,7 +33,7 @@ ggsave('~/Dropbox/ggt_whole.png', device = 'png', units = 'in', width = 9, heigh
 
 test <- dat.merge %>% 
   filter(r2.pred > 0.3) %>% 
-  filter(maf > 0.05) 
+  filter(maf > 0.01) 
 
 cor.test(test$Z.GWAS, test$Z_reimputed, method = "pearson") ## Pearson Correlation
 

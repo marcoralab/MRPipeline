@@ -6,7 +6,7 @@ args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 infile = args[1] # Exposure summary statistics
 out = args[2]
 
-#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/diab/load/diab_5e-6_load_mrpresso_MRdat.csv"
+#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/audit/ggtSSimp/audit_5e-6_ggtSSimp_mrpresso_MRdat.csv"
 #infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/cpd/load/cpd_5e-6_load_mrpresso_MRdat.csv"
 #out = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa/load/mvpa_5e-6_load"
 
@@ -20,41 +20,56 @@ mrdat.raw <- read_csv(infile, col_types = list(mrpresso_pval = col_character()))
 mrdat <- filter(mrdat.raw, mrpresso_keep == TRUE)
 
 if(nrow(mrdat) < nrow(mrdat.raw)){
-  ## Data Frame of nsnps and number of iterations 
-  df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
-                       NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
   
-  nsnps <- nrow(mrdat)
-  NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
-  
-  ### ===== MR-PRESSO ===== ###
-  message("\n CALCULATING PLEITROPY \n")
-  
-  mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
-                            BetaExposure = "beta.exposure",
-                            SdOutcome = "se.outcome",
-                            SdExposure = "se.exposure",
-                            OUTLIERtest = FALSE,
-                            DISTORTIONtest = FALSE,
-                            data = as.data.frame(mrdat),
-                            NbDistribution = NbDistribution,
-                            SignifThreshold = 0.05)
-  
-  ### ===== FORMAT DATA ===== ###
-  ## extract RSSobs and Pvalue 
-  
-  mrpresso.p <- mrpresso.out$`MR-PRESSO results`$Pvalue
-  RSSobs <- mrpresso.out$`MR-PRESSO results`$RSSobs
-  
-  
-  # Write n outliers, RSSobs and Pvalue to tibble
-  mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
-                         id.outcome = as.character(mrdat[1,'id.outcome']), 
-                         outcome = as.character(mrdat[1,'outcome']), 
-                         exposure = as.character(mrdat[1,'exposure']), 
-                         n.outlier = (nrow(mrdat.raw) - nrow(mrdat)),
-                         RSSobs = RSSobs,
-                         pval = mrpresso.p)
+  if(nrow(mrdat) > 3){
+    ## Data Frame of nsnps and number of iterations 
+    df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
+                         NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
+    
+    nsnps <- nrow(mrdat)
+    NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
+    
+    ### ===== MR-PRESSO ===== ###
+    message("\n CALCULATING PLEITROPY \n")
+    
+    mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
+                              BetaExposure = "beta.exposure",
+                              SdOutcome = "se.outcome",
+                              SdExposure = "se.exposure",
+                              OUTLIERtest = FALSE,
+                              DISTORTIONtest = FALSE,
+                              data = as.data.frame(mrdat),
+                              NbDistribution = NbDistribution,
+                              SignifThreshold = 0.05)
+    
+    ### ===== FORMAT DATA ===== ###
+    ## extract RSSobs and Pvalue 
+    
+    mrpresso.p <- mrpresso.out$`MR-PRESSO results`$`Global Test`$Pvalue
+    RSSobs <- mrpresso.out$`MR-PRESSO results`$`Global Test`$RSSobs
+    
+    
+    # Write n outliers, RSSobs and Pvalue to tibble
+    mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
+                           id.outcome = as.character(mrdat[1,'id.outcome']), 
+                           outcome = as.character(mrdat[1,'outcome']), 
+                           exposure = as.character(mrdat[1,'exposure']), 
+                           n.outlier = (nrow(mrdat.raw) - nrow(mrdat)),
+                           RSSobs = RSSobs,
+                           pval = mrpresso.p)
+
+  } else {
+    message("\n Not enough intrumental variables \n")
+    
+    mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
+                           id.outcome = as.character(mrdat[1,'id.outcome']), 
+                           outcome = as.character(mrdat[1,'outcome']), 
+                           exposure = as.character(mrdat[1,'exposure']),
+                           n.outlier = (nrow(mrdat.raw) - nrow(mrdat)),
+                           RSSobs = NA,
+                           pval = NA)
+  }
+
 } else {
   message("\n NO OUTLIER VARIANTS \n")
   

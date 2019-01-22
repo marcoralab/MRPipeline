@@ -25,3 +25,4 @@ rule ssimp:
 
 # cat /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/ggt_* >> /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/merged_ggt.txt
 # grep -v "chr" /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/merged_ggt.txt > temp && mv temp ggt_ssimp.txt
+# awk '{if (($8 > 0.01) && ($9 > 0.03)) {print}}' ggt_ssimp.txt > ggt_ssimp_filtered.txt 

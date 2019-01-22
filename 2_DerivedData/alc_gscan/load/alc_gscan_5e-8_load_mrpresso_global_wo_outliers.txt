@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+oJmMQT	VNaeM5	load	alc_gscan	1	119.2695080973995	0.0203

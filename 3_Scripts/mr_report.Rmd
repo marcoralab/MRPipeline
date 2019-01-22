@@ -31,8 +31,8 @@ editor_options:
 ## For testing 
 rwd <- 'out'
 out <- 'out'
-exposure.code <- 'mvpa'
-outcome.code <- 'load'
+exposure.code <- 'audit'
+outcome.code <- 'ggt'
 p.threshold <- '5e-8'
 
 traits <- '~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv'
@@ -211,12 +211,12 @@ Figure 3 shows a [Radial Plots](https://github.com/WSpiller/RadialMR) can be use
 ```{r Radial_IVWt, echo = F, cache=F, message=F, warning=F, include=F}
 radial.dat <- mrdat %>% filter(mr_keep == TRUE) %>%  
   with(., format_radial(beta.exposure, beta.outcome, se.exposure, se.outcome, SNP))
-radial.ivw <- ivw_radial(radial.dat, alpha = 0.05/nrow(radial.dat), weights = 1)
-plot_radial(radial.ivw, radial_scale = F)
+radial.ivw <- try(ivw_radial(radial.dat, alpha = 0.05/nrow(radial.dat), weights = 1))
+#plot_radial(radial.ivw, radial_scale = F)
 ```
 
 ```{r Radial_Plot, echo = F, cache=F, message=F, warning=F, fig.width=7.5, fig.height=4.7, fig.align='center', fig.cap= 'Fig. 4: Radial Plot showing influential data points using Radial IVW'}
-plot_radial(radial.ivw, radial_scale = F)
+if(class(radial.ivw) == "IVW"){plot_radial(radial.ivw, radial_scale = F)}
 ```
 <br>
 
