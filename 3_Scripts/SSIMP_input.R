@@ -1,10 +1,10 @@
-ggt <- read_table2('/Users/sheaandrews/LOAD_minerva/dummy/shea/bin/ssimp_software/gwas/ggt_GWAS.Processed') 
-ggt.imp <- read_tsv('/Users/sheaandrews/LOAD_minerva/dummy/shea/bin/ssimp_software/output/outputfile_ggt_ssimp_fixed.txt', col_names = F) %>% 
+ggt <- read_table2('/Users/sheaandrews/LOAD_minerva/dummy/shea/bin/ssimp_software-master/gwas/ggt_GWAS.Processed') 
+ggt.imp <- read_tsv('/Users/sheaandrews/LOAD_minerva/dummy/shea/bin/ssimp_software-master/output/ggt_ssimp.txt', col_names = F) %>% 
   rename(chr = X1, pos = X2, z_imp = X3, source = X4,  SNP = X5, other_allele = X6, effect_allele = X7, maf = X8, r2.pred = X9, lambda = X10, Z_reimputed = X11, r2_reimputed = X12, P.imp = X13, N.imp = X14, bst.imp = X15)
 
 ggt.imp %>% count(source)
 ggt.imp %>% filter(source == 'SSIMP') %>% count(r2.pred > 0.3)
-ggt.imp %>% filter(source == 'SSIMP') %>% filter(r2.pred > 0.3)
+ggt.imp %>% filter(source == 'SSIMP') %>% filter(r2.pred > 0.3) %>% filter(maf > 0.01)
 ggt.imp %>% filter(source == 'GWAS')
 
 dat.imp <- ggt.imp %>% filter(source == "GWAS") %>% 
@@ -30,7 +30,12 @@ dat.merge <- read_tsv(dat.merge, '~/Dropbox/ggt_imp.txt')
 ggplot(dat.merge, aes(x = Z.GWAS, y = Z_reimputed, color = r2_reimputed)) + geom_point() + coord_fixed(ratio = 1) + theme_bw() + 
   geom_abline(slope = 1, intercept = 0, colour = 'red', linetype = 2)
 ggsave('~/Dropbox/ggt_whole.png', device = 'png', units = 'in', width = 9, height = 5)
-cor.test(dat.merge$Z.GWAS, dat.merge$Z_reimputed, method = "pearson") ## Pearson Correlation
+
+test <- dat.merge %>% 
+  filter(r2.pred > 0.3) %>% 
+  filter(maf > 0.05) 
+
+cor.test(test$Z.GWAS, test$Z_reimputed, method = "pearson") ## Pearson Correlation
 
 ## Split by MAF and R2
 ggplot(dat.merge, aes(x = Z.GWAS, y = Z_reimputed, color = r2_reimputed)) + geom_point() + coord_fixed(ratio = 1) + 
@@ -45,6 +50,8 @@ ggplot(test, aes(x = b, y = b_reimputed)) + geom_point() + coord_fixed(ratio = 1
 
 cor.test(filter(dat.merge, maf_cut == '(0.05,0.5]' & r2_cut == '(0.7, Inf]')$Z.GWAS, filter(dat.merge, maf_cut == '(0.05,0.5]' & r2_cut == '(0.7, Inf]')$Z_reimputed, method = "pearson")
 cor.test(filter(dat.merge, maf_cut == '[-Inf,0.01]' & r2_cut == '[-Inf,0.3]')$Z.GWAS, filter(dat.merge, maf_cut == '[-Inf,0.01]' & r2_cut == '[-Inf,0.3]')$Z_reimputed, method = "pearson")
+cor.test(filter(dat.merge, maf_cut == '(0.01,0.05]' & r2_cut == '(0.3,0.7]')$Z.GWAS, filter(dat.merge, maf_cut == '(0.01,0.05]' & r2_cut == '(0.3,0.7]')$Z_reimputed, method = "pearson")
+cor.test(filter(dat.merge, maf_cut == '(0.05,0.5]' & r2_cut == '(0.3,0.7]')$Z.GWAS, filter(dat.merge, maf_cut == '(0.05,0.5]' & r2_cut == '(0.3,0.7]')$Z_reimputed, method = "pearson")
 
 
 ## Whole dataset
