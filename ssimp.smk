@@ -23,10 +23,5 @@ rule ssimp:
         --impute.range {params.imp_range} \
         --reimpute.tags'
 
-#    '/sc/orga/projects/LOAD/shea/bin/ssimp_software/ssimp \
-#    --gwas {input} \
-#    --ref ~/reference_panels/1000genomes/ALL.chr{CHRM}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz \
-#    --out {output} \
-#    --sample.names ~/reference_panels/1000genomes/integrated_call_samples_v3.20130502.ALL.panel/sample/super_pop=EUR \
-#    --impute.range {params.imp_range} \
-#    --reimpute.tags'
+# cat /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/ggt_* >> /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/merged_ggt.txt
+# grep -v "chr" /sc/orga/projects/LOAD/shea/bin/ssimp_software-master/output/merged_ggt.txt > temp && mv temp ggt_ssimp.txt
