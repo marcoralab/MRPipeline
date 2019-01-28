@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-0rJ22G	YdUB3e	ggt	alc_gscan	1	79.83592621219486	0.3364

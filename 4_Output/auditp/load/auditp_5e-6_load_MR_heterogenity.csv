@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+X9IDiJ,PHyS5A,load,auditp,MR Egger,37.48807433781187,32,0.23189159345763896,2019-01-23
+X9IDiJ,PHyS5A,load,auditp,Inverse variance weighted,40.42383542217773,33,0.17519800961351054,2019-01-23

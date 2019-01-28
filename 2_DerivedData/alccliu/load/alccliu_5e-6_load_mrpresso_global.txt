@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dJnhsI	2mhty9	load	alccliu	2	312.5845938848	6e-4

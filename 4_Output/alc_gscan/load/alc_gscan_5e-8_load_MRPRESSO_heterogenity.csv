@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oJmMQT,VNaeM5,load,alc_gscan,MR Egger,115.46733549627241,83,0.010700086410089543,2019-01-22
-oJmMQT,VNaeM5,load,alc_gscan,Inverse variance weighted,115.76607789283545,84,0.01234980662642658,2019-01-22

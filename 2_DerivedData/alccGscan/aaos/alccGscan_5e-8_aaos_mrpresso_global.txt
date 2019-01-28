@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+s6GOA5	GVe1e4	aaos	alccGscan	1	117.78375956480639	0.036

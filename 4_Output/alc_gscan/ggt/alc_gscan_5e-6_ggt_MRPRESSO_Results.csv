@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-nnEQlM,eyJryO,ggt,alc_gscan,Inverse variance weighted (fixed effects),72,0.10738866102584371,0.0286029223475388,1.7371235335401163e-4,2019-01-22
-nnEQlM,eyJryO,ggt,alc_gscan,Weighted median,72,0.13275405486151967,0.04719595157531045,0.004910803801977556,2019-01-22
-nnEQlM,eyJryO,ggt,alc_gscan,Weighted mode,72,0.1298828243190835,0.07839390336658221,0.10197341991071016,2019-01-22
-nnEQlM,eyJryO,ggt,alc_gscan,MR Egger,72,0.09994355971794125,0.1005563682944356,0.3236920660830802,2019-01-22

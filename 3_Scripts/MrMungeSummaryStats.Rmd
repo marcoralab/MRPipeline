@@ -8,6 +8,7 @@ editor_options:
 params: 
   hrc_file: '~/Dropbox/Research/Data/Summary_Statisitics/HRC/HRC_AF.tsv.gz'
   kg_file: '~/Dropbox/Research/Data/Summary_Statisitics/EUR_SNPs.txt'
+  uk10k_file: '~/Dropbox/Research/Data/Summary_Statisitics/UK10K_COHORT.txt.gz'
   load.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP2013/IGAP_stage_1.txt'
   adpx.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/3_UK_Biobank_parental_17May2018.gz'
   aaos.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt'
@@ -508,13 +509,23 @@ alc_gscan <- alc_gscan.raw %>%
   filter(SNP != '.') %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(alc_gscan, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alc_gscan_GWAS.Processed.gz'))
+write_tsv(alc_gscan, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alccGscan_GWAS.Processed.gz'))
 
 ```
 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+liualcc.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/liu2019/DrinksPerWeek.txt.gz')
+liualcc <- liualcc.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
+write_tsv(liualcc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alccliu_GWAS.Processed.gz'))
 
-
+```
 
 
 ## Alcohol Dependence
@@ -547,24 +558,28 @@ audit <- audit.raw %>%
   filter(nchar(Effect_allele) == 1) %>% 
   filter(nchar(Non_Effect_allele) == 1) %>% 
   left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  filter(!is.na(POS)) %>%
   mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF))
 
 audit_t <- audit %>% 
   select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_T, se_T, p_T, N) %>% 
   rename(CHR = chr, Beta = beta_T, SE = se_T, P = p_T) %>%
-  mutate(r2 = snp.r2(EAF, Beta))
-  
+  mutate(r2 = snp.r2(EAF, Beta)) %>% 
+  filter()
+write_tsv(audit_t, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz'))
+
 audit_c <- audit %>% 
   select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_C, se_C, p_C, N) %>% 
   rename(CHR = chr, Beta = beta_C, SE = se_C, P = p_C) %>%
-  mutate(r2 = snp.r2(EAF, Beta))
+  mutate(r2 = snp.r2(EAF, Beta)) 
+write_tsv(audit_c, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/auditc_GWAS.Processed.gz'))
 
 audit_p <- audit %>% 
   select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_P, se_P, p_P, N) %>% 
   rename(CHR = chr, Beta = beta_P, SE = se_P, P = p_P) %>%
   mutate(r2 = snp.r2(EAF, Beta))
+write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/auditp_GWAS.Processed.gz'))
 
-write_tsv(audit_t, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz'))
 
 ```
 
@@ -805,38 +820,6 @@ educall <- educall.raw %>%
 
 write_tsv(educall, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educall_GWAS.Processed.gz'))
 
-```
-
-## Smoking UKB 
-```{r SMK_UKB}
-## Gene Atlas
-path <- '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/ukbb/'
-filenames <- list.files(path, pattern="*.csv.gz")
-
-## effects
-files <- paste(path, filenames[grep('allWhites', filenames)], sep="")
-out <- lapply(files, read_table2)
-out <- do.call(rbind, out)
-
-## snp info
-files <- paste(path, filenames[grep('snps.imputed', filenames)], sep="")
-info <- lapply(files, read_table2)
-info <- do.call(rbind, info)
-
-smkukbb <- out %>% 
-  left_join(info, by = 'SNP') %>% 
-  left_join(hrc, by = c('SNP' = 'ID')) %>% 
-  filter(!is.na(CHROM)) %>% 
-  filter(`HWE-P` > 1e-6) %>% 
-  filter(MAF > 1e-4) %>% 
-  filter(iscores >= 0.8) %>%
-  mutate(N = 452264) %>%
-  mutate(A2 = ifelse(ALLELE == ALT, REF, ALLELE)) %>% 
-  rename(CHR = CHROM, Effect_allele = ALLELE, Non_Effect_allele = A2, Beta = `NBETA-20116-0.0`, SE = `NSE-20116-0.0`, P = `PV-20116-0.0`, EAF = MAF) %>% 
-  mutate(r2 = snp.r2(EAF, Beta)) %>%
-  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N, r2)
-
-write_tsv(smkukbb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkukbb_GWAS.Processed.gz'))  
 ```
 
 ## Smoking TAG
@@ -1128,6 +1111,69 @@ ibd <- ibd.raw %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
 write_tsv(ibd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ibd_GWAS.Processed.gz'))
+
+```
+
+# Smoking
+[Liu et al 2019](https://www.nature.com/articles/s41588-018-0307-5) Tobacco and alcohol use are leading causes of mortality that influence risk for many complex diseases and disorders1 . They are heritable2,3 and etiologically related4,5 behaviors that have been resistant to gene discovery efforts6–11. In sample sizes up to 1.2 million individuals, we discovered 566 genetic variants in 406 loci associated with multiple stages of tobacco use (initiation, cessation, and heaviness) as well as alcohol use, with 150 loci evidencing pleiotropic association. Smoking phenotypes were positively genetically correlated with many health conditions, whereas alcohol use was negatively correlated with these conditions, such that increased genetic risk for alcohol use is associated with lower disease risk. We report evidence for the involvement of many systems in tobacco and alcohol use, including genes involved in nicotinic, dopaminergic, and glutamatergic neurotransmission. The results provide a solid starting point to evaluate the effects of these loci in model organisms and more precise substance use measures.
+
+## Age of Inition
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkaoi.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/AgeOfInitiation.txt.gz')
+smkaoi <- smkaoi.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkaoi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkaoi_GWAS.Processed.gz'))
+
+```
+
+## Cigrates per day
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkcpd.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/CigarettesPerDay.txt.gz')
+smkcpd <- smkcpd.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkcpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkcpd_GWAS.Processed.gz'))
+
+```
+
+## Smoking Ceassation 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkc.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/SmokingCessation.txt.gz')
+smkc <- smkc.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkc_GWAS.Processed.gz'))
+
+```
+
+## Smoking Initian 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smki.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/SmokingInitiation.txt.gz')
+smki <- smki.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smki, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smki_GWAS.Processed.gz'))
 
 ```
 

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+p8nMAL,Q5XKyn,aaos,auditc,MR Egger,61.820067775906956,45,0.048571815113925526,2019-01-23
+p8nMAL,Q5XKyn,aaos,auditc,Inverse variance weighted,78.49587228382295,46,0.001993190538189338,2019-01-23

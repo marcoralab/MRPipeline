@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+X9IDiJ	PHyS5A	load	auditp	0	43.232889202226616	0.1726

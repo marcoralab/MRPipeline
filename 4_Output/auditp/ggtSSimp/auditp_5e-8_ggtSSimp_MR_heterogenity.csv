@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+mC62Id,Z6mzAX,ggtSSimp,auditp,MR Egger,1.6103771952809007,2,0.4470036147820845,2019-01-23
+mC62Id,Z6mzAX,ggtSSimp,auditp,Inverse variance weighted,1.822514417483959,3,0.6100478450655985,2019-01-23

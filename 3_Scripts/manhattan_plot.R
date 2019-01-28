@@ -16,7 +16,22 @@ PlotTitle = args[4]
 message(paste(PlotTitle, '\n'))
 
 ## Read in GWAS and Plink Clumped File
-trait.gwas <- suppressMessages(read_tsv(infile_gwas))
+trait.gwas <- suppressMessages(
+    read_tsv(infile_gwas, col_types = list(SNP = col_character(), 
+                                           CHR = col_character(),
+                                           POS = col_integer(),
+                                           Effect_allele = col_character(), 
+                                           Non_Effect_allele = col_character(), 
+                                           EAF = col_double(),
+                                           Beta = col_double(),
+                                           SE = col_double(),
+                                           P = col_double(),
+                                           N = col_double(),
+                                           r2 = col_double()
+                                           )
+             )
+  )
+
 trait.clump <- suppressMessages(read_table2(infile_clump)) %>% 
   filter(!is.na(CHR)) %>% 
   select(CHR, F, SNP, BP, P, TOTAL, NSIG)

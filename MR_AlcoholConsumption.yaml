@@ -1,0 +1,20 @@
+# snakemake -s mr.smk --configfile MR_AlcoholDependnece.yaml --keep-going --until Harmonize
+# snakejob -s mr.smk --configfile MR_AlcoholDependnece.yaml -j 1000 --max-jobs-per-second 1 --keep-going --until ProxySnps
+
+DataIn: '1_RawData/GWAS/'
+DataOut: "2_DerivedData/"
+
+REF: '1_RawData/EUR_All_Chr'
+traits: '1_RawData/MRTraits.csv'
+clumpr2: 0.1
+clumpkb: 250
+Pthreshold: ['5e-8', '5e-6']
+
+## LOAD as exposure
+ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'autitc', 'auditp']
+OutcomeCode: ['load', 'aaos', 'ggt']
+
+missing : [
+{"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
+{"ExposureCode" : "auditp", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
+ ]

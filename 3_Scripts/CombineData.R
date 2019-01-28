@@ -201,7 +201,7 @@ het <- left_join(filter(heterogenity, method == 'Egger'),
   select(-method.Egger, -method.IVW)
 
 ## ===============================================## 
-## Egger Pleitropy
+## Egger Pleitropy - w/ outliers
 egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
                            pattern = '_MR_egger_plei.csv', 
                            full.names = T) %>% 
@@ -218,7 +218,38 @@ egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive =
   }) %>% 
   bind_rows() %>% 
   select(exposure, outcome, pt, egger_intercept, se, pval) %>% 
-  mutate(violated = pval < 0.05)
+  rename(egger_se = se) %>%
+  mutate(violated = pval < 0.05)  %>% 
+  mutate(outliers_removed = FALSE)
+
+## ===============================================## 
+## Egger Pleitropy - w/o outliers
+mrpresso_egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
+                    pattern = '_MRPRESSO_egger_plei.csv', 
+                    full.names = T) %>% 
+  map(., function(x){
+    dat.model <- tibble(file = x) %>% 
+      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
+      mutate(file = ifelse(is.na(file), outcome, file)) %>% 
+      mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
+      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
+      select(-X1, -X2, -X3)
+    datin <- read_csv(x) %>% 
+      mutate(pt = dat.model$pt)
+  }) %>% 
+  bind_rows() %>% 
+  select(exposure, outcome, pt, egger_intercept, se, pval) %>% 
+  rename(egger_se = se) %>%
+  mutate(violated = pval < 0.05)  %>% 
+  mutate(outliers_removed = TRUE)
+
+## ===============================================## 
+## Combine MR-PRESSO Global results w/o outliers
+
+egger_comb <- egger %>% 
+  bind_rows(mrpresso_egger)
+
 
 ## ===============================================## 
 ## Mean F statistic
