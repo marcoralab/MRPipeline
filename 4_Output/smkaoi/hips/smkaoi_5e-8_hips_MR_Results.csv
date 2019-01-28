@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+M0uMTl,SbX1uv,hips,smkaoi,Inverse variance weighted (fixed effects),8,-0.7522301337931973,1.6605967021229369,0.6505574887642067,2019-01-28
+M0uMTl,SbX1uv,hips,smkaoi,Weighted median,8,-0.675487669196897,2.037227513948708,0.7402124401340432,2019-01-28
+M0uMTl,SbX1uv,hips,smkaoi,Weighted mode,8,-2.1597093568102146,2.985269298132982,0.49286069886731454,2019-01-28
+M0uMTl,SbX1uv,hips,smkaoi,MR Egger,8,-3.1416496139202814,7.722356151767585,0.698250881175343,2019-01-28

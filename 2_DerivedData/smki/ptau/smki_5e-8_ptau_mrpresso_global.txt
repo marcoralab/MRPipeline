@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+wHbHUp	tfcLt9	ptau	smki	0	115.46377099434626	0.9349

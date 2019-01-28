@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+iutGdE	DSLRvN	nft4	smki	0	506.60773392394987	0.28752

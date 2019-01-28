@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+bcduP1,Timh5W,ptau,smkc,MR Egger,38.130888193791314,43,0.6821155620043321,2019-01-28
+bcduP1,Timh5W,ptau,smkc,Inverse variance weighted,39.40771887960061,44,0.6685489139514855,2019-01-28

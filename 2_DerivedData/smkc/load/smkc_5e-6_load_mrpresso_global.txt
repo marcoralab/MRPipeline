@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MZIlPN	N7qzd7	load	smkc	0	66.25458750083413	0.1974

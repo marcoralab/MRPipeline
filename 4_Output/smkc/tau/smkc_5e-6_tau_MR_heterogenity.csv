@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+HacRj4,7CAbAV,tau,smkc,MR Egger,30.691160115606134,42,0.9017426977509806,2019-01-28
+HacRj4,7CAbAV,tau,smkc,Inverse variance weighted,32.12195571819079,43,0.8880268713883883,2019-01-28
