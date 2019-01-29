@@ -116,10 +116,26 @@ hrc <- filter(hrc.raw, ID != '.') %>%
 ```
 
 ### 1000 Genomes EUR Allele Freq
-```{r hrc}
+```{r kg}
 kg.raw <- read_tsv(params$kg_file, col_names = F, col_types = cols(X2 = col_character())) %>% 
    rename(ID = X1, CHROM = X2, POS = X3, REF = X4, ALT = X5,  AF = X6)
 kg <- filter(kg.raw, ID != '.') %>% 
+     filter(nchar(ALT) == 1) %>%
+  unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F) %>% 
+  mutate(AF = as.numeric(AF))
+
+hrc_kg <- anti_join(kg, hrc, by = 'ID') %>% 
+  bind_rows(hrc)
+
+```
+
+### UK10k Allele Freq
+```{r uk10k}
+uk10k.raw <- read_tsv(params$uk10k_file, col_names = F, comment = "#",col_types = cols(X2 = col_character())) %>%
+   rename(ID = X1, CHROM = X2, POS = X3, REF = X4, ALT = X5,  AF = X6, AF_TWINSUK = X7, AF_ALSPAC = X8, AF_AFR = X9, AF_AMR = X10, AF_ASN = X11, AF_EUR = X12, ESP_MAF = X13)
+uk10k <- filter(uk10k.raw, ID != '.') %>% 
      filter(nchar(ALT) == 1) %>%
   unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
   unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
@@ -562,7 +578,7 @@ audit <- audit.raw %>%
   rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
   filter(nchar(Effect_allele) == 1) %>% 
   filter(nchar(Non_Effect_allele) == 1) %>% 
-  left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  left_join(select(hrc_kg, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
   filter(!is.na(POS)) %>%
   mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF))
 

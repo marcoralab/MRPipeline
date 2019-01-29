@@ -6,8 +6,9 @@ library(tidyverse)
 
 ## ===============================================## 
 ## Summary statistics for Exposure and outcome snps
-summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, pattern = '_SNPs.txt', 
-           full.names = T) %>% 
+ssfiles  <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, pattern = '_SNPs.txt', 
+           full.names = T)
+summary_stats <- ssfiles[str_count(ssfiles, "/") == 9] %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
       mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
@@ -23,7 +24,7 @@ summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData'
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows() %>% 
-  select(-P_GC_MA_adj, -Zscore)
+  select(-outcome, -Zscore)
 #write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_summary_stats.txt.gz'))
 
 ## ===============================================## 
