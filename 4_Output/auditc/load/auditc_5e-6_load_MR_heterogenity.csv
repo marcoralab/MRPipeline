@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MlErcE,sJP8M4,load,auditc,MR Egger,106.73733461764499,39,3.258422997283876e-8,2019-01-23
-MlErcE,sJP8M4,load,auditc,Inverse variance weighted,119.94887835707254,40,6.465023681591904e-10,2019-01-23
+GXjoNa,iTsQOS,load,auditc,MR Egger,80.67419974314507,38,6.627619203517274e-5,2019-01-29
+GXjoNa,iTsQOS,load,auditc,Inverse variance weighted,92.03150221814187,39,3.5514237560252867e-6,2019-01-29

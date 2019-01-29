@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-dHsEce	2Jpe7s	ggt	alcc	3	40.850400209714316	0.177
+dHsEce	2Jpe7s	ggt	alcc	3	40.850400209714316	0.1702
