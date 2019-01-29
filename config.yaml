@@ -3,12 +3,14 @@
 ## For running on cluster
 ## find . -name "*stdout" -type f -delete
 ## find . -name "*stderr" -type f -delete
-#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 4000 --max-jobs-per-second 1 --keep-going
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 200 --max-jobs-per-second 1 --keep-going
 
 DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/"
 
 REF: '1_RawData/EUR_All_Chr'
+clumpr2: 0.1
+clumpkb: 250
 traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-6', '5e-8']
 
