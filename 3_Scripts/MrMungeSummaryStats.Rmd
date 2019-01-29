@@ -500,6 +500,10 @@ write_tsv(alc_cons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/
 
 ```
 
+# Alcohol Consumption
+[Liu et al Nat Gent](https://doi.org/10.1038/s41588-018-0307-5): SNPs associated with alcohol consumption were selected from a GWAS meta-analysis performed by the GWAS & Sequencing Consortium of Alcohol and Nicotine use (GSCAN) consortium performed in 537,349 participants. Alcohol consumption was assessed as self-reported drinks per week.
+
+## Genome wide significant
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
 ## Trait Code: alcc
 alc_gscan.raw <- read_csv('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/GSCAN.csv')
@@ -513,6 +517,7 @@ write_tsv(alc_gscan, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS
 
 ```
 
+## Full GWAS summary stats
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
 ## Trait Code: alccukbgscan
 liualcc.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/liu2019/DrinksPerWeek.txt.gz')
@@ -1156,6 +1161,7 @@ smkc <- smkc.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   filter(SNP != '.') %>%
   filter(SNP != 'rs199441') %>%
+  filter(SNP != "rs567151158") %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
 write_tsv(smkc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkc_GWAS.Processed.gz'))
