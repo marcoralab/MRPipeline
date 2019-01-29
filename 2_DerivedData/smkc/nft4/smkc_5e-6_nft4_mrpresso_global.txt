@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-1T1rej	EVCoPB	nft4	smkc	0	35.50514925915743	0.9928
+RypcEn	cC7kyA	nft4	smkc	0	35.50514925915743	0.9922

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-WMPg4q	6mwNIc	ab42	smkc	0	24.570331239691214	0.9954
+aTW57R	DTTv0o	ab42	smkc	0	24.570331239691214	0.992

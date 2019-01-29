@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3rl1YZ	4APx0b	hipv	smkc	0	54.53098202606912	0.4682
+2FGYnG	X21SoC	hipv	smkc	0	54.53098202606912	0.474

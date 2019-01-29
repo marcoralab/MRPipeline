@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-AY79Tl	6GQSPH	load	smkc	0	21.384339858582717	0.151
+TxXhKv	MXkT2N	load	smkc	0	21.384339858582717	0.132

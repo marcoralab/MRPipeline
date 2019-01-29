@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YWIu7B	MKLdkM	vbiany	smkc	0	51.330303065973894	0.7352
+EuFdRv	qUNbHk	vbiany	smkc	0	51.330303065973894	0.7488
