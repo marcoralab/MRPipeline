@@ -16,5 +16,7 @@ OutcomeCode: ['load', 'aaos', 'ggt']
 
 missing : [
 {"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
+ {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+ {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
 {"ExposureCode" : "auditp", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
  ]
