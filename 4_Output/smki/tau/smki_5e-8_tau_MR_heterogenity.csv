@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-KPl9cv,tK94Ny,tau,smki,MR Egger,112.13595069169467,125,0.7883636164023516,2019-01-28
-KPl9cv,tK94Ny,tau,smki,Inverse variance weighted,112.13785537541592,126,0.8065006837013433,2019-01-28
+KPl9cv,tK94Ny,tau,smki,MR Egger,112.13595069169467,125,0.7883636164023516,2019-01-29
+KPl9cv,tK94Ny,tau,smki,Inverse variance weighted,112.13785537541592,126,0.8065006837013433,2019-01-29

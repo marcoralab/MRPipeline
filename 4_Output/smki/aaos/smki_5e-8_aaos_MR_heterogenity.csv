@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FMii28,qMhsOI,aaos,smki,MR Egger,159.32517912327637,139,0.1143445647808686,2019-01-28
-FMii28,qMhsOI,aaos,smki,Inverse variance weighted,159.3331141274589,140,0.12599727043876624,2019-01-28
+FMii28,qMhsOI,aaos,smki,MR Egger,159.32517912327637,139,0.1143445647808686,2019-01-29
+FMii28,qMhsOI,aaos,smki,Inverse variance weighted,159.3331141274589,140,0.12599727043876624,2019-01-29

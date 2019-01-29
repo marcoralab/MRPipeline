@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-iutGdE,DSLRvN,nft4,smki,MR Egger,489.6523769366432,468,0.2361286700433658,2019-01-28
-iutGdE,DSLRvN,nft4,smki,Inverse variance weighted,489.8679406051456,469,0.24409161276013563,2019-01-28
+iutGdE,DSLRvN,nft4,smki,MR Egger,489.6523769366432,468,0.2361286700433658,2019-01-29
+iutGdE,DSLRvN,nft4,smki,Inverse variance weighted,489.8679406051456,469,0.24409161276013563,2019-01-29
