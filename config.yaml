@@ -52,5 +52,7 @@ missing : [
    {"ExposureCode" : "svs", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "svs", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "svs", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "svs", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "las", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "las", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"}
  ]
