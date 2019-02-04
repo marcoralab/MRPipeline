@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LcJyvg	oKXl3y	load	hdl	10	3996.970882383812	<4e-05
+8OuRxf	RyRMSI	load	hdl	11	3996.970882383812	<4e-05

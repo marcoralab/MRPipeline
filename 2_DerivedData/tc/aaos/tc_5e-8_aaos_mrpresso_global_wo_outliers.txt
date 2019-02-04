@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-jwgwNH	6nIZnK	aaos	tc	12	318.6084749102242	0.0021
+6sTDxN	MjftsV	aaos	tc	11	335.5690882931472	1e-4

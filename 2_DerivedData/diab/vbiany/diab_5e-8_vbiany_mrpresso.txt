@@ -7,10 +7,12 @@ $`Main MR results`
 2        NA
 
 $`MR-PRESSO results`
-$`MR-PRESSO results`$RSSobs
+$`MR-PRESSO results`$`Global Test`
+$`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 149.4664
 
-$`MR-PRESSO results`$Pvalue
-[1] 0.9857
+$`MR-PRESSO results`$`Global Test`$Pvalue
+[1] 0.988
+
 
 

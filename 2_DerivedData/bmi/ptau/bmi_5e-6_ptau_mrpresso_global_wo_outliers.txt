@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-IQvSoo	R12vp6	ptau	bmi	2	3182.86757501014	0.47819
+Oa5EPL	2n8MDj	ptau	bmi	2	3182.86757501014	0.47905

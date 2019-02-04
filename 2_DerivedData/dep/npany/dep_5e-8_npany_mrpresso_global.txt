@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pfY394	A4d3w2	npany	dep	0	33.1607267684786	0.503
+SklW5M	mZz2cK	npany	dep	0	33.1607267684786	0.5112

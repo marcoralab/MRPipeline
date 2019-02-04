@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+4Ck83i	1pdieg	hips	as	1	15.10250077683225	0.204

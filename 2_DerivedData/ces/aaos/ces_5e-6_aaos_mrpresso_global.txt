@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vC3ngX	12CxbZ	aaos	ces	0	51.092173960328054	0.2844
+YpOExS	ZvODmm	aaos	ces	0	51.092173960328054	0.2842

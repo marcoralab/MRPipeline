@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-LafwGL	3nzMH0	load	fish	1	88.60416595701027	0.9453
+ERbDYS	xWvrEZ	load	fish	1	88.60416595701027	0.9469

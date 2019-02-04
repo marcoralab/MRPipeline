@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-azT8JB	2OiRER	hipv	hdl	1	437.5547406234688	0.00164
+kyY1Uo	1XV15Y	hipv	hdl	1	437.5547406234688	0.00132

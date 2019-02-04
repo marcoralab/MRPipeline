@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aLvqD6	qOp9eq	tau	audit	0	10.29101407489639	0.286
+Atc1Lo	S1PdS7	tau	audit	0	10.29101407489639	0.271

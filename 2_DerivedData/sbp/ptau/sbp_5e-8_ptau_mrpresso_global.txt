@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-eVtWJJ	RsueCy	ptau	sbp	0	1306.2330661245803	0.24133333333333334
+PWzRoo	axuKUZ	ptau	sbp	0	1306.2330661245803	0.23908

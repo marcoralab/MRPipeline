@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-650bHn	W4qijp	nft4	fish	1	99.0139269427688	0.9634
+ZPPKfC	u2xroz	nft4	fish	1	99.0139269427688	0.9615

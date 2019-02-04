@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+4gr7eQ	4SixWx	tau	as	0	NA	NA

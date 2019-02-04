@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uSrCYQ	6Tb5nW	load	ldl	23	381.4307760211722	<1e-04
+HH7AwL	Xv2roF	load	ldl	24	347.6218984193535	<1e-04

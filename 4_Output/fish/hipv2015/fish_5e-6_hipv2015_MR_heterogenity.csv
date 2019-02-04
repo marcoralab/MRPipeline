@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-SyDeDi,Z5fSPM,hipv2015,fish,MR Egger,322.2243252295752,306,0.25097650849643094,2018-11-26
-SyDeDi,Z5fSPM,hipv2015,fish,Inverse variance weighted,325.89433084616456,307,0.21941153460967758,2018-11-26
+B9fyco,qxpSQn,hipv2015,fish,MR Egger,322.2243252295752,306,0.25097650849643094,2019-01-30
+B9fyco,qxpSQn,hipv2015,fish,Inverse variance weighted,325.89433084616456,307,0.21941153460967758,2019-01-30

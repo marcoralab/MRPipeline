@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-g4vWoV	Xv3mim	aaos	educ	0	1357.4693986838863	0.03204
+YlahXt	U5RJJe	aaos	educ	0	1357.4693986838863	0.03244

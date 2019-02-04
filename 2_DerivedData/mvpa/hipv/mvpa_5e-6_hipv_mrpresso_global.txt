@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Azr1Wh	Vib9zJ	hipv	mvpa	2	265.50799270510186	<1e-04
+jPmffj	n6gCe6	hipv	mvpa	4	265.2973826619322	<1e-04

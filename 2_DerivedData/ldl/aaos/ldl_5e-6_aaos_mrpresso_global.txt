@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-P5oclY	DcqAGE	aaos	ldl	10	1661.5863813226047	<4e-05
+jkhyL0	E1k7E4	aaos	ldl	11	1680.6255841090733	<4e-05

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-SyDeDi	Z5fSPM	hipv2015	fish	0	NA	NA
+B9fyco	qxpSQn	hipv2015	fish	0	NA	NA

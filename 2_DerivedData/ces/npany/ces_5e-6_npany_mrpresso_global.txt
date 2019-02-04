@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-sovZRs	YLoAsz	npany	ces	0	31.85212283444641	0.7504
+6MQSAr	1NKiln	npany	ces	0	31.85212283444641	0.7376

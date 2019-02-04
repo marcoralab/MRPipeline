@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-l6yEKg	51LegB	load	hear	0	124.73620988973938	0.5416
+vNpuZp	gCQhdQ	load	hear	0	124.73620988973938	0.5466

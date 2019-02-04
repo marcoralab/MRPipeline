@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-H3osoR	de3N4S	tau	ais	0	2.826918300804678	0.996
+T75wUo	nonGzs	tau	ais	0	2.826918300804678	0.991

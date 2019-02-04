@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3OW98X	xeXzor	load	insom	0	124.10901039149498	0.306
+tskywA	BGpDsd	load	insom	0	124.10901039149498	0.3037

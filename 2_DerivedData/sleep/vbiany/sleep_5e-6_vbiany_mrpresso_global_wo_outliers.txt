@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-YWytpo	psaX4U	vbiany	sleep	0	NA	NA
+LFVF5y	o7WxOb	vbiany	sleep	0	NA	NA

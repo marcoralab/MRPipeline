@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-huGeyy	gdSMxi	vbiany	fish	0	NA	NA
+HD3I9U	DHmYNE	vbiany	fish	0	NA	NA

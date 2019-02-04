@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YWytpo	psaX4U	vbiany	sleep	0	21.331289983304494	0.733
+LFVF5y	o7WxOb	vbiany	sleep	0	21.331289983304494	0.706

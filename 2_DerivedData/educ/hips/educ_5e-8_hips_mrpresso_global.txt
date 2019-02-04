@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yTU3iw	ezApsx	hips	educ	0	1222.722311062141	0.37372
+bijs7j	KbtE4w	hips	educ	0	1222.722311062141	0.37068

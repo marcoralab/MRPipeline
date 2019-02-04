@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EexuuU	kF9d2d	hipv	ces	0	1.1003045503193005	0.903
+Fto6wC	2yfbGD	hipv	ces	0	1.1003045503193005	0.865

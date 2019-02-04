@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-5swsgz	sM6s9D	aaos	ais	0	11.404164047378215	0.73
+Ji4cZq	nVfSDi	aaos	ais	0	11.404164047378215	0.712

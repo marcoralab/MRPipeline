@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-mEuCUm	8Fjn1Q	ab42	pp	1	1039.936908569428	0.06178
+pnP2ar	QnoD25	ab42	pp	1	1039.936908569428	0.06112

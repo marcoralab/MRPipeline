@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aElDcu	X99AEK	ptau	insom	0	16.16039001392939	0.338
+lcVSR9	b6ogPY	ptau	insom	0	16.16039001392939	0.334

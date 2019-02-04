@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ACYB5H	fC0HQx	ptau	dbp	0	2632.6311984467966	0.39013
+wi1Lpz	WP777b	ptau	dbp	0	2632.6311984467966	0.39162

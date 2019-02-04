@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-788Nza	8WRcsi	hips	sbp	0	1380.7925792318952	0.9339466666666667
+akYLkm	Q04DlZ	hips	sbp	0	1380.7925792318952	0.9319866666666666

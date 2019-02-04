@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-14Adlh	xke8QT	hipv	mvpa	4	41.94750210348805	0.04
+W0mOqG	MV6922	hipv	mvpa	4	41.932237638938766	0.038

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4SQ2kP	7AaWWf	nft4	trig	2	513.5302827702283	<1e-04
+HS9oeP	oQKxOt	nft4	trig	4	513.5302827702283	<1e-04

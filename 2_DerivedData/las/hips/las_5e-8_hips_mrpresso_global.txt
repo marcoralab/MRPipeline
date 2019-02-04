@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-B50LGE	u5x75q	hips	las	0	0.3099412465570434	0.981
+p0FqeH	9DSIE8	hips	las	0	0.3099412465570434	0.979

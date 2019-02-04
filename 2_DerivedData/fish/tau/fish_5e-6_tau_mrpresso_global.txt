@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-J8HPDn	IROxjr	tau	fish	0	305.7901794139839	0.3748
+uxUcvZ	00o261	tau	fish	0	305.7901794139839	0.3719

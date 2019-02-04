@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-0TBdmg,QIKLTs,tau,dbp,MR Egger,2432.6334195834183,2350,0.11483996105374511,2018-11-26
-0TBdmg,QIKLTs,tau,dbp,Inverse variance weighted,2448.562064389758,2351,0.07878998820925132,2018-11-26
+GTM3ha,ub03gW,tau,dbp,MR Egger,2432.6334195834183,2350,0.11483996105374511,2019-01-30
+GTM3ha,ub03gW,tau,dbp,Inverse variance weighted,2448.562064389758,2351,0.07878998820925132,2019-01-30

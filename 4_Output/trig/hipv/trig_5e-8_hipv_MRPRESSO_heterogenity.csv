@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MoNcsS,yhtGN7,hipv,trig,MR Egger,190.21779821820496,141,0.0036307163604645323,2018-11-26
-MoNcsS,yhtGN7,hipv,trig,Inverse variance weighted,191.65487463757194,142,0.00348654871132071,2018-11-26
+3DAMrM,9gQwNO,hipv,trig,MR Egger,190.21779821820496,141,0.0036307163604645323,2019-01-30
+3DAMrM,9gQwNO,hipv,trig,Inverse variance weighted,191.65487463757194,142,0.00348654871132071,2019-01-30

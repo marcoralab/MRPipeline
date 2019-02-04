@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-x99qyJ	jbmkBf	hipv	sbp	1	1720.5543074145605	<1.33333333333333e-05
+eUOyCT	A9RMqT	hipv	sbp	2	1703.8836836562728	6.666666666666667e-5

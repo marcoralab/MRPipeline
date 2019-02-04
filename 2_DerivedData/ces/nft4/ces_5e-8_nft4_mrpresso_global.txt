@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ifANl7	CZ23cd	nft4	ces	0	3.616493992126593	0.592
+uzbbRO	OzTt2V	nft4	ces	0	3.616493992126593	0.59

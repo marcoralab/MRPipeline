@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-sx4VqV	XbBVP1	hips	cpd	0	NA	NA
+L0Gn2r	eUwqGq	hips	cpd	0	NA	NA

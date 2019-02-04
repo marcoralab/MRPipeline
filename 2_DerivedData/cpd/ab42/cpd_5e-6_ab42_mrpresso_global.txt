@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gfSwvi	ydP6AG	ab42	cpd	0	20.90972924916215	0.9326
+CJGfyv	govIWa	ab42	cpd	0	20.90972924916215	0.9226

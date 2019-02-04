@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4FxUOv	xFnFGD	nft4	audit	0	9.545997948711118	0.869
+DAmiwT	yaiQjS	nft4	audit	0	9.545997948711118	0.88

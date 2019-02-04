@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-IBDKPA,Nvabv1,tau,alcc,MR Egger,38.685350746971935,35,0.3067710165311053,2018-11-26
-IBDKPA,Nvabv1,tau,alcc,Inverse variance weighted,39.0151000363739,36,0.3357794890826995,2018-11-26
+IBDKPA,Nvabv1,tau,alcc,MR Egger,38.685350746971935,35,0.3067710165311053,2019-01-29
+IBDKPA,Nvabv1,tau,alcc,Inverse variance weighted,39.0151000363739,36,0.3357794890826995,2019-01-29

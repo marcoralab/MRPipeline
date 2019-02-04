@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-lCG3nI	geVHss	hips	audit	0	NA	NA
+S7hAma	AlaJZy	hips	audit	0	NA	NA

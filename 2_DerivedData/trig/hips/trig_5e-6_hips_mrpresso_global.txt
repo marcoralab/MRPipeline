@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-edqo2K	QoD4At	hips	trig	0	327.75327490321405	0.1293
+VscnRl	j4Q47g	hips	trig	0	327.75327490321405	0.1267

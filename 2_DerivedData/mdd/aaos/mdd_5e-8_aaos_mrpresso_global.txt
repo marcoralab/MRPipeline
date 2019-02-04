@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-fydcf1	n7zDcR	aaos	mdd	0	54.50866712847106	0.2472
+EiLXC6	tguigS	aaos	mdd	0	54.50866712847106	0.2466

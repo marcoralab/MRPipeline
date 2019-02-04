@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UyPOHr,MhG9Rk,load,sociso,MR Egger,15.039481744348732,20,0.7741440157297795,2018-11-26
-UyPOHr,MhG9Rk,load,sociso,Inverse variance weighted,15.825747302241734,21,0.7793604075859434,2018-11-26
+UuNrch,NKm27R,load,sociso,MR Egger,15.039481744348732,20,0.7741440157297795,2019-01-30
+UuNrch,NKm27R,load,sociso,Inverse variance weighted,15.825747302241734,21,0.7793604075859434,2019-01-30

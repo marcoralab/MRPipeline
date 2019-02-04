@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-PcWD2Y	BsQfB1	ab42	ldl	4	184.57679698499072	0.2614
+1tZGCy	VDtoEK	ab42	ldl	4	192.3994822372988	0.1675

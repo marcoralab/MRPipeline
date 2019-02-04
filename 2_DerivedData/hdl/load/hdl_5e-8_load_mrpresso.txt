@@ -1,10 +1,10 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate         Sd     T-stat
-1 beta.exposure               Raw      -0.1060415 0.10776756 -0.9839831
-2 beta.exposure Outlier-corrected       0.0115984 0.03461846  0.3350350
+1 beta.exposure               Raw     -0.10604147 0.10776756 -0.9839831
+2 beta.exposure Outlier-corrected      0.01584142 0.03519254  0.4501358
     P-value
 1 0.3261401
-2 0.7379136
+2 0.6530479
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -99,7 +99,7 @@ $`MR-PRESSO results`$`Outlier Test`
 80  1.882388e-04       1
 81  2.153538e-03       1
 82  2.957068e-04       1
-83  5.489286e-03 <0.0235
+83  5.489286e-03  0.0235
 84  3.586736e-04       1
 85  1.024784e-07       1
 86  8.559037e-05       1
@@ -135,7 +135,7 @@ $`MR-PRESSO results`$`Outlier Test`
 116 2.407000e-03       1
 117 5.940599e-04       1
 118 1.142208e-03       1
-119 4.306513e-03 <0.0235
+119 4.306513e-03   0.047
 120 7.871464e-05       1
 121 7.741951e-08       1
 122 5.712840e-03  0.2115
@@ -178,7 +178,7 @@ $`MR-PRESSO results`$`Outlier Test`
 159 4.729931e-05       1
 160 3.434225e-04       1
 161 3.751715e-04       1
-162 8.807153e-03  0.0235
+162 8.807153e-03 <0.0235
 163 1.655017e-04       1
 164 5.886671e-04       1
 165 1.553066e-03       1
@@ -210,8 +210,8 @@ $`MR-PRESSO results`$`Outlier Test`
 191 5.524036e-04       1
 192 2.189499e-06       1
 193 5.110812e-05       1
-194 4.934082e-03 <0.0235
-195 2.126349e-03  0.7755
+194 4.934082e-03  0.0705
+195 2.126349e-03   0.752
 196 2.194427e-04       1
 197 1.441774e-03       1
 198 7.265621e-04       1
@@ -255,14 +255,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
- [1]  24  64  77  83  95 119 162 173 194 209 214
+ [1]  24  64  77  83  95 119 162 173 209 214
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-    -1014.277 
+    -769.3936 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 5e-04
+[1] 9e-04
 
 
 

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-AWq08J	CIvVcb	load	sociso	2	122.78282730041734	0.5841
+fvKu6w	6NMqpe	load	sociso	2	122.78282730041734	0.5942

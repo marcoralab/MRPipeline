@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-dt8DYt	jSWG6Y	ptau	tc	2	436.09584073849084	<1e-04
+1MhHb1	eYA03K	ptau	tc	2	436.09584073849084	<1e-04

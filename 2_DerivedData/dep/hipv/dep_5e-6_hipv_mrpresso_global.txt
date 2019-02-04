@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-JM6kkA	rlcMKA	hipv	dep	0	170.91021855025764	0.2163
+YS16NE	Csp0OI	hipv	dep	0	170.91021855025764	0.2178

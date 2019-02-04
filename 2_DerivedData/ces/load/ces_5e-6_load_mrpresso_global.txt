@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-GkCvjG	4C3riz	load	ces	0	46.59247597281475	0.1684
+MM8OkN	4XCHpc	load	ces	0	46.59247597281475	0.1734

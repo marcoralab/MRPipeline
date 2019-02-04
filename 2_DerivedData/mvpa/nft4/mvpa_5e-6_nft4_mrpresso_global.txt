@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-R7Ox4e	laicau	nft4	mvpa	1	310.24067460766645	<1e-04
+a14e0M	eLOyUR	nft4	mvpa	1	310.10648517036657	<1e-04

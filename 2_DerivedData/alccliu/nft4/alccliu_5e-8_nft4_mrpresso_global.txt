@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7TXtHE	rks0Pi	nft4	alccliu	0	66.40304674993688	0.6798

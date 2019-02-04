@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-R7Ox4e,laicau,nft4,mvpa,MR Egger,158.26767561483157,147,0.2483414989658389,2018-11-26
-R7Ox4e,laicau,nft4,mvpa,Inverse variance weighted,159.8476562390386,148,0.23898276917505082,2018-11-26
+a14e0M,eLOyUR,nft4,mvpa,MR Egger,158.1824029482583,147,0.24984295805176063,2019-01-30
+a14e0M,eLOyUR,nft4,mvpa,Inverse variance weighted,159.75979359511192,148,0.24048997067798622,2019-01-30

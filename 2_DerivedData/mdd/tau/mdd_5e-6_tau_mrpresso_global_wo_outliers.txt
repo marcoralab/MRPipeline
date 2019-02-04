@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-I155R8	Cy9P5W	tau	mdd	0	NA	NA
+2yKy7z	GyRMVZ	tau	mdd	0	NA	NA

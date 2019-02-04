@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-iEPWnW	8Flkbg	hips	hear	0	41.1196539531391	0.2546
+xwWs1Y	fFRmiT	hips	hear	0	41.1196539531391	0.2638

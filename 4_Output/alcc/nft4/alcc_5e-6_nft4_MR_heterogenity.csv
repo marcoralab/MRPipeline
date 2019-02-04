@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-dkLFUp,43TXe3,nft4,alcc,MR Egger,43.05726787061368,51,0.7777068953565357,2018-11-26
-dkLFUp,43TXe3,nft4,alcc,Inverse variance weighted,43.09013767051072,52,0.8058875731591897,2018-11-26
+dkLFUp,43TXe3,nft4,alcc,MR Egger,43.05726787061368,51,0.7777068953565357,2019-01-29
+dkLFUp,43TXe3,nft4,alcc,Inverse variance weighted,43.09013767051072,52,0.8058875731591897,2019-01-29

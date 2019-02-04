@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wJ6x4Z	uMUEG9	ptau	hear	0	41.75939105592783	0.2104
+kXG9A3	SD6pyK	ptau	hear	0	41.75939105592783	0.2112

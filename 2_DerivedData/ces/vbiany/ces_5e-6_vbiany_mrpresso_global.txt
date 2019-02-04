@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qT8bvb	ajGsOA	vbiany	ces	0	43.43973351345664	0.2876
+VL1GSp	GbQuHv	vbiany	ces	0	43.43973351345664	0.2916

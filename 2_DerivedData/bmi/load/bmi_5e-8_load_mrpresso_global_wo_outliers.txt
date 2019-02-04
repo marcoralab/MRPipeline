@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-vyPoAs	QiueUw	load	bmi	5	2006.1814000733675	<1.33333333333333e-05
+RXXYma	FmWBYo	load	bmi	5	2006.1814000733675	<1.33333333333333e-05

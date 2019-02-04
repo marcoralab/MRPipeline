@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-0tCUDa	8c1ty2	aaos	sociso	1	33.174566691519615	0.149
+zHJ8dr	NBTdqk	aaos	sociso	1	33.174566691519615	0.156

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vxACs5	DVLLMw	load	fish	1	2998.429996509512	<4e-05
+Z5RBKz	QNJFup	load	fish	1	2998.429996509512	<4e-05

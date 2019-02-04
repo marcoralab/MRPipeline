@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Crkp8q	rLeVZi	npany	fish	1	481.67047802184334	<4e-05
+xV7EpB	XUrxm9	npany	fish	1	481.67047802184334	<4e-05

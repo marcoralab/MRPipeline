@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+B3D2a8	XHhRjO	vbiany	ais	0	NA	NA

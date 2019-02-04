@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vNMmrB	x23f78	ptau	ais	0	4.54438269658131	0.958
+dkN2nD	72C8AT	ptau	ais	0	4.54438269658131	0.962

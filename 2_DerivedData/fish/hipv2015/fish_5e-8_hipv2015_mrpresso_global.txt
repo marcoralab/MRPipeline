@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-H2CiE3	D7LtER	hipv2015	fish	0	122.7038620827945	0.1491
+YK6UZA	umngr2	hipv2015	fish	0	122.7038620827945	0.1406

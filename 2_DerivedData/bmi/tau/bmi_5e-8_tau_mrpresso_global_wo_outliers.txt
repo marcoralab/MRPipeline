@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-BJ2s38	AfFNJy	tau	bmi	0	NA	NA
+Zo3tIa	qPfxQX	tau	bmi	0	NA	NA

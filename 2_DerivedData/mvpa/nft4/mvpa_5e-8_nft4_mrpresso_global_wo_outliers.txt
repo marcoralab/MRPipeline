@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-UOLKoz	Gw6Mnl	nft4	mvpa	2	43.751797449042385	0.2206
+Us2TuI	pPn4vD	nft4	mvpa	2	43.882090727843284	0.2076

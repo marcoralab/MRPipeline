@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-eAYb5r	DWzFO8	hipv	diab	0	577.6800779992462	<4e-05
+laxsRT	CNDgBM	hipv	diab	0	577.6800779992462	4e-5

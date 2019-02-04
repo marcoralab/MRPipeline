@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-j27fnl,nAmtlh,hipv2015,audit,MR Egger,57.362657899308985,58,0.49895805958738426,2018-11-26
-j27fnl,nAmtlh,hipv2015,audit,Inverse variance weighted,59.87109296344964,59,0.4438775571783913,2018-11-26
+xmsPFW,ANsgCd,hipv2015,audit,MR Egger,57.7006856703958,59,0.5235108772404377,2019-01-30
+xmsPFW,ANsgCd,hipv2015,audit,Inverse variance weighted,60.22951924321591,60,0.4673979847184652,2019-01-30

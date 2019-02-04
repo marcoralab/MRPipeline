@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Rse3Ds	HT17QZ	nft4	las	0	NA	NA

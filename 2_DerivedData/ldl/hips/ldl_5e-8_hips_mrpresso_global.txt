@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-96parE	2Ime2Q	hips	ldl	0	228.13113662506467	0.202
+xwUF3v	Ciil1h	hips	ldl	0	228.62307730844725	0.1944

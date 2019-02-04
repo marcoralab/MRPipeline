@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-O6bbxG	Kn2Vgy	nft4	audit	0	58.0077475075221	0.7922
+KMOstf	t0KWWe	nft4	audit	0	58.0077475075221	0.7924

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-w35jBA	9G8ARp	ptau	fish	2	342.79674678594216	0.09372
+yHQqgP	av9LSh	ptau	fish	2	342.7967467859422	0.09368

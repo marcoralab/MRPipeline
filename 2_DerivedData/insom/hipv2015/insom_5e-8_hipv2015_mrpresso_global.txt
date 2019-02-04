@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4SfCpp	go8okC	hipv2015	insom	0	24.9656475052075	0.071
+Ii5t2R	W0VQUW	hipv2015	insom	0	24.9656475052075	0.098

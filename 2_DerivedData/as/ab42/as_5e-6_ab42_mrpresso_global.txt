@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yWpp20	5b7i74	ab42	as	0	63.72571606360519	0.0632
+EkCOxk	qzZVA4	ab42	as	0	63.72571606360519	0.068

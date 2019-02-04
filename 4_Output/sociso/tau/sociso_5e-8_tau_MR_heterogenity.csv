@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Oezl9k,GmH7NZ,tau,sociso,MR Egger,28.021604477388237,17,0.044686405140445896,2018-11-26
-Oezl9k,GmH7NZ,tau,sociso,Inverse variance weighted,28.05669508796082,18,0.061197647484384214,2018-11-26
+NbGimp,ezaKpX,tau,sociso,MR Egger,28.021604477388237,17,0.044686405140445896,2019-01-30
+NbGimp,ezaKpX,tau,sociso,Inverse variance weighted,28.05669508796082,18,0.061197647484384214,2019-01-30
