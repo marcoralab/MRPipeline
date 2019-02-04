@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+ktd0xw	6lwXyf	pbc	auditp	2	18.931638254872205	0.512
