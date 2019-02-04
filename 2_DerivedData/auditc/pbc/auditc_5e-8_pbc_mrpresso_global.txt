@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+fiY0dZ	zlGoic	pbc	auditc	1	25.483676572527937	0.004

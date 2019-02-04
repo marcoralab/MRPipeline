@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+EEShi8,UCavhm,alccliu,load,MR Egger,37.64236767980319,39,0.5317804918625253,2019-01-31
+EEShi8,UCavhm,alccliu,load,Inverse variance weighted,38.639488257583736,40,0.5314971939579414,2019-01-31

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EEShi8	UCavhm	alccliu	load	0	40.738005991335804	0.537

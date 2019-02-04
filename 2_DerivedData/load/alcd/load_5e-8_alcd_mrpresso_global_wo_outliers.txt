@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+4aus1P	mSlnDH	alcd	load	0	NA	NA

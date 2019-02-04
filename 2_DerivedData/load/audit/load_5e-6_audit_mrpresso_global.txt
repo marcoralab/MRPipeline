@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mbWVvr	DXGcNG	audit	load	3	199.54396033561065	<1e-04
+TjVUpA	YsRXhV	audit	load	3	199.54396033561062	<1e-04

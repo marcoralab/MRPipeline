@@ -1476,6 +1476,24 @@ dat_alt.hg19 <- dat_alt.raw %>%
 write_tsv(dat_alt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alt_GWAS.Processed.gz'))
 ```
 
+## PBC
+Primary biliary cirrhosis (PBC) is a classical autoimmune liver disease for which effective immunomodulatory therapy is lacking. Here we perform meta-analyses of discovery data sets from genome-wide association studies of European subjects (n=2,764 cases and 10,475 controls) followed by validation genotyping in an independent cohort (n=3,716 cases and 4,261 controls). https://www.nature.com/articles/ncomms9019
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+pbc.raw <- read_table2('/Users/sheaandrews/Downloads/26394269-GCST003129-EFO_1001486-Build37.f.tsv.gz')
+pbc <- pbc.raw %>% 
+  rename(SNP = variant_id, CHR = chromosome, POS = base_pair_location, Effect_allele = effect_allele, Non_Effect_allele = other_allele, Beta = beta, SE = standard_error, P = p_value) %>%
+  mutate(N = 13239) %>% 
+  left_join(select(hrc_kg, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  filter(!is.na(POS)) %>%
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(pbc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/pbc_GWAS.Processed.gz'))
+
+```
+
+
 ## Stroke
 ### All Stroke
 GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
