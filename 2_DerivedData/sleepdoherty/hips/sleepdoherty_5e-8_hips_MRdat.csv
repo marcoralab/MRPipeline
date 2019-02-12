@@ -1,0 +1,12 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs113851554,G,T,G,T,0.0896611111111,-0.1482,0.943193,0.9554,FALSE,FALSE,FALSE,SCgGXJ,0.2938,0.614,hips,TRUE,reported,0.0102925862069,1.1e-17,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs11672103,C,T,C,T,-0.0296796934866,0.0916,0.446783,0.47,FALSE,FALSE,FALSE,SCgGXJ,0.09,0.3086,hips,TRUE,reported,0.00464429118774,1.2e-10,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs1198575,T,C,T,C,-0.0369973180077,0.0973,0.190057,0.2062,FALSE,FALSE,FALSE,SCgGXJ,0.1166,0.4041,hips,TRUE,reported,0.00586752873563,1.2e-10,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs12190064,G,A,G,A,0.0287718390805,0.126,0.718039,0.6911,FALSE,FALSE,FALSE,SCgGXJ,0.0991,0.2036,hips,TRUE,reported,0.00513114942529,2.7e-8,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs2006810,T,C,T,C,-0.0276450191571,-0.1001,0.604456,0.6239,FALSE,FALSE,FALSE,SCgGXJ,0.0924,0.2787,hips,TRUE,reported,0.00470365900383,1.5e-8,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs2416963,C,T,C,T,0.0297415708812,-0.1163,0.589103,0.5962000000000001,FALSE,FALSE,FALSE,SCgGXJ,0.0918,0.2052,hips,TRUE,reported,0.00466888888889,1.8e-9,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs62073146,A,G,A,G,0.0368360153257,0.1313,0.806498,0.8406,FALSE,FALSE,FALSE,SCgGXJ,0.1402,0.3487,hips,TRUE,reported,0.00610590038314,9e-10,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs62158170,A,G,A,G,-0.051014559387,-0.0101,0.783008,0.7753,FALSE,FALSE,FALSE,SCgGXJ,0.1086,0.926,hips,TRUE,reported,0.00558570881226,4.1e-19,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs62508246,G,C,G,C,0.030598467433,0.0025,0.756013,0.7398,FALSE,TRUE,FALSE,SCgGXJ,0.1016,0.9803,hips,TRUE,reported,0.00540620689655,1.8e-8,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs6439701,T,C,T,C,-0.0267641762452,-0.2329,0.605221,0.6273,FALSE,FALSE,FALSE,SCgGXJ,0.0898,0.009533,hips,TRUE,reported,0.00471867816092,6e-9,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA
+rs6931466,A,G,A,G,0.0378990421456,-0.1047,0.746915,0.7409,FALSE,FALSE,FALSE,SCgGXJ,0.1022,0.3054,hips,TRUE,reported,0.00531005747126,1.5e-13,sleepdoherty,TRUE,reported,ey8cIx,2,TRUE,NA

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+TIRNVa,mSDaKs,hipv,sleepdoherty,MR Egger,10.742985300439168,10,0.37788932394238006,2019-02-12
+TIRNVa,mSDaKs,hipv,sleepdoherty,Inverse variance weighted,10.976350571207728,11,0.4452466851294857,2019-02-12

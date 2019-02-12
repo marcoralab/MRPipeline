@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+TIRNVa,mSDaKs,hipv,sleepdoherty,Inverse variance weighted (fixed effects),12,0.015449578450624115,0.08116371500118977,0.8490342450634366,2019-02-12
+TIRNVa,mSDaKs,hipv,sleepdoherty,Weighted median,12,0.007824850060234766,0.10921145623960594,0.9428815467994405,2019-02-12
+TIRNVa,mSDaKs,hipv,sleepdoherty,Weighted mode,12,0.01287854068031391,0.1701813201524975,0.9410361245308216,2019-02-12
+TIRNVa,mSDaKs,hipv,sleepdoherty,MR Egger,12,0.13242749984910243,0.26470854232277946,0.6277056738965177,2019-02-12

@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+TFEgJb,mH7On7,npany,sleepdoherty,Inverse variance weighted (fixed effects),76,-0.43884861204486003,0.37085840628788713,0.2366776034498481,2019-02-12
+TFEgJb,mH7On7,npany,sleepdoherty,Weighted median,76,-0.8394159310287639,0.5614401010095778,0.13488516872025813,2019-02-12
+TFEgJb,mH7On7,npany,sleepdoherty,Weighted mode,76,-1.5802345943146836,1.1930634304619685,0.1893528601838871,2019-02-12
+TFEgJb,mH7On7,npany,sleepdoherty,MR Egger,76,-0.963226895495612,1.2578366888565444,0.4462426166502824,2019-02-12

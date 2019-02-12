@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+UQuJFj,ohQHRV,vbiany,sleepdoherty,MR Egger,86.07252265573106,74,0.1593496519789447,2019-02-12
+UQuJFj,ohQHRV,vbiany,sleepdoherty,Inverse variance weighted,89.22826285020606,75,0.1252539648268131,2019-02-12
