@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gYBWV8	y1RIni	load	alccliu	1	205.10281852192617	0.0024

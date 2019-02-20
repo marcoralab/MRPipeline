@@ -16,6 +16,7 @@ Pthreshold = config['Pthreshold']
 DataIn = config['DataIn']
 traits = config['traits']
 DataOut = config['DataOut']
+DataOutput = config['DataOutput']
 
 localrules: all, FindProxySnps
 
@@ -36,32 +37,32 @@ filtered_product = filter_combinator(product, forbidden)
 
 rule all:
     input:
-        expand('4_Output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
-        expand("4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
+        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
+        expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
 
 rule clump:
     input: DataIn + '{ExposureCode}_GWAS.Processed.gz'
-    output: DataIn + '{ExposureCode}.clumped'
+    output: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
     params:
         ref = REF,
-        out =  DataIn + '{ExposureCode}',
+        out =  DataOut + '{ExposureCode}/{ExposureCode}',
         r2 = r2,
         kb = kb
     shell:
         "plink --bfile {params.ref}  --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
 
 rule gzip:
-    input: DataIn + '{ExposureCode}.clumped'
-    output: DataIn + '{ExposureCode}.clumped.gz'
+    input: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
+    output: DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     shell: "gzip {input}"
 
 rule ExposureSnps:
     input:
         script = '3_Scripts/ExposureData.R',
         summary = DataIn + '{ExposureCode}_GWAS.Processed.gz',
-        ExposureClump = DataIn + '{ExposureCode}.clumped.gz'
+        ExposureClump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
-        out = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
+        out = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
     params:
         Pthreshold = '{Pthreshold}'
     shell:
@@ -71,34 +72,34 @@ rule manhattan_plot:
     input:
         script = '3_Scripts/manhattan_plot.R',
         ingwas = DataIn + '{ExposureCode}_GWAS.Processed.gz',
-        inclump = DataIn + '{ExposureCode}.clumped.gz'
+        inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         PlotTitle = "{ExposureCode}"
     output:
-        out = '4_Output/plots/Manhattan/{ExposureCode}_ManhattanPlot.png'
+        out = DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png'
     shell:
         "Rscript {input.script} {input.ingwas} {input.inclump} {output.out} \"{params.PlotTitle}\""
 
 rule OutcomeSnps:
     input:
         script = '3_Scripts/OutcomeData.R',
-        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz"
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
     params:
-        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
         'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
 
 rule FindProxySnps:
     input:
         script = '3_Scripts/FindProxySNPs.R',
-        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
+        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt",
     params:
-        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
         'Rscript {input.script} {input.OutcomeSummary} {params.Outcome}'
 
@@ -106,23 +107,23 @@ rule ExtractProxySnps:
     input:
         script = '3_Scripts/ExtractProxySNPs.R',
         OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz",
-        OutcomeSNPs = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        OutcomeProxys = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt"
+        OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt"
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
     params:
-        Outcome = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
         'Rscript {input.script} {input.OutcomeSummary} {input.OutcomeProxys} {input.OutcomeSNPs} {params.Outcome}'
 
 rule Harmonize:
     input:
         script = '3_Scripts/DataHarmonization.R',
-        ExposureSummary = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt"
+        ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt"
     output:
-        Harmonized = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
+        Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
     params:
         ExposureCode = '{ExposureCode}',
         OutcomeCode = '{OutcomeCode}'
@@ -132,24 +133,24 @@ rule Harmonize:
 rule MrPresso:
     input:
         script = '3_Scripts/MRPRESSO.R',
-        mrdat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
+        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
     params:
-        out = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
+        out = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
 rule MRPRESSO_wo_outliers:
     input:
         script = '3_Scripts/MRPRESSO_wo_outliers.R',
-        mrdat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
     output:
-        "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
     params:
-        out = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
+        out = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
@@ -157,18 +158,18 @@ rule html_Report:
     input:
         script = '3_Scripts/mr_report.Rmd',
         traits = traits,
-        ExposureSnps = "2_DerivedData/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        ProxySnps = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
-        HarmonizedDat = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
-        mrpresso_global = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
-        mrpresso_global_wo_outliers = "2_DerivedData/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt"
+        ExposureSnps = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        ProxySnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
+        HarmonizedDat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        mrpresso_global = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        mrpresso_global_wo_outliers = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt"
     output:
-        "4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
+        DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
     params:
         rwd = RWD,
-        output_dir = "4_Output/{ExposureCode}/{OutcomeCode}/",
-        output_name = "4_Output/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        output_dir = DataOutput + "{ExposureCode}/{OutcomeCode}/",
+        output_name = DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
         ExposureCode = '{ExposureCode}',
         OutcomeCode = '{OutcomeCode}',
         Pthreshold = "{Pthreshold}",

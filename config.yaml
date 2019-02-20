@@ -6,7 +6,8 @@
 #mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 200 --max-jobs-per-second 1 --keep-going
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/"
+DataOut: "2_DerivedData/test"
+DataOutput: "4_Output/test/"
 
 REF: '1_RawData/EUR_All_Chr'
 clumpr2: 0.1
