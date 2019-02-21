@@ -75,5 +75,5 @@ if(length(IndexSnps2) >= 1){
 out.TRAIT <- arrangeGrob(p.TRAIT,  tableGrob(tab.TRAIT, theme = ttheme_minimal(base_size = 8)), 
                           ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
 
-ggsave(outfile_plot, device = 'png', units = 'in', width = 10, height = 5, plot = out.TRAIT)
+ggsave(outfile_plot, device = 'png', units = 'in', width = 10, height = 5, plot = out.TRAIT, relative.positions = TRUE)
 
