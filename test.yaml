@@ -13,7 +13,7 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear', 'as', 'ais', 'ces', 'las', 'svs']
+ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'sleepdoherty', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
 OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
 
 ## Forbidden wildcard combinations
