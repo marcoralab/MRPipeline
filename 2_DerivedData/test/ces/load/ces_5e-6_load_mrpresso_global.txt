@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rm3shH	FfAbIm	load	ces	0	45.55722646658714	0.1774

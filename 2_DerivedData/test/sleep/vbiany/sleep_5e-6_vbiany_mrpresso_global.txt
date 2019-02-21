@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4rWab3	1FvMiU	vbiany	sleep	0	19.843327555891737	0.728

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gMmfRp	TZtawd	nft4	smkaoi	0	43.07682969406446	0.746

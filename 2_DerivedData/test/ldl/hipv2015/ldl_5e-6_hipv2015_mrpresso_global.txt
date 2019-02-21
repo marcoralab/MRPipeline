@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7PCgMQ	Brsxh6	hipv2015	ldl	0	144.8468397506952	0.0698

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zGIFBa	APTlBP	hipv	sleep	0	33.97040391414563	0.213

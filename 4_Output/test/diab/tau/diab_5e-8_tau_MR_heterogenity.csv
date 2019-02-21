@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EZCVkc,HhfALq,tau,diab,MR Egger,139.71197996765437,120,0.10542716508955112,2019-02-21
-EZCVkc,HhfALq,tau,diab,Inverse variance weighted,139.73327807315724,121,0.11712322693431688,2019-02-21

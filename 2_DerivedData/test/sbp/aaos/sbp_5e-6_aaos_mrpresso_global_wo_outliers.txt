@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-lSd14l	RY290c	aaos	sbp	0	NA	NA

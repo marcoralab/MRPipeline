@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-vHjW1g	Ob4nus	vbiany	insom	0	NA	NA

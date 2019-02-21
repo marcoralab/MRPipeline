@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-R7lMkv,NapPuZ,hips,mdd,MR Egger,141.21084174394673,145,0.5734751203128702,2019-02-21
-R7lMkv,NapPuZ,hips,mdd,Inverse variance weighted,142.88004194511115,146,0.5575665658692379,2019-02-21

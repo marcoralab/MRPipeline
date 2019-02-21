@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MHzJJ1,ryAzIn,aaos,dbp,MR Egger,1302.7988627151515,1168,0.003445449570459876,2019-02-21
-MHzJJ1,ryAzIn,aaos,dbp,Inverse variance weighted,1303.546129908904,1169,0.0035074680403529503,2019-02-21

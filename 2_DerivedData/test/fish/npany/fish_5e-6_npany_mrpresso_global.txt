@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-D4PKfX	30RIdz	npany	fish	1	355.372338860093	<1e-04

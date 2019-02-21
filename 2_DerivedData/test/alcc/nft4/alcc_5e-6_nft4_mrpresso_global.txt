@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DFyluI	EKQrLu	nft4	alcc	0	34.87306793259507	0.8982

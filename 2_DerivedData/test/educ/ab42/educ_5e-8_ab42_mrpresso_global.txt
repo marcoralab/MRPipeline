@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FCYZYF	cSb4In	ab42	educ	0	668.9878431855034	0.47924

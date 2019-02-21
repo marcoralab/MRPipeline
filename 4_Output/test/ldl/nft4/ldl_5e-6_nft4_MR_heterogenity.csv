@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-gMlpRt,LcRcCv,nft4,ldl,MR Egger,133.36706503183598,121,0.20841660687260535,2019-02-21
-gMlpRt,LcRcCv,nft4,ldl,Inverse variance weighted,133.6069344744365,122,0.2227055004916019,2019-02-21

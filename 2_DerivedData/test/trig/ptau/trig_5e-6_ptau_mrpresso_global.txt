@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-AbcUrm	22329W	ptau	trig	0	127.54632868787319	0.2031

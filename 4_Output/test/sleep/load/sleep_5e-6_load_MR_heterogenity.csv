@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-20vorv,XLdtb0,load,sleep,MR Egger,13.303766543212847,20,0.8639736057343036,2019-02-21
-20vorv,XLdtb0,load,sleep,Inverse variance weighted,15.064236677205248,21,0.8197148427840322,2019-02-21

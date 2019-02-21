@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-W71dnz	FENwCG	ptau	ais	0	38.81252527509989	0.3914

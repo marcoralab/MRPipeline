@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Zm5M2B	d19PZd	hipv	ldl	1	98.89849006705046	0.0685

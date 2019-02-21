@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MymxGp	sVmzjn	load	ldl	3	500.0660343110809	<1e-04

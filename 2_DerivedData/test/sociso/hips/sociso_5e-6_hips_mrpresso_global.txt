@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7rjMJG	utuvat	hips	sociso	0	96.31383570291793	0.3323

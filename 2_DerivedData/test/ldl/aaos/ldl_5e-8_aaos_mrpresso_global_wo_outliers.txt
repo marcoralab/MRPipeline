@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Uddi0b	KgXaMH	aaos	ldl	1	122.45877888074133	0.0055

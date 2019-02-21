@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DzgvPP	25Rsqs	hipv2015	fish	0	221.66394821894738	0.1921

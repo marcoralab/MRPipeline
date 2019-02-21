@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-c3TUM4,nTRNiP,npany,sleep,MR Egger,24.057914093221903,21,0.29026088764326696,2019-02-21
-c3TUM4,nTRNiP,npany,sleep,Inverse variance weighted,24.293123698446696,22,0.3320541458861658,2019-02-21

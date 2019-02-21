@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-lSd14l	RY290c	aaos	sbp	0	1344.111070988733	9.2e-4

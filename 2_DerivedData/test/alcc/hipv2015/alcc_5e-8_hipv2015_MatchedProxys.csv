@@ -1,3 +1,0 @@
-query_snp_rsid,rsID,ld.r2,Dprime,ref.proxy,alt.proxy,CHR,POS,Effect_allele.proxy,Non_Effect_allele.proxy,EAF,Beta,SE,P,r2,N,ref,alt,Effect_allele,Non_Effect_allele
-rs140184756,rs141300829,1,1,A,C,4,99300438,C,A,0.005277,-26.8169,37.8915,0.4791,7.549816475145416,6957,A,G,G,A
-rs145452708,rs138495951,1,1,G,A,4,100249726,A,G,0.007916,40.5851,23.3381,0.08203,25.87125326645873,8907,G,C,C,G

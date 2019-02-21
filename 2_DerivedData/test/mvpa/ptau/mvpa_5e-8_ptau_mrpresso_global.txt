@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KJydCa	S8NQew	ptau	mvpa	1	159.27460722475197	<0.001

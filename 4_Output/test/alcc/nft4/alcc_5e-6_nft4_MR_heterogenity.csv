@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DFyluI,EKQrLu,nft4,alcc,MR Egger,33.163722591183856,43,0.8601483207508128,2019-02-21
-DFyluI,EKQrLu,nft4,alcc,Inverse variance weighted,33.19990277505422,44,0.8828006106849416,2019-02-21

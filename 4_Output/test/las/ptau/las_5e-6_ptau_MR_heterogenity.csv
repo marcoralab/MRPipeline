@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WsgCgN,fmSl1l,ptau,las,MR Egger,16.935028757162417,17,0.45877631255447443,2019-02-21
-WsgCgN,fmSl1l,ptau,las,Inverse variance weighted,17.344310275141314,18,0.49956452154699016,2019-02-21

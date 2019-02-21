@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-G6017a,NcyME8,load,mvpa,MR Egger,4.762275074199712,15,0.9939549586478315,2019-02-21
-G6017a,NcyME8,load,mvpa,Inverse variance weighted,5.3022405427142,16,0.9940345058782972,2019-02-21

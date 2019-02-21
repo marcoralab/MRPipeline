@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-o3j9pn	NrNxxC	aaos	fish	1	510.30780551682847	<2e-04

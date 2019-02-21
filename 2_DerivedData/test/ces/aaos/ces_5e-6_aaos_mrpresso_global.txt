@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-xInSTa	GC3TiC	aaos	ces	0	46.88763294766555	0.332

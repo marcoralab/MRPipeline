@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-kT52Ek	JelQEV	load	alccliu	1	51.11325996708855	0.1578

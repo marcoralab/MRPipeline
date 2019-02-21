@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-kT52Ek,JelQEV,load,alccliu,MR Egger,65.0393273648683,38,0.004080387102213684,2019-02-21
-kT52Ek,JelQEV,load,alccliu,Inverse variance weighted,68.22175054261511,39,0.0026000421066998277,2019-02-21

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-dmzP9f	5Ryieo	aaos	mvpa	1	137.8852494445898	0.0276

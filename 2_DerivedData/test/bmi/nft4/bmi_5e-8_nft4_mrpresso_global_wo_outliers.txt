@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-qdQLCu	pBpod2	nft4	bmi	1	926.2195646126302	0.08112

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sHMFWx,4R6XC3,tau,mvpa,MR Egger,191.2445311760461,74,2.5255485370812025e-12,2019-02-21
-sHMFWx,4R6XC3,tau,mvpa,Inverse variance weighted,195.41961740062786,75,1.1062412950055472e-12,2019-02-21

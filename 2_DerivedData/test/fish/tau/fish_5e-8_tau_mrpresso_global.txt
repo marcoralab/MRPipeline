@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-kLnewY	QUesSI	tau	fish	0	58.958374384394226	0.5234

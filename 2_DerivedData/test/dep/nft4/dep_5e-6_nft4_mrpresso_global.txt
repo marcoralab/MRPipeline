@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Un90A4	b4xCmI	nft4	dep	0	103.89793627959503	0.8433

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-15Nged	BTB05j	hips	fish	0	NA	NA

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-7mN2JF,DeKr8c,hipv2015,bmi,MR Egger,1521.4500100911366,1432,0.04944498122863714,2019-02-21
-7mN2JF,DeKr8c,hipv2015,bmi,Inverse variance weighted,1526.2149157342376,1433,0.042971461653302845,2019-02-21

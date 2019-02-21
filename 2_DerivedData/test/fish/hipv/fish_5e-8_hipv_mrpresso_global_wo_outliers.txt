@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-XvQt81	Qpn4u8	hipv	fish	2	78.46367189699838	0.1064

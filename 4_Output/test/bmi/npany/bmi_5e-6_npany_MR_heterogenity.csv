@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FLiMKX,eGbc8X,npany,bmi,MR Egger,1398.3651809715975,1437,0.7626232255304701,2019-02-21
-FLiMKX,eGbc8X,npany,bmi,Inverse variance weighted,1399.1416317258609,1438,0.7638549770050754,2019-02-21

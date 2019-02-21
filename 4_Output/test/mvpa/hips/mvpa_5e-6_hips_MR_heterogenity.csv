@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EVtEIA,SOPP9F,hips,mvpa,MR Egger,112.52289127610408,102,0.2238823310358177,2019-02-21
-EVtEIA,SOPP9F,hips,mvpa,Inverse variance weighted,116.63164504620589,103,0.16933264901796616,2019-02-21

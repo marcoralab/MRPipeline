@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gKIlrm	eFTLlR	hipv	tc	1	120.08290766785595	0.0532

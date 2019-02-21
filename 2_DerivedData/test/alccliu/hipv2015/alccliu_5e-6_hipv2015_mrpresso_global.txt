@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-P39Y4u	MwndDU	hipv2015	alccliu	0	161.56527104580564	0.2785

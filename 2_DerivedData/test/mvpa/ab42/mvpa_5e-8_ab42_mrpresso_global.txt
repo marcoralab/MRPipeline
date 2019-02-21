@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-01cAmx	hmjIBn	ab42	mvpa	4	574.6748902774	<0.001

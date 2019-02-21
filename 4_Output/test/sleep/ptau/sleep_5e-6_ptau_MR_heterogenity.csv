@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-dyaE46,8bwaXO,ptau,sleep,MR Egger,22.691663548746252,18,0.20271823905301245,2019-02-21
-dyaE46,8bwaXO,ptau,sleep,Inverse variance weighted,22.793909497195965,19,0.24654122027959363,2019-02-21

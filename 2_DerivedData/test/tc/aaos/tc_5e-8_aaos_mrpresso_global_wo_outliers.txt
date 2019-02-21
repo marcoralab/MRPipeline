@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-5NunSw	HZKZ5b	aaos	tc	2	120.00763285915484	0.0845

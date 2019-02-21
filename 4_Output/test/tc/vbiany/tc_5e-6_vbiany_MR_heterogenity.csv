@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-IXCaRH,TL6fji,vbiany,tc,MR Egger,137.49184065518853,144,0.6368250574903499,2019-02-21
-IXCaRH,TL6fji,vbiany,tc,Inverse variance weighted,138.73779783001186,145,0.6307562391915028,2019-02-21

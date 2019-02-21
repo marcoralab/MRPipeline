@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ADy3Dz	f0As5G	hips	as	1	13.96266345749463	0.201

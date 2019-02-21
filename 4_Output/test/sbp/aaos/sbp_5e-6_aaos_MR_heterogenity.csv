@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lSd14l,RY290c,aaos,sbp,MR Egger,1295.0382775052988,1145,0.0012564880249487653,2019-02-21
-lSd14l,RY290c,aaos,sbp,Inverse variance weighted,1295.6383249994606,1146,0.0012939933745250967,2019-02-21

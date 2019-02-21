@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uoKnuc	AqBurv	hipv	pp	1	777.7079293739329	<4e-05

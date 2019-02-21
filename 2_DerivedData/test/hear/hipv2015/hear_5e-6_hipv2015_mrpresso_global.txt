@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-sqShTe	4WoOnp	hipv2015	hear	0	89.29195617589828	0.7767

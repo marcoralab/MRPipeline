@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-goPXch,WxGNqd,load,cpd,MR Egger,33.21605643035251,23,0.07737514807089205,2019-02-21
-goPXch,WxGNqd,load,cpd,Inverse variance weighted,37.936879626683,24,0.035192095669811255,2019-02-21

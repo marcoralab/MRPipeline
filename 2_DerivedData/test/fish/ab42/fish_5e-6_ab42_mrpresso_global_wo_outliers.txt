@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ZkddZk	0D2r0T	ab42	fish	0	NA	NA

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-w37BrS,EUM1PG,ab42,las,MR Egger,14.90867354559705,17,0.602059789167423,2019-02-21
-w37BrS,EUM1PG,ab42,las,Inverse variance weighted,16.138878317587178,18,0.5828555394676317,2019-02-21

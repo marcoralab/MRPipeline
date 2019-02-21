@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-jMQEos,M2SQBM,hipv2015,diab,MR Egger,138.14473982619836,127,0.23534273920835613,2019-02-21
-jMQEos,M2SQBM,hipv2015,diab,Inverse variance weighted,138.75020497870554,128,0.24341879340966932,2019-02-21

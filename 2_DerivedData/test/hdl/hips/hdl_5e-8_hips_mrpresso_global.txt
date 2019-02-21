@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-iiSss7	frNLrL	hips	hdl	0	104.38421317171529	0.433

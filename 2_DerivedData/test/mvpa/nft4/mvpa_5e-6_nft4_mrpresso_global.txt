@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-kGhzaw	wh84Ng	nft4	mvpa	1	273.69216451568775	<1e-04

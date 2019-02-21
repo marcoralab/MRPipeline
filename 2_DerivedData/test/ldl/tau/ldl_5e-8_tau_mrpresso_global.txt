@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mwOYBA	LDGOZg	tau	ldl	0	72.567780343379	0.5156

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-76UJC4	V4bdsu	npany	ces	0	30.71484996439998	0.671

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-G6017a	NcyME8	load	mvpa	5	5.962094438941769	0.99

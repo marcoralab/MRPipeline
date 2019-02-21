@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-qdQLCu,pBpod2,nft4,bmi,MR Egger,1023.5357423953449,841,1.4561169937945878e-5,2019-02-21
-qdQLCu,pBpod2,nft4,bmi,Inverse variance weighted,1024.094749792625,842,1.5323530923719748e-5,2019-02-21

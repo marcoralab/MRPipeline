@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xXBCCL,SlTtkM,vbiany,fish,MR Egger,57.52310909180257,63,0.6710975682415743,2019-02-21
-xXBCCL,SlTtkM,vbiany,fish,Inverse variance weighted,57.542541841711596,64,0.7025320392068377,2019-02-21

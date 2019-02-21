@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gJ0rzZ	3qfglo	aaos	bmi	1	1639.6118758219418	0.005266666666666667

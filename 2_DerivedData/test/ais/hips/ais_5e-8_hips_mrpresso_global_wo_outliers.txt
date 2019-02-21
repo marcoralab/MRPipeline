@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-N8V7Yb	ZJVPad	hips	ais	1	11.748181076052271	0.326

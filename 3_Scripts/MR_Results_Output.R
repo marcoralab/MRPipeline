@@ -261,6 +261,141 @@ out.final <- out %>%
 
 #write_csv(out.final, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/Table_2.csv')
 
+##---------------------------------------------##
+# Writen Report 
+
+## Generate Odds ratios
+res_odds <- mr_best %>% 
+  left_join(select(out, outcome, exposure, pt, MR_PRESSO, pass, MR_Egger_MR.pval, Weighted_median_MR.pval, Weighted_mode_MR.pval)) %>% 
+  mutate(MRPRESSO.pval = as.numeric(str_replace(MRPRESSO.pval, '<', ""))) %>% 
+  rename(pval = MR.pval) %>%
+  filter(qval < 0.05) %>% 
+  filter(pass == TRUE) %>%
+  select(-nsnp, -n_outliers, -Signif, -pass, -RSSobs, -egger_intercept, -egger_se) %>%
+  generate_odds_ratios(.) %>% 
+  mutate(out = ifelse(outcome %in% c('load', 'aaos', 'npany', 'nft4', 'vbiany'), 
+                      paste0(round(or, 2), ' [', round(or_lci95, 2), ', ', round(or_uci95, 2), ']'),
+                      paste0(round(b, 2), ' [', round(lo_ci, 2), ', ', round(up_ci, 2), ']'))) %>% 
+  print(n = Inf)
+
+test <- res_odds %>% #filter(outcome %in% c('load', 'aaos')) %>%
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure = fct_recode(exposure, 
+                               "alcohol consumption" = "alccliu", 
+                               "alcohol dependence" = "alcd", 
+                               "AUDIT" = "audit", 
+                               "smoking initiation" = "smki", 
+                               "cigarettes per day" = "smkcpd", 
+                               "diastolic blood pressure" = "dbp", 
+                               "depressive symptoms" = "dep", 
+                               'BMI' = "bmi", 
+                               "Type 2 Diabetes" = "diab", 
+                               "educational attainment" = "educ", 
+                               "oily fish intake" = "oilfish",
+                               "HDL-cholesterol" = "hdl", 
+                               "hearing difficulties" = "hear", 
+                               "insomnia symptoms" = "insom", 
+                               "LDL-cholesterol" = "ldl", 
+                               "Major Depressive Disorder" = "mdd", 
+                               "moderate-to-vigorous physcial activity" = "mvpa",
+                               "pulse pressure" = "pp", 
+                               "systolic blood pressure" = "sbp", 
+                               "social isolation" = "sociso", 
+                               "sleep duration" = "sleepdoherty",
+                               "total cholesterol" = "tc", 
+                               "triglycerides" = "trig"))
+
+
+mr_senseitivy <- function(x){
+  senesetivy_p <- select(x, MR_Egger_MR.pval, Weighted_median_MR.pval, Weighted_mode_MR.pval)
+  y <- which(senesetivy_p <= 0.05)
+  y <- str_replace(y, "1", 'MR-Egger')
+  y <- str_replace(y, "2", 'Weighted median')
+  y <- str_replace(y, "3", 'Weighted mode')
+  
+  sensetivity_out <- if(length(y) == 1){
+    paste0(y,  " sensitivity analysis.")
+  } else if(length(y) == 2){
+    paste0(y[1], ' and ', y[2], " sensitivity analyses.")
+  } else if(length(y) == 3){
+    paste0(y[1], ', ', y[2], ' and ', y[3], " sensitivity analyses.")
+  }
+  
+  with(x, if(MRPRESSO.pval > 0.05 & Egger.pval > 0.05){
+    "There was no evidence of heterogeneity or directional pleiotropy."
+  } else if(MRPRESSO.pval < 0.05 & Egger.pval < 0.05){
+    paste0("There was evidence of heterogeneity and directional pleiotropy, however, the associations were consistent in the ", 
+           sensetivity_out)
+  } else if(MRPRESSO.pval < 0.05 & Egger.pval > 0.05){
+    paste0("There was evidence of heterogeneity, but not of directional pleiotropy, however, the associations were consistent in the ", 
+           sensetivity_out)
+  } else if(MRPRESSO.pval > 0.05 & Egger.pval < 0.05){
+    paste0("There was evidence of directional pleiotropy, but not of heterogeneity, however, the associations were consistent in the ", 
+           sensetivity_out)
+  })
+}
+
+
+written_res <- lapply(1:nrow(test), function(x){
+  exposure_out <- test %>% slice(x)
+  if(exposure_out$outcome == 'load'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(or < 1, 'lower odds', 'increased odds'), 
+                              " of Alzheimer's disease ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(OR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'npany'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(or < 1, 'lower odds', 'increased odds'), 
+                              " of Neuritic Plaques ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(OR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'nft4'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(or < 1, 'lower odds', 'increased odds'), 
+                              " of Neurofibilary Tangles ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(OR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'vbiany'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(or < 1, 'lower odds', 'increased odds'), 
+                              " of vascurlar brain injury ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(OR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'aaos'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(or < 1, 'later', 'earlier'), 
+                              " Alzheimer's age of onset ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(HR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'hipv'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " hippocampal volume ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'ab42'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " Aβ42 ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'ptau'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " Ptau181 ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'tau'){
+    with(exposure_out, paste0("Genetically predicted ", exposure, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " Tau ", 
+                              ifelse(MR_PRESSO == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  }
+  
+})
+
 
 ##---------------------------------------## 
 # Heat Maps of Best Results

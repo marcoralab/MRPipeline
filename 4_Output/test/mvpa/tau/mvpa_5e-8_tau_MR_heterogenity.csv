@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-8XmgKY,cic49R,tau,mvpa,MR Egger,118.68006385785999,16,9.8493107882904e-18,2019-02-21
-8XmgKY,cic49R,tau,mvpa,Inverse variance weighted,141.40306782209564,17,1.1645281551087555e-21,2019-02-21

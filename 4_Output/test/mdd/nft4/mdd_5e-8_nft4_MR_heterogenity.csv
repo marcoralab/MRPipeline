@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HKbrvv,FKhMmv,nft4,mdd,MR Egger,38.86332092188348,38,0.4306525832783543,2019-02-21
-HKbrvv,FKhMmv,nft4,mdd,Inverse variance weighted,38.89237447899637,39,0.4747256261304396,2019-02-21

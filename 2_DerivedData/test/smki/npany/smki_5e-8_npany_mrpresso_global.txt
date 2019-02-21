@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-sPCNID	2s9znR	npany	smki	0	112.35417509468358	0.248

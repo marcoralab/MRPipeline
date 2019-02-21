@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-Skx8tk,PeRGv2,vbiany,smkaoi,Inverse variance weighted (fixed effects),6,-0.7383409098926947,1.2379863057899554,0.5509048698062085,2019-02-21
-Skx8tk,PeRGv2,vbiany,smkaoi,Weighted median,6,-0.2633419836235754,1.4831496378519917,0.8590717529567562,2019-02-21
-Skx8tk,PeRGv2,vbiany,smkaoi,Weighted mode,6,-0.16011056849088323,2.274568147728257,0.9466106278682024,2019-02-21
-Skx8tk,PeRGv2,vbiany,smkaoi,MR Egger,6,-7.673874239415271,5.179430570065091,0.21257076666769945,2019-02-21

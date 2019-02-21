@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-tDyWEs	uwQ1GA	ptau	hdl	1	179.08564761792675	0.1266

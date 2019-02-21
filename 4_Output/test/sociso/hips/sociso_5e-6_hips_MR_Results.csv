@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-7rjMJG,utuvat,hips,sociso,Inverse variance weighted (fixed effects),89,0.657257118860387,0.9366086962241761,0.4828404354932294,2019-02-21
-7rjMJG,utuvat,hips,sociso,Weighted median,89,0.3560303540376775,1.3235062069940742,0.7879255054342013,2019-02-21
-7rjMJG,utuvat,hips,sociso,Weighted mode,89,-0.4315956874018454,2.8700943886217463,0.8808114693955619,2019-02-21
-7rjMJG,utuvat,hips,sociso,MR Egger,89,-0.29459121574807495,4.235238348843662,0.9447057530039592,2019-02-21

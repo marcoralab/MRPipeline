@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-co0vPb	XPtRM3	hips	dep	1	23.015915672552225	0.109

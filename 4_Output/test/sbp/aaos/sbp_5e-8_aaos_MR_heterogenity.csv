@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VW2eav,WrxPGW,aaos,sbp,MR Egger,765.2637069523855,670,0.006098571202662746,2019-02-21
-VW2eav,WrxPGW,aaos,sbp,Inverse variance weighted,765.5190227673748,671,0.0064583428245427515,2019-02-21

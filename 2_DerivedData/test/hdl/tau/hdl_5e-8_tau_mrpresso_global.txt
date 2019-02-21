@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-u8q0FP	R2CUNL	tau	hdl	1	202.8323464684518	<1e-04

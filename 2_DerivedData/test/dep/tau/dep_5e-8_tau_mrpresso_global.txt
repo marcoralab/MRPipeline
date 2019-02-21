@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ICNFow	qRd70G	tau	dep	0	11.804445068380668	0.63

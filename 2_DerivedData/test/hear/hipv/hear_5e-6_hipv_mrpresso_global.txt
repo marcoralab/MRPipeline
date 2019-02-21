@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-NPg3UX	4Suswi	hipv	hear	0	104.02481912867954	0.4897

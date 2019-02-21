@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-TPGRUF,lb96IR,load,diab,MR Egger,181.57376790921083,127,0.0010722500117595255,2019-02-21
-TPGRUF,lb96IR,load,diab,Inverse variance weighted,181.99060474556455,128,0.001218434424059456,2019-02-21

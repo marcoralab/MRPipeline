@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-F6zyDk	2R0yLu	aaos	ldl	1	478.40061185254456	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-0FG63j	k0BOW3	vbiany	cpd	0	39.288567195139294	0.15

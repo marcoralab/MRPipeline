@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-nPSU1D,Cssdlb,ptau,audit,MR Egger,40.94226972780834,40,0.42896427884418364,2019-02-21
-nPSU1D,Cssdlb,ptau,audit,Inverse variance weighted,40.95693070848835,41,0.4725131182922626,2019-02-21

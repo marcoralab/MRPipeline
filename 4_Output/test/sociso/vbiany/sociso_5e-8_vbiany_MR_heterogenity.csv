@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oUALmu,IMODer,vbiany,sociso,MR Egger,17.071458111357863,13,0.19605798367780564,2019-02-21
-oUALmu,IMODer,vbiany,sociso,Inverse variance weighted,17.616123877449972,14,0.2248275277753286,2019-02-21

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-5NunSw	HZKZ5b	aaos	tc	2	470.3116551602302	<1e-04

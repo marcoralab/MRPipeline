@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HCCdMn,xOn6Xf,nft4,dbp,MR Egger,1105.3708466757091,1126,0.6639692965569586,2019-02-21
-HCCdMn,xOn6Xf,nft4,dbp,Inverse variance weighted,1106.023074899617,1127,0.6666010095902788,2019-02-21

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Jw8Lud	Lup5dL	npany	smki	0	324.95621055069967	0.28988

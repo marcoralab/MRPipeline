@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-A5pwlg,HADjgk,load,sociso,MR Egger,94.81640303151931,84,0.1970821405984344,2019-02-21
-A5pwlg,HADjgk,load,sociso,Inverse variance weighted,94.94896532096443,85,0.21598060481360512,2019-02-21

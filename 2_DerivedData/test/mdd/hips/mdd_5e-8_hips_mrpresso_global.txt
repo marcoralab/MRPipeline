@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-5rsWGI	Arid2h	hips	mdd	0	37.98279318507363	0.651

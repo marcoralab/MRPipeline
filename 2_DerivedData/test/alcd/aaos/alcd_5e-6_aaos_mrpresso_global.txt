@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-m8B5ta	HPyvPg	aaos	alcd	1	48.98405200533607	0.009

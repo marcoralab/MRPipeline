@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-x4vwDq	luoA4N	ab42	audit	0	37.515561374583	0.5332

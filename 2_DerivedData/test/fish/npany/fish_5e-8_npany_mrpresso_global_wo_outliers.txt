@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Pp0ICH	7WYJee	npany	fish	1	71.75222190299111	0.2932

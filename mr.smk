@@ -4,7 +4,7 @@ import os
 from itertools import product
 RWD = os.getcwd()
 
-shell.prefix('module load plink/1.90 R/3.4.3 curl/7.61.0; ')
+shell.prefix('module load plink/1.90 R/3.5.1 curl/7.61.0; ')
 
 
 REF = config['REF']

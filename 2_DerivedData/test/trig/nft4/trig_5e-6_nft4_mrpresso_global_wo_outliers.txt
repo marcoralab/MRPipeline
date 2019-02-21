@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-3cQrEN	MrzAzn	nft4	trig	2	96.3588756197177	0.942

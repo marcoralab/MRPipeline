@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-KLUYq1	6l0Wkt	aaos	bmi	1	984.7421506425329	0.00706

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-p9Elps,piS3KF,ptau,ldl,MR Egger,74.64744248812407,74,0.4570533118469806,2019-02-21
-p9Elps,piS3KF,ptau,ldl,Inverse variance weighted,75.76948569441585,75,0.45341576075056206,2019-02-21

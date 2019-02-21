@@ -1,3 +1,0 @@
-query_snp_rsid	rsID	chr	pos_hg38	ld.r2	Dprime	is_query_snp	ref	alt
-rs140572477	rs140572477	4	97027672	1	1	1	G	A
-rs140572477	rs147071310	4	97130086	1	1	0	C	A

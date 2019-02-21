@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-63utPU	nAPMEl	nft4	fish	1	391.24340853513297	<1e-04

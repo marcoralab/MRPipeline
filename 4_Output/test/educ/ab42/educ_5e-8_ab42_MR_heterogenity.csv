@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FCYZYF,cSb4In,ab42,educ,MR Egger,637.8701088619833,629,0.39446698667500635,2019-02-21
-FCYZYF,cSb4In,ab42,educ,Inverse variance weighted,639.6927014823264,630,0.3857430060812654,2019-02-21

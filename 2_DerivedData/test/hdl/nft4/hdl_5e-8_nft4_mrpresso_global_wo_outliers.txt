@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uDwoCG	03IcQr	nft4	hdl	2	93.31805454615619	0.7063

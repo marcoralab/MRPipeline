@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-C0IM8b	fDQwqR	aaos	diab	0	191.94716093546504	0.0011

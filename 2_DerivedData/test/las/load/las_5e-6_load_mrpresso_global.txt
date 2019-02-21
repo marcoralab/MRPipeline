@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-elEDUl	ShGQMq	load	las	1	55.8900276773744	0.002

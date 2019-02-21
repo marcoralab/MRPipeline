@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-dRZcvF,d5Cz7H,aaos,trig,MR Egger,76.0422365719083,58,0.05614784212798004,2019-02-21
-dRZcvF,d5Cz7H,aaos,trig,Inverse variance weighted,83.09015267382334,59,0.021093377514779525,2019-02-21

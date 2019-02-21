@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-bCMhcF,TTLsc1,hipv2015,las,MR Egger,32.47008842854218,34,0.5426552321104504,2019-02-21
-bCMhcF,TTLsc1,hipv2015,las,Inverse variance weighted,35.12951542026522,35,0.46206799975029383,2019-02-21

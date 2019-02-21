@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3YmdW7	anHOsK	nft4	smkcpd	0	17.519811394906192	0.801

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-r6lRaS	YW1yhH	tau	audit	0	NA	NA

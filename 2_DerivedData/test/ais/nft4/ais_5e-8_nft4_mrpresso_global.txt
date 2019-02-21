@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FcFSj6	VS5h9v	nft4	ais	0	7.632826439992781	0.721

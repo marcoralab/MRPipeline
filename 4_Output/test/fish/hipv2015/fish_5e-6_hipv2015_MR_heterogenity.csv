@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DzgvPP,25Rsqs,hipv2015,fish,MR Egger,209.49879834277337,196,0.24189139273949714,2019-02-21
-DzgvPP,25Rsqs,hipv2015,fish,Inverse variance weighted,211.90455521810082,197,0.22180071764026946,2019-02-21

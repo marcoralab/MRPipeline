@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-aaQl7q,GTm7dt,tau,sleep,MR Egger,16.789684434612195,16,0.3993311247129999,2019-02-21
-aaQl7q,GTm7dt,tau,sleep,Inverse variance weighted,18.01020074783417,17,0.38819761097301914,2019-02-21

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-LTECfw	bYn59X	hips	as	0	NA	NA

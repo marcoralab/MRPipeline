@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-suUQws	LG9d0Z	load	ldl	4	111.51311814436197	0.0123

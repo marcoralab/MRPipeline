@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-sbITU4	yKxxtn	npany	educ	0	742.6198936170446	0.27268

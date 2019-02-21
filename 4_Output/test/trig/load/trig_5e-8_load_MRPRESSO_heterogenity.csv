@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-kMlORG,GKA8ok,load,trig,MR Egger,70.93560396466478,55,0.07275597937649879,2019-02-21
-kMlORG,GKA8ok,load,trig,Inverse variance weighted,71.53526048307991,56,0.07892054813258326,2019-02-21

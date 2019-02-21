@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-CktLaF	rQAFu5	nft4	trig	2	56.57492023845457	0.6344
