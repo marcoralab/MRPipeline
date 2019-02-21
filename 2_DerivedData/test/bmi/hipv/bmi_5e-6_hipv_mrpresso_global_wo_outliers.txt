@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+ddWPiQ	WRNAOh	hipv	bmi	1	1740.4175868414425	1.3333333333333333e-5

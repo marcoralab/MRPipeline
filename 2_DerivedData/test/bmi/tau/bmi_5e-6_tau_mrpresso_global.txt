@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MApUo2	6So7ne	tau	bmi	1	1554.0178010790387	0.0034133333333333333

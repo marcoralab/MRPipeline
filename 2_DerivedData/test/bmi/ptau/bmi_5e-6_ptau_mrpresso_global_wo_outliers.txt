@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+BWrNNW	Y9rhHb	ptau	bmi	1	1471.5191564379936	0.33496
