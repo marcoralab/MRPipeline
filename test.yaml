@@ -14,7 +14,7 @@ Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
 ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'sleepdoherty', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
-OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+OutcomeCode: ['load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'vbiany']
 
 ## Forbidden wildcard combinations
 missing : [

@@ -8,5 +8,6 @@ Drafts*
 BP/*
 mrbase.oauth
 *.clumped.gz
+*.clumped
 *.log
 Rplots.pdf

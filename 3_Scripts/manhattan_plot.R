@@ -60,7 +60,7 @@ IndexSnps2 <- filter(trait.clump, P <= 5e-6 & P > 5e-8)$SNP
 
 ## Plot GWAS
 p.TRAIT <- ggman(filter(trait.gwas, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = max.p, 
-                 title = PlotTitle, sigLine = -log10(5e-8)) + 
+                 title = PlotTitle, sigLine = -log10(5e-8), relative.positions = TRUE) + 
   theme_classic() + theme(text = element_text(size=10)) + 
   geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 
   geom_hline(yintercept = -log10(5e-6), colour = 'red', size = 0.25, linetype = 2)
@@ -75,5 +75,5 @@ if(length(IndexSnps2) >= 1){
 out.TRAIT <- arrangeGrob(p.TRAIT,  tableGrob(tab.TRAIT, theme = ttheme_minimal(base_size = 8)), 
                           ncol = 2, widths = 2:1, layout_matrix = rbind(c(1,2), c(1, NA)))
 
-ggsave(outfile_plot, device = 'png', units = 'in', width = 10, height = 5, plot = out.TRAIT, relative.positions = TRUE)
+ggsave(outfile_plot, device = 'png', units = 'in', width = 10, height = 5, plot = out.TRAIT)
 
