@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+rQcSd5	uFQ780	aaos	trig	3	189.64559851850902	<1e-04

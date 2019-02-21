@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7aBHXv	LMZVOV	ab42	ldl	0	83.56638371229977	0.209

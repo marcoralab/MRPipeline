@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+vHjW1g,Ob4nus,vbiany,insom,MR Egger,106.85212517541679,92,0.1379598782646098,2019-02-21
+vHjW1g,Ob4nus,vbiany,insom,Inverse variance weighted,107.67589924946337,93,0.1417522098407184,2019-02-21

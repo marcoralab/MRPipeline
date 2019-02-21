@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+sFBxjY	0MvN0R	tau	fish	0	NA	NA

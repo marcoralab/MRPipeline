@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+A5pwlg	HADjgk	load	sociso	1	120.02544499059798	0.021

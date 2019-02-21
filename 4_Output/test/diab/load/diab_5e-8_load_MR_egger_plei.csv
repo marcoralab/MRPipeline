@@ -1,0 +1,2 @@
+id.exposure,id.outcome,outcome,exposure,egger_intercept,se,pval,date
+TPGRUF,lb96IR,load,diab,-0.002561677843244149,0.00446605620605971,0.5672528313451436,2019-02-21

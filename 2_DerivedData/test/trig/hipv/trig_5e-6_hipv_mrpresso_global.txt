@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+p84kt4	zSbYQJ	hipv	trig	1	167.72044331053777	0.0018

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+IKWH07	4xgN5J	hips	audit	0	43.51252686960355	0.7828

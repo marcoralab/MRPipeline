@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Ndpa9e	gEMclA	load	smki	0	147.9986390012081	0.0067

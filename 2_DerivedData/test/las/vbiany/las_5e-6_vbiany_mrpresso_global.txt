@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+cdjBog	2pzx27	vbiany	las	0	26.967291154479977	0.8022

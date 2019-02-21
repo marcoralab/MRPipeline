@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+C8Yz2K	xU3sEA	nft4	alcd	0	NA	NA

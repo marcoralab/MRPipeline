@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UsPA7b	uLGlUP	npany	pp	0	922.3412124938087	0.80242

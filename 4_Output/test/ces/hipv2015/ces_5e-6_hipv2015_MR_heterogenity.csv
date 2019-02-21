@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+coM6Jb,PeLSyL,hipv2015,ces,MR Egger,26.29794732524053,35,0.8554043095167126,2019-02-21
+coM6Jb,PeLSyL,hipv2015,ces,Inverse variance weighted,26.31480197112566,36,0.8816031104968627,2019-02-21

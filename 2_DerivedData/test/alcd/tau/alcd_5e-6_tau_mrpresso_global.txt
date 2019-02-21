@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9O7UA3	SlPkAc	tau	alcd	0	18.472210485244204	0.374

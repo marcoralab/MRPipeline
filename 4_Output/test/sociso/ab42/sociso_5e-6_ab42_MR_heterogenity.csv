@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+e6SH72,vwuRIM,ab42,sociso,MR Egger,83.51750282579931,71,0.14695557751185806,2019-02-21
+e6SH72,vwuRIM,ab42,sociso,Inverse variance weighted,83.52867572095322,72,0.16636066048129453,2019-02-21

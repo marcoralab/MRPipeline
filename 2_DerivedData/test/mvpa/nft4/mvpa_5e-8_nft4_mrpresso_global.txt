@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EoGiBW	evYayx	nft4	mvpa	2	205.99095235180837	<0.001

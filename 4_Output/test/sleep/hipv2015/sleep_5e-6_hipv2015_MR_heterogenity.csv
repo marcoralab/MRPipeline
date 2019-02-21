@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+4cizLn,FRXT3G,hipv2015,sleep,MR Egger,27.038381203574097,23,0.2543376860647332,2019-02-21
+4cizLn,FRXT3G,hipv2015,sleep,Inverse variance weighted,27.165097491840978,24,0.2968164566447102,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MLG9Kd,DDaDMn,vbiany,smkc,MR Egger,32.913739191775186,33,0.47147294054575734,2019-02-21
+MLG9Kd,DDaDMn,vbiany,smkc,Inverse variance weighted,32.91794659044484,34,0.520522551840786,2019-02-21

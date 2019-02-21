@@ -1,0 +1,11 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs11066320,A,G,A,G,0.0689,0.002364,0.4291,0.41458300000000003,FALSE,FALSE,FALSE,wMUFJs,0.00405,0.5594,ab42,TRUE,reported,0.01,6.06e-12,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs11242678,T,C,T,C,0.0723,0.003001,0.255,0.249784,FALSE,FALSE,FALSE,wMUFJs,0.004652,0.5189,ab42,TRUE,reported,0.0114,2.703e-10,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs2066864,A,G,A,G,0.0634,-0.003249,0.2452,0.245303,FALSE,FALSE,FALSE,wMUFJs,0.004688,0.4883,ab42,TRUE,reported,0.0115,3.514e-8,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs2107595,A,G,A,G,0.0882,0.01233,0.1673,0.165399,FALSE,FALSE,FALSE,wMUFJs,0.005464,0.02405,ab42,TRUE,reported,0.0132,2.328e-11,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs2634074,A,T,A,T,-0.0941,-0.01173,0.7877,0.758377,FALSE,TRUE,FALSE,wMUFJs,0.004825,0.01514,ab42,TRUE,reported,0.0121,5.905e-15,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs2758612,T,C,T,C,0.0653,-0.00325,0.6453,0.645288,FALSE,FALSE,FALSE,wMUFJs,0.004172,0.4361,ab42,TRUE,reported,0.0111,3.677e-9,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs3184504,T,C,T,C,0.0779,-1.156e-5,0.4722,0.450662,FALSE,FALSE,FALSE,wMUFJs,0.004032,0.9977,ab42,TRUE,reported,0.0101,1.229e-14,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs473238,T,C,T,C,0.0831,8.552e-4,0.1326,0.13942100000000002,FALSE,FALSE,FALSE,wMUFJs,0.00614,0.8892,ab42,TRUE,reported,0.0147,1.651e-8,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs4942561,T,G,T,G,0.0655,-2.586e-4,0.759,0.772498,FALSE,FALSE,FALSE,wMUFJs,0.004816,0.9572,ab42,TRUE,reported,0.0116,1.771e-8,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE
+rs635634,T,C,T,C,0.0772,-0.003571,0.1921,0.18531,FALSE,FALSE,FALSE,wMUFJs,0.005084,0.4825,ab42,TRUE,reported,0.0134,9.179e-9,ais,TRUE,reported,2nMmUK,2,TRUE,NA,NA,NA,TRUE

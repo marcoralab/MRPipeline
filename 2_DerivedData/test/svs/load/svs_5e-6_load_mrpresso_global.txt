@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MLoKJx	mprqt9	load	svs	0	22.895838660865994	0.84

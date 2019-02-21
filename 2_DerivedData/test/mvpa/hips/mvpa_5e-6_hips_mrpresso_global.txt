@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EVtEIA	SOPP9F	hips	mvpa	0	118.94937780152951	0.1694

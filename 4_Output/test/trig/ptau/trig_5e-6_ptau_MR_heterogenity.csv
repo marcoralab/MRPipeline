@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+AbcUrm,22329W,ptau,trig,MR Egger,122.54738981939676,112,0.23331615038066597,2019-02-21
+AbcUrm,22329W,ptau,trig,Inverse variance weighted,123.97470237840882,113,0.22612649610280824,2019-02-21

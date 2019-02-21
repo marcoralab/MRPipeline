@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+KLUYq1	6l0Wkt	aaos	bmi	1	1467.5385717031975	<2e-05

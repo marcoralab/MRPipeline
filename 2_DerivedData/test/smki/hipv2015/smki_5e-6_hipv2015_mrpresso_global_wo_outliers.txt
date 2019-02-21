@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+jROVPk	jr6cws	hipv2015	smki	1	326.7248949329443	0.16476

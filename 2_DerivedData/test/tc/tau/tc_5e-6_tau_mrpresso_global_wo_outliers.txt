@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+gz3I2Y	jVze9O	tau	tc	1	159.73275660775624	0.1108

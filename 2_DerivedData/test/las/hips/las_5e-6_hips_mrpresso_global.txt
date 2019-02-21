@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Duvdib	8iV0XB	hips	las	0	20.404876933629517	0.9508

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+01cAmx,hmjIBn,ab42,mvpa,MR Egger,8.485663226209383,12,0.7461198014116239,2019-02-21
+01cAmx,hmjIBn,ab42,mvpa,Inverse variance weighted,8.596347802389065,13,0.802700555965375,2019-02-21

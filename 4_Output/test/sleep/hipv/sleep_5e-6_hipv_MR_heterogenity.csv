@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+zGIFBa,APTlBP,hipv,sleep,MR Egger,25.184921165991767,24,0.3957680619991853,2019-02-21
+zGIFBa,APTlBP,hipv,sleep,Inverse variance weighted,25.893774306116395,25,0.41328478002485297,2019-02-21

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+oUALmu	IMODer	vbiany	sociso	0	20.526916042512898	0.206

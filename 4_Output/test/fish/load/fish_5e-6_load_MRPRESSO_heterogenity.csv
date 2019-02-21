@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+0iku2g,boSqzP,load,fish,MR Egger,232.19904145978902,200,0.05893537913575032,2019-02-21
+0iku2g,boSqzP,load,fish,Inverse variance weighted,232.20716618318951,201,0.06484086842051204,2019-02-21

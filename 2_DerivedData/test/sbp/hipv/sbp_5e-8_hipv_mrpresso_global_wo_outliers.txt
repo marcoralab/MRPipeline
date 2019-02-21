@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+caMYCp	OyVtaK	hipv	sbp	1	813.8742918679677	4.4e-4

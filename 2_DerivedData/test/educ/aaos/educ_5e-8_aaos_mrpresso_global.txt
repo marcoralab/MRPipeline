@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TEnFZu	mlJWvn	aaos	educ	1	820.8419265462613	0.02592

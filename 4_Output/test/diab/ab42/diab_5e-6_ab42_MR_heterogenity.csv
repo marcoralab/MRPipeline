@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+CiCYlI,MOieRo,ab42,diab,MR Egger,310.26360221748797,260,0.017641309689002824,2019-02-21
+CiCYlI,MOieRo,ab42,diab,Inverse variance weighted,310.5977051844542,261,0.01896758231791349,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+xTpOtR,mQAcyg,nft4,tc,MR Egger,197.3548041453606,145,0.002515833065683551,2019-02-21
+xTpOtR,mQAcyg,nft4,tc,Inverse variance weighted,198.86974886213042,146,0.002388194030749678,2019-02-21

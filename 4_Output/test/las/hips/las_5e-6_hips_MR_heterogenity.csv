@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Duvdib,8iV0XB,hips,las,MR Egger,16.734529820038933,30,0.9756237979191812,2019-02-21
+Duvdib,8iV0XB,hips,las,Inverse variance weighted,18.670953050408926,31,0.9601814121429828,2019-02-21

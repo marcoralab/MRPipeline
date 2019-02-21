@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+uST9ji	X20OLh	hipv2015	ais	0	34.51617534331358	0.002

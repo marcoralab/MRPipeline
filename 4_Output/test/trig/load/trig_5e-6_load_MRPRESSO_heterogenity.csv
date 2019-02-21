@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+v5zGar,gOFXvr,load,trig,MR Egger,158.0471408382874,111,0.002252341869132974,2019-02-21
+v5zGar,gOFXvr,load,trig,Inverse variance weighted,158.84411568917042,112,0.002404061040690595,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+iB24EU,P5J4Xz,load,as,MR Egger,12.146033021727968,7,0.09585761541626814,2019-02-21
+iB24EU,P5J4Xz,load,as,Inverse variance weighted,12.146931774660771,8,0.1447675685808556,2019-02-21

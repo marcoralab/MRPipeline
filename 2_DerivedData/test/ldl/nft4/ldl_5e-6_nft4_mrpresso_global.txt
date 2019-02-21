@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gMlpRt	LcRcCv	nft4	ldl	0	135.95241668120352	0.2345

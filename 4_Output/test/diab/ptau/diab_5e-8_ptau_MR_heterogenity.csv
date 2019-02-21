@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+2cFOdC,V0iCZM,ptau,diab,MR Egger,140.77213416259605,128,0.20767927391919427,2019-02-21
+2cFOdC,V0iCZM,ptau,diab,Inverse variance weighted,141.40069295756848,129,0.21482414391231566,2019-02-21

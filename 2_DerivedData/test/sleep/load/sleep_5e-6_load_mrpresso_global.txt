@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+20vorv	XLdtb0	load	sleep	0	19.787651508804892	0.715

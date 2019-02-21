@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+p3H7Ym	82yN08	tau	dbp	0	637.0866196085111	0.26236

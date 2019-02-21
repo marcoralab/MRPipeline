@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MYnJo2,s9Scis,nft4,las,MR Egger,0.12824556832825318,2,0.9378898344412849,2019-02-21
+MYnJo2,s9Scis,nft4,las,Inverse variance weighted,0.140193543088336,3,0.9866119121621301,2019-02-21

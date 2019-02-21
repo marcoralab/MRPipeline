@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+DzgvPP	25Rsqs	hipv2015	fish	0	NA	NA

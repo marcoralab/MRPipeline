@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+v71N8P	D2Ajkn	hipv	sociso	0	125.45639367100378	0.0149

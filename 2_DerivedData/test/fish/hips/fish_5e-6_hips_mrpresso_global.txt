@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+15Nged	BTB05j	hips	fish	0	216.81222887686434	0.3693

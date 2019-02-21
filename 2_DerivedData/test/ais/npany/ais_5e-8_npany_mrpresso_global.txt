@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2wux2C	Prp7en	npany	ais	0	4.3486989469870565	0.937

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+kMlORG	GKA8ok	load	trig	3	74.45049367110403	0.0704

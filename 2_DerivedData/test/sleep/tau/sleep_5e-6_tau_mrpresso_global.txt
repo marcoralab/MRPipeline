@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+aaQl7q	GTm7dt	tau	sleep	0	20.196461795726602	0.379

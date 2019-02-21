@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FkAdgF	3K3QhO	ab42	fish	1	90.67536667976402	0.0082

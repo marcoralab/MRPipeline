@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+15Nged,BTB05j,hips,fish,MR Egger,205.12829678400476,202,0.4254479104795817,2019-02-21
+15Nged,BTB05j,hips,fish,Inverse variance weighted,211.03440823949302,203,0.3348408416798876,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+BPE9v9,nkXda2,nft4,hear,MR Egger,87.9717159519424,100,0.7994307034622891,2019-02-21
+BPE9v9,nkXda2,nft4,hear,Inverse variance weighted,88.68721149891134,101,0.8042342514474212,2019-02-21

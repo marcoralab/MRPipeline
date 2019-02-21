@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gHeNKl	tMsDek	tau	insom	0	80.13432686822344	0.3855

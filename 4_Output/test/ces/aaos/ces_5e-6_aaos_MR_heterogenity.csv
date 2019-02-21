@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+xInSTa,GC3TiC,aaos,ces,MR Egger,38.82307468365975,38,0.43243820881392286,2019-02-21
+xInSTa,GC3TiC,aaos,ces,Inverse variance weighted,40.87992050036557,39,0.38789449047911906,2019-02-21

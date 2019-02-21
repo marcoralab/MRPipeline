@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+W71dnz,FENwCG,ptau,ais,MR Egger,36.81314886915216,34,0.33995660131477606,2019-02-21
+W71dnz,FENwCG,ptau,ais,Inverse variance weighted,37.011813156222345,35,0.3762233313199514,2019-02-21

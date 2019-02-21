@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+20vorv	XLdtb0	load	sleep	0	NA	NA

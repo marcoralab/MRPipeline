@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Pln9pC	gC7IPN	hips	diab	0	338.6408016085012	0.0146

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+y5rZ63	bu8vUA	hipv	dbp	1	1370.219953431213	1e-4

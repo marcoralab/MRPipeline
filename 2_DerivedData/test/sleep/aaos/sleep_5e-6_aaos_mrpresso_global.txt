@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rAxved	g9Kalm	aaos	sleep	0	37.16169620912575	0.135

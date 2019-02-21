@@ -1,0 +1,9 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
+rs10774624,A,G,A,G,-0.0654,1.156e-5,0.5285,0.549338,FALSE,FALSE,FALSE,m03Dmi,0.004032,0.9977,ab42,TRUE,reported,0.0094,4.042e-12,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs11242678,T,C,T,C,0.0643,0.003001,0.2551,0.249784,FALSE,FALSE,FALSE,m03Dmi,0.004652,0.5189,ab42,TRUE,reported,0.0105,8.708e-10,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs11587860,C,G,C,G,-0.0689,0.001037,0.3545,0.360964,FALSE,TRUE,FALSE,m03Dmi,0.00428,0.8085,ab42,TRUE,reported,0.0098,2.542e-12,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs1537375,T,C,T,C,-0.0519,-0.00728,0.4979,0.47425300000000004,FALSE,FALSE,FALSE,m03Dmi,0.004107,0.0764,ab42,TRUE,reported,0.0091,1.241e-8,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs2107595,A,G,A,G,0.0803,0.01233,0.1671,0.165399,FALSE,FALSE,FALSE,m03Dmi,0.005464,0.02405,ab42,TRUE,reported,0.0121,3.586e-11,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs2634074,A,T,A,T,-0.084,-0.01173,0.7885,0.758377,FALSE,TRUE,FALSE,m03Dmi,0.004825,0.01514,ab42,TRUE,reported,0.0112,6.558e-14,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs475937,A,C,A,C,0.0757,4.387e-4,0.1318,0.13882000000000005,FALSE,FALSE,FALSE,m03Dmi,0.00616,0.9432,ab42,TRUE,reported,0.0137,2.916e-8,as,TRUE,reported,e3xpy5,2,TRUE,NA
+rs4942561,T,G,T,G,0.064,-2.586e-4,0.7581,0.772498,FALSE,FALSE,FALSE,m03Dmi,0.004816,0.9572,ab42,TRUE,reported,0.0107,2.048e-9,as,TRUE,reported,e3xpy5,2,TRUE,NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+KW9S43	uGU67S	npany	smkc	0	NA	NA

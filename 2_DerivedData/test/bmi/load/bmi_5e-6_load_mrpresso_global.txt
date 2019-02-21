@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+292OPb	yUJc2M	load	bmi	2	4097.636154820967	<1.33333333333333e-05

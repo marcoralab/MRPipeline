@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+xTpOtR	mQAcyg	nft4	tc	1	189.47815365341677	0.015

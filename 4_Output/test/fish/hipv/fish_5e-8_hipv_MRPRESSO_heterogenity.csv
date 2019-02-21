@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+XvQt81,Qpn4u8,hipv,fish,MR Egger,72.59445047558053,60,0.1276053480061646,2019-02-21
+XvQt81,Qpn4u8,hipv,fish,Inverse variance weighted,75.2514940965021,61,0.10367244781558066,2019-02-21

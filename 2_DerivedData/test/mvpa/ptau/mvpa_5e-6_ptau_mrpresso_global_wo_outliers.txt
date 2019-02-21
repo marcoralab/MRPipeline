@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+TarmKT	5swoLp	ptau	mvpa	1	90.22041450215194	0.33

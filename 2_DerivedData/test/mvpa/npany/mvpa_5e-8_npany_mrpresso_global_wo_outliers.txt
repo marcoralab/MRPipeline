@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+q2YYgw	qkoqry	npany	mvpa	1	19.441980882784303	0.781

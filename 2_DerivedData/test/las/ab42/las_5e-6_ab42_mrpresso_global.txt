@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+w37BrS	EUM1PG	ab42	las	0	18.552272306768774	0.56

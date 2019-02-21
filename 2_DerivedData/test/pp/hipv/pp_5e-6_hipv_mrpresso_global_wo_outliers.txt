@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+4jCLp6	AZsCx1	hipv	pp	1	1226.009531387713	<2e-05

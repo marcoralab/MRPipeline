@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Hsa0W8	7r04BB	load	audit	0	NA	NA

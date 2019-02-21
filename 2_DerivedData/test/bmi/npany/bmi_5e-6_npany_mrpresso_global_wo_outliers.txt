@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+FLiMKX	eGbc8X	npany	bmi	0	NA	NA

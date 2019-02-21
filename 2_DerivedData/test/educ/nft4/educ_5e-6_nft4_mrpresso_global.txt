@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+DO1MZA	gkbzt8	nft4	educ	0	1296.4003366498027	0.4008

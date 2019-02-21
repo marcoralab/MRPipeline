@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+IgoftW	kqvToT	ptau	hear	1	99.57788115015875	0.2321

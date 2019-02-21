@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xXBCCL	SlTtkM	vbiany	fish	0	59.48974270743435	0.7382

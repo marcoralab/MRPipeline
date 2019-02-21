@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+76UJC4,V4bdsu,npany,ces,MR Egger,29.113193827367667,31,0.5633380081456663,2019-02-21
+76UJC4,V4bdsu,npany,ces,Inverse variance weighted,29.113920752131005,32,0.6133724581669568,2019-02-21

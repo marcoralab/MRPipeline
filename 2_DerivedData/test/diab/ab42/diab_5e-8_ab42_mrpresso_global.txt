@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UMm0I7	FBYJjS	ab42	diab	0	137.0747945606488	0.2274

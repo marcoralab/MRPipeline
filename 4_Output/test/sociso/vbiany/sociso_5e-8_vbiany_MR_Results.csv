@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+oUALmu,IMODer,vbiany,sociso,Inverse variance weighted (fixed effects),15,-1.1914066671092012,1.286535614364811,0.35441581130896754,2019-02-21
+oUALmu,IMODer,vbiany,sociso,Weighted median,15,0.24138988048971854,1.7927163838785694,0.8928883340770978,2019-02-21
+oUALmu,IMODer,vbiany,sociso,Weighted mode,15,0.6563961927515933,2.223098209981712,0.7721274004809535,2019-02-21
+oUALmu,IMODer,vbiany,sociso,MR Egger,15,-6.105051970514852,7.770747731306726,0.4461589592978642,2019-02-21

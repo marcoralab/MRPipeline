@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+bCMhcF	TTLsc1	hipv2015	las	0	37.53799771045626	0.4498

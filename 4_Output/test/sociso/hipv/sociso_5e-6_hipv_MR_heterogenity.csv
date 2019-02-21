@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+v71N8P,D2Ajkn,hipv,sociso,MR Egger,111.32308580418169,88,0.047231998694052466,2019-02-21
+v71N8P,D2Ajkn,hipv,sociso,Inverse variance weighted,111.37793778050033,89,0.054430755589541184,2019-02-21

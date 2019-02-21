@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+cdjBog,2pzx27,vbiany,las,MR Egger,25.84628100906782,31,0.7286564699273047,2019-02-21
+cdjBog,2pzx27,vbiany,las,Inverse variance weighted,25.84628582164925,32,0.7703662311840884,2019-02-21

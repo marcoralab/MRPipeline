@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+9lHPTM,aWaep3,npany,las,MR Egger,1.5916841404954503,2,0.45120113185943356,2019-02-21
+9lHPTM,aWaep3,npany,las,Inverse variance weighted,2.1772687899770347,3,0.5364395777077662,2019-02-21

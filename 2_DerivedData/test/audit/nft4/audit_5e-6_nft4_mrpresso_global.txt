@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rqXq7e	BZVTNM	nft4	audit	0	45.648591892927904	0.8118

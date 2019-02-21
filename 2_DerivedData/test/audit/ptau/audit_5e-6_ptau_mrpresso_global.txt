@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+nPSU1D	Cssdlb	ptau	audit	0	42.99559518356204	0.466

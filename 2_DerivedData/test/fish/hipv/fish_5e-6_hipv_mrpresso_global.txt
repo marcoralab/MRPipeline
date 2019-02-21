@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+QwvysT	S41RVX	hipv	fish	0	241.0785484116377	0.0694

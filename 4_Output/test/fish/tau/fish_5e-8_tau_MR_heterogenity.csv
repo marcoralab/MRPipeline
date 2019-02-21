@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+kLnewY,QUesSI,tau,fish,MR Egger,57.01908689386954,57,0.47437497984184623,2019-02-21
+kLnewY,QUesSI,tau,fish,Inverse variance weighted,57.02108803805215,58,0.5117152350115272,2019-02-21

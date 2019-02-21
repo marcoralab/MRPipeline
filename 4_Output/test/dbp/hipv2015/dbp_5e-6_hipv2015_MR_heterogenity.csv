@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+uNhyLw,SluPYD,hipv2015,dbp,MR Egger,1170.794744308977,1108,0.09281048407556719,2019-02-21
+uNhyLw,SluPYD,hipv2015,dbp,Inverse variance weighted,1171.122172140242,1109,0.09521633235108228,2019-02-21

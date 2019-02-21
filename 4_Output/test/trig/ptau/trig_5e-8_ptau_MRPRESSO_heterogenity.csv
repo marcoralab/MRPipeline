@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+PEv62k,7lg2kB,ptau,trig,MR Egger,59.31023283691527,56,0.3558505517969697,2019-02-21
+PEv62k,7lg2kB,ptau,trig,Inverse variance weighted,59.36248911910613,57,0.3895235432153074,2019-02-21

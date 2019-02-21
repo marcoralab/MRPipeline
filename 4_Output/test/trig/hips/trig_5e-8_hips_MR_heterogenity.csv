@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+6YEmFE,SWEpit,hips,trig,MR Egger,77.06696597609664,60,0.06806351484979885,2019-02-21
+6YEmFE,SWEpit,hips,trig,Inverse variance weighted,77.21935195978332,61,0.07860316998134136,2019-02-21

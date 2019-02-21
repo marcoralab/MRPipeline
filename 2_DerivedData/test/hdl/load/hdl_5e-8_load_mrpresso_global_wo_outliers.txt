@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+l1a2EB	EqgDfe	load	hdl	4	145.45346777223264	0.0018

@@ -93,3 +93,11 @@ ggiraph(code = print(test))
 library(ggiraph)
 test <- mr_scatter_plot2(res, mrdat)#
 ggiraph(code = print(test))
+((14406*6.17) + (25849*59.6)) / (14406+ 25849)
+((14406*61.7) + (25849*59.6)) / (14406+ 25849)
+((14406*74.8) + (25849*79.0)) / (14406+ 25849)
+library(TwoSampleR)
+library(TwoSampleMR)
+?harmonize_data
+??harmonize_data
+1/1.23

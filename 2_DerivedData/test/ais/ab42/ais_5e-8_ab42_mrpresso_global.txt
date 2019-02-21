@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2nMmUK	wMUFJs	ab42	ais	0	14.356978614022248	0.256

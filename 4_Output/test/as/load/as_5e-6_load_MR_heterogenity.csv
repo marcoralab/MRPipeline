@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+159yee,bGAzge,load,as,MR Egger,64.7706080161174,48,0.053542927961685596,2019-02-21
+159yee,bGAzge,load,as,Inverse variance weighted,69.10961012596262,49,0.030682501406656827,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sNqfrf,LIx1RA,hips,diab,MR Egger,160.33502688978442,128,0.027873444713228012,2019-02-21
+sNqfrf,LIx1RA,hips,diab,Inverse variance weighted,160.7271302238916,129,0.030470725525818764,2019-02-21

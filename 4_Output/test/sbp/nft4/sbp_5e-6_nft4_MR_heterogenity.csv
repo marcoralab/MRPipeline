@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+NEoEu5,OI8C68,nft4,sbp,MR Egger,1022.6071734506495,1097,0.9464433311290088,2019-02-21
+NEoEu5,OI8C68,nft4,sbp,Inverse variance weighted,1024.6912720611288,1098,0.9436643676002225,2019-02-21

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+V3ikWQ	Q6VVou	nft4	las	0	30.56626551044059	0.734

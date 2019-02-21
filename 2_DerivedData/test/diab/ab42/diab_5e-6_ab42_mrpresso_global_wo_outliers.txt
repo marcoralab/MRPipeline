@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+CiCYlI	MOieRo	ab42	diab	1	298.9666792296255	0.076

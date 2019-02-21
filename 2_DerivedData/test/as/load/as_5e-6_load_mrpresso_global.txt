@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+159yee	bGAzge	load	as	0	73.64604270890322	0.026

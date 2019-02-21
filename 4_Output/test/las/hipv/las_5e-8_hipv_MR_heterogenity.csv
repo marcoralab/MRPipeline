@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+UNi2XF,ChzMdV,hipv,las,MR Egger,0.23461332532517098,2,0.8893124324243841,2019-02-21
+UNi2XF,ChzMdV,hipv,las,Inverse variance weighted,0.24370606388426286,3,0.9702430701578537,2019-02-21

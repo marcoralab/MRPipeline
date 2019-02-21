@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dyaE46	8bwaXO	ptau	sleep	0	25.08331620597866	0.247

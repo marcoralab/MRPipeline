@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+1WNSct	6hxdWP	ab42	mvpa	1	88.19665792945112	0.17

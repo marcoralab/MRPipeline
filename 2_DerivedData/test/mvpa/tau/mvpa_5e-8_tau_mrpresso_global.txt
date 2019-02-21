@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8XmgKY	cic49R	tau	mvpa	1	173.34322611941812	<0.001

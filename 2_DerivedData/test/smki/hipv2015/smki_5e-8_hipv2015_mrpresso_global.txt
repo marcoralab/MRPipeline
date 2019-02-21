@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+vtS5NY	X17m61	hipv2015	smki	1	136.11433866632288	0.0171

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Zv7OuU	Qvp22X	hipv	bmi	1	1088.9138510223374	<2e-05

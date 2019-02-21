@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+63utPU,nAPMEl,nft4,fish,MR Egger,192.02843350856222,202,0.6812497828632061,2019-02-21
+63utPU,nAPMEl,nft4,fish,Inverse variance weighted,192.08798338504528,203,0.6978857830327618,2019-02-21

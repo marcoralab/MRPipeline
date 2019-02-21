@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZkddZk	0D2r0T	ab42	fish	0	186.19533400961856	0.3968

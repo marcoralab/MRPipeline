@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+O9UIns	TbwUsw	npany	hdl	1	160.92086800543942	0.551

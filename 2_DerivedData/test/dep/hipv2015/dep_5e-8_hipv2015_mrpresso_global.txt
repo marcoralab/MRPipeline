@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EX30Rp	429y3Y	hipv2015	dep	0	20.087055078805385	0.177

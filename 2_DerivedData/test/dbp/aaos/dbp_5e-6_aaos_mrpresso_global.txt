@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MHzJJ1	ryAzIn	aaos	dbp	0	1342.5656313343277	0.00452

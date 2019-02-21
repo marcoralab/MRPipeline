@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9lHPTM	aWaep3	npany	las	0	3.538867668464895	0.569

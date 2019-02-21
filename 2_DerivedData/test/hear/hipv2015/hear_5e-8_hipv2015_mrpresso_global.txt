@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+bdyWDf	vlb7Oq	hipv2015	hear	0	23.70695888464534	0.669

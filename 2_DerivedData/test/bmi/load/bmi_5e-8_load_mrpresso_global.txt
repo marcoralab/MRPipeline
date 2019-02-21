@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+l6idJg	tXeW3Z	load	bmi	1	3427.546125266325	<2e-05

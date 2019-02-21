@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+bzt7ZO,OSbByy,hipv2015,mvpa,MR Egger,136.4251662977588,91,0.0014581229303458367,2019-02-21
+bzt7ZO,OSbByy,hipv2015,mvpa,Inverse variance weighted,136.62728179127083,92,0.0017574055622010937,2019-02-21

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+cbiNLf,YoVLpG,tau,las,MR Egger,12.103126610222356,17,0.7938526374139432,2019-02-21
+cbiNLf,YoVLpG,tau,las,Inverse variance weighted,12.118809553994506,18,0.8410431666071527,2019-02-21

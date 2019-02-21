@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+izraoS,4DfkeM,tau,alcc,MR Egger,2.3047893832356148,2,0.3158794291216317,2019-02-21
+izraoS,4DfkeM,tau,alcc,Inverse variance weighted,3.148749613875669,3,0.36925462476507287,2019-02-21

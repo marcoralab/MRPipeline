@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+BTkKYs	xM0q2c	aaos	hear	0	27.466949492131377	0.508

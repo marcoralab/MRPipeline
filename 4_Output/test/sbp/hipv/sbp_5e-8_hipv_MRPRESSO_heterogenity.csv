@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+caMYCp,OyVtaK,hipv,sbp,MR Egger,784.753217257737,661,6.193277659563846e-4,2019-02-21
+caMYCp,OyVtaK,hipv,sbp,Inverse variance weighted,787.186456737008,662,5.51608073103209e-4,2019-02-21

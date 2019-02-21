@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+zyqEHK	fOPBsn	load	sbp	2	879.6295438549814	<4e-05

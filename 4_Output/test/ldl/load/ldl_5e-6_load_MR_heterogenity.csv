@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MymxGp,sVmzjn,load,ldl,MR Egger,477.3490859473565,119,2.0525054021328814e-44,2019-02-21
+MymxGp,sVmzjn,load,ldl,Inverse variance weighted,486.1892186637289,120,1.4590251778801683e-45,2019-02-21

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+PfeU60	ig9jmS	hipv	sbp	2	1377.2820269555812	<2e-05

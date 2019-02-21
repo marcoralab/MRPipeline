@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ZEB6z7,AXTQz5,vbiany,audit,MR Egger,52.817649130755655,48,0.29332110042953985,2019-02-21
+ZEB6z7,AXTQz5,vbiany,audit,Inverse variance weighted,55.88372518154109,49,0.23211866927533006,2019-02-21

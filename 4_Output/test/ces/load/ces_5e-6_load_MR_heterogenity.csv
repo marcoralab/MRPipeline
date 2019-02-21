@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+rm3shH,FfAbIm,load,ces,MR Egger,41.49846227348131,32,0.12133981564985497,2019-02-21
+rm3shH,FfAbIm,load,ces,Inverse variance weighted,42.27295917327413,33,0.12931740658939037,2019-02-21

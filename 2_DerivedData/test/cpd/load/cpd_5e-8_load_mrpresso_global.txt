@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+IFoOpI	Gl7EBQ	load	cpd	0	25.684790640796223	0.03

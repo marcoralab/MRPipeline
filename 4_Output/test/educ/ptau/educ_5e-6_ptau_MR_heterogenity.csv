@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+WVjINw,tKdkYQ,ptau,educ,MR Egger,1263.972796387592,1147,0.008711990605112928,2019-02-21
+WVjINw,tKdkYQ,ptau,educ,Inverse variance weighted,1266.7351870689056,1148,0.007951512140778065,2019-02-21

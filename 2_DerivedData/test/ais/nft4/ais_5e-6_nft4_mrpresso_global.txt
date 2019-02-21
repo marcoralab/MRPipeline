@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+LMRqpQ	YgN69C	nft4	ais	0	43.620678211234036	0.5558

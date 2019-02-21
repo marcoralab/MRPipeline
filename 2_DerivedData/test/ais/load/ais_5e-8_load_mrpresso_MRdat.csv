@@ -1,0 +1,11 @@
+SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
+rs11066320,A,G,A,G,0.0689,-0.0093,0.4291,0.4369,FALSE,FALSE,FALSE,kHyCrl,0.0158,0.5563,load,TRUE,reported,0.01,6.06e-12,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs11242678,T,C,T,C,0.0723,0.0026,0.255,0.2361,FALSE,FALSE,FALSE,kHyCrl,0.0182,0.8868,load,TRUE,reported,0.0114,2.703e-10,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs2066864,A,G,A,G,0.0634,0.0023,0.2452,0.2299,FALSE,FALSE,FALSE,kHyCrl,0.0187,0.9034,load,TRUE,reported,0.0115,3.514e-8,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs2107595,A,G,A,G,0.0882,-0.0038,0.1673,0.1632,FALSE,FALSE,FALSE,kHyCrl,0.0211,0.8582,load,TRUE,reported,0.0132,2.328e-11,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs2634074,A,T,A,T,-0.0941,-0.0143,0.7877,0.7972,FALSE,TRUE,FALSE,kHyCrl,0.0194,0.4616,load,TRUE,reported,0.0121,5.905e-15,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs2758612,T,C,T,C,0.0653,0.0242,0.6453,0.3386,FALSE,FALSE,FALSE,kHyCrl,0.0171,0.1573,load,TRUE,reported,0.0111,3.677e-9,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs3184504,T,C,T,C,0.0779,-0.0252,0.4722,0.4959,FALSE,FALSE,FALSE,kHyCrl,0.0159,0.1134,load,TRUE,reported,0.0101,1.229e-14,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs473238,T,C,T,C,0.0831,0.0175,0.1326,0.1332,FALSE,FALSE,FALSE,kHyCrl,0.0225,0.438,load,TRUE,reported,0.0147,1.651e-8,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs4942561,T,G,T,G,0.0655,-0.0174,0.759,0.23529999999999995,FALSE,FALSE,FALSE,kHyCrl,0.0181,0.3371,load,TRUE,reported,0.0116,1.771e-8,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE
+rs635634,T,C,T,C,0.0772,-0.0055,0.1921,0.1954,FALSE,FALSE,FALSE,kHyCrl,0.0195,0.7793,load,TRUE,reported,0.0134,9.179e-9,ais,TRUE,reported,JqAHjw,2,TRUE,NA,NA,NA,TRUE

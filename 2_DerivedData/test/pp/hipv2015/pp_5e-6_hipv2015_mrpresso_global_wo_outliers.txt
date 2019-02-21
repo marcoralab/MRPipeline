@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+R0l9a6	8s8LPj	hipv2015	pp	1	1002.925468249922	0.10072

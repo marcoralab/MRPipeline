@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+wmdXMM,TVMaJz,npany,sociso,Inverse variance weighted (fixed effects),15,1.4140566295325185,1.524013043663717,0.35348499999618926,2019-02-21
+wmdXMM,TVMaJz,npany,sociso,Weighted median,15,1.650369944408417,2.138245604736399,0.44021294924170556,2019-02-21
+wmdXMM,TVMaJz,npany,sociso,Weighted mode,15,1.0157848536768412,3.3574363258242723,0.7666829858200799,2019-02-21
+wmdXMM,TVMaJz,npany,sociso,MR Egger,15,2.843054868059716,8.265032152291354,0.7363571131141249,2019-02-21

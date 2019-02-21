@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qdQLCu	pBpod2	nft4	bmi	1	1051.3264246571348	<2e-05

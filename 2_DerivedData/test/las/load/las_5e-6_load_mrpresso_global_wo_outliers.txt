@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+elEDUl	ShGQMq	load	las	1	39.62604521298461	0.121
