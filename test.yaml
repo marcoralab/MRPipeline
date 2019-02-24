@@ -1,6 +1,6 @@
-# snakemake -s mr.smk --configfile test.yaml -j 4 --keep-going --until manhattan_plot
+# snakemake -s mr.smk --configfile test.yaml -j 4 --keep-going --until OutcomeSnps
 # snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
-# snakejob -s mr.smk --configfile test.yaml -j 200 --max-jobs-per-second 1 --keep-going --until ProxySnps
+# snakejob -s mr.smk --configfile test.yaml -j 200 --max-jobs-per-second 1 --keep-going --until OutcomeSnps
 
 DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/test/"
@@ -13,7 +13,7 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['alccliu']
+ExposureCode: ['alccliu', 'alcd']
 OutcomeCode: ['load']
 
 ## Forbidden wildcard combinations

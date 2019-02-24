@@ -18,7 +18,7 @@ traits = config['traits']
 DataOut = config['DataOut']
 DataOutput = config['DataOutput']
 
-localrules: all, FindProxySnps
+localrules: all
 
 # Filter forbidden wild card combinations
 ## https://stackoverflow.com/questions/41185567/how-to-use-expand-in-snakemake-when-some-particular-combinations-of-wildcards-ar
@@ -87,6 +87,7 @@ rule OutcomeSnps:
         OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz"
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt",
     params:
         Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
@@ -94,21 +95,30 @@ rule OutcomeSnps:
 
 rule FindProxySnps:
     input:
-        script = '3_Scripts/FindProxySNPs.R',
-        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt"
+        MissingSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt"
     output:
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt",
+        ProxyList = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld",
     params:
-        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys",
+        ref = REF
     shell:
-        'Rscript {input.script} {input.OutcomeSummary} {params.Outcome}'
+        """
+        if [ $(wc -l < {input.MissingSNPs}) -eq 0 ]; then
+            touch {output.ProxyList}
+          else
+           plink --bfile {params.ref} \
+           --r2 dprime in-phase with-freqs \
+           --ld-snp-list {input.MissingSNPs} \
+           --ld-window-r2 0.8 --ld-window-kb 500 --ld-window 1000 --out {params.Outcome}
+          fi
+"""
 
 rule ExtractProxySnps:
     input:
         script = '3_Scripts/ExtractProxySNPs.R',
         OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz",
         OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.txt"
+        OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
@@ -121,14 +131,15 @@ rule Harmonize:
     input:
         script = '3_Scripts/DataHarmonization.R',
         ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt"
+        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
+        ProxySNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
     output:
         Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
     params:
         ExposureCode = '{ExposureCode}',
         OutcomeCode = '{OutcomeCode}'
     shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.ExposureCode} {params.OutcomeCode} {output.Harmonized}'
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.ExposureCode} {params.OutcomeCode} {input.ProxySNPs} {output.Harmonized}'
 
 rule MrPresso:
     input:
