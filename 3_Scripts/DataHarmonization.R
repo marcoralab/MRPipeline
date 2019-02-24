@@ -12,7 +12,6 @@ out.harmonized = args[6] # SPECIFY THE OUTPUT FILE
 
 
 ### ===== Load packages ===== ###
-suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
 suppressMessages(library(plyr))
 suppressMessages(library(tidyverse))   ## For data wrangling
 suppressMessages(library(TwoSampleMR)) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
