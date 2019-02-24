@@ -14,6 +14,7 @@ out.harmonized = args[6] # SPECIFY THE OUTPUT FILE
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
 suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+suppressMessages(library(plyr))
 suppressMessages(library(TwoSampleMR)) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
 
 ### ===== Read In Data ===== ###
@@ -24,7 +25,7 @@ message("READING IN OUTCOME \n")
 outcome.dat <- read_tsv(outcome.summary)
 
 message("READING IN PROXY SNPs \n")
-proxy.dat <- read_csv(proxy.snps) %>% 
+proxy.dat <- read_csv(proxy.snps) %>%
   filter(proxy.outcome == TRUE) %>%
   select(proxy.outcome, target_snp, proxy_snp, Effect_allele, Non_Effect_allele, Effect_allele.proxy, Non_Effect_allele.proxy) %>%
   mutate(SNP = target_snp) %>%
@@ -64,14 +65,3 @@ harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat)
 
 ## Write out Harmonized data
 write_csv(harmonized.MRdat, out.harmonized)
-
-
-
-
-
-
-
-
-
-
-
