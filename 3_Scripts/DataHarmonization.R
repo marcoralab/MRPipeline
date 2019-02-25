@@ -2,17 +2,11 @@
 message("Begining Harmonization \n")
 ### ===== Command Line Arguments ===== ##
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
-message("Arg 1 \n")
 exposure.summary = args[1] # Exposure summary statistics
-message("Arg 2 \n")
 outcome.summary = args[2] # Outcome Summary statistics
-message("Arg 3 \n")
 exposure.code = args[3]
-message("Arg 4 \n")
 outcome.code = args[4]
-message("Arg 5 \n")
 proxy.snps = args[5]
-message("Arg 6 \n")
 out.harmonized = args[6] # SPECIFY THE OUTPUT FILE
 
 
@@ -21,7 +15,7 @@ message("Loading packages  \n")
 library(plyr)
 library(tidyverse)  ## For data wrangling
 library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
-
+packageVersion('TwoSampleMR')
 ### ===== Read In Data ===== ###
 message("READING IN EXPOSURE \n")
 exposure.dat <- read_tsv(exposure.summary)
