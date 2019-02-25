@@ -1,0 +1,410 @@
+cat(test[1,1])
+print(test[1,1])
+dat %>% as.tibble() %>% #
+	slice(c(ln + 1, ln + 2)) %>% #
+	separate(value)
+dat[ln + 1]
+str_split(dat[ln + 1])
+str_split(dat[ln + 1], patter = " ")
+str_split(dat[ln + 1], patter = "\t")
+str_split(dat[ln + 1], patter = " ")
+str_split(dat[ln + 1], patter = " ") %>% grep("", .)
+str_split(dat[ln + 1], patter = " ") %>% str_detect("", .)
+str_split(dat[ln + 1], patter = " ")[1]
+str_split(dat[ln + 1], patter = " ")[[1]]
+str_split(dat[ln + 1], patter = " ")[[1]] %>% str_detect("", .)
+str_split(dat[ln + 1], patter = " ")[[1]] %>% str_detect(is.na(), .)
+str_split(dat[ln + 1], patter = " ")[[1]] %>% is.na(.)
+str_split(dat[ln + 1], patter = " ")[[1]] %>% str_detect(" ", .)
+str_split(dat[ln + 1], patter = " ")[[1]] %>% str_detect("", .)
+headers = str_split(dat[ln + 1], patter = " ")[[1]]
+headers[headers != ""]
+str_split(dat[ln + 1], pattern = " ")[[1]]
+rg = str_split(dat[ln + 2], pattern = " ")[[1]]#
+rg[rg != ""]
+?tibble
+as.data.frame(rg[rg != ""])
+tribble(rg[rg != ""])
+headers = headers[headers != ""]
+rg = rg[rg != ""]
+tribble(~headers, rg)
+?as.data.frame
+as.data.frame(col.names = headers)
+as.data.frame(x = rg, col.names = headers)
+as.data.frame(x = rg, headers = headers)
+t(as.data.frame(x = rg))
+out <- t(as.data.frame(x = rg))
+colnames(out) <- headers
+out
+out %>% as.tibble()
+str_subset(out$p1, 'bmi')
+out$p1
+out
+out <- t(as.data.frame(x = rg))#
+colnames(out) <- headers
+out
+out <- out %>% as.tibble()
+out
+str_subset(out$p1, 'bmi')
+str_extract(out$p1, 'bmi')
+str_extract(out$p1, '*_')
+str_extract(out$p1, '_')
+str_extract(out$p1, '._')
+str_extract(out$p1, '..._')
+str_extract(out$p1, '.._')
+str_extract(out$p1, '*_')
+str_extract(out$p1, '_*')
+str_extract(out$p1, '/*')
+str_extract(out$p1, patern = pearl('/*'))
+gsub(".*/\\s*|_.*", "", out$p1)
+str_extract(out$p1, patern = ".*/\\s*|_.*")
+str_extract(out$p1, pattern = ".*/\\s*|_.*")
+str_extract(out$p1, pattern = pearl(".*/\\s*|_.*"))
+out %>% #
+	as.tibble() %>% #
+	mutate(p1 = gsub(".*/\\s*|_.*", "", p1))
+mutate(p2 = gsub(".*/\\s*|_.*", "", p2))
+out <- out %>% #
+	as.tibble() %>% #
+	mutate(p1 = gsub(".*/\\s*|_.*", "", p1)) %>% #
+	mutate(p2 = gsub(".*/\\s*|_.*", "", p2))
+out
+bind_rows()
+summary_stats <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/LDSC', recursive = T, pattern = '.tsv', #
+           full.names = T) %>% #
+  map(., read_tsv) %>% #
+  bind_rows()
+summary_stats
+1/75
+1/0.75
+1/0.9
+1/0.92
+1/0.73
+dat <- read_tsv('/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.g')
+dat <- read_tsv('/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz')
+/sc/orga/projects/LOAD/shea/Projects/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz
+dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz')
+dat
+filter(dat, str_detect(SNP, 'rs'))
+1/0.482
+50000 - 39462
+10538 - 4000
+6538 - 3000
+6538 - 4000
+39462 + 4000
+50000 - (39462 + 4000)
+39462 + 4000 + 3000 + 2538
+39462 + 4000 + 4000 + 2538
+30830 + 8632 + 2538 + 4000 + 4000
+30830*.29
+30830 + 8941 + 4000 + 4000
+50000 - 47771
+30830
+30830 / 2
+15415  *0.29
+15415 + 4470.35
+15415 + 4470.35 + 2500 + 3000 + 2000
+61,660
+12/8
+8/12
+61660 * 0.66
+(61660 * 0.66) / 2
+20347.8 * 0.29
+20347 + 5900
+20347 + 5900 + 2500 + 3000 + 2000
+1/12
+61660 * (1/12)
+61660 * (6/12)
+(61660 * (6/12)) + ()(61660 * (6/12))/0.29)
+(61660 * (6/12)) + ((61660 * (6/12))/0.29)
+((61660 * (6/12))/0.29)
+((61660 * (6/12))*0.29)
+(61660 * (6/12)) + ((61660 * (6/12))*0.29)
+(61660 * (8/12)) + ((61660 * (8/12))*0.29)
+dat <- read_table2('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ggt_GWAS.Processed.gz')
+library(tidyverse)
+dat <- read_table2('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ggt_GWAS.Processed.gz')
+dat
+dat2 <- select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N)
+dat2 <- select(dat, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N)
+dat2
+dat2 <- dat %>% select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, Beta, SE, P, N) %>% rename(snp = SNP, chr = CHR, position = POS, effect_allele = Effect_allele, other_allele = Non_Effect_allele, b = Beta, se = SE, p = P, n = N)
+dat2
+dat2 <- dat %>% select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, Beta, SE, P, N) %>% rename(snp = SNP, chr = CHR, position = POS, effect_allele = Effect_allele, other_allele = Non_Effect_allele, b = Beta, se = SE, p = P, n = N) %>% write_tsv('~/Documents/ggt_GWAS.Processed')
+tail(dat2)
+dat2 <- dat %>% select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, Beta, SE, P, N) %>% rename(snp = SNP, chr = CHR, position = POS, effect_allele = Effect_allele, other_allele = Non_Effect_allele, b = Beta, se = SE, p = P, n = N) %>% filter(!is.na(chr)) %>% write_tsv('~/Documents/ggt_GWAS.Processed')
+tail(dat2)
+dat
+dat2
+dat2 %>% filter(snp == 'rs34155012')
+dat2 <- dat %>% select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, Beta, SE, P, N) %>% rename(snp = SNP, chr = CHR, position = POS, effect_allele = Effect_allele, other_allele = Non_Effect_allele, b = Beta, se = SE, p = P, n = N) %>% filter(!is.na(chr)) %>% filter(!is.na(position)) %>% write_tsv('~/Documents/ggt_GWAS.Processed')
+dat2 %>% filter(snp == 'rs34155012')
+dat <- read_table2('~/Programs/ssimp_software/output.txt')
+dat
+filter(dat, source == 'GWAS')
+dat <- read_table2('~/Programs/ssimp_software/output.txt')
+filter(dat, source == 'GWAS')
+dat
+filter(dat, r2.pred > 0.3)
+filter(dat, r2.pred > 0.8)
+dat <- read_table2('~/LOAD_minerva/dummy/shea/bin/ssimp_software-master/output/ggt_ssimp_1:6477267-1:8189834.txt')
+dat
+dat <- read_tsv('~/LOAD_minerva/dummy/shea/bin/ssimp_software-master/output/ggt_ssimp_1:6477267-1:8189834.txt')
+dat
+filter(dat, r2.pred > 0.3)
+filter(dat, source == 'GWAS')
+(74880/2) + (30830 + 8941)
+80441025 - 80439648
+dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')#
+#
+dat %>% #
+  filter(outcome %in% c('load', 'aaos')) %>% #
+  filter(exposure %in% c('alcc', 'alcd', 'audit'))
+filter(method == 'IVW')
+dat %>% #
+  filter(outcome %in% c('load', 'aaos')) %>% #
+  filter(exposure %in% c('alcc', 'alcd', 'audit')) %>% #
+  filter(method == 'IVW')
+MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T,
+pattern = '_MRPRESSO_Results.csv', #
+                            full.names = T) %>% #
+  map(., function(x){#
+    dat.model <- tibble(file = x) %>% #
+      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%#
+      separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% #
+      mutate(file = ifelse(is.na(file), outcome, file)) %>% #
+      mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% #
+      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% #
+      select(-X1, -X2, -X3)#
+    datin <- read_csv(x, col_types = list(nsnp = col_character(), b = col_character(), #
+                                          se = col_character(), pval = col_character())) %>% #
+      mutate(pt = dat.model$pt)#
+  }) %>% #
+  bind_rows() %>% #
+  filter(!is.na(b)) %>% #
+  mutate(nsnp = as.numeric(nsnp), b = as.numeric(b), se = as.numeric(se), pval = as.numeric(pval))
+MRPRESSO_results
+MRPRESSO_results  %>%
+filter(outcome %in% c('ggt', 'ggtSSimp')) %>% #
+  filter(exposure %in% c('alcc', 'alcd', 'audit')) %>% #
+  filter(method == 'IVW')
+MRPRESSO_results %>% distinct(outcome)
+MRPRESSO_results %>% distinct(outcome) %>% print(n = Inf)
+MRPRESSO_results  %>% #
+  filter(outcome %in% c('ggt', 'ggtSSimp')) %>% #
+  filter(exposure %in% c('alcc', 'alcd', 'audit'))
+MRPRESSO_results  %>% #
+  filter(outcome %in% c('ggt', 'ggtSSimp')) %>% #
+  filter(exposure %in% c('alcc', 'alcd', 'audit')) %>% #
+  filter(method == 'Inverse variance weighted (fixed effects)')
+library(tidyverse)
+suppressMessages(library(tidyverse))#
+suppressMessages(library(haploR))
+outcome.summary = '~/LOAD_minerva/dummy/shea/Projects/2_MR/2_DerivedData/test/audit/audit_5e-8_SNPs.txt'
+outcome.dat <- read_tsv(outcome.summary)#
+miss.outcome <- filter(outcome.dat, is.na(CHR))
+miss.outcome
+outcome.dat
+if(nrow(miss.outcome) >= 1){#
+  message("\n SEARCHING FOR PROXY SNPS \n")#
+  ProxySnps <- queryHaploreg(query = miss.outcome$SNP, ldThresh = 0.8,#
+                             ldPop = "EUR", timeout = 1000, encoding = "UTF-8", #
+                             verbose = TRUE) %>% #
+    select(query_snp_rsid, rsID, chr, pos_hg38, r2, `D'`, is_query_snp, ref, alt) %>% #
+    rename(ld.r2 = r2, Dprime = `D'`) %>% #
+    filter(nchar(ref) == 1) %>% #
+    filter(nchar(alt) == 1)#
+  write_tsv(ProxySnps, paste0(out, '_Proxys.txt'))#
+} else {#
+  tibble(query_snp_rsid = NA, rsID = NA, chr = NA, ld.r2 = NA, Dprime = NA, #
+         is_query_snp = NA, ref = NA, alt = NA) %>% #
+    write_tsv(paste0(out, '_Proxys.txt'))#
+}
+nrow(miss.outcome) >= 1)
+nrow(miss.outcome) >= 1
+tibble(query_snp_rsid = NA, rsID = NA, chr = NA, ld.r2 = NA, Dprime = NA, #
+         is_query_snp = NA, ref = NA, alt = NA)
+library(devtools)#
+install_github("MRCIEU/TwoSampleMR"
+)
+library(TwoSampleMR)
+bmi_file <- system.file("data/bmi.txt", package="TwoSampleMR")
+bmi_exp_dat <- read_exposure_data(bmi_file)
+head(bmi_exp_dat)
+bmi_exp_dat <- clump_data(bmi_exp_dat)
+chd_out_dat <- extract_outcome_data(#
+    snps = bmi_exp_dat$SNP,#
+    outcomes = 7#
+)
+outcome_dat <- read_outcome_data(#
+    snps = bmi_exp_dat$SNP,#
+    filename = "gwas_summary.csv",#
+    sep = ",",#
+    snp_col = "rsid",#
+    beta_col = "effect",#
+    se_col = "SE",#
+    effect_allele_col = "a1",#
+    other_allele_col = "a2",#
+    eaf_col = "a1_freq",#
+    pval_col = "p-value",#
+    units_col = "Units",#
+    gene_col = "Gene",#
+    samplesize_col = "n"#
+)
+chd_out_dat
+dat <- harmonise_data(#
+    exposure_dat = bmi_exp_dat, #
+    outcome_dat = chd_out_dat#
+)
+dat
+news(package='TwoSampleMR')
+?str_sep
+str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/')
+tail(str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/'))
+tail(str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/')[1])
+tail(str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/')[[1]])
+mylast
+last(str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/')[[1]])
+file.name <- last(str_split('2_DerivedData/strict_clump/insom/hipv/insom_5e-6_hipv_SNPs.txt', '/')[[1]])
+message(paste0("READING IN ", file.name, " \n"))
+?ld_matrix
+?is_foward_strand
+?mr
+bmi_exp_dat <- read_exposure_data(bmi_file)#
+head(bmi_exp_dat)
+bmi2_file <- system.file("data/bmi.csv", package="TwoSampleMR")
+bmi_exp_dat <- read_exposure_data(#
+    filename = bmi2_file,#
+    sep = ",",#
+    snp_col = "rsid",#
+    beta_col = "effect",#
+    se_col = "SE",#
+    effect_allele_col = "a1",#
+    other_allele_col = "a2",#
+    eaf_col = "a1_freq",#
+    pval_col = "p-value",#
+    units_col = "Units",#
+    gene_col = "Gene",#
+    samplesize_col = "n"#
+)
+bmi_exp_dat
+head(bmi_exp_dat)
+chd_out_dat <- extract_outcome_data(#
+    snps = bmi_exp_dat$SNP,#
+    outcomes = 7#
+)
+chd_out_dat
+outcome_dat <- read_outcome_data(#
+    snps = bmi_exp_dat$SNP,#
+    filename = "gwas_summary.csv",#
+    sep = ",",#
+    snp_col = "rsid",#
+    beta_col = "effect",#
+    se_col = "SE",#
+    effect_allele_col = "a1",#
+    other_allele_col = "a2",#
+    eaf_col = "a1_freq",#
+    pval_col = "p-value",#
+    units_col = "Units",#
+    gene_col = "Gene",#
+    samplesize_col = "n"#
+)
+? extract_outcome_data
+bmi_exp_dat <- read_exposure_data(#
+    filename = bmi2_file,#
+    sep = ",",#
+    snp_col = "rsid",#
+    beta_col = "effect",#
+    se_col = "SE",#
+    effect_allele_col = "a1",#
+    other_allele_col = "a2",#
+    eaf_col = "a1_freq",#
+    pval_col = "p-value",#
+    units_col = "Units",#
+    gene_col = "Gene",#
+    samplesize_col = "n"#
+)
+extract_outcome_data(snps = bmi_exp_dat$SNP, outcomes = 7, proxies = T)
+ao <- available_outcomes()
+ao
+filter(ao, consortium == 'IGAP')
+extract_outcome_data(snps = bmi_exp_dat$SNP, outcomes = 297, proxies = T)
+extract_outcome_data(snps = bmi_exp_dat$SNP, outcomes = 297, proxies = T)
+alc_exp_dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alccliu/alccliu_5e-8_SNPs.txt')
+alc_exp_dat
+exposure.dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alccliu/alccliu_5e-8_SNPs.txt')
+exposure.dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/alccliu/alccliu_5e-8_SNPs.txt')
+alc_exp_dat <- format_data(exposure.dat, type = 'exposure',
+snp_col = 'SNP',#
+                            beta_col = "Beta",#
+                            se_col = "SE",#
+                            eaf_col = "EAF",#
+                            effect_allele_col = "Effect_allele",#
+                            other_allele_col = "Non_Effect_allele",#
+                            pval_col = "P")#
+mr_exposure.dat <- mutate(mr_exposure.dat, exposure = exposure.code)
+alc_exp_dat <- format_data(exposure.dat, type = 'exposure',#
+                            snp_col = 'SNP',#
+                            beta_col = "Beta",#
+                            se_col = "SE",#
+                            eaf_col = "EAF",#
+                            effect_allele_col = "Effect_allele",#
+                            other_allele_col = "Non_Effect_allele",#
+                            pval_col = "P")
+alc_exp_dat
+exposure.dat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/test/alccliu/alccliu_5e-8_SNPs.txt')
+alc_exp_dat <- format_data(exposure.dat, type = 'exposure',#
+                            snp_col = 'SNP',#
+                            beta_col = "Beta",#
+                            se_col = "SE",#
+                            eaf_col = "EAF",#
+                            effect_allele_col = "Effect_allele",#
+                            other_allele_col = "Non_Effect_allele",#
+                            pval_col = "P")
+alc_exp_dat
+extract_outcome_data(snps = alc_exp_dat$SNP, outcomes = 297, proxies = T)
+extract_outcome_data(snps = alc_exp_dat$SNP, outcomes = 297, proxies = T)
+extract_outcome_data(snps = alc_exp_dat$SNP, outcomes = 297, proxies = T) %>% #
+select(outcome, consortium.outcome, year.outcome, pmid.outcome, id.outcome, category.outcome, subcategory.outcome, originalname.outcome, outcome.deprecated)
+extract_outcome_data(snps = alc_exp_dat$SNP, outcomes = 297, proxies = T) %>% #
+select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated)
+ad_out_dat <- extract_outcome_data(snps = alc_exp_dat$SNP, outcomes = 297, proxies = T)
+dat <- harmonise_data(#
+    exposure_dat = alc_exp_dat, #
+    outcome_dat = ad_out_dat#
+)
+dat
+dat %>% filter(proxy.outcome == TRUE)
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated)
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)
+dat %>% filter(proxy.outcome == TRUE)
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)#
+#
+dat %>% select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)
+mr_exposure.dat
+extract_outcome_data
+extract_outcome_data_internal
+TwoSampleMR::extract_outcome_data_internal
+?? format_d
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)#
+#
+dat %>% select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)
+setwd( "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR")
+summary.path = '1_RawData/GWAS/load_GWAS.Processed.gz'#
+outcome.path = '2_DerivedData/test/alccliu/load/alccliu_5e-6_load_SNPs.txt' #
+proxy.path = '2_DerivedData/test/alccliu/load/alccliu_5e-6_load_Proxys.ld' #
+proxy.path = '2_DerivedData/test/alcd/load/alcd_5e-6_load_Proxys.ld' #
+#
+message("READING IN OUTCOME AND PROXY's \n")#
+summary.dat <- read_tsv(summary.path)
+ad_out_dat
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)
+filter(summary.dat, SNP == 'rs10753661')
+filter(summary.dat, SNP == 'rs7547690')
+? format_data
+ad_out_dat
+ad_out_dat %>%  select(-outcome, -consortium.outcome, -year.outcome, -pmid.outcome, -id.outcome, -category.outcome, -subcategory.outcome, -originalname.outcome, -outcome.deprecated) %>% filter(proxy.outcome == TRUE)
+getwd()
+?RadialMR
+library(RadialMR)
+? ivw_radial
