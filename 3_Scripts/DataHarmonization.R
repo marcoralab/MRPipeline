@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-
+message("Begining Harmonization \n")
 ### ===== Command Line Arguments ===== ##
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 
