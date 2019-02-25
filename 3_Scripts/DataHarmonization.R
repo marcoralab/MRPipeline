@@ -11,10 +11,10 @@ out.harmonized = args[6] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 message("Loading packages  \n")
-library(plyr)
-library(tidyverse)  ## For data wrangling
-library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
-packageVersion('TwoSampleMR')
+suppressMessages(library(plyr))
+suppressMessages(library(tidyverse))  ## For data wrangling
+suppressMessages(library(TwoSampleMR)) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
+
 ### ===== Read In Data ===== ###
 message("READING IN EXPOSURE \n")
 exposure.dat <- read_tsv(exposure.summary)
