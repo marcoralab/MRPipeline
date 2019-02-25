@@ -5,6 +5,10 @@ __default__:
   cores: 1
   mem: 16000
   time: '60'
+Harmonize:
+  time: 5
+  cores: 1
+  mem: 4000
 MrPresso:
   time: '90:00'
   mem: 16000
