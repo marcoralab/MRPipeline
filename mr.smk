@@ -49,7 +49,7 @@ rule clump:
         r2 = r2,
         kb = kb
     shell:
-        "plink --bfile {params.ref}  --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
+        "plink --bfile {params.ref} --keep-allele-order --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
 
 rule gzip:
     input: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
@@ -107,6 +107,7 @@ rule FindProxySnps:
             touch {output.ProxyList}
           else
            plink --bfile {params.ref} \
+           --keep-allele-order \
            --r2 dprime in-phase with-freqs \
            --ld-snp-list {input.MissingSNPs} \
            --ld-window-r2 0.8 --ld-window-kb 500 --ld-window 1000 --out {params.Outcome}
