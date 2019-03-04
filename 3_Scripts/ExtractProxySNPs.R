@@ -10,7 +10,7 @@ out = args[4]
 
 message("READING IN OUTCOME AND PROXY's \n")
 summary.dat <- read_tsv(summary.path)
-proxy.dat <- read_table2(proxy.path) %>% select(-X12)
+proxy.dat <- read_table2(proxy.path) 
 outcome.raw <- read_tsv(outcome.path)
 
 if(empty(proxy.dat)){

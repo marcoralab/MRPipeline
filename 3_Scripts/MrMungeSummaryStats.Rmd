@@ -443,6 +443,50 @@ aaos.dat <- aaos.dat.raw %>%
 write_tsv(aaos.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/aaos_GWAS.Processed.gz'))
 ```
 
+### Late Onset Alzheimer's Disease
+[Kunkle et al Nature Genet 2019](https://www.nature.com/articles/ng.2802): The International Genomics of Alzheimer’s Project (IGAP) is a meta-analysis of 4 previously published GWAS datasets: the European Alzheimer’s Disease Imitative (EADI), the Alzheimer Disease Genetics Consortium (ADGC), Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE), and Genetic and Environmental Risk in AD (GERAD) and includes a sample of 17,008 LOAD cases and 37,154 cognitively normal elder controls. Participants in IGAP were of European ancestry, the average age was 71 and 58.4% of participants were women.
+
+```{r}
+loadKunkle.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Kunkle2019/Kunkle_etal_2019_IGAP_Summary_statistics.with_allelefreqs.txt.gz')
+loadKunkle.dat <- loadKunkle.dat.raw %>%
+  rename(CHR = Chromosome, POS = Position, SNP = MarkerName, P = Pvalue, EAF = Effect_allele_freq) %>%
+  filter(nchar(Effect_allele) == 1) %>% filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 63926) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadKunkle.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadKunkle_GWAS.Processed.gz'))
+```
+
+### Late Onset Alzheimer's Disease stratified by APOE
+[Jun et al Mol Psychiatry 2016](https://www.ncbi.nlm.nih.gov/pubmed/25778476)
+
+```{r}
+loadAPOEcarriers.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Jun2016/META_IGAP.7.ADGC.15_MODEL_APOE.e4.Carriers.txt.gz')
+loadAPOEcarriers.dat <- loadAPOEcarriers.dat.raw %>%
+  rename(CHR = `#CHR`, POS = BP, P = `P-value`, EAF = Freq1, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta), N = 22170) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadAPOEcarriers.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadAPOEcarriers_GWAS.Processed.gz'))
+```
+
+```{r}
+loadAPOEnoncarriers.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Jun2016/META_IGAP.7.ADGC.15_MODEL_APOE.e4.Noncarriers.txt.gz')
+loadAPOEnoncarriers.dat <- loadAPOEnoncarriers.dat.raw %>%
+  rename(CHR = `#CHR`, POS = BP, P = `P-value`, EAF = Freq1, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta), N = 26834) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadAPOEnoncarriers.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadAPOEnoncarriers_GWAS.Processed.gz'))
+```
+
 ## CSF AB42, tau & ptau
 [Deming et al Acta Neuropathologica 2017](https://link.springer.com/article/10.1007%2Fs00401-017-1685-y): A GWAS of CSF AB42, ptau and tau levels (pg/mL) was conducted in 3,146 participants. Participants were of Eurpean ancestry.
 

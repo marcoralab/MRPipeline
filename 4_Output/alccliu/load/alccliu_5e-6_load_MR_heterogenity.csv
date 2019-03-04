@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Zytawi,ysTFAf,load,alccliu,MR Egger,304.63402332175724,224,2.6988149012407736e-4,2019-01-29
-Zytawi,ysTFAf,load,alccliu,Inverse variance weighted,306.4977754524861,225,2.4408370821314015e-4,2019-01-29
