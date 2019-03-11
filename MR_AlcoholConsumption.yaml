@@ -1,8 +1,9 @@
-# snakemake -s mr.smk --configfile MR_AlcoholConsumption.yaml --keep-going --until Harmonize
+# snakemake -s mr.smk --configfile MR_AlcoholConsumption.yaml -j 4 --keep-going --until Harmonize
 # snakejob -s mr.smk --configfile MR_AlcoholConsumption.yaml -j 200 --max-jobs-per-second 1 --keep-going --until ProxySnps
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/"
+DataOut: "2_DerivedData/Alcohol/"
+DataOutput: "4_Output/Alcohol/"
 
 REF: '1_RawData/EUR_All_Chr'
 traits: '1_RawData/MRTraits.csv'
@@ -12,11 +13,12 @@ Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as exposure
 ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'auditc', 'auditp']
-OutcomeCode: ['load', 'aaos', 'ggt']
+OutcomeCode: ['load', 'loadKunkle', 'aaos', 'ggt']
 
 missing : [
 {"ExposureCode" : "alcd", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
  {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+ {"ExposureCode" : "alcd", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
  {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
 {"ExposureCode" : "auditp", "OutcomeCode" : "ggt", "Pthreshold" : "5e-8"},
  ]

@@ -3,7 +3,7 @@
 ## For running on cluster
 ## find . -name "*stdout" -type f -delete
 ## find . -name "*stderr" -type f -delete
-#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 200 --max-jobs-per-second 1 --keep-going
+#mkdir .snakejob; snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going
 
 DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/lax_clump/"
