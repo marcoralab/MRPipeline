@@ -10,11 +10,11 @@ Harmonize:
   cores: 1
   mem: 4000
 MrPresso:
-  time: '48:00'
+  time: '72:00'
   mem: 8000
   cores: 2
 MRPRESSO_wo_outliers:
-  time: '48:00'
+  time: '72:00'
   mem: 8000
   cores: 2
 html_Report:
