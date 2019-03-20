@@ -13,8 +13,8 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['load']
-OutcomeCode: ['mdd']
+ExposureCode: ['mdd']
+OutcomeCode: ['load']
 
 ## Forbidden wildcard combinations
 missing : [
