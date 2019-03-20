@@ -3,18 +3,18 @@
 # snakejob -s mr.smk --configfile test.yaml -j 200 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/"
-DataOutput: "4_Output/"
+DataOut: "2_DerivedData/test/"
+DataOutput: "4_Output/test/"
 
 REF: '1_RawData/EUR_All_Chr'
-clumpr2: 0.001
-clumpkb: 1000
+clumpr2: 0.1
+clumpkb: 250
 traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['loadKunkle']
-OutcomeCode: ['alccliu']
+ExposureCode: ['load']
+OutcomeCode: ['mdd']
 
 ## Forbidden wildcard combinations
 missing : [
