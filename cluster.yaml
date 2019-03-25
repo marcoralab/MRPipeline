@@ -5,6 +5,9 @@ __default__:
   cores: 1
   mem: 16000
   time: '60'
+  name: $(basename $(pwd)):{rule}:{wildcards}
+  output: logs/{rule}:{wildcards}.stdout
+  error: logs/{rule}:{wildcards}.stderr
 Harmonize:
   time: 5
   cores: 1
