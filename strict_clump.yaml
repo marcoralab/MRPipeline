@@ -17,7 +17,7 @@ ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 
 OutcomeCode: ['load', 'loadKunkle' 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'vbiany']
 
 ## Forbidden wildcard combinations
-missing : [
+missing: [
    {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
