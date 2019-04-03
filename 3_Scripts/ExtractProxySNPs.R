@@ -1,6 +1,7 @@
-suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+#suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
 suppressMessages(library(plyr))
 suppressMessages(library(tidyverse))
+`%nin%` = Negate(`%in%`)
 
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 summary.path = args[1] # Outcome Summary statistics
@@ -10,7 +11,7 @@ out = args[4]
 
 message("READING IN OUTCOME AND PROXY's \n")
 summary.dat <- read_tsv(summary.path)
-proxy.dat <- read_table2(proxy.path) 
+proxy.dat <- read_table2(proxy.path)
 outcome.raw <- read_tsv(outcome.path)
 
 if(empty(proxy.dat)){
