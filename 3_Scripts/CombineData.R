@@ -6,12 +6,12 @@ library(tidyverse)
 
 ## ===============================================## 
 ## Summary statistics for Exposure and outcome snps
-ssfiles  <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, pattern = '_SNPs.txt', 
+ssfiles  <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', recursive = T, pattern = '_SNPs.txt', 
            full.names = T)
 summary_stats <- ssfiles[str_count(ssfiles, "/") == 9] %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -30,11 +30,11 @@ write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedD
 
 ## ===============================================## 
 ## Proxy SNPs for Exposure associated SNPs in Outcome
-MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, pattern = '_MatchedProxys.csv', 
+MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', recursive = T, pattern = '_MatchedProxys.csv', 
                             full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped/', "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 

@@ -9,7 +9,7 @@ out = args[3]
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
-suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+#suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
 
 ### ===== READ IN SNPs ===== ###
 message("READING IN EXPOSURE \n")
@@ -26,18 +26,11 @@ outcome.dat <- outcome.dat.raw %>%
 
 ### ===== MISSING SNPS SNPS ===== ###
 
-outcome.dat %>% 
-  filter(is.na(CHR)) %>% 
-  select(SNP) %>% 
+outcome.dat %>%
+  filter(is.na(CHR)) %>%
+  select(SNP) %>%
   write_tsv(paste0(out, '_MissingSNPs.txt'), col_names = F)
 
 message("\n EXPORTING \n")
 ## Write out outcomes SNPs
 write_tsv(outcome.dat, paste0(out, '_SNPs.txt'))
-
-
-
-
-
-
-
