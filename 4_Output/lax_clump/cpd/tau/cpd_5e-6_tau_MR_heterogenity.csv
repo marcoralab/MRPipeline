@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+jMoUDO,6XAcBb,tau,cpd,MR Egger,23.508301778664247,26,0.6040586687574948,2019-03-11
+jMoUDO,6XAcBb,tau,cpd,Inverse variance weighted,26.519287307961285,27,0.4899465019234057,2019-03-11

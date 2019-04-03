@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+E8mR9f	sWf40D	aaos	alcd	1	52.40204841835822	0.009

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Hc7rCi,YPK5wU,tau,bmi,MR Egger,1598.8302196343539,1497,0.03343570790956666,2019-03-26
+Hc7rCi,YPK5wU,tau,bmi,Inverse variance weighted,1600.9074960075302,1498,0.03210016542413505,2019-03-26

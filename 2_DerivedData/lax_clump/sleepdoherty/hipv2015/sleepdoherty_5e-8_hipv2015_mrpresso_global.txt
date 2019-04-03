@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+pbxaEk	A3Zt3O	hipv2015	sleepdoherty	0	16.738530433455196	0.337

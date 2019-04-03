@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+fgEj9D	99YC76	aaos	sleep	0	NA	NA

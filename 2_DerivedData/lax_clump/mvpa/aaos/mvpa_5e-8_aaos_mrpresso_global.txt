@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+GLn6td	m70DiW	aaos	mvpa	2	630.4297005198589	<2e-04

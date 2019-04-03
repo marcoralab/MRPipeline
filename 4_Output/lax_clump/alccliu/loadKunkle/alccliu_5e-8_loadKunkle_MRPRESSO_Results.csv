@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+Vifm0h,6cBoIO,loadKunkle,alccliu,Inverse variance weighted (fixed effects),75,0.02970719280982746,0.0810726175721611,0.7140465052599134,2019-03-11
+Vifm0h,6cBoIO,loadKunkle,alccliu,Weighted median,75,-0.0943314065420987,0.12711288255714157,0.4580222868772154,2019-03-11
+Vifm0h,6cBoIO,loadKunkle,alccliu,Weighted mode,75,-0.15874801223332513,0.10675086931247728,0.1412400867139038,2019-03-11
+Vifm0h,6cBoIO,loadKunkle,alccliu,MR Egger,75,-0.1836458418037193,0.12371858685055898,0.14201251595111092,2019-03-11

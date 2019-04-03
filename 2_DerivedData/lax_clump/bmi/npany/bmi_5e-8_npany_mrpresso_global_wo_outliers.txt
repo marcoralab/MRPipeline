@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+9wdoPj	toBrek	npany	bmi	0	NA	NA

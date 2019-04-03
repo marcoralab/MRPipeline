@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+qnmtD3	YJYSuz	ab42	tc	4	393.76633243734585	0.03856

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+RmQNlC	AOmNIH	ab42	sleepdoherty	0	NA	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+F3mje5	RGNPAx	tau	ldl	1	334.6789733905614	0.0081

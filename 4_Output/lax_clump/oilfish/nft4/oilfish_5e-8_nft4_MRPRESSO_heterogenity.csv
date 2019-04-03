@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+TAUDQ6,SFcJpH,nft4,oilfish,MR Egger,75.05151301650949,84,0.74685255338822,2019-03-11
+TAUDQ6,SFcJpH,nft4,oilfish,Inverse variance weighted,75.41778783268207,85,0.762031935049666,2019-03-11

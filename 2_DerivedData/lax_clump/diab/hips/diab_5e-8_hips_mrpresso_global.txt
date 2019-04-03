@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TexbmU	OOkIML	hips	diab	0	224.24640898667235	0.0506

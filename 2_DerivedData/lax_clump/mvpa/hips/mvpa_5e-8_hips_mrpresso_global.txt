@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+W49rts	gUiQEg	hips	mvpa	0	51.919562081819606	0.1122

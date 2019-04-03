@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WQd2GE	NGs7RV	hips	educ	0	1234.9134783379754	0.34794

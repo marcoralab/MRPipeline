@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WJxkiF	ghIQ2x	loadKunkle	educ	2	3959.9538852077662	<1e-05

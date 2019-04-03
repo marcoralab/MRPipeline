@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+XnFgqt	hDgr3j	ptau	mdd	0	178.9194363864769	0.4387

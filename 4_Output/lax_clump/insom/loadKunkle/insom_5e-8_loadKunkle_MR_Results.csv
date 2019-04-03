@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+TJuSuu,B6b1yw,loadKunkle,insom,Inverse variance weighted (fixed effects),15,-0.17710268628691384,0.11524716750892514,0.12436176580171053,2019-03-11
+TJuSuu,B6b1yw,loadKunkle,insom,Weighted median,15,-0.24755146786073076,0.1602107259313147,0.12230717063565147,2019-03-11
+TJuSuu,B6b1yw,loadKunkle,insom,Weighted mode,15,-0.29973889291904254,0.24750666822204076,0.245929723465315,2019-03-11
+TJuSuu,B6b1yw,loadKunkle,insom,MR Egger,15,-0.563664058278059,0.40106319565222526,0.18334099261679382,2019-03-11

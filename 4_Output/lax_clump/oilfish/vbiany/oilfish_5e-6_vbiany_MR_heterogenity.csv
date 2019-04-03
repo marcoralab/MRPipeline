@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+LiOzSp,ATf1aa,vbiany,oilfish,MR Egger,268.3322405159834,261,0.3642643168098341,2019-03-26
+LiOzSp,ATf1aa,vbiany,oilfish,Inverse variance weighted,268.49121491204824,262,0.3781547748330283,2019-03-26

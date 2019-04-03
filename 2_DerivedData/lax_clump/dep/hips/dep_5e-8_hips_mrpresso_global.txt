@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZQEapS	MhYbYc	hips	dep	0	69.71527875964583	<2e-04

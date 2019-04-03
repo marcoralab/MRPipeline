@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gVG67d	8TyGtB	load	hear	0	128.9273337441505	0.6546

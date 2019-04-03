@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+w0yqMN	LCCWZB	load	dep	0	163.3685425070793	0.4979

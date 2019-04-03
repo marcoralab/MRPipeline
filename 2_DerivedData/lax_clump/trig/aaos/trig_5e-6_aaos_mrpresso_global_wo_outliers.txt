@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+eIhMTU	setlDm	aaos	trig	8	436.95912753894316	<1e-04

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+trFOEs,giBTtb,ptau,mvpa,MR Egger,124.90131401856765,124,0.4604025761405382,2019-03-11
+trFOEs,giBTtb,ptau,mvpa,Inverse variance weighted,133.80798344855208,125,0.2787925668154405,2019-03-11

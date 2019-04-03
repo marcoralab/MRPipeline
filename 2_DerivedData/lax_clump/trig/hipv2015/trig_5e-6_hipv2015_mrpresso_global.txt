@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7fHkcw	BsDFUa	hipv2015	trig	1	357.2817195068821	3e-4

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ihaerU,MHcA34,ptau,trig,MR Egger,380.30358279633873,271,1.2877057934507347e-5,2019-03-27
+ihaerU,MHcA34,ptau,trig,Inverse variance weighted,385.95883212568833,272,6.470882404857219e-6,2019-03-27

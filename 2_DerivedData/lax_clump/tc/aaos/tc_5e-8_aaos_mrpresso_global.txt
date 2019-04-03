@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Od36IQ	JFEQZG	aaos	tc	12	1607.4074492552782	<1e-04

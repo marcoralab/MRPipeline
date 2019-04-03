@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+tBPlT1	PCVAK5	hipv2015	educ	0	1289.1338139134764	0.05146

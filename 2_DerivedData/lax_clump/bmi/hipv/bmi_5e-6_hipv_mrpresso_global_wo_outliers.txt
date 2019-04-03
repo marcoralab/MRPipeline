@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Z4yNy0	FT7m34	hipv	bmi	1	3956.6050923427756	<1e-05

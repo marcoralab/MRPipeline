@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+pYz2rA	vNX41R	aaos	ldl	10	300.84710638675097	<1e-04

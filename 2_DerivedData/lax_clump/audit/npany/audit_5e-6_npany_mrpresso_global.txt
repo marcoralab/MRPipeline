@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+mr75mQ	1oZdYx	npany	audit	0	78.78102378194713	0.278

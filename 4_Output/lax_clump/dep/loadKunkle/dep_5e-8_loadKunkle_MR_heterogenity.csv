@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+GT7Ev0,ZV8N42,loadKunkle,dep,MR Egger,38.64100512326139,31,0.16263859680048437,2019-03-11
+GT7Ev0,ZV8N42,loadKunkle,dep,Inverse variance weighted,44.799023634109176,32,0.06594605756012753,2019-03-11

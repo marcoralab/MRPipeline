@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+wYIZai,hS30OS,load,mvpa,MR Egger,2490.048572693071,135,0,2019-03-25
+wYIZai,hS30OS,load,mvpa,Inverse variance weighted,2571.2563221943897,136,0,2019-03-25

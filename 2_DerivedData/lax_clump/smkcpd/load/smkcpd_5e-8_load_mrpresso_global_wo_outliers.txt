@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+bcgMnt	D52WsX	load	smkcpd	0	NA	NA

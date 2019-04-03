@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+KYmz7m,W0jSKX,nft4,smkc,MR Egger,7.49815710941613,13,0.874690288989306,2019-03-11
+KYmz7m,W0jSKX,nft4,smkc,Inverse variance weighted,8.148693343109278,14,0.8814363644270403,2019-03-11

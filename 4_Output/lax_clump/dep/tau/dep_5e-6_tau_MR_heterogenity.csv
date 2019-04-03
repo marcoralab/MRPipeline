@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+rAP3Rh,94cACR,tau,dep,MR Egger,158.79217834648858,149,0.2763566138817618,2019-03-25
+rAP3Rh,94cACR,tau,dep,Inverse variance weighted,167.95962373844125,150,0.1500267982120941,2019-03-25

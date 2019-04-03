@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+0Oakpd	ZTyCAI	nft4	smkaoi	0	56.16447658111214	0.6636

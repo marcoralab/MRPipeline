@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+iAMDzZ,IRRc0n,aaos,educ,MR Egger,1291.079737485054,1201,0.035345390886054345,2019-03-29
+iAMDzZ,IRRc0n,aaos,educ,Inverse variance weighted,1299.9449326781407,1202,0.025037744992218718,2019-03-29

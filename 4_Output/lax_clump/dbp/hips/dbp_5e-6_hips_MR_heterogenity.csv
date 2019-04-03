@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+BAzgsx,om2MWt,hips,dbp,MR Egger,2990.678339053391,3033,0.7044933558211167,2019-03-30
+BAzgsx,om2MWt,hips,dbp,Inverse variance weighted,2992.3708270094653,3034,0.7013565969347604,2019-03-30

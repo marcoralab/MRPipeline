@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MHqMax	hTGwEw	hipv	smki	1	623.0375387574396	<4e-05

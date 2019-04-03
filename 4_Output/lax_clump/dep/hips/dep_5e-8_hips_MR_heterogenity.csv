@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ZQEapS,MhYbYc,hips,dep,MR Egger,56.380806783462695,31,0.0035176569727988173,2019-03-11
+ZQEapS,MhYbYc,hips,dep,Inverse variance weighted,65.70540293425017,32,4.0943921515716324e-4,2019-03-11

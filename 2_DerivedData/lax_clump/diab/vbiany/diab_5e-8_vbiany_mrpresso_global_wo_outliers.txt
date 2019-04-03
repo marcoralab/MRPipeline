@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+2B4FPP	690Tyn	vbiany	diab	0	NA	NA

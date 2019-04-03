@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+xQ0Ywf	BuMBjE	load	pp	6	2783.194501857303	<1e-05

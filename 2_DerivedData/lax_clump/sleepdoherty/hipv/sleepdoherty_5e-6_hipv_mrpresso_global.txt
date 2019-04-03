@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+xMCUgr	VuElB6	hipv	sleepdoherty	0	100.86743100772055	0.1637

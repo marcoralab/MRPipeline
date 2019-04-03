@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+NwTeMA	11TvLR	hipv	insom	0	25.990049815258832	0.073

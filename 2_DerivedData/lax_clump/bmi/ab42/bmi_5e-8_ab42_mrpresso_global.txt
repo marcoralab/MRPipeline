@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+sUNNMS	4bzj1c	ab42	bmi	1	2020.35163433228	<1.33333333333333e-05

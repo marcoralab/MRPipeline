@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MZzQAi,yHs650,tau,trig,MR Egger,383.9221329230999,249,8.236347897272996e-8,2019-03-27
+MZzQAi,yHs650,tau,trig,Inverse variance weighted,385.0562235693153,250,8.386998008176192e-8,2019-03-27

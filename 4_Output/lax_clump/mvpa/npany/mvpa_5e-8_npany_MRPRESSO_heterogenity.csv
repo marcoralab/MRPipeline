@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+6mu8p1,UpGUx6,npany,mvpa,MR Egger,24.171497691234055,35,0.9156770415456996,2019-03-11
+6mu8p1,UpGUx6,npany,mvpa,Inverse variance weighted,24.178492785857443,36,0.9335495200436166,2019-03-11

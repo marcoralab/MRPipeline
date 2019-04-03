@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Vs1WxO	exogPi	nft4	trig	3	375.68818408181795	<1e-04

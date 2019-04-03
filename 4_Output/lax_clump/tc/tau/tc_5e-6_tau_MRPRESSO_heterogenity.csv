@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+EgDKI2,E16GEQ,tau,tc,MR Egger,397.89670357530065,335,0.010225536182416492,2019-03-28
+EgDKI2,E16GEQ,tau,tc,Inverse variance weighted,399.45109020889004,336,0.00979879996746135,2019-03-28

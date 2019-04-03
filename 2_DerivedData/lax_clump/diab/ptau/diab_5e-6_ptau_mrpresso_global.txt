@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+sGgl1d	SAgvrm	ptau	diab	0	443.76607066945854	0.34

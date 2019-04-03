@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ZFw3GP,RfNVMq,ab42,diab,MR Egger,458.0764032882596,399,0.021718540487139854,2019-03-27
+ZFw3GP,RfNVMq,ab42,diab,Inverse variance weighted,458.2550799716504,400,0.023259114127629297,2019-03-27

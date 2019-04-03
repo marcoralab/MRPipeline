@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7RkWz7	gaOYxK	load	diab	2	308.0320331301292	<1e-04

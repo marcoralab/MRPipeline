@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+1Mxj5q,UOTSYO,tau,mvpa,MR Egger,28.362070471164884,27,0.3924913675617012,2019-03-11
+1Mxj5q,UOTSYO,tau,mvpa,Inverse variance weighted,35.00476949769019,28,0.1697285399748902,2019-03-11

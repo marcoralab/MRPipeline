@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+zLQpv8,Rizb73,ptau,dbp,MR Egger,1375.6007684413667,1360,0.3779892942960674,2019-03-26
+zLQpv8,Rizb73,ptau,dbp,Inverse variance weighted,1378.3091309840918,1361,0.36574868119409026,2019-03-26

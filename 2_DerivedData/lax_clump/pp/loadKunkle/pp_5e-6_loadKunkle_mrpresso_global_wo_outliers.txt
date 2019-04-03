@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+rwwEPO	lfEcl4	loadKunkle	pp	9	3112.6046174329517	<1e-05

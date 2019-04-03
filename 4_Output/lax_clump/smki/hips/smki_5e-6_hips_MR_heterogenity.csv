@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+rR3130,OuSpF2,hips,smki,MR Egger,482.3858473483167,476,0.4099657522327523,2019-03-27
+rR3130,OuSpF2,hips,smki,Inverse variance weighted,482.46197534485526,477,0.421626877703904,2019-03-27

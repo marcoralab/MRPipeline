@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+kgKuRQ,krfoph,nft4,mdd,MR Egger,44.980902897657444,43,0.38893031759826,2019-03-11
+kgKuRQ,krfoph,nft4,mdd,Inverse variance weighted,45.20708174180871,44,0.42132700286096386,2019-03-11

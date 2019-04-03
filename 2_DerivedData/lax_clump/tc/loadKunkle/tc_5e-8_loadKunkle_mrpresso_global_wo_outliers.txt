@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+fIVTsy	FR3snH	loadKunkle	tc	28	402.0018034150726	<1e-04

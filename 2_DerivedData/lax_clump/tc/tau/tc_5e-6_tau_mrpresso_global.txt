@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EgDKI2	E16GEQ	tau	tc	2	530.0783705836452	<4e-05

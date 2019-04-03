@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Muhvsw	ivYolx	loadKunkle	audit	1	48.79625699190017	0.001

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dEuq2P	oy2vGG	loadKunkle	audit	3	177.92224560669544	<2e-04

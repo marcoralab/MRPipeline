@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+NQO6JL	klDI5l	loadKunkle	dbp	2	4182.256278426132	<1e-05

@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+hioAla,eLOZoN,npany,smkaoi,Inverse variance weighted (fixed effects),59,-0.24715771675209128,0.6433541127737818,0.7008520289080062,2019-03-11
+hioAla,eLOZoN,npany,smkaoi,Weighted median,59,-0.2374403929634973,0.9601672397849346,0.8046832845710483,2019-03-11
+hioAla,eLOZoN,npany,smkaoi,Weighted mode,59,0.11916032866493609,2.2706647214107347,0.9583280195333805,2019-03-11
+hioAla,eLOZoN,npany,smkaoi,MR Egger,59,-0.11584658943612265,2.098343836462026,0.956165352696277,2019-03-11

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Mh41Hv,MatbQV,vbiany,smkaoi,MR Egger,76.67635486226581,57,0.042152408170109734,2019-03-11
+Mh41Hv,MatbQV,vbiany,smkaoi,Inverse variance weighted,76.67643754036959,58,0.050811650676748615,2019-03-11

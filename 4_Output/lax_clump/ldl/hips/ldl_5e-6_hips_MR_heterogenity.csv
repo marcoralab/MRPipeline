@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+R4D4ZN,upAPUI,hips,ldl,MR Egger,341.06453191426334,316,0.1591006568756682,2019-03-27
+R4D4ZN,upAPUI,hips,ldl,Inverse variance weighted,341.1294706687452,317,0.16819281681877088,2019-03-27

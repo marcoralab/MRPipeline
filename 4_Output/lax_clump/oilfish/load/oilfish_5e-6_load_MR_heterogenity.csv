@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sEy05F,NFWEXo,load,oilfish,MR Egger,2908.3412924335266,246,0,2019-03-25
+sEy05F,NFWEXo,load,oilfish,Inverse variance weighted,2915.609631125892,247,0,2019-03-25

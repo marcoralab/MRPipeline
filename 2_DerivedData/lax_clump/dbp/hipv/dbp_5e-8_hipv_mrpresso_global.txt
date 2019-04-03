@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+87OUHw	jlPAY0	hipv	dbp	1	1862.8779388263383	<1.33333333333333e-05

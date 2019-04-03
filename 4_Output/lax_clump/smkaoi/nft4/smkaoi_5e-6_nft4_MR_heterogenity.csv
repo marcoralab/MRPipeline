@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+0Oakpd,ZTyCAI,nft4,smkaoi,MR Egger,53.8686590364241,57,0.5933014292740152,2019-03-11
+0Oakpd,ZTyCAI,nft4,smkaoi,Inverse variance weighted,53.94072376923774,58,0.6269354916535543,2019-03-11

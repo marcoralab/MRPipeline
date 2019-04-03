@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+X0noqo	BFRHDr	ab42	sleepdoherty	0	NA	NA

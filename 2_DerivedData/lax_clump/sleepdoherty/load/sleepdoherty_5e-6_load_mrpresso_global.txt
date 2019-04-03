@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+D8PhIc	aAIGOJ	load	sleepdoherty	0	151.80731468937674	1e-4

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ur8O0Q	DM3Gkh	ab42	educ	1	2618.148344483245	0.00153

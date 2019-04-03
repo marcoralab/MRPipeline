@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+w2poag	aFY692	load	hear	0	31.284321593040918	0.6472

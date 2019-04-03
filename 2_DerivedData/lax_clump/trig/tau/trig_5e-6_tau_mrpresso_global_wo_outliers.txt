@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+MZzQAi	yHs650	tau	trig	2	280.23898718004676	0.1226

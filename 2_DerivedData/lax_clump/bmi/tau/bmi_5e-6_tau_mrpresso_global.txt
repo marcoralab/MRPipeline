@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+eUaWJD	4Ejwmz	tau	bmi	3	3254.4072467001356	0.00807

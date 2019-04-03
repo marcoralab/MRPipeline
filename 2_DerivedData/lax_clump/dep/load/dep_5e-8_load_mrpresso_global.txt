@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+P6Ej7Z	X706dO	load	dep	0	17.753464660315306	0.862

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+YvAGOa,dr54Hl,ab42,dep,MR Egger,176.94942736056495,149,0.05870888401321078,2019-03-25
+YvAGOa,dr54Hl,ab42,dep,Inverse variance weighted,186.59558507538117,150,0.022763821116945963,2019-03-25

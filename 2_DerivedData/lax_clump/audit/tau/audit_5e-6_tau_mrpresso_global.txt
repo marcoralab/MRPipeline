@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+wFlxPr	aY2ZLE	tau	audit	0	54.10140307590414	0.403

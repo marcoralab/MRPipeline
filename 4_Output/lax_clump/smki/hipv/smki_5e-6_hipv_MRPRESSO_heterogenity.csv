@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+MHqMax,hTGwEw,hipv,smki,MR Egger,549.6850913837181,473,0.008392821349569276,2019-03-29
+MHqMax,hTGwEw,hipv,smki,Inverse variance weighted,556.2906975115129,474,0.005334464846077005,2019-03-29

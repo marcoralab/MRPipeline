@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+uZxB2Z	q3EqOT	loadKunkle	hdl	10	5215.215827534302	<4e-05

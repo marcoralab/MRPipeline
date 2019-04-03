@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+yZW5Uq	ITBpOS	ab42	alccliu	0	183.21512597935575	0.6087

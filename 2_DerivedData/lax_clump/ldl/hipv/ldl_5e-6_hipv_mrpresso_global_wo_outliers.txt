@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+8GvcbE	IfldBN	hipv	ldl	1	398.797978752882	5.6e-4

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+4GD68W	Ez8eLz	loadKunkle	hear	0	156.9296944557702	0.49

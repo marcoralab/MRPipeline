@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+MKBWeD	I7bcWe	aaos	oilfish	2	326.9643790373076	0.0124

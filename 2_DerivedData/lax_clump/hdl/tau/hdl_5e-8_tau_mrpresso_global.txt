@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+83RDzA	WGD1w1	tau	hdl	3	348.09401777728414	<1e-04

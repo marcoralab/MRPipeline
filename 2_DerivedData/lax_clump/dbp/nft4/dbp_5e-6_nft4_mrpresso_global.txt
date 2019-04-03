@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+VdvOWe	tBpROR	nft4	dbp	0	3170.6279822090396	0.28948

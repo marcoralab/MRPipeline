@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+X7lu4r	QKIBEK	npany	oilfish	1	250.6947141201666	0.7851

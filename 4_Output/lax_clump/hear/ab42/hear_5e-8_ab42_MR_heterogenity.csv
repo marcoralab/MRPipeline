@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+UxSPX2,g9iaDV,ab42,hear,MR Egger,36.39884556881849,29,0.16223280725644948,2019-03-11
+UxSPX2,g9iaDV,ab42,hear,Inverse variance weighted,56.37805634824189,30,0.0024699096559736736,2019-03-11

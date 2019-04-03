@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+homikQ,xapF56,vbiany,pp,MR Egger,2409.4198634414506,2293,0.044501846372749405,2019-03-27
+homikQ,xapF56,vbiany,pp,Inverse variance weighted,2420.7008671674257,2294,0.032375539956175495,2019-03-27

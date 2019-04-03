@@ -1,0 +1,86 @@
+$`Main MR results`
+       Exposure       MR Analysis Causal Estimate         Sd    T-stat
+1 beta.exposure               Raw     -0.09798157 0.05663252 -1.730129
+2 beta.exposure Outlier-corrected              NA         NA        NA
+     P-value
+1 0.08942706
+2         NA
+
+$`MR-PRESSO results`
+$`MR-PRESSO results`$`Global Test`
+$`MR-PRESSO results`$`Global Test`$RSSobs
+[1] 74.84462
+
+$`MR-PRESSO results`$`Global Test`$Pvalue
+[1] 0.0402
+
+
+$`MR-PRESSO results`$`Outlier Test`
+         RSSobs Pvalue
+1  6.372591e-04      1
+2  1.895365e-05      1
+3  6.002478e-05      1
+4  4.781965e-04      1
+5  2.004696e-04      1
+6  5.706210e-04      1
+7  3.608451e-05      1
+8  8.170587e-05      1
+9  1.000155e-04      1
+10 3.297114e-03      1
+11 1.428874e-03      1
+12 8.697429e-06      1
+13 7.173626e-03      1
+14 1.301593e-04      1
+15 7.515158e-04 0.1512
+16 6.325836e-04      1
+17 9.198420e-05      1
+18 1.646613e-05      1
+19 1.110075e-04      1
+20 7.724059e-07      1
+21 1.330413e-05      1
+22 1.027768e-05      1
+23 3.517140e-04      1
+24 1.040065e-05      1
+25 3.648229e-04      1
+26 3.626030e-06      1
+27 1.485030e-04      1
+28 4.853716e-05      1
+29 1.306399e-04      1
+30 1.288203e-04      1
+31 1.006612e-03      1
+32 1.708430e-05      1
+33 8.048303e-06      1
+34 7.706318e-04      1
+35 1.037666e-06      1
+36 3.211723e-06      1
+37 6.330058e-04      1
+38 2.416634e-06      1
+39 1.064989e-04      1
+40 6.757745e-07      1
+41 2.313884e-04      1
+42 9.822210e-05      1
+43 6.051936e-05      1
+44 2.329658e-04      1
+45 2.894179e-03      1
+46 1.025003e-03      1
+47 6.504345e-05      1
+48 3.054766e-05      1
+49 6.338912e-07      1
+50 1.733646e-04      1
+51 1.097016e-06      1
+52 3.398312e-04      1
+53 5.242910e-05      1
+54 2.862095e-04      1
+
+$`MR-PRESSO results`$`Distortion Test`
+$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
+[1] "No significant outliers"
+
+$`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
+[1] NA
+
+$`MR-PRESSO results`$`Distortion Test`$Pvalue
+[1] NA
+
+
+

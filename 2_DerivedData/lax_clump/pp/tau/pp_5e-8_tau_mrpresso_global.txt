@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WzlDM5	2240GW	tau	pp	0	977.2776402081076	0.57998

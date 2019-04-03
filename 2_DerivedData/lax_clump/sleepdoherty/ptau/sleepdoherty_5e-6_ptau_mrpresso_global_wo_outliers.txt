@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+nhb9Xg	T4lTMs	ptau	sleepdoherty	0	NA	NA

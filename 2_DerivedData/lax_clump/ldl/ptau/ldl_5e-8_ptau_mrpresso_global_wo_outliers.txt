@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+AHq0ux	IIM5C8	ptau	ldl	3	238.18264354470858	0.0122

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Kks0jK	lfKCq2	aaos	educ	2	3285.8851495490676	1.3e-4

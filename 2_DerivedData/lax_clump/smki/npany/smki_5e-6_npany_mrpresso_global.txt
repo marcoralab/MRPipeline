@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+DChseO	5wWJX2	npany	smki	0	534.9747740437612	0.1146

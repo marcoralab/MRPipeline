@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sUNNMS,4bzj1c,ab42,bmi,MR Egger,1974.9987410448705,1497,8.599377166976305e-16,2019-04-02
+sUNNMS,4bzj1c,ab42,bmi,Inverse variance weighted,1975.818153354882,1498,8.950882535518246e-16,2019-04-02

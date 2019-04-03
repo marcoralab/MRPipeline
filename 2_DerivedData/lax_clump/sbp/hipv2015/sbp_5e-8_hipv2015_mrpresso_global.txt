@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+svJAWS	DfTMQb	hipv2015	sbp	0	1503.2913828082158	0.13656

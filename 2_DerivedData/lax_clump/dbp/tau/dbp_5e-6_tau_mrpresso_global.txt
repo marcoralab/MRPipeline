@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MvsbmN	jgx9Bf	tau	dbp	0	2590.8067756697615	0.0808

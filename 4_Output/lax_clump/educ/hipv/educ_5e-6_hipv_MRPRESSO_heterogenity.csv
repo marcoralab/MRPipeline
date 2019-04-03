@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+KUbAxD,OnMuR0,hipv,educ,MR Egger,3159.4614685299493,2808,3.148048167711389e-6,2019-04-02
+KUbAxD,OnMuR0,hipv,educ,Inverse variance weighted,3160.515413547555,2809,3.1492030192847376e-6,2019-04-02

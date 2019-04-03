@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+QofMI7	wO5cv5	hipv	mvpa	4	280.8016172276239	<1e-04

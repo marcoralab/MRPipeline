@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+uzHMzy	4VWeGs	loadKunkle	trig	8	3895.9338702822433	<4e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+SE7EuA	KuG92P	hips	mvpa	0	186.364690989123	0.0315

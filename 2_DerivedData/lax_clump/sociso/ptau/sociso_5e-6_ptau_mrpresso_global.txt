@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+QcpTQj	WKIETN	ptau	sociso	0	120.18103649283685	0.3285

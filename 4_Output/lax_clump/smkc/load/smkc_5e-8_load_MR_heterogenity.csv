@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+P4D0am,c6iXIs,load,smkc,MR Egger,18.13435461702563,13,0.1524844083336634,2019-03-11
+P4D0am,c6iXIs,load,smkc,Inverse variance weighted,18.25064507703563,14,0.1956024542664935,2019-03-11

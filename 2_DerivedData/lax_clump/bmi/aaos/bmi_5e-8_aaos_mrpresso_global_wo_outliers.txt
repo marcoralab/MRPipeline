@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+bggrYC	THbK5P	aaos	bmi	1	1911.3214012443168	<1.33333333333333e-05

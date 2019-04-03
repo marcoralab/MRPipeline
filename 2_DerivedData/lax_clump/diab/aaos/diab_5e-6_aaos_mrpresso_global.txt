@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+QYpTRl	RF7AdW	aaos	diab	0	612.5438678423844	<4e-05

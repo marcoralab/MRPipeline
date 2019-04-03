@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+9yAIj2	UpTaXE	npany	trig	2	154.31647169693167	0.7136

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+B8bpHg,pnDEox,hipv2015,diab,MR Egger,447.92247060507833,426,0.22324271426277373,2019-03-26
+B8bpHg,pnDEox,hipv2015,diab,Inverse variance weighted,448.19921871093675,427,0.23072054224440258,2019-03-26

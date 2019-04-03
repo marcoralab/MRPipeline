@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+25GzK0	QKMBdP	vbiany	sociso	0	NA	NA

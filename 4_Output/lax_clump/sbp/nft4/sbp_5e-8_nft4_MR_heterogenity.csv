@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+arIeRn,qpbYNX,nft4,sbp,MR Egger,1359.4378420547664,1439,0.9330414623136064,2019-03-27
+arIeRn,qpbYNX,nft4,sbp,Inverse variance weighted,1359.4380435131657,1440,0.9354483162390688,2019-03-27

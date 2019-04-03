@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ihaerU	MHcA34	ptau	trig	2	402.79988821711964	<1e-04

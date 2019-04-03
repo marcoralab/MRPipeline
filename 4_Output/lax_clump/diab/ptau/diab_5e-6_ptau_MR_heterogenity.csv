@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+sGgl1d,SAgvrm,ptau,diab,MR Egger,439.53436894839655,423,0.27958649968071575,2019-03-26
+sGgl1d,SAgvrm,ptau,diab,Inverse variance weighted,441.0262667283229,424,0.2743008050766419,2019-03-26

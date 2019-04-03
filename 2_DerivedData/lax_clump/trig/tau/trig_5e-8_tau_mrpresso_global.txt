@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qqb4nX	h2d0l8	tau	trig	2	303.5747006023842	<1e-04

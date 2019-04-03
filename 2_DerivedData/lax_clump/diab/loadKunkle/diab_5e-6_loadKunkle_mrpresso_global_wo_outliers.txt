@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+h7Gugy	N6ixB4	loadKunkle	diab	3	638.5305603940343	<4e-05
