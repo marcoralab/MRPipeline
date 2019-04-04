@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JmeMb4	GDkMSL	loadKunkle	smki	0	393.5696469000151	0.00812

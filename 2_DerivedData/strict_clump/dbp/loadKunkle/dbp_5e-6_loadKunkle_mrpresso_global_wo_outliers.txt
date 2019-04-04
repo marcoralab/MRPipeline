@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+alaBRS	05Sx24	loadKunkle	dbp	1	1487.5347162040273	<2e-05

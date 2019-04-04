@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WtAHKP	WiZe6r	vbiany	audit	0	59.55509713246614	0.3142

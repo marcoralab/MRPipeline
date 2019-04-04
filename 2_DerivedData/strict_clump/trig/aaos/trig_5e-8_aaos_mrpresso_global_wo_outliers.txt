@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+UReh4Q	fCwuYC	aaos	trig	2	86.87139082975888	0.0194

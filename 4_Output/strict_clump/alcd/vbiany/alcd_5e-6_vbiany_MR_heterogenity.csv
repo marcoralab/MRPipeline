@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+6JPoik,locxqa,vbiany,alcd,MR Egger,8.410751916824216,14,0.8668487028988869,2019-04-04
+6JPoik,locxqa,vbiany,alcd,Inverse variance weighted,8.550954817294512,15,0.8998030818921962,2019-04-04

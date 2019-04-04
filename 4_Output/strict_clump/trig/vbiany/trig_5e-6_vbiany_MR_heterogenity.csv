@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+JuWWKo,WYECo3,vbiany,trig,MR Egger,130.08736365034122,118,0.21055156491602645,2019-04-04
+JuWWKo,WYECo3,vbiany,trig,Inverse variance weighted,130.10435643789515,119,0.22921048967515212,2019-04-04

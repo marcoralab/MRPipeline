@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ORQevb,USGDOv,nft4,hdl,MR Egger,316.4308628370533,161,3.3388574803665502e-12,2019-04-04
+ORQevb,USGDOv,nft4,hdl,Inverse variance weighted,319.91450460699673,162,1.9634755774568903e-12,2019-04-04

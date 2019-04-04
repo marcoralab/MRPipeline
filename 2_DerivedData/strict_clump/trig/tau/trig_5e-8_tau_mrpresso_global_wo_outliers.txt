@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+hsod97	W9CQXl	tau	trig	0	NA	NA

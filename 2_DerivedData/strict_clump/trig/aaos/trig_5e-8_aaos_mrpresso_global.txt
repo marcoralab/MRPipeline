@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UReh4Q	fCwuYC	aaos	trig	2	189.2030873262405	<2e-04

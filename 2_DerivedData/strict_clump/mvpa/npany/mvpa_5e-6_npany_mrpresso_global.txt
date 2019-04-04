@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+FLSYsL	SK4tI7	npany	mvpa	1	237.75810349359432	<1e-04

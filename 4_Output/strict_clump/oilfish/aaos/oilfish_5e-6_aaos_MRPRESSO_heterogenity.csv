@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ktuCZm,3dt7sy,aaos,oilfish,MR Egger,202.23377680112165,160,0.013317802780344595,2019-04-04
+ktuCZm,3dt7sy,aaos,oilfish,Inverse variance weighted,202.24431397895347,161,0.015248915299760505,2019-04-04

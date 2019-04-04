@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+muSfBL,gov7yr,loadKunkle,dep,Inverse variance weighted (fixed effects),16,0.5200578031532753,0.5154571530104869,0.3130104230120766,2019-04-04
+muSfBL,gov7yr,loadKunkle,dep,Weighted median,16,0.20411747646474743,0.7692872600653128,0.790752764804808,2019-04-04
+muSfBL,gov7yr,loadKunkle,dep,Weighted mode,16,-0.713109333658478,1.388198081024535,0.6149492441123181,2019-04-04
+muSfBL,gov7yr,loadKunkle,dep,MR Egger,16,5.182092012896585,3.3727864546619397,0.14671813396119252,2019-04-04

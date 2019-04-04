@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+7NKca6,Zizapr,npany,oilfish,MR Egger,153.83818190167383,45,8.064803995946174e-14,2019-04-04
+7NKca6,Zizapr,npany,oilfish,Inverse variance weighted,153.9634380441567,46,1.4460789206307876e-13,2019-04-04

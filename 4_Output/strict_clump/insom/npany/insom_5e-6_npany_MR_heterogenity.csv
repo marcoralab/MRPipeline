@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+lHStep,i7aDsl,npany,insom,MR Egger,126.00742343959854,94,0.015404656752697355,2019-04-04
+lHStep,i7aDsl,npany,insom,Inverse variance weighted,130.15399439777832,95,0.009718573409693764,2019-04-04

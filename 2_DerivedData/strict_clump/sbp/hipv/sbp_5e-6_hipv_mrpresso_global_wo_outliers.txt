@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+tabWSn	mafvit	hipv	sbp	1	1377.2878654657095	6e-5

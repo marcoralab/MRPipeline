@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+CiSXI4	XMRwHG	nft4	mvpa	2	31.475301738031845	0.148

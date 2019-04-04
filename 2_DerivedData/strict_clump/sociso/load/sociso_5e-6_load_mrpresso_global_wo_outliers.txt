@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+3PaiY0	lZwiEX	load	sociso	1	100.56409414396563	0.2102

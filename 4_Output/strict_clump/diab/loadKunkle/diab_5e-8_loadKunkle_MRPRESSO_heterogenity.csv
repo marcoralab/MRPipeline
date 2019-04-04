@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+LkNeqC,EnT8xx,loadKunkle,diab,MR Egger,197.14970559046552,129,1.0560658982399854e-4,2019-04-04
+LkNeqC,EnT8xx,loadKunkle,diab,Inverse variance weighted,197.38693971614907,130,1.2685237479987107e-4,2019-04-04

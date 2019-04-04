@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+jjU8Lo	3cBpGA	load	bmi	1	1026.4080184568793	4.4e-4

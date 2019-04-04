@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+CiSXI4,XMRwHG,nft4,mvpa,MR Egger,24.46070958578876,21,0.2712753439469595,2019-04-04
+CiSXI4,XMRwHG,nft4,mvpa,Inverse variance weighted,28.749589166134257,22,0.15215000254649771,2019-04-04

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+alaBRS,05Sx24,loadKunkle,dbp,MR Egger,1443.327597279261,1179,1.7326609488721067e-7,2019-04-04
+alaBRS,05Sx24,loadKunkle,dbp,Inverse variance weighted,1445.7807252564583,1180,1.523822321703227e-7,2019-04-04

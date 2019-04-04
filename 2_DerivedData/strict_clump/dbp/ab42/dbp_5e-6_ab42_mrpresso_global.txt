@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+lb297P	OB105Z	ab42	dbp	0	1050.4011113859135	0.37546

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+RtsJeR	aFQQjc	vbiany	hear	0	104.99836770677011	0.5114

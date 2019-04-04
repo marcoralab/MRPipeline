@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+riKlqw,VSMMhG,load,smkc,MR Egger,53.84694360864078,33,0.01241855278855553,2019-04-04
+riKlqw,VSMMhG,load,smkc,Inverse variance weighted,53.85321325504758,34,0.01654306042067713,2019-04-04

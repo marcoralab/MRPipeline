@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+btjhRU	wCRK5w	npany	oilfish	1	163.3626844092846	0.3713

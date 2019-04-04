@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+muSfBL	gov7yr	loadKunkle	dep	1	31.67016179272908	0.021

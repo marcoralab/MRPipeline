@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Hc8aYT	CDjoam	ab42	sociso	1	14.433959831168316	0.297

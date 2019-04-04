@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+UQKzyN	RAFCye	nft4	bmi	1	1055.2078339496977	<2e-05

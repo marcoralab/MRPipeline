@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+n05cKr	YKHoqW	vbiany	oilfish	0	162.66143892538472	0.4503

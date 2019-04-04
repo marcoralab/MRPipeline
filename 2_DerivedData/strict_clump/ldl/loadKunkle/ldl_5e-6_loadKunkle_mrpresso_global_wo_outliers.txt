@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+jRrBO5	glNSMt	loadKunkle	ldl	4	145.34718337088057	0.0975

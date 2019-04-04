@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Fz7cxH	GGg0mc	load	trig	3	482.078402730876	<2e-04

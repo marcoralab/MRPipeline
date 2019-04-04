@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+boo74G	YdMxyN	aaos	dep	0	18.852287251085087	0.354

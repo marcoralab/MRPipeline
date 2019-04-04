@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+TVeaon	wS7he9	loadKunkle	dbp	1	929.6705515075708	<4e-05

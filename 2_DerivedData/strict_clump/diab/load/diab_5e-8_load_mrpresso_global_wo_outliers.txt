@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+BIOdX5	5BKuCn	load	diab	1	189.03838104005976	5e-4

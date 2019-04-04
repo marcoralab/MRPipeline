@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7TdHOG	8sAZN1	tau	educ	0	756.0248504298808	0.01328

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+GUzNJ8	JR3XpH	tau	smkaoi	0	42.55613157601666	0.4556

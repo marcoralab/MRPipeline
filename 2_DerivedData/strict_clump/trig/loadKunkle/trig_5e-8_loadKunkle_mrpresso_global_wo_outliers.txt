@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+ZQ15Mm	514z8s	loadKunkle	trig	3	56.43429701338246	0.611

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Btteta	EkOFrX	npany	dep	0	133.8220283580544	0.1906

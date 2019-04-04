@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+o5c8Cf,tmsqdy,load,insom,MR Egger,97.99265855768081,93,0.34148298835240676,2019-04-04
+o5c8Cf,tmsqdy,load,insom,Inverse variance weighted,99.16402635701687,94,0.3378385402196941,2019-04-04

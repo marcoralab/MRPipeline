@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+W0l30V	EbMSKC	npany	audit	0	66.80366346138955	0.2038

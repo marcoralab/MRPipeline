@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+btjhRU,wCRK5w,npany,oilfish,Inverse variance weighted (fixed effects),155,0.626473429423268,0.5127822610771624,0.22181568054207151,2019-04-04
+btjhRU,wCRK5w,npany,oilfish,Weighted median,155,0.387967431711369,0.7381781118216854,0.5991840289438951,2019-04-04
+btjhRU,wCRK5w,npany,oilfish,Weighted mode,155,0.8042320989883898,1.7819472312786961,0.6523923520988175,2019-04-04
+btjhRU,wCRK5w,npany,oilfish,MR Egger,155,-2.066499775688403,2.7800142535552275,0.45841490983087396,2019-04-04

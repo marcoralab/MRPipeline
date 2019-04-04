@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+KOzoko,gMHjcR,hipv,oilfish,Inverse variance weighted (fixed effects),41,0.12163637255051679,0.09678799153667243,0.20885142123248177,2019-04-04
+KOzoko,gMHjcR,hipv,oilfish,Weighted median,41,0.03945152992893504,0.14631154563427937,0.7874367784305528,2019-04-04
+KOzoko,gMHjcR,hipv,oilfish,Weighted mode,41,-0.020134204535407596,0.34827634088024034,0.9541870126854037,2019-04-04
+KOzoko,gMHjcR,hipv,oilfish,MR Egger,41,0.6045307847953857,0.46540977918546117,0.2015982882660885,2019-04-04

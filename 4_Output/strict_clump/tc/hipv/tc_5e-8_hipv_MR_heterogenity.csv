@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+oGAVTA,fdoaJ3,hipv,tc,MR Egger,123.32313400124102,92,0.016288817963942794,2019-04-04
+oGAVTA,fdoaJ3,hipv,tc,Inverse variance weighted,126.64359574803488,93,0.011684945413446125,2019-04-04

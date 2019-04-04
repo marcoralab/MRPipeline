@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+MkPocH	0UtkXE	hipv	ldl	1	111.56617906212699	0.0127

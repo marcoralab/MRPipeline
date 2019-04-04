@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+XA155A	3VP0Qs	tau	diab	0	287.26193858412825	0.1814

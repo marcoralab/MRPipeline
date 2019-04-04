@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+lbWmLO	HghCCU	loadKunkle	sbp	2	1513.9162779090693	<2e-05

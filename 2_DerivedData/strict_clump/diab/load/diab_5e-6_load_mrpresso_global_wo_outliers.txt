@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+s6h9vz	YtPLbI	load	diab	2	381.2530602995649	3e-4

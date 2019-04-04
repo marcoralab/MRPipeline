@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+riKlqw	VSMMhG	load	smkc	0	57.60418117073792	0.0184

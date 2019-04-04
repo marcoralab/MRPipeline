@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+g9I48B	nOMFKD	hipv	bmi	1	1742.5332129807232	1.3333333333333333e-5

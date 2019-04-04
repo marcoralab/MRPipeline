@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+9IO4SY,CCISWc,hipv2015,educ,MR Egger,1290.1043841195562,1235,0.13435211866139024,2019-04-04
+9IO4SY,CCISWc,hipv2015,educ,Inverse variance weighted,1290.895705676794,1236,0.13533094617350097,2019-04-04

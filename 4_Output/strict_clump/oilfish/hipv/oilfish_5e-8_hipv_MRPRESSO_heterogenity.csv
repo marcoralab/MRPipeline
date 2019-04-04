@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+KOzoko,gMHjcR,hipv,oilfish,MR Egger,51.31613573111004,39,0.0895154997808446,2019-04-04
+KOzoko,gMHjcR,hipv,oilfish,Inverse variance weighted,52.81812870848584,40,0.08436107691021727,2019-04-04

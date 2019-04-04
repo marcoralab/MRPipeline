@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+KOzoko	gMHjcR	hipv	oilfish	2	63.13418859390719	0.0434

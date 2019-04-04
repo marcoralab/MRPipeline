@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+JN8VcG	iCEP98	aaos	sociso	0	120.03320919611298	0.0689

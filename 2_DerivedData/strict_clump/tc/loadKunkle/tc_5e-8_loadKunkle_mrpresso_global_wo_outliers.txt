@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+hQJ22o	dFR0Mp	loadKunkle	tc	6	137.45763101761793	0.0048

@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+7NKca6,Zizapr,npany,oilfish,Inverse variance weighted (fixed effects),47,-0.027887882534669773,0.7831298670357119,0.9715926951379477,2019-04-04
+7NKca6,Zizapr,npany,oilfish,Weighted median,47,-0.5925072018597709,1.088236934236173,0.5861213503978238,2019-04-04
+7NKca6,Zizapr,npany,oilfish,Weighted mode,47,-0.906667451524779,2.0950500828166656,0.6672067661318797,2019-04-04
+7NKca6,Zizapr,npany,oilfish,MR Egger,47,1.135488206289605,6.2479016088495305,0.8566036377041324,2019-04-04

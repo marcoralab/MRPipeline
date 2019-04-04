@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+lbWmLO,HghCCU,loadKunkle,sbp,MR Egger,1731.308697635744,1156,9.6081184694834e-26,2019-04-04
+lbWmLO,HghCCU,loadKunkle,sbp,Inverse variance weighted,1737.4309632083796,1157,4.208102852092224e-26,2019-04-04

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+H1KXVX,KpKSrc,ptau,hear,MR Egger,98.32191722083012,86,0.17147315797423174,2019-04-04
+H1KXVX,KpKSrc,ptau,hear,Inverse variance weighted,98.6684906199337,87,0.18462017332222802,2019-04-04

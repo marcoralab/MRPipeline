@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Ki37Bt,MOwZrX,nft4,diab,MR Egger,125.8150784707267,128,0.5380811525009817,2019-04-04
+Ki37Bt,MOwZrX,nft4,diab,Inverse variance weighted,125.97565996151411,129,0.5588985775147481,2019-04-04

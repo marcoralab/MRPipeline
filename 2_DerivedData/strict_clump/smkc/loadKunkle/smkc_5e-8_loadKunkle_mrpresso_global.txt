@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+2Vsp1k	X8amAt	loadKunkle	smkc	0	10.037715286634231	0.378

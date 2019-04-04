@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+O4mmj7,BlEtNV,hipv,educ,MR Egger,1546.682002599938,1255,2.712706009078895e-8,2019-04-04
+O4mmj7,BlEtNV,hipv,educ,Inverse variance weighted,1546.9722531535137,1256,2.93769635231281e-8,2019-04-04

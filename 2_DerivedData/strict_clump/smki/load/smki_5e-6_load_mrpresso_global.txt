@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+LnaygE	joaHik	load	smki	0	396.631443802551	0.00176

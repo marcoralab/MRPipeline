@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+IAbeyy	aDZb5c	load	mdd	0	NA	NA

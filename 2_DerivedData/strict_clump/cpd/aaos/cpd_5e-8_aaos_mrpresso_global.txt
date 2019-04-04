@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+a88yA6	nytSGt	aaos	cpd	0	3.0169833410035123	0.835

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+lW1pVW	XDEnwo	load	cpd	0	24.723955249190926	0.026

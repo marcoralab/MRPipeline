@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+AySqFe	LcCq2k	loadKunkle	ldl	4	696.7607364717173	<1e-04

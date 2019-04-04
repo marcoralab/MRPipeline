@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+OMGDzl	9Suj87	ptau	ldl	0	87.13783888012333	0.2848

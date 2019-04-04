@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+uSchID	SrIyAR	loadKunkle	sociso	1	153.06806612648523	2e-4

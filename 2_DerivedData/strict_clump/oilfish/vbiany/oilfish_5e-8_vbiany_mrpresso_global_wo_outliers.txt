@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+FOlmR3	S7EG4k	vbiany	oilfish	0	NA	NA

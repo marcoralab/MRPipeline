@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+H1KXVX	KpKSrc	ptau	hear	1	117.64234795595341	0.0446

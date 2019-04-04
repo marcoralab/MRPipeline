@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+SHauG9	IGQF18	ab42	pp	0	504.9434047123064	0.58156

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+GHxMC5,y9ir5S,load,mvpa,MR Egger,2095.8446632460536,20,0,2019-04-04
+GHxMC5,y9ir5S,load,mvpa,Inverse variance weighted,2362.1335952107675,21,0,2019-04-04

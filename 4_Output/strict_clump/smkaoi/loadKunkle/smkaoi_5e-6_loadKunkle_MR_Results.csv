@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+gTHr3d,6XvPCV,loadKunkle,smkaoi,Inverse variance weighted (fixed effects),55,-0.10589231747299693,0.13414679283917416,0.4298920230561457,2019-04-04
+gTHr3d,6XvPCV,loadKunkle,smkaoi,Weighted median,55,-0.211917030212785,0.20632486131554867,0.3043716326130631,2019-04-04
+gTHr3d,6XvPCV,loadKunkle,smkaoi,Weighted mode,55,-0.33648798719866013,0.4382817851882451,0.4459838367885486,2019-04-04
+gTHr3d,6XvPCV,loadKunkle,smkaoi,MR Egger,55,-0.08590778708939839,0.397944334709779,0.8299108323119719,2019-04-04

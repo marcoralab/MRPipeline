@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kby8pY	FzX8kE	hipv	pp	1	1258.1917129952046	<2e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+lgo3BI	EUgLn5	nft4	alcd	1	44.153873851526754	0.018

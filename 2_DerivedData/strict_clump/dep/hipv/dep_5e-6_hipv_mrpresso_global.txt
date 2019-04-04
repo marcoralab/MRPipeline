@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+dIeCFH	Bw24Fz	hipv	dep	0	122.2495077814822	0.4304

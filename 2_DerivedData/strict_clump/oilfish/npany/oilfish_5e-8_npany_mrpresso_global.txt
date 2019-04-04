@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7NKca6	Zizapr	npany	oilfish	1	160.41977777425691	<2e-04

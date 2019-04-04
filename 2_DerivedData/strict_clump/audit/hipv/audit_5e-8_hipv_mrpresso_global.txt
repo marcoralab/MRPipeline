@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+choEPU	piLmcM	hipv	audit	0	1.844961207315919	0.938

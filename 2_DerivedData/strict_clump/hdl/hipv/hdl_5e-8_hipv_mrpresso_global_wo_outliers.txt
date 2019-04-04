@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+mAtAlV	Au7mU8	hipv	hdl	1	118.72870692107965	0.1275

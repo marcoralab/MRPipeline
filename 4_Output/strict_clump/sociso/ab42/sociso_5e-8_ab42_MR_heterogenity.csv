@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Hc8aYT,CDjoam,ab42,sociso,MR Egger,14.769506338291457,10,0.14069393300209462,2019-04-04
+Hc8aYT,CDjoam,ab42,sociso,Inverse variance weighted,20.697326788184835,11,0.036645902544811385,2019-04-04

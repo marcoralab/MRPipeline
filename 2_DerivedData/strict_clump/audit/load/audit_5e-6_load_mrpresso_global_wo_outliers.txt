@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+ezB23E	JHi9QR	load	audit	1	71.54169985845537	0.058
