@@ -1,10 +1,10 @@
 # snakemake -s mr.smk --configfile strict_clump.yaml -j 4 --keep-going --until manhattan_plot
 # snakemake -s mr.smk --configfile strict_clump.yaml --dag | dot -Tsvg > dag_mr.svg
-# snakejob -s mr.smk --configfile strict_clump.yaml -j 500 --max-jobs-per-second 1 --keep-going --until FindProxySnps
+# snakejob -s mr.smk --configfile mid_clump.yaml -j 500 --max-jobs-per-second 1 --keep-going --until FindProxySnps
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/strict_clump/"
-DataOutput: "4_Output/strict_clump/"
+DataOut: "2_DerivedData/mid_clump/"
+DataOutput: "4_Output/mid_clump/"
 
 REF: '1_RawData/EUR_All_Chr'
 clumpr2: 0.01
