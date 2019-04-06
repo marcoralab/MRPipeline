@@ -1,24 +1,25 @@
-# snakemake -s mr.smk --configfile test.yaml -j 4 --keep-going --until manhattan_plot
-# snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
-# snakejob -s mr.smk --configfile test.yaml -j 400 --max-jobs-per-second 1 --keep-going --until manhattan_plot
+# snakemake -s mr.smk --configfile strict_clump.yaml -j 4 --keep-going --until manhattan_plot
+# snakemake -s mr.smk --configfile strict_clump.yaml --dag | dot -Tsvg > dag_mr.svg
+# snakejob -s mr.smk --configfile strict_clump.yaml -j 500 --max-jobs-per-second 1 --keep-going --until FindProxySnps
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/test/"
-DataOutput: "4_Output/test/"
+DataOut: "2_DerivedData/strict_clump/"
+DataOutput: "4_Output/strict_clump/"
 
 REF: '1_RawData/EUR_All_Chr'
-clumpr2: 0.1
-clumpkb: 250
+clumpr2: 0.01
+clumpkb: 1000
 traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['mdd']
-OutcomeCode: ['load']
+ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'sleepdoherty', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
+OutcomeCode: ['load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'vbiany']
 
 ## Forbidden wildcard combinations
-missing : [
+missing: [
    {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "alcd", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
@@ -30,6 +31,7 @@ missing : [
    {"ExposureCode" : "alcd", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "sleep", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
@@ -39,18 +41,5 @@ missing : [
    {"ExposureCode" : "sleep", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "sleep", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "las", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "las", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
  ]
