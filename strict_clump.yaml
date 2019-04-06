@@ -13,7 +13,7 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'sleepdoherty', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
+ExposureCode: ['alcc', 'alccliu', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'oilfish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleepdoherty', 'sleepDashti', 'smkaoi', 'smkcpd', 'smkc', 'smki', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear']
 OutcomeCode: ['load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'vbiany']
 
 ## Forbidden wildcard combinations
@@ -29,17 +29,5 @@ missing: [
    {"ExposureCode" : "alcd", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "alcd", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"}
  ]
