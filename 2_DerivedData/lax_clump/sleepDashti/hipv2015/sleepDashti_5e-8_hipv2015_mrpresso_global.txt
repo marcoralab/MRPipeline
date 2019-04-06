@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8BOBLJ	MLZCP1	hipv2015	sleepDashti	0	138.72408518068647	0.0215

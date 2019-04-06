@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+rPhMnk,LyIPMw,npany,sleepDashti,MR Egger,376.28198465696994,380,0.5442329073985919,2019-04-06
+rPhMnk,LyIPMw,npany,sleepDashti,Inverse variance weighted,378.7566232293386,381,0.5228322839954582,2019-04-06

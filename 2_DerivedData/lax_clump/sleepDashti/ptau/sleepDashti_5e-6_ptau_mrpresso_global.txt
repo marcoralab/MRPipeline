@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+8uw7gF	mf1EQG	ptau	sleepDashti	0	314.7003384550843	0.86208

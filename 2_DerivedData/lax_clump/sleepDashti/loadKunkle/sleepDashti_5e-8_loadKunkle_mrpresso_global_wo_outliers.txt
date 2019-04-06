@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+puHGcF	nL831O	loadKunkle	sleepDashti	1	158.57099485633006	0.0172

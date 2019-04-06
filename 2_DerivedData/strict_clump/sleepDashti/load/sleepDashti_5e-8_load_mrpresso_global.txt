@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6z5otM	MRSACB	load	sleepDashti	1	116.50780154244198	0.0081
