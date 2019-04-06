@@ -1125,25 +1125,39 @@ write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sle
 
 ```
 
-[Doherty et al Nat Commun 2018](https://www.nature.com/articles/s41467-018-07743-4): 
-Physical activity and sleep duration are established risk factors for many diseases, but their etiology is poorly understood, partly due to relying on self-reported evidence. Our 2018 Nature Communications article reports a genome-wide association study (GWAS) of device-measured physical activity and sleep duration in 91,105 UK Biobank participants, finding 14 significant loci (7 novel). This data deposit shares the summary statistics related to this GWAS study.
+[Dashti et al Nat Commun 2019](https://www.ncbi.nlm.nih.gov/pubmed/30846698): 
+Through genome-wide association analysis in 446,118 adults of European ancestry from the UK Biobank, we identify 78 loci for self-reported habitual sleep duration (p < 5 × 10-8; 43 loci at p < 6 × 10-9). Replication is observed for PAX8, VRK2, and FBXL12/UBL5/PIN1 loci in the CHARGE study (n = 47,180; p < 6.3 × 10-4), and 55 signals show sign-concordant effects. The 78 loci further associate with accelerometer-derived sleep duration, daytime inactivity, sleep efficiency and number of sleep bouts in secondary analysis (n = 85,499).
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
-sleepdoherty.raw <- read_csv('~/Dropbox/Research/Data/Summary_Statisitics/Sleep/Doherty2018/Doherty-2018-NatureComms-sleep-duration-SexBMI.csv.gz')
-sleepdoherty <- sleepdoherty.raw %>% 
-  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_LINREG) %>% 
+sleepDashti.raw <- read_tsv('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Sleep/Dashti2018/sleepdurationsumstats.txt.gz')
+sleepDashti <- sleepDashti.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA_SLEEPDURATION, SE = SE_SLEEPDURATION, P = P_SLEEPDURATION) %>% 
   filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
   filter(CHR %in% 1:22) %>%
   arrange(CHR, POS) %>% 
-  mutate(N = 91105) %>%
+  mutate(N = 446118) %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
-  filter(SNP %nin% c("rs552290972", "rs2693333", "rs2696685", "rs553682853")) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
 
-write_tsv(sleepdoherty, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleepdoherty_GWAS.Processed.gz'))
+write_tsv(sleepDashti, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleepDashti_GWAS.Processed.gz'))
 
 ```
 
+[Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information): We report single- and multiple-trait genome-wide association analyses of self-reported sleep duration, insomnia symptoms and excessive daytime sleepiness in the UK Biobank (n = 112,586).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sleep.raw <- read_table2(params$sleep.summary)
+sleep <- sleep.raw %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF, Beta = BETA) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleep_GWAS.Processed.gz'))
+
+```
 
 ## Insomnia 
 [Jansen et al 2018](https://www.nature.com/articles/ng.3749#supplementary-information): Here, we use an unprecedented large genetic association sample (N=1,331,010 - 23andME + UKBB) to allow detection of a substantial number of genetic variants and gain insight into biological functions, cell types and tissues involved in insomnia complaints. This file includes GWAS summary statistics of insomnia in UK Biobank (N=386,533 individuals).
