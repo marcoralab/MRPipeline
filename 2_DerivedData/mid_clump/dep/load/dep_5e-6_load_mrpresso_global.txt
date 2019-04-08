@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5HixsR	GUCHSU	load	dep	0	140.3355470339943	0.1879

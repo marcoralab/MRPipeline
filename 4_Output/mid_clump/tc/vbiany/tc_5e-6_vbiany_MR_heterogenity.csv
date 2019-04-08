@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+xE2SB1,YiN5Ns,vbiany,tc,MR Egger,179.95407060072208,179,0.46590685077848815,2019-04-07
+xE2SB1,YiN5Ns,vbiany,tc,Inverse variance weighted,180.54405738820677,180,0.4745717303934112,2019-04-07

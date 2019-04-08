@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+P7S2Ip	JCblRR	npany	cpd	0	2.245750959432077	0.989

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+2eSUdU,1yH2K0,hipv,diab,MR Egger,391.0760415911153,303,4.720240744062935e-4,2019-04-07
+2eSUdU,1yH2K0,hipv,diab,Inverse variance weighted,393.77049900250944,304,3.895673948323572e-4,2019-04-07

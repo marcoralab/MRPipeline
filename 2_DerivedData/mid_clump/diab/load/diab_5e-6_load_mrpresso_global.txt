@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+9DjBc5	rAoH9l	load	diab	2	439.82307532586947	<4e-05

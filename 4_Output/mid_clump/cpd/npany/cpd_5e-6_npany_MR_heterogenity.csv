@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+45COUJ,MObb3p,npany,cpd,MR Egger,20.188317561165867,28,0.8575029613704646,2019-04-07
+45COUJ,MObb3p,npany,cpd,Inverse variance weighted,20.30562653677983,29,0.8831730363638433,2019-04-07

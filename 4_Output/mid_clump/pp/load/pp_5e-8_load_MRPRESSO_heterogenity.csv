@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ReAaLr,PQwSyr,load,pp,MR Egger,805.0735950843078,637,6.29857112876801e-6,2019-04-07
+ReAaLr,PQwSyr,load,pp,Inverse variance weighted,807.4811185844427,638,5.467641734120173e-6,2019-04-07

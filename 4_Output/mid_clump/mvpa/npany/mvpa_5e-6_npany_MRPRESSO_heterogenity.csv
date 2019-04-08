@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+DgVVR1,qsLySR,npany,mvpa,MR Egger,120.15295398168644,104,0.13297397252542956,2019-04-07
+DgVVR1,qsLySR,npany,mvpa,Inverse variance weighted,124.11810058691235,105,0.09815652790007227,2019-04-07

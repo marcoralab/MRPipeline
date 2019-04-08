@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+5niwqL	gBmgkh	hipv2015	tc	1	137.20199315856723	0.1059

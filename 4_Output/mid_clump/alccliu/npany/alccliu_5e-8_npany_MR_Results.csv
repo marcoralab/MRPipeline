@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+SRmMXn,QsWlnE,npany,alccliu,Inverse variance weighted (fixed effects),44,-0.3276892373274409,0.5931316053829131,0.5806242819329026,2019-04-07
+SRmMXn,QsWlnE,npany,alccliu,Weighted median,44,-0.022149018488833022,0.9058589576245083,0.980492990643954,2019-04-07
+SRmMXn,QsWlnE,npany,alccliu,Weighted mode,44,0.03234297867638958,0.7979794793350184,0.9678573296468533,2019-04-07
+SRmMXn,QsWlnE,npany,alccliu,MR Egger,44,0.35677175935884586,0.8490143791729902,0.6764678250741698,2019-04-07

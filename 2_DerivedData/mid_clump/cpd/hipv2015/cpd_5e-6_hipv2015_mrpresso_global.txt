@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+54GK5a	6sXYMG	hipv2015	cpd	0	37.22286168348176	0.3756

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+EpEHiR	ho3NMg	ptau	pp	1	1214.96056597873	0.00896

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ZRvaRf	TKFCex	aaos	mdd	0	46.668504677547226	0.3562

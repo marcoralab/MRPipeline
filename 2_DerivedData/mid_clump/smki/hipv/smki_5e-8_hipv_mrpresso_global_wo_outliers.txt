@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+qs593B	EgF2DS	hipv	smki	1	138.12536628336977	0.035

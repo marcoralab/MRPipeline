@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+Coq4L1,a78W0S,nft4,diab,MR Egger,306.89300381433355,302,0.4109419923188067,2019-04-07
+Coq4L1,a78W0S,nft4,diab,Inverse variance weighted,307.0126396123425,303,0.4249114764648576,2019-04-07

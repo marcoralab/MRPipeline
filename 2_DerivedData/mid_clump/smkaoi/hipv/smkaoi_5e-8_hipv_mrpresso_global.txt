@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+lM5hXg	FEM4ST	hipv	smkaoi	0	4.821746892936442	0.66

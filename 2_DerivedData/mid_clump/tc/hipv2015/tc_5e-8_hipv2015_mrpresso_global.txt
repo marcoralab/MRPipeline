@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+5niwqL	gBmgkh	hipv2015	tc	1	149.07765905551983	0.0349

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+RNDzCO,Avxxup,npany,hdl,MR Egger,120.84179280589288,120,0.46126942059897585,2019-04-07
+RNDzCO,Avxxup,npany,hdl,Inverse variance weighted,121.31387910709034,121,0.47487444147200936,2019-04-07

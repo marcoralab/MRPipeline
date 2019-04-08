@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+1KaFoK,bZyk1d,vbiany,sleepDashti,Inverse variance weighted (fixed effects),268,0.29946575451487334,0.2813896855515942,0.2872206417764342,2019-04-07
+1KaFoK,bZyk1d,vbiany,sleepDashti,Weighted median,268,0.16943798738295426,0.68245945937983,0.803921226760576,2019-04-07
+1KaFoK,bZyk1d,vbiany,sleepDashti,Weighted mode,268,-0.3521466568040523,0.6453625648463003,0.5857572502885271,2019-04-07
+1KaFoK,bZyk1d,vbiany,sleepDashti,MR Egger,268,-0.6568819016831817,0.7549477228774654,0.3850288935713583,2019-04-07

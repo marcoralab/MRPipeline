@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+jys06U,om73ED,load,sbp,MR Egger,1920.7182606302977,1446,5.089539491958527e-16,2019-04-07
+jys06U,om73ED,load,sbp,Inverse variance weighted,1920.7597118779486,1447,5.848318509661942e-16,2019-04-07

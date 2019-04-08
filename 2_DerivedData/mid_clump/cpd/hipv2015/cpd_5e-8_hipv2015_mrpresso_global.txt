@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7LG0aG	Daisgo	hipv2015	cpd	0	6.571831406998298	0.684

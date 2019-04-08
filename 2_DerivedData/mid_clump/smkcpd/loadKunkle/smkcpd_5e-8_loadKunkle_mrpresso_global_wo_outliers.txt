@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+gpH4NO	WBC61C	loadKunkle	smkcpd	0	NA	NA

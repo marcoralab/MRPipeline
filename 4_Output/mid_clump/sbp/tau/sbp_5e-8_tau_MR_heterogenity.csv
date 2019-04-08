@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+welsFL,DkwmrN,tau,sbp,MR Egger,781.6963176567522,683,0.005092866214241322,2019-04-07
+welsFL,DkwmrN,tau,sbp,Inverse variance weighted,783.2234241917987,684,0.004929006753439992,2019-04-07

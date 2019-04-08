@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+OC328M	Nvw821	vbiany	dep	0	120.7772931499952	0.5391

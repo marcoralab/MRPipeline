@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+hrJwKG	CFBO7L	loadKunkle	dbp	2	2017.9529171272184	<1.33333333333333e-05

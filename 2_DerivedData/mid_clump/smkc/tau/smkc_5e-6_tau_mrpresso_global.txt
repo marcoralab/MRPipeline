@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+1pTa9F	XLxgpA	tau	smkc	0	25.570434714922936	0.691
