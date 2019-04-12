@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-k3mYMl	VrsYRr	load	alccliu	1	83.90246708922669	4e-4
+qmLC3p	ReZgy4	load	alccliu	3	107.89506571562886	<2e-04

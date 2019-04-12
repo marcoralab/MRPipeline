@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MTqskB	OGAOj0	hipv	bmi	1	2259.88381826937	<1e-05
+4MCbMZ	CZynUo	hipv	bmi	1	3530.9055347518643	<1e-05

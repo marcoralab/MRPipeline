@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NHBGDf,N2gHM5,npany,dep,MR Egger,14.793380378377995,15,0.4664003470773823,2019-04-07
-NHBGDf,N2gHM5,npany,dep,Inverse variance weighted,15.144362678846383,16,0.514091659505877,2019-04-07
+Nh9C6H,lSEqZi,npany,dep,MR Egger,19.89140870040652,18,0.33896638831598513,2019-04-11
+Nh9C6H,lSEqZi,npany,dep,Inverse variance weighted,19.988283468434734,19,0.39528352753583235,2019-04-11

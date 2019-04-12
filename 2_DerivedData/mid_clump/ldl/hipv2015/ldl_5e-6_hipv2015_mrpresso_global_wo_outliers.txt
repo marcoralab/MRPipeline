@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-qIbM8e	KFCD7M	hipv2015	ldl	1	171.00304717499594	0.13
+dyMXhY	EtQS3t	hipv2015	ldl	0	NA	NA

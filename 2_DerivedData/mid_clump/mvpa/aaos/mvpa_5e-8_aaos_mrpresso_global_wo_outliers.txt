@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-A24NiS	0umINN	aaos	mvpa	2	22.71765656919908	0.515
+BhbFGC	IG1XBg	aaos	mvpa	1	31.61774026665095	0.339

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-nLH96I	d4LIqu	ab42	dep	1	29.68806494973944	0.026
+Cxi39d	6l95Fn	ab42	dep	0	31.184217787114065	0.047

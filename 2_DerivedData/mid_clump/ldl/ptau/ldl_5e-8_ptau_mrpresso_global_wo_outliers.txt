@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-9j6o9h	xFPWKD	ptau	ldl	1	106.17423964305475	0.2695
+u3xpOK	ecIxib	ptau	ldl	2	226.95484119363218	0.0031

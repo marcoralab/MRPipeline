@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-B9TAJe,mi0BGk,hipv,pp,MR Egger,839.5109409801438,649,5.799848818713177e-7,2019-04-07
-B9TAJe,mi0BGk,hipv,pp,Inverse variance weighted,840.2489664461799,650,6.078269681834045e-7,2019-04-07
+gndbhp,FlIGLX,hipv,pp,MR Egger,1283.4241573101715,1007,6.486337276581245e-9,2019-04-11
+gndbhp,FlIGLX,hipv,pp,Inverse variance weighted,1283.9273644145587,1008,6.950913310498724e-9,2019-04-11

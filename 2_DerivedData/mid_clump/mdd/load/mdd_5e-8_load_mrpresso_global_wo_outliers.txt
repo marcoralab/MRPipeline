@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-cZivDX	mChKN9	load	mdd	1	53.07607668502538	0.1266
+Ab075m	oL7odF	load	mdd	1	57.00029102495747	0.1212

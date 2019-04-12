@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KNOJct	9VNUTG	nft4	dbp	0	841.6359268417024	0.66646
+Qd9VPf	wz1vZN	nft4	dbp	0	1384.513532159912	0.4075066666666667

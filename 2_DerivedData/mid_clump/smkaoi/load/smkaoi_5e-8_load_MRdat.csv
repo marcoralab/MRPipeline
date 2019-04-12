@@ -1,7 +1,7 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs11780471,A,G,A,G,0.0415,0.0322,0.0644,0.0655,FALSE,FALSE,FALSE,gdmLC5,0.0315,0.306,load,TRUE,reported,0.00642,7e-11,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
-rs11915747,G,C,G,C,0.0227,-0.0099,0.354,0.3487,FALSE,TRUE,FALSE,gdmLC5,0.0162,0.5388,load,TRUE,reported,0.00314,3.83e-13,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
-rs319748,A,G,A,G,-0.019,0.0085,0.711,0.2671,FALSE,FALSE,FALSE,gdmLC5,0.0174,0.6274,load,TRUE,reported,0.00337,3.08e-8,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
-rs3768886,C,G,C,G,0.0178,0.033,0.328,0.3424,FALSE,TRUE,FALSE,gdmLC5,0.0164,0.04399,load,TRUE,reported,0.0032,7.37e-9,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
-rs624833,G,T,G,T,0.0187,-0.0185,0.309,0.6904,FALSE,FALSE,FALSE,gdmLC5,0.0172,0.2805,load,TRUE,reported,0.00325,8.61e-9,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
-rs7599208,T,C,T,C,-0.0208,0.0061,0.558,0.43379999999999996,FALSE,FALSE,FALSE,gdmLC5,0.0159,0.7011,load,TRUE,reported,0.00305,1.71e-12,smkaoi,TRUE,reported,tbDhqx,2,TRUE,NA
+rs11780471,A,G,A,G,0.0415,0.0322,0.0644,0.0655,FALSE,FALSE,FALSE,yS7C9z,0.0315,0.306,load,TRUE,reported,0.00642,7e-11,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA
+rs11915747,G,C,G,C,0.0227,-0.0099,0.354,0.3487,FALSE,TRUE,FALSE,yS7C9z,0.0162,0.5388,load,TRUE,reported,0.00314,3.83e-13,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA
+rs319748,A,G,A,G,-0.019,0.0085,0.711,0.2671,FALSE,FALSE,FALSE,yS7C9z,0.0174,0.6274,load,TRUE,reported,0.00337,3.08e-8,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA
+rs3768886,C,G,C,G,0.0178,0.033,0.328,0.3424,FALSE,TRUE,FALSE,yS7C9z,0.0164,0.04399,load,TRUE,reported,0.0032,7.37e-9,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA
+rs624833,G,T,G,T,0.0187,-0.0185,0.309,0.6904,FALSE,FALSE,FALSE,yS7C9z,0.0172,0.2805,load,TRUE,reported,0.00325,8.61e-9,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA
+rs7599208,T,C,T,C,-0.0208,0.0061,0.558,0.43379999999999996,FALSE,FALSE,FALSE,yS7C9z,0.0159,0.7011,load,TRUE,reported,0.00305,1.71e-12,smkaoi,TRUE,reported,ICbRK5,2,TRUE,NA

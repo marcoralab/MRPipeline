@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-lOkyOE	dIWQlJ	loadKunkle	ldl	17	192.1645133456381	<1e-04
+TqNDif	F9qblW	loadKunkle	ldl	29	348.0119210132016	<1e-04

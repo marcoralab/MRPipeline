@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-3i7S3h	BDTlS0	nft4	tc	1	177.81817251902763	0.0011
+NIT4eN	tBUykg	nft4	tc	3	319.6088685711516	3e-4

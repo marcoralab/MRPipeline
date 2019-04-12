@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-xB5N9P	4coBN2	vbiany	ldl	0	96.28904154177576	0.6393
+lEwrJC	PKl1gU	vbiany	ldl	0	174.5621383246246	0.7604

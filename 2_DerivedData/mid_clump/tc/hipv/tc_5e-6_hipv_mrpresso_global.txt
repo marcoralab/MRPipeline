@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ToTdtI	5LJMRI	hipv	tc	1	263.0533445874219	1e-4
+4trMUp	pEZM16	hipv	tc	1	405.1176032092753	0.00992

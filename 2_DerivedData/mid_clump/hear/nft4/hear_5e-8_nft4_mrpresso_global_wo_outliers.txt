@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-IGfZwE	FLYEq0	nft4	hear	0	NA	NA
+K0TLCo	64zGvT	nft4	hear	0	NA	NA

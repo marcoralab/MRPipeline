@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8EMs24	IHu8Wc	aaos	dbp	0	1750.4080035560087	0.03489333333333333
+Px2ByN	tj76fk	aaos	dbp	0	3124.2717470214657	7.3e-4

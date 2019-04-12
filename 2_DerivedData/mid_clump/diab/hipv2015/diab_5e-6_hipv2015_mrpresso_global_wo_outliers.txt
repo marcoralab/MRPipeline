@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uafOGX	cLAmxm	hipv2015	diab	0	NA	NA
+6LXP9p	2zy3r9	hipv2015	diab	0	NA	NA

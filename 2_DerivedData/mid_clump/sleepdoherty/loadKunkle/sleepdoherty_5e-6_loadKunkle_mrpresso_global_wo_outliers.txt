@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-P4sh5P	rpWNoS	loadKunkle	sleepdoherty	1	99.94078451430656	0.038
+ZfXYgE	HkpLIR	loadKunkle	sleepdoherty	1	112.60045702060323	0.0198

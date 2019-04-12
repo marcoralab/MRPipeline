@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-PA225M,NVK3Fl,ptau,sleepDashti,MR Egger,206.38012969643216,233,0.894771794745424,2019-04-07
-PA225M,NVK3Fl,ptau,sleepDashti,Inverse variance weighted,207.49374561324376,234,0.8931971050973975,2019-04-07
+So2QxR,rsbMaf,ptau,sleepDashti,MR Egger,239.5576271797162,274,0.934365615465272,2019-04-11
+So2QxR,rsbMaf,ptau,sleepDashti,Inverse variance weighted,241.17465548805922,275,0.9302106869421212,2019-04-11

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-iuQ0mW	UrFYzA	loadKunkle	mvpa	10	4286.79401891277	<0.001
+YpU6PB	ZHZ4Ga	loadKunkle	mvpa	5	4216.632967097466	<0.001

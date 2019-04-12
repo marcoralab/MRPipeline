@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-o0Q1rH	3EPM7L	ptau	tc	1	219.47024026542982	0.0309
+psuuhw	rlhfLO	ptau	tc	2	386.44351170460516	0.02484

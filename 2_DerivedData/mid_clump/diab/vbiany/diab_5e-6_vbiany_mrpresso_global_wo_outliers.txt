@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-vx0mZC	Exi011	vbiany	diab	0	NA	NA
+o8cXP9	i5ORYZ	vbiany	diab	0	NA	NA

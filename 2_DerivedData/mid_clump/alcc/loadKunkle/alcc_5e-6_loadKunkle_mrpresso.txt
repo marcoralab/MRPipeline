@@ -1,79 +1,15 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate        Sd   T-stat    P-value
-1 beta.exposure               Raw       0.4556153 0.1997246 2.281218 0.02691956
+1 beta.exposure               Raw       0.3579658 0.1864708 1.919688 0.06039133
 2 beta.exposure Outlier-corrected              NA        NA       NA         NA
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
 $`MR-PRESSO results`$`Global Test`$RSSobs
-[1] 70.46031
+[1] 70.14785
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0434
-
-
-$`MR-PRESSO results`$`Outlier Test`
-         RSSobs Pvalue
-1  7.321742e-06      1
-2  2.653003e-03      1
-3  1.093510e-06      1
-4  3.903079e-03      1
-5  9.358379e-03      1
-6  1.936281e-04      1
-7  3.391155e-03      1
-8  6.338147e-04      1
-9  1.403943e-03      1
-10 1.291772e-04      1
-11 9.693896e-04      1
-12 5.247757e-09      1
-13 5.231985e-04      1
-14 1.414036e-04      1
-15 4.385418e-05      1
-16 6.449931e-07      1
-17 4.935428e-03      1
-18 5.762414e-05      1
-19 1.513107e-02      1
-20 1.252214e-04      1
-21 8.312459e-03      1
-22 3.656285e-03      1
-23 1.040148e-03      1
-24 2.973088e-03      1
-25 1.225378e-05      1
-26 3.800733e-03      1
-27 8.437698e-03      1
-28 1.495960e-03    0.4
-29 6.686333e-04      1
-30 3.726702e-06      1
-31 3.833374e-04      1
-32 1.212197e-06      1
-33 1.963158e-05      1
-34 1.623377e-04      1
-35 9.123833e-06      1
-36 2.611026e-04      1
-37 8.620700e-04      1
-38 1.462115e-04      1
-39 2.781623e-05      1
-40 3.094793e-08      1
-41 2.902842e-03      1
-42 1.827074e-04      1
-43 2.497704e-04      1
-44 5.726758e-04      1
-45 1.149487e-03      1
-46 2.124024e-03   0.07
-47 4.670929e-04      1
-48 7.232524e-04      1
-49 1.432558e-04      1
-50 4.317524e-04      1
-
-$`MR-PRESSO results`$`Distortion Test`
-$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] "No significant outliers"
-
-$`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
-[1] NA
-
-$`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] NA
+[1] 0.0738
 
 
 

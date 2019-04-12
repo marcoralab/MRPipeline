@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WMWVJ3,m9zsQN,loadKunkle,educ,MR Egger,911.5830894189914,831,0.02665730327092933,2019-04-07
-WMWVJ3,m9zsQN,loadKunkle,educ,Inverse variance weighted,911.625618089405,832,0.028118737744535514,2019-04-07
+kM9akb,qwraIc,loadKunkle,educ,MR Egger,1313.2836161477865,1171,0.0022384490729066195,2019-04-11
+kM9akb,qwraIc,loadKunkle,educ,Inverse variance weighted,1314.0192696172437,1172,0.002282260744611883,2019-04-11

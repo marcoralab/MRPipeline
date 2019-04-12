@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-KTZQ1J	X2508V	ab42	alccliu	0	NA	NA
+1m873z	R5Olf3	ab42	alccliu	0	NA	NA

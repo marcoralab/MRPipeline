@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-cZivDX,mChKN9,load,mdd,MR Egger,50.00885409144783,37,0.07494949407433343,2019-04-07
-cZivDX,mChKN9,load,mdd,Inverse variance weighted,50.55442154701944,38,0.08362448097106225,2019-04-07
+Ab075m,oL7odF,load,mdd,MR Egger,54.33217441008588,40,0.06478823821817416,2019-04-09
+Ab075m,oL7odF,load,mdd,Inverse variance weighted,54.50361183376319,41,0.07706943453786654,2019-04-09

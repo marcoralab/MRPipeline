@@ -1,2 +1,2 @@
-id.exposure,id.outcome,outcome,exposure,method,egger_intercept,se,pval,date
-lSWo5r,nFX5jC,hipv,dbp,mrpresso,NA,NA,NA,2019-04-07
+id.exposure,id.outcome,outcome,exposure,egger_intercept,se,pval,date
+CKPO60,x6huOw,hipv,dbp,-0.001521843901417036,5.791322297386981e-4,0.008642814079426051,2019-04-12

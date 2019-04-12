@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gsbIDr	BBybum	nft4	smki	0	94.3764135558926	0.7964
+8ixi2S	5isf2M	nft4	smki	0	112.52434655940499	0.7816

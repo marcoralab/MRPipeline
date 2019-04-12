@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-GK9sea	CIpL4A	loadKunkle	diab	1	229.28037858382152	<1e-04
+UF2Ivq	i3b2Ye	loadKunkle	diab	2	309.1063350272061	<1e-04

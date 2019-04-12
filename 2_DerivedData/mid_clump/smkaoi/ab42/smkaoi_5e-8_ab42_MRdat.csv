@@ -1,7 +1,7 @@
 SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,proxy.outcome,target_snp.outcome,proxy_snp.outcome,target_a1.outcome,target_a2.outcome,proxy_a1.outcome,proxy_a2.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs11780471,A,G,A,G,0.0415,-0.007151,0.0644,0.0643825,FALSE,FALSE,FALSE,kJmayo,0.008579,0.4046,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00642,7e-11,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
-rs11915747,G,C,G,C,0.0227,0.003573,0.354,0.353542,FALSE,TRUE,FALSE,kJmayo,0.004319,0.4082,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00314,3.83e-13,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
-rs319748,A,G,A,G,-0.019,0.00118,0.711,0.711026,FALSE,FALSE,FALSE,kJmayo,0.004481,0.7923,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00337,3.08e-8,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
-rs3768886,C,G,C,G,0.0178,-0.001347,0.328,0.327826,FALSE,TRUE,FALSE,kJmayo,0.004388,0.759,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.0032,7.37e-9,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
-rs624833,G,T,G,T,0.0187,3.061e-4,0.309,0.308808,FALSE,FALSE,FALSE,kJmayo,0.004373,0.9442,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00325,8.61e-9,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
-rs7599208,T,C,T,C,-0.0208,0.002818,0.558,0.558824,FALSE,FALSE,FALSE,kJmayo,0.004079,0.4897,ab42,TRUE,reported,TRUE,rs7599208,rs12713489,C,TRUE,C,TRUE,0.00305,1.71e-12,smkaoi,TRUE,reported,ypajBg,2,TRUE,NA
+rs11780471,A,G,A,G,0.0415,-0.007151,0.0644,0.0643825,FALSE,FALSE,FALSE,D4W2dq,0.008579,0.4046,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00642,7e-11,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA
+rs11915747,G,C,G,C,0.0227,0.003573,0.354,0.353542,FALSE,TRUE,FALSE,D4W2dq,0.004319,0.4082,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00314,3.83e-13,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA
+rs319748,A,G,A,G,-0.019,0.00118,0.711,0.711026,FALSE,FALSE,FALSE,D4W2dq,0.004481,0.7923,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00337,3.08e-8,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA
+rs3768886,C,G,C,G,0.0178,-0.001347,0.328,0.327826,FALSE,TRUE,FALSE,D4W2dq,0.004388,0.759,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.0032,7.37e-9,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA
+rs624833,G,T,G,T,0.0187,3.061e-4,0.309,0.308808,FALSE,FALSE,FALSE,D4W2dq,0.004373,0.9442,ab42,TRUE,reported,NA,NA,NA,NA,NA,NA,NA,0.00325,8.61e-9,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA
+rs7599208,T,C,T,C,-0.0208,0.002818,0.558,0.558824,FALSE,FALSE,FALSE,D4W2dq,0.004079,0.4897,ab42,TRUE,reported,TRUE,rs7599208,rs12713489,C,TRUE,C,TRUE,0.00305,1.71e-12,smkaoi,TRUE,reported,MZIw2c,2,TRUE,NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Q9cZuR	LTTgKA	ab42	pp	0	604.9359092762611	0.37856
+S2yYls	zsxG7i	ab42	pp	0	880.8104764077549	0.25878

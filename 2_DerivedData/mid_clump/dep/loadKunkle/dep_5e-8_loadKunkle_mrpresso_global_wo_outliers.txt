@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-GHO5Up	mlynK9	loadKunkle	dep	1	21.05424173185125	0.241
+2I8IQm	bl3B50	loadKunkle	dep	0	NA	NA

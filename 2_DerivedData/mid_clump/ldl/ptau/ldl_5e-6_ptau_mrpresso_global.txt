@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KK5BQ2	OhFCGi	ptau	ldl	1	269.12989938946777	<1e-04
+o9hpmc	cWe8Hf	ptau	ldl	2	447.82317606015926	<1e-04

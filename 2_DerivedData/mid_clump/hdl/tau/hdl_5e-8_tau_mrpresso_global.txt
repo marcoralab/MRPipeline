@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jQK5aC	scIYMC	tau	hdl	2	233.08212535427646	<1e-04
+uaF8JY	IpKdVQ	tau	hdl	3	320.9564959097357	<1e-04

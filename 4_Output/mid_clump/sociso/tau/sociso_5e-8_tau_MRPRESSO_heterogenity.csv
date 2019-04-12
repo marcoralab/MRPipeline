@@ -1,2 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-nCQwtP,tgzJQM,tau,sociso,mrpresso,NA,NA,NA,2019-04-07
+kMM3tu,eLH4JG,tau,sociso,MR Egger,14.958624474507998,10,0.13357763080692106,2019-04-11
+kMM3tu,eLH4JG,tau,sociso,Inverse variance weighted,15.315808766485251,11,0.1684907186695443,2019-04-11

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-VidaNb	yYh2n7	vbiany	audit	0	NA	NA
+rYDoDb	6YR8PJ	vbiany	audit	0	NA	NA

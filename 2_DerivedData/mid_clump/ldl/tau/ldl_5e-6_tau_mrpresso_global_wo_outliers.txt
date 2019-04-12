@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-AKPWuY	aIDV5S	tau	ldl	1	176.91726185213156	0.0291
+zIhZiG	yKQ5cM	tau	ldl	1	294.4242395844626	0.0184

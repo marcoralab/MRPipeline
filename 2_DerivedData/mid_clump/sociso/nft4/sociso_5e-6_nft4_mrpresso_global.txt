@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Hm5Nyu	CVwKTc	nft4	sociso	0	86.5761228394762	0.7488
+ePyo6A	Yqpd9a	nft4	sociso	0	115.09962853791964	0.4036

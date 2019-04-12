@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-yEzDU4	jjh21p	vbiany	hear	0	NA	NA
+1gzfMT	6NelOM	vbiany	hear	0	NA	NA

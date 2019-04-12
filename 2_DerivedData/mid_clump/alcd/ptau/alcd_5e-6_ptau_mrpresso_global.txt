@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-syD7cH	aGdgXs	ptau	alcd	0	24.24125728345358	0.22
+fAvBrg	mkQrHN	ptau	alcd	0	26.15784943933117	0.245

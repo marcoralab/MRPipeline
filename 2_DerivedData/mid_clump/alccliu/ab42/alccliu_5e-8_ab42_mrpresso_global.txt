@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KTZQ1J	X2508V	ab42	alccliu	0	32.93882102755952	0.6254
+1m873z	R5Olf3	ab42	alccliu	0	41.87882119686871	0.6536

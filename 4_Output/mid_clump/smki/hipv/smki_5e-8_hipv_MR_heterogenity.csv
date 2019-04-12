@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-qs593B,EgF2DS,hipv,smki,MR Egger,159.69186370955703,100,1.391877420594165e-4,2019-04-07
-qs593B,EgF2DS,hipv,smki,Inverse variance weighted,161.31307071164255,101,1.293096418086263e-4,2019-04-07
+PHFVUJ,0wq2pH,hipv,smki,MR Egger,171.4066167780691,117,7.857055645589581e-4,2019-04-11
+PHFVUJ,0wq2pH,hipv,smki,Inverse variance weighted,174.40291390765273,118,5.737628007058516e-4,2019-04-11

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DEMmKD,UL8RCx,aaos,smki,MR Egger,350.6156681868879,349,0.46561902084340984,2019-04-07
-DEMmKD,UL8RCx,aaos,smki,Inverse variance weighted,351.1892810848474,350,0.4720595195064447,2019-04-07
+HM5fHM,zvG5yi,aaos,smki,MR Egger,450.7260844460276,424,0.17827693089819655,2019-04-11
+HM5fHM,zvG5yi,aaos,smki,Inverse variance weighted,451.35028492630545,425,0.18179930175226364,2019-04-11

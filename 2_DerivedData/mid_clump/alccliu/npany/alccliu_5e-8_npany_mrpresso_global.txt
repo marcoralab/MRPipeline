@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SRmMXn	QsWlnE	npany	alccliu	0	33.95342502018831	0.8828
+jFufUk	xQn3k4	npany	alccliu	0	52.1182639635331	0.7304

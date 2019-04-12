@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pvagnB	wim7rD	ab42	oilfish	0	228.06849578110175	1e-4
+mVJcJU	dJjwnW	ab42	oilfish	0	264.80022861373806	<1e-04

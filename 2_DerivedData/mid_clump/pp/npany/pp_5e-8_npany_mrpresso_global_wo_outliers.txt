@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-eswiOq	wynbjI	npany	pp	1	673.4398198137226	0.46024
+EbgdMX	1LhPTi	npany	pp	1	1008.9428630810289	0.70284

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-TeSTu6	3tQi6W	ab42	sleepDashti	0	83.23435732070102	0.3248
+nV4gwJ	patWWO	ab42	sleepDashti	0	98.12442065855306	0.2281

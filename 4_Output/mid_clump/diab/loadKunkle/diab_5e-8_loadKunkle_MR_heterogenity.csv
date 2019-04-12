@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-GK9sea,CIpL4A,loadKunkle,diab,MR Egger,223.73959027033436,137,4.117230957601044e-6,2019-04-07
-GK9sea,CIpL4A,loadKunkle,diab,Inverse variance weighted,224.87956646687616,138,4.225927516309617e-6,2019-04-07
+UF2Ivq,i3b2Ye,loadKunkle,diab,MR Egger,299.57562435402906,167,1.3459571905732658e-9,2019-04-09
+UF2Ivq,i3b2Ye,loadKunkle,diab,Inverse variance weighted,303.7672106379585,168,6.972320655405696e-10,2019-04-09

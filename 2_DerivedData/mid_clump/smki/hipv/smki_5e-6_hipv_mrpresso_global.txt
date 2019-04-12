@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gsaZBS	76XbKr	hipv	smki	1	455.2548822567965	3.2e-4
+1w83eM	Po2kCb	hipv	smki	1	532.4825079019673	5.6e-4

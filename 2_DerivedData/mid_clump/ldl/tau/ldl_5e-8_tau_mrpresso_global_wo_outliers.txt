@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-tobn2c	sAhRCI	tau	ldl	1	104.76394939444802	0.1965
+jc5cB2	friXUE	tau	ldl	1	207.87758938157253	0.0047

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qEgQ6Y	gMZtPI	hipv2015	bmi	0	2038.361344874412	0.01699
+bnSGWs	iYzLbg	hipv2015	bmi	0	3193.694398801596	0.00149

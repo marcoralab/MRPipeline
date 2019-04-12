@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-YvqfoW	kch69G	ptau	cpd	0	NA	NA
+7siggH	5csj8s	ptau	cpd	0	NA	NA

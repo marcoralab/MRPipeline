@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-36miiC	1iglck	ab42	insom	1	104.56099248777063	0.0362
+sqAonv	hW0pAx	ab42	insom	0	118.59881898493843	0.0163

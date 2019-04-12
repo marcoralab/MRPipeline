@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-aTd77z	tMjZvu	load	sleepdoherty	2	12.233404411714561	0.398
+eMuJnX	By7pA6	load	sleepdoherty	2	12.233404411714561	0.483

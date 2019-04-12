@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-v3GpLB	VAzuG6	loadKunkle	oilfish	1	204.18910154121636	0.1222
+GaDrIp	du2zL2	loadKunkle	oilfish	1	263.5118381994145	0.0493

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Wewssr,hvBIOx,ptau,sbp,MR Egger,1247.205232447537,1278,0.7260333110436369,2019-04-07
-Wewssr,hvBIOx,ptau,sbp,Inverse variance weighted,1248.4726805671908,1279,0.724160768090352,2019-04-07
+OSAsWD,19tlUk,ptau,sbp,MR Egger,1932.0722464742462,2067,0.9836436398529953,2019-04-11
+OSAsWD,19tlUk,ptau,sbp,Inverse variance weighted,1933.5362076703805,2068,0.9833109263813349,2019-04-11

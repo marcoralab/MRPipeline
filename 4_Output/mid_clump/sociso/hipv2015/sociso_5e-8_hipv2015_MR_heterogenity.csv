@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-6AKYJP,0rDLab,hipv2015,sociso,MR Egger,11.7313763818056,14,0.6278654388580177,2019-04-07
-6AKYJP,0rDLab,hipv2015,sociso,Inverse variance weighted,11.847044516819905,15,0.6905678000913748,2019-04-07
+e18DOR,jlH1E8,hipv2015,sociso,MR Egger,13.264014136352817,15,0.581913677387648,2019-04-11
+e18DOR,jlH1E8,hipv2015,sociso,Inverse variance weighted,13.862036057587936,16,0.6089911707948427,2019-04-11

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-vPIvvI,sr4cyt,load,cpd,MR Egger,34.62481355617354,28,0.18105359421051498,2019-04-07
-vPIvvI,sr4cyt,load,cpd,Inverse variance weighted,39.593958572536714,29,0.0907979674613705,2019-04-07
+SoC9sZ,SPPfGz,load,cpd,MR Egger,49.08206632833862,43,0.2424610539731106,2019-04-09
+SoC9sZ,SPPfGz,load,cpd,Inverse variance weighted,54.206990776628516,44,0.1392665953735512,2019-04-09

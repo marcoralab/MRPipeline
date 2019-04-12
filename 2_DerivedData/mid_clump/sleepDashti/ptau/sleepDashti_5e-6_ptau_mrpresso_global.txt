@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PA225M	NVK3Fl	ptau	sleepDashti	0	223.54919200573573	0.8455
+So2QxR	rsbMaf	ptau	sleepDashti	0	259.8258998591789	0.8908

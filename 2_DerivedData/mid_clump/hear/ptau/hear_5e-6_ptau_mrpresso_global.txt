@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QWiRZb	6WDp64	ptau	hear	0	118.23811216790905	0.0545
+U3Ptt3	quAdM3	ptau	hear	0	132.3466826140446	0.0852

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-xwPO95	PEOLEU	hipv2015	audit	0	16.179024799623974	0.052
+qNk9lI	mqA12C	hipv2015	audit	0	17.011918366848704	0.071

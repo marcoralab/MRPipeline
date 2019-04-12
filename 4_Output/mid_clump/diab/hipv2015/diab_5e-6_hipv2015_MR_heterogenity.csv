@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-uafOGX,cLAmxm,hipv2015,diab,MR Egger,325.70014364554504,301,0.15686942074393442,2019-04-07
-uafOGX,cLAmxm,hipv2015,diab,Inverse variance weighted,325.70755946444604,302,0.1666574306684645,2019-04-07
+6LXP9p,2zy3r9,hipv2015,diab,MR Egger,385.2779023028156,379,0.4009221539404625,2019-04-09
+6LXP9p,2zy3r9,hipv2015,diab,Inverse variance weighted,385.4088628932307,380,0.4131560346728113,2019-04-09

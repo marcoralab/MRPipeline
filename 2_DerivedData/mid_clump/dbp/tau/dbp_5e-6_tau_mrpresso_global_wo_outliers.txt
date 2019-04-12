@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gCQVAv	bexdtL	tau	dbp	0	NA	NA
+wPReFL	pPILdf	tau	dbp	1	2304.025193336218	0.03902

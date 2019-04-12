@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-nCQwtP	tgzJQM	tau	sociso	0	NA	NA
+kMM3tu	eLH4JG	tau	sociso	1	17.900568369011868	0.198

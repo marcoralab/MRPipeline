@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gRIwwz	6isEa2	ab42	educ	0	NA	NA
+QIeTN7	4iUmZT	ab42	educ	1	2507.4433641381747	0.01834

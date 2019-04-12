@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HkZgVo,Uzuq4s,nft4,smkc,MR Egger,1.4903437901850816,6,0.9601334062606746,2019-04-07
-HkZgVo,Uzuq4s,nft4,smkc,Inverse variance weighted,1.6777182030587205,7,0.9755122963993736,2019-04-07
+FNsQSL,XtMIyO,nft4,smkc,MR Egger,7.49815710941613,13,0.874690288989306,2019-04-11
+FNsQSL,XtMIyO,nft4,smkc,Inverse variance weighted,8.148693343109278,14,0.8814363644270403,2019-04-11

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-o6dC1U	kDMOZU	load	dbp	1	1846.8701136328202	<1.33333333333333e-05
+BjCFtU	F7BhR6	load	dbp	2	3290.8072433181787	<1e-05

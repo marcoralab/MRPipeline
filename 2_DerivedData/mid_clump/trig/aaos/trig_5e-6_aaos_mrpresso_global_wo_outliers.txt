@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-rHQIbQ	SXacSp	aaos	trig	3	216.2909540310612	<1e-04
+zNfjoZ	3TDqaF	aaos	trig	8	376.821263144448	<1e-04

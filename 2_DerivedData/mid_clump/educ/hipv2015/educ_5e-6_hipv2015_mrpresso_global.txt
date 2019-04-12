@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-S4UdQV	FZa4zg	hipv2015	educ	0	1785.576209137662	0.31196
+zVQPPe	8QGcIO	hipv2015	educ	0	2892.0783722549154	0.06842

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SpbGCm	t2rtCf	npany	audit	0	66.9767434867227	0.226
+4WPYue	z7f9FS	npany	audit	0	74.81176495776894	0.1404

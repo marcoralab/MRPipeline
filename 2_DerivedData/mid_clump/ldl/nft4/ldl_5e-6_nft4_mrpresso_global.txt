@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ND4HKS	6bDl80	nft4	ldl	1	347.8275249462105	<1e-04
+cnUCPa	53Y3Ty	nft4	ldl	3	580.2297575272721	<1e-04

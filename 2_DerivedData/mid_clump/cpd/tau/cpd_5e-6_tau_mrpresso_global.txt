@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yXCOqh	I11iPN	tau	cpd	0	21.783080399219102	0.588
+HuC280	5UxKGP	tau	cpd	0	28.68030152963262	0.557

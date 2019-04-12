@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-iQIN3k	6Cl3DQ	aaos	sleepDashti	0	NA	NA
+HmniRs	fBy0J4	aaos	sleepDashti	0	NA	NA

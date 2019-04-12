@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-NE2dag	nuYDRS	nft4	audit	0	NA	NA
+NyrrW7	oqu808	nft4	audit	0	NA	NA

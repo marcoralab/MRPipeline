@@ -1,54 +1,56 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate         Sd     T-stat
-1 beta.exposure               Raw     -0.02473619 0.02808204 -0.8808545
-2 beta.exposure Outlier-corrected     -0.02999292 0.02506441 -1.1966338
+1 beta.exposure               Raw     -0.02726100 0.02745554 -0.9929145
+2 beta.exposure Outlier-corrected     -0.03245958 0.02467201 -1.3156439
     P-value
-1 0.3888595
-2 0.2461682
+1 0.3315476
+2 0.2024769
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
 $`MR-PRESSO results`$`Global Test`$RSSobs
-[1] 48.51927
+[1] 52.40205
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.011
+[1] 0.007
 
 
 $`MR-PRESSO results`$`Outlier Test`
          RSSobs Pvalue
-1  1.459219e-03      1
-2  2.992413e-05      1
-3  1.176459e-03      1
-4  3.610572e-03      1
-5  9.269026e-03      1
-6  5.697683e-05      1
-7  1.294597e-03      1
-8  3.686768e-04      1
-9  1.584271e-03      1
-10 2.968375e-07      1
-11 1.059909e-03      1
-12 8.897041e-03  0.588
-13 8.829840e-04   0.84
-14 1.491149e-03      1
-15 5.986964e-03  0.273
-16 4.157219e-03      1
-17 7.177126e-02  0.021
-18 1.879232e-03      1
-19 1.494214e-04      1
-20 9.229114e-05      1
-21 9.013985e-03      1
+1  1.426333e-03      1
+2  2.651243e-05      1
+3  1.150691e-03      1
+4  3.688812e-03      1
+5  8.889006e-03      1
+6  5.013520e-05      1
+7  1.423701e-03      1
+8  3.915685e-04      1
+9  1.649890e-03      1
+10 7.193007e-07      1
+11 2.050543e-03      1
+12 1.451947e-03      1
+13 8.798301e-03  0.736
+14 8.986496e-04  0.644
+15 1.437585e-03      1
+16 6.042388e-03  0.322
+17 4.051806e-03      1
+18 7.224360e-02  0.023
+19 1.919281e-03      1
+20 1.285363e-04      1
+21 8.367512e-05      1
+22 3.783917e-04      1
+23 8.869132e-03      1
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 17
+[1] 18
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-     17.52657 
+     16.01555 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.803
+[1] 0.829
 
 
 

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KBEhhV	KfkFfp	hipv	audit	0	1.844961207315919	0.943
+j7rtkz	O3Udb6	hipv	audit	0	1.8394713479413172	0.961

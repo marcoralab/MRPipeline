@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8l6UPh	jTQpmx	load	alcc	0	10.2990243544674	0.126
+h21a5l	yTzvtZ	load	alcc	0	9.395475375283374	0.283

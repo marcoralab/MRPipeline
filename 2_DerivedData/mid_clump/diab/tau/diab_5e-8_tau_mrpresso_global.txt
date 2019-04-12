@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PaJn7Y	xToAIW	tau	diab	0	145.70455282490266	0.1989
+ORNwvn	A24RL9	tau	diab	0	163.09579582471454	0.4406

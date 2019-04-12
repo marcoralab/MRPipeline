@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-IGtCPF	rWzhjb	ptau	pp	1	620.7690429291189	0.56032
+DgDuGp	RPXUko	ptau	pp	1	938.7861504777314	0.27762

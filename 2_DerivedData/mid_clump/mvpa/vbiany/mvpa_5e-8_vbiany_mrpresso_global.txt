@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Mo60M0	lRr4Co	vbiany	mvpa	0	21.490545967003918	0.715
+fAyKIJ	EGppPA	vbiany	mvpa	0	25.20286698329626	0.67

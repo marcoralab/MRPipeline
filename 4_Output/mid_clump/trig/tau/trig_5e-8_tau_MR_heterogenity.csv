@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lIIREc,FfRc7o,tau,trig,MR Egger,81.34806267843301,67,0.11174298146693977,2019-04-07
-lIIREc,FfRc7o,tau,trig,Inverse variance weighted,82.80605668290173,68,0.10677188177703353,2019-04-07
+ALJAlS,XUzqYv,tau,trig,MR Egger,259.65665659342136,121,3.916109119570242e-12,2019-04-09
+ALJAlS,XUzqYv,tau,trig,Inverse variance weighted,259.66181716053705,122,5.7801440015437435e-12,2019-04-09

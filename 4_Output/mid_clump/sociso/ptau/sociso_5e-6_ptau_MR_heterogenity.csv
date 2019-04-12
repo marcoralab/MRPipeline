@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-GeLzi4,nYMeNq,ptau,sociso,MR Egger,92.53569292415501,79,0.14159286525561932,2019-04-07
-GeLzi4,nYMeNq,ptau,sociso,Inverse variance weighted,92.54960754203486,80,0.15947464659612373,2019-04-07
+rwDxAe,JEMBMQ,ptau,sociso,MR Egger,104.06805717026423,91,0.16485158346255974,2019-04-11
+rwDxAe,JEMBMQ,ptau,sociso,Inverse variance weighted,104.22184470428768,92,0.1807287387577394,2019-04-11

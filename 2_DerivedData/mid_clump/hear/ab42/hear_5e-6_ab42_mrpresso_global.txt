@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rxPT88	EUWz3d	ab42	hear	1	124.89675278793733	0.0044
+7tIkVd	8Ef3rN	ab42	hear	0	146.9803152380836	0.0024

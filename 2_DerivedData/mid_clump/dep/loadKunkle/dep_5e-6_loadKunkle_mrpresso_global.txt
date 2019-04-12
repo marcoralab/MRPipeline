@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-eojOyD	yVYKtG	loadKunkle	dep	0	172.48743780866636	0.0136
+oitJH7	1ldgAE	loadKunkle	dep	0	186.35449869879318	0.0341

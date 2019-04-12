@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4UNSpy	6Sxre2	ptau	dep	0	11.004654992073267	0.832
+txnDa1	yGBdIp	ptau	dep	0	13.64257513225333	0.836

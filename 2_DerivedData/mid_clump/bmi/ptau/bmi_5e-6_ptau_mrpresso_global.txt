@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Dezs4H	FCcU4o	ptau	bmi	1	2003.4714056710295	0.01597
+Id5CYN	bSDhkS	ptau	bmi	2	3026.727333915058	0.01829

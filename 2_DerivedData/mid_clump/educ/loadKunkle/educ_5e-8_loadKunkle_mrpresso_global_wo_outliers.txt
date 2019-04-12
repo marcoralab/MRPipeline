@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-WMWVJ3	m9zsQN	loadKunkle	educ	0	NA	NA
+kM9akb	qwraIc	loadKunkle	educ	0	NA	NA

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xwPO95,PEOLEU,hipv2015,audit,MR Egger,7.583502178823,4,0.10808307085998708,2019-04-07
-xwPO95,PEOLEU,hipv2015,audit,Inverse variance weighted,10.823048725738943,5,0.05500350263286106,2019-04-07
+qNk9lI,mqA12C,hipv2015,audit,MR Egger,10.353913455255384,5,0.06580629005304842,2019-04-11
+qNk9lI,mqA12C,hipv2015,audit,Inverse variance weighted,12.87222801659034,6,0.045110447516617094,2019-04-11

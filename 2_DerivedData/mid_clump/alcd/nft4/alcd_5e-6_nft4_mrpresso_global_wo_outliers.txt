@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-u8zEl3	vbQKrN	nft4	alcd	1	30.726822010644835	0.11
+r3T7Gw	p4nyaH	nft4	alcd	0	NA	NA

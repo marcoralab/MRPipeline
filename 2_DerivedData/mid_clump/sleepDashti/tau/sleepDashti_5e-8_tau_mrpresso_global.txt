@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LYmGHK	sPrW9f	tau	sleepDashti	0	75.7863997166568	0.5485
+AcYJL9	7JYYvT	tau	sleepDashti	0	81.68857962578139	0.6597

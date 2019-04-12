@@ -1,2 +1,2 @@
-id.exposure,id.outcome,outcome,exposure,egger_intercept,se,pval,date
-u8zEl3,vbQKrN,nft4,alcd,-0.02338963618368951,0.04758825627058846,0.6306886956169626,2019-04-07
+id.exposure,id.outcome,outcome,exposure,method,egger_intercept,se,pval,date
+r3T7Gw,p4nyaH,nft4,alcd,mrpresso,NA,NA,NA,2019-04-11

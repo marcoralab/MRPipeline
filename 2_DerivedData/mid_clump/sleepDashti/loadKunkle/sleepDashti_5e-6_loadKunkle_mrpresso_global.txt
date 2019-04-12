@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aPFywo	IQsqvA	loadKunkle	sleepDashti	0	325.84326424891304	0.0664
+DdACED	tIia2V	loadKunkle	sleepDashti	0	409.7314736592447	0.0184

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7t1Q0v	gbOI5i	npany	sbp	0	1392.7414494886539	0.9574133333333333
+VvmlCP	axOGhl	npany	sbp	0	2347.28802230361	0.99423

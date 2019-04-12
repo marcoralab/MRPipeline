@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MDLzYJ	OS2riN	nft4	smkaoi	0	43.73150775844601	0.7852
+UT3D6r	d7L87E	nft4	smkaoi	0	48.385660660933375	0.7742

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-m2KjgM	9ZaD06	load	tc	10	223.67986971619789	0.0053
+yXBa9e	zYxjpX	load	tc	16	522.6108322228228	<4e-05

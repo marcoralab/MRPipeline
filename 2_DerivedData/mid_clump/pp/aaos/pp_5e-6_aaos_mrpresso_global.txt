@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ZuYNKA	sBqMKw	aaos	pp	1	1895.3716184035113	<1.33333333333333e-05
+euJuse	vqGYGa	aaos	pp	2	3089.7285249876318	<1e-05
