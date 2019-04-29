@@ -11,12 +11,9 @@ shell.prefix('module load plink/1.90 R/3.5.1; ')
 REF = config['REF']
 r2 = config['clumpr2']
 kb = config['clumpkb']
-#ExposureCode = config['ExposureCode']
 EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "NAME")
-#OutcomeCode = config['OutcomeCode']
 OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "NAME")
 Pthreshold = config['Pthreshold']
-DataIn = config['DataIn']
 traits = config['traits']
 DataOut = config['DataOut']
 DataOutput = config['DataOutput']
@@ -44,7 +41,6 @@ rule all:
         expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=EXPOSURES.index.tolist(), OutcomeCode=OUTCOMES.index.tolist(), Pthreshold=Pthreshold),
 
 rule clump:
-    #input: DataIn + '{ExposureCode}_GWAS.Processed.gz'
     input:
         ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE']
     output: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
@@ -54,7 +50,6 @@ rule clump:
         r2 = r2,
         kb = kb
     shell:
-        #"plink --bfile {params.ref} --keep-allele-order --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
         "plink --bfile {params.ref} --keep-allele-order --clump {input.ss}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
 
 rule gzip:

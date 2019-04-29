@@ -2,7 +2,6 @@
 # snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
 # snakejob -s mr.smk --configfile test.yaml -j 400 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
-DataIn: '1_RawData/GWAS/'
 DataOut: "2_DerivedData/test/"
 DataOutput: "4_Output/test/"
 
@@ -16,13 +15,13 @@ Pthreshold: ['5e-8', '5e-6']
 EXPOSURES:
   -
     NAME: crp
-    FILE: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/crp_GWAS.Processed.gz
+    FILE: 1_RawData/GWAS/crp_GWAS.Processed.gz
 
 
 OUTCOMES:
   -
     NAME: load
-    FILE: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadKunkle_GWAS.Processed.gz
+    FILE: 1_RawData/GWAS/loadKunkle_GWAS.Processed.gz
 
 
 ## Forbidden wildcard combinations
