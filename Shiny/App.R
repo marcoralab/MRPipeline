@@ -24,22 +24,25 @@ MRsummary <- read_tsv('MR_Results_summary.txt')
 ## Blurbs
 traits <- read_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/MRTraits.csv')
 
-exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'evrsmk', 'dep', 
-                        'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 
-                        'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 
-                        'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
+## Outcomes to include the results 
+outcomes = c('load', 'loadKunkle', 'aaos', 
+             'ab42', 'ptau', 'tau', 
+             'npany', 'nft4', 'vbiany', 
+             'hipv', 'hipv2015')
 
-## LOAD, CSF and Neuropath
-outcomes <- c('load', 'aaos', 
-                       'ab42', 'ptau', 'tau', 
-                       'hipv', 'hipv2015', 
-                       'npany', 'nft4', 'hips', 'vbiany')
+## Exposures to include in the results
+exposures = c("alccliu", "alcd", "audit", 
+              "bmi", "dbp", "dep", "diab", "educ", "hdl", 
+              "hear", "insom", "ldl", "mdd", "mvpa", "oilfish", 
+              "pp", "sbp", "sleepDashti", "smkcpd", "smki", "sociso", 
+              "tc", "trig")
+
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
   
   # App title ----
-  titlePanel("Causal Relationships in the Alzheimer's endophenome"),
+  titlePanel("Causal Relationships in the Alzheimer's phenome"),
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
