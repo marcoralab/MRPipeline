@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Bd06X2	AdNT0s	ptau	mvpa	1	159.9555287784085	<0.001

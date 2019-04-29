@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+TZVCN4,ngFXoh,load,auditp,MR Egger,39.0081554810232,34,0.2546759140871316,2019-03-04
+TZVCN4,ngFXoh,load,auditp,Inverse variance weighted,42.487816848617584,35,0.1796893051151404,2019-03-04

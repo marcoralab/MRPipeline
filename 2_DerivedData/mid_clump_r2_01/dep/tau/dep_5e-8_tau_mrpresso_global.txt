@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gUKvpk	Zt39ms	tau	dep	0	14.902635536974168	0.601

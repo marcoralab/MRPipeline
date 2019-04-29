@@ -47,9 +47,9 @@ params:
   neuro.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Neuroticism.txt
   openn.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Openness.txt
   ibd.summary: ~/Dropbox/Research/Data/Summary_Statisitics/IBD/deLange2017/ibd_build37_59957_20161107.txt.gz
-  dbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_DBPsummaryResults.txt.gz
-  pp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_PPsummaryResults.txt.gz
-  sbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Vangelis2018/UKB-ICBPmeta750k_SBPsummaryResults.txt.gz
+  dbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_DBPsummaryResults.txt.gz
+  pp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_PPsummaryResults.txt.gz
+  sbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_SBPsummaryResults.txt.gz
   hear.summary: ~/Dropbox/Research/Data/Summary_Statisitics/ARHI/NealeLab/2247_0.gwas.imputed_v3.both_sexes.tsv.gz
   height.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Height/Meta-analysis_Wood_et_al+UKBiobank_2018.txt.gz
   npany.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/np_any.Meta.annotate1.2013May03.txt.gz
@@ -128,7 +128,8 @@ kg <- filter(kg.raw, ID != '.') %>%
 
 hrc_kg <- anti_join(kg, hrc, by = 'ID') %>% 
   bind_rows(hrc)
-
+hrc_kg <- read_tsv('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/hrc_kg.snps.txt.gz', 
+                   col_types = cols(ChromPos = col_character()))
 ```
 
 ### UK10k Allele Freq
@@ -619,7 +620,7 @@ write_tsv(alc_dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/a
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
 audit.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Alcohol/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz')
 audit <- audit.raw %>% 
-  rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
+  rename(Effect_allele = a_0, Non_Effect_allele = a_1, SNP = rsid) %>% 
   filter(nchar(Effect_allele) == 1) %>% 
   filter(nchar(Non_Effect_allele) == 1) %>% 
   left_join(select(hrc_kg, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
@@ -1661,3 +1662,40 @@ svs <- svs.raw %>%
 write_tsv(svs, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/svs_GWAS.Processed.gz'))
 
 ```
+
+## CRP
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+crp.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/1KG_CRP_GWAS_AJHG_2018.txt')
+crp <- crp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'Variant'), remove = F) %>%
+  filter(Variant == 'SNP') %>% 
+  mutate(z = Effect/StdErr) %>% 
+  mutate(P = 2*pnorm(-abs(z))) %>%
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2)) %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr)
+
+write_tsv(crp, gzfile('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/crp_GWAS.Processed.txt.gz'))
+
+crp.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/1KG_CRP_GWAS_AJHG_2018.txt')
+crp.out <- crp.raw %>%
+  separate(MarkerName, c('CHR', 'POS', 'Variant'), remove = F) %>%
+  filter(Variant == 'SNP') %>% 
+  mutate(z = Effect/StdErr) %>% 
+  mutate(P = 2*pnorm(-abs(z))) %>%
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2)) %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  mutate(CHR = as.numeric(CHR), POS = as.numeric(POS)) %>%
+  left_join(select(hrc_kg, ID, CHROM, POS, REF, ALT, AF), by = c('CHR' = 'CHROM', 'POS' = 'POS')) %>%
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF)) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  rename(SNP = ID) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+write_tsv(crp.out, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/crp_GWAS.Processed.txt.gz'))
+
+  
+```
+
+
+
+

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Mo60M0	lRr4Co	vbiany	mvpa	0	NA	NA

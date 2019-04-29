@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ounMpo,ZF5HIC,ggt,auditc,MR Egger,39.2691031976496,32,0.17626020562187172,2019-03-04
+ounMpo,ZF5HIC,ggt,auditc,Inverse variance weighted,40.55804983689799,33,0.17150662601998798,2019-03-04

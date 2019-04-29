@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+SgdfOC,TDZ82s,ptau,hdl,MR Egger,328.52009320875834,189,1.3302769006083716e-9,2019-04-07
+SgdfOC,TDZ82s,ptau,hdl,Inverse variance weighted,328.8427715887348,190,1.6480764171203458e-9,2019-04-07

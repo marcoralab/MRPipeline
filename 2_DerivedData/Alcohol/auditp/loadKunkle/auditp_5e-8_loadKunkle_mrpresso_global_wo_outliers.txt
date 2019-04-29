@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+kXrPEr	qGdxtr	loadKunkle	auditp	0	NA	NA

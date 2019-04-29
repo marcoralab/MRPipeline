@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+aPFywo	IQsqvA	loadKunkle	sleepDashti	0	NA	NA

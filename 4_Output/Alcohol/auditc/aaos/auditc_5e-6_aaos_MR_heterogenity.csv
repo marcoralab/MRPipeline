@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+CyDskT,EQwwcv,aaos,auditc,MR Egger,71.3332698833485,51,0.03152806491666272,2019-03-04
+CyDskT,EQwwcv,aaos,auditc,Inverse variance weighted,86.99693335866934,52,0.0016825741054007507,2019-03-04

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+QWiRZb,6WDp64,ptau,hear,MR Egger,114.56181684509258,89,0.03537380674239142,2019-04-07
+QWiRZb,6WDp64,ptau,hear,Inverse variance weighted,114.69650717930536,90,0.04060090550471894,2019-04-07

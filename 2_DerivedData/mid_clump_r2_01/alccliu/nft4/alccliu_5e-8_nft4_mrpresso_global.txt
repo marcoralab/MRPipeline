@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rbGFux	JZHY89	nft4	alccliu	0	42.28043590518436	0.5934

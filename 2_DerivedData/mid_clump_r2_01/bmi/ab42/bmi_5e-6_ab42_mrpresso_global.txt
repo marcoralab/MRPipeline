@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qKkUWA	4VKWrp	ab42	bmi	1	2289.2501341198194	<1e-05

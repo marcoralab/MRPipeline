@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+ToTdtI,5LJMRI,hipv,tc,MR Egger,251.44625953251892,173,9.076075338763374e-5,2019-04-07
+ToTdtI,5LJMRI,hipv,tc,Inverse variance weighted,251.56166499344658,174,1.0871881441710522e-4,2019-04-07

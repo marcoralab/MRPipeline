@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+9PGpib	pAfoU2	load	audit	4	39.51291333920291	<0.001

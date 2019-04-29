@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+gjkDhB	sWE7TY	load	mvpa	5	6.3069619152782	0.99

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+TZVCN4	ngFXoh	load	auditp	0	45.798400409694565	0.1916

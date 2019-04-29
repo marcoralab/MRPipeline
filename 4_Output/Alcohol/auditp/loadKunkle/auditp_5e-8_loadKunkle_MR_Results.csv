@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+kXrPEr,qGdxtr,loadKunkle,auditp,Inverse variance weighted (fixed effects),8,-0.505733127231741,0.5706760146833754,0.3755097230479329,2019-03-04
+kXrPEr,qGdxtr,loadKunkle,auditp,Weighted median,8,-0.5680093134089244,0.7141117054491112,0.4263769000215827,2019-03-04
+kXrPEr,qGdxtr,loadKunkle,auditp,Weighted mode,8,-0.7891029376445426,0.92005856447389,0.41946988113396066,2019-03-04
+kXrPEr,qGdxtr,loadKunkle,auditp,MR Egger,8,-1.5000720318651422,0.8500497207118566,0.12806198410863628,2019-03-04

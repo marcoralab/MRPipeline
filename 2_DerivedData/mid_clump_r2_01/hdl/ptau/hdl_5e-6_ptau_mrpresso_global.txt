@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+SgdfOC	TDZ82s	ptau	hdl	3	337.4587485673223	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+88UkTA	orHfGB	npany	educ	0	883.070722250523	0.22352

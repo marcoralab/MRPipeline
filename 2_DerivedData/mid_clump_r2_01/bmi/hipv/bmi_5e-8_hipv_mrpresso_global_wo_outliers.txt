@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+36bBmC	lTUt7z	hipv	bmi	1	1257.497983730528	<2e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+WmX93H	Ml4RQI	crp	loadKunkle	8	81.82926263671379	4e-4

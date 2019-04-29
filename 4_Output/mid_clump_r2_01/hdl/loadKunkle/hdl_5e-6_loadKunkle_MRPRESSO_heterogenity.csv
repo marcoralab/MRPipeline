@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+BumJPB,9bRaig,loadKunkle,hdl,MR Egger,264.4034161558201,190,2.8907740280903385e-4,2019-04-07
+BumJPB,9bRaig,loadKunkle,hdl,Inverse variance weighted,267.71477730277024,191,2.0827978122782103e-4,2019-04-07

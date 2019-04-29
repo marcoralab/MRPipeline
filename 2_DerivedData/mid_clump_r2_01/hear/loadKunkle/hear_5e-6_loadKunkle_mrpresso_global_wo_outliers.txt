@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Wyl992	gESTJ8	loadKunkle	hear	0	NA	NA

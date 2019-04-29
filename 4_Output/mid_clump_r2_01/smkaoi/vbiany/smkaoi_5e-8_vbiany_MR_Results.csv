@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+a0jUaD,rasOZs,vbiany,smkaoi,Inverse variance weighted (fixed effects),6,-0.7044957659135704,1.2385377740969374,0.569483391732817,2019-04-07
+a0jUaD,rasOZs,vbiany,smkaoi,Weighted median,6,-0.26604748624849794,1.541189328124343,0.8629463637347794,2019-04-07
+a0jUaD,rasOZs,vbiany,smkaoi,Weighted mode,6,-0.15054884498944432,2.245844411388193,0.9491522722130696,2019-04-07
+a0jUaD,rasOZs,vbiany,smkaoi,MR Egger,6,-7.7849324747882775,5.180727295901466,0.2073444459989988,2019-04-07

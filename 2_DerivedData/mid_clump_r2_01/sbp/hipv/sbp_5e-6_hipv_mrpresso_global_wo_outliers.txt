@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+iehStD	WxIGSc	hipv	sbp	1	1750.188912703753	<1.33333333333333e-05

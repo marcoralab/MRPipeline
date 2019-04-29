@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+1b2jbj	AwAlhn	ggt	alcc	1	105.69520629506253	<2e-04

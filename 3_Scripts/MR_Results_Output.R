@@ -1,18 +1,24 @@
+## ==================================== ##
+## Packages & Functions
+
 library(tidyverse)
 library(Hmisc)
 library(TwoSampleMR)
 library(gridExtra)
 library(qvalue)
 
-
+## if value is less then 0.001, use scientific notation
 round_sci <- function(x){ifelse(x < 0.001, formatC(x, format = "e", digits = 2), round(x, 3))}
 
+## replace pvalues with stars
 signif.num <- function(x) {
   symnum(x, corr = FALSE, na = FALSE, legend = FALSE,
          cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), 
          symbols = c("***", "**", "*", ".", " "))
 }
 
+## Function for spreading multiple columns 
+# https://community.rstudio.com/t/spread-with-multiple-value-columns/5378 
 myspread <- function(df, key, value) {
   # quote key
   keyq <- rlang::enquo(key)
@@ -47,73 +53,47 @@ passfunc <- function(ivw.p, ivw.b, mre.p, mre.b, wme.p, wme.b, wmb.p, wmb.b){
   TRUE, FALSE)
 }
 
+##-------------------- Read in R datasets -------------------## 
+#dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/lax_clump/0_Summary"
+#dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/mid_clump/0_Summary"
+dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/strict_clump/0_Summary"
 
-##---------------------------------------## 
-# Read in R datasets. 
+## Outcomes to include the results 
+outcomes = c('load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv', 'hipv2015')
+## Exposures to include in the results
+exposures = c("alccliu", "alcd", "audit", "bmi", "dbp", "dep", "diab", "educ", "hdl", "hear", "insom", "ldl", "mdd", "mvpa", "oilfish", "pp", "sbp", "sleepDashti", "smkcpd", "smki", "sociso", "tc", "trig")
 
-outcomes = c('load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')
-exposures = c("alccliu", "alcd", "audit", "bmi", "dbp", "dep", "diab", "educ", "hdl", "hear", "insom", "ldl", "mdd", "mvpa", "oilfish", "pp", "sbp", "sleepdoherty", "smkcpd", "smki", "sociso", "tc", "trig")
-
-MR_results <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_results.txt.gz') %>% 
+MR_results <- read_tsv(file.path(dir, 'MR_results.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-mrpresso_global_comb <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/mrpresso_global_comb.txt.gz') %>% 
+mrpresso_global_comb <- read_tsv(file.path(dir, 'mrpresso_global_comb.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-MRdat <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_mrpresso_MRdat.txt.gz') %>% 
+MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-egger_comb <- read_tsv('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/egger_comb.txt.gz') %>% 
+egger_comb <- read_tsv(file.path(dir, 'egger_comb.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-##---------------------------------------## 
-# Write out Harmondized Datasets
 
-#MRdat %>% 
-#  write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS1.csv')
+##------------------ Table S1 - Harmonozied datasets ---------------------## 
 
-
-##---------------------------------------## 
-# Merege datasets. 
-
-MRsummary <- MR_results  %>% 
-  mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
-  mutate(method = str_replace(method, "MR Egger", 'MR_Egger')) %>%
-  mutate(method = str_replace(method, "Weighted median", 'Weighted_median')) %>%
-  mutate(method = str_replace(method, "Weighted mode", 'Weighted_mode')) %>%
-  rename(MR.pval = pval) %>%
-  left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, RSSobs, pval, outliers_removed), 
-            by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
-  rename(MRPRESSO.pval = pval) %>% 
-  left_join(select(egger_comb, outcome, exposure, pt, egger_intercept, egger_se, pval, outliers_removed), 
-            by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
-  rename(Egger.pval = pval) %>% 
-  select(outcome, exposure, pt, method, MR_PRESSO, nsnp, n_outliers, b, se, MR.pval, 
-         RSSobs, MRPRESSO.pval, egger_intercept, egger_se, Egger.pval) %>% 
-  arrange(outcome, exposure, pt, method, MR_PRESSO) 
-
-##---------------------------------------## 
-# Spread Results
-## Spread Methods
-
-mrresults.methods <- MRsummary %>% 
-  mutate(b = signif(b, 2), se = signif(se, 2), MR.pval = signif(MR.pval, 2), RSSobs = round(RSSobs, 1), egger_intercept = signif(egger_intercept, 3), egger_se = signif(egger_se, 2), Egger.pval = signif(Egger.pval, 2)) %>%
-  myspread(method, c(b, se, MR.pval)) %>% 
-  mutate(IVW_Signif = as.character(signif.num(IVW_MR.pval))) %>% 
-  mutate(MR_Egger_Signif = as.character(signif.num(MR_Egger_MR.pval))) %>% 
-  mutate(Weighted_median_Signif = as.character(signif.num(Weighted_median_MR.pval))) %>%
-  mutate(Weighted_mode_Signif = as.character(signif.num(Weighted_mode_MR.pval)))
-
-## Spread MR-PRESSO
-mrresults.methods_presso <- mrresults.methods %>% 
-  myspread(MR_PRESSO, c(nsnp, n_outliers, RSSobs, MRPRESSO.pval, egger_intercept, egger_se, Egger.pval, IVW_b, IVW_MR.pval, IVW_se, MR_Egger_b, MR_Egger_MR.pval, MR_Egger_se, Weighted_median_b, Weighted_median_MR.pval, Weighted_median_se, Weighted_mode_b, Weighted_mode_MR.pval, Weighted_mode_se, IVW_Signif, MR_Egger_Signif, Weighted_median_Signif, Weighted_mode_Signif)) %>% 
-  arrange(pt, outcome, exposure) %>% 
+MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000) %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(exposure %in% exposures) %>% 
+  filter(!(outcome == 'loadKunkle' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'load' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  filter(!(outcome == 'hipv' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'hipv2015' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
   mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
   mutate(exposure = fct_recode(exposure, 
                                "Alcohol Consumption" = "alccliu", 
                                "Alcohol Dependence" = "alcd", 
@@ -135,7 +115,7 @@ mrresults.methods_presso <- mrresults.methods %>%
                                "Pulse Pressure" = "pp", 
                                "Systolic Blood Pressure" = "sbp", 
                                "Social Isolation" = "sociso", 
-                               "Sleep Duration" = "sleepdoherty",
+                               "Sleep Duration" = "sleepDashti",
                                "Total Cholesterol" = "tc", 
                                "Triglycerides" = "trig")) %>% 
   mutate(outcome = fct_recode(outcome, 
@@ -147,26 +127,38 @@ mrresults.methods_presso <- mrresults.methods %>%
                               "Hippocampul Volume" = "hipv",
                               "Neuritic Plaques" = "npany",
                               "Neurofibrillary Tangles" = "nft4",
-                              "Vascular Brain Injury" = "vbiany")) %>%
-  arrange(outcome, exposure, pt) %>% 
-  select(outcome, exposure, pt, FALSE_nsnp, FALSE_n_outliers,
-         FALSE_IVW_b, FALSE_IVW_se, FALSE_IVW_MR.pval, FALSE_IVW_Signif,
-         FALSE_MR_Egger_b, FALSE_MR_Egger_se, FALSE_MR_Egger_MR.pval, FALSE_MR_Egger_Signif,  
-         FALSE_Weighted_median_b, FALSE_Weighted_median_se, FALSE_Weighted_median_MR.pval, FALSE_Weighted_median_Signif, 
-         FALSE_Weighted_mode_b, FALSE_Weighted_mode_se, FALSE_Weighted_mode_MR.pval, FALSE_Weighted_mode_Signif, 
-         FALSE_RSSobs, FALSE_MRPRESSO.pval, FALSE_egger_intercept, FALSE_egger_se, FALSE_Egger.pval, 
-         TRUE_IVW_b, TRUE_IVW_se, TRUE_IVW_MR.pval, TRUE_IVW_Signif, 
-         TRUE_MR_Egger_b, TRUE_MR_Egger_se, TRUE_MR_Egger_MR.pval, TRUE_MR_Egger_Signif, 
-         TRUE_Weighted_median_b, TRUE_Weighted_median_se, TRUE_Weighted_median_MR.pval, TRUE_Weighted_median_Signif, 
-         TRUE_Weighted_mode_b, TRUE_Weighted_mode_se, TRUE_Weighted_mode_MR.pval, TRUE_Weighted_mode_Signif,
-         TRUE_RSSobs, TRUE_MRPRESSO.pval, TRUE_egger_intercept, TRUE_egger_se, TRUE_Egger.pval)
+                              "Vascular Brain Injury" = "vbiany"))
 
-#mrresults.methods_presso %>% 
-#  write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS2.csv')
+write_csv(MRdat, 'C:/Users/Shea/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS1.csv')
 
-##---------------------------------------## 
-# Filter results for MR-PRESSO and best PT
 
+##------------------ Merege datasets ---------------------## 
+
+MRsummary <- MR_results  %>% 
+  mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
+  mutate(method = str_replace(method, "MR Egger", 'MR_Egger')) %>%
+  mutate(method = str_replace(method, "Weighted median", 'Weighted_median')) %>%
+  mutate(method = str_replace(method, "Weighted mode", 'Weighted_mode')) %>%
+  rename(MR.pval = pval) %>%
+  left_join(select(mrpresso_global_comb, outcome, exposure, pt, n_outliers, RSSobs, pval, outliers_removed), 
+            by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
+  rename(MRPRESSO.pval = pval) %>% 
+  left_join(select(egger_comb, outcome, exposure, pt, egger_intercept, egger_se, pval, outliers_removed), 
+            by = c('outcome', 'exposure', 'pt', 'MR_PRESSO' = 'outliers_removed')) %>% 
+  rename(Egger.pval = pval) %>% 
+  select(outcome, exposure, pt, method, MR_PRESSO, nsnp, n_outliers, b, se, MR.pval, 
+         RSSobs, MRPRESSO.pval, egger_intercept, egger_se, Egger.pval) %>% 
+  arrange(outcome, exposure, pt, method, MR_PRESSO) %>% 
+  ## Remove associations between Kunkle 2019 (LOAD) and alcohol consumption, education (as per CHARGE usage)
+  ## Instead use the assocations with Lambert 2013
+  filter(!(outcome == 'loadKunkle' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'load' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  ## Remove associations between Hilbar 2017 (Hippocampual volume) and alcohol consumption, education (as per CHARGE usage)
+  ## Instead use the assocations with Hilbar 2015
+  filter(!(outcome == 'hipv' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'hipv2015' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) 
+
+##-------------------- Filter results for MR-PRESSO and best PT -------------------## 
 mr_best <- MRsummary %>% 
   filter(method == 'IVW') %>% 
   #filter(outcome %nin% c('npany', 'nft4', 'vbiany')) %>% 
@@ -174,6 +166,7 @@ mr_best <- MRsummary %>%
   filter(MR_PRESSO == ifelse(TRUE %in% MR_PRESSO, TRUE, FALSE)) %>% 
   ungroup()
 
+## Generate FDR values
 qobj <- qvalue(p = mr_best$MR.pval, fdr.level = 0.1)
 qvales.df <- tibble(pvalues = qobj$pvalues, lfdr = qobj$lfdr, qval = qobj$qvalues, significant = qobj$significant)
 
@@ -188,9 +181,187 @@ mr_best <- mr_best %>%
                          symbols = c("***", "**", "*", ".", " "))) %>% 
   mutate(Signif = as.character(Signif)) 
 
-##---------------------------------------------##
-# Tabulated Results 
+##---------------------- Spread Results -----------------## 
+## Spread Methods
+mrresults.methods <- MRsummary %>% 
+  mutate(b = signif(b, 2), se = signif(se, 2), MR.pval = signif(MR.pval, 2), RSSobs = round(RSSobs, 1), egger_intercept = signif(egger_intercept, 3), egger_se = signif(egger_se, 2), Egger.pval = signif(Egger.pval, 2)) %>%
+  myspread(method, c(b, se, MR.pval)) %>% 
+  mutate(IVW_Signif = as.character(signif.num(IVW_MR.pval))) %>% 
+  mutate(MR_Egger_Signif = as.character(signif.num(MR_Egger_MR.pval))) %>% 
+  mutate(Weighted_median_Signif = as.character(signif.num(Weighted_median_MR.pval))) %>%
+  mutate(Weighted_mode_Signif = as.character(signif.num(Weighted_mode_MR.pval)))
 
+## Spread MR-PRESSO
+## For supplemntary Table 2
+mrresults.methods_presso <- mrresults.methods %>% 
+  myspread(MR_PRESSO, c(nsnp, n_outliers, RSSobs, MRPRESSO.pval, egger_intercept, egger_se, Egger.pval, IVW_b, IVW_MR.pval, IVW_se, MR_Egger_b, MR_Egger_MR.pval, MR_Egger_se, Weighted_median_b, Weighted_median_MR.pval, Weighted_median_se, Weighted_mode_b, Weighted_mode_MR.pval, Weighted_mode_se, IVW_Signif, MR_Egger_Signif, Weighted_median_Signif, Weighted_mode_Signif)) %>% 
+  arrange(pt, outcome, exposure) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure = fct_recode(exposure, 
+                               "Alcohol Consumption" = "alccliu", 
+                               "Alcohol Dependence" = "alcd", 
+                               "AUDIT" = "audit", 
+                               "Smoking Initiation" = "smki", 
+                               "Cigarettes per Day" = "smkcpd", 
+                               "Diastolic Blood Pressure" = "dbp", 
+                               "Depressive Symptoms" = "dep", 
+                               'BMI' = "bmi", 
+                               "Type 2 Diabetes" = "diab", 
+                               "Educational Attainment" = "educ", 
+                               "Oily Fish Intake" = "oilfish",
+                               "High-density lipoproteins" = "hdl", 
+                               "Hearing Problems" = "hear", 
+                               "Insomnia Symptoms" = "insom", 
+                               "Low-density lipoproteins" = "ldl", 
+                               "Major Depressive Disorder" = "mdd", 
+                               "Moderate-to-vigorous PA" = "mvpa",
+                               "Pulse Pressure" = "pp", 
+                               "Systolic Blood Pressure" = "sbp", 
+                               "Social Isolation" = "sociso", 
+                               "Sleep Duration" = "sleepDashti",
+                               "Total Cholesterol" = "tc", 
+                               "Triglycerides" = "trig")) %>% 
+  mutate(outcome = fct_recode(outcome, 
+                              "LOAD" = "load", 
+                              "AAOS" = "aaos", 
+                              "CSF Ab42" = "ab42", 
+                              "CSF Tau" = "tau", 
+                              "CSF Ptau" = "ptau", 
+                              "Hippocampul Volume" = "hipv",
+                              "Neuritic Plaques" = "npany",
+                              "Neurofibrillary Tangles" = "nft4",
+                              "Vascular Brain Injury" = "vbiany")) %>%
+arrange(outcome, exposure, pt) %>% 
+  select(outcome, exposure, pt, FALSE_nsnp, FALSE_n_outliers,
+         FALSE_IVW_b, FALSE_IVW_se, FALSE_IVW_MR.pval, FALSE_IVW_Signif,
+         FALSE_MR_Egger_b, FALSE_MR_Egger_se, FALSE_MR_Egger_MR.pval, FALSE_MR_Egger_Signif,  
+         FALSE_Weighted_median_b, FALSE_Weighted_median_se, FALSE_Weighted_median_MR.pval, FALSE_Weighted_median_Signif, 
+         FALSE_Weighted_mode_b, FALSE_Weighted_mode_se, FALSE_Weighted_mode_MR.pval, FALSE_Weighted_mode_Signif, 
+         FALSE_RSSobs, FALSE_MRPRESSO.pval, FALSE_egger_intercept, FALSE_egger_se, FALSE_Egger.pval, 
+         TRUE_IVW_b, TRUE_IVW_se, TRUE_IVW_MR.pval, TRUE_IVW_Signif, 
+         TRUE_MR_Egger_b, TRUE_MR_Egger_se, TRUE_MR_Egger_MR.pval, TRUE_MR_Egger_Signif, 
+         TRUE_Weighted_median_b, TRUE_Weighted_median_se, TRUE_Weighted_median_MR.pval, TRUE_Weighted_median_Signif, 
+         TRUE_Weighted_mode_b, TRUE_Weighted_mode_se, TRUE_Weighted_mode_MR.pval, TRUE_Weighted_mode_Signif,
+         TRUE_RSSobs, TRUE_MRPRESSO.pval, TRUE_egger_intercept, TRUE_egger_se, TRUE_Egger.pval)
+
+mrresults.methods_presso %>%
+ write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS2.csv')
+
+##------------------ Heat Maps of Best Results ---------------------## 
+dat.plot <- mr_best %>%
+  mutate(z = b/se) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  ## Relevel Outcomes and Exposures
+  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure = fct_recode(exposure, 
+                               "Alcohol Consumption" = "alccliu", 
+                               "Alcohol Dependence" = "alcd", 
+                               "AUDIT" = "audit", 
+                               "Smoking Initiation" = "smki", 
+                               "Cigarettes per Day" = "smkcpd", 
+                               "Diastolic Blood Pressure" = "dbp", 
+                               "Depressive Symptoms" = "dep", 
+                               'BMI' = "bmi", 
+                               "Type 2 Diabetes" = "diab", 
+                               "Educational Attainment" = "educ", 
+                               "Oily Fish Intake" = "oilfish",
+                               "High-density lipoproteins" = "hdl", 
+                               "Hearing Problems" = "hear", 
+                               "Insomnia Symptoms" = "insom", 
+                               "Low-density lipoproteins" = "ldl", 
+                               "Major Depressive Disorder" = "mdd", 
+                               "Moderate-to-vigorous PA" = "mvpa",
+                               "Pulse Pressure" = "pp", 
+                               "Systolic Blood Pressure" = "sbp", 
+                               "Social Isolation" = "sociso", 
+                               "Sleep Duration" = "sleepDashti",
+                               "Total Cholesterol" = "tc", 
+                               "Triglycerides" = "trig")) %>% 
+  mutate(outcome = fct_recode(outcome, 
+                              "LOAD" = "load", 
+                              "AAOS" = "aaos", 
+                              "CSF Ab42" = "ab42", 
+                              "CSF Tau" = "tau", 
+                              "CSF Ptau" = "ptau", 
+                              "Hippocampul Volume" = "hipv",
+                              "Neuritic Plaques" = "npany",
+                              "Neurofibrillary Tangles" = "nft4",
+                              "Vascular Brain Injury" = "vbiany")) 
+
+## Generate Frames for plot to indicate robust associations
+frames <- mr_best %>% 
+  select(outcome, exposure, pt, MR_PRESSO, qval) %>%
+  left_join(mrresults.methods, by = c('outcome', 'exposure', 'pt', 'MR_PRESSO')) %>% 
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(MRPRESSO.pval = as.numeric(str_replace(MRPRESSO.pval, '<', ""))) %>% 
+  select(outcome, exposure, pt, MR_PRESSO, qval, MRPRESSO.pval, Egger.pval, IVW_b, IVW_MR.pval, MR_Egger_b, MR_Egger_MR.pval, Weighted_median_b, Weighted_median_MR.pval, Weighted_mode_b, Weighted_mode_MR.pval) %>% 
+  mutate(pass = ifelse(qval > 0.05, FALSE,
+                       ifelse(MRPRESSO.pval > 0.05 & Egger.pval > 0.05, TRUE,
+                              ifelse(MR_Egger_MR.pval < 0.05 | Weighted_median_MR.pval < 0.05 | Weighted_mode_MR.pval < 0.05, TRUE, FALSE)))) %>%
+  mutate(pass_0.1 = ifelse(qval > 0.1 | qval < 0.05, FALSE,
+                           ifelse(MRPRESSO.pval > 0.05 & Egger.pval > 0.05, TRUE,
+                                  ifelse(MR_Egger_MR.pval < 0.05 | Weighted_median_MR.pval < 0.05 | Weighted_mode_MR.pval < 0.05, TRUE, FALSE)))) %>%
+  mutate(outcome1 = as.integer(outcome)) %>% 
+  mutate(exposure1 = as.integer(exposure))
+
+frames <- lapply(1:nrow(frames), function(x){
+  slice(frames, x) %>%
+    mutate(pass = ifelse(pass == FALSE, FALSE, passfunc(IVW_MR.pval, IVW_b, 
+                                                        MR_Egger_MR.pval, MR_Egger_b, 
+                                                        Weighted_median_MR.pval, Weighted_median_b, 
+                                                        Weighted_mode_MR.pval, Weighted_mode_b))) %>% 
+    mutate(pass_0.1 = ifelse(pass_0.1 == FALSE, FALSE, passfunc(IVW_MR.pval, IVW_b, 
+                                                                MR_Egger_MR.pval, MR_Egger_b, 
+                                                                Weighted_median_MR.pval, Weighted_median_b, 
+                                                                Weighted_mode_MR.pval, Weighted_mode_b)))
+}) %>% bind_rows(.) 
+
+
+p1 <- ggplot(dat.plot) + 
+  geom_raster(aes(x = exposure, y = outcome, fill = z)) + 
+  geom_text(data = dat.plot, size = 6, aes(label = Signif, x = exposure, y = outcome)) +
+  scale_fill_gradient2(low="steelblue", high="firebrick", mid = "white", na.value = "grey50") + 
+  coord_equal() + theme_classic() +
+  geom_vline(xintercept=seq(0.5, 23.5, 1),color="white") +
+  geom_hline(yintercept=seq(0.5, 11.5, 1),color="white") +
+  geom_rect(data=filter(frames, pass_0.1 == TRUE), size=0.5, fill=NA, colour="orange",
+            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
+  geom_rect(data=filter(frames, pass == TRUE), size=0.5, fill=NA, colour="red",
+            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
+  theme(legend.position = 'right', legend.key.height = unit(2, "line"), axis.text.x = element_text(angle = 45, hjust = 1), 
+        legend.title = element_blank(), legend.text = element_text(hjust = 1.5)) 
+p1
+# ggsave(file.path(dir, 'MR_w_apoe_heatmap.pdf'), plot = p1, width = 190, height =  120, units = 'mm')
+# ggsave(file.path(dir, 'MR_w_apoe_heatmap.png'), plot = p1, width = 190, height =  120, units = 'mm')
+
+dat.plot2 <- dat.plot %>%  mutate(out = ifelse(qval < 0.1, paste0(round(b, 3), '\n', '(', round_sci(qval), ')'), " ")) 
+
+p2 <- ggplot(dat.plot2) + 
+  geom_raster(aes(x = exposure, y = outcome, fill = z)) + 
+  geom_text(data = dat.plot2, size = 1, aes(label = out, x = exposure, y = outcome)) +
+  scale_fill_gradient2(low="steelblue", high="firebrick", mid = "white", na.value = "grey50") + 
+  coord_equal() + theme_classic() +
+  geom_vline(xintercept=seq(0.5, 23.5, 1),color="white") +
+  geom_hline(yintercept=seq(0.5, 11.5, 1),color="white") +
+  geom_rect(data=filter(frames, pass_0.1 == TRUE), size=0.5, fill=NA, colour="orange",
+            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
+  geom_rect(data=filter(frames, pass == TRUE), size=0.5, fill=NA, colour="red",
+            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
+  theme(legend.position = 'right', legend.key.height = unit(2, "line"), axis.text.x = element_text(angle = 45, hjust = 1), 
+        legend.title = element_blank(), legend.text = element_text(hjust = 1.5))
+ggsave(file.path(dir, 'MR_w_apoe_heatmap2.png'), plot = p2, width = 190, height =  120, units = 'mm')
+##------------------------- Tabulated Results  --------------------##
+## Formating Results for Table 2
 # Filtering MR-PRESSO
 out <- mr_best %>% 
   select(outcome, exposure, pt, MR_PRESSO, qval) %>%
@@ -220,8 +391,12 @@ out.final <- out %>%
   mutate(qval = round_sci(qval)) %>%
   arrange(outcome, exposure) %>% 
   mutate(nsnp = nsnp + n_outliers) %>%
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  ## Relevel Outcomes and Exposures
   mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
   mutate(exposure = fct_recode(exposure, 
                                "Alcohol Consumption" = "alccliu", 
                                "Alcohol Dependence" = "alcd", 
@@ -243,7 +418,7 @@ out.final <- out %>%
                                "Pulse Pressure" = "pp", 
                                "Systolic Blood Pressure" = "sbp", 
                                "Social Isolation" = "sociso", 
-                               "Sleep Duration" = "sleepdoherty",
+                               "Sleep Duration" = "sleepDashti",
                                "Total Cholesterol" = "tc", 
                                "Triglycerides" = "trig")) %>% 
   mutate(outcome = fct_recode(outcome, 
@@ -256,8 +431,8 @@ out.final <- out %>%
                               "Neuritic Plaques" = "npany",
                               "Neurofibrillary Tangles" = "nft4",
                               "Vascular Brain Injury" = "vbiany")) %>% 
-  #filter(qval < 0.05) %>% 
-  filter(pass == TRUE) %>% arrange(outcome, exposure)
+  filter(as.numeric(qval) < 0.1) %>% arrange(outcome, exposure)
+  #filter(pass == TRUE) %>% arrange(outcome, exposure)
 
 #write_csv(out.final, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/Table_2.csv')
 
@@ -279,31 +454,46 @@ res_odds <- mr_best %>%
   print(n = Inf)
 
 test <- res_odds %>% #filter(outcome %in% c('load', 'aaos')) %>%
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  ## Relevel Outcomes and Exposures
+  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
   mutate(exposure = fct_recode(exposure, 
-                               "alcohol consumption" = "alccliu", 
-                               "alcohol dependence" = "alcd", 
+                               "Alcohol Consumption" = "alccliu", 
+                               "Alcohol Dependence" = "alcd", 
                                "AUDIT" = "audit", 
-                               "smoking initiation" = "smki", 
-                               "cigarettes per day" = "smkcpd", 
-                               "diastolic blood pressure" = "dbp", 
-                               "depressive symptoms" = "dep", 
+                               "Smoking Initiation" = "smki", 
+                               "Cigarettes per Day" = "smkcpd", 
+                               "Diastolic Blood Pressure" = "dbp", 
+                               "Depressive Symptoms" = "dep", 
                                'BMI' = "bmi", 
                                "Type 2 Diabetes" = "diab", 
-                               "educational attainment" = "educ", 
-                               "oily fish intake" = "oilfish",
-                               "HDL-cholesterol" = "hdl", 
-                               "hearing difficulties" = "hear", 
-                               "insomnia symptoms" = "insom", 
-                               "LDL-cholesterol" = "ldl", 
+                               "Educational Attainment" = "educ", 
+                               "Oily Fish Intake" = "oilfish",
+                               "High-density lipoproteins" = "hdl", 
+                               "Hearing Problems" = "hear", 
+                               "Insomnia Symptoms" = "insom", 
+                               "Low-density lipoproteins" = "ldl", 
                                "Major Depressive Disorder" = "mdd", 
-                               "moderate-to-vigorous physcial activity" = "mvpa",
-                               "pulse pressure" = "pp", 
-                               "systolic blood pressure" = "sbp", 
-                               "social isolation" = "sociso", 
-                               "sleep duration" = "sleepdoherty",
-                               "total cholesterol" = "tc", 
-                               "triglycerides" = "trig"))
+                               "Moderate-to-vigorous PA" = "mvpa",
+                               "Pulse Pressure" = "pp", 
+                               "Systolic Blood Pressure" = "sbp", 
+                               "Social Isolation" = "sociso", 
+                               "Sleep Duration" = "sleepDashti",
+                               "Total Cholesterol" = "tc", 
+                               "Triglycerides" = "trig")) %>% 
+  mutate(outcome = fct_recode(outcome, 
+                              "LOAD" = "load", 
+                              "AAOS" = "aaos", 
+                              "CSF Ab42" = "ab42", 
+                              "CSF Tau" = "tau", 
+                              "CSF Ptau" = "ptau", 
+                              "Hippocampul Volume" = "hipv",
+                              "Neuritic Plaques" = "npany",
+                              "Neurofibrillary Tangles" = "nft4",
+                              "Vascular Brain Injury" = "vbiany"))
 
 
 mr_senseitivy <- function(x){
@@ -396,100 +586,6 @@ written_res <- lapply(1:nrow(test), function(x){
   
 })
 
-
-##---------------------------------------## 
-# Heat Maps of Best Results
-
-
-dat.plot <- mr_best %>%
-  mutate(z = b/se) %>% 
-  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>% 
-  mutate(exposure = fct_recode(exposure, 
-                               "Alcohol Consumption" = "alccliu", 
-                               "Alcohol Dependence" = "alcd", 
-                               "AUDIT" = "audit", 
-                               "Smoking Initiation" = "smki", 
-                               "Cigarettes per Day" = "smkcpd", 
-                               "Diastolic Blood Pressure" = "dbp", 
-                               "Depressive Symptoms" = "dep", 
-                               'BMI' = "bmi", 
-                               "Type 2 Diabetes" = "diab", 
-                               "Educational Attainment" = "educ", 
-                               "Oily Fish Intake" = "oilfish",
-                               "High-density lipoproteins" = "hdl", 
-                               "Hearing Problems" = "hear", 
-                               "Insomnia Symptoms" = "insom", 
-                               "Low-density lipoproteins" = "ldl", 
-                               "Major Depressive Disorder" = "mdd", 
-                               "Moderate-to-vigorous PA" = "mvpa",
-                               "Pulse Pressure" = "pp", 
-                               "Systolic Blood Pressure" = "sbp", 
-                               "Social Isolation" = "sociso", 
-                               "Sleep Duration" = "sleepdoherty",
-                               "Total Cholesterol" = "tc", 
-                               "Triglycerides" = "trig")) %>% 
-  mutate(outcome = fct_recode(outcome, 
-                              "LOAD" = "load", 
-                              "AAOS" = "aaos", 
-                              "CSF Ab42" = "ab42", 
-                              "CSF Tau" = "tau", 
-                              "CSF Ptau" = "ptau", 
-                              "Hippocampul Volume" = "hipv",
-                              "Neuritic Plaques" = "npany",
-                              "Neurofibrillary Tangles" = "nft4",
-                              "Vascular Brain Injury" = "vbiany")) 
-
-
-frames <- mr_best %>% 
-  select(outcome, exposure, pt, MR_PRESSO, qval) %>%
-  left_join(mrresults.methods, by = c('outcome', 'exposure', 'pt', 'MR_PRESSO')) %>% 
-  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepdoherty", "mvpa", "dep", 'mdd', "sociso")) %>%
-  mutate(MRPRESSO.pval = as.numeric(str_replace(MRPRESSO.pval, '<', ""))) %>% 
-  select(outcome, exposure, pt, MR_PRESSO, qval, MRPRESSO.pval, Egger.pval, IVW_b, IVW_MR.pval, MR_Egger_b, MR_Egger_MR.pval, Weighted_median_b, Weighted_median_MR.pval, Weighted_mode_b, Weighted_mode_MR.pval) %>% 
-  mutate(pass = ifelse(qval > 0.05, FALSE,
-                       ifelse(MRPRESSO.pval > 0.05 & Egger.pval > 0.05, TRUE,
-                              ifelse(MR_Egger_MR.pval < 0.05 | Weighted_median_MR.pval < 0.05 | Weighted_mode_MR.pval < 0.05, TRUE, FALSE)))) %>%
-  mutate(pass_0.1 = ifelse(qval > 0.1 | qval < 0.05, FALSE,
-                       ifelse(MRPRESSO.pval > 0.05 & Egger.pval > 0.05, TRUE,
-                              ifelse(MR_Egger_MR.pval < 0.05 | Weighted_median_MR.pval < 0.05 | Weighted_mode_MR.pval < 0.05, TRUE, FALSE)))) %>%
-  mutate(outcome1 = as.integer(outcome)) %>% 
-  mutate(exposure1 = as.integer(exposure))
-
-frames <- lapply(1:nrow(frames), function(x){
-  slice(frames, x) %>%
-    mutate(pass = ifelse(pass == FALSE, FALSE, passfunc(IVW_MR.pval, IVW_b, 
-                                                         MR_Egger_MR.pval, MR_Egger_b, 
-                                                         Weighted_median_MR.pval, Weighted_median_b, 
-                                                         Weighted_mode_MR.pval, Weighted_mode_b))) %>% 
-    mutate(pass_0.1 = ifelse(pass_0.1 == FALSE, FALSE, passfunc(IVW_MR.pval, IVW_b, 
-                                                        MR_Egger_MR.pval, MR_Egger_b, 
-                                                        Weighted_median_MR.pval, Weighted_median_b, 
-                                                        Weighted_mode_MR.pval, Weighted_mode_b)))
-}) %>% bind_rows(.) 
-
-x.outcome <- 'npany'
-y.exposure <- 'tc'
-filter(frames, outcome == x.outcome & exposure == y.exposure)
-filter(mr_best, outcome == x.outcome & exposure == y.exposure)
-filter(MRsummary, outcome == x.outcome & exposure == y.exposure) %>% print(n = Inf)
-
-p1 <- ggplot(dat.plot) + 
-  geom_raster(aes(x = exposure, y = outcome, fill = z)) + 
-  geom_text(data = dat.plot, size = 6, aes(label = Signif, x = exposure, y = outcome)) +
-  scale_fill_gradient2(low="steelblue", high="firebrick", mid = "white") + 
-  coord_equal() + theme_classic() +
-  geom_vline(xintercept=seq(0.5, 23.5, 1),color="white") +
-  geom_hline(yintercept=seq(0.5, 11.5, 1),color="white") +
-  geom_rect(data=filter(frames, pass_0.1 == TRUE), size=0.5, fill=NA, colour="orange",
-            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
-  geom_rect(data=filter(frames, pass == TRUE), size=0.5, fill=NA, colour="red",
-            aes(xmin=exposure1 - 0.5, xmax=exposure1 + 0.5, ymin=outcome1 - 0.5, ymax=outcome1 + 0.5)) + 
-  theme(legend.position = 'none', axis.text.x = element_text(angle = 45, hjust = 1)) 
-p1
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Figures/w_apoe_heatmap.pdf', plot = p1, width = 190, height =  120, units = 'mm')
-ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Figures/w_apoe_heatmap.png', plot = p1, width = 190, height =  120, units = 'mm')
 
 
 

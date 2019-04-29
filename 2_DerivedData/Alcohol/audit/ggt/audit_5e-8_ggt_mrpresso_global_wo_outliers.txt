@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+YUZdhB	Uqk2xg	ggt	audit	1	3.826110228234013	0.904

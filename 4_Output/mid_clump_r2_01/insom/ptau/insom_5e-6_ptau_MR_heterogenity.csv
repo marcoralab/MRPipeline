@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+taTTBU,D98vsw,ptau,insom,MR Egger,96.23655259412115,81,0.11880857771864295,2019-04-07
+taTTBU,D98vsw,ptau,insom,Inverse variance weighted,98.08224044398301,82,0.10873616737764503,2019-04-07

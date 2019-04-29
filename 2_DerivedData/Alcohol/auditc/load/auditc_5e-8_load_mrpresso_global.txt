@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+bpv5NI	g2684C	load	auditc	4	85.58625248751169	<0.001

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+OC328M	Nvw821	vbiany	dep	0	NA	NA

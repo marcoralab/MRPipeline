@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+6GFv2D	AtLyET	load	alccliu	1	328.6930973385985	1e-4

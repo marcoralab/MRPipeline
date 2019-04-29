@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+gfpsn8	oreMva	aaos	alccliu	0	90.69675849751533	0.0792

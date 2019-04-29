@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+GLQpEM	C2bvrP	aaos	audit	0	107.76752367130874	0.0036

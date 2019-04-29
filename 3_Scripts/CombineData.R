@@ -1,17 +1,26 @@
-library(qvalue)
+#!/usr/bin/Rscript
+
 library(tidyverse)
+
+args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
+derived_data = args[1]
+output_data = args[2]
+#outcomes = args[3]
+
+#derived_data = '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clump'
+#output_data = '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/lax_clump'
 
 ## To pull the derived data sets from MR analysis and combine them into single dataframes
 ## Useful for reading into R Shiny 
 
 ## ===============================================## 
 ## Summary statistics for Exposure and outcome snps
-ssfiles  <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', recursive = T, pattern = '_SNPs.txt', 
-           full.names = T)
-summary_stats <- ssfiles[str_count(ssfiles, "/") == 9] %>% 
+## ===============================================## 
+ssfiles  <- list.files(derived_data, recursive = T, pattern = '_SNPs.txt', full.names = T)
+summary_stats <- ssfiles %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', "")) %>%
+      mutate(file = str_replace(file, paste0(derived_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -24,17 +33,16 @@ summary_stats <- ssfiles[str_count(ssfiles, "/") == 9] %>%
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows() %>% 
-  select(-outcome, -Zscore)
-#write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_summary_stats.txt.gz'))
-write_tsv(summary_stats, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_summary_stats.txt.gz'))
+  select( SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, exposure, outcome, pt)
+write_tsv(summary_stats, gzfile(paste0(output_data, '/', '0_Summary/','MR_summary_stats.txt.gz')))
 
 ## ===============================================## 
 ## Proxy SNPs for Exposure associated SNPs in Outcome
-MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped', recursive = T, pattern = '_MatchedProxys.csv', 
-                            full.names = T) %>% 
+## ===============================================## 
+MatchedProxys <- list.files(derived_data, recursive = T, pattern = '_MatchedProxys.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/lax_clumped/', "")) %>%
+      mutate(file = str_replace(file, paste0(derived_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -53,24 +61,28 @@ MatchedProxys <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/
       mutate(outcome = dat.model$outcome) %>% 
       mutate(pt = dat.model$pt)
   }) %>% 
-  bind_rows() %>% select(-P_GC_MA_adj, -Zscore)
+  bind_rows() %>% select(target_snp, proxy_snp, ld.r2, Dprime, PHASE, X12, CHR, POS, Effect_allele.proxy, Non_Effect_allele.proxy, EAF, Beta, SE, P, r2, N, ref, ref.proxy, alt, alt.proxy, Effect_allele, Non_Effect_allele, proxy.outcome, exposure, outcome, pt)
 #write_tsv(MatchedProxys, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_MatchedProxys.txt.gz'))
-write_tsv(MatchedProxys, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_MatchedProxys.txt.gz'))
+write_tsv(MatchedProxys, gzfile(paste0(output_data, '/', '0_Summary/','MR_MatchedProxys.txt.gz')))
 
 ## ===============================================## 
 ## harmonized MR datasets with MR presso Results
-mrpresso_MRdat <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, 
-                             pattern = '_mrpresso_MRdat.csv', 
-                            full.names = T) %>% 
+## ===============================================## 
+mrpresso_MRdat <- list.files(derived_data, recursive = T, pattern = '_mrpresso_MRdat.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      mutate(file = str_replace(file, paste0(derived_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
       separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
       select(-X1, -X2, -X3)
-    datin <- read_csv(x, col_types = list(effect_allele.exposure = col_character(), 
+    datin <- read_csv(x, col_types = list(target_snp.outcome = col_character(), 
+                                          proxy_snp.outcome = col_character(), 
+                                          target_a1.outcome = col_character(), 
+                                          target_a2.outcome = col_character(), 
+                                          proxy_a1.outcome = col_character(), 
+                                          proxy_a2.outcome = col_character(), 
                                           effect_allele.outcome = col_character(),
                                           mrpresso_RSSobs= col_character(), 
                                           mrpresso_pval= col_character())) %>% 
@@ -78,16 +90,17 @@ mrpresso_MRdat <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData
   }) %>% 
   bind_rows()
 #write_tsv(mrpresso_MRdat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_mrpresso_MRdat.txt.gz'))
-write_tsv(mrpresso_MRdat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_mrpresso_MRdat.txt.gz'))
+write_tsv(mrpresso_MRdat, gzfile(paste0(output_data, '/', '0_Summary/','MR_mrpresso_MRdat.txt.gz')))
 
 ## ===============================================## 
 ## MR-PRESSO Global results  
-mrpresso_global <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, 
-                             pattern = '_mrpresso_global.txt', 
-                             full.names = T) %>% 
+## ===============================================## 
+
+## MR-PRESSO Global w/ Outliers Retained
+mrpresso_global <- list.files(derived_data, recursive = T,  pattern = '_mrpresso_global.txt',  full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      mutate(file = str_replace(file, paste0(derived_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -100,16 +113,12 @@ mrpresso_global <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedDat
   mutate(violated = pval < 0.05) %>% 
   mutate(outliers_removed = FALSE)
 
-#write_tsv(mrpresso_global, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt.gz'))
-
-## ===============================================## 
 ## MR-PRESSO Global results w/o outliers
-mrpresso_global_wo_outliers <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData', recursive = T, 
-                              pattern = '_mrpresso_global_wo_outliers.txt', 
+mrpresso_global_wo_outliers <- list.files(derived_data, recursive = T,  pattern = '_mrpresso_global_wo_outliers.txt', 
                               full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', "")) %>%
+      mutate(file = str_replace(file, paste0(derived_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -124,49 +133,41 @@ mrpresso_global_wo_outliers <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/
   mutate(violated = pval < 0.05) %>% 
   mutate(outliers_removed = TRUE)
 
-#write_tsv(mrpresso_global_wo_outliers, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global_wo_outliers.txt.gz'))
-
-## ===============================================## 
-## Combine MR-PRESSO Global results w/o outliers
-
+## Combine MR-PRESSO Global results 
 mrpresso_global_comb <- mrpresso_global_wo_outliers %>% 
   rename(n_outliers = n.outlier) %>% 
   bind_rows(mrpresso_global)
-write_tsv(mrpresso_global_comb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/mrpresso_global_comb.txt.gz'))
+write_tsv(mrpresso_global_comb, gzfile(paste0(output_data, '/', '0_Summary/','mrpresso_global_comb.txt.gz')))
 
 ## ===============================================## 
-## MR results - w/ outliers
-MRdat_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                             pattern = '_MR_Results.csv', 
-                             full.names = T) %>% 
+## MR results
+## ===============================================## 
+
+## MR results w/ outliers
+MRdat_results <- list.files(output_data, recursive = T, pattern = '_MR_Results.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
-      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
-      select(-X1, -X2, -X3)
+      separate(file, c('X1', 'pt', 'X2', 'X3', 'X4'), sep = '_') %>% 
+      select(-X1, -X2, -X3, -X4)
     datin <- read_csv(x) %>% 
       mutate(pt = dat.model$pt)
   }) %>% 
   bind_rows()
 
-#write_tsv(MRdat_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRdat_results.txt')
-
-## ===============================================## 
 ## MR results - w/o outliers
-MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                            pattern = '_MRPRESSO_Results.csv', 
-                            full.names = T) %>% 
+MRPRESSO_results <- list.files(output_data, recursive = T, pattern = '_MRPRESSO_Results.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
-      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
-      select(-X1, -X2, -X3)
+      separate(file, c('X1', 'pt', 'X2', 'X3', 'X4'), sep = '_') %>% 
+      select(-X1, -X2, -X3, -X4)
     datin <- read_csv(x, col_types = list(nsnp = col_character(), b = col_character(), 
                                           se = col_character(), pval = col_character())) %>% 
       mutate(pt = dat.model$pt)
@@ -175,25 +176,21 @@ MRPRESSO_results <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', 
   filter(!is.na(b)) %>% 
   mutate(nsnp = as.numeric(nsnp), b = as.numeric(b), se = as.numeric(se), pval = as.numeric(pval))
 
-#write_tsv(MRPRESSO_results, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MRPRESSO_results.txt')
-
-## ===============================================## 
 ## Combine MR results
-
 MR_results <- MRdat_results  %>% 
   mutate(MR_PRESSO = FALSE) %>% 
   bind_rows(MRPRESSO_results) %>% 
   mutate(MR_PRESSO = ifelse(is.na(MR_PRESSO), TRUE, MR_PRESSO))
-write_tsv(MR_results, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/MR_results.txt.gz'))
+write_tsv(MR_results, gzfile(paste0(output_data, '/', '0_Summary/','MR_results.txt.gz')))
 
 ## ===============================================## 
 ## Heterogenity
-heterogenity <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                            pattern = '_MR_heterogenity.csv', 
-                            full.names = T) %>% 
+## ===============================================## 
+
+heterogenity <- list.files(output_data, recursive = T, pattern = '_MR_heterogenity.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
@@ -214,18 +211,19 @@ het <- left_join(filter(heterogenity, method == 'Egger'),
   select(-method.Egger, -method.IVW)
 
 ## ===============================================## 
-## Egger Pleitropy - w/ outliers
-egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                           pattern = '_MR_egger_plei.csv', 
-                           full.names = T) %>% 
+## MR-Egger Pleitropy - w/ outliers
+## ===============================================## 
+
+## w/ outliers retained
+egger <- list.files(output_data, recursive = T, pattern = '_MR_egger_plei.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
-      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
-      select(-X1, -X2, -X3)
+      separate(file, c('X1', 'pt', 'X2', 'X3', 'X4', 'X5'), sep = '_') %>% 
+      select(-X1, -X2, -X3, -X4, -X5)
     datin <- read_csv(x) %>% 
       mutate(pt = dat.model$pt)
   }) %>% 
@@ -235,19 +233,15 @@ egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive =
   mutate(violated = pval < 0.05)  %>% 
   mutate(outliers_removed = FALSE)
 
-## ===============================================## 
-## Egger Pleitropy - w/o outliers
-mrpresso_egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                    pattern = '_MRPRESSO_egger_plei.csv', 
-                    full.names = T) %>% 
+## w/ outliers removed
+mrpresso_egger <- list.files(output_data, recursive = T, pattern = '_MRPRESSO_egger_plei.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
-      mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
-      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
-      select(-X1, -X2, -X3)
+      separate(file, c('X1', 'pt', 'X2', 'X3', 'X4', 'X5'), sep = '_') %>% 
+      select(-X1, -X2, -X3, -X4, -X5)
     datin <- read_csv(x) %>% 
       mutate(pt = dat.model$pt)
   }) %>% 
@@ -257,26 +251,22 @@ mrpresso_egger <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', re
   mutate(violated = pval < 0.05)  %>% 
   mutate(outliers_removed = TRUE)
 
-## ===============================================## 
-## Combine MR-PRESSO Global results w/o outliers
-
+## Combine MR-Egger Pleitropy results 
 egger_comb <- egger %>% 
   bind_rows(mrpresso_egger)
-write_tsv(egger_comb, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/Results/egger_comb.txt.gz'))
+write_tsv(egger_comb, gzfile(paste0(output_data, '/', '0_Summary/','egger_comb.txt.gz')))
 
 ## ===============================================## 
 ## Mean F statistic
-mf <- list.files('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output', recursive = T, 
-                    pattern = '_mean_F.csv', 
-                    full.names = T) %>% 
+mf <- list.files(output_data, recursive = T, pattern = '_mean_F.csv', full.names = T) %>% 
   map(., function(x){
     dat.model <- tibble(file = x) %>% 
-      mutate(file = str_replace(file, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', "")) %>%
+      mutate(file = str_replace(file, paste0(output_data, '/'), "")) %>%
       separate(file, c('exposure', 'outcome', 'file'), sep = '/', remove = F) %>% 
       mutate(file = ifelse(is.na(file), outcome, file)) %>% 
       mutate(outcome = ifelse(grepl('SNPs', outcome), NA, outcome)) %>% 
-      separate(file, c('X1', 'pt', 'X2', 'X3'), sep = '_') %>% 
-      select(-X1, -X2, -X3)
+      separate(file, c('X1', 'pt', 'X2', 'X3', 'X4'), sep = '_') %>% 
+      select(-X1, -X2, -X3, -X4)
     datin <- read_csv(x) %>% 
       mutate(pt = dat.model$pt)
   }) %>% 
@@ -313,7 +303,7 @@ MRsummary <- MRdat_results  %>%
   arrange(outcome, exposure, pt, method, MR_PRESSO)
   
 #write_tsv(MRsummary, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/MR_Results_summary.txt')
-
+write_tsv(MRsummary, paste0(output_data, '/', '0_Summary/','MR_Results_summary.txt'))
 
 
 

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+tCGRHA,9QP71w,ptau,educ,MR Egger,830.0563738303626,773,0.07582594913682782,2019-04-07
+tCGRHA,9QP71w,ptau,educ,Inverse variance weighted,830.8424311820681,774,0.0766962506083302,2019-04-07

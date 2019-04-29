@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+GlLVNo	3E6inF	aaos	tc	5	137.25435813468278	0.1333

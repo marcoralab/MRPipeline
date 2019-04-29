@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+mb4zUT	RGEuWA	loadKunkle	auditc	1	36.342202554987225	0.002

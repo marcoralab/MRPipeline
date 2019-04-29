@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+rUjdd2	Ey7lQL	load	alcd	0	28.254101059486953	0.266

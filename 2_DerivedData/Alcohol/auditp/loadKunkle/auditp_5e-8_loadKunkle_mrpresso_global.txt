@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+kXrPEr	qGdxtr	loadKunkle	auditp	0	9.221981676427223	0.421

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+j2fe3G	fkxkx9	ptau	audit	0	NA	NA

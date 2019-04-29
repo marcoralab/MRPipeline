@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+C64n8p,NVgR84,ab42,mdd,MR Egger,168.20266624819664,141,0.05876996936470018,2019-04-07
+C64n8p,NVgR84,ab42,mdd,Inverse variance weighted,169.23301899342798,142,0.05916002304158358,2019-04-07

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+Bt5c5A	5kGRLg	nft4	hdl	2	129.77057793155515	0.3419

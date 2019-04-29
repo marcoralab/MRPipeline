@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+rOlNjy,1MyM13,vbiany,sociso,MR Egger,91.53766104309165,91,0.46446381347545984,2019-04-07
+rOlNjy,1MyM13,vbiany,sociso,Inverse variance weighted,92.27294004164925,92,0.47239045382415823,2019-04-07

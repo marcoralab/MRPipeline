@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+qIbM8e	KFCD7M	hipv2015	ldl	1	183.3163902497278	0.0443

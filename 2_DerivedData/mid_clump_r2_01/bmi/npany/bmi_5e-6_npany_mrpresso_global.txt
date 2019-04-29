@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+WYhtEa	gVKF64	npany	bmi	0	1838.9366060539319	0.87775

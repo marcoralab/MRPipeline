@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+crQWeA	r4aA0T	ggt	auditp	1	25.63047230540559	0.401

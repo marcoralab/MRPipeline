@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+9PGpib,pAfoU2,load,audit,MR Egger,60.86972779074714,12,1.5662219861480287e-8,2019-03-04
+9PGpib,pAfoU2,load,audit,Inverse variance weighted,85.30837742570682,13,1.0950024919398094e-12,2019-03-04

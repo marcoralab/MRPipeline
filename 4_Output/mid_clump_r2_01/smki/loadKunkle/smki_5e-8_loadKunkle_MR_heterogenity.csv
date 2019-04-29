@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+kfY4Ot,bPX6R7,loadKunkle,smki,MR Egger,130.73142062542303,102,0.02908367974006195,2019-04-07
+kfY4Ot,bPX6R7,loadKunkle,smki,Inverse variance weighted,132.54661414324403,103,0.02651044218997438,2019-04-07

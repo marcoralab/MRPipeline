@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+bpv5NI,g2684C,load,auditc,MR Egger,14.368192854812015,5,0.013432246838264389,2019-03-04
+bpv5NI,g2684C,load,auditc,Inverse variance weighted,22.694397002211883,6,9.055669693926293e-4,2019-03-04

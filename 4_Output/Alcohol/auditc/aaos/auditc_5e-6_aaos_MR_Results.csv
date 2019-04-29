@@ -1,0 +1,5 @@
+id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
+CyDskT,EQwwcv,aaos,auditc,Inverse variance weighted (fixed effects),53,0.05411757512830182,0.37817771881688583,0.886210487466884,2019-03-04
+CyDskT,EQwwcv,aaos,auditc,Weighted median,53,0.0048780911461401176,0.6210473534639273,0.9937329841770554,2019-03-04
+CyDskT,EQwwcv,aaos,auditc,Weighted mode,53,-0.9441308694773145,1.3932069738917745,0.5009868579940662,2019-03-04
+CyDskT,EQwwcv,aaos,auditc,MR Egger,53,-3.2879116419688947,1.0942541147467244,0.00411469773169469,2019-03-04

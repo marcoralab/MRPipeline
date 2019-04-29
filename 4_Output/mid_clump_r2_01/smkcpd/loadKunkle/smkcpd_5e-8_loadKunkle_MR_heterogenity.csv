@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+gpH4NO,WBC61C,loadKunkle,smkcpd,MR Egger,33.31610711500848,28,0.22429957763165118,2019-04-07
+gpH4NO,WBC61C,loadKunkle,smkcpd,Inverse variance weighted,36.870050197202474,29,0.14957737068156254,2019-04-07

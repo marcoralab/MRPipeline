@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+Yjx9eO	jh48WM	load	insom	1	26.62893065166933	0.037

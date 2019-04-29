@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+BLSzVy	7emDbn	hipv2015	smkaoi	0	5.140237778014659	0.636

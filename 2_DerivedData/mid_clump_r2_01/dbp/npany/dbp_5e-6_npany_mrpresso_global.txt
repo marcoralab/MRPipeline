@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+etg1fL	CxbYPF	npany	dbp	0	1536.4472536210696	0.7909866666666666
