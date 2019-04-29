@@ -3,8 +3,8 @@
 # snakejob -s mr.smk --configfile test.yaml -j 400 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
 DataIn: '1_RawData/GWAS/'
-DataOut: "2_DerivedData/strict_clump/"
-DataOutput: "4_Output/strict_clump/"
+DataOut: "2_DerivedData/test/"
+DataOutput: "4_Output/test/"
 
 REF: '1_RawData/EUR_All_Chr'
 clumpr2: 0.001
@@ -13,15 +13,24 @@ traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
-ExposureCode: ['sleepDashti']
-OutcomeCode: ['load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany']
+EXPOSURES:
+  -
+    NAME: crp
+    FILE: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/crp_GWAS.Processed.gz
+
+
+OUTCOMES:
+  -
+    NAME: load
+    FILE: /Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadKunkle_GWAS.Processed.gz
+
 
 ## Forbidden wildcard combinations
 missing : [
-   {"ExposureCode" : "alcd", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "crp", "OutcomeCode" : "crp", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "crp", "OutcomeCode" : "crp", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "alcd", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},

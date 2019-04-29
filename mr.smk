@@ -2,6 +2,7 @@
 
 import os
 from itertools import product
+import pandas as pd
 RWD = os.getcwd()
 
 shell.prefix('module load plink/1.90 R/3.5.1; ')
@@ -10,8 +11,10 @@ shell.prefix('module load plink/1.90 R/3.5.1; ')
 REF = config['REF']
 r2 = config['clumpr2']
 kb = config['clumpkb']
-ExposureCode = config['ExposureCode']
-OutcomeCode = config['OutcomeCode']
+#ExposureCode = config['ExposureCode']
+EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "NAME")
+#OutcomeCode = config['OutcomeCode']
+OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "NAME")
 Pthreshold = config['Pthreshold']
 DataIn = config['DataIn']
 traits = config['traits']
@@ -37,11 +40,13 @@ filtered_product = filter_combinator(product, forbidden)
 
 rule all:
     input:
-        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=ExposureCode),
-        expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=ExposureCode, OutcomeCode=OutcomeCode, Pthreshold=Pthreshold),
+        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=EXPOSURES.index.tolist()),
+        expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=EXPOSURES.index.tolist(), OutcomeCode=OUTCOMES.index.tolist(), Pthreshold=Pthreshold),
 
 rule clump:
-    input: DataIn + '{ExposureCode}_GWAS.Processed.gz'
+    #input: DataIn + '{ExposureCode}_GWAS.Processed.gz'
+    input:
+        ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE']
     output: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
     params:
         ref = REF,
@@ -49,7 +54,8 @@ rule clump:
         r2 = r2,
         kb = kb
     shell:
-        "plink --bfile {params.ref} --keep-allele-order --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
+        #"plink --bfile {params.ref} --keep-allele-order --clump {input}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
+        "plink --bfile {params.ref} --keep-allele-order --clump {input.ss}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
 
 rule gzip:
     input: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
@@ -59,7 +65,7 @@ rule gzip:
 rule ExposureSnps:
     input:
         script = '3_Scripts/ExposureData.R',
-        summary = DataIn + '{ExposureCode}_GWAS.Processed.gz',
+        summary = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
         ExposureClump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
         out = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
@@ -71,7 +77,7 @@ rule ExposureSnps:
 rule manhattan_plot:
     input:
         script = '3_Scripts/manhattan_plot.R',
-        ingwas = DataIn + '{ExposureCode}_GWAS.Processed.gz',
+        ingwas = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
         inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         PlotTitle = "{ExposureCode}"
@@ -84,7 +90,7 @@ rule OutcomeSnps:
     input:
         script = '3_Scripts/OutcomeData.R',
         ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz"
+        OutcomeSummary = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE']
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt",
@@ -117,7 +123,7 @@ rule FindProxySnps:
 rule ExtractProxySnps:
     input:
         script = '3_Scripts/ExtractProxySNPs.R',
-        OutcomeSummary = DataIn + "{OutcomeCode}_GWAS.Processed.gz",
+        OutcomeSummary = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE'],
         OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
     output:
