@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-e7zMZC	GhbXtx	loadKunkle	crp	14	46.78268919239572	0.2948

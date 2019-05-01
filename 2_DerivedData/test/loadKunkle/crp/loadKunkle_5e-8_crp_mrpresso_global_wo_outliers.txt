@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Mpa3yv	ouiUzl	crp	loadKunkle	7	30.144169251105353	0.01

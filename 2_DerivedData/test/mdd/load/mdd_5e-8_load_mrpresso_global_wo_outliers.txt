@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-PaGykB	qsFYdr	load	mdd	1	56.96729261364628	0.1388

@@ -1,3 +1,3 @@
 id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-2LEBcg,t9IPwn,load,crp,MR Egger,3125.2104088013825,129,0,2019-04-29
-2LEBcg,t9IPwn,load,crp,Inverse variance weighted,3651.072918444986,130,0,2019-04-29
+BfB1gR,5G8a1j,AD,crp,MR Egger,3096.3143415242776,124,0,2019-04-30
+BfB1gR,5G8a1j,AD,crp,Inverse variance weighted,3635.5092721515325,125,0,2019-04-30

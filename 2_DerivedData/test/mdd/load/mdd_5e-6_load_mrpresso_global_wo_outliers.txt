@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-O25Tpo	ysaQC8	load	mdd	0	NA	NA

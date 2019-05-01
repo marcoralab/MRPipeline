@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-2LEBcg	t9IPwn	load	crp	14	5116.111244289247	<1e-04
+BfB1gR	5G8a1j	AD	crp	12	5104.631975611844	<1e-04
