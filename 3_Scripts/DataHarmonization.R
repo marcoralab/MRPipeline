@@ -4,10 +4,8 @@ message("Begining Harmonization \n")
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 exposure.summary = args[1] # Exposure summary statistics
 outcome.summary = args[2] # Outcome Summary statistics
-exposure.code = args[3]
-outcome.code = args[4]
-proxy.snps = args[5]
-out.harmonized = args[6] # SPECIFY THE OUTPUT FILE
+proxy.snps = args[3]
+out.harmonized = args[4] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 message("Loading packages  \n")
@@ -25,33 +23,37 @@ outcome.dat <- read_tsv(outcome.summary)
 message("READING IN PROXY SNPs \n")
 proxy.dat <- read_csv(proxy.snps) %>%
   filter(proxy.outcome == TRUE) %>%
-  select(proxy.outcome, target_snp, proxy_snp, Effect_allele, Non_Effect_allele, Effect_allele.proxy, Non_Effect_allele.proxy) %>%
+  select(proxy.outcome, target_snp, proxy_snp, ALT, REF, ALT.proxy, REF.proxy) %>%
   mutate(SNP = target_snp) %>%
-  rename(target_snp.outcome = target_snp, proxy_snp.outcome = proxy_snp, target_a1.outcome = Effect_allele, target_a2.outcome = Non_Effect_allele, proxy_a1.outcome = Effect_allele.proxy, proxy_a2.outcome = Non_Effect_allele.proxy)
+  rename(target_snp.outcome = target_snp, proxy_snp.outcome = proxy_snp, target_a1.outcome = ALT, target_a2.outcome = REF, proxy_a1.outcome = ALT.proxy, proxy_a2.outcome = REF.proxy)
 
 
 ### ===== Harmonization ===== ###
 message("Harmonizing Exposure and Outcome \n")
 mr_exposure.dat <- format_data(exposure.dat, type = 'exposure',
                             snp_col = 'SNP',
-                            beta_col = "Beta",
+                            beta_col = "BETA",
                             se_col = "SE",
-                            eaf_col = "EAF",
-                            effect_allele_col = "Effect_allele",
-                            other_allele_col = "Non_Effect_allele",
-                            pval_col = "P")
-mr_exposure.dat <- mutate(mr_exposure.dat, exposure = exposure.code)
+                            eaf_col = "AF",
+                            effect_allele_col = "ALT",
+                            other_allele_col = "REF",
+                            pval_col = "P", 
+                            z_col = "Z", 
+                            samplesize_col = "N", 
+                            phenotype_col = 'TRAIT')
 
 # Format LOAD
 mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
                                  snp_col = 'SNP',
-                                 beta_col = "Beta",
+                                 beta_col = "BETA",
                                  se_col = "SE",
-                                 eaf_col = "EAF",
-                                 effect_allele_col = "Effect_allele",
-                                 other_allele_col = "Non_Effect_allele",
-                                 pval_col = "P")
-mr_outcome.dat <- mutate(mr_outcome.dat, outcome = outcome.code)
+                                 eaf_col = "AF",
+                                 effect_allele_col = "ALT",
+                                 other_allele_col = "REF",
+                                 pval_col = "P", 
+                                z_col = "Z", 
+                                samplesize_col = "N", 
+                                phenotype_col = 'TRAIT')
 
 if(empty(proxy.dat) == FALSE){
   mr_outcome.dat <- left_join(mr_outcome.dat, proxy.dat, by = 'SNP')

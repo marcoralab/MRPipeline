@@ -15,50 +15,44 @@ Pthreshold: ['5e-8', '5e-6']
 EXPOSURES:
   -
     NAME: crp
-    FILE: 1_RawData/GWAS/crp_GWAS.Processed.gz
+    FILE: 1_RawData/GWAS/Ligthart2018crp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+
 
 
 OUTCOMES:
   -
     NAME: load
-    FILE: 1_RawData/GWAS/loadKunkle_GWAS.Processed.gz
+    FILE: 1_RawData/GWAS/Kunkle2019_stage1.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
 
 
 ## Forbidden wildcard combinations
 missing : [
    {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "crp", "OutcomeCode" : "crp", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "crp", "OutcomeCode" : "crp", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "alcd", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "sleep", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hipv2015", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "nft4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "hips", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "svs", "OutcomeCode" : "vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "las", "OutcomeCode" : "ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "las", "OutcomeCode" : "tau", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-6"}
  ]

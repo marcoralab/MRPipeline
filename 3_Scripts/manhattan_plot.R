@@ -6,6 +6,10 @@ suppressMessages(library(ggplot2))
 suppressMessages(library(ggman))
 suppressMessages(library(gridExtra))
 
+snp.r2 <- function(eaf, beta){
+  2*eaf*(1 - eaf)*beta^2
+}
+
 ## Read in arguments
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 infile_gwas = args[1]
@@ -16,21 +20,8 @@ PlotTitle = args[4]
 message(paste(PlotTitle, '\n'))
 
 ## Read in GWAS and Plink Clumped File
-trait.gwas <- suppressMessages(
-    read_tsv(infile_gwas, col_types = list(SNP = col_character(), 
-                                           CHR = col_character(),
-                                           POS = col_integer(),
-                                           Effect_allele = col_character(), 
-                                           Non_Effect_allele = col_character(), 
-                                           EAF = col_double(),
-                                           Beta = col_double(),
-                                           SE = col_double(),
-                                           P = col_double(),
-                                           N = col_double(),
-                                           r2 = col_double()
-                                           )
-             )
-  )
+trait.gwas <- read_tsv(infile_gwas, comment = '##', guess_max = 15000000) %>% 
+  mutate(r2 = snp.r2(AF, BETA))
 
 trait.clump <- suppressMessages(read_table2(infile_clump)) %>% 
   filter(!is.na(CHR)) %>% 
@@ -59,7 +50,7 @@ IndexSnps1 <- filter(trait.clump, P <= 5e-8)$SNP
 IndexSnps2 <- filter(trait.clump, P <= 5e-6 & P > 5e-8)$SNP
 
 ## Plot GWAS
-p.TRAIT <- ggman(filter(trait.gwas, P < 0.05), snp = 'SNP', chrom = 'CHR', bp = 'POS', pvalue = 'P', ymin = 0, ymax = max.p, 
+p.TRAIT <- ggman(filter(trait.gwas, P < 0.05), snp = 'SNP', chrom = 'CHROM', bp = 'POS', pvalue = 'P', ymin = 0, ymax = max.p, 
                  title = PlotTitle, sigLine = -log10(5e-8), relative.positions = TRUE) + 
   theme_classic() + theme(text = element_text(size=10)) + 
   geom_hline(yintercept = -log10(5e-5), colour = 'blue', size = 0.25) + 

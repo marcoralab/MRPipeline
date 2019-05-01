@@ -40,27 +40,75 @@ rule all:
         expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=EXPOSURES.index.tolist()),
         expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=EXPOSURES.index.tolist(), OutcomeCode=OUTCOMES.index.tolist(), Pthreshold=Pthreshold),
 
+rule FormatExposure:
+    input:
+        script = '3_Scripts/FormatGwas.R',
+        ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
+    output:
+        formated_ss = temp(DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz")
+    params:
+        snp_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['SNP'],
+        chrom_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['CHROM'],
+        pos_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['POS'],
+        ref_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['REF'],
+        alt_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['ALT'],
+        af_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['AF'],
+        beta_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['BETA'],
+        se_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['SE'],
+        p_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['P'],
+        z_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['Z'],
+        n_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['N'],
+        trait_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['TRAIT']
+    shell:
+        'Rscript {input.script} {input.ss} {output.formated_ss} {params.snp_col} {params.chrom_col} \
+        {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
+        {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
+
+rule FormatOutcome:
+    input:
+        script = '3_Scripts/FormatGwas.R',
+        ss = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE'],
+    output:
+        formated_ss = temp(DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz")
+    params:
+        snp_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['SNP'],
+        chrom_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['CHROM'],
+        pos_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['POS'],
+        ref_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['REF'],
+        alt_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['ALT'],
+        af_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['AF'],
+        beta_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['BETA'],
+        se_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['SE'],
+        p_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['P'],
+        z_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['Z'],
+        n_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['N'],
+        trait_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['TRAIT']
+    shell:
+        'Rscript {input.script} {input.ss} {output.formated_ss} {params.snp_col} {params.chrom_col} \
+        {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
+        {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
+
 rule clump:
     input:
-        ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE']
-    output: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
+        ss = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz"
+    output:
+        exp_clumped = temp(DataOut + '{ExposureCode}/{ExposureCode}.clumped'),
+        exp_clumped_zipped = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         ref = REF,
         out =  DataOut + '{ExposureCode}/{ExposureCode}',
         r2 = r2,
         kb = kb
     shell:
-        "plink --bfile {params.ref} --keep-allele-order --clump {input.ss}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out}"
-
-rule gzip:
-    input: DataOut + '{ExposureCode}/{ExposureCode}.clumped'
-    output: DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
-    shell: "gzip {input}"
+        """
+        plink --bfile {params.ref} --keep-allele-order --allow-no-sex --clump {input.ss}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out};
+        gzip -k {output.exp_clumped}
+        """
 
 rule ExposureSnps:
     input:
         script = '3_Scripts/ExposureData.R',
-        summary = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
+        summary = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
         ExposureClump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
         out = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
@@ -72,7 +120,7 @@ rule ExposureSnps:
 rule manhattan_plot:
     input:
         script = '3_Scripts/manhattan_plot.R',
-        ingwas = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
+        ingwas = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
         inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         PlotTitle = "{ExposureCode}"
@@ -85,7 +133,7 @@ rule OutcomeSnps:
     input:
         script = '3_Scripts/OutcomeData.R',
         ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE']
+        OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz"
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt",
@@ -118,7 +166,7 @@ rule FindProxySnps:
 rule ExtractProxySnps:
     input:
         script = '3_Scripts/ExtractProxySNPs.R',
-        OutcomeSummary = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE'],
+        OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz",
         OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
     output:
@@ -137,11 +185,8 @@ rule Harmonize:
         ProxySNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
     output:
         Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
-    params:
-        ExposureCode = '{ExposureCode}',
-        OutcomeCode = '{OutcomeCode}'
     shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.ExposureCode} {params.OutcomeCode} {input.ProxySNPs} {output.Harmonized}'
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {output.Harmonized}'
 
 rule MrPresso:
     input:

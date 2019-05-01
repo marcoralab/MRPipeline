@@ -16,7 +16,7 @@ message("READING IN EXPOSURE \n")
 exposure.dat <- read_tsv(exposure.summary)
 
 message("\n READING IN OUTCOME \n")
-outcome.dat.raw <- read_tsv(outcome.summary)
+outcome.dat.raw <- read_tsv(outcome.summary, comment = '##', guess_max = 15000000) 
 
 ### ===== EXTACT SNPS ===== ###
 message("\n EXTRACTING SNP EFFECTS FROM OUTCOME GWAS  \n")
@@ -27,7 +27,7 @@ outcome.dat <- outcome.dat.raw %>%
 ### ===== MISSING SNPS SNPS ===== ###
 
 outcome.dat %>%
-  filter(is.na(CHR)) %>%
+  filter(is.na(CHROM)) %>%
   select(SNP) %>%
   write_tsv(paste0(out, '_MissingSNPs.txt'), col_names = F)
 
