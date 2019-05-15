@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-tFOvAE	zovume	aaos	oilfish	1	62.00642809326899	0.481

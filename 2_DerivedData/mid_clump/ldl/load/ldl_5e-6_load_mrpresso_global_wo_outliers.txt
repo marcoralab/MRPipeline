@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-TMT5CC	fPC7bv	load	ldl	24	466.87335733244373	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ZHESCG	SSYR3x	load	hear	0	30.836799729509615	0.5784

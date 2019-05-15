@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-v4UBYd	FsE1kY	nft4	tc	3	712.1231029030278	<4e-05

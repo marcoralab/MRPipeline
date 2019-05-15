@@ -1,4 +1,0 @@
-SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs11940694,G,A,G,A,0.0065461,0.0039,0.594841,0.594841,FALSE,FALSE,FALSE,oL1iZ7,0.0023,0.07313,ggt,TRUE,reported,0.001074,1.09774129027371e-9,auditp,TRUE,reported,VDPZhT,2,TRUE,NA
-rs13135092,G,A,G,A,-0.014992,-0.0119,0.0725131,0.065445,FALSE,FALSE,FALSE,oL1iZ7,0.0061,0.03411,ggt,TRUE,reported,0.0019117,4.45656248397502e-15,auditp,TRUE,reported,VDPZhT,2,TRUE,NA
-rs3811802,G,A,G,A,0.0069857,0.0138,0.45656,0.4565600000000001,FALSE,FALSE,FALSE,oL1iZ7,0.0131,0.2907,ggt,TRUE,reported,0.0010625,4.89778819368446e-11,auditp,TRUE,reported,VDPZhT,2,TRUE,NA

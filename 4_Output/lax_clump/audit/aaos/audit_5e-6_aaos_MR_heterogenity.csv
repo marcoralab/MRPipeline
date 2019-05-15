@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-hogVPF,b2lG8t,aaos,audit,MR Egger,91.22268655674324,67,0.026245448500182206,2019-03-11
-hogVPF,b2lG8t,aaos,audit,Inverse variance weighted,103.97048116127688,68,0.00327215070821059,2019-03-11

@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-Muhvsw,ivYolx,loadKunkle,audit,Inverse variance weighted (fixed effects),17,0.13791002028507612,0.34476809858048696,0.6891505759545891,2019-03-11
-Muhvsw,ivYolx,loadKunkle,audit,Weighted median,17,-0.483895647764141,0.46884941626416365,0.30202910506617375,2019-03-11
-Muhvsw,ivYolx,loadKunkle,audit,Weighted mode,17,-0.7368166595183077,0.4836185581289109,0.14714108102366708,2019-03-11
-Muhvsw,ivYolx,loadKunkle,audit,MR Egger,17,-0.8751348861665819,0.8138228121494083,0.2992164668343772,2019-03-11

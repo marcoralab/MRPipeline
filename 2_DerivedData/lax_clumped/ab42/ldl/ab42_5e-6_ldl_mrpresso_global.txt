@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SYLTIL	SP1aZh	ldl	ab42	13	873.5315560618907	<0.001

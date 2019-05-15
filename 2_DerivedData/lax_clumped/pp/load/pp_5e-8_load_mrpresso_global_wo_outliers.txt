@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-E685zE	4SISCW	load	pp	7	1357.993799062459	4e-5

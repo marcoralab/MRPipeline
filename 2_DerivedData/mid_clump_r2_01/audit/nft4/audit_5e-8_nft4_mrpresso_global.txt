@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-NE2dag	nuYDRS	nft4	audit	0	6.872599589006631	0.705

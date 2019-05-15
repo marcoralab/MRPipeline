@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wNYOVp	FTPm07	aaos	insom	0	120.984603754877	0.4777

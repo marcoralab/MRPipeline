@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-bgqYLQ	eRDymi	npany	tc	3	379.19776274956655	0.22396

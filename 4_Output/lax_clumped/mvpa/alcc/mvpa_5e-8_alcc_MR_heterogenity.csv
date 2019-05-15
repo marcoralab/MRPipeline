@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-fcrzRe,bcrX55,alcc,mvpa,MR Egger,56.46776421260445,38,0.027286012223736243,2018-12-08
-fcrzRe,bcrX55,alcc,mvpa,Inverse variance weighted,56.79285388763461,39,0.03262220315482656,2018-12-08

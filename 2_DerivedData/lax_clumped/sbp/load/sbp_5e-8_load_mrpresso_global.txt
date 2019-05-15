@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MkQH1f	QVlXG0	load	sbp	3	2017.124965847155	<1.33333333333333e-05

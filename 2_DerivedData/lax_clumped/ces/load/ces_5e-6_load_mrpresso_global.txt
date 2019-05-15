@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MM8OkN	4XCHpc	load	ces	0	46.59247597281475	0.1734

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-irtuD7	67tv5R	aaos	ldl	7	154.84157644915265	<1e-04

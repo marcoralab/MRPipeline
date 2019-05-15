@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-phzOPm,uh4chd,alcc,sbp,MR Egger,3740.2243782026594,2879,1.3706380808017705e-25,2018-12-09
-phzOPm,uh4chd,alcc,sbp,Inverse variance weighted,3741.8146786229736,2880,1.300214898209095e-25,2018-12-09

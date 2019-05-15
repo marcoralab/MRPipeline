@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-m35wKY	fUv12v	npany	oilfish	1	177.79811781306262	0.3115

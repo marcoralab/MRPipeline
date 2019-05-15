@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Bp9zHC,R4oHB1,load,hdl,MR Egger,284.4798869125066,188,6.912331847196872e-6,2019-04-07
-Bp9zHC,R4oHB1,load,hdl,Inverse variance weighted,286.7370297495773,189,5.742742352958635e-6,2019-04-07

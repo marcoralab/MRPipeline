@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Wj6Pzm	qxVxf2	aaos	tc	11	553.8625226416766	<4e-05

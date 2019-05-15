@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OnakMP	1nObRj	load	alcc	0	16.3713976294968	0.21

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-RIKvIJ,MTpB2a,hipv2015,tc,MR Egger,198.86479997362662,172,0.07857046766251405,2019-04-07
-RIKvIJ,MTpB2a,hipv2015,tc,Inverse variance weighted,198.86934833304753,173,0.0865470253359822,2019-04-07

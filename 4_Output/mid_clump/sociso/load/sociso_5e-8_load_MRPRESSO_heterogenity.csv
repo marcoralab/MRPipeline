@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MZC94t,BWLeVL,load,sociso,MR Egger,16.324646242018012,14,0.29395314459817945,2019-04-11
-MZC94t,BWLeVL,load,sociso,Inverse variance weighted,16.695351504619836,15,0.3374000784151315,2019-04-11

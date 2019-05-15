@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mmkOna	85YhOC	npany	mdd	0	179.68040700866226	0.5541

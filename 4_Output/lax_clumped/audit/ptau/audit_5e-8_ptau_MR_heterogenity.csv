@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-36jRo5,OiaDX5,ptau,audit,MR Egger,6.452133176443389,6,0.3744902006054644,2019-01-30
-36jRo5,OiaDX5,ptau,audit,Inverse variance weighted,7.405556604408706,7,0.3879082454573906,2019-01-30

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-KD1HMO,KCMwV0,hips,ais,MR Egger,21.69366872330209,11,0.026856770734284427,2019-01-30
-KD1HMO,KCMwV0,hips,ais,Inverse variance weighted,24.402805092658838,12,0.01792057863674323,2019-01-30

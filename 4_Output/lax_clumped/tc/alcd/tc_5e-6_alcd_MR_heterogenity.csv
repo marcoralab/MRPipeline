@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VUua4q,FCNEY7,alcd,tc,MR Egger,400.1664392741305,394,0.40429100011610597,2018-12-07
-VUua4q,FCNEY7,alcd,tc,Inverse variance weighted,401.29742185178975,395,0.4026232325028018,2018-12-07

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CyM0IQ,ilxamo,ptau,smkcpd,MR Egger,83.83570717448677,99,0.8621827196892933,2019-04-11
-CyM0IQ,ilxamo,ptau,smkcpd,Inverse variance weighted,83.83780284404945,100,0.8776111372716477,2019-04-11

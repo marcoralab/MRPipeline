@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-CyM0IQ	ilxamo	ptau	smkcpd	0	86.63445226504756	0.9021

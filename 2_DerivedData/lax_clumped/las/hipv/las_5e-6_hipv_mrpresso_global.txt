@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KWW3wX	PLYmfe	hipv	las	0	31.384771628686806	0.8592

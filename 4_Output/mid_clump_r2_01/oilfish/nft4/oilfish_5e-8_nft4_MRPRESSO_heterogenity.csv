@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-mqKGTX,LaRLb4,nft4,oilfish,MR Egger,33.80790362837405,44,0.8667826900999398,2019-04-07
-mqKGTX,LaRLb4,nft4,oilfish,Inverse variance weighted,34.001209380383216,45,0.8845853624132547,2019-04-07

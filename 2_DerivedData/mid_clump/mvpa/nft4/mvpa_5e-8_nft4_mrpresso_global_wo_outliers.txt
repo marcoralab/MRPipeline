@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-2LwH1s	UWA70o	nft4	mvpa	2	33.69734332725429	0.19

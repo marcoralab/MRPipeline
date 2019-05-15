@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-rxPT88,EUWz3d,ab42,hear,MR Egger,120.25161952800198,80,0.0024304804468628254,2019-04-07
-rxPT88,EUWz3d,ab42,hear,Inverse variance weighted,121.31208757659162,81,0.00250506976840613,2019-04-07

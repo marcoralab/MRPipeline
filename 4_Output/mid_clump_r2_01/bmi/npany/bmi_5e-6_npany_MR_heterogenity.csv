@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WYhtEa,gVKF64,npany,bmi,MR Egger,1791.1417070303116,1874,0.9135553957283384,2019-04-07
-WYhtEa,gVKF64,npany,bmi,Inverse variance weighted,1792.660646776386,1875,0.9121112601342951,2019-04-07

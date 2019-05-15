@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-44ov49	KwbGUw	load	ces	0	5.054286231425791	0.434

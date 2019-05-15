@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WLBAR7,wLxDsw,load,ais,MR Egger,58.17065172789281,50,0.19982662392443146,2019-01-30
-WLBAR7,wLxDsw,load,ais,Inverse variance weighted,58.86555456241381,51,0.20975014064741562,2019-01-30

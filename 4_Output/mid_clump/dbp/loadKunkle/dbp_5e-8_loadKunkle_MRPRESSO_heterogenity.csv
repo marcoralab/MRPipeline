@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-S2xSP7,tRYZok,loadKunkle,dbp,MR Egger,1778.6447895195038,1405,3.5595494206621453e-11,2019-04-11
-S2xSP7,tRYZok,loadKunkle,dbp,Inverse variance weighted,1779.740911607405,1406,3.5697715729066765e-11,2019-04-11

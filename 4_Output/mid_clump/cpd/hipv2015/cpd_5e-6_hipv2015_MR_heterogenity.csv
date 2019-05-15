@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-PaNllu,cEizec,hipv2015,cpd,MR Egger,41.81789129526206,40,0.39181451226231656,2019-04-09
-PaNllu,cEizec,hipv2015,cpd,Inverse variance weighted,43.08002392431718,41,0.3823450790380073,2019-04-09

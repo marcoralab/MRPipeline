@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QcbgnA,Bvqnap,ptau,pp,MR Egger,1963.096005909718,1949,0.40675342095559297,2019-04-01
-QcbgnA,Bvqnap,ptau,pp,Inverse variance weighted,1977.183140407392,1950,0.32854463739588946,2019-04-01

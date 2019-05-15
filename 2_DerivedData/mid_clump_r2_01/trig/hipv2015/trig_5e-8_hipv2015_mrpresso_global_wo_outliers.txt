@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-zeoKGB	3GWmyX	hipv2015	trig	0	NA	NA

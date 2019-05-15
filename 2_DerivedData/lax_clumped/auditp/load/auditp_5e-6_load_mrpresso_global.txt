@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SjDwa3	vTygxJ	load	auditp	0	44.7467173801663	0.1284

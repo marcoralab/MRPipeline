@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-z86plc	73vxHS	loadKunkle	dbp	2	2231.609021603299	<1.33333333333333e-05

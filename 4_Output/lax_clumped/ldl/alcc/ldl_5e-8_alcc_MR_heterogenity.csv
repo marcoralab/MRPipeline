@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FJphHv,TyLnyR,alcc,ldl,MR Egger,350.31368581870913,199,1.9423217286671118e-10,2018-12-07
-FJphHv,TyLnyR,alcc,ldl,Inverse variance weighted,351.02997500247875,200,2.2160782080243587e-10,2018-12-07

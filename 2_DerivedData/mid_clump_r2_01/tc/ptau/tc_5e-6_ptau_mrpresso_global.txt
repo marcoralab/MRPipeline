@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-o0Q1rH	3EPM7L	ptau	tc	1	331.39233245358037	<1e-04

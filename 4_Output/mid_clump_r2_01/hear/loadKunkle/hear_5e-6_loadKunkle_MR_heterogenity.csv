@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Wyl992,gESTJ8,loadKunkle,hear,MR Egger,128.25457892922302,115,0.1877913777252977,2019-04-07
-Wyl992,gESTJ8,loadKunkle,hear,Inverse variance weighted,128.53427622733898,116,0.20089734865530884,2019-04-07

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-joihX7	EIA2KQ	load	hdl	10	4007.5163128649324	<4e-05

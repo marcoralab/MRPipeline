@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-N39UEg	A2csV8	pbc	alccliu	3	86.79472044022985	6e-4

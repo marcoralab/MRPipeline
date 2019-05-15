@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-tFOvAE,zovume,aaos,oilfish,Inverse variance weighted (fixed effects),57,0.47140377421583624,0.14210605899575346,9.090262234820904e-4,2019-04-09
-tFOvAE,zovume,aaos,oilfish,Weighted median,57,0.2709460193085225,0.21079908786431065,0.19867760792766076,2019-04-09
-tFOvAE,zovume,aaos,oilfish,Weighted mode,57,0.4409593167199022,0.3884939220590154,0.2611900732463982,2019-04-09
-tFOvAE,zovume,aaos,oilfish,MR Egger,57,0.3743024986916151,1.99393199248883,0.8517863772879948,2019-04-09

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-q7Msqm	CAnsDK	load	alccliu	1	253.1598849057902	0.0034

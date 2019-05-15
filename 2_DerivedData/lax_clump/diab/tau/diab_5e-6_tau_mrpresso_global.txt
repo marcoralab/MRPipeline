@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-WVCTH7	lfgUKM	tau	diab	0	425.9845159455798	0.28708

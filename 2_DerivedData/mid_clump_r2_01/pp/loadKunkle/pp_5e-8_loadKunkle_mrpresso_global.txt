@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-kglzUb	WWtmjO	loadKunkle	pp	3	1202.210415356432	<4e-05

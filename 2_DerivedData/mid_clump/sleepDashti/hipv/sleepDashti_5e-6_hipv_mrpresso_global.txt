@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-2rtMTJ	DybadA	hipv	sleepDashti	0	379.43191459280257	0.01788

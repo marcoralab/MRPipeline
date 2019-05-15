@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-k9xnZX	JNbIVR	hipv2015	mdd	0	34.05874947750437	0.8992

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WmeTFN,yfWTSg,alcd,diab,MR Egger,222.62637687497445,187,0.03830801163662509,2018-12-07
-WmeTFN,yfWTSg,alcd,diab,Inverse variance weighted,222.9267102877115,188,0.041435145235426074,2018-12-07

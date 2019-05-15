@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-3kCquU	qZf35i	load	sleepDashti	1	367.6472639817795	0.04508

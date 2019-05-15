@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-mrASNt	CPiEGu	hipv2015	smki	1	120.50229875377651	0.1501

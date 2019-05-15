@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pozhBU	l7AhUH	load	ldl	23	4487.363980721625	<4e-05

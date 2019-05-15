@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gpFpsV	7H4xKq	alcd	dep	0	20.39709539453857	0.9658

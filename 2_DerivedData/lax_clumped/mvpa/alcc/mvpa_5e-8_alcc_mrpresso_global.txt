@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-fcrzRe	bcrX55	alcc	mvpa	1	58.875016140956276	0.042

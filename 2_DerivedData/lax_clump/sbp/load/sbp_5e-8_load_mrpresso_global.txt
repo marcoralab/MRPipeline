@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jKe87h	1840FD	load	sbp	3	2068.31953264774	<1.33333333333333e-05

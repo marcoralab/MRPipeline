@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ek7b7M	mvi5js	aaos	sbp	0	1808.2727766380403	<1.33333333333333e-05

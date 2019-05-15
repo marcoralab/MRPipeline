@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-o8cXP9,i5ORYZ,vbiany,diab,MR Egger,329.79125385241673,381,0.9726321302023917,2019-04-09
-o8cXP9,i5ORYZ,vbiany,diab,Inverse variance weighted,329.9779909632303,382,0.9744490393827702,2019-04-09

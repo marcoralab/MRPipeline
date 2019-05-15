@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-R4D4ZN	upAPUI	hips	ldl	0	344.1526668851371	0.20476

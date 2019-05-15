@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-TlsPvh	dwLed4	hips	sleep	0	NA	NA

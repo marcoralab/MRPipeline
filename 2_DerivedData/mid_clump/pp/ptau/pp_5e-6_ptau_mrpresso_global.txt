@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9dgwVH	3bsFde	ptau	pp	1	1936.9800570709456	0.00326

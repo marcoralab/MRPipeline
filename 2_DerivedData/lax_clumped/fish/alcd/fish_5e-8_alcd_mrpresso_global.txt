@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-TEto7S	5lWxTP	alcd	fish	0	116.27860764406314	0.8637

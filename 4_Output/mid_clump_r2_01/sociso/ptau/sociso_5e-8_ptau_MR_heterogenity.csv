@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EM7o76,RaMC5v,ptau,sociso,MR Egger,17.64210503980262,11,0.09026522998161532,2019-04-07
-EM7o76,RaMC5v,ptau,sociso,Inverse variance weighted,19.48877997256438,12,0.07739582028924652,2019-04-07

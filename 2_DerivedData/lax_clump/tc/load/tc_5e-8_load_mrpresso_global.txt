@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bEVgdI	hYnMvE	load	tc	20	4441.2646758990895	<1e-04

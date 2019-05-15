@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Dp2GNN,BwEROu,ab42,dbp,MR Egger,2320.4623919402197,2118,0.0012350217979635585,2019-04-11
-Dp2GNN,BwEROu,ab42,dbp,Inverse variance weighted,2321.0363513942207,2119,0.0012632258599344953,2019-04-11

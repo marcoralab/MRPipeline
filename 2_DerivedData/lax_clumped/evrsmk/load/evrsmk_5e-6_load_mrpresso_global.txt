@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Ll2Mtv	ZsdV7m	load	evrsmk	0	308.9674064499458	0.1136

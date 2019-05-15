@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ZE1GO2	Hh0a2D	ab42	bmi	2	2969.4017910672437	0.00157

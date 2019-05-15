@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EaJPcl	765Fyp	hips	smkc	0	42.569834814557076	0.9438

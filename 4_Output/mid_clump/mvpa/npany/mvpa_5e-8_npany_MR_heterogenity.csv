@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-pDn2R7,N2FoaH,npany,mvpa,MR Egger,126.0266362974922,25,1.890729056728851e-15,2019-04-11
-pDn2R7,N2FoaH,npany,mvpa,Inverse variance weighted,131.6147235896968,26,4.4146372419078914e-16,2019-04-11

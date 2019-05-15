@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-gNBvEn,Euf4fx,load,sleepdoherty,MR Egger,17.688624091176333,9,0.038962801720343804,2019-02-12
-gNBvEn,Euf4fx,load,sleepdoherty,Inverse variance weighted,17.966771839039403,10,0.05552674677484598,2019-02-12

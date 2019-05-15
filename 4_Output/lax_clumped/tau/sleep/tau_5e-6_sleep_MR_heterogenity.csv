@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-rRrGyf,cbiuxJ,sleep,tau,MR Egger,16.62676552669884,9,0.05489186004784442,2018-10-12
-rRrGyf,cbiuxJ,sleep,tau,Inverse variance weighted,17.2003358902158,10,0.07004693818884493,2018-10-12

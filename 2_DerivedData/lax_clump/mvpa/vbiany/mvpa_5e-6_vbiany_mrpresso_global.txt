@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FRUBvW	hRJ475	vbiany	mvpa	0	103.89231227602747	0.999

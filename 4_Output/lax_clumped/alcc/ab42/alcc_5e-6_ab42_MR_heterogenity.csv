@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-OWs2Wd,CDFNTz,ab42,alcc,MR Egger,30.8975129518504,35,0.6665240713017176,2019-01-29
-OWs2Wd,CDFNTz,ab42,alcc,Inverse variance weighted,31.25582376194571,36,0.6936358975841759,2019-01-29

@@ -1,6 +1,0 @@
-SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome,mrpresso_RSSobs,mrpresso_pval,mrpresso_keep
-rs12932445,T,C,T,C,-0.1758,0.0022988,0.8195,0.824931,FALSE,FALSE,FALSE,FCxsuL,0.0016115,0.153719866987099,audit,TRUE,reported,0.0245,6.88e-13,ces,TRUE,reported,36X5IR,2,TRUE,NA,NA,NA,TRUE
-rs146390073,T,C,T,C,0.6688,-0.0028516,0.0215,0.0153988,FALSE,FALSE,FALSE,FCxsuL,0.0048517,0.556685616163387,audit,TRUE,reported,0.1195,2.199e-8,ces,TRUE,reported,36X5IR,2,TRUE,NA,NA,NA,TRUE
-rs1982360,T,C,T,C,0.1273,-0.0028893,0.301,0.33492500000000003,FALSE,FALSE,FALSE,FCxsuL,0.0013044,0.0267608559319933,audit,TRUE,reported,0.0207,7.788e-10,ces,TRUE,reported,36X5IR,2,TRUE,NA,NA,NA,TRUE
-rs2466455,T,C,T,C,-0.2992,0.0045886,0.7826,0.760564,FALSE,FALSE,FALSE,FCxsuL,0.0015123,0.00241157070748198,audit,TRUE,reported,0.0222,2.752e-41,ces,TRUE,reported,36X5IR,2,TRUE,NA,NA,NA,TRUE
-rs7680240,A,C,A,C,0.1163,0.0012611,0.5912,0.5830299999999999,FALSE,FALSE,FALSE,FCxsuL,0.0012221,0.302099495492381,audit,TRUE,reported,0.0204,1.172e-8,ces,TRUE,reported,36X5IR,2,TRUE,NA,NA,NA,TRUE

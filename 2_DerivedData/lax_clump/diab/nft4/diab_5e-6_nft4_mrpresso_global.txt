@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Yj19f2	Wx8LTD	nft4	diab	0	431.9476032820363	0.57212

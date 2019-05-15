@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KznXNn	GD2ULL	vbiany	sleepdoherty	0	12.21059449918022	0.71

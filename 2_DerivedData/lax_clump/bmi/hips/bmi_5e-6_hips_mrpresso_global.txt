@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-cvJ5Ja	XPK3ab	hips	bmi	0	3177.813880058252	0.94146

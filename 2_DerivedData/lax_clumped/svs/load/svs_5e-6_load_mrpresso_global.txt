@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MRYfPN	mWTkHk	load	svs	0	27.621189302418077	0.6902

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Ep0DfT,sUVGuC,dbp,ab42,MR Egger,23.96034760374926,14,0.046330014681840635,2018-10-12
-Ep0DfT,sUVGuC,dbp,ab42,Inverse variance weighted,27.725909380275066,15,0.02334909368674215,2018-10-12

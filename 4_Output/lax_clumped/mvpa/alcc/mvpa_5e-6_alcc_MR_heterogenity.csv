@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Hs9MsD,EV2Lex,alcc,mvpa,MR Egger,195.1120308419316,161,0.03455008761928017,2018-12-08
-Hs9MsD,EV2Lex,alcc,mvpa,Inverse variance weighted,195.1776146737392,162,0.03861382960081538,2018-12-08

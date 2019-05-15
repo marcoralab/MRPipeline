@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WisejO,4488Xu,ab42,mdd,MR Egger,182.0092906634105,156,0.07563680428096155,2019-04-09
-WisejO,4488Xu,ab42,mdd,Inverse variance weighted,182.2833531171783,157,0.08167995138791977,2019-04-09

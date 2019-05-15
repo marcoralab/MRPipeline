@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CPAf3Y,SMXjpA,ptau,oilfish,MR Egger,178.6490205946145,179,0.4933429065154699,2019-04-11
-CPAf3Y,SMXjpA,ptau,oilfish,Inverse variance weighted,180.75037687953898,180,0.47025570435481884,2019-04-11

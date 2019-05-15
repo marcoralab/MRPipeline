@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DgDuGp	RPXUko	ptau	pp	1	1055.6138026619067	8.2e-4

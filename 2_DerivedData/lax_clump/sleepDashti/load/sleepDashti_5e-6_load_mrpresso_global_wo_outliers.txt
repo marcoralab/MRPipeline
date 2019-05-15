@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-5yQnzG	ifmpxL	load	sleepDashti	2	476.99491161408156	6.4e-4

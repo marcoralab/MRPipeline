@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-GedzRa,c0Va7D,load,audit,MR Egger,69.14039177867289,54,0.08042200366685814,2019-01-29
-GedzRa,c0Va7D,load,audit,Inverse variance weighted,71.39943892293468,55,0.06773915262187814,2019-01-29

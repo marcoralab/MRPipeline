@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LQWjZk	SoMtSA	nft4	sleepDashti	0	302.45890131098673	0.88364

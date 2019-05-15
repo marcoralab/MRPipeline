@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ULPS9p	MGjoMo	load	sociso	0	NA	NA

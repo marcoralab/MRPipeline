@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Es1eRj	cTd80g	load	sleepdoherty	0	122.16440587543339	0.0019

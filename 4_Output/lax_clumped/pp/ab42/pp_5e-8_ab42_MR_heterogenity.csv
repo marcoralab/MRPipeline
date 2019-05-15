@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-pnP2ar,QnoD25,ab42,pp,MR Egger,1461.4212894291577,935,7.55254100712262e-26,2019-02-01
-pnP2ar,QnoD25,ab42,pp,Inverse variance weighted,1462.891773495434,936,7.242732371515013e-26,2019-02-01

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-RUT0Yw	kwnKPE	tau	tc	2	353.98941887274765	0.03096

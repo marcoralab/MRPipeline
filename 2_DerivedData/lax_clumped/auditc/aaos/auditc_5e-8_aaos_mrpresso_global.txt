@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wAnoDM	P5XBiz	aaos	auditc	0	18.000690485412502	0.104

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-MG3ecm	DF1YVC	aaos	educ	2	3175.220085882382	0.01017

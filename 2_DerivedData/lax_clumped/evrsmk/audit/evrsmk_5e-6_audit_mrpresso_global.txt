@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-JpiEML	CYZFT9	audit	evrsmk	0	9.060134877763238	0.448

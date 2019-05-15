@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PV2i6f	P5DPUK	dep	load	0	49.43450373097725	0.1842

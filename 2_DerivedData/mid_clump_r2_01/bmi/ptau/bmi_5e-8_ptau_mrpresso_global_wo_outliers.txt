@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-T8UdZE	HVvl94	ptau	bmi	1	980.0369145283889	0.7124

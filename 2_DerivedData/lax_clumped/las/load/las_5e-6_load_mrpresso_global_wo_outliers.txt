@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-pZhsTX	Q6zyGW	load	las	1	44.03677793571397	0.0998

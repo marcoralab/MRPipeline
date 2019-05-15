@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-tiLabA,RVFXPA,evrsmk,tau,MR Egger,8.429108820832115,7,0.2962792024317726,2018-11-27
-tiLabA,RVFXPA,evrsmk,tau,Inverse variance weighted,8.610776428104112,8,0.3761859203682635,2018-11-27

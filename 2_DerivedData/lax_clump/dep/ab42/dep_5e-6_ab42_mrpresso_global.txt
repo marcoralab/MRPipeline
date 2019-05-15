@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YvAGOa	dr54Hl	ab42	dep	0	206.68794332429908	0.0093

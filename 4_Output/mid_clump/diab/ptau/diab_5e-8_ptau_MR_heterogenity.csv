@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BxP3PJ,pdiLk2,ptau,diab,MR Egger,176.422864454756,165,0.2574074115136355,2019-04-09
-BxP3PJ,pdiLk2,ptau,diab,Inverse variance weighted,176.7963717866806,166,0.2687647912398974,2019-04-09

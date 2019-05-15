@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7keLkl	BKCu7s	tau	sleepdoherty	0	64.41973135039467	0.5718

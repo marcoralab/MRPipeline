@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-jc5cB2,friXUE,tau,ldl,MR Egger,200.72269883810034,152,0.004954664302565596,2019-04-09
-jc5cB2,friXUE,tau,ldl,Inverse variance weighted,201.44031268750192,153,0.005256421763542252,2019-04-09

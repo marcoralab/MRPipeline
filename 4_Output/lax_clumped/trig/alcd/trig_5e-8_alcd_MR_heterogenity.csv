@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CX25iE,IvXaR9,alcd,trig,MR Egger,151.30210497300004,166,0.7866624254682534,2018-12-08
-CX25iE,IvXaR9,alcd,trig,Inverse variance weighted,152.85610335013195,167,0.7764213528444093,2018-12-08

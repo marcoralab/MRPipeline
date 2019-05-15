@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-cDnrc1	1OwJxt	load	pp	7	2705.682546435781	<1e-05

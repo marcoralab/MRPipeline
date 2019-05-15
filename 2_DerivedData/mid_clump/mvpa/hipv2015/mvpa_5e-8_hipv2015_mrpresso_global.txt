@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yirJ7o	cB7lV2	hipv2015	mvpa	1	58.42294049889425	<0.001

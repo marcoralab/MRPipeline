@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-fOzoRr	kjNnFm	hips	hear	0	144.53169067892	0.4086

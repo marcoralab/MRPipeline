@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rLPSVa	IOTqa2	nft4	hear	0	124.21945431242159	0.9103

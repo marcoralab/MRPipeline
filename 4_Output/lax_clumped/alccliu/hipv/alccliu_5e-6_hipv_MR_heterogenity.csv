@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-jw9MMC,JAPIkS,hipv,alccliu,MR Egger,259.5851431614974,228,0.07398660964405358,2019-01-29
-jw9MMC,JAPIkS,hipv,alccliu,Inverse variance weighted,260.7716241383791,229,0.07327626575342006,2019-01-29

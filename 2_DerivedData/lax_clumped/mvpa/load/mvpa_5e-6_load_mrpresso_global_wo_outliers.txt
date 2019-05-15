@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-KZw4Kd	ziHD78	load	mvpa	1	144.93509249475096	0.2462

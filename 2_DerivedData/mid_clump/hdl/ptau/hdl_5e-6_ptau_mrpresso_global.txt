@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-XGqsQe	p50TLI	ptau	hdl	3	463.2917660616041	<4e-05

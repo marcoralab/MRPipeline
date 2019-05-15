@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-hogVPF	b2lG8t	aaos	audit	1	107.76752367130874	0.0044

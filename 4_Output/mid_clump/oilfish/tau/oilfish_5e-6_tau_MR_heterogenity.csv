@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Cffm09,Geofst,tau,oilfish,MR Egger,160.53189531156008,172,0.7245671886807993,2019-04-11
-Cffm09,Geofst,tau,oilfish,Inverse variance weighted,160.80806145183777,173,0.7374294052466576,2019-04-11

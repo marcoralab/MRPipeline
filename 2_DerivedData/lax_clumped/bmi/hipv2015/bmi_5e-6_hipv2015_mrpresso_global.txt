@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tJJyiK	wdkFCa	hipv2015	bmi	0	3573.997587424418	1.3e-4

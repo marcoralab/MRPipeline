@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UnBRIM,Wl4tum,tau,smkc,MR Egger,33.301961158802285,42,0.8288573271859616,2019-03-11
-UnBRIM,Wl4tum,tau,smkc,Inverse variance weighted,33.9813875484074,43,0.8357026783564236,2019-03-11

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FjOmkk,BLDGLS,ab42,insom,MR Egger,103.87178255801071,87,0.10484534707189946,2019-01-30
-FjOmkk,BLDGLS,ab42,insom,Inverse variance weighted,103.8731569315527,88,0.11883246285678997,2019-01-30

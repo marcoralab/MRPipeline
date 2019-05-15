@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lVzhs2,Tm64tI,aaos,tc,MR Egger,1704.800866828305,400,3.347249802151961e-160,2019-03-26
-lVzhs2,Tm64tI,aaos,tc,Inverse variance weighted,1735.3515186431457,401,5.529566514181055e-165,2019-03-26

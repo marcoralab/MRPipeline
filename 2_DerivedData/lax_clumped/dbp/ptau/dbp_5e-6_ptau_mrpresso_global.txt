@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wi1Lpz	WP777b	ptau	dbp	0	2632.6311984467966	0.39162

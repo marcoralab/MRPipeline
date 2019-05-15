@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-K638tc,Fr35IE,ab42,mvpa,MR Egger,141.21820295776317,109,0.02057145901365825,2019-01-30
-K638tc,Fr35IE,ab42,mvpa,Inverse variance weighted,145.89850193237106,110,0.012486078002303886,2019-01-30

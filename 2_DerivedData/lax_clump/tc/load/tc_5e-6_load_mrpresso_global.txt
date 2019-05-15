@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-F1QBIl	9OE5Qe	load	tc	18	4660.076301746827	<4e-05

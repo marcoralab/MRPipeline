@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jk8Vkh	WYPBYM	pbc	alcc	3	78.07587036362774	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-JK15Vh	sEjYPP	vbiany	alcc	0	44.3674233754881	0.821

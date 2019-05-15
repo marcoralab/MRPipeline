@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NuRsjn,GnaUXX,ab42,ldl,MR Egger,536.7485191224815,153,4.214723348879957e-44,2019-04-09
-NuRsjn,GnaUXX,ab42,ldl,Inverse variance weighted,592.9734115368798,154,9.170309404159768e-53,2019-04-09

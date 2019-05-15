@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Tw93By	ODSniK	loadKunkle	sbp	5	2506.776291606054	<1.33333333333333e-05

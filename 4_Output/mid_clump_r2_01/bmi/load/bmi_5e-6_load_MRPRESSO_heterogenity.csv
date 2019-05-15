@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MOxJYO,evHgC5,load,bmi,MR Egger,2123.6966915786243,1885,9.007132349488855e-5,2019-04-08
-MOxJYO,evHgC5,load,bmi,Inverse variance weighted,2123.829797353822,1886,9.521349873402405e-5,2019-04-08

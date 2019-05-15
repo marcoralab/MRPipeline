@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Pdm4CT	W7AFXU	hipv	educ	2	1356.3558010374647	0.0018

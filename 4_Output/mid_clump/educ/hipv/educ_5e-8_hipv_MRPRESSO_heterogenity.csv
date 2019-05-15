@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Pdm4CT,W7AFXU,hipv,educ,MR Egger,1290.30361488218,1149,0.0021956563786491357,2019-04-11
-Pdm4CT,W7AFXU,hipv,educ,Inverse variance weighted,1291.1701630126713,1150,0.0022214879403628235,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-7DiAwZ	CJ1sL7	load	smki	0	NA	NA

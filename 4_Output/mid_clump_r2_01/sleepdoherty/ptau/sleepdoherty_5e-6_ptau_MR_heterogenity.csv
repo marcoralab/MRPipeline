@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-7U02CZ,8GYaVQ,ptau,sleepdoherty,MR Egger,59.66279048879197,54,0.27739200981888723,2019-04-07
-7U02CZ,8GYaVQ,ptau,sleepdoherty,Inverse variance weighted,59.91995668016551,55,0.3018947486023659,2019-04-07

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jyJDTO	vc65gv	hips	tc	0	404.68829473275116	0.50992

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-83AcPs,BMO4D0,ab42,trig,MR Egger,194.78117115325568,142,0.0021891169364101795,2019-03-27
-83AcPs,BMO4D0,ab42,trig,Inverse variance weighted,198.59124859854464,143,0.0014607168152992562,2019-03-27

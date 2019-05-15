@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gUpd4k	GjgGd9	load	alccliu	2	292.5316429078581	0.0048

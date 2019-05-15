@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ymeWk3,SbAYTm,loadKunkle,educ,MR Egger,3192.813699988537,2848,5.285435324704229e-6,2019-04-12
-ymeWk3,SbAYTm,loadKunkle,educ,Inverse variance weighted,3193.1080906250236,2849,5.518992058361452e-6,2019-04-12

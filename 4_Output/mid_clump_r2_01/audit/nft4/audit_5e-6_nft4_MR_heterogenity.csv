@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-1uj85d,ql6vtf,nft4,audit,MR Egger,47.791086359625155,54,0.7112979420024598,2019-04-07
-1uj85d,ql6vtf,nft4,audit,Inverse variance weighted,48.33802107406262,55,0.7252595804904901,2019-04-07

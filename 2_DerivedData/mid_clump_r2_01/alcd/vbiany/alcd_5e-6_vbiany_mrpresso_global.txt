@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bVf114	ENI38t	vbiany	alcd	0	9.61853969760214	0.962

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DAPUZj	nw8b90	mvpa	aaos	0	15.397019698628037	0.841

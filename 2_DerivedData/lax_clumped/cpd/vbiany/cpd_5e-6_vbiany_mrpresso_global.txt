@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DuM9m0	MRRp21	vbiany	cpd	0	60.4118882266834	0.207

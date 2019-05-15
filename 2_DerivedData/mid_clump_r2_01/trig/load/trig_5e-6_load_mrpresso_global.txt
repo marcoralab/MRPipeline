@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-fWf4BW	d4PG6Z	load	trig	5	665.994994409193	<1e-04

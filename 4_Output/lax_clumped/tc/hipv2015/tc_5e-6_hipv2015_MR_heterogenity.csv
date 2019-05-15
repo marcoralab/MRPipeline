@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-YrPfa1,selG2A,hipv2015,tc,MR Egger,383.15272409495725,363,0.22387801210699343,2019-01-29
-YrPfa1,selG2A,hipv2015,tc,Inverse variance weighted,383.40494767160607,364,0.23226683406339066,2019-01-29

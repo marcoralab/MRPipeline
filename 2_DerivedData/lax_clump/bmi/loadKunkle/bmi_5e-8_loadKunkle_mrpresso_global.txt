@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7qO0pK	TGDtOY	loadKunkle	bmi	8	4759.495901650184	<1.33333333333333e-05

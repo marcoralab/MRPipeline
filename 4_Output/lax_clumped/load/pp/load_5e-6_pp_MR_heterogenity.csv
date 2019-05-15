@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VTobkp,SOiCSA,pp,load,MR Egger,330.57399996189383,76,1.8279427124253932e-33,2018-10-12
-VTobkp,SOiCSA,pp,load,Inverse variance weighted,347.4210098772366,77,5.364369852567354e-36,2018-10-12

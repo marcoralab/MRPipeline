@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-KPF1x0	iv4ZRn	hipv2015	smkukbb	1	772.1854282026571	0.04808

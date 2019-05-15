@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MIpPAT	smOjY3	tau	tc	2	520.7375030772098	<4e-05

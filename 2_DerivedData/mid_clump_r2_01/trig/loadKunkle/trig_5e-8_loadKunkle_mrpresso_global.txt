@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-dcyIgX	6n6J4y	loadKunkle	trig	4	859.298154692011	<1e-04

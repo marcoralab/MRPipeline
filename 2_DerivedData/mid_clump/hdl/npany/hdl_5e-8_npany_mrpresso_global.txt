@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QwFu95	K3AUGw	npany	hdl	3	345.690715677472	<1e-04

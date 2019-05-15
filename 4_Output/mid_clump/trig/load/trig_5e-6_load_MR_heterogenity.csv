@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-K6eohd,Hp9F1m,load,trig,MR Egger,3063.590729284919,230,0,2019-04-09
-K6eohd,Hp9F1m,load,trig,Inverse variance weighted,3063.9189047963905,231,0,2019-04-09

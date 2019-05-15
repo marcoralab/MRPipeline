@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oC4kQN	qiOVxf	npany	sbp	0	2714.078195787285	0.93607

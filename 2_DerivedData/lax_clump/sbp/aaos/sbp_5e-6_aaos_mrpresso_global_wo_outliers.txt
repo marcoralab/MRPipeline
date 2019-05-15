@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-A4i6ED	QodkrI	aaos	sbp	1	3379.7022296663845	<1e-05

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tAqs0v	Zx7chs	alcc	smkukbb	5	425.149871628862	<1e-04

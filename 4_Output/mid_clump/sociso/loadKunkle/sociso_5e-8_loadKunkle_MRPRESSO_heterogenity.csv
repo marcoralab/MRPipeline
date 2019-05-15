@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-3yw9qC,AoiAeK,loadKunkle,sociso,MR Egger,13.49329377045644,15,0.5642526369388001,2019-04-11
-3yw9qC,AoiAeK,loadKunkle,sociso,Inverse variance weighted,15.076441557189119,16,0.5190470961140423,2019-04-11

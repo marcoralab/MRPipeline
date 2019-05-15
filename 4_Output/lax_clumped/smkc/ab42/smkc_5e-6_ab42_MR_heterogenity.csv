@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-aTW57R,DTTv0o,ab42,smkc,MR Egger,21.430881086747874,42,0.9964988613871865,2019-01-29
-aTW57R,DTTv0o,ab42,smkc,Inverse variance weighted,23.582447488185135,43,0.9929976976964221,2019-01-29

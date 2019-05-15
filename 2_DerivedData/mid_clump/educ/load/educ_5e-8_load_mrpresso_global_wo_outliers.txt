@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-siKrvW	VM5p6k	load	educ	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BumJPB	9bRaig	loadKunkle	hdl	10	3792.1666972883595	<1e-04

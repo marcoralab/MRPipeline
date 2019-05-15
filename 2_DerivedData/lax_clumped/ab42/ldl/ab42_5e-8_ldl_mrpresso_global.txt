@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OjViCb	fA8P3P	ldl	ab42	3	306.1382821753044	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wQem3c	uUJFdb	load	sbp	2	1760.457179876008	<1.33333333333333e-05

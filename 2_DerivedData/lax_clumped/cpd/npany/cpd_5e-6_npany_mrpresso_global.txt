@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OEI1Br	fJMAx8	npany	cpd	0	33.288525873595155	0.9668

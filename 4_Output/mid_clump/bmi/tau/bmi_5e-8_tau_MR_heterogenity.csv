@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BHRB1s,sKZm3d,tau,bmi,MR Egger,1424.5934856948468,1313,0.01651238761713138,2019-04-11
-BHRB1s,sKZm3d,tau,bmi,Inverse variance weighted,1426.4355887739398,1314,0.015913746565957045,2019-04-11

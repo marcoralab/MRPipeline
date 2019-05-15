@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-92gHzT	Qpryjy	vbiany	ldl	0	NA	NA

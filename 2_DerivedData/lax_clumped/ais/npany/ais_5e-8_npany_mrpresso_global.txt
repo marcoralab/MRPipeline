@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-urnq8w	CFnfum	npany	ais	0	6.510860346700903	0.943

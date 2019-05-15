@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KCfBSh	LqzX64	tc	ab42	13	644.11471597953755	<0.001

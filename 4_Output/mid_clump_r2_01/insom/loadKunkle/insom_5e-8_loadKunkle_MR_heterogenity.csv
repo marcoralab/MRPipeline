@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MWpTV4,RghI4G,loadKunkle,insom,MR Egger,14.804070922822692,12,0.2523265768725347,2019-04-07
-MWpTV4,RghI4G,loadKunkle,insom,Inverse variance weighted,16.006654565620927,13,0.24877069485679235,2019-04-07

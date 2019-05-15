@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-hVcx49,s6cThq,loadKunkle,bmi,MR Egger,3766.8500112094093,3291,9.975442350630543e-9,2019-04-02
-hVcx49,s6cThq,loadKunkle,bmi,Inverse variance weighted,3767.7270477034094,3292,1.0101041479762696e-8,2019-04-02

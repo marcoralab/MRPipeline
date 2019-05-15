@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-q7Msqm	CAnsDK	load	alccliu	1	274.49578452738757	3e-4

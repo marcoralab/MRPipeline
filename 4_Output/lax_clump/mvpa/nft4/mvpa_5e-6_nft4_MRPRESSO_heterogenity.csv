@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Gw3FF3,HkiGHA,nft4,mvpa,MR Egger,156.52759955787957,148,0.2997833201420042,2019-03-27
-Gw3FF3,HkiGHA,nft4,mvpa,Inverse variance weighted,157.83993268322718,149,0.29434433427391,2019-03-27

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ahAUNs,Zd9mHU,audit,ais,MR Egger,71.22328848822995,55,0.0696094710093566,2018-12-08
-ahAUNs,Zd9mHU,audit,ais,Inverse variance weighted,77.03262952030248,56,0.03264470634023278,2018-12-08

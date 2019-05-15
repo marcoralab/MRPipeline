@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oYqpYG	LLmyNO	audit	cpd	0	84.71991327848846	0.053

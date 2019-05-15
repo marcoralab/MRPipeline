@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-rBl1Ql	BW77JA	ab42	sbp	0	NA	NA

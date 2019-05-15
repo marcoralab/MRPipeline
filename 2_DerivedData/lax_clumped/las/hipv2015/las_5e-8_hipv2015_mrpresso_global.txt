@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MesxAK	90EKuu	hipv2015	las	0	12.775771291130104	0.082

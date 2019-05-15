@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ZR87z1	NDBOPi	nft4	tc	3	460.3017558413752	2.4e-4

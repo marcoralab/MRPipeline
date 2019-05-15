@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UCR2Qv,JLAh4N,trig,aaos,MR Egger,213.97408027319744,12,4.2089627207640076e-39,2018-10-12
-UCR2Qv,JLAh4N,trig,aaos,Inverse variance weighted,217.19886768744863,13,3.9450121657947885e-39,2018-10-12

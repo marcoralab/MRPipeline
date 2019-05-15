@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-6hSs3f,v2p17D,alcd,hear,MR Egger,24.35712632051666,34,0.8887258082061453,2018-12-08
-6hSs3f,v2p17D,alcd,hear,Inverse variance weighted,24.81075884571597,35,0.8996266335104117,2018-12-08

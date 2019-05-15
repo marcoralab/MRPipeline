@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-c0shGb,koHoq1,vbiany,svs,MR Egger,21.171894579555435,29,0.8528106277732012,2019-01-30
-c0shGb,koHoq1,vbiany,svs,Inverse variance weighted,24.23138634207061,30,0.7614562926323818,2019-01-30

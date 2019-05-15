@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ALJAlS	XUzqYv	tau	trig	2	155.50698194268986	0.0252

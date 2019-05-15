@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zJIIzf	wRoED8	alcd	bmi	0	3608.664855190436	0.00105

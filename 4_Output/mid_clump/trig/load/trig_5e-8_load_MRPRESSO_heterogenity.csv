@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ItgxGm,a4ezDO,load,trig,MR Egger,141.95077933029918,117,0.0581387163842995,2019-04-09
-ItgxGm,a4ezDO,load,trig,Inverse variance weighted,143.6136480591346,118,0.05450694147987107,2019-04-09

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9B47mN	VZsdgF	nft4	ces	0	33.91518983770403	0.7334

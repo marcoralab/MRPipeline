@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-yKL2yj	lMGAVf	ab42	hear	1	150.65379183302147	0.0148

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-RIKvIJ	MTpB2a	hipv2015	tc	0	213.63184759146804	0.0464

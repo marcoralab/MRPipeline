@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-0qwpSE	aY516w	nft4	tc	1	398.8237137740131	<1e-04

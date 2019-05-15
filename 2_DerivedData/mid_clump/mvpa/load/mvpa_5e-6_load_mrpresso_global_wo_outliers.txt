@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-AblcpE	fNPuAC	load	mvpa	2	122.3803333782374	0.2306

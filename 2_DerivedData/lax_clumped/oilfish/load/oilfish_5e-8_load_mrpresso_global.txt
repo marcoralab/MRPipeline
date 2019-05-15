@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FCqUKp	lpD20l	load	oilfish	1	2717.779821902088	<2e-04

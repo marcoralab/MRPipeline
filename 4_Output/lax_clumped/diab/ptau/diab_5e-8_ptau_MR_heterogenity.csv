@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-IXPDUU,LXtYiz,ptau,diab,MR Egger,198.39019019958974,185,0.2374694728016576,2019-01-29
-IXPDUU,LXtYiz,ptau,diab,Inverse variance weighted,199.7158613006209,186,0.23308151336273247,2019-01-29

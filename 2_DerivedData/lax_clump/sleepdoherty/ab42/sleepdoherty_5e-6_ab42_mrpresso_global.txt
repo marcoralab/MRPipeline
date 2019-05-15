@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-X0noqo	BFRHDr	ab42	sleepdoherty	0	68.78223878486098	0.583

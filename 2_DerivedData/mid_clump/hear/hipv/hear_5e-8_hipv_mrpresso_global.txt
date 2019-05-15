@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-JONPc4	YH84Vo	hipv	hear	0	26.779370000965574	0.7992

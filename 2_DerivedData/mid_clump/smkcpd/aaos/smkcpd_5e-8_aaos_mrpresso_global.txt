@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-sLZu8B	EpUtQc	aaos	smkcpd	0	94.95857090255399	0.0132

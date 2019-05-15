@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-qDEBD5	S9jyvn	load	oilfish	1	209.81441571316162	0.0162

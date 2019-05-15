@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Bweoxt,ni24B1,load,bmi,MR Egger,3848.357118605415,3264,3.7144865155914275e-12,2019-04-02
-Bweoxt,ni24B1,load,bmi,Inverse variance weighted,3848.398494464645,3265,4.027322617891256e-12,2019-04-02

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-5qRgFj	WCzptl	hipv	diab	0	477.6667458917204	0.0022

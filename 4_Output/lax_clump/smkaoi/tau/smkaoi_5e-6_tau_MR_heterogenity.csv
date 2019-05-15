@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sHpSIF,3IfhIG,tau,smkaoi,MR Egger,43.18590796527069,45,0.549053172998557,2019-03-11
-sHpSIF,3IfhIG,tau,smkaoi,Inverse variance weighted,43.19968807551602,46,0.5902402583730675,2019-03-11

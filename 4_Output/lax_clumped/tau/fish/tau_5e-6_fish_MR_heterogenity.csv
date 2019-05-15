@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VGCBLk,oTTcJp,fish,tau,MR Egger,12.87335574482127,9,0.1684210147492199,2018-10-12
-VGCBLk,oTTcJp,fish,tau,Inverse variance weighted,14.349323479078128,10,0.15764581066493558,2018-10-12

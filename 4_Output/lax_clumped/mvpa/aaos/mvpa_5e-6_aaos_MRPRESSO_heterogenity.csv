@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Q1RpC8,NDCuNN,aaos,mvpa,MR Egger,165.83970233072236,151,0.19337482027608643,2019-01-30
-Q1RpC8,NDCuNN,aaos,mvpa,Inverse variance weighted,168.93246478183508,152,0.16473956933005404,2019-01-30

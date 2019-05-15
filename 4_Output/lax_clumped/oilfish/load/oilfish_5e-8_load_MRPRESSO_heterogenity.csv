@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FCqUKp,lpD20l,load,oilfish,MR Egger,52.146783159741204,69,0.9349270928801752,2018-11-27
-FCqUKp,lpD20l,load,oilfish,Inverse variance weighted,54.37113248421637,70,0.9157251819158266,2018-11-27

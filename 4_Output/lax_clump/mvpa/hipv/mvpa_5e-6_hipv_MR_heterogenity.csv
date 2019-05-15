@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QofMI7,wO5cv5,hipv,mvpa,MR Egger,273.0153566584391,140,1.2812271766725853e-10,2019-03-25
-QofMI7,wO5cv5,hipv,mvpa,Inverse variance weighted,276.17248522378856,141,8.187621446487437e-11,2019-03-25

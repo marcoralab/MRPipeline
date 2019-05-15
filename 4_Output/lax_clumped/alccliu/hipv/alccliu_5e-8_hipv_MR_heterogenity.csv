@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-4SOHQs,RaO0Cm,hipv,alccliu,MR Egger,71.60570038174149,66,0.2972192799875269,2019-01-30
-4SOHQs,RaO0Cm,hipv,alccliu,Inverse variance weighted,71.60589729347427,67,0.327643210334874,2019-01-30

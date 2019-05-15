@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JaXGtp,REsNeL,aaos,sociso,MR Egger,144.19680085888933,130,0.18638593700320794,2019-01-30
-JaXGtp,REsNeL,aaos,sociso,Inverse variance weighted,146.54888979691088,131,0.1670598983152909,2019-01-30

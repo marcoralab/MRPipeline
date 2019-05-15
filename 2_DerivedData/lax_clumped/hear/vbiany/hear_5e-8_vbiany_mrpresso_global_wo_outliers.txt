@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-6Ps40x	QMMQAl	vbiany	hear	0	NA	NA

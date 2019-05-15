@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-JaXGtp	REsNeL	aaos	sociso	0	150.325576445679	0.1953

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tQq6rb	G8MkfT	npany	hear	0	89.23318746794943	0.9586

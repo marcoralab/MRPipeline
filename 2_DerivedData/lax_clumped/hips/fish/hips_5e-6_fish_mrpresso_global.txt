@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OpOHdt	mKtxT2	fish	hips	2	119.47551274536418	<0.001

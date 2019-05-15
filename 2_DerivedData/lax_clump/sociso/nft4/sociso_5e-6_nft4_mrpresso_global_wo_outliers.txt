@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-bLT914	1vx5Rb	nft4	sociso	0	NA	NA

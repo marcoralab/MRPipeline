@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Rqfh89	WYLGis	hipv	insom	0	146.35865700779243	0.0317

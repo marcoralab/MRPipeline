@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VL1GSp,GbQuHv,vbiany,ces,MR Egger,37.71215888273444,35,0.34625905686645325,2019-01-30
-VL1GSp,GbQuHv,vbiany,ces,Inverse variance weighted,40.124277688617155,36,0.2923307475269132,2019-01-30

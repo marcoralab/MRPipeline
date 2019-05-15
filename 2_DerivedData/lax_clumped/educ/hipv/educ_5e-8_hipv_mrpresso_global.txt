@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yydIwj	HE2rQu	hipv	educ	3	1453.6849829258422	<2e-05

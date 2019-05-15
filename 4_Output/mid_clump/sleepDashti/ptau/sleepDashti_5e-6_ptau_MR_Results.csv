@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-So2QxR,rsbMaf,ptau,sleepDashti,Inverse variance weighted (fixed effects),276,0.004338720269919281,0.02715577919320279,0.8730610551988429,2019-04-11
-So2QxR,rsbMaf,ptau,sleepDashti,Weighted median,276,0.026499445107045723,0.04075949659249184,0.5156007477330605,2019-04-11
-So2QxR,rsbMaf,ptau,sleepDashti,Weighted mode,276,0.043807577945298215,0.1154022442766618,0.7045296374729859,2019-04-11
-So2QxR,rsbMaf,ptau,sleepDashti,MR Egger,276,-0.13517851875743273,0.1130264875296764,0.23273451827774558,2019-04-11

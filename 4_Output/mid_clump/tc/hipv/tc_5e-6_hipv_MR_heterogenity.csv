@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-4trMUp,pEZM16,hipv,tc,MR Egger,389.9372856037224,324,0.006973562215369343,2019-04-09
-4trMUp,pEZM16,hipv,tc,Inverse variance weighted,391.0760711535936,325,0.006945137730455985,2019-04-09

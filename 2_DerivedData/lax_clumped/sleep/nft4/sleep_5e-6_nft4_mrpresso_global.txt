@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ioKzWW	fPuzOs	nft4	sleep	0	31.267599480470153	0.201

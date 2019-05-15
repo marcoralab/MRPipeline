@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NaS1MS,T3QJIl,ab42,mvpa,MR Egger,30.8224516068388,27,0.2784912052661296,2019-03-11
-NaS1MS,T3QJIl,ab42,mvpa,Inverse variance weighted,36.342283783176384,28,0.13408731683577055,2019-03-11

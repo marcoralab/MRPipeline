@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-CGeKHG	Pc9Q1Z	ptau	ces	0	23.991733562570612	0.792

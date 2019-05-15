@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-nceyY8	MufM7l	loadKunkle	educ	0	1448.3685257704155	1.7333333333333334e-4

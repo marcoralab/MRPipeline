@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oz0N7v,Ps51W7,hips,pp,MR Egger,2230.6761994578465,2291,0.813064180848471,2019-03-27
-oz0N7v,Ps51W7,hips,pp,Inverse variance weighted,2232.1873113381507,2292,0.8109393642797303,2019-03-27

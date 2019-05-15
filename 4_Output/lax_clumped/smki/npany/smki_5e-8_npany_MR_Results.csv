@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-EodFhf,mzPfca,npany,smki,Inverse variance weighted (fixed effects),133,-0.560542363976093,0.6376710523950598,0.3793761852400639,2019-01-29
-EodFhf,mzPfca,npany,smki,Weighted median,133,-0.02306929869598917,0.9330713045218268,0.9802750742872137,2019-01-29
-EodFhf,mzPfca,npany,smki,Weighted mode,133,1.1696577157323311,2.5953361171673537,0.6529619244889815,2019-01-29
-EodFhf,mzPfca,npany,smki,MR Egger,133,4.176365983201613,3.1754398050038,0.19073724430678046,2019-01-29

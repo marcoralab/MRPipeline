@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-VvmlCP	axOGhl	npany	sbp	0	2347.28802230361	0.99423

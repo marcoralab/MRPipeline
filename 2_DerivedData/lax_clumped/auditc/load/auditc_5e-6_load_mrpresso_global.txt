@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-GXjoNa	iTsQOS	load	auditc	2	99.30198359916787	<2e-04

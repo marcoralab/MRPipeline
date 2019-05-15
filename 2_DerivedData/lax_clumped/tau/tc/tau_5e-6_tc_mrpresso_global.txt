@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YHv6rn	20RZNj	tc	tau	8	656.4718710332809	<0.001

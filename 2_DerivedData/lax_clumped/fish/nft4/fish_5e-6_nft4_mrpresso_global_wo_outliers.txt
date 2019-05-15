@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Rq0RlD	74fKFh	nft4	fish	1	317.8292601823611	0.90284

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pIF9mE	123j2s	alcd	educ	0	3287.188748576002	3e-5

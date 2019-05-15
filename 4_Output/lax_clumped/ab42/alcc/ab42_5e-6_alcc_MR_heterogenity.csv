@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FhkP0o,YpsS04,alcc,ab42,MR Egger,25.176548573372607,13,0.02188082916110427,2018-10-12
-FhkP0o,YpsS04,alcc,ab42,Inverse variance weighted,25.39854892603279,14,0.030830726248964577,2018-10-12

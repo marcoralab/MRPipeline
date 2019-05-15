@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-UOGapI	ZAw8VC	ab42	trig	3	156.949655908228	0.0174

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-5HixsR,GUCHSU,load,dep,MR Egger,130.1646825406671,114,0.1428919285139407,2019-04-07
-5HixsR,GUCHSU,load,dep,Inverse variance weighted,130.88140548701404,115,0.14777551315425044,2019-04-07

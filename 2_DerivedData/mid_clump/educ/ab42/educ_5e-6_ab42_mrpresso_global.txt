@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QIeTN7	4iUmZT	ab42	educ	1	2564.895825483676	0.00202

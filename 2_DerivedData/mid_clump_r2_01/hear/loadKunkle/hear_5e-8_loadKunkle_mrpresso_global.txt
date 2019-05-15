@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EtuE5B	y0BXzZ	loadKunkle	hear	0	28.992743799530224	0.557

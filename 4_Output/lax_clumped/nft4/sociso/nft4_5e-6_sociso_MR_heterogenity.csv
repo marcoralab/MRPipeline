@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NzCPB3,O5tz9m,sociso,nft4,MR Egger,13.667366915191774,11,0.2519488260698777,2018-10-12
-NzCPB3,O5tz9m,sociso,nft4,Inverse variance weighted,14.584562479792169,12,0.26494510537039423,2018-10-12

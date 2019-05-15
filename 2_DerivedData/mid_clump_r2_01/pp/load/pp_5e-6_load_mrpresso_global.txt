@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Dlm1fk	QmxEyf	load	pp	3	4189.2903482302945	<2e-05

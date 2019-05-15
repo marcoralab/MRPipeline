@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bcgMnt	D52WsX	load	smkcpd	0	74.08609763967175	0.1908

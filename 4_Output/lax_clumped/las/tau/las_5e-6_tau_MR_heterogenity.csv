@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Jvt4xT,icYRim,tau,las,MR Egger,12.90635280743953,18,0.7971060581460758,2019-01-30
-Jvt4xT,icYRim,tau,las,Inverse variance weighted,12.912864981649475,19,0.8430016630475509,2019-01-30

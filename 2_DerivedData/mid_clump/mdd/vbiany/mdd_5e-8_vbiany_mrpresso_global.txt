@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aywvD7	dsDOtt	vbiany	mdd	0	44.56948315396204	0.572

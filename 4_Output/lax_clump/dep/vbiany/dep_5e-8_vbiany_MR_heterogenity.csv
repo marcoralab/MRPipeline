@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-odAyf8,LENX81,vbiany,dep,MR Egger,27.406896113618778,31,0.6515896993725941,2019-03-11
-odAyf8,LENX81,vbiany,dep,Inverse variance weighted,29.174014429497586,32,0.6103136934227156,2019-03-11

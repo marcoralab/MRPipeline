@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-83AcPs	BMO4D0	ab42	trig	3	638.7792250430141	<1e-04

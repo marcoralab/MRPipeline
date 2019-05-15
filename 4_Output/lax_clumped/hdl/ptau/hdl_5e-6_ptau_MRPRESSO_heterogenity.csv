@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-RWCOFC,ZZgrve,ptau,hdl,MR Egger,328.8171141640428,332,0.539042085303431,2019-01-29
-RWCOFC,ZZgrve,ptau,hdl,Inverse variance weighted,328.84802953349345,333,0.5539690738055258,2019-01-29

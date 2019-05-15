@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-T2pOYR	ezC4Td	ptau	audit	0	5.62910386714461	0.533

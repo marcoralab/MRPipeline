@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bALAqX	RtffJS	ggt	auditp	1	68.55730346132219	<0.001

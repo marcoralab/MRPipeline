@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-K4ANPB,HejmWn,hipv2015,diab,MR Egger,157.1409843129359,134,0.0838398747632048,2019-04-07
-K4ANPB,HejmWn,hipv2015,diab,Inverse variance weighted,157.30947334995923,135,0.09184976658086699,2019-04-07

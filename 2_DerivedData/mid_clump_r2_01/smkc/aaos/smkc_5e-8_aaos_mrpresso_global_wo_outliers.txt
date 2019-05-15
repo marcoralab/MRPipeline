@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uNEe7N	1gfElw	aaos	smkc	1	12.636248838206962	0.285

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Td12Vz,v5VubD,ab42,trig,MR Egger,733.670249432986,244,1.78360816729412e-50,2019-01-29
-Td12Vz,v5VubD,ab42,trig,Inverse variance weighted,734.030679760091,245,2.749303881345897e-50,2019-01-29

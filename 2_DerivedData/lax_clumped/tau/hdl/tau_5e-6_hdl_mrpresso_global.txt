@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-6vnc00	tBZZ42	hdl	tau	2	104.20459484597504	<0.001

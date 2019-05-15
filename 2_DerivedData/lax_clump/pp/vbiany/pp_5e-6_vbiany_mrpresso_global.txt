@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-homikQ	xapF56	vbiany	pp	0	2492.690739122962	0.02457

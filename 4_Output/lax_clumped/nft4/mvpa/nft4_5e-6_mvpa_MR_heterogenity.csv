@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-SCjVag,ZUioZ1,mvpa,nft4,MR Egger,55.148701329129906,11,7.279032507313802e-8,2018-10-12
-SCjVag,ZUioZ1,mvpa,nft4,Inverse variance weighted,68.57896548924657,12,5.90193398054547e-10,2018-10-12

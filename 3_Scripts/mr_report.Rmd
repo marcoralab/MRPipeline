@@ -16,12 +16,16 @@ params:
   rwd: rwd
   traits: traits
   exposure.code: exposure.code
+  Exposure: Exposure
   exposure.snps: exposure.snps
   outcome.code: outcome.code
+  Outcome: Outcome
   outcome.snps: outcome.snps
   proxy.snps: proxy.snps
   harmonized.dat: harmonized.dat
   p.threshold: p.threshold
+  r2.threshold: r2.threshold
+  kb.threshold: kb.threshold
   mrpresso_global: mrpresso_global
   out: out
 editor_options: 
@@ -61,28 +65,25 @@ library(ggplot2)     ## For plotting
 ```
 
 ```{r traits, include=FALSE}
-## Read in trait information
-traits <- read_csv(params$traits)
+exposure.name <- params$Exposure
+#exposure.blurb <- params$exposure.blurb
 
-exposure.name <- as.character(traits[grep(paste0("\\b", params$exposure.code, "\\b"), traits$code), 'name'])
-exposure.blurb <- as.character(traits[grep(paste0("\\b", params$exposure.code, "\\b"), traits$code), 'blurb'])
-
-outcome.name <- as.character(traits[grep(paste0("\\b", params$outcome.code, "\\b"), traits$code), 'name'])
-outcome.blurb <- as.character(traits[grep(paste0("\\b", params$outcome.code, "\\b"), traits$code), 'blurb'])
+outcome.name <- params$Outcome
+#outcome.blurb <- params$outcome.blurb
 ```
 
 ## Instrumental Variables
 **SNP Inclusion:** SNPS associated with at a p-value threshold of p < `r params$p.threshold` were included in this analysis.
 <br>
 
-**LD Clumping:** For standard two sample MR it is important to ensure that the instruments for the exposure are independent. LD clumping was performed in PLINK using the EUR samples from the 1000 Genomes Project to estimate LD between SNPs, and, amongst SNPs that have an LD above a given threshold, retain only the SNP with the lowest p-value. A clumping window of 250kb, r2 of 0.1 and significance level of 1 was used for the index and secondary SNPs.
+**LD Clumping:** For standard two sample MR it is important to ensure that the instruments for the exposure are independent. LD clumping was performed in PLINK using the EUR samples from the 1000 Genomes Project to estimate LD between SNPs, and, amongst SNPs that have an LD above a given threshold, retain only the SNP with the lowest p-value. A clumping window of `r params$kb.threshold`, r2 of `r params$r2.threshold` and significance level of 1 was used for the index and secondary SNPs.
 <br>
 
 **Proxy SNPs:** Where SNPs were not available in the outcome GWAS, the EUR thousand genomes was queried to identify potential proxy SNPs that are in linkage disequilibrium (r2 > 0.8) of the missing SNP.
 <br> 
 
 ### Exposure: `r exposure.name`
-`r exposure.blurb`
+`#r exposure.blurb`
 <br> 
 
 **Table 1:** Independent SNPs associated with `r exposure.name`
@@ -93,7 +94,7 @@ as.data.frame(exposure)
 <br>
 
 ### Outcome: `r outcome.name`
-`r outcome.blurb`
+`#r outcome.blurb`
 <br>
 
 **Table 2:** SNPs associated with `r exposure.name` avaliable in `r outcome.name`
@@ -123,16 +124,13 @@ as.data.frame(mrdat)
 
 ## Instrument Strength
 ```{r f_stat, echo=F}
-## From the RadialMR package.
+## F-statistic
+## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011. International Journal of Epidemiology 40 (3): 755–64.
+# f_stat = function(N, K, R){ 
+#   f = ((N-K-1) / K) * (R/(1-R))}
 mrdat <- mrdat %>% 
   mutate(F_stat = beta.exposure^2 / se.exposure^2)
 mf <- mrdat %>% filter(mr_keep == TRUE) %>% summarise(F = round(mean(F_stat), 2)) %>% as.numeric()
-mf.out <- tibble(id.exposure = mrdat %>% slice(1) %>% select(id.exposure) %>% as.character(), 
-                 id.outcome = mrdat %>% slice(1) %>% select(id.outcome) %>% as.character(),
-                 outcome = mrdat %>% slice(1) %>% select(outcome) %>% as.character(), 
-                 exposure = mrdat %>% slice(1) %>% select(exposure) %>% as.character(), 
-                 nsnps = mrdat %>% filter(mr_keep == TRUE) %>% nrow(),
-                 mean_F = mf)
 ```
 To ensure that the first assumption of MR is not violated (Non-zero effect assumption), the genetic variants selected should be robustly associated with the exposure. Weak instruments, where the variance in the exposure explained by the the instruments is a small portion of the total variance, may result in poor precission and accuracy of the causal effect estiamte. The strength of an instrument can be evaluated using the F statistic, if F is less than 10, this is an indication of weak instrument.
 
@@ -324,13 +322,3 @@ as.data.frame(mrpresso_plei)
 ```
 <br>
 
-
-```{r write_out_MR_results, echo=F}
-heterogenity %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_heterogenity.csv'))
-heterogenity_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_heterogenity.csv'))
-mr_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_egger_plei.csv'))
-mrpresso_plei %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_egger_plei.csv'))
-mf.out %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_mean_F.csv'))
-res %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MR_Results.csv'))
-res_mrpresso %>% mutate(date = Sys.Date()) %>% write_csv(paste0(params$out, '_MRPRESSO_Results.csv'))
-```

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vovbpG	XUKRJD	hipv	evrsmk	1	377.5734957870618	1e-4

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YvT54p	cHMeLL	nft4	bmi	1	1804.4469349889	0.0018

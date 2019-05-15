@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DNvPAc,smjZvl,hips,dbp,MR Egger,1437.8287425647457,1541,0.9705882152674196,2019-01-29
-DNvPAc,smjZvl,hips,dbp,Inverse variance weighted,1437.9852200011862,1542,0.9715956309532063,2019-01-29

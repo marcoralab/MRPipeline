@@ -7,6 +7,16 @@ library(TwoSampleMR)
 library(gridExtra)
 library(qvalue)
 
+## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011. International Journal of Epidemiology 40 (3): 755–64.
+f_stat = function(N, K, R){
+  f = ((N-K-1) / K) * (R/(1-R))}
+
+## Proportion of phenotypic variance explained by SNP 
+## https://doi.org/10.1371/journal.pone.0120758.s001
+snp.pve <- function(eaf, beta, se, n){
+  (2*eaf*(1 - eaf)*beta^2) / (2 * beta * eaf * (1-eaf) + se^2 * 2 * n * eaf * (1-eaf))
+}
+
 ## if value is less then 0.001, use scientific notation
 round_sci <- function(x){ifelse(x < 0.001, formatC(x, format = "e", digits = 2), round(x, 3))}
 
@@ -63,6 +73,14 @@ outcomes = c('load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4
 ## Exposures to include in the results
 exposures = c("alccliu", "alcd", "audit", "bmi", "dbp", "dep", "diab", "educ", "hdl", "hear", "insom", "ldl", "mdd", "mvpa", "oilfish", "pp", "sbp", "sleepDashti", "smkcpd", "smki", "sociso", "tc", "trig")
 
+## Sample Sizes
+samplesize <- tibble(trait = c('alccliu', 'smki', 'smkcpd', 'audit', 'alcd', 'oilfish', 'hear', 'diab', 'bmi', 'tc', 'ldl', 'hdl', 'trig', 'dbp', 'sbp', 'pp', 'dep', 'mdd', 'insom', 'sleepDashti', 'sociso', 'educ', 'aaos', 'ab42', 'hipv', 'hipv2015', 'load', 'loadKunkle', 'nft4', 'npany', 'ptau', 'tau', 'vbiany', 'mvpa'),
+                     categorical = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
+                     samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 452302, 766345, 40255, 3146, 13688, 26814, 54162, 63926, 4914, 4914, 3146, 3146, 4914, 377234), 
+                     ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, NA, 3426, NA, NA, 992, NA), 
+                     ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, NA, 620, NA, NA, 1772, NA)) 
+
+## Files
 MR_results <- read_tsv(file.path(dir, 'MR_results.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
@@ -73,7 +91,12 @@ mrpresso_global_comb <- read_tsv(file.path(dir, 'mrpresso_global_comb.txt.gz')) 
 
 MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
-  filter(exposure %in% exposures) 
+  filter(exposure %in% exposures) %>% 
+  select(-samplesize.outcome) %>% 
+  left_join(samplesize, by = c('exposure' = 'trait')) %>% 
+  rename(samplesize.exposure = samplesize, ncase.exposure = ncase, ncontrol.exposure = ncontrol, catagorical.exposure = categorical) %>% 
+  left_join(samplesize, by = c('outcome' = 'trait')) %>% 
+  rename(samplesize.outcome = samplesize, ncase.outcome = ncase, ncontrol.outcome = ncontrol, categorical.outcome = categorical)
 
 egger_comb <- read_tsv(file.path(dir, 'egger_comb.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
@@ -92,9 +115,9 @@ MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000
   ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
   mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
   mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
-  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
-  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
-  mutate(exposure = fct_recode(exposure, 
+  mutate(outcome.name = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure.name = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure.name = fct_recode(exposure, 
                                "Alcohol Consumption" = "alccliu", 
                                "Alcohol Dependence" = "alcd", 
                                "AUDIT" = "audit", 
@@ -118,7 +141,7 @@ MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000
                                "Sleep Duration" = "sleepDashti",
                                "Total Cholesterol" = "tc", 
                                "Triglycerides" = "trig")) %>% 
-  mutate(outcome = fct_recode(outcome, 
+  mutate(outcome.name = fct_recode(outcome, 
                               "LOAD" = "load", 
                               "AAOS" = "aaos", 
                               "CSF Ab42" = "ab42", 
@@ -127,10 +150,14 @@ MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000
                               "Hippocampul Volume" = "hipv",
                               "Neuritic Plaques" = "npany",
                               "Neurofibrillary Tangles" = "nft4",
-                              "Vascular Brain Injury" = "vbiany"))
+                              "Vascular Brain Injury" = "vbiany")) %>% 
+  select(-samplesize.outcome) %>% 
+  left_join(samplesize, by = c('exposure' = 'trait')) %>% 
+  rename(samplesize.exposure = samplesize, ncase.exposure = ncase, ncontrol.exposure = ncontrol, catagorical.exposure = categorical) %>% 
+  left_join(samplesize, by = c('outcome' = 'trait')) %>% 
+  rename(samplesize.outcome = samplesize, ncase.outcome = ncase, ncontrol.outcome = ncontrol, categorical.outcome = categorical)
 
-write_csv(MRdat, 'C:/Users/Shea/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS1.csv')
-
+write_csv(MRdat, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS1.csv')
 
 ##------------------ Merege datasets ---------------------## 
 
@@ -181,6 +208,26 @@ mr_best <- mr_best %>%
                          symbols = c("***", "**", "*", ".", " "))) %>% 
   mutate(Signif = as.character(Signif)) 
 
+
+##---------------------- Variance Explained -----------------## 
+pve_f <- MRdat %>% 
+  filter(mr_keep == TRUE) %>% 
+  #filter(mrpresso_keep == TRUE) %>%
+  filter(!(outcome == 'loadKunkle' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'load' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  filter(!(outcome == 'hipv' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'hipv2015' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  #semi_join(mr_best, by = c('exposure', 'outcome', 'pt')) %>% 
+  mutate(pve.exposure = snp.pve(eaf.exposure, beta.exposure, se.exposure, samplesize.exposure)) %>% 
+  group_by(exposure, outcome, pt) %>% 
+  summarise(pve.exposure = sum(pve.exposure), samplesize = max(samplesize.exposure), nsnps = n(), 
+            f = f_stat(samplesize, nsnps, pve.exposure)) %>% 
+  mutate(pve = pve.exposure*100) %>%
+  arrange(pve) 
+
 ##---------------------- Spread Results -----------------## 
 ## Spread Methods
 mrresults.methods <- MRsummary %>% 
@@ -199,6 +246,8 @@ mrresults.methods_presso <- mrresults.methods %>%
   ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
   mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
   mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  left_join(select(pve_f, exposure, outcome, pt, f, pve)) %>%
+  mutate(pve = round(pve, 2), f = round(f, 2)) %>%
   mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
   mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
   mutate(exposure = fct_recode(exposure, 
@@ -236,7 +285,7 @@ mrresults.methods_presso <- mrresults.methods %>%
                               "Neurofibrillary Tangles" = "nft4",
                               "Vascular Brain Injury" = "vbiany")) %>%
 arrange(outcome, exposure, pt) %>% 
-  select(outcome, exposure, pt, FALSE_nsnp, FALSE_n_outliers,
+  select(outcome, exposure, pt, FALSE_nsnp, pve, f, FALSE_n_outliers,
          FALSE_IVW_b, FALSE_IVW_se, FALSE_IVW_MR.pval, FALSE_IVW_Signif,
          FALSE_MR_Egger_b, FALSE_MR_Egger_se, FALSE_MR_Egger_MR.pval, FALSE_MR_Egger_Signif,  
          FALSE_Weighted_median_b, FALSE_Weighted_median_se, FALSE_Weighted_median_MR.pval, FALSE_Weighted_median_Signif, 
@@ -360,6 +409,7 @@ p2 <- ggplot(dat.plot2) +
   theme(legend.position = 'right', legend.key.height = unit(2, "line"), axis.text.x = element_text(angle = 45, hjust = 1), 
         legend.title = element_blank(), legend.text = element_text(hjust = 1.5))
 ggsave(file.path(dir, 'MR_w_apoe_heatmap2.png'), plot = p2, width = 190, height =  120, units = 'mm')
+
 ##------------------------- Tabulated Results  --------------------##
 ## Formating Results for Table 2
 # Filtering MR-PRESSO
@@ -587,10 +637,74 @@ written_res <- lapply(1:nrow(test), function(x){
 })
 
 
+##=========================================## 
+##                  Shiny
+##=========================================## 
 
+## MR harmonized Table for Shining. 
+MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000) %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(exposure %in% exposures) %>% 
+  filter(!(outcome == 'loadKunkle' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'load' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  filter(!(outcome == 'hipv' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'hipv2015' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  mutate(outcome = fct_relevel(outcome, 'load', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv')) %>% 
+  mutate(exposure = fct_relevel(exposure, 'alccliu', 'alcd', 'audit', 'smki', 'smkcpd', 'dbp', 'sbp', 'pp', "hdl", "ldl", "tc", "trig", 'educ', 'bmi', 'diab', "oilfish", "hear", "insom", "sleepDashti", "mvpa", "dep", 'mdd', "sociso")) %>% 
+  mutate(exposure.name = fct_recode(exposure, 
+                                    "Alcohol Consumption" = "alccliu", 
+                                    "Alcohol Dependence" = "alcd", 
+                                    "AUDIT" = "audit", 
+                                    "Smoking Initiation" = "smki", 
+                                    "Cigarettes per Day" = "smkcpd", 
+                                    "Diastolic Blood Pressure" = "dbp", 
+                                    "Depressive Symptoms" = "dep", 
+                                    'BMI' = "bmi", 
+                                    "Type 2 Diabetes" = "diab", 
+                                    "Educational Attainment" = "educ", 
+                                    "Oily Fish Intake" = "oilfish",
+                                    "High-density lipoproteins" = "hdl", 
+                                    "Hearing Problems" = "hear", 
+                                    "Insomnia Symptoms" = "insom", 
+                                    "Low-density lipoproteins" = "ldl", 
+                                    "Major Depressive Disorder" = "mdd", 
+                                    "Moderate-to-vigorous PA" = "mvpa",
+                                    "Pulse Pressure" = "pp", 
+                                    "Systolic Blood Pressure" = "sbp", 
+                                    "Social Isolation" = "sociso", 
+                                    "Sleep Duration" = "sleepDashti",
+                                    "Total Cholesterol" = "tc", 
+                                    "Triglycerides" = "trig")) %>% 
+  mutate(outcome.name = fct_recode(outcome, 
+                                   "LOAD" = "load", 
+                                   "AAOS" = "aaos", 
+                                   "CSF Ab42" = "ab42", 
+                                   "CSF Tau" = "tau", 
+                                   "CSF Ptau" = "ptau", 
+                                   "Hippocampul Volume" = "hipv",
+                                   "Neuritic Plaques" = "npany",
+                                   "Neurofibrillary Tangles" = "nft4",
+                                   "Vascular Brain Injury" = "vbiany"))
 
+write_csv(MRdat, '/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/HarmonizedMRdat.csv')
 
+mrpresso_res <- read_tsv('/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/strict_clump/0_Summary/mrpresso_global_comb.txt.gz') %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(exposure %in% exposures) %>% 
+  filter(!(outcome == 'loadKunkle' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'load' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  filter(!(outcome == 'hipv' & exposure %in% c("alccliu", "alcd", "audit",  "educ"))) %>%
+  filter(!(outcome == 'hipv2015' & exposure %nin% c("alccliu", "alcd", "audit",  "educ"))) %>% 
+  ## Merge Lambert 2013 + Kunkle 2019; Hilbar 2015 + Hilbar 2017
+  mutate(outcome = str_replace(outcome, 'loadKunkle', 'load')) %>% 
+  mutate(outcome = str_replace(outcome, 'hipv2015', 'hipv')) %>% 
+  write_tsv('/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt')
+  
 
+distinct(mrpresso_res, exposure) %>% print(n = Inf)
 
 
 

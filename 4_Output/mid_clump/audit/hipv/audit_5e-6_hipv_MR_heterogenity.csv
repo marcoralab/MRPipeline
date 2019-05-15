@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-uypQOL,tdtuy3,hipv,audit,MR Egger,45.805270223234196,57,0.8560350918467791,2019-04-11
-uypQOL,tdtuy3,hipv,audit,Inverse variance weighted,46.35639376906093,58,0.8643868904138842,2019-04-11

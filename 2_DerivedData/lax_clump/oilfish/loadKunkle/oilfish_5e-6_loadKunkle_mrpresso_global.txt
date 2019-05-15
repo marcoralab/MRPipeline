@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-baeJW4	lAFgEd	loadKunkle	oilfish	2	391.18291245105496	<1e-04

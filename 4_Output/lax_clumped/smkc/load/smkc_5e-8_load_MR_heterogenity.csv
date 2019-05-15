@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-TxXhKv,MXkT2N,load,smkc,MR Egger,18.894361738741196,12,0.09110989651532028,2019-01-29
-TxXhKv,MXkT2N,load,smkc,Inverse variance weighted,18.89443605964631,13,0.12641322542943037,2019-01-29

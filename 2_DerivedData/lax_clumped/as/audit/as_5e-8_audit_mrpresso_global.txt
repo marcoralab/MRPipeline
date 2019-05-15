@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pPEc39	JjjwKz	audit	as	0	15.904919006667386	0.199

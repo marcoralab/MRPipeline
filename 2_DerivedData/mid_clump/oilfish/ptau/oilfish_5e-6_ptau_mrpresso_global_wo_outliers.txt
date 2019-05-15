@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-CPAf3Y	SMXjpA	ptau	oilfish	1	205.9504471975942	0.1872

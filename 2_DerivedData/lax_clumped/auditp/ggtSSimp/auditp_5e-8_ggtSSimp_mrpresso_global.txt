@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mC62Id	Z6mzAX	ggtSSimp	auditp	0	3.0114386708971037	0.644

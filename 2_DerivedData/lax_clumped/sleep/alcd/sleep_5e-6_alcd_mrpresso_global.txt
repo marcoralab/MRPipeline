@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wQ2YqT	YdUPUn	alcd	sleep	0	40.6590829255696	0.08

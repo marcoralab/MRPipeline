@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OnQOvR	h2T72m	vbiany	dep	0	31.397229768571734	0.591

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ntKgYH	R2zyZd	loadKunkle	smkaoi	0	11.047707480201446	0.226

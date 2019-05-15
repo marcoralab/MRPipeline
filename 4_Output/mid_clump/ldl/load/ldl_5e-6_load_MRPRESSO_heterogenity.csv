@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-TMT5CC,fPC7bv,load,ldl,MR Egger,430.5730346999654,257,6.495112327508769e-11,2019-04-09
-TMT5CC,fPC7bv,load,ldl,Inverse variance weighted,447.3272576424937,258,2.4504749960897123e-12,2019-04-09

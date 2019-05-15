@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-je6fRo,oElHEC,load,dep,MR Egger,12.36509190784737,13,0.49795748181584776,2019-04-07
-je6fRo,oElHEC,load,dep,Inverse variance weighted,12.4075957682176,14,0.5736052260863775,2019-04-07

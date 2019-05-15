@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-bBTWTk	iYOtqu	tau	educ	1	2491.851819908315	0.04037

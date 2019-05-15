@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-rbGFux,JZHY89,nft4,alccliu,MR Egger,39.48798092250281,42,0.5818227774706096,2019-04-07
-rbGFux,JZHY89,nft4,alccliu,Inverse variance weighted,40.97082623259382,43,0.5596566224326813,2019-04-07

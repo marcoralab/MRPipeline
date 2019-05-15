@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-blnMjO	cayy6G	npany	tc	1	192.7709742307793	0.3586

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-FRUBvW	hRJ475	vbiany	mvpa	0	NA	NA

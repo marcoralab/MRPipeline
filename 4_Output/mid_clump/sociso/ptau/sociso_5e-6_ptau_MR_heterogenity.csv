@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-rwDxAe,JEMBMQ,ptau,sociso,MR Egger,104.06805717026423,91,0.16485158346255974,2019-04-11
-rwDxAe,JEMBMQ,ptau,sociso,Inverse variance weighted,104.22184470428768,92,0.1807287387577394,2019-04-11

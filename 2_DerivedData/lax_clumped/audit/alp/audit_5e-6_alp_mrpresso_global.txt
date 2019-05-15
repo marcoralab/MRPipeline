@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-el7JAd	bWlohg	alp	audit	1	83.2352604894512	6e-4

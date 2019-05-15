@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ZHESCG,SSYR3x,load,hear,MR Egger,28.640888669310105,30,0.5365140959421977,2019-04-11
-ZHESCG,SSYR3x,load,hear,Inverse variance weighted,28.9203635052268,31,0.5733810021784278,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bizdCV	vP4PvD	alcd	smkukbb	0	251.5869109567603	0.0896

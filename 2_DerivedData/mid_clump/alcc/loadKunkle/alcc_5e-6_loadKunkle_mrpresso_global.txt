@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-08bNcP	QX0XI9	loadKunkle	alcc	0	70.147848835332	0.0738

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-L5wmXb	BE1gCG	ptau	educ	0	1117.4878507658252	0.42438

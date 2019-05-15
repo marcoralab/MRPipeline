@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YnADUs	ZacLJc	vbiany	smkcpd	0	132.18193635680885	0.6441

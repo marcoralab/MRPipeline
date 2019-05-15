@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-39IQtH	CNwIA2	ggtSSimp	alccGscan	2	92.77824156880935	0.2017

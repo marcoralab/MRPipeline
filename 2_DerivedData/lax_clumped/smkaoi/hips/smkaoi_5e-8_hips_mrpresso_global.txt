@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-M0uMTl	SbX1uv	hips	smkaoi	0	3.2063163520275055	0.939

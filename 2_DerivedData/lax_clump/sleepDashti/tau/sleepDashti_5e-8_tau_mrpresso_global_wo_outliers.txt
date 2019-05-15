@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-sgRqbH	WqNonF	tau	sleepDashti	0	NA	NA

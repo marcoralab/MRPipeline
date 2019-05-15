@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-fydvJI	b377Tq	ab42	tc	5	246.01971470204663	0.061

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-okHbGF	JdmMZ0	alcc	bmi	4	5080.029989659937	<1e-05

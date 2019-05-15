@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VMiSqE,XzeCMa,hips,smkukbb,MR Egger,187.5993781175933,202,0.7583020623085931,2018-11-26
-VMiSqE,XzeCMa,hips,smkukbb,Inverse variance weighted,187.8555240090588,203,0.7696979104456807,2018-11-26

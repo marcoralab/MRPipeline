@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-P575xE	gAQBbl	aaos	tc	11	1546.1347403743937	<1e-04

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-4xrPw2,lqDgfs,load,bmi,MR Egger,1991.675200554654,1600,5.990729895426862e-11,2019-04-02
-4xrPw2,lqDgfs,load,bmi,Inverse variance weighted,1992.0370384066641,1601,6.461781093531418e-11,2019-04-02

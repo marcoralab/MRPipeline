@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4MCbMZ	CZynUo	hipv	bmi	1	3530.9055347518643	<1e-05

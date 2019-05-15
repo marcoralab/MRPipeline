@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-N7CRFl,BRmSOR,ptau,las,MR Egger,17.16627878018808,19,0.578603811978723,2019-01-30
-N7CRFl,BRmSOR,ptau,las,Inverse variance weighted,17.481575140086804,20,0.6215178748028753,2019-01-30

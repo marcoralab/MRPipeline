@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Y2Li0E	O5OLmQ	vbiany	sleepDashti	0	NA	NA

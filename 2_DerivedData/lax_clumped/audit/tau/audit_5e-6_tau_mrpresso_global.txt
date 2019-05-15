@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-b3mpfp	13rZIH	tau	audit	0	49.88615109559001	0.3346

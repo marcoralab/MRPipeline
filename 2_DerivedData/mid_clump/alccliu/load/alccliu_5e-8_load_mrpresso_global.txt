@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qmLC3p	ReZgy4	load	alccliu	3	107.89506571562886	<2e-04

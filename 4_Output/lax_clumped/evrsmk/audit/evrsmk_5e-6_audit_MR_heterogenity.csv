@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JpiEML,CYZFT9,audit,evrsmk,MR Egger,4.329383340899232,6,0.6321958439455946,2018-12-07
-JpiEML,CYZFT9,audit,evrsmk,Inverse variance weighted,6.771925433822997,7,0.453007091804091,2018-12-07

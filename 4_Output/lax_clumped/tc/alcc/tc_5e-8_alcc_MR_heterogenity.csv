@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BPOp2d,acsfjw,alcc,tc,MR Egger,485.4296873269368,248,1.499831323122034e-17,2018-12-07
-BPOp2d,acsfjw,alcc,tc,Inverse variance weighted,491.19154268614426,249,5.020205302928988e-18,2018-12-07

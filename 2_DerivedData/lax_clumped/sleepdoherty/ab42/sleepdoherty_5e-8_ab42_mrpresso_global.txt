@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-1TPqvE	HK3y6J	ab42	sleepdoherty	0	12.099468386184215	0.282

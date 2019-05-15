@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ymeWk3	SbAYTm	loadKunkle	educ	2	3885.89800511809	<1e-05

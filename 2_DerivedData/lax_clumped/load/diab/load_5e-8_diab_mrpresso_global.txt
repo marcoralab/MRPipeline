@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Bj0ioI	O1TwDA	diab	load	1	49.73203549820794	<0.001

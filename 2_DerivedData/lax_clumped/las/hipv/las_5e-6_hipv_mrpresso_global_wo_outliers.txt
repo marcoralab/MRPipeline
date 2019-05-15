@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-KWW3wX	PLYmfe	hipv	las	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Y2Li0E	O5OLmQ	vbiany	sleepDashti	0	346.77503509690996	0.27536

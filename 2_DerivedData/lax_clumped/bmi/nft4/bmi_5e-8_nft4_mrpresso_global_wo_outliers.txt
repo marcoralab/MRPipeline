@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-o29TOF	up92rq	nft4	bmi	1	1639.5221639863157	0.4160933333333333

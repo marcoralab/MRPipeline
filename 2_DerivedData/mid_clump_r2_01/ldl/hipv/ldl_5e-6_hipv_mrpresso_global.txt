@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ArxQkS	yjY7kM	hipv	ldl	1	240.47229660914067	<1e-04

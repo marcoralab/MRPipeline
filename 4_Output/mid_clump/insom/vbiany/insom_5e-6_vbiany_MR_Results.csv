@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-Oxkqtp,DholAD,vbiany,insom,Inverse variance weighted (fixed effects),108,-0.4240820267007066,0.22840537480093828,0.06335274607126341,2019-04-11
-Oxkqtp,DholAD,vbiany,insom,Weighted median,108,-0.10029937946834605,0.329527367435085,0.7608433978039553,2019-04-11
-Oxkqtp,DholAD,vbiany,insom,Weighted mode,108,0.0855996738805942,0.8682668031341273,0.9216507793968916,2019-04-11
-Oxkqtp,DholAD,vbiany,insom,MR Egger,108,0.1283500489363661,0.96639475546503,0.8945928576122559,2019-04-11

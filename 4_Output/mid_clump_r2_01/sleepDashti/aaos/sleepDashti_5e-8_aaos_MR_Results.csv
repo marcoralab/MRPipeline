@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-H3YcvL,4qWdfd,aaos,sleepDashti,Inverse variance weighted (fixed effects),81,-0.13085541357479197,0.11141059105069444,0.2401816097476932,2019-04-07
-H3YcvL,4qWdfd,aaos,sleepDashti,Weighted median,81,-0.08798488225825506,0.1710661890980089,0.6070196183931592,2019-04-07
-H3YcvL,4qWdfd,aaos,sleepDashti,Weighted mode,81,0.1539991163610761,0.3346266387221969,0.646612660573082,2019-04-07
-H3YcvL,4qWdfd,aaos,sleepDashti,MR Egger,81,-1.3445239194626755,0.4986172229287617,0.008561082160338556,2019-04-07

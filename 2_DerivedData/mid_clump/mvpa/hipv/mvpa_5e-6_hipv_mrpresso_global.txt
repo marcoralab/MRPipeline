@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-dHFRip	M8Lfvb	hipv	mvpa	2	199.6879196620882	1e-4

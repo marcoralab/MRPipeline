@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BtyABw	BGHtCO	load	smkaoi	0	63.55679532080959	0.3508

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sUWxuT,Xr612u,mvpa,ptau,MR Egger,57.040402284544186,14,3.8492272285945877e-7,2018-10-12
-sUWxuT,Xr612u,mvpa,ptau,Inverse variance weighted,58.89850380677676,15,3.896572285987992e-7,2018-10-12

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WM6CTg,rmQ21E,alcd,tc,MR Egger,255.93576852105423,252,0.41914880524124337,2018-12-07
-WM6CTg,rmQ21E,alcd,tc,Inverse variance weighted,261.190010638765,253,0.34834307489465616,2018-12-07

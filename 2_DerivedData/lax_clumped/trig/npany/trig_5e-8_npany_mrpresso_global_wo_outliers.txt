@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-zLBPyA	MpDvZ4	npany	trig	2	153.0917202882531	0.7213

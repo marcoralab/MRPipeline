@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-siKrvW	VM5p6k	load	educ	0	1389.9001627430412	2e-4

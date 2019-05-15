@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-LbtcXz,JzEHlb,hips,alcc,Inverse variance weighted (fixed effects),49,0.46050372071442885,1.0394863669934225,0.6577578995267062,2019-01-29
-LbtcXz,JzEHlb,hips,alcc,Weighted median,49,0.293788144242736,1.5748237073236762,0.8520110917906321,2019-01-29
-LbtcXz,JzEHlb,hips,alcc,Weighted mode,49,-0.21959175081657634,1.8214679015212545,0.9045447102335047,2019-01-29
-LbtcXz,JzEHlb,hips,alcc,MR Egger,49,-0.1180740289841557,4.933238884910618,0.9810062791766578,2019-01-29

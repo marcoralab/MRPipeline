@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ztVPSk	EARNhI	hipv	cpd	0	20.33782547234102	0.416

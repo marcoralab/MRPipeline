@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-oWlrBG	ZqPXwu	tau	pp	1	959.811607640915	0.59536

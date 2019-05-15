@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tZYhHD	RrGkJe	vbiany	trig	0	145.64909091136914	0.8576

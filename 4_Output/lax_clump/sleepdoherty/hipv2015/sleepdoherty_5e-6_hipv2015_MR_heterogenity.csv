@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-qtQjY4,4LOTPi,hipv2015,sleepdoherty,MR Egger,76.53151321133008,76,0.46132841279236747,2019-03-11
-qtQjY4,4LOTPi,hipv2015,sleepdoherty,Inverse variance weighted,80.72460005294465,77,0.3635553343344169,2019-03-11

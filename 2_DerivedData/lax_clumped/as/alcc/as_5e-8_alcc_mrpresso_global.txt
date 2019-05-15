@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-n6QKtt	emdqdy	alcc	as	0	10.365147035379113	0.51

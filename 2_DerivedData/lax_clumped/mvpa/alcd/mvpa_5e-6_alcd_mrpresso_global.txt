@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-uOBbU1	vH95Tg	alcd	mvpa	0	123.6906859147906	0.9757

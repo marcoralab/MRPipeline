@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ORNwvn,A24RL9,tau,diab,MR Egger,159.69306996963343,154,0.3600360041880629,2019-04-09
-ORNwvn,A24RL9,tau,diab,Inverse variance weighted,159.77977682731282,155,0.3796076899751398,2019-04-09

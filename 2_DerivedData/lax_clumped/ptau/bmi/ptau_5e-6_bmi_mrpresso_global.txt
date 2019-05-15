@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Utx0cQ	SSM65o	bmi	ptau	5	194.28207816202794	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-TlsPvh	dwLed4	hips	sleep	0	17.04850432261658	0.893

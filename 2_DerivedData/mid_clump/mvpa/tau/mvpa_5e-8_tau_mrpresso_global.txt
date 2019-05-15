@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SNulnd	Ye8fpd	tau	mvpa	0	28.724587816064616	0.126

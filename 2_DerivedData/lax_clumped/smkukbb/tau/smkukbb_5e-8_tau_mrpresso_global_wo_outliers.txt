@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-GmVtlN	r8v4L7	tau	smkukbb	0	NA	NA

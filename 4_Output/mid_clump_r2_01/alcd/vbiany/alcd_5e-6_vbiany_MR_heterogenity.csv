@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-bVf114,ENI38t,vbiany,alcd,MR Egger,8.671824150269492,15,0.8940422011941405,2019-04-07
-bVf114,ENI38t,vbiany,alcd,Inverse variance weighted,8.818295001767545,16,0.9207072418182435,2019-04-07

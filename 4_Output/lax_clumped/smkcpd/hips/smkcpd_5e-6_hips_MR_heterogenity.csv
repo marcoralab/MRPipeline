@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JSQOpy,LiFC8L,hips,smkcpd,MR Egger,121.0516631071766,150,0.9602588762560549,2019-01-29
-JSQOpy,LiFC8L,hips,smkcpd,Inverse variance weighted,121.2856876360288,151,0.9639058400254873,2019-01-29

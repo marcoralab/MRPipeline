@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-RmQNlC	AOmNIH	ab42	sleepdoherty	0	13.085065432272094	0.461

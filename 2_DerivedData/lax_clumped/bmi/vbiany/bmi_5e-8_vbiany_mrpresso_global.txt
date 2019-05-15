@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-004H5u	4js1Ip	vbiany	bmi	0	1597.4643855753852	0.7007066666666667

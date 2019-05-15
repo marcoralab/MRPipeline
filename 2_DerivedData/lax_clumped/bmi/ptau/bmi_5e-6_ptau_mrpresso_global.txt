@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Oa5EPL	2n8MDj	ptau	bmi	2	3324.1044373352256	0.03707

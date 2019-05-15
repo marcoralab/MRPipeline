@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-eiOo6Y	TAsGZ2	hips	sociso	0	NA	NA

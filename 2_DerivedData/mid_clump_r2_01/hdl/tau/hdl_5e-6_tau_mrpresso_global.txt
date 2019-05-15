@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YVsBVL	EOFRPc	tau	hdl	2	327.903688201646	<1e-04

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-3LWcw8,COivBO,tau,educ,MR Egger,2458.3642660193414,2320,0.022644264047571704,2019-04-02
-3LWcw8,COivBO,tau,educ,Inverse variance weighted,2459.0350921301015,2321,0.02291798633417349,2019-04-02

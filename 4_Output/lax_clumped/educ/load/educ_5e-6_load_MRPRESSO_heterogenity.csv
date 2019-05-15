@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-pMCJAW,CNKT0R,load,educ,MR Egger,3160.247420680486,2760,1.2638571837399092e-7,2019-02-02
-pMCJAW,CNKT0R,load,educ,Inverse variance weighted,3161.570238450238,2761,1.2429940685623541e-7,2019-02-02

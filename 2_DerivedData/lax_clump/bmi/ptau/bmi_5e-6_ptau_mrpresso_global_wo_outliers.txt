@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-SfjmAA	HM31uj	ptau	bmi	2	3193.480047163651	0.47431

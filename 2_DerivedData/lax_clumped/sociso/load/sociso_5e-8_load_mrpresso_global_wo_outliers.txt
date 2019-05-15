@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-UuNrch	NKm27R	load	sociso	2	17.30988954617764	0.783

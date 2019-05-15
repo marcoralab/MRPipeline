@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AaQKTX,YcoCMJ,alcd,npany,MR Egger,9.659377485046413,14,0.7866388713507289,2018-10-12
-AaQKTX,YcoCMJ,alcd,npany,Inverse variance weighted,11.767628112140377,15,0.6965258546640992,2018-10-12

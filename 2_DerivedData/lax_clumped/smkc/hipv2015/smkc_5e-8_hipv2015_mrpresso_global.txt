@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DiCYQW	mLok8Q	hipv2015	smkc	0	13.294376289626484	0.434

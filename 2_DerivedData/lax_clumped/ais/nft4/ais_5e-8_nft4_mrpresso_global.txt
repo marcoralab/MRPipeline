@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-8R11Qf	TawvDH	nft4	ais	0	8.699651911583784	0.817

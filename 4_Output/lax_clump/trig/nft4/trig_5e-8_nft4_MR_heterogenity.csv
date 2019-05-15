@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Vs1WxO,exogPi,nft4,trig,MR Egger,365.2143343866579,163,1.5410967820737987e-17,2019-03-25
-Vs1WxO,exogPi,nft4,trig,Inverse variance weighted,369.52856523671454,164,6.889032208218264e-18,2019-03-25

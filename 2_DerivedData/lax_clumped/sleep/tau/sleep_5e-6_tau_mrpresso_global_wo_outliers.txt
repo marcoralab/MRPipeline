@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Ooi4CR	moxRcy	tau	sleep	0	NA	NA

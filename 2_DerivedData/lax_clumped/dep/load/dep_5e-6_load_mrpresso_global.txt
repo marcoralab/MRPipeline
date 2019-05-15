@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-7B0sx6	TVAYQI	load	dep	0	161.6421039386058	0.4507

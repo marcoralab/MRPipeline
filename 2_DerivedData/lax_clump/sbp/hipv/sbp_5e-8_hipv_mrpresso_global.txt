@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rrEJwL	waLos2	hipv	sbp	3	1757.0024371651473	1.3333333333333333e-5

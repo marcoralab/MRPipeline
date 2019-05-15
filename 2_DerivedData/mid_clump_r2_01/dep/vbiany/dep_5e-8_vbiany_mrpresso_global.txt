@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-NqdDbK	lfi2jr	vbiany	dep	0	16.733523548425296	0.525

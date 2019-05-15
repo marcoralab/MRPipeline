@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vTllbO	NhuanM	load	evrsmk	0	62.030968915732004	0.5114

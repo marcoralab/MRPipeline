@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tskywA	BGpDsd	load	insom	0	124.10901039149498	0.3037

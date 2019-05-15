@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-OBlhkc	XueD4E	load	audit	3	51.31732043607261	<0.001

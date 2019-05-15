@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Vifm0h	6cBoIO	loadKunkle	alccliu	1	145.52995805667115	<1e-04

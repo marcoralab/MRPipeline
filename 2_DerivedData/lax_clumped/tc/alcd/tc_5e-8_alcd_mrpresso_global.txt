@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-WM6CTg	rmQ21E	alcd	tc	0	269.52158430727746	0.3394

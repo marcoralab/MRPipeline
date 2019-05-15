@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-gndbhp,FlIGLX,hipv,pp,MR Egger,1308.844553858774,1008,4.00707965313068e-10,2019-04-11
-gndbhp,FlIGLX,hipv,pp,Inverse variance weighted,1309.3920094589732,1009,4.2954813850938767e-10,2019-04-11

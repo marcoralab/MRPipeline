@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rRuAHz	aGg8Es	vbiany	educ	0	2968.337701106932	0.0948

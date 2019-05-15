@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-w2qKdI	FtmTVW	alcc	ces	0	48.299210788551264	0.3394

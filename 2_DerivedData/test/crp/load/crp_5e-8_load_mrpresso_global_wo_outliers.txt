@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-2QtLB6	f2XbK7	AD	crp	15	41.612994949303115	0.3206

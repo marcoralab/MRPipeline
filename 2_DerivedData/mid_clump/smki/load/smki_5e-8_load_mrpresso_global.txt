@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-djWjA2	8WaXv4	load	smki	0	170.0410921826943	0.0091

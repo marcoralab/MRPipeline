@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-9aeI5c,BMFETZ,npany,diab,MR Egger,387.60995388877745,426,0.908886178681404,2019-01-29
-9aeI5c,BMFETZ,npany,diab,Inverse variance weighted,389.64895766049267,427,0.9022420124526516,2019-01-29

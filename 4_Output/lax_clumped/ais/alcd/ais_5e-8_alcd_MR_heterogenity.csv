@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FhzOQe,XvR2kB,alcd,ais,MR Egger,30.51056827995228,12,0.0023381217892681095,2018-12-08
-FhzOQe,XvR2kB,alcd,ais,Inverse variance weighted,31.03556013472766,13,0.0033314874047670863,2018-12-08

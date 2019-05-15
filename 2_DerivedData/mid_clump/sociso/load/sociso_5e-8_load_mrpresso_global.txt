@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MZC94t	BWLeVL	load	sociso	1	40.91056769237677	0.002

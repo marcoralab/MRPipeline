@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DgVVR1	qsLySR	npany	mvpa	1	239.36685387168637	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-pMCJAW	CNKT0R	load	educ	2	3282.864523509688	<1e-05

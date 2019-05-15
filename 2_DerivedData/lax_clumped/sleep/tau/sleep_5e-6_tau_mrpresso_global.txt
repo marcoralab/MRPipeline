@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Ooi4CR	moxRcy	tau	sleep	0	22.141469307205835	0.393

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-z0HZ2l,FaeHrc,npany,tc,MR Egger,258.7354411659689,225,0.060789216160971916,2019-04-09
-z0HZ2l,FaeHrc,npany,tc,Inverse variance weighted,259.6364232227824,226,0.06168198857242786,2019-04-09

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MZFnUD,FBa5HI,vbiany,smki,MR Egger,114.86575931929154,97,0.10408023462785547,2019-04-07
-MZFnUD,FBa5HI,vbiany,smki,Inverse variance weighted,117.26631420635366,98,0.08979776365066512,2019-04-07

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-s6GOA5,GVe1e4,aaos,alccGscan,MR Egger,110.6094898233414,86,0.038180512504284066,2019-01-23
-s6GOA5,GVe1e4,aaos,alccGscan,Inverse variance weighted,112.106197247962,87,0.036294725388101086,2019-01-23

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-fK04L9	icFP30	ggt	auditc	2	NA	NA

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-99G84c,KariPH,aaos,hdl,MR Egger,1296.0672155487375,219,3.6309162647930146e-152,2019-04-09
-99G84c,KariPH,aaos,hdl,Inverse variance weighted,1301.8134743874639,220,8.095621076687206e-153,2019-04-09

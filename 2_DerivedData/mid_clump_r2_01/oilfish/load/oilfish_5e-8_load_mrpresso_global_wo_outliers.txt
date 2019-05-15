@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-lfuzxh	gmRcCL	load	oilfish	2	32.463523262657446	0.9134

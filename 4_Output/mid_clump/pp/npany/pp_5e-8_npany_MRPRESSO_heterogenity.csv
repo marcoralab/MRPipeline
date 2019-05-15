@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EbgdMX,1LhPTi,npany,pp,MR Egger,974.64009385188,997,0.6877805862484222,2019-04-11
-EbgdMX,1LhPTi,npany,pp,Inverse variance weighted,975.144778140203,998,0.6916655217784975,2019-04-11

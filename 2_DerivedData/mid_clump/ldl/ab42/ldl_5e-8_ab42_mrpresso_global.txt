@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-NuRsjn	GnaUXX	ab42	ldl	4	659.6205534131904	<1e-04

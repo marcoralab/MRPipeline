@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-zdamaO,DE7ELD,loadKunkle,insom,MR Egger,125.04523379659759,111,0.17108055038121,2019-04-11
-zdamaO,DE7ELD,loadKunkle,insom,Inverse variance weighted,127.40795899554664,112,0.15154913358455444,2019-04-11

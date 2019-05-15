@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-kMktSp	quYWkw	ptau	hdl	3	236.80239165876353	0.3421

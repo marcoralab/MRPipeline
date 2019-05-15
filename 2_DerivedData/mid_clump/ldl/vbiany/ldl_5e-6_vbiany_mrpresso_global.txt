@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-92gHzT	Qpryjy	vbiany	ldl	0	268.6348748945616	0.8514

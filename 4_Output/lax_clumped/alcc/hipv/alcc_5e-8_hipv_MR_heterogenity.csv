@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-f2snat,f6vlMw,hipv,alcc,MR Egger,5.242259726686562,10,0.874418332695721,2019-01-30
-f2snat,f6vlMw,hipv,alcc,Inverse variance weighted,5.572629798221584,11,0.9003056609089017,2019-01-30

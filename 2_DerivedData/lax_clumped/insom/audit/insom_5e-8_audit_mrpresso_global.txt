@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qLr0Ux	melKYz	audit	insom	0	36.754988115631846	0.003

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ELGYEU	Z6XwGQ	ab42	sbp	0	1348.1163653150197	0.00622

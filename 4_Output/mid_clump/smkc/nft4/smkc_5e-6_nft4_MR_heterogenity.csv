@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EsoiQw,HOUpgA,nft4,smkc,MR Egger,29.132720786920075,49,0.9892379884433353,2019-04-11
-EsoiQw,HOUpgA,nft4,smkc,Inverse variance weighted,32.04682892163854,50,0.9773460776362847,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-PpmXfi	YwY74D	ab42	sociso	0	NA	NA

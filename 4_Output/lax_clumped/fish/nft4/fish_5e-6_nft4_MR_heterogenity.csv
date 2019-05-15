@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Rq0RlD,74fKFh,nft4,fish,MR Egger,501.9067909605407,339,2.0003976952157072e-8,2019-01-30
-Rq0RlD,74fKFh,nft4,fish,Inverse variance weighted,502.2966698470981,340,2.2952380179127776e-8,2019-01-30

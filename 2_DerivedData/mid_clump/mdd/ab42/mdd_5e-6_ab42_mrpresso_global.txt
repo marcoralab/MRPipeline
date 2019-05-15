@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-WisejO	4488Xu	ab42	mdd	0	188.72672387338258	0.113

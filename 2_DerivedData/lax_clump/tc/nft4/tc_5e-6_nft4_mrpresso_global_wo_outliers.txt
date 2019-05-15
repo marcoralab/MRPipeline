@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-SRkdNI	NMUZJ9	nft4	tc	3	506.151104552285	8.8e-4

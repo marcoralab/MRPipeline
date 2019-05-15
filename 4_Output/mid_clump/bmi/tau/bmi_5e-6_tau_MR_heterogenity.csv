@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MJFXA1,SlciSW,tau,bmi,MR Egger,2874.8811823719398,2694,0.007756704407852132,2019-04-12
-MJFXA1,SlciSW,tau,bmi,Inverse variance weighted,2879.5011043929285,2695,0.006813698510174789,2019-04-12

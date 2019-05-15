@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Fos9tM,FimF6P,tau,tc,MR Egger,172.96362528404572,161,0.2457856012110712,2019-04-07
-Fos9tM,FimF6P,tau,tc,Inverse variance weighted,175.20663888767163,162,0.22618649091129106,2019-04-07

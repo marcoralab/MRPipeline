@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-fnAS5z,I04x5T,alcd,alcc,MR Egger,41.466361905097415,45,0.6224359871696088,2018-12-12
-fnAS5z,I04x5T,alcd,alcc,Inverse variance weighted,41.89130793768428,46,0.6449484146809539,2018-12-12

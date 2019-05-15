@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-CX25iE	IvXaR9	alcd	trig	0	154.80835349722355	0.7769

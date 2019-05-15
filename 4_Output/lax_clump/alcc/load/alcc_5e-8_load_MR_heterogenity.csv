@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-OnakMP,1nObRj,load,alcc,MR Egger,11.19790871578431,9,0.2623869307004324,2019-03-11
-OnakMP,1nObRj,load,alcc,Inverse variance weighted,12.528915230346584,10,0.2512154844518881,2019-03-11

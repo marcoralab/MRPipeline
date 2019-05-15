@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-FCYMuI	BuAguc	ab42	hear	1	143.51539301257355	0.0119

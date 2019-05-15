@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-LiOzSp,ATf1aa,vbiany,oilfish,Inverse variance weighted (fixed effects),263,-0.14883278513744436,0.3295643324033056,0.6515538192077388,2019-03-26
-LiOzSp,ATf1aa,vbiany,oilfish,Weighted median,263,-0.8364169752290943,0.4565908976416919,0.06697020114040086,2019-03-26
-LiOzSp,ATf1aa,vbiany,oilfish,Weighted mode,263,-1.613024204322734,1.3650260996036179,0.23840409174347635,2019-03-26
-LiOzSp,ATf1aa,vbiany,oilfish,MR Egger,263,0.3460253337709555,1.3020525070703246,0.790638663722431,2019-03-26

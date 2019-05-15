@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ma6uDw,nmeEFF,tau,cpd,MR Egger,11.05809574787511,7,0.136104911312771,2019-04-11
-ma6uDw,nmeEFF,tau,cpd,Inverse variance weighted,11.541839093835133,8,0.1728460714268185,2019-04-11

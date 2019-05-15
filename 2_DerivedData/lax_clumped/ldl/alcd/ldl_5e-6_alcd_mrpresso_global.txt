@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DI8zFd	hmDFfA	alcd	ldl	0	328.4205522517927	0.42436

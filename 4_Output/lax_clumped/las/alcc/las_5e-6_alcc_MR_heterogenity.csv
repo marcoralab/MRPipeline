@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-CFQpka,SyKmpg,alcc,las,MR Egger,48.563343376346396,41,0.19450441735573104,2018-12-08
-CFQpka,SyKmpg,alcc,las,Inverse variance weighted,48.579207236480926,42,0.22501118737658818,2018-12-08

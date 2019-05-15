@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-F3mje5,RGNPAx,tau,ldl,MR Egger,403.2350548925757,267,1.356647793516835e-7,2019-03-26
-F3mje5,RGNPAx,tau,ldl,Inverse variance weighted,410.52362093756597,268,4.610330082218893e-8,2019-03-26

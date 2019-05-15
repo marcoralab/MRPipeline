@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oAn4Iz	G09R8a	ptau	oilfish	2	174.43678503266722	<2e-04

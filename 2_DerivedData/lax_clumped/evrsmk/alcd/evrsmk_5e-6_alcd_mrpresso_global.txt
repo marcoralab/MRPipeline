@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qKwaQj	8AJszS	alcd	evrsmk	0	305.41898270378204	0.3026

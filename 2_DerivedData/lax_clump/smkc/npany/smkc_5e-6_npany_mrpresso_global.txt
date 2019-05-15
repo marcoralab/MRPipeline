@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-divWP9	mQrHT7	npany	smkc	0	65.63949691300748	0.2672

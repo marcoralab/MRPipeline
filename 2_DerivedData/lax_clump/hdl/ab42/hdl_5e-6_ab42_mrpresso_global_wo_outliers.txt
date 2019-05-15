@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Mr698L	lcZ5JP	ab42	hdl	3	386.5016691265404	0.0052

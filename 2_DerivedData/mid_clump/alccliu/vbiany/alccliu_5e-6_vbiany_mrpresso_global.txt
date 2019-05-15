@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3O65n2	mz261j	vbiany	alccliu	0	209.4233997270813	0.3216

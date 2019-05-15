@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ijhQv2	pPBPR7	diab	tau	1	42.46272915937753	0.001

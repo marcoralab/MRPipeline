@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-1A5nhT	TeDUXM	alcd	ab42	6.085894787967192	0.42

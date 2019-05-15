@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-OaczJy	Xus5sr	hipv2015	educ	2	2891.175440105448	0.11615

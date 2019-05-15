@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BhbFGC	IG1XBg	aaos	mvpa	1	638.4524893911856	<0.001

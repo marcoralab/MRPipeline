@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-of9SKj,FA98BZ,hipv2015,smkukbb,MR Egger,192.95976452602414,201,0.6454687401635522,2018-11-26
-of9SKj,FA98BZ,hipv2015,smkukbb,Inverse variance weighted,193.84361672846742,202,0.647322096961614,2018-11-26

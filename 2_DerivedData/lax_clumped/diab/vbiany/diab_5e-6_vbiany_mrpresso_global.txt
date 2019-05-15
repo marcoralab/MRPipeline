@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mYxpsS	nffTKg	vbiany	diab	0	379.47531876495367	0.972

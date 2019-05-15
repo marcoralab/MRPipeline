@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Yre2Mr	swbyar	hipv2015	as	0	41.23538368430897	<0.001

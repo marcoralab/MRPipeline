@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Mpo1rb,w2YDb3,sociso,ab42,MR Egger,10.595496620080548,14,0.717479739093513,2018-10-12
-Mpo1rb,w2YDb3,sociso,ab42,Inverse variance weighted,11.855401012791086,15,0.689939500760534,2018-10-12

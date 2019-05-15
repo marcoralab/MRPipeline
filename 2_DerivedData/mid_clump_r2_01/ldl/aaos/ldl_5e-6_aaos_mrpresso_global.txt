@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-i5vmyl	okdmDP	aaos	ldl	5	1181.710730607849	<1e-04

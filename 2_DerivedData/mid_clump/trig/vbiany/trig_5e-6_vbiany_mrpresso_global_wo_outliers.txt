@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-t0y063	7DfkHp	vbiany	trig	0	NA	NA

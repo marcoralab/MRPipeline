@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-0CnVlc	X6sig3	hipv	sbp	1	3336.765010623014	<1e-05

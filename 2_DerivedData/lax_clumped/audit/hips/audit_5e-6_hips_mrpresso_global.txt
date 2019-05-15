@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-TIxdNH	Rzvw0s	hips	audit	0	65.34214637183523	0.4718

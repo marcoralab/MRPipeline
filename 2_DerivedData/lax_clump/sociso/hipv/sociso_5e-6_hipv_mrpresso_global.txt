@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ms6PKd	ZNs0Mn	hipv	sociso	0	169.02750372132493	0.0186

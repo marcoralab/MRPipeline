@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-K638tc	Fr35IE	ab42	mvpa	1	640.5748977752856	<1e-04

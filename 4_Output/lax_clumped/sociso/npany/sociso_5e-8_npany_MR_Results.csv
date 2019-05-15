@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-GfikdG,UKDiEh,npany,sociso,Inverse variance weighted (fixed effects),25,1.9346562856877252,1.2022533062396645,0.10757438637823415,2019-01-30
-GfikdG,UKDiEh,npany,sociso,Weighted median,25,2.642445894202078,1.7071879817222988,0.12166194498129684,2019-01-30
-GfikdG,UKDiEh,npany,sociso,Weighted mode,25,4.891820173657635,2.9903552369685507,0.11491641067807279,2019-01-30
-GfikdG,UKDiEh,npany,sociso,MR Egger,25,3.0626823554168325,6.6166963414350635,0.6478058926113976,2019-01-30

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DPELYX	E45lFy	hdl	ab42	5	133.7418430958573	<0.001

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-A9EZph,H6ejFi,ptau,smki,MR Egger,363.9969279760841,381,0.7261201354511999,2019-04-11
-A9EZph,H6ejFi,ptau,smki,Inverse variance weighted,364.1089509329045,382,0.7367795219565376,2019-04-11

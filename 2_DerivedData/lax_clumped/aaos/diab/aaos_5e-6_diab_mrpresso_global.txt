@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-auedB3	oHTjMA	diab	aaos	2	78.87101420199538	<0.001

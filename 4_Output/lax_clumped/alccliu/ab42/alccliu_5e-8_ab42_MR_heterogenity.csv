@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Wx4lmB,WRNMPm,ab42,alccliu,MR Egger,47.02611859100994,51,0.6321961274032437,2019-01-30
-Wx4lmB,WRNMPm,ab42,alccliu,Inverse variance weighted,47.19310927263005,52,0.6630377369568663,2019-01-30

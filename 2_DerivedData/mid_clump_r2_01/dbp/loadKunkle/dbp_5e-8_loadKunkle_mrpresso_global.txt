@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bMzdaP	8JFzQh	loadKunkle	dbp	1	1155.997845884124	<2e-05

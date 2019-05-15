@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pnP2ar	QnoD25	ab42	pp	1	1494.709225444809	<2e-05

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sHBSA3,fxzubZ,smkukbb,ab42,MR Egger,18.49360299003038,14,0.18521517317970762,2018-10-12
-sHBSA3,fxzubZ,smkukbb,ab42,Inverse variance weighted,18.50059943417002,15,0.23726223092341858,2018-10-12

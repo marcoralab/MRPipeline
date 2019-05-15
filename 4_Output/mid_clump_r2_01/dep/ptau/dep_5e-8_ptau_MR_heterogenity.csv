@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-4UNSpy,6Sxre2,ptau,dep,MR Egger,8.098432995095244,14,0.8841350451947716,2019-04-07
-4UNSpy,6Sxre2,ptau,dep,Inverse variance weighted,9.542376407870488,15,0.8474966006248041,2019-04-07

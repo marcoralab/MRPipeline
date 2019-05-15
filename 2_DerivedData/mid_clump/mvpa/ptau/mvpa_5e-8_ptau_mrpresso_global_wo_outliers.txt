@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Gy1ipi	94hnGB	ptau	mvpa	2	22.210934369071424	0.371

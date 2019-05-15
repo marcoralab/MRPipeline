@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-tAoSID,S31p41,aaos,mvpa,MR Egger,156.08058629311762,125,0.031136579756724035,2019-04-11
-tAoSID,S31p41,aaos,mvpa,Inverse variance weighted,158.07256393626713,126,0.027949921721917615,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-xcF66y	pLRPIx	nft4	cpd	0	NA	NA

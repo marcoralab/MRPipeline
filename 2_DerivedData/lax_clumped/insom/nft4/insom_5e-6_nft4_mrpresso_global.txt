@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rau8iT	LwFKFm	nft4	insom	0	137.68282096924847	0.0957

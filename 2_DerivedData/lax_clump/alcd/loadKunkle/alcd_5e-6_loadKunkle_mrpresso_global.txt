@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3pjTN5	VvOL1u	loadKunkle	alcd	0	43.677391997326744	0.032

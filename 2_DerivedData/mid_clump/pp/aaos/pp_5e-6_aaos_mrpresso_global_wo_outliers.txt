@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-euJuse	vqGYGa	aaos	pp	2	2473.3529095865147	3e-5

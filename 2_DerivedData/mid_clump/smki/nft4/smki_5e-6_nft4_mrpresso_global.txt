@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-HkCs68	OcWXPy	nft4	smki	0	417.1812808060152	0.66028

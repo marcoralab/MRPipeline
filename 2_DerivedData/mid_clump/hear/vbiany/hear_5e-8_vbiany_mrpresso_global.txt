@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-1gzfMT	6NelOM	vbiany	hear	0	28.017461731964616	0.7878

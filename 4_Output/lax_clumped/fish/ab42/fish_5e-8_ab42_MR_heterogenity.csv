@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EAcsEZ,MvGEwl,ab42,fish,MR Egger,149.8326565304542,104,0.0021983931156116807,2019-01-30
-EAcsEZ,MvGEwl,ab42,fish,Inverse variance weighted,157.56194624598052,105,6.914121505093993e-4,2019-01-30

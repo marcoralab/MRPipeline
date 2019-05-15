@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-DiCYQW	mLok8Q	hipv2015	smkc	0	NA	NA

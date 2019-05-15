@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-6Ps40x	QMMQAl	vbiany	hear	0	29.127717765647187	0.7926

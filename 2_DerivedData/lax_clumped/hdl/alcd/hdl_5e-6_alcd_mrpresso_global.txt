@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MiLvKs	oiDqP4	alcd	hdl	0	375.67824427752043	0.37896

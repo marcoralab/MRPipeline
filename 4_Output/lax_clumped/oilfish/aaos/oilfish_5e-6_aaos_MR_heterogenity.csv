@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-IaBEA3,cagBFS,aaos,oilfish,MR Egger,738.8543018120889,257,3.71988962929721e-48,2018-11-27
-IaBEA3,cagBFS,aaos,oilfish,Inverse variance weighted,739.5469376144488,258,5.042285133451403e-48,2018-11-27

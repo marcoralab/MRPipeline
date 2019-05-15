@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wFr7LD	ux1xld	ldl	nft4	7	678.8750847916813	<0.001

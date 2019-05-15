@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rb5OsF	TlMy5v	dbp	load	0	47.236830355242496	0.1568

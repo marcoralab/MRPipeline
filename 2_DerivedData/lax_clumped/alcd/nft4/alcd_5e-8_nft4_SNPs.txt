@@ -1,2 +1,0 @@
-SNP	CHR	POS	Effect_allele	Non_Effect_allele	EAF	Beta	SE	P	r2	N
-rs1229984	4	100239319	T	C	0.046	-0.026	0.1266	0.8373	5.9331168e-5	4914

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-9fc8DT	m9WyNE	nft4	sleepDashti	0	NA	NA

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MjDkvN,MeqjID,ab42,smki,MR Egger,125.84110909436048,109,0.128968047507106,2019-04-11
-MjDkvN,MeqjID,ab42,smki,Inverse variance weighted,126.017184195811,110,0.1409736228560698,2019-04-11

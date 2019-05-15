@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AblcpE,fNPuAC,load,mvpa,MR Egger,118.31462858045322,107,0.21390023931642863,2019-04-11
-AblcpE,fNPuAC,load,mvpa,Inverse variance weighted,118.74802202987875,108,0.22560931345240448,2019-04-11

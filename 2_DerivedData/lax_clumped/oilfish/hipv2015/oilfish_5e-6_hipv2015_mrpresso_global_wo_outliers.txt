@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-wwTOD2	QqDJXd	hipv2015	oilfish	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Uu1R2G	vB7FZr	alcc	educ	5	4142.4355143197745	<1e-05

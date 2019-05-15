@@ -1,5 +1,0 @@
-SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs12932445,T,C,T,C,-0.1758,-0.00553,0.8195,0.824931,FALSE,FALSE,FALSE,owRjql,0.005682,0.3305,ab42,TRUE,reported,0.0245,6.88e-13,ces,TRUE,reported,VOK9fP,2,TRUE,NA
-rs1982360,T,C,T,C,0.1273,0.004747,0.301,0.33492500000000003,FALSE,FALSE,FALSE,owRjql,0.004427,0.2837,ab42,TRUE,reported,0.0207,7.788e-10,ces,TRUE,reported,VOK9fP,2,TRUE,NA
-rs2466455,T,C,T,C,-0.2992,-0.01138,0.7826,0.760564,FALSE,FALSE,FALSE,owRjql,0.00485,0.01896,ab42,TRUE,reported,0.0222,2.752e-41,ces,TRUE,reported,VOK9fP,2,TRUE,NA
-rs7680240,A,C,A,C,0.1163,-0.004944,0.5912,0.5830299999999999,FALSE,FALSE,FALSE,owRjql,0.004092,0.2271,ab42,TRUE,reported,0.0204,1.172e-8,ces,TRUE,reported,VOK9fP,2,TRUE,NA

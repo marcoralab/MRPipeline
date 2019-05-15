@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-mIlpBy,YRJpf1,vbiany,mvpa,MR Egger,84.45209703214142,118,0.9915574626162116,2019-04-11
-mIlpBy,YRJpf1,vbiany,mvpa,Inverse variance weighted,84.45755226979739,119,0.9930053537253418,2019-04-11

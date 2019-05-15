@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Bt5c5A	5kGRLg	nft4	hdl	2	301.45633455455214	<1e-04

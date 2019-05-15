@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-u7GY2y	PDI1as	alcc	hdl	4	402.38780043452954	<1e-04

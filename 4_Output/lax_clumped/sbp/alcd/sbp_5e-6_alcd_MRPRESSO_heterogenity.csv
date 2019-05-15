@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-atvquZ,OgcS08,alcd,sbp,MR Egger,2991.030979886671,2915,0.15963764168258043,2018-12-09
-atvquZ,OgcS08,alcd,sbp,Inverse variance weighted,2992.7804763545173,2916,0.15734566329922742,2018-12-09

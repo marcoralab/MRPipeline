@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-99G84c	KariPH	aaos	hdl	5	267.5878460618712	0.012

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Bweoxt	ni24B1	load	bmi	10	7246.73099570101	<1e-05

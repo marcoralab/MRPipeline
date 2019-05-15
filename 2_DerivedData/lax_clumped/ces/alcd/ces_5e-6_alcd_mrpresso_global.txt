@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-UwYED3	CRQV2O	alcd	ces	0	40.97386432910191	0.6336

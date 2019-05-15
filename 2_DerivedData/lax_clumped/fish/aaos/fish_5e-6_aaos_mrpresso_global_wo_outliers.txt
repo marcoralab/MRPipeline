@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-5IvUIY	jiXldU	aaos	fish	1	380.8146901536856	0.20748

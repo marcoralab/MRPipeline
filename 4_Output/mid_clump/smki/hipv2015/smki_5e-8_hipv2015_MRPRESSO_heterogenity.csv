@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-iQSI5a,5ZICZm,hipv2015,smki,MR Egger,126.30049875217044,112,0.16809601578160316,2019-04-11
-iQSI5a,5ZICZm,hipv2015,smki,Inverse variance weighted,126.37000525575017,113,0.18393634814679466,2019-04-11

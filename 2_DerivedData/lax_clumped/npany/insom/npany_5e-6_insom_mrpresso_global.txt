@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-r37dsD	MDxm5G	insom	npany	0	17.193951711209095	0.431

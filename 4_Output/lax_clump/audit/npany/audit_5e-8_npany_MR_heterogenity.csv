@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NYP55W,iNlCrB,npany,audit,MR Egger,9.369814437091126,15,0.8574010202602347,2019-03-11
-NYP55W,iNlCrB,npany,audit,Inverse variance weighted,9.511517976195348,16,0.8908640597293486,2019-03-11

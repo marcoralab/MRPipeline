@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-7RotNC,gcL2ik,nft4,dep,MR Egger,137.39710828146497,167,0.9544627741908486,2019-01-30
-7RotNC,gcL2ik,nft4,dep,Inverse variance weighted,147.06491897767006,168,0.8762716313975264,2019-01-30

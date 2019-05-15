@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-nre6uA	cbPQng	ggtSSimp	auditc	1	86.89938418229215	<0.001

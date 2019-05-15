@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-17RkKI	27MEsI	ab42	ldl	4	737.6758756281723	<1e-04

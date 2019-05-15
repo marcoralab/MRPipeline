@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-RLJMPo,IiB8I2,alcc,ptau,MR Egger,20.620554777881637,14,0.11175901891161936,2018-10-12
-RLJMPo,IiB8I2,alcc,ptau,Inverse variance weighted,20.684001252834047,15,0.147233016777875,2018-10-12

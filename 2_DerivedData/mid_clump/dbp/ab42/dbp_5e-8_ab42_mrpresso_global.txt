@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bFL4a9	1KNEet	ab42	dbp	0	1222.33553761308	0.01698

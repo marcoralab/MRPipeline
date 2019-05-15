@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QCC375	AeIQPK	npany	bmi	0	3183.6085611550457	0.91056

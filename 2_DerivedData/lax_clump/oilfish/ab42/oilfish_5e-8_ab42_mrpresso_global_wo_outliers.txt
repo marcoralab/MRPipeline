@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-gYNUDe	AwvoJL	ab42	oilfish	0	NA	NA

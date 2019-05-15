@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-LQrjtN	uSgRHW	nft4	bmi	3	2960.754845977076	0.5392

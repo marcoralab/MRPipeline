@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-vVsoS9,GQSJWo,nft4,educ,MR Egger,1127.0816813822626,1158,0.7370851414051519,2019-01-29
-vVsoS9,GQSJWo,nft4,educ,Inverse variance weighted,1127.2455964219912,1159,0.7427321696547595,2019-01-29

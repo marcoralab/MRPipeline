@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-u3xpOK,ecIxib,ptau,ldl,MR Egger,325.5117676546766,168,3.818241986193427e-12,2019-04-09
-u3xpOK,ecIxib,ptau,ldl,Inverse variance weighted,341.17234074858186,169,1.029232426801694e-13,2019-04-09

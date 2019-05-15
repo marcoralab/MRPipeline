@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ERbDYS,xWvrEZ,load,fish,MR Egger,85.1488655105701,107,0.9409883059807449,2019-01-30
-ERbDYS,xWvrEZ,load,fish,Inverse variance weighted,86.240808974435,108,0.9391145185517185,2019-01-30

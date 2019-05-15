@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-fEGa53,wit8IV,tau,insom,MR Egger,13.697250315598591,12,0.3204576719431049,2019-03-11
-fEGa53,wit8IV,tau,insom,Inverse variance weighted,13.699030610500124,13,0.39537597635469507,2019-03-11

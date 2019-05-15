@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-42l56Z	GMCx0U	ptau	pp	1	1052.0318532257452	0.466

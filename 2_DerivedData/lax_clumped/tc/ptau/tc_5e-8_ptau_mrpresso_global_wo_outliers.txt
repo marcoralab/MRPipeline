@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-1MhHb1	eYA03K	ptau	tc	2	292.7861339617238	0.0063

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-I9YQOq	U2LpMA	ptau	hear	0	41.75939105592783	0.2062

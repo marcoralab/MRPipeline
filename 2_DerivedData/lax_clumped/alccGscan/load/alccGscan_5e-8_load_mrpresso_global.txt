@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-GGOpga	GIdBMB	load	alccGscan	1	139.85669289540158	5e-4

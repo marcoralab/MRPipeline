@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yd3bto	Oub1N3	alcc	ais	0	11.705078404012086	0.598

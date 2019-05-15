@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Rqz419	7NJ4tt	nft4	bmi	1	1209.444908809063	2e-5

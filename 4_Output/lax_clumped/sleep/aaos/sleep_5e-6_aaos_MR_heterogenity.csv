@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Ii4y0g,TiVDEq,aaos,sleep,MR Egger,33.476498615367134,27,0.18179707503744436,2019-01-30
-Ii4y0g,TiVDEq,aaos,sleep,Inverse variance weighted,33.760930075407856,28,0.20885541436017432,2019-01-30

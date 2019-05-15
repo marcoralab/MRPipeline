@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NIT4eN,tBUykg,nft4,tc,MR Egger,316.139785478498,227,8.317799905040639e-5,2019-04-09
-NIT4eN,tBUykg,nft4,tc,Inverse variance weighted,316.1922736173871,228,9.84712414665855e-5,2019-04-09

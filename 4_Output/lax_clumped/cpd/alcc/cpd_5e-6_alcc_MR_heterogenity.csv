@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JuTB3r,Z5d2Pd,alcc,cpd,MR Egger,69.3073053734996,58,0.14697926884764456,2018-12-08
-JuTB3r,Z5d2Pd,alcc,cpd,Inverse variance weighted,70.51193857959052,59,0.14497455032162757,2018-12-08

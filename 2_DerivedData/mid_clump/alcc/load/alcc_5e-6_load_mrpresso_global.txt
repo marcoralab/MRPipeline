@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ObpnZW	mOMysy	load	alcc	0	69.44255640196357	0.0222

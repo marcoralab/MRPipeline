@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Dezs4H,FCcU4o,ptau,bmi,MR Egger,1860.1721926712885,1825,0.27776523102121825,2019-04-07
-Dezs4H,FCcU4o,ptau,bmi,Inverse variance weighted,1861.4990202462043,1826,0.2760309620654605,2019-04-07

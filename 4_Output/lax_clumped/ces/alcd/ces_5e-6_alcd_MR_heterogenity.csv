@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UwYED3,CRQV2O,alcd,ces,MR Egger,36.69908458597692,40,0.6196560712946043,2018-12-08
-UwYED3,CRQV2O,alcd,ces,Inverse variance weighted,36.82257169452983,41,0.6567622418273664,2018-12-08

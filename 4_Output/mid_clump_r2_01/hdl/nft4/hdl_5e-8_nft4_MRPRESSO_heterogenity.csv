@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Bt5c5A,5kGRLg,nft4,hdl,MR Egger,124.57189362246943,120,0.36905273879382433,2019-04-07
-Bt5c5A,5kGRLg,nft4,hdl,Inverse variance weighted,126.67457253883408,121,0.3438673369845342,2019-04-07

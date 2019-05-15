@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FJphHv	TyLnyR	alcc	ldl	1	362.4503529168708	<1e-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Z5RBKz	QNJFup	load	fish	1	347.0618663309183	0.2728

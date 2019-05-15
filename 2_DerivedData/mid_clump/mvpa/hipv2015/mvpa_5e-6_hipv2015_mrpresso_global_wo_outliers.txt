@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-CBVMBo	x9WAvj	hipv2015	mvpa	1	145.17200023788618	0.0173

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Cffm09	Geofst	tau	oilfish	0	185.69065850976702	0.4109

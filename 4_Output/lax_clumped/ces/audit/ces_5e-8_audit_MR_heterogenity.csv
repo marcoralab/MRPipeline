@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-36X5IR,FCxsuL,audit,ces,MR Egger,7.168220579733638,3,0.0667249668318684,2018-12-08
-36X5IR,FCxsuL,audit,ces,Inverse variance weighted,7.26918521830171,4,0.12232861271979101,2018-12-08

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-VvmlCP,axOGhl,npany,sbp,MR Egger,2293.7794314415523,2461,0.9924546399985117,2019-04-11
-VvmlCP,axOGhl,npany,sbp,Inverse variance weighted,2294.2593682750057,2462,0.9926042848241359,2019-04-11

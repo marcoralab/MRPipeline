@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lcVSR9,b6ogPY,ptau,insom,MR Egger,12.536149928753384,11,0.32471931131703885,2019-01-30
-lcVSR9,b6ogPY,ptau,insom,Inverse variance weighted,14.02301121138656,12,0.29924123448721124,2019-01-30

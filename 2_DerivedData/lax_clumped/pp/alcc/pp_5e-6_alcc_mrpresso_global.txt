@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MJu8fA	51RcXZ	alcc	pp	3	3163.689706983015	<1e-05

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BAzgsx	om2MWt	hips	dbp	0	3074.6547907175986	0.68127

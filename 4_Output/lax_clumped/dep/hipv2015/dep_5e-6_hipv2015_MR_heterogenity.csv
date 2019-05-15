@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-gllSGT,AqBVFA,hipv2015,dep,MR Egger,136.8115456483764,140,0.5604388971533658,2019-01-30
-gllSGT,AqBVFA,hipv2015,dep,Inverse variance weighted,140.0130183990369,141,0.5076494645496746,2019-01-30

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KPF1x0	iv4ZRn	hipv2015	smkukbb	1	794.2765533115225	0.01304

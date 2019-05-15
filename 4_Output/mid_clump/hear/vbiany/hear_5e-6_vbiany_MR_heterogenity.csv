@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-IbVgrP,9uACLO,vbiany,hear,MR Egger,126.655132034425,119,0.29841841322790175,2019-04-11
-IbVgrP,9uACLO,vbiany,hear,Inverse variance weighted,126.95725189493146,120,0.3143567848028257,2019-04-11

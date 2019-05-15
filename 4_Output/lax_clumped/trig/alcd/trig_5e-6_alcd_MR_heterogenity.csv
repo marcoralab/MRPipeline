@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BXDUBp,eyfR7P,alcd,trig,MR Egger,324.76419571354023,298,0.13736912401236676,2018-12-08
-BXDUBp,eyfR7P,alcd,trig,Inverse variance weighted,325.22894080126827,299,0.1423538434649292,2018-12-08

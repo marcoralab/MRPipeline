@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-0qwpSE	aY516w	nft4	tc	1	253.49632385289777	9e-4

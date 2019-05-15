@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-CFQpka	SyKmpg	alcc	las	0	50.78520629462465	0.2232

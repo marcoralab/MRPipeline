@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zq9uFD	Cf4GoL	load	mdd	1	71.39787350621643	0.014

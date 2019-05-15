@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-05vyXD	lgfRMy	hips	hdl	0	395.6941771368857	0.09776

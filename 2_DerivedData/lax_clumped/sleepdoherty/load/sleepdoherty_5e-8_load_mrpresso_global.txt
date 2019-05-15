@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gNBvEn	Euf4fx	load	sleepdoherty	0	21.704023789909208	0.07

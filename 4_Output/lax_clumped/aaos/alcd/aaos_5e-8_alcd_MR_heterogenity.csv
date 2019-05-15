@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Secvos,vKduIJ,alcd,aaos,MR Egger,12.45675505399095,16,0.7119849607449007,2019-01-31
-Secvos,vKduIJ,alcd,aaos,Inverse variance weighted,12.49550261266275,17,0.7692493314121743,2019-01-31

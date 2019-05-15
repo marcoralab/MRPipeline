@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ihaerU	MHcA34	ptau	trig	2	265.5206445769085	0.6627

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-mYr3C2	KytZiu	nft4	hdl	5	338.13908972278546	0.2216

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-e9bWDt	LDIcxM	npany	bmi	0	1447.8159623907407	0.42248

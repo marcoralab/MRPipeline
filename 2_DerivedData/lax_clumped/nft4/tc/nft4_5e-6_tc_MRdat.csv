@@ -1,9 +1,0 @@
-SNP,effect_allele.exposure,other_allele.exposure,effect_allele.outcome,other_allele.outcome,beta.exposure,beta.outcome,eaf.exposure,eaf.outcome,remove,palindromic,ambiguous,id.outcome,se.outcome,pval.outcome,outcome,mr_keep.outcome,pval_origin.outcome,se.exposure,pval.exposure,exposure,mr_keep.exposure,pval_origin.exposure,id.exposure,action,mr_keep,samplesize.outcome
-rs10166461,A,G,A,G,-0.2636,0.0041,0.1733,NA,FALSE,FALSE,FALSE,kIx0b9,0.0064,0.3738,tc,TRUE,reported,0.057,3.816e-6,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs10402271,T,G,T,G,-0.2747,-0.0702,0.6155,0.6596,FALSE,FALSE,FALSE,kIx0b9,0.0037,8.895e-74,tc,TRUE,reported,0.0462,2.675e-9,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs11654699,T,C,T,C,0.2055,-7e-4,0.5243,0.471,FALSE,FALSE,FALSE,kIx0b9,0.0052,0.9781,tc,TRUE,reported,0.0449,4.628e-6,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs11675119,A,C,A,C,-0.2541,-0.0028,0.2699,0.28759999999999997,FALSE,FALSE,FALSE,kIx0b9,0.0059,0.7945,tc,TRUE,reported,0.0488,1.931e-7,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs12595161,A,G,A,G,-0.4178,-0.0118,0.0511,0.03825999999999996,FALSE,FALSE,FALSE,kIx0b9,0.0088,0.3265,tc,TRUE,reported,0.0914,4.883e-6,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs157595,A,G,A,G,-0.3872,-0.0408,0.3228,0.3799,FALSE,FALSE,FALSE,kIx0b9,0.004,9.458e-23,tc,TRUE,reported,0.0551,2.041e-12,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs6857,T,C,T,C,0.7871,0.1641,0.3219,0.1491,FALSE,FALSE,FALSE,kIx0b9,0.0081,1.702e-86,tc,TRUE,reported,0.0565,4.83e-44,nft4,TRUE,reported,uCQgJL,2,TRUE,NA
-rs75680843,T,C,T,C,-0.3709,-0.0228,0.0721,0.052769999999999984,FALSE,FALSE,FALSE,kIx0b9,0.01,0.03967,tc,TRUE,reported,0.0809,4.59e-6,nft4,TRUE,reported,uCQgJL,2,TRUE,NA

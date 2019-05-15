@@ -12,14 +12,19 @@ suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 
 ### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
-mrdat <- read_csv(infile)
+mrdat.raw <- read_csv(infile)
+mrdat <- filter(mrdat.raw, mr_keep == TRUE)
 
 ## Data Frame of nsnps and number of iterations 
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
                      NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
 
 nsnps <- nrow(mrdat)
+SignifThreshold <- 0.05
 NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
+## Bonfernoni correction, needs a crazy amount of nbdistributions for larger nsnps. 
+# SignifThreshold <- 0.05/nsnps
+# NbDistribution <- (nsnps+100)/SignifThreshold
 
 ### ===== MR-PRESSO ===== ###
 message("\n CALCULATING PLEITROPY \n")
@@ -32,7 +37,7 @@ mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
                                DISTORTIONtest = TRUE,
                                data = as.data.frame(mrdat),
                                NbDistribution = NbDistribution,
-                               SignifThreshold = 0.05)
+                               SignifThreshold = SignifThreshold)
 
 ### ===== FORMAT DATA ===== ###
 ## extract RSSobs and Pvalue 
@@ -46,10 +51,13 @@ if("Global Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
 
 ## If Global test is significant, append outlier tests to mrdat
 if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
-  mrdat.out <- mrdat %>% 
+  outliers <- mrdat %>% 
     bind_cols(mrpresso.out$`MR-PRESSO results`$`Outlier Test`) %>% 
     rename(mrpresso_RSSobs = RSSobs, mrpresso_pval = Pvalue) %>% 
-    mutate(mrpresso_keep = as.numeric(str_replace_all(mrpresso_pval, pattern="<", repl="")) > 0.05) 
+    mutate(mrpresso_keep = as.numeric(str_replace_all(mrpresso_pval, pattern="<", repl="")) > SignifThreshold) %>% 
+    select(SNP, mrpresso_RSSobs, mrpresso_pval, mrpresso_keep) 
+  mrdat.out <- mrdat.raw %>% 
+    left_join(outliers, by = 'SNP')
 } else {
   mrdat.out <- mrdat %>% 
     mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA, mrpresso_keep = TRUE)
@@ -60,7 +68,9 @@ mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']),
                        id.outcome = as.character(mrdat[1,'id.outcome']), 
                        outcome = as.character(mrdat[1,'outcome']), 
                        exposure = as.character(mrdat[1,'exposure']), 
-                       n_outliers = sum(mrdat.out$mrpresso_keep == F),
+                       pt = mrdat.raw %>% slice(1) %>% pull(pt),
+                       outliers_removed = FALSE,
+                       n_outliers = sum(mrdat.out$mrpresso_keep == F, na.rm = T),
                        RSSobs = RSSobs,
                        pval = mrpresso.p)
 

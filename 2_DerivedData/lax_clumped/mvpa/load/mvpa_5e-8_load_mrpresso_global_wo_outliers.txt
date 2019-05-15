@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-zrYS0o	FKBGFO	load	mvpa	3	17.379387459266063	0.962

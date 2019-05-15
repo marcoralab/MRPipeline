@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-S75WLy	nABOjO	ggt	audit	1	75.55830278275171	<0.001

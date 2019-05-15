@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yJ5R0H	hoCXMu	hips	educ	0	2682.4587393729953	0.9763

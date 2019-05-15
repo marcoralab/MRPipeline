@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-BizsPC	wjVYYF	load	dbp	4	1967.6554521612807	<1.33333333333333e-05

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-je6fRo	oElHEC	load	dep	0	14.567181443209714	0.523

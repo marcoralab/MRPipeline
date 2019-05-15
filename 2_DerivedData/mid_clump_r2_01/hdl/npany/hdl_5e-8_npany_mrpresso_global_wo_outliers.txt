@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-RNDzCO	Avxxup	npany	hdl	2	123.15137307561515	0.5025

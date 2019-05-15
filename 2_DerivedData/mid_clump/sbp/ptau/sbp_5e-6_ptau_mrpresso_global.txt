@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OSAsWD	19tlUk	ptau	sbp	0	2011.2446363182019	0.97175

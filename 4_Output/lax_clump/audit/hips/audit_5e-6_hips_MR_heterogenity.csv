@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sZAP4S,M8tyRI,hips,audit,MR Egger,64.76002803821997,64,0.44993527848200793,2019-03-11
-sZAP4S,M8tyRI,hips,audit,Inverse variance weighted,65.90875967054698,65,0.4452068812595657,2019-03-11

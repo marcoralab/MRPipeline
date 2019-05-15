@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-HO1pLk	HJlBUw	hipv2015	trig	1	169.53219007322159	0.0231

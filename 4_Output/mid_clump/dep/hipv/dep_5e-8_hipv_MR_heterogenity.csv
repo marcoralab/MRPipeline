@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QalADm,CsRO81,hipv,dep,MR Egger,12.224282038839268,14,0.5882965716970205,2019-04-11
-QalADm,CsRO81,hipv,dep,Inverse variance weighted,20.42144223896903,15,0.15635472074646564,2019-04-11

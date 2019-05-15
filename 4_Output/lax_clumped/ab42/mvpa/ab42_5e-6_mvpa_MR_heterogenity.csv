@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-QMA5eX,TZ8zwu,mvpa,ab42,MR Egger,22.357620911995046,14,0.07155873788578157,2018-10-12
-QMA5eX,TZ8zwu,mvpa,ab42,Inverse variance weighted,27.13326703288129,15,0.027669111363777518,2018-10-12

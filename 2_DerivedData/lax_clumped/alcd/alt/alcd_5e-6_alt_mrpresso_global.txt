@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Tajgry	chUK8m	alt	alcd	0	22.12820057925556	0.352

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-fK04L9,icFP30,ggt,auditc,MR Egger,0.22059404212800973,1,0.6385876604075481,2019-01-29
-fK04L9,icFP30,ggt,auditc,Inverse variance weighted,4.336178274738657,2,0.11439600323893599,2019-01-29

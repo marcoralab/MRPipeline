@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-KtzzVo,dltc2A,ab42,oilfish,MR Egger,103.08485412008852,64,0.001416722955479677,2018-11-27
-KtzzVo,dltc2A,ab42,oilfish,Inverse variance weighted,111.22892680416228,65,3.1450935336567904e-4,2018-11-27

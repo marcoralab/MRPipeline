@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-RWCOFC	ZZgrve	ptau	hdl	3	337.1571245108275	0.50228

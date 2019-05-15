@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pTsBod	JHa2Cu	alcd	ces	0	4.195355168583424	0.507

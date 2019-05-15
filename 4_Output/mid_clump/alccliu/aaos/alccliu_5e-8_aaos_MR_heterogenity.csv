@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Ma4idB,LFobvo,aaos,alccliu,MR Egger,51.69301717108452,54,0.5638726793921833,2019-04-11
-Ma4idB,LFobvo,aaos,alccliu,Inverse variance weighted,67.46001635190851,55,0.12078670859877813,2019-04-11

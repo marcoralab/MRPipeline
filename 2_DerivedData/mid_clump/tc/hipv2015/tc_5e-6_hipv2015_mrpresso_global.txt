@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tmMPvX	sZndGL	hipv2015	tc	0	363.56064859554465	0.14404

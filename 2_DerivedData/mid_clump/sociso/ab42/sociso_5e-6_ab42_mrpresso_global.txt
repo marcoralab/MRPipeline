@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-3qHmzR	3b9lMu	ab42	sociso	0	100.11649261863408	0.2455

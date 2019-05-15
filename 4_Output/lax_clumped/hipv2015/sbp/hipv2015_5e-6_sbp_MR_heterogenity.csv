@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-TMIGbI,XFPvIK,sbp,hipv2015,MR Egger,43.408243889661854,9,1.8137487405715692e-6,2018-10-12
-TMIGbI,XFPvIK,sbp,hipv2015,Inverse variance weighted,49.87576725816297,10,2.813218781288335e-7,2018-10-12

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-H7pFY8,C61rNE,alcc,dbp,MR Egger,4167.565761853499,3126,3.2607589858019135e-33,2018-12-10
-H7pFY8,C61rNE,alcc,dbp,Inverse variance weighted,4167.637074464467,3127,3.735212011292121e-33,2018-12-10

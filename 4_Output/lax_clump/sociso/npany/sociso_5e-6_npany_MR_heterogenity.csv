@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-zuM2lt,fpa5f6,npany,sociso,MR Egger,123.82450542277657,124,0.48755282870997835,2019-03-25
-zuM2lt,fpa5f6,npany,sociso,Inverse variance weighted,126.17504841487745,125,0.45373436506126713,2019-03-25

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-i8YQbf,L4GM0r,alcc,diab,MR Egger,244.80120100520864,181,0.0011113398954676066,2018-12-07
-i8YQbf,L4GM0r,alcc,diab,Inverse variance weighted,252.2037732237927,182,4.423954204870557e-4,2018-12-07

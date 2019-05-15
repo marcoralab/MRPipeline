@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-sgerOM,2nJX6o,load,hear,MR Egger,114.63343118141688,112,0.4132980982034431,2019-04-11
-sgerOM,2nJX6o,load,hear,Inverse variance weighted,115.55413049999318,113,0.4156959516487012,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oodNez	t2Dpmn	nft4	sleepdoherty	0	9.565786501321849	0.629

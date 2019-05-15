@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-GedzRa	c0Va7D	load	audit	2	75.81533597880848	0.0724

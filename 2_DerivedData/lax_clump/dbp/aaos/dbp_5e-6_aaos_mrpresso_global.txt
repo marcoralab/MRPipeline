@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-UTYaMU	VSF3CG	aaos	dbp	0	3631.854496243308	1e-5

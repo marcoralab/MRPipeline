@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-RTR02b	lDct2E	aaos	tc	11	441.54982181323504	0.00156

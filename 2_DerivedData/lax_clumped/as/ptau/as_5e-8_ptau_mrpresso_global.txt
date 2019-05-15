@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Hq8O2a	23KuMC	ptau	as	0	4.05370226079984	0.917

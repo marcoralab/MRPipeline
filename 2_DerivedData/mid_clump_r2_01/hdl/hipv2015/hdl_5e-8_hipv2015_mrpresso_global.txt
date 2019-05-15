@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-b4zV7w	1AAMdw	hipv2015	hdl	0	151.87438635565707	0.053900000000000003

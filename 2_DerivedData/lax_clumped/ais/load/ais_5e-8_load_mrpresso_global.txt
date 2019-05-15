@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-AeDxDn	UwE979	load	ais	0	13.068385325079069	0.503

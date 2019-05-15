@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-99f7hZ	Mx6pY3	audit	ais	0	19.95147455921513	0.195

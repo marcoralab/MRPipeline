@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lrlRPb,pNs5CA,hips,trig,MR Egger,313.2838298345267,293,0.19857687944608524,2019-03-25
-lrlRPb,pNs5CA,hips,trig,Inverse variance weighted,314.4565170299842,294,0.19706669004959768,2019-03-25

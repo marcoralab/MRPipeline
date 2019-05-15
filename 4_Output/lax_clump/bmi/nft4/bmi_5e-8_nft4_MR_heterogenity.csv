@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-YvT54p,cHMeLL,nft4,bmi,MR Egger,1761.5584820880777,1596,0.002210477408434035,2019-04-02
-YvT54p,cHMeLL,nft4,bmi,Inverse variance weighted,1762.5664165430721,1597,0.0022153648328083835,2019-04-02

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-La81i5	crrKQs	tau	audit	0	53.002281760238674	0.2316

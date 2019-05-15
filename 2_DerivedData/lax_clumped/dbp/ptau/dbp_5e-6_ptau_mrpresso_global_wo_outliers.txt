@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-wi1Lpz	WP777b	ptau	dbp	0	NA	NA

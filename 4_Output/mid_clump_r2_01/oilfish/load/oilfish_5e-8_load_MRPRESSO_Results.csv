@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-lfuzxh,gmRcCL,load,oilfish,Inverse variance weighted (fixed effects),41,0.26098620466961736,0.18083102526969205,0.1489472134033822,2019-04-07
-lfuzxh,gmRcCL,load,oilfish,Weighted median,41,0.14866219170614345,0.25793297581974095,0.5643720279140368,2019-04-07
-lfuzxh,gmRcCL,load,oilfish,Weighted mode,41,-0.2103581806395476,0.5412193534000703,0.6995781614360688,2019-04-07
-lfuzxh,gmRcCL,load,oilfish,MR Egger,41,0.6339471303405917,0.7420389099723881,0.39813897920271557,2019-04-07

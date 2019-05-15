@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-a2ZIOv	dyIkcU	tau	oilfish	0	221.7776570481902	0.6369

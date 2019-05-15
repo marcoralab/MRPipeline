@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-2gbmpb,ZFaZSS,tau,ces,MR Egger,24.72850586544509,23,0.3644339203846625,2019-01-30
-2gbmpb,ZFaZSS,tau,ces,Inverse variance weighted,24.732561338766835,24,0.4204082291202632,2019-01-30

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-69Y7gE,IXRuMi,aaos,alcc,MR Egger,66.06631181128819,45,0.022013600623539492,2019-04-07
-69Y7gE,IXRuMi,aaos,alcc,Inverse variance weighted,66.47398527165495,46,0.025688584188900573,2019-04-07

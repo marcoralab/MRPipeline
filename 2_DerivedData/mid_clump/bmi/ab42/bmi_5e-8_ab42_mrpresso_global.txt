@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DXgKyE	42GxBT	ab42	bmi	1	1804.3307404863342	<1.33333333333333e-05

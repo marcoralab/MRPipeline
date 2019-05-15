@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-i8YQbf	L4GM0r	alcc	diab	4	399.6832115131341	<1e-04

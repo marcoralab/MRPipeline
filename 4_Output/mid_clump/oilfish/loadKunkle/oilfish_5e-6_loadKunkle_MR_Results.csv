@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-GaDrIp,du2zL2,loadKunkle,oilfish,Inverse variance weighted (fixed effects),218,0.04943535765577565,0.08737896678337201,0.5715582377500026,2019-04-11
-GaDrIp,du2zL2,loadKunkle,oilfish,Weighted median,218,0.11532020143012167,0.12754485863840503,0.3659137175768406,2019-04-11
-GaDrIp,du2zL2,loadKunkle,oilfish,Weighted mode,218,0.12589378784343364,0.3987231459114632,0.7525015324645306,2019-04-11
-GaDrIp,du2zL2,loadKunkle,oilfish,MR Egger,218,-0.15866132091604776,0.36772439399882034,0.6665584199531034,2019-04-11

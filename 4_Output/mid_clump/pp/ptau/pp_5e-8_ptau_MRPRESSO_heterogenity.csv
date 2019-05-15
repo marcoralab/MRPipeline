@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DgDuGp,RPXUko,ptau,pp,MR Egger,913.0446218247592,873,0.16853574233419996,2019-04-11
-DgDuGp,RPXUko,ptau,pp,Inverse variance weighted,916.472204808628,874,0.1548767830872242,2019-04-11

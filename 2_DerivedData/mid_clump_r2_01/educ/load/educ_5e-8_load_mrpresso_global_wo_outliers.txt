@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-0phQQO	S24fNL	load	educ	0	NA	NA

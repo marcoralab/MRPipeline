@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-tAoSID	S31p41	aaos	mvpa	1	161.19517462000363	0.0325

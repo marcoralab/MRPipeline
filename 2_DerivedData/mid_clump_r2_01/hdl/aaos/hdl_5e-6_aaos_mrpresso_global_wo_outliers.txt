@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-MTEOMa	xEktxS	aaos	hdl	3	276.3868228985994	5e-4

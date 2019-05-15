@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-cJSE5T	3w90IP	ab42	diab	1	427.53854339858884	0.01324

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gT541c	vax1mP	ptau	sleepdoherty	0	74.07766368590602	0.309

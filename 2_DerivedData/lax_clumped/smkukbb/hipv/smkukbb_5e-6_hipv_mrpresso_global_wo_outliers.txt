@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-RoCnEY	W5JumG	hipv	smkukbb	2	778.2466897600109	0.09556

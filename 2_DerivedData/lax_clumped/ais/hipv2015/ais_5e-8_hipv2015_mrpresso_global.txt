@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-cvPgWt	oT242M	hipv2015	ais	0	45.14580875607447	<0.001

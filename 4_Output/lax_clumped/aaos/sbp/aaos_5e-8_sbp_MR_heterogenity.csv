@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oCRk2i,0Hc2SK,sbp,aaos,MR Egger,69.49589544261244,16,1.2226656574074546e-8,2018-10-12
-oCRk2i,0Hc2SK,sbp,aaos,Inverse variance weighted,70.46869302647654,17,1.790767146610917e-8,2018-10-12

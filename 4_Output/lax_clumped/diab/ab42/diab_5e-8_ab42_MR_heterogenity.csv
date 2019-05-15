@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-5tJRUM,vliRS0,ab42,diab,MR Egger,187.75995771438804,174,0.22526390875779623,2019-01-30
-5tJRUM,vliRS0,ab42,diab,Inverse variance weighted,187.80138026870523,175,0.24081359676068637,2019-01-30

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tobn2c	sAhRCI	tau	ldl	1	200.00040280567424	<1e-04

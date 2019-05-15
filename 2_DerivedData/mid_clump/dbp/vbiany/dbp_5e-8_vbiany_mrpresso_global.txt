@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-XTUyUZ	Kyu61o	vbiany	dbp	0	1404.8360220927996	0.24104

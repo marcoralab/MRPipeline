@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-42l56Z	GMCx0U	ptau	pp	1	1169.1739910737292	0.00596

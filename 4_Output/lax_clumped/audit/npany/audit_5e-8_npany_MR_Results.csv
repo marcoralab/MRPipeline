@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-MfKCqE,uz6bct,npany,audit,Inverse variance weighted (fixed effects),15,-1.2303688649015818,2.242795268146236,0.5832887448837247,2019-01-30
-MfKCqE,uz6bct,npany,audit,Weighted median,15,-0.87765308197124825,3.09788290475938,0.776941222333371,2019-01-30
-MfKCqE,uz6bct,npany,audit,Weighted mode,15,-0.7445290009365166,3.2046065380413635,0.8196429813448115,2019-01-30
-MfKCqE,uz6bct,npany,audit,MR Egger,15,-0.8861275163543696,3.721519771758,0.8155084370045016,2019-01-30

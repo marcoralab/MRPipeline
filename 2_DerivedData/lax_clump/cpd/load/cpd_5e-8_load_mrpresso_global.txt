@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PdQjb3	8MG3IY	load	cpd	0	23.681214331097166	0.447

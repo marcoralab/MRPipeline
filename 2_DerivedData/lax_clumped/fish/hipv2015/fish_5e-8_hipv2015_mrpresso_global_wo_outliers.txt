@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-YK6UZA	umngr2	hipv2015	fish	0	NA	NA

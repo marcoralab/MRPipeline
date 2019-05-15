@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Dezs4H	FCcU4o	ptau	bmi	1	1888.3276957396356	0.37238

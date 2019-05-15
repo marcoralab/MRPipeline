@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-BtsEMS	wp6Ugp	loadKunkle	smkcpd	0	NA	NA

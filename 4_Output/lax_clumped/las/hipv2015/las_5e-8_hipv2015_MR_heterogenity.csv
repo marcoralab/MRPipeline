@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MesxAK,90EKuu,hipv2015,las,MR Egger,7.50804935515711,3,0.05735198992151621,2019-01-30
-MesxAK,90EKuu,hipv2015,las,Inverse variance weighted,7.974664978323481,4,0.09251066964125214,2019-01-30

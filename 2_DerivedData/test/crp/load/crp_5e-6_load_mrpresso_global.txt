@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BfB1gR	5G8a1j	AD	crp	12	5104.631975611844	<1e-04

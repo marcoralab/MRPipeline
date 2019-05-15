@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-JaXGtp	REsNeL	aaos	sociso	0	NA	NA

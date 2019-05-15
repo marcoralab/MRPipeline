@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wSs9Is	OLgarq	vbiany	trig	0	143.4676062872774	0.4979

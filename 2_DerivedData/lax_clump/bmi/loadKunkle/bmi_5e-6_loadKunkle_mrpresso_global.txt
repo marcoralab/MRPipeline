@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-hVcx49	s6cThq	loadKunkle	bmi	12	7872.195377267347	<1e-05

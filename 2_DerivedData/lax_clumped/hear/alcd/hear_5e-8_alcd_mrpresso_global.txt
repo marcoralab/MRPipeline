@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-6hSs3f	v2p17D	alcd	hear	0	26.326766815559353	0.8978

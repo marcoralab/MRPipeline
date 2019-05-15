@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-FjOmkk	BLDGLS	ab42	insom	1	106.29974907674374	0.1324

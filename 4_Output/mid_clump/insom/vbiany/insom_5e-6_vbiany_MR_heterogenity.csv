@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Oxkqtp,DholAD,vbiany,insom,MR Egger,122.97579952683593,106,0.1242242336944917,2019-04-11
-Oxkqtp,DholAD,vbiany,insom,Inverse variance weighted,123.38117817217348,107,0.13300372292785706,2019-04-11

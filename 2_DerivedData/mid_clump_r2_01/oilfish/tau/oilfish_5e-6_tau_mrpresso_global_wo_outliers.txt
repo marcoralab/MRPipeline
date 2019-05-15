@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-eGuMHJ	AhnM8y	tau	oilfish	0	NA	NA

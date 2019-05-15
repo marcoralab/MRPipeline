@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HuC280,5UxKGP,tau,cpd,MR Egger,22.960654919748645,25,0.5798609610974332,2019-04-09
-HuC280,5UxKGP,tau,cpd,Inverse variance weighted,26.272396143892564,26,0.44821256439081786,2019-04-09

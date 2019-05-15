@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-KBEhhV,KfkFfp,hipv,audit,Inverse variance weighted (fixed effects),6,-0.1927466329487356,0.3551557985458037,0.5873294307285765,2019-04-07
-KBEhhV,KfkFfp,hipv,audit,Weighted median,6,-0.2899135992118808,0.4195325107443484,0.4895406244338963,2019-04-07
-KBEhhV,KfkFfp,hipv,audit,Weighted mode,6,-0.17410287143349024,0.5204888622902405,0.7515784266796948,2019-04-07
-KBEhhV,KfkFfp,hipv,audit,MR Egger,6,-0.1541129211853552,0.5863687208828471,0.8056668011365513,2019-04-07

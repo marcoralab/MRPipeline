@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oq2YHo	BVgmbG	ptau	sbp	0	2314.869088710833	0.91637

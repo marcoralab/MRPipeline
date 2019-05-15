@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qdz91G	LFYD4l	aaos	bmi	4	4202.67290501225	<1e-05

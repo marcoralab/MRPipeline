@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-DAmiwT,yaiQjS,nft4,audit,Inverse variance weighted (fixed effects),15,-0.7809932053723107,1.2870445332088134,0.5439761280076882,2019-01-30
-DAmiwT,yaiQjS,nft4,audit,Weighted median,15,-0.5028461891806901,1.7851344684483454,0.7781848052895849,2019-01-30
-DAmiwT,yaiQjS,nft4,audit,Weighted mode,15,-0.4811336356177307,1.805376133246906,0.7937388110742715,2019-01-30
-DAmiwT,yaiQjS,nft4,audit,MR Egger,15,-0.6168656124087643,2.024231726416866,0.7653875579203646,2019-01-30

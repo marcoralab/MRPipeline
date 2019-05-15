@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LpDUX7	hNT2zE	npany	audit	0	8.758344788398064	0.577

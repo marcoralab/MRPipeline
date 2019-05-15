@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Blynuv,hUKQTH,nft4,mdd,MR Egger,188.46360782300223,177,0.2637388226492749,2019-03-25
-Blynuv,hUKQTH,nft4,mdd,Inverse variance weighted,188.46661657913347,178,0.2811637260602394,2019-03-25

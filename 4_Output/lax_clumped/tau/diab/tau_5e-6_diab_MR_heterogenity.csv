@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ijhQv2,pPBPR7,diab,tau,MR Egger,29.943395720940337,6,4.029448068602765e-5,2018-10-12
-ijhQv2,pPBPR7,diab,tau,Inverse variance weighted,32.10499231369838,7,3.88353533255022e-5,2018-10-12

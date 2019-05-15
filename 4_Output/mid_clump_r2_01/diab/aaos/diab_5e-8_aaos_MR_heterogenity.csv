@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-X95NEM,0nUXCV,aaos,diab,MR Egger,199.98627993680245,137,3.6226216423448183e-4,2019-04-07
-X95NEM,0nUXCV,aaos,diab,Inverse variance weighted,201.1096723290168,138,3.6725968705541765e-4,2019-04-07

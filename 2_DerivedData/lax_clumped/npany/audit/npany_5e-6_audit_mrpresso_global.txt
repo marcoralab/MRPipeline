@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-q17A0b	NDOyIo	audit	npany	0	14.309994925083332	0.66

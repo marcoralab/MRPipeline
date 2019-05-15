@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MJFXA1	SlciSW	tau	bmi	2	2930.0055478078425	0.00869

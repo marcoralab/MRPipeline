@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ip7oii	GEDOUw	ab42	tc	4	379.8330009449603	0.07644

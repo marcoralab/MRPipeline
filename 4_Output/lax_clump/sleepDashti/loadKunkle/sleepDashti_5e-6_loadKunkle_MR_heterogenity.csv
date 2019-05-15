@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-zYD8HV,A6SL1f,loadKunkle,sleepDashti,MR Egger,531.6162275152901,402,1.4666547124939431e-5,2019-04-06
-zYD8HV,A6SL1f,loadKunkle,sleepDashti,Inverse variance weighted,532.7387324772982,403,1.4713069013219911e-5,2019-04-06

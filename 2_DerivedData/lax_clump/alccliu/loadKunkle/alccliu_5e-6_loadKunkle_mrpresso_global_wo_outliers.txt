@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-JyMTVX	iFr1Jp	loadKunkle	alccliu	1	301.31739973812745	0.0107

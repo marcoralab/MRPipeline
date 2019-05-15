@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-m1HdIY	LpTNUz	load	smki	1	188.18421910742208	0.0172

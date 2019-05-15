@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BG8Ipc	aQgk9O	hipv2015	oilfish	0	177.99134609623127	0.1768

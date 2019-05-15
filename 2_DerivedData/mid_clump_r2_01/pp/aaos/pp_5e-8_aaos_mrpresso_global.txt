@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LvMhuI	79hJpE	aaos	pp	2	1237.3248946687293	<4e-05

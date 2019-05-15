@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-T6D81s	LLAoAa	npany	insom	0	17.15369500831474	0.377

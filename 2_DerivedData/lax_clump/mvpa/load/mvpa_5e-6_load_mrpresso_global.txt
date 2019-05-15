@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wYIZai	hS30OS	load	mvpa	1	2624.6389106931974	<1e-04

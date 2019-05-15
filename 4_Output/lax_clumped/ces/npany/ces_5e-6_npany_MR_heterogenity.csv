@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-6MQSAr,1NKiln,npany,ces,MR Egger,30.296492312871266,34,0.6498197182313028,2019-01-30
-6MQSAr,1NKiln,npany,ces,Inverse variance weighted,30.316341392727075,35,0.6936475702316112,2019-01-30

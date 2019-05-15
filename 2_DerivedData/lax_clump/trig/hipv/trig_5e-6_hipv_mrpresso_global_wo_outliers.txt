@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-zvE97y	M9IiYF	hipv	trig	2	380.77611728585737	<1e-04

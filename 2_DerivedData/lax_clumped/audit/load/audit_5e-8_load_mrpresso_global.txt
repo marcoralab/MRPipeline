@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-IZa504	rbb9MH	load	audit	2	50.15201338447926	<0.001

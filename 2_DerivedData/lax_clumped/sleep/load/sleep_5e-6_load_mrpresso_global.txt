@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9GNQDs	VQZrkE	load	sleep	0	20.17253048357464	0.772

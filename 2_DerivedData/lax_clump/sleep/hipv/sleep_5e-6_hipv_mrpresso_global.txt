@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-RmdHpT	LLOsbn	hipv	sleep	0	33.823759066370556	0.282

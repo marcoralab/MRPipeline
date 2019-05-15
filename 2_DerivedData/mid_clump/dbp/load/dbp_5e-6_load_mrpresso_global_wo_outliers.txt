@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-BjCFtU	F7BhR6	load	dbp	2	3243.3941145819736	<1e-05

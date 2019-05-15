@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AviBAl,09JWMX,ab42,sleepdoherty,MR Egger,59.49753780669951,60,0.4940354108871668,2019-02-12
-AviBAl,09JWMX,ab42,sleepdoherty,Inverse variance weighted,61.040976840220615,61,0.47444142543957224,2019-02-12

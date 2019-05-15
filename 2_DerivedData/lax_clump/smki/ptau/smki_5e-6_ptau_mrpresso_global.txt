@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-aMOKle	bQxD05	ptau	smki	0	434.7963107584492	0.84212

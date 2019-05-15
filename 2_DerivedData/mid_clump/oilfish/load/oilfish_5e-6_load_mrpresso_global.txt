@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zYJ75R	EczrdG	load	oilfish	1	2885.195249352165	<1e-04

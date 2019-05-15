@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-yRuylf,FDet1e,aaos,alcc,MR Egger,65.62744990122545,48,0.04620355292831311,2019-04-11
-yRuylf,FDet1e,aaos,alcc,Inverse variance weighted,65.77725540497421,49,0.054985630374532954,2019-04-11

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-1TeiZS,NMoc0s,cpd,ab42,MR Egger,25.02702420863416,14,0.034301538968227,2018-10-12
-1TeiZS,NMoc0s,cpd,ab42,Inverse variance weighted,25.74380181016514,15,0.040803366011645664,2018-10-12

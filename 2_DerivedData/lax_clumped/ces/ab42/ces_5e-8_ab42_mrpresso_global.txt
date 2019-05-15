@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-VOK9fP	owRjql	ab42	ces	0	8.164774808974908	0.217

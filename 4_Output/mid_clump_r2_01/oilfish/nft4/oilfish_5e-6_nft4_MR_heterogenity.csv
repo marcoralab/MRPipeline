@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-dQ4TAM,fzuLDm,nft4,oilfish,MR Egger,344.35022941886996,165,1.0275194896438517e-14,2019-04-07
-dQ4TAM,fzuLDm,nft4,oilfish,Inverse variance weighted,345.08084330575076,166,1.2318669754179678e-14,2019-04-07

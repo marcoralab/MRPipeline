@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rRrGyf	cbiuxJ	sleep	tau	0	20.140150604781883	0.106

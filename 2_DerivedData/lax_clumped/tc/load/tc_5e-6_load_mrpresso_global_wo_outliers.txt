@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-JEq2xZ	BNbZLX	load	tc	19	579.8319749301819	<4e-05

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-qGBKAG	jyulsa	alcd	pp	1	2612.6937843332553	0.01792

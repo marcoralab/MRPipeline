@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wPReFL	pPILdf	tau	dbp	1	2321.9628886079013	0.02182

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-1VDvJ5	V3kkw4	hipv2015	trig	0	165.5116921707768	0.1111

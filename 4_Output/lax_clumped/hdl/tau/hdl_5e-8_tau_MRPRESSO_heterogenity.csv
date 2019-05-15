@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-LYMGRW,tn4D5C,tau,hdl,MR Egger,208.2493248286125,204,0.40443442700958987,2019-01-29
-LYMGRW,tn4D5C,tau,hdl,Inverse variance weighted,208.74379306324627,205,0.41423614773256884,2019-01-29

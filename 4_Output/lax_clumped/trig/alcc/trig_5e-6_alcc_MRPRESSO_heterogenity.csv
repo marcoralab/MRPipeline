@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-3frSaE,lRRm7l,alcc,trig,MR Egger,471.62585460989084,289,6.121420092655289e-11,2018-12-07
-3frSaE,lRRm7l,alcc,trig,Inverse variance weighted,480.2208967650639,290,1.4043328336060462e-11,2018-12-07

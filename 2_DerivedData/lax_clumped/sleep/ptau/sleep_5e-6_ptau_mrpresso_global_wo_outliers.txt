@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-kzOYt2	SOc73N	ptau	sleep	0	NA	NA

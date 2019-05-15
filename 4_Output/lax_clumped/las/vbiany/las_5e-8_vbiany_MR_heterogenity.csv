@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ASyM35,kz7dM0,vbiany,las,MR Egger,2.418405866353846,3,0.4902175733846535,2019-01-30
-ASyM35,kz7dM0,vbiany,las,Inverse variance weighted,2.6007322107091815,4,0.6266934215056885,2019-01-30

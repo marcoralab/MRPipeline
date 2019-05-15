@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-LMi3WU,AduAsb,vbiany,ldl,MR Egger,189.21250469481302,205,0.7786096301786839,2019-03-25
-LMi3WU,AduAsb,vbiany,ldl,Inverse variance weighted,189.29786413312038,206,0.7919280383511103,2019-03-25

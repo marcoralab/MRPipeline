@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Dp2GNN	BwEROu	ab42	dbp	0	2395.738624078983	0.00113

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-d3rsE2	ItQCPD	tau	dbp	0	1209.0006072154526	0.03322

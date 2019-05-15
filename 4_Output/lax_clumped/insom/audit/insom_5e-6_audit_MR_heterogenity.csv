@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-9QpNlW,Q6Okue,audit,insom,MR Egger,181.8269887779317,122,3.630212614205674e-4,2018-12-08
-9QpNlW,Q6Okue,audit,insom,Inverse variance weighted,185.71349792376938,123,2.2397472671464164e-4,2018-12-08

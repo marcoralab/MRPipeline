@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EAOpa9,DpHUEo,ptau,audit,MR Egger,60.41686109772042,53,0.22561202303309638,2019-03-11
-EAOpa9,DpHUEo,ptau,audit,Inverse variance weighted,61.34796753155687,54,0.22939957082783718,2019-03-11

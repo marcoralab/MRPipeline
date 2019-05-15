@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-DurhGC,A9cZ7A,nft4,dep,MR Egger,138.21666269197812,168,0.9549838943100769,2019-03-25
-DurhGC,A9cZ7A,nft4,dep,Inverse variance weighted,146.34829224870523,169,0.8952958146128057,2019-03-25

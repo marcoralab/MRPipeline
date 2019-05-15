@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-h2F8Et	CIPdyX	hips	bmi	0	1553.3231835365336	0.9241333333333334

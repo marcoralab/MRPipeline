@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pwvbST	4dxgKZ	aaos	oilfish	1	714.940516143991	<1e-04

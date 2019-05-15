@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vmN3Kl	ObvKAP	hipv	hear	0	128.3766025006103	0.4262

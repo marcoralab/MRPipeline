@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Qziyee,N6UNo4,alcc,fish,MR Egger,213.39557369327383,120,3.313582294900981e-7,2018-12-08
-Qziyee,N6UNo4,alcc,fish,Inverse variance weighted,219.6641515420806,121,1.0550475784023216e-7,2018-12-08

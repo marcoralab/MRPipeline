@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-n82DoY	n4KwIT	ab42	dbp	0	2685.0605893892734	1e-4

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-T8Nsik,w5m3B0,load,dbp,MR Egger,1694.1612087423375,1323,1.504990797168587e-11,2019-04-11
-T8Nsik,w5m3B0,load,dbp,Inverse variance weighted,1697.026089605065,1324,1.2384594812558383e-11,2019-04-11

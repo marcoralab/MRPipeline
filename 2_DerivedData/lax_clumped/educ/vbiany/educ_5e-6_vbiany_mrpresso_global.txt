@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-95676W	FMomcT	vbiany	educ	0	2948.891678169192	0.06252

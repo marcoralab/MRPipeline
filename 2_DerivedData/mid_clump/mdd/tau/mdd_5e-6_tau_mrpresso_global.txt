@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-K650Cb	8H3PdF	tau	mdd	0	205.79238800322236	0.021

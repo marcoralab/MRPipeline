@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-7B0sx6	TVAYQI	load	dep	0	NA	NA

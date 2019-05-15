@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-u3xpOK	ecIxib	ptau	ldl	2	362.85452658636274	<1e-04

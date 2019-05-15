@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ELfskf,FM6R4j,pp,tau,MR Egger,9.057391830305379,9,0.4319933828326581,2018-10-12
-ELfskf,FM6R4j,pp,tau,Inverse variance weighted,17.199574720080054,10,0.0700629082638417,2018-10-12

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-lGDNHQ	a5p8Yk	load	bmi	8	3955.713704026711	<1e-05

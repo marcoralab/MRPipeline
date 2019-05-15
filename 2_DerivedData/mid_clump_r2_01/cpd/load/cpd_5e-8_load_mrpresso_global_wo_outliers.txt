@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-1Ro29G	V0MA7I	load	cpd	0	NA	NA

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BuRLXs,V6We5y,nft4,alccliu,MR Egger,52.36909327281514,56,0.6130984533080737,2019-04-11
-BuRLXs,V6We5y,nft4,alccliu,Inverse variance weighted,54.06708470475444,57,0.5858135420921174,2019-04-11

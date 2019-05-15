@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-9DgAVE	kUMLXI	hipv2015	cpd	0	20.431878281694537	0.387

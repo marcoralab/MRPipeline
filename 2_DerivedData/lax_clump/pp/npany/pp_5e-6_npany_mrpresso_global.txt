@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-v0z87P	sw90TM	npany	pp	0	2426.399548362469	0.17099

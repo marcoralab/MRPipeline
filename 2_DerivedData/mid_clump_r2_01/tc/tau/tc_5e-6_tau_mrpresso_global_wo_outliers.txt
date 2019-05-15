@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Fos9tM	FimF6P	tau	tc	3	183.48645793447469	0.2297

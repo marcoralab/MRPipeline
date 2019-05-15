@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jc5cB2	friXUE	tau	ldl	1	301.6325462767463	<1e-04

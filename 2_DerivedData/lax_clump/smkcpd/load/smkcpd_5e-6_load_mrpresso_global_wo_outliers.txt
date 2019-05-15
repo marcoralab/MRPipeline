@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-9qfGMe	SAYpJX	load	smkcpd	1	187.10555820876831	0.0248

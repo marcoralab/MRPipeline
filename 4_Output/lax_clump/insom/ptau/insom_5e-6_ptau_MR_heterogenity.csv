@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-OeTxMO,ZJTETH,ptau,insom,MR Egger,103.6116475533726,94,0.2337094030189866,2019-03-11
-OeTxMO,ZJTETH,ptau,insom,Inverse variance weighted,104.40522173790133,95,0.23915314969594725,2019-03-11

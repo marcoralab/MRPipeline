@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Q3k50g	WRgeoA	aaos	alcd	1	43.96262287336036	0.037

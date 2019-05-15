@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xlseod,Fkrrs5,insom,hipv2015,MR Egger,26.04667394531426,9,0.0020073712103290857,2018-10-12
-xlseod,Fkrrs5,insom,hipv2015,Inverse variance weighted,26.222618609183357,10,0.0034520358782337618,2018-10-12

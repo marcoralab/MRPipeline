@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ZR87z1,NDBOPi,nft4,tc,MR Egger,623.4947821948186,350,1.1871213423237282e-17,2019-04-09
-ZR87z1,NDBOPi,nft4,tc,Inverse variance weighted,630.321385174936,351,3.4581287174334818e-18,2019-04-09

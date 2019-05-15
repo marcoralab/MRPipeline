@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-MesxAK	90EKuu	hipv2015	las	0	NA	NA

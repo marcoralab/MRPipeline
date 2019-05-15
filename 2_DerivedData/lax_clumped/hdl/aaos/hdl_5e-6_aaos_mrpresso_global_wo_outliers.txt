@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-JR6H67	HM5hzR	aaos	hdl	5	482.6082245357423	8e-5

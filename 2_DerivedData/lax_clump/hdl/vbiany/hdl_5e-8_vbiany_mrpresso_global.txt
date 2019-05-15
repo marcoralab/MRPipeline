@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-TvVOs2	wAwIYi	vbiany	hdl	0	223.732348605021	0.7493

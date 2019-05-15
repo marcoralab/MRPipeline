@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-iBkiB9	gMD359	ptau	trig	1	77.29910872228785	0.3804

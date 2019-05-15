@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ZuNdzn,SoBYSH,aaos,sbp,MR Egger,2888.5859145150544,2611,9.875127554202984e-5,2019-04-12
-ZuNdzn,SoBYSH,aaos,sbp,Inverse variance weighted,2888.599071543417,2612,1.0414077859357608e-4,2019-04-12

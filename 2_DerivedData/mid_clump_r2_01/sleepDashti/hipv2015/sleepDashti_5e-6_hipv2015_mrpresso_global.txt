@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oNAW9N	xEMsac	hipv2015	sleepDashti	0	304.5878418668067	0.0447

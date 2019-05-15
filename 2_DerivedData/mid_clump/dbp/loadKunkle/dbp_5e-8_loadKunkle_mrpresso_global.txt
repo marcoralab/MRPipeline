@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-S2xSP7	tRYZok	loadKunkle	dbp	1	1845.246640447458	<1.33333333333333e-05

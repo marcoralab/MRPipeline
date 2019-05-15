@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-YW9gtk	T3CVF4	load	hdl	10	335.12809512242063	<1e-04

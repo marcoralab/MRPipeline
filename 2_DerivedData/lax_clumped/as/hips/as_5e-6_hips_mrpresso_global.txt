@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KZlUHW	5UdPCy	hips	as	0	72.69008832835307	0.1904

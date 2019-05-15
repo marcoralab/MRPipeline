@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-uPoEGV	NEUf4S	bmi	aaos	3	97.20752056130965	<0.001

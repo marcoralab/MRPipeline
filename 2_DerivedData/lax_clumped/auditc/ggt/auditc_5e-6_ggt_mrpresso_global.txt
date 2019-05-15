@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tjeA8a	PDtZTQ	ggt	auditc	2	103.54631961088255	<2e-04

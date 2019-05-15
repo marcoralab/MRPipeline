@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-tLgM63,AUO0OK,npany,alccliu,MR Egger,195.0591757476267,232,0.9627953789567897,2019-01-30
-tLgM63,AUO0OK,npany,alccliu,Inverse variance weighted,195.1152461074876,233,0.9662965204046235,2019-01-30

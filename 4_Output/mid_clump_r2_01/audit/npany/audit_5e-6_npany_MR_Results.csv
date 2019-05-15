@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-SpbGCm,t2rtCf,npany,audit,Inverse variance weighted (fixed effects),57,-0.5899387860152748,1.6548601265710605,0.7214746805923672,2019-04-07
-SpbGCm,t2rtCf,npany,audit,Weighted median,57,-1.1215135719185536,2.4356382536596644,0.6451861996397856,2019-04-07
-SpbGCm,t2rtCf,npany,audit,Weighted mode,57,-0.46725636651238034,3.8738791865612505,0.9044259949593372,2019-04-07
-SpbGCm,t2rtCf,npany,audit,MR Egger,57,-2.2457993451831606,4.809817277291282,0.6424016348192376,2019-04-07

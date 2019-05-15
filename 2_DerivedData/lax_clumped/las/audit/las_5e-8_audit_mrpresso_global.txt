@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-geZKmn	CRcBwe	audit	las	0	3.2432762223677463	0.721

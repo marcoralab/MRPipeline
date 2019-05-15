@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zzNxjz	hz4JwU	hipv2015	dep	0	21.739995575684336	0.408

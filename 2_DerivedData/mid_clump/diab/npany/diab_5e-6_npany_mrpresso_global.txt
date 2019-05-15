@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-KTJ0Px	qlmwrP	npany	diab	0	357.90436672165794	0.88368

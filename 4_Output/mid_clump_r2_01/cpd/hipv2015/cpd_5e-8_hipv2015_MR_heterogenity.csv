@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-7LG0aG,Daisgo,hipv2015,cpd,MR Egger,3.9259330895594045,6,0.6866991262553606,2019-04-07
-7LG0aG,Daisgo,hipv2015,cpd,Inverse variance weighted,3.9822437988769557,7,0.7818202958791601,2019-04-07

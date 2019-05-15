@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-n8UaDr	4RzPWh	tau	dep	0	13.534771341260232	0.801

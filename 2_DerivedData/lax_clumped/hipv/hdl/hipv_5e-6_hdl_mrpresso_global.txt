@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-jxYgve	NF7ScI	hdl	hipv	1	105.46420700514047	<0.001

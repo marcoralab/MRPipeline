@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BizsPC,wjVYYF,load,dbp,MR Egger,1916.542678560012,1523,1.9619514807796452e-11,2019-02-01
-BizsPC,wjVYYF,load,dbp,Inverse variance weighted,1922.163347122648,1524,1.2200896717203689e-11,2019-02-01

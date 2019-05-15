@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-2rtMTJ	DybadA	hipv	sleepDashti	0	NA	NA

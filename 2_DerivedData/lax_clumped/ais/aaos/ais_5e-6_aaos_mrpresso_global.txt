@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Q2NLUX	DGh3qm	aaos	ais	0	63.76407262216388	0.2898

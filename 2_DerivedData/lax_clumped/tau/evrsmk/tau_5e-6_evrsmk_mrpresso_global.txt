@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tiLabA	RVFXPA	evrsmk	tau	2	32.016676612090556	0.004

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NLdJLa,hgEnFx,npany,sbp,MR Egger,1346.1291896827413,1426,0.9347231287690463,2019-01-29
-NLdJLa,hgEnFx,npany,sbp,Inverse variance weighted,1346.5479815285432,1427,0.9360804391664238,2019-01-29

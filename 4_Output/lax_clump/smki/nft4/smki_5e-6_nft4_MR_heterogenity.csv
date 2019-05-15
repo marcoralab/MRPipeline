@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-7eNADX,OyGxag,nft4,smki,MR Egger,492.8973222220444,476,0.28677127599304714,2019-03-26
-7eNADX,OyGxag,nft4,smki,Inverse variance weighted,493.51052802506985,477,0.29115044813455176,2019-03-26

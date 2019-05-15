@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-BxP3PJ	pdiLk2	ptau	diab	0	179.11278997255587	0.3154

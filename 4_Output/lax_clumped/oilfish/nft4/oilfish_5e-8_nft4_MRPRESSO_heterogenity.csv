@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-NfO9ln,Z83Jnh,nft4,oilfish,MR Egger,73.88026134487053,83,0.7527885905985202,2018-11-27
-NfO9ln,Z83Jnh,nft4,oilfish,Inverse variance weighted,74.28774197451719,84,0.7667970023083275,2018-11-27

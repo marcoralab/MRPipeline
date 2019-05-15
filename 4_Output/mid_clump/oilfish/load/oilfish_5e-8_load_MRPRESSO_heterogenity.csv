@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-wEaLz0,Umljdv,load,oilfish,MR Egger,43.38646429402746,46,0.5823499954232492,2019-04-11
-wEaLz0,Umljdv,load,oilfish,Inverse variance weighted,44.16188467253657,47,0.5908207418032592,2019-04-11

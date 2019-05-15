@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-MswibR	8Cm4mo	bmi	hipv	2	58.85871608829182	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-pMRGjY	R48WbH	tau	mdd	0	42.67742724453168	0.4448

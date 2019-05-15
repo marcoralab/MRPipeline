@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-zNUlxy,HbYc7u,loadKunkle,smki,Inverse variance weighted (fixed effects),121,-0.17794645042588497,0.13220739466123563,0.17831398863118614,2019-04-09
-zNUlxy,HbYc7u,loadKunkle,smki,Weighted median,121,-0.13834514006353862,0.20064241255900703,0.49050178618488577,2019-04-09
-zNUlxy,HbYc7u,loadKunkle,smki,Weighted mode,121,0.2963698995091759,0.5506482878187503,0.5914221050319325,2019-04-09
-zNUlxy,HbYc7u,loadKunkle,smki,MR Egger,121,-0.6109802819515558,0.7135687220938431,0.39359039288163966,2019-04-09

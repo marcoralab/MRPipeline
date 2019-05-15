@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vrK6wq	CM5waK	bmi	ab42	2	98.01903211862984	<0.001

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bzftoK	ll7VvK	ldl	ptau	12	1347.7579354303668	<0.001

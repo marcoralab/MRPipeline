@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-rkGMTf	Y3dJ7e	loadKunkle	smkaoi	0	NA	NA

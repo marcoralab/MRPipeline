@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-vmN3Kl,ObvKAP,hipv,hear,MR Egger,118.68838637107486,117,0.4390438467656486,2019-04-11
-vmN3Kl,ObvKAP,hipv,hear,Inverse variance weighted,119.26159562236501,118,0.45017966981446195,2019-04-11

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-azro2V	fVyMHM	hipv	dep	0	147.99875750017182	0.2254

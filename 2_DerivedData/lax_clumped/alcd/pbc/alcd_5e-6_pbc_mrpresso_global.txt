@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-dIMQT1	MvoCuu	pbc	alcd	0	16.810601847649846	0.387

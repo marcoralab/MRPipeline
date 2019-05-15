@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-DxA659	eTO6qm	npany	as	0	5.800899373561723	0.914

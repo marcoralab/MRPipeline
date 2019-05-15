@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-mKW0aT	DGzGQ5	loadKunkle	cpd	0	45.75806642895725	0.9156

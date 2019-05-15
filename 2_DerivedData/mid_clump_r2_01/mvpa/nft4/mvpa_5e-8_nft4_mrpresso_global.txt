@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-rRQdzo	3D2h92	nft4	mvpa	2	206.11188651134404	<0.001

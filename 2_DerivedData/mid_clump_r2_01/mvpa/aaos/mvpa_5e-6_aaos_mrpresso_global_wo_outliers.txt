@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-I8QVE5	m4blA5	aaos	mvpa	1	149.98338052736554	0.014

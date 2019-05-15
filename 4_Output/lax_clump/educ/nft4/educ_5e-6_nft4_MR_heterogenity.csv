@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ZL0BZ7,MGeoWs,nft4,educ,MR Egger,2819.211393681542,2793,0.3599751986410801,2019-03-28
-ZL0BZ7,MGeoWs,nft4,educ,Inverse variance weighted,2819.2820652787336,2794,0.364631782368277,2019-03-28

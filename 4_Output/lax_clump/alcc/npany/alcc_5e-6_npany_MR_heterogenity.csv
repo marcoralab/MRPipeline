@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MiiPTv,8CEa0D,npany,alcc,MR Egger,48.28426755585399,52,0.6208024377258761,2019-03-11
-MiiPTv,8CEa0D,npany,alcc,Inverse variance weighted,48.95234385064181,53,0.6324660248596867,2019-03-11

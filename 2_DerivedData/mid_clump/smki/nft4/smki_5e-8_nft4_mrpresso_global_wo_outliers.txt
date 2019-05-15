@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-8ixi2S	5isf2M	nft4	smki	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-4trMUp	pEZM16	hipv	tc	1	405.1176032092753	0.00992

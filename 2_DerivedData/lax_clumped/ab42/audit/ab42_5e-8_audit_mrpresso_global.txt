@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	RSSobs	pval
-aIdoa2	ik29zx	audit	ab42	19.88389106750501	0.039

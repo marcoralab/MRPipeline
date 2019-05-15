@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-wAnoDM,P5XBiz,aaos,auditc,MR Egger,4.459957445998604,8,0.8134257447711984,2019-01-29
-wAnoDM,P5XBiz,aaos,auditc,Inverse variance weighted,13.445629721552125,9,0.1434567451961643,2019-01-29

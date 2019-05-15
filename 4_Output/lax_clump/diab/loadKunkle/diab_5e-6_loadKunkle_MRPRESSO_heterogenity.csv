@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-h7Gugy,N6ixB4,loadKunkle,diab,MR Egger,629.9947812830039,428,6.539700026037876e-10,2019-03-26
-h7Gugy,N6ixB4,loadKunkle,diab,Inverse variance weighted,631.7837667726062,429,5.940317844038269e-10,2019-03-26

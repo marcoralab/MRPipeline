@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Id5CYN	bSDhkS	ptau	bmi	2	2885.8292657741326	0.38177

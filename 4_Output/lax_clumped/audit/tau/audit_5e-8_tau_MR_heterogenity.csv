@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Atc1Lo,S1PdS7,tau,audit,MR Egger,6.036250513999859,5,0.30270755298491825,2019-01-30
-Atc1Lo,S1PdS7,tau,audit,Inverse variance weighted,7.089316253502391,6,0.3126662588835652,2019-01-30

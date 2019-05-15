@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ECH9Jb	bS3doZ	npany	ldl	3	466.68236758197907	<4e-05

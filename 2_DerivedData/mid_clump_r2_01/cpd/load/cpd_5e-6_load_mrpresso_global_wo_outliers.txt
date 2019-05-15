@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-vPIvvI	sr4cyt	load	cpd	0	NA	NA

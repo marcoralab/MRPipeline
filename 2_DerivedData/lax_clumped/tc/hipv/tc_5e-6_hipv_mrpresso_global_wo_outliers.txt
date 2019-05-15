@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-3zoZt8	RoGg7v	hipv	tc	2	448.6629989809249	0.008

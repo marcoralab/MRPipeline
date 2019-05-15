@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-xwn1j7	IJu4Un	npany	hdl	2	364.7604693317626	<1e-04

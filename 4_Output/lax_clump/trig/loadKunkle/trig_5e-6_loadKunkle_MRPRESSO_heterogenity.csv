@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-uzHMzy,4VWeGs,loadKunkle,trig,MR Egger,358.9331564543251,293,0.005089856933583719,2019-03-27
-uzHMzy,4VWeGs,loadKunkle,trig,Inverse variance weighted,359.7093263154395,294,0.005267387558506716,2019-03-27

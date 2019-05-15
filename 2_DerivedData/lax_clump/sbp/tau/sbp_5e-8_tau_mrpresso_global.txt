@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-vdG8zk	c3LenR	tau	sbp	0	1230.8251149223063	0.41576

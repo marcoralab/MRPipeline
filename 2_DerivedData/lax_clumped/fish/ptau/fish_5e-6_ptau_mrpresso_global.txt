@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-yHQqgP	av9LSh	ptau	fish	2	455.9728412548162	<4e-05

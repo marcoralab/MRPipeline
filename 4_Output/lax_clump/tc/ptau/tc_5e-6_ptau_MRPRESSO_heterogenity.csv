@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UEMtiC,uKR7Nh,ptau,tc,MR Egger,432.4833919444442,365,0.008590983212105347,2019-03-27
-UEMtiC,uKR7Nh,ptau,tc,Inverse variance weighted,432.85634970013297,366,0.009158387745818305,2019-03-27

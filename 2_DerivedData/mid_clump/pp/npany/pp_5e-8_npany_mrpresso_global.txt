@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EbgdMX	1LhPTi	npany	pp	1	1119.405968739295	0.03446

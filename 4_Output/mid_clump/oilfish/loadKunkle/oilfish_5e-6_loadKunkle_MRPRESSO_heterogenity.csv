@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-GaDrIp,du2zL2,loadKunkle,oilfish,MR Egger,237.69950211081624,215,0.13780440474902314,2019-04-11
-GaDrIp,du2zL2,loadKunkle,oilfish,Inverse variance weighted,238.35611658352772,216,0.14176893551126338,2019-04-11

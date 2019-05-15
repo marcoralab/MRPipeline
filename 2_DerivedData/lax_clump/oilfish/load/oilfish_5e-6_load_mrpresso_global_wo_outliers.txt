@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-sEy05F	NFWEXo	load	oilfish	1	303.6476390731692	0.0175

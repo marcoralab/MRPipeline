@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ULPS9p	MGjoMo	load	sociso	0	136.81104200631563	0.0606

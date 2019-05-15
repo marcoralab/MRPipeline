@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Qziyee	N6UNo4	alcc	fish	3	287.72608317722774	<1e-04

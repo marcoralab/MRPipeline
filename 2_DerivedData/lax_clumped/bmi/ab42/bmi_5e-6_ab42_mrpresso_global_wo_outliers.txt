@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-3cC3Bb	cgTXZW	ab42	bmi	2	3343.493918759347	1.3e-4

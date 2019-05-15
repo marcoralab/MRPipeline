@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-2B4FPP	690Tyn	vbiany	diab	0	151.41864579699586	0.9842

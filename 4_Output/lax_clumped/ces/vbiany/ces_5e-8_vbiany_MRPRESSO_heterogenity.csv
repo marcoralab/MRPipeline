@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AM8a27,4YnDsQ,vbiany,ces,MR Egger,2.494773004432956,1,0.11422484431134584,2019-01-30
-AM8a27,4YnDsQ,vbiany,ces,Inverse variance weighted,2.9989001016961887,2,0.22325290413915122,2019-01-30

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-kAwcED	AGgBWe	audit	load	0	NA	NA

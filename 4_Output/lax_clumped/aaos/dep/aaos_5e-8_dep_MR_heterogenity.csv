@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-HPO7k4,AJlebQ,dep,aaos,MR Egger,19.777949567048694,18,0.3454587394821361,2018-10-12
-HPO7k4,AJlebQ,dep,aaos,Inverse variance weighted,20.864899321761843,19,0.34431371973484765,2018-10-12

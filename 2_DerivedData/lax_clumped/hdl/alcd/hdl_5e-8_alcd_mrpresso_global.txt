@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-irX1Gj	r47xqU	alcd	hdl	0	273.5208076106945	0.0967

@@ -5,7 +5,8 @@ args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 exposure.summary = args[1] # Exposure summary statistics
 outcome.summary = args[2] # Outcome Summary statistics
 proxy.snps = args[3]
-out.harmonized = args[4] # SPECIFY THE OUTPUT FILE
+pt = args[4]
+out.harmonized = args[5] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 message("Loading packages  \n")
@@ -61,7 +62,9 @@ if(empty(proxy.dat) == FALSE){
 
 
 # harmonize LOAD
-harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat)
+harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat) %>% 
+  as_tibble() %>%
+  mutate(pt = pt)
 
 ## Write out Harmonized data
 write_csv(harmonized.MRdat, out.harmonized)

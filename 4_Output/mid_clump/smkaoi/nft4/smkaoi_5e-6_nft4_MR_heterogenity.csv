@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-UT3D6r,d7L87E,nft4,smkaoi,MR Egger,46.29969347118884,53,0.7306953786383669,2019-04-11
-UT3D6r,d7L87E,nft4,smkaoi,Inverse variance weighted,46.32108458912594,54,0.761816326316414,2019-04-11

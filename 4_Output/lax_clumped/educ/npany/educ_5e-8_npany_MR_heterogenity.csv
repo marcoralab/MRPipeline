@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-EfcYkB,mku5DP,npany,educ,MR Egger,1217.5722970034133,1157,0.10534569402788167,2019-01-29
-EfcYkB,mku5DP,npany,educ,Inverse variance weighted,1217.8268335780344,1158,0.10819806287845478,2019-01-29

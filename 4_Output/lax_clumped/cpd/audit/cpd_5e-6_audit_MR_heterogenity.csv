@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-oYqpYG,LLmyNO,audit,cpd,MR Egger,79.24317461720194,59,0.040509385770987234,2018-12-08
-oYqpYG,LLmyNO,audit,cpd,Inverse variance weighted,79.24324208783084,60,0.0487487701380883,2018-12-08

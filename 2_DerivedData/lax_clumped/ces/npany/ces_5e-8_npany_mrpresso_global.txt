@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QBEgKL	uSkMgt	npany	ces	0	0.5517596354309626	0.952

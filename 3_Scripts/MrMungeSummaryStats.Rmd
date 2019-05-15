@@ -15,7 +15,7 @@ params:
   ab42.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_AB42_GWAS_summary_statistics.txt.gz'
   ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
   tau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_tau_GWAS_summary_statistics.txt.gz'
-  hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
+  hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2017/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
   hipv_2015.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
   alc_cons.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_cons/ALC_CONS_GWAS_FORUKB.txt.gz'
   alc_dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_dep/daner_alcdep_eur_jul2017.gz.jul2017.min_n'
@@ -96,6 +96,10 @@ findAF <- function(EA, NEA, REF, ALT, AF){
   )
 }
 
+snp.pve <- function(eaf, beta, se, n){
+  (2*eaf*(1 - eaf)*beta^2) / (2 * beta * eaf * (1-eaf) + se^2 * 2 * n * eaf * (1-eaf))
+}
+
 ```
 
 Read: 
@@ -129,7 +133,7 @@ kg <- filter(kg.raw, ID != '.') %>%
 hrc_kg <- anti_join(kg, hrc, by = 'ID') %>% 
   bind_rows(hrc)
 hrc_kg <- read_tsv('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/hrc_kg.snps.txt.gz', 
-                   col_types = cols(ChromPos = col_character()))
+                   col_types = cols(ChromPos = col_character(), CHROM = col_character()))
 ```
 
 ### UK10k Allele Freq
@@ -352,8 +356,8 @@ write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/
 ### Hippocampal Volume - Hilbar 2015
 
 ```{r}
-hipv.raw <- read_table2(params$hipv_2015.summary)
-hipv.dat <- hipv.raw %>%
+hipv2015.raw <- read_table2(params$hipv_2015.summary, col_types = cols(Freq_European_1000Genomes = col_character()))
+hipv2015.dat <- hipv2015.raw %>%
   rename(SNP = RSID, EAF = Freq_European_1000Genomes, Beta = Effect_Beta, SE = StdErr, P = Pvalue, Effect_allele = Effect_Allele, Non_Effect_allele = Non_Effect_Allele) %>% 
   filter(nchar(Effect_allele) == 1) %>% 
   filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
@@ -363,7 +367,7 @@ hipv.dat <- hipv.raw %>%
   mutate(r2 = snp.r2(EAF, Beta)) %>%
   select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
   
-write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv2015_GWAS.Processed.gz'))
+write_tsv(hipv2015.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv2015_GWAS.Processed.gz'))
 ```
 
 ### Late Onset Alzheimer's Disease - Proxy Case/Control Status
@@ -950,7 +954,7 @@ write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fish
 
 ### NealeLab 
 ```{r data_wrangling_exposure, echo=F, cache=TRUE}
-oilfish.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/1329_gwas_imputed_v3_both_sexes_tsv.gz')
+oilfish.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/NealeLab/1329_gwas_imputed_v3_both_sexes_tsv.gz')
 oilfish <- oilfish.raw %>%
   separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
   filter(low_confidence_variant == 'false') %>% 
@@ -1695,6 +1699,73 @@ write_tsv(crp.out, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/c
 
   
 ```
+
+## CRP
+```{r, data_wrangling_exposure, echo=F, cache=TRUE}
+
+cho.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/CHO_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017.txt.gz')
+
+cho <- cho.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+write_tsv(cho, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/carb_GWAS.Processed.txt.gz'))
+
+fat.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/FAT_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017.txt.gz')
+fat <- fat.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(fat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fat_GWAS.Processed.txt.gz'))
+
+pro.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/PRO_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017 (1).txt.gz')
+
+prot <- pro.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(prot, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/prot_GWAS.Processed.txt.gz'))
+ 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

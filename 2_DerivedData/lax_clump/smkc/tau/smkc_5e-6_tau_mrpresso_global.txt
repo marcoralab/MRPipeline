@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-UnBRIM	Wl4tum	tau	smkc	0	35.417268593867426	0.8368

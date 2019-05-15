@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-vBoZmz,4IKFEI,ptau,evrsmk,MR Egger,249.04750792311785,242,0.3641004923608308,2018-11-27
-vBoZmz,4IKFEI,ptau,evrsmk,Inverse variance weighted,249.1825416151209,243,0.3789327108252139,2018-11-27

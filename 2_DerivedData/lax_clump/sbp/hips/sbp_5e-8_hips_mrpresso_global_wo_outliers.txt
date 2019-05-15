@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-vsWRcM	ZW84KA	hips	sbp	0	NA	NA

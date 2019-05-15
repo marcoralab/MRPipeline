@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-sGcYJo	8xCdyB	nft4	pp	1	1163.6698401635194	0.58258

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bIXY67	1wJmvR	vbiany	audit	0	69.10852155576202	0.3378

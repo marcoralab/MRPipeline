@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-eRcVrc	gbARMn	ptau	tc	1	147.1170918758463	0.0434

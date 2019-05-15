@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-q7Msqm,CAnsDK,load,alccliu,MR Egger,267.471402375531,189,1.4943036712432534e-4,2019-04-11
-q7Msqm,CAnsDK,load,alccliu,Inverse variance weighted,268.3252932917277,190,1.5744255351782062e-4,2019-04-11

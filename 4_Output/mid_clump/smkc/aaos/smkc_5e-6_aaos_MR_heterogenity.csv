@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Po1MZ9,Xelt1V,aaos,smkc,MR Egger,61.491734189740704,53,0.1980972127157708,2019-04-11
-Po1MZ9,Xelt1V,aaos,smkc,Inverse variance weighted,61.64135026303842,54,0.22163028646261893,2019-04-11

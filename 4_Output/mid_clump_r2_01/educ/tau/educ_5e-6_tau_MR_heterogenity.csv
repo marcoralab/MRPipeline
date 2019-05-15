@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-h3GuZi,LbzM3d,tau,educ,MR Egger,1572.1212549686902,1493,0.07560581445338553,2019-04-07
-h3GuZi,LbzM3d,tau,educ,Inverse variance weighted,1573.6230792084473,1494,0.0744159218557239,2019-04-07

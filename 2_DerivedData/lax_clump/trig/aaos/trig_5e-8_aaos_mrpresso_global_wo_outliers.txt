@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-siMXHg	GBIBca	aaos	trig	7	219.76835056674088	0.002

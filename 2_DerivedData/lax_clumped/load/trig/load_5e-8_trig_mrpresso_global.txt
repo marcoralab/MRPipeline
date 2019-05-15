@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-0Seg7T	LtEpuo	trig	load	4	428.632387810652	<0.001

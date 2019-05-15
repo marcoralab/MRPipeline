@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-w8ZtXo	RkpajN	hips	ldl	0	230.35909863939264	0.1913

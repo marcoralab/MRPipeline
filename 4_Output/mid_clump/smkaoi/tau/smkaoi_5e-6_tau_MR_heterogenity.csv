@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JPNIYR,rmVdUN,tau,smkaoi,MR Egger,42.44167264989749,42,0.45193259304960776,2019-04-11
-JPNIYR,rmVdUN,tau,smkaoi,Inverse variance weighted,42.44407882082055,43,0.4952775304495568,2019-04-11

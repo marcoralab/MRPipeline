@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wbKeCV	x5UZrG	alcc	sociso	1	209.4496663045272	1e-4

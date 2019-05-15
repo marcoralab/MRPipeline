@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-wpUBsv,cynAhn,alcc,as,MR Egger,89.57063901516993,62,0.012545793339822439,2018-12-08
-wpUBsv,cynAhn,alcc,as,Inverse variance weighted,90.08062703428944,63,0.014208115449782774,2018-12-08

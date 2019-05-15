@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-MIpPAT,smOjY3,tau,tc,MR Egger,388.5370102175054,331,0.016018082580260565,2019-01-29
-MIpPAT,smOjY3,tau,tc,Inverse variance weighted,389.47966652615696,332,0.016215805296451804,2019-01-29
