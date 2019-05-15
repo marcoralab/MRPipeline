@@ -11,8 +11,8 @@ shell.prefix('module load plink/1.90 R/3.5.1; ')
 REF = config['REF']
 r2 = config['clumpr2']
 kb = config['clumpkb']
-EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "NAME")
-OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "NAME")
+EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "CODE")
+OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "CODE")
 Pthreshold = config['Pthreshold']
 traits = config['traits']
 DataOut = config['DataOut']
@@ -38,8 +38,15 @@ filtered_product = filter_combinator(product, forbidden)
 rule all:
     input:
         expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=EXPOSURES.index.tolist()),
+        DataOutput + 'All/mrpresso_MRdat.csv',
+        DataOutput + 'All/global_mrpresso.txt',
+        DataOutput + 'All/heterogenity.txt',
+        DataOutput + 'All/pleiotropy.txt',
+        DataOutput + 'All/MRresults.txt',
         expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=EXPOSURES.index.tolist(), OutcomeCode=OUTCOMES.index.tolist(), Pthreshold=Pthreshold),
 
+## Read in Exposure summar statistics and format them to input required for pipeline
+## Formated summary stats are a temp file that is delted as the end
 rule FormatExposure:
     input:
         script = '3_Scripts/FormatGwas.R',
@@ -64,6 +71,8 @@ rule FormatExposure:
         {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
         {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
 
+## Read in Outcome summary statistics and format them to input required for pipeline
+## Formated summary stats are a temp file that is delted as the end
 rule FormatOutcome:
     input:
         script = '3_Scripts/FormatGwas.R',
@@ -88,6 +97,8 @@ rule FormatOutcome:
         {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
         {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
 
+## Peform LD clumping on exposure summary statisitics
+## user defines r2 and window in config file
 rule clump:
     input:
         ss = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz"
@@ -105,6 +116,7 @@ rule clump:
         gzip -k {output.exp_clumped}
         """
 
+## Extract SNPs to be used as instruments in exposure
 rule ExposureSnps:
     input:
         script = '3_Scripts/ExposureData.R',
@@ -117,6 +129,7 @@ rule ExposureSnps:
     shell:
         'Rscript {input.script} {input.summary} {params.Pthreshold} {input.ExposureClump} {output.out}'
 
+## Plot manhattan plot of exposure gwas highlight instruments
 rule manhattan_plot:
     input:
         script = '3_Scripts/manhattan_plot.R',
@@ -129,6 +142,7 @@ rule manhattan_plot:
     shell:
         "Rscript {input.script} {input.ingwas} {input.inclump} {output.out} \"{params.PlotTitle}\""
 
+## Extract exposure instruments from outcome gwas
 rule OutcomeSnps:
     input:
         script = '3_Scripts/OutcomeData.R',
@@ -142,6 +156,7 @@ rule OutcomeSnps:
     shell:
         'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
 
+## Use plink to identify proxy snps instruments that were not avaliable in the outcome
 rule FindProxySnps:
     input:
         MissingSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt"
@@ -163,6 +178,7 @@ rule FindProxySnps:
           fi
 """
 
+## Extract proxy SNPs from outcome gwas
 rule ExtractProxySnps:
     input:
         script = '3_Scripts/ExtractProxySNPs.R',
@@ -177,6 +193,7 @@ rule ExtractProxySnps:
     shell:
         'Rscript {input.script} {input.OutcomeSummary} {input.OutcomeProxys} {input.OutcomeSNPs} {params.Outcome}'
 
+## Use TwoSampleMR to harmonize exposure and outcome datasets
 rule Harmonize:
     input:
         script = '3_Scripts/DataHarmonization.R',
@@ -184,10 +201,14 @@ rule Harmonize:
         OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
         ProxySNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
     output:
-        Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv"
+        Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
+    params:
+        Pthreshold = '{Pthreshold}'
     shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {output.Harmonized}'
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {params.Pthreshold} {output.Harmonized}'
 
+## Use MR-PRESSO to conduct a global heterogenity test and
+## outlier test to identify SNPs that are outliers
 rule MrPresso:
     input:
         script = '3_Scripts/MRPRESSO.R',
@@ -201,6 +222,7 @@ rule MrPresso:
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
+## Conduct a second MR-PRESSO test after removing outliers
 rule MRPRESSO_wo_outliers:
     input:
         script = '3_Scripts/MRPRESSO_wo_outliers.R',
@@ -212,6 +234,112 @@ rule MRPRESSO_wo_outliers:
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
+## Conduct MR analysis
+rule MR_analysis:
+    input:
+        script = '3_Scripts/MR_analysis.R',
+        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+    output:
+        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt',
+        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt',
+        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt'
+    params:
+        out = DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}'
+    shell:
+        'Rscript {input.script} {input.mrdat} {params.out}'
+
+## define list of harmonized datasets so they can be merged into a single file
+def mrpresso_MRdat_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_mrpresso_MRdat:
+    input:
+        dat = mrpresso_MRdat_input,
+        script = '3_Scripts/ConcatMRdat.R'
+    output:
+        DataOutput + 'All/mrpresso_MRdat.csv'
+    shell:
+        'Rscript {input.script} {output} {input.dat}'
+        #"awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.dat} > {output}"
+
+## define list of global MR-PRESSO tests so they can be merged into a single file
+def mrpresso_global_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+def mrpresso_global_wo_outliers_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_mrpresso_global:
+    input:
+        mrpresso_global = mrpresso_global_input,
+        mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
+        #script = '3_Scripts/ConcatMRpresso.R'
+    output:
+        DataOutput + 'All/global_mrpresso.txt'
+    shell:
+        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} {input.mrpresso_global_wo_outliers} > {output}"
+
+## define list of Heterogenity tests so they can be merged into a single file
+def MR_heterogenity_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_heterogenity:
+    input:
+        mr_heterogenity = MR_heterogenity_input,
+        #script = '3_Scripts/ConcatHeterogenity.R'
+    output:
+        DataOutput + 'All/heterogenity.txt'
+    shell:
+        #'Rscript {input.script} {output} {input.mr_heterogenity}'
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_heterogenity} > {output}"
+
+## define list of MR Egger intercept tests so they can be merged into a single file
+def MR_plei_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_egger:
+    input:
+        mr_pleiotropy = MR_plei_input,
+        #script = '3_Scripts/ConcatPleiotropy.R'
+    output:
+        DataOutput + 'All/pleiotropy.txt'
+    shell:
+        #'Rscript {input.script} {output} {input.mr_heterogenity}'
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_pleiotropy} > {output}"
+
+## define list of MR results so they can be merged into a single file
+def MR_Results_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt",
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_mrresults:
+    input:
+        mr_results = MR_Results_input,
+        #script = '3_Scripts/ConcatMRresults.R'
+    output:
+        DataOutput + 'All/MRresults.txt'
+    shell:
+        #'Rscript {input.script} {output} {input.mr_results}'
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_results} > {output}"
+
+## Write a html Rmarkdown report
 rule html_Report:
     input:
         script = '3_Scripts/mr_report.Rmd',
@@ -231,6 +359,10 @@ rule html_Report:
         ExposureCode = '{ExposureCode}',
         OutcomeCode = '{OutcomeCode}',
         Pthreshold = "{Pthreshold}",
+        r2threshold = r2,
+        kbthreshold = kb,
+        Exposure = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['NAME'],
+        Outcome = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['NAME']
     shell:
         "R -e 'rmarkdown::render("
         """"{input.script}", clean = TRUE, intermediates_dir = "{params.output_dir}", output_file = "{output}", output_dir = "{params.output_dir}", \
@@ -243,6 +375,10 @@ harmonized.dat = "{input.HarmonizedDat}", \
 mrpresso_global = "{input.mrpresso_global}", \
 outcome.code = "{params.OutcomeCode}", \
 exposure.code = "{params.ExposureCode}", \
+Outcome = "{params.Outcome}", \
+Exposure = "{params.Exposure}", \
 p.threshold = "{params.Pthreshold}", \
+r2.threshold = "{params.r2threshold}", \
+kb.threshold = "{params.kbthreshold}", \
 out = "{params.output_name}"))' --slave
         """

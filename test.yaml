@@ -14,7 +14,8 @@ Pthreshold: ['5e-8', '5e-6']
 ## LOAD as outcome
 EXPOSURES:
   -
-    NAME: crp
+    CODE: crp
+    NAME: 'C-Reactive Protein'
     FILE: 1_RawData/GWAS/Ligthart2018crp.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
@@ -34,7 +35,8 @@ EXPOSURES:
 
 OUTCOMES:
   -
-    NAME: load
+    CODE: load
+    NAME: 'Late Onset Alzheimers Disease'
     FILE: 1_RawData/GWAS/Kunkle2019_stage1.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
