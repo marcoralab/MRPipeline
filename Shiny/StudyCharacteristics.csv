@@ -1,0 +1,35 @@
+code,variable,Trait,Study,PMID,Cohort / Consortium,N,ncase,ncontrol,Age,Females (%)
+alccliu,exposure,Alcohol Consumption,Liu et al 2019,30643251,GSCAN,537349,NA,NA,-,-
+smki,exposure,Smoking Initiation,Liu et al 2019,30643251,GSCAN,262990,NA,NA,-,-
+smkcpd,exposure,Cigarettes per Day,Liu et al 2019,30643251,GSCAN,263954,NA,NA,-,-
+audit,exposure,Alcohol Use Disorder Test,Clarke et al 2017,28937693,UKBB,121600,NA,NA,56.1,52.7
+alcd,exposure,Alcohol Dependence ,Walters et al 2018,30482948,PGC,46568,11569,34999,-,-
+oilfish,exposure,Oily Fish Intake,NealLab,,UKBB,,NA,NA,56.5*,54.4*
+hear,exposure,Hearing Problems,NealLab,,UKBB,346635,255838,90797,56.5*,54.4*
+diab,exposure,Type 2 Diabetes,Xu et al 2018,30054458,DIAGRAM; UKBB; GERA,659316,62892,596424,-,-
+bmi,exposure,Body Mass Index,Yengo et al 2018,30124842,UKBB; GIANT,690495,NA,NA,-,-
+tc,exposure,Total Cholesterol ,Willer et al 2013,24097068,GLC,188577,NA,NA,54.94,56.58
+ldl,exposure,LDL Cholesterol,Willer et al 2013,24097068,GLC,188577,NA,NA,54.94,56.58
+hdl,exposure,HDL Cholesterol,Willer et al 2013,24097068,GLC,188577,NA,NA,54.94,56.58
+trig,exposure,Triglycerides,Willer et al 2013,24097068,GLC,188577,NA,NA,54.94,56.58
+dbp,exposure,Diastolic Blood Pressure,Evangelou et al 2018,30224653,UKBB; ICBP,757601,NA,NA,-,-
+sbp,exposure,Systolic Blood Pressure,Evangelou et al 2018,30224653,UKBB; ICBP,757601,NA,NA,-,-
+pp,exposure,Pulse Pressure,Evangelou et al 2018,30224653,UKBB; ICBP,757601,NA,NA,-,-
+dep,exposure,Broad Depression Symptoms,Howard et al 2018,29662059,UKBB,322580,113769,208811,-,-
+mdd,exposure,Major Depression Disorder,Wray et al 2018,29700475,PGC; deCODE; iPSYCH; GeneScotland; GERA; UKBB; 23andMe,480359,135458,344901,-,-
+insom,exposure,Insomnia Symptoms,Jansen et al 2018,30804565,UKBB,386533,109402,277131,56.7,54
+sleepDashti,exposure,Sleep Duration,Dashti et al 2019,30846698,UKBB,446118,NA,NA,57.3,54.1
+sociso,exposure,Social Isolation,Day et al 2018,29970889,UKBB,452302,NA,NA,-,-
+educ,exposure,Educational Attainment,Lee et al 2018,30038396,UKBB; SSGAC,766345,NA,NA,63.8,54.7
+mvpa,exposure,Moderate-to-vigorous PA,Klimentidis et al 2018,29899525,UKBB,377234,NA,NA,,
+load,outcome,Late Onset Alzheimer’s disease,Lambert et al 2013,24162737,IGAP,54162,17008,37154,71,58.4
+loadKunkle,outcome,Late Onset Alzheimer’s disease,Kunkle et al 2019,30820047,IGAP,63926,21982,41944,72.6,58.5
+aaos,outcome,Alzheimer’s Age of Onset Survival,Huang et al 2017,28628103,IGAP,40255,14406,25849,77.5,60.35
+ab42,outcome,CSF Ab42,Deming et al 2017,28247064,Knight-ADRC,3146,NA,NA,71.8,49.57
+ptau,outcome,CSF Ptau181,Deming et al 2017,28247064,Knight-ADRC,3146,NA,NA,71.8,49.57
+tau,outcome,CSF Tau,Deming et al 2017,28247064,Knight-ADRC,3146,NA,NA,71.8,49.57
+hipv2015,outcome,Hippocampul Volume,Hibar et al 2015,25607358,ENIGMA,13688,NA,NA,39.9,51.8
+hipv,outcome,Hippocampul Volume,Hibar et al 2017,28098162,ENIGMA; CHARGE,26814,NA,NA,54.3,55.3
+npany,outcome,Neuritic Plaques,Beecham et al 2014,25188341,ADGC,4914,3426,620,74.7,65.4
+nft4,outcome,Neurofibrillary tangles,Beecham et al 2014,25188341,ADGC,4914,NA,NA,74.7,65.4
+vbiany,outcome,Vascular Brain Injury,Beecham et al 2014,25188341,ADGC,4914,992,1772,74.7,65.4
