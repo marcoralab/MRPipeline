@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cXSDQs	ReG2Cf	Kunkle2019load	Walters2018alcdep	5e-6	FALSE	0	28.157545839595958	0.149
-cXSDQs	ReG2Cf	Kunkle2019load	Walters2018alcdep	5e-6	TRUE	0	NA	NA
