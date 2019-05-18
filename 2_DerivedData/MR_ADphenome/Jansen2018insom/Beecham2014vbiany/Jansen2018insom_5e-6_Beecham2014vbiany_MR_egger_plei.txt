@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	-0.033570924709680254	0.031140836387109464	0.28380621920565896	NA

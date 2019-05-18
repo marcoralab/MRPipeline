@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+ktWvvH	o6K6UR	AD	LDL	5e-6	TRUE	6	145.34114953269716	0.0755

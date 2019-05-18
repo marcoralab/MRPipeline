@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gfI5qT	hNcgxz	CSF_ab42	AUDIT_Total	5e-6	FALSE	0	46.3311801122927	0.269

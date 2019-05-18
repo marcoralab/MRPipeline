@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+GnUYOI	tQ6KXc	CSF_ab42	MVPA	5e-8	FALSE	0.010675513907492305	0.006725780303919257	0.13201842104224276	NA

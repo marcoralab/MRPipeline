@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+E8hvPz	ki2eq2	AD	Education	5e-6	FALSE	1	1119.9312839170605	3.2e-4

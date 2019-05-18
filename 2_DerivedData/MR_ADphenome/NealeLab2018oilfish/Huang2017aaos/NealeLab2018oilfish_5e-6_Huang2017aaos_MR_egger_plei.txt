@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Ya48Ik	cBI1Zg	AAOS	Oily_Fish_Intake	5e-6	FALSE	-0.00635912087880288	0.011740765445074746	0.588828599261684
+Ya48Ik	cBI1Zg	AAOS	Oily_Fish_Intake	5e-6	TRUE	-4.1053872615286896e-4	0.00663993261940932	0.9507768614889132

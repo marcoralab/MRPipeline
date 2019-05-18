@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	TRUE	0	NA	NA

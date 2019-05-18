@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+YpGje2	VM4GNm	CSF_ab42	Depression	5e-8	FALSE	MR Egger	18.454517040074336	13	0.14101165880953548
+YpGje2	VM4GNm	CSF_ab42	Depression	5e-8	FALSE	Inverse variance weighted	24.849913886584776	14	0.036078316741519276

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	TRUE	13	310.05475989636733	0.0045

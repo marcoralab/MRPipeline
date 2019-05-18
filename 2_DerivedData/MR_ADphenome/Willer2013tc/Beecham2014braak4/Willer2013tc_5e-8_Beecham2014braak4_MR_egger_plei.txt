@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+fXTYp7	VyYBna	NFT_Braak_Four	TC	5e-8	FALSE	-0.00773444219024337	0.01189515130195939	0.5170884326453467
+fXTYp7	VyYBna	NFT_Braak_Four	TC	5e-8	TRUE	-0.004195194987026475	0.011386269768317475	0.7133539395721523

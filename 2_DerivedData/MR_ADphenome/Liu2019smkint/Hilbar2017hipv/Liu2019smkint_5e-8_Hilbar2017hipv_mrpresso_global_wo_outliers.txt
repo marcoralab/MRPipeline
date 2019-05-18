@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Bmrg1Q	xA92ey	Hippocampal_Volume	smkint	5e-8	TRUE	8	123.19517624763465	0.0701

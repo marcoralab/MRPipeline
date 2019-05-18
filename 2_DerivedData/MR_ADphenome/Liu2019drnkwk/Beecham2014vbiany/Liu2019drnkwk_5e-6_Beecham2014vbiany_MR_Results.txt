@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+MJzcqF	Nzj0ue	VBI_any	drnkwk	5e-6	FALSE	Inverse variance weighted (fixed effects)	151	0	0.3556937217508791	0.36935424599123656	0.3355399379288408
+MJzcqF	Nzj0ue	VBI_any	drnkwk	5e-6	FALSE	Weighted median	151	0	-0.0905809909309951	0.7269540976582363	0.9008374943995948
+MJzcqF	Nzj0ue	VBI_any	drnkwk	5e-6	FALSE	Weighted mode	151	0	-0.113854205583106	0.6939815210604477	0.8699052227870341
+MJzcqF	Nzj0ue	VBI_any	drnkwk	5e-6	FALSE	MR Egger	151	0	0.08537226329650187	0.646883787674755	0.8951823853232107

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+2kON3D	aJ93ef	Neuritic_Plaques_Any	AUDIT_Total	5e-8	FALSE	-0.05277187297174686	0.0728961451672989	0.49258559021756065	NA

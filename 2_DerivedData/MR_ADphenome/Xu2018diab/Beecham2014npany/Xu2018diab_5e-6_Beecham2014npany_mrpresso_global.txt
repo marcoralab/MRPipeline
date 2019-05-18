@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	0	243.50401494387214	0.9477

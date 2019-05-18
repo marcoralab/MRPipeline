@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+FOSjat	amcb0r	AAOS	LDL	5e-8	FALSE	1	438.24534463213075	<1e-04

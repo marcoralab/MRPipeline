@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+ExXy7N	hchSDk	Hippocampal_Volume	PP	5e-8	FALSE	1	755.8708341395044	<4e-05

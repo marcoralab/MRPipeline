@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+164ToN	8LHm6v	CSF_ab42	MDD	5e-6	FALSE	0	63.32968350418661	0.0944

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+E8hvPz	ki2eq2	AD	Education	5e-6	TRUE	35	1102.5550132622693	8.8e-4

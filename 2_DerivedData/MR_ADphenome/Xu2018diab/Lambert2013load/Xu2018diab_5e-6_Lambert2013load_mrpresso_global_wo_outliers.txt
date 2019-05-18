@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+JhaZV1	tcqH3o	AD	Diabetes	5e-6	TRUE	7	390.4231938579788	1e-4

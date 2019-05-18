@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+M4zlm1	encZOx	AD	MDD	5e-8	FALSE	0	7.080937182527748	0.626

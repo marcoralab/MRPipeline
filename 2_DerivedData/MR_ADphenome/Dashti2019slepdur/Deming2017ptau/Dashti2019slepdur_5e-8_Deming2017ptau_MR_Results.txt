@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+VHWTlS	WkvVZe	CSF_ab42	Sleep_Duration	5e-8	FALSE	Inverse variance weighted (fixed effects)	74	0	-0.007977111759752145	0.04406076289295635	0.8563299220552557
+VHWTlS	WkvVZe	CSF_ab42	Sleep_Duration	5e-8	FALSE	Weighted median	74	0	0.05861605953668057	0.06552059062321626	0.3709900221615891
+VHWTlS	WkvVZe	CSF_ab42	Sleep_Duration	5e-8	FALSE	Weighted mode	74	0	0.0780545354772495	0.12999837027588673	0.5500812372257424
+VHWTlS	WkvVZe	CSF_ab42	Sleep_Duration	5e-8	FALSE	MR Egger	74	0	-0.0557469454082318	0.1690850339602283	0.7425856798983199

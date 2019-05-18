@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+bCD5w7	DQCSBh	AAOS	AUDIT_Total	5e-6	FALSE	-0.0152888431210959	0.007066971388283839	0.03503773111214212	NA

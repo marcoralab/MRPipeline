@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Nzm8F7	wWYEgg	CSF_ab42	Sleep_Duration	5e-6	FALSE	7.572292393803143e-4	0.001878853509100872	0.6873461136450052	NA

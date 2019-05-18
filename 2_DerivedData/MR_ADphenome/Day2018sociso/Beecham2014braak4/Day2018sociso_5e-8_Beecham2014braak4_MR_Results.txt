@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+Y19hTl	70wTkb	NFT_Braak_Four	Social_Isolation	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	0.902956186691946	0.9673772461701051	0.3506101377886481
+Y19hTl	70wTkb	NFT_Braak_Four	Social_Isolation	5e-8	FALSE	Weighted median	15	0	0.34821007717254765	1.2142388356413871	0.7742866653675724
+Y19hTl	70wTkb	NFT_Braak_Four	Social_Isolation	5e-8	FALSE	Weighted mode	15	0	-0.04636411874331614	1.6927684089800912	0.9785356546709858
+Y19hTl	70wTkb	NFT_Braak_Four	Social_Isolation	5e-8	FALSE	MR Egger	15	0	-5.963038808211773	5.047692388781403	0.2586288805913108

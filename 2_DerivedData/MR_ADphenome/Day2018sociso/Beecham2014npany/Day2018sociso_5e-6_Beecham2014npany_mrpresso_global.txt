@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+D9xGHe	7e9WAT	Neuritic_Plaques_Any	Social_Isolation	5e-6	FALSE	0	88.56649850748664	0.5321

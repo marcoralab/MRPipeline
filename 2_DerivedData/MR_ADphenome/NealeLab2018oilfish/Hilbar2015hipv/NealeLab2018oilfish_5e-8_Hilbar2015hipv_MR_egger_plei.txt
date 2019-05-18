@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+AisNII	mzVfsu	Hippocampal_Volume	Oily_Fish_Intake	5e-8	FALSE	-0.7785723573952885	4.255024700946466	0.8556963696557527
+AisNII	mzVfsu	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	-1.0198277017778654	3.9242566637047234	0.7962585537247672

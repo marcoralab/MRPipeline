@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+DroEK4	mYdKgk	AAOS	Education	5e-8	FALSE	0	510.75577361271996	0.00816

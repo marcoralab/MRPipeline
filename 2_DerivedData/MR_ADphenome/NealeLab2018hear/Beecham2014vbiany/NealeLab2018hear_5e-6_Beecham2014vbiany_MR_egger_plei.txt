@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+0fLdIs	GAY3Hr	VBI_any	Hearing_Problems	5e-6	FALSE	-0.004616141215176054	0.016354771064657676	0.7783348289467017	NA

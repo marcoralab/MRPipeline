@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+XpioKP	7dX4H7	CSF_ab42	BMI	5e-6	TRUE	35	1466.4930100230795	0.047306666666666664

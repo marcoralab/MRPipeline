@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+3H72kN	YtotAv	VBI_any	HDL	5e-8	FALSE	-0.003937275001994841	0.012863904263286305	0.7601801823598775	NA

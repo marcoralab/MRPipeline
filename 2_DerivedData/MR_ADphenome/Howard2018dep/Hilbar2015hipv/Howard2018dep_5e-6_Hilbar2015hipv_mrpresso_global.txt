@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Q0htuX	2FPh4Q	Hippocampal_Volume	Depression	5e-6	FALSE	0	116.10542291652732	0.2574

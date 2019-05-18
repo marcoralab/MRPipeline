@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Wgwbai	Mec4Jq	NFT_Braak_Four	Insomnia	5e-6	FALSE	0	105.17056893960628	0.2212

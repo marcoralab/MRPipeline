@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+ZjQ3oH	E6tSwS	AD	BMI	5e-8	TRUE	27	987.4266940830078	7.2e-4

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Llr6Xm	jIjIDW	Neuritic_Plaques_Any	BMI	5e-6	FALSE	0.0011983231263480395	0.00619148951513883	0.8465605648911604	NA

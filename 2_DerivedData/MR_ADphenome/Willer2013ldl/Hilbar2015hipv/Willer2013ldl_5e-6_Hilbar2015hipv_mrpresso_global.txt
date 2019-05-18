@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+DZkpBE	FSOjP4	Hippocampal_Volume	LDL	5e-6	FALSE	0	141.36038019849525	0.0833

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+g1kDbQ	WR8FT9	Neuritic_Plaques_Any	LDL	5e-8	FALSE	Inverse variance weighted (fixed effects)	81	0	-0.02517195030580182	0.1861529595026784	0.892436460319946
+g1kDbQ	WR8FT9	Neuritic_Plaques_Any	LDL	5e-8	FALSE	Weighted median	81	0	-0.18579996354483652	0.33417739670409596	0.578216314716351
+g1kDbQ	WR8FT9	Neuritic_Plaques_Any	LDL	5e-8	FALSE	Weighted mode	81	0	-0.2650103634932357	0.4280981797222436	0.537648153256802
+g1kDbQ	WR8FT9	Neuritic_Plaques_Any	LDL	5e-8	FALSE	MR Egger	81	0	0.37414505432932077	0.33500375119175096	0.26744869732857784

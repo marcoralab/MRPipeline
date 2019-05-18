@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+p2t5fQ	ZwPTjX	AAOS	BMI	5e-6	TRUE	35	1595.3420128652224	0.00756

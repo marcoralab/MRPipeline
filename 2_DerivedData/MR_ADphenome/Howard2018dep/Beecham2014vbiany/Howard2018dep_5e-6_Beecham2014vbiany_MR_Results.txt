@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+UXgy1r	dq2u3x	VBI_any	Depression	5e-6	FALSE	Inverse variance weighted (fixed effects)	112	0	-0.30255642426185564	0.9440094574170372	0.7485882118043088
+UXgy1r	dq2u3x	VBI_any	Depression	5e-6	FALSE	Weighted median	112	0	0.48952833969512516	1.330593205922992	0.7129460634002095
+UXgy1r	dq2u3x	VBI_any	Depression	5e-6	FALSE	Weighted mode	112	0	2.018383099669748	3.2829004278523977	0.5399338717757236
+UXgy1r	dq2u3x	VBI_any	Depression	5e-6	FALSE	MR Egger	112	0	5.771560408238525	4.262823633274339	0.1785342025612652

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	FALSE	Inverse variance weighted (fixed effects)	249	0	-0.061834750508005756	0.07823090608209682	0.4292864234574209
+f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	FALSE	Weighted median	249	0	-0.016802083219191927	0.11898020308270582	0.8876981455806711
+f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	FALSE	Weighted mode	249	0	0.21404341309538388	0.35516349806686415	0.5472844836356104
+f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	FALSE	MR Egger	249	0	-0.6112431170541989	0.35244454943857306	0.08411321571970196

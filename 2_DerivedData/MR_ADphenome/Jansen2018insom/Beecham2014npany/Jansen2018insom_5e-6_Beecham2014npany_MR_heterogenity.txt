@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+vXR4g8	T8sMKY	Neuritic_Plaques_Any	Insomnia	5e-6	FALSE	MR Egger	128.3703916710259	93	0.008890504938447494
+vXR4g8	T8sMKY	Neuritic_Plaques_Any	Insomnia	5e-6	FALSE	Inverse variance weighted	128.47210957365084	94	0.01053540929853549

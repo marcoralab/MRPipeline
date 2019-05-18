@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+jbJ4Ak	Bsy5nk	AAOS	Hearing_Problems	5e-6	FALSE	-0.005659860411349603	0.006531542936174268	0.38822649277381704	NA

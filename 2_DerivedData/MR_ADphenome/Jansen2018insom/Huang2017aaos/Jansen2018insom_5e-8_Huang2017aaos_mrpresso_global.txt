@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+35tRAO	ejXYDf	AAOS	Insomnia	5e-8	FALSE	0	20.685769209568125	0.158

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+3QWJmC	xqmB05	Neuritic_Plaques_Any	TC	5e-6	FALSE	0	152.5701916641149	0.3625

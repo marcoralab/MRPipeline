@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+Ds4Hsi	YnnfXJ	AD	HDL	5e-6	FALSE	MR Egger	2894.5491181801085	163	0
+Ds4Hsi	YnnfXJ	AD	HDL	5e-6	FALSE	Inverse variance weighted	2913.751697573966	164	0
+Ds4Hsi	YnnfXJ	AD	HDL	5e-6	TRUE	MR Egger	245.93720611727423	159	1.1711756515803591e-5
+Ds4Hsi	YnnfXJ	AD	HDL	5e-6	TRUE	Inverse variance weighted	250.3221261752901	160	6.464625781000685e-6

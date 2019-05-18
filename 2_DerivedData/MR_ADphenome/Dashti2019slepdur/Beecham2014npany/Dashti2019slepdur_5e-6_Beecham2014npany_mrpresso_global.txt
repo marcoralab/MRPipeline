@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+RrEShC	kXxRc9	Neuritic_Plaques_Any	Sleep_Duration	5e-6	FALSE	0	258.3625777338032	0.2789

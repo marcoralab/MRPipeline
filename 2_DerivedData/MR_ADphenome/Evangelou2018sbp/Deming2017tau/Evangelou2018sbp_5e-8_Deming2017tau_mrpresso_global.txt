@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LWKTQi	LZw6GS	CSF_ab42	SBP	5e-8	FALSE	0	669.7525539002057	0.00668

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+BH7h3B	7atWj5	NFT_Braak_Four	BMI	5e-6	TRUE	32	1494.3326523793103	0.16042666666666666

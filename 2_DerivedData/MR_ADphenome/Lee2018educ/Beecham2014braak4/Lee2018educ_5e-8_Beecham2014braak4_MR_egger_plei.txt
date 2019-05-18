@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	0.013676775884077416	0.010089341552346729	0.1759586644449676	NA

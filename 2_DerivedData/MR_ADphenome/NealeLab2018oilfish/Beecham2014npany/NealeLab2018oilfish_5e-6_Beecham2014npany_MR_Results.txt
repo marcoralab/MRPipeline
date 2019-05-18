@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	Inverse variance weighted (fixed effects)	154	1	0.6992360361890172	0.5163074479285882	0.17564015530408555
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	Weighted median	154	1	0.4279583152522012	0.7712022483648466	0.5789469301119774
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	Weighted mode	154	1	0.882781625918156	1.7218566863104898	0.6089063880657648
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	MR Egger	154	1	2.0530945016247113	2.8798883438092324	0.4769959045689598
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	Inverse variance weighted (fixed effects)	153	1	0.28219849635296707	0.5177528735614311	0.5857227259995943
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	Weighted median	153	1	0.416796362573246	0.7241696694885804	0.5649189098816914
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	Weighted mode	153	1	0.9554483999280734	1.9096709087988524	0.6175727029139062
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	MR Egger	153	1	0.2330817886078827	2.197326969645393	0.915663515644145

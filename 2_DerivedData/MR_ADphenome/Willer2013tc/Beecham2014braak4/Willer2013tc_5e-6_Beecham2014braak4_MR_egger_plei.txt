@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+gsGtum	FyEH1l	NFT_Braak_Four	TC	5e-6	FALSE	-0.0027035902281726987	0.009451378049977878	0.7752461868482482
+gsGtum	FyEH1l	NFT_Braak_Four	TC	5e-6	TRUE	-2.467463912062348e-5	0.009199888243074522	0.9978637414316175

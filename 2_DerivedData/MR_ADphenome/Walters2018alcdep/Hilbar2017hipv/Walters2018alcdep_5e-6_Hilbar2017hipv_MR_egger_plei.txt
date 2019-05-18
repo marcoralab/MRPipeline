@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+IEBNsK	AK3JIW	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	-0.0038022877262794204	0.007967683482956242	0.6392873177289417	NA

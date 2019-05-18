@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+IXqtvp	gBkKoO	CSF_ab42	Hearing_Problems	5e-8	FALSE	0	33.00107913582542	0.133

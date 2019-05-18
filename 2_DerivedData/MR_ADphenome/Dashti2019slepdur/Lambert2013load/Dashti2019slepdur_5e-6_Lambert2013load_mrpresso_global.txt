@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tBOXRw	CY3OsW	AD	Sleep_Duration	5e-6	FALSE	0	288.21926648489125	0.0217

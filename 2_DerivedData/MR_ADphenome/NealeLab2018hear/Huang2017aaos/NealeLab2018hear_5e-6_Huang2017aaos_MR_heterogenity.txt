@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+jbJ4Ak	Bsy5nk	AAOS	Hearing_Problems	5e-6	FALSE	MR Egger	107.18901836871731	102	0.3431713575083554
+jbJ4Ak	Bsy5nk	AAOS	Hearing_Problems	5e-6	FALSE	Inverse variance weighted	107.97811463858605	103	0.3491216932530444

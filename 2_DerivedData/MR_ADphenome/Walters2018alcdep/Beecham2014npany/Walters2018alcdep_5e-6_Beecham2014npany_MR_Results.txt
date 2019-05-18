@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+HsQOR3	ymf9h7	Neuritic_Plaques_Any	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted (fixed effects)	16	0	0.019996753441776986	0.14389238034570626	0.8894736943533441
+HsQOR3	ymf9h7	Neuritic_Plaques_Any	Alcohol_Dependence	5e-6	FALSE	Weighted median	16	0	0.015930964758124225	0.21142080461284765	0.9399347081515463
+HsQOR3	ymf9h7	Neuritic_Plaques_Any	Alcohol_Dependence	5e-6	FALSE	Weighted mode	16	0	0.010696193229614792	0.2556850891042143	0.967183225228251
+HsQOR3	ymf9h7	Neuritic_Plaques_Any	Alcohol_Dependence	5e-6	FALSE	MR Egger	16	0	0.1589621821636614	0.298201429400195	0.6023452553021726

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LUb907	nyaQM8	AD	SBP	5e-6	TRUE	43	1403.7853162901408	<2e-05

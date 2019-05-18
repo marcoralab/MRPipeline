@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+ExXy7N	hchSDk	Hippocampal_Volume	PP	5e-8	FALSE	-0.0010903426925070877	0.0013056818902662047	0.4040327070432608
+ExXy7N	hchSDk	Hippocampal_Volume	PP	5e-8	TRUE	-8.62934025325439e-4	0.0012951198882080383	0.505497381908065

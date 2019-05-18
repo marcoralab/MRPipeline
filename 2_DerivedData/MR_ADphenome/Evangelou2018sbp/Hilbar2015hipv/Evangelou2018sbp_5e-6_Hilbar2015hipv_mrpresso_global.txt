@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+dKN1WF	DGGByp	Hippocampal_Volume	SBP	5e-6	FALSE	0	1176.4256582897128	0.0687

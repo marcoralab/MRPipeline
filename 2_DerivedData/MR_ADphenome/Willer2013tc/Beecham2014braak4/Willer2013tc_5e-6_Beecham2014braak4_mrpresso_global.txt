@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gsGtum	FyEH1l	NFT_Braak_Four	TC	5e-6	FALSE	1	213.1138202124318	4e-4

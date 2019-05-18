@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+QAvdhN	TiDa7n	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	-0.0030200480725783322	0.006466011003331892	0.6488199099853038	NA

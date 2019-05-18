@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+uj28aM	mbamT2	AD	AUDIT_Total	5e-8	FALSE	-0.01464369462814187	0.03450221896279546	0.6888968901580523
+uj28aM	mbamT2	AD	AUDIT_Total	5e-8	TRUE	-0.008364931277655282	0.026333086427925475	0.7666353132634194

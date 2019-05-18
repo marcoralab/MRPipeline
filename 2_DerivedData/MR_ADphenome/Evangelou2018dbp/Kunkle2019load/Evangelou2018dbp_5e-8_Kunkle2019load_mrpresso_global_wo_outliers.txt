@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+jyqP0b	q3ot5O	AD	DBP	5e-8	TRUE	26	898.6694460137189	<4e-05

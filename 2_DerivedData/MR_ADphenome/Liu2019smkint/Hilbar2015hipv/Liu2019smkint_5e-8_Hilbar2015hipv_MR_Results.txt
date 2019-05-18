@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	FALSE	Inverse variance weighted (fixed effects)	97	1	13.38292763033375	47.19065087630205	0.7767224746983153
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	FALSE	Weighted median	97	1	69.80828890037677	72.65606220428947	0.3366503552331653
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	FALSE	Weighted mode	97	1	214.08399672501037	181.11847062467396	0.24012096818999015
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	FALSE	MR Egger	97	1	98.78042089821707	271.2232110908716	0.7165154851869843
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	TRUE	Inverse variance weighted (fixed effects)	96	1	-9.803014648378879	47.48195661480354	0.8364334183206549
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	TRUE	Weighted median	96	1	65.62422498197104	69.99484939999438	0.3484716483027352
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	TRUE	Weighted mode	96	1	211.37418149379528	180.58763244979056	0.24473575484406118
+jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	TRUE	MR Egger	96	1	90.15670615742694	251.4765219018538	0.7207660191240012

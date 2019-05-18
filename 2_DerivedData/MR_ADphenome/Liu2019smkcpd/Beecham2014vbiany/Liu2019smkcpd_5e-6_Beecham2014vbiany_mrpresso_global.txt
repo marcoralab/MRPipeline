@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+qUI84s	VUMPs0	VBI_any	smkcpd	5e-6	FALSE	0	81.90674290472276	0.6587

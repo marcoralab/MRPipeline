@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+4qNkNd	ROZWjf	CSF_ab42	TG	5e-8	FALSE	1	138.58873579090383	<2e-04

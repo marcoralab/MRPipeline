@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+zsqnLT	BnoARb	Hippocampal_Volume	Hearing_Problems	5e-6	FALSE	Inverse variance weighted (fixed effects)	97	0	234.05545475930322	86.53340104384995	0.0068345734996571655
+zsqnLT	BnoARb	Hippocampal_Volume	Hearing_Problems	5e-6	FALSE	Weighted median	97	0	189.8845741657036	120.67097370522977	0.11558622226050111
+zsqnLT	BnoARb	Hippocampal_Volume	Hearing_Problems	5e-6	FALSE	Weighted mode	97	0	123.96331599559198	335.1668835265691	0.7123048245007289
+zsqnLT	BnoARb	Hippocampal_Volume	Hearing_Problems	5e-6	FALSE	MR Egger	97	0	240.66350022372546	266.05025735369253	0.36797670211577926

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+njDMQ5	sdByt2	VBI_any	Depression	5e-8	FALSE	0.18778840428014473	0.09843028278353846	0.07713669491885379	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+CtJujo	8nhUBm	Neuritic_Plaques_Any	DBP	5e-6	FALSE	-0.0027414188296647607	0.00638858621138955	0.6679232476831473	NA

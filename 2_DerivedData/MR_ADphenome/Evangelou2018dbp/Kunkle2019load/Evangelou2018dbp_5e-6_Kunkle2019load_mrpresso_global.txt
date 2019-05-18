@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+wW9wVw	cXpFnL	AD	DBP	5e-6	FALSE	1	1475.5463236100748	<2e-05

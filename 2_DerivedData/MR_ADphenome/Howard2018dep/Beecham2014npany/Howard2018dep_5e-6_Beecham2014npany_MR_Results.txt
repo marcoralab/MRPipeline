@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+01BEHK	SQ6mzF	Neuritic_Plaques_Any	Depression	5e-6	FALSE	Inverse variance weighted (fixed effects)	113	0	-3.307246799516324	1.1741917341143395	0.004853256827794995
+01BEHK	SQ6mzF	Neuritic_Plaques_Any	Depression	5e-6	FALSE	Weighted median	113	0	-4.17835712707642	1.723896969091556	0.01535965879998038
+01BEHK	SQ6mzF	Neuritic_Plaques_Any	Depression	5e-6	FALSE	Weighted mode	113	0	-5.2046696888289645	4.880891118282243	0.28856506298853807
+01BEHK	SQ6mzF	Neuritic_Plaques_Any	Depression	5e-6	FALSE	MR Egger	113	0	2.144669121601631	5.482272791331872	0.6963987786744673

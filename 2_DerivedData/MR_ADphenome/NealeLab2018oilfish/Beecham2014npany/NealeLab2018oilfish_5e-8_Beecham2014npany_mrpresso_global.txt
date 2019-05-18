@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+XOxmfr	tMNAyZ	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-8	FALSE	1	164.99541238218296	<2e-04

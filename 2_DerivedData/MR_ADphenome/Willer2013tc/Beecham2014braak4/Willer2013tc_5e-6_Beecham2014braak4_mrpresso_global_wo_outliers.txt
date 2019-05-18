@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gsGtum	FyEH1l	NFT_Braak_Four	TC	5e-6	TRUE	3	198.81087381360157	0.0039

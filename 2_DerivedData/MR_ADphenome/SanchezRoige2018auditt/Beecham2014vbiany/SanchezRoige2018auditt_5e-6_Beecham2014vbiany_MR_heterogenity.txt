@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+Fikr8S	Ij4zGP	VBI_any	AUDIT_Total	5e-6	FALSE	MR Egger	60.47214887403986	52	0.19652766059352852
+Fikr8S	Ij4zGP	VBI_any	AUDIT_Total	5e-6	FALSE	Inverse variance weighted	60.71644017985496	53	0.217700764924277

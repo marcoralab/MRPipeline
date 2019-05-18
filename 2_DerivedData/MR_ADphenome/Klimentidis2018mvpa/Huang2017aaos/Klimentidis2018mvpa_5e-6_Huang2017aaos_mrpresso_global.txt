@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+CY6CRB	GjRkwF	AAOS	MVPA	5e-6	FALSE	1	742.7659545644376	<1e-04

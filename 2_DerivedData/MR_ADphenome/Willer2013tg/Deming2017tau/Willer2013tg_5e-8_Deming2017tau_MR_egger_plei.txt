@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+LmpSQl	YJWRsU	CSF_ab42	TG	5e-8	FALSE	-0.001110890564722949	0.0015676344235105004	0.4814867098038459	NA

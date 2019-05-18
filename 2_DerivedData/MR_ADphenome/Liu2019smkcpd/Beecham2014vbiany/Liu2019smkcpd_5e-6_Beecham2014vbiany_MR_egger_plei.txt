@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+qUI84s	VUMPs0	VBI_any	smkcpd	5e-6	FALSE	7.747384234448329e-4	0.014428299331145993	0.9573035665634436	NA

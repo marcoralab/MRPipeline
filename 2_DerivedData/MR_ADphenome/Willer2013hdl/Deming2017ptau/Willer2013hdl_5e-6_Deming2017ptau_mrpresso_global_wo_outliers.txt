@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gyG0xI	J5g0yv	CSF_ab42	HDL	5e-6	TRUE	2	173.0049668602889	0.1862

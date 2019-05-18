@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+pGt45x	D3SKp3	Neuritic_Plaques_Any	smkint	5e-8	FALSE	MR Egger	107.70996090634554	95	0.17572853333606014
+pGt45x	D3SKp3	Neuritic_Plaques_Any	smkint	5e-8	FALSE	Inverse variance weighted	107.74804679835427	96	0.19401421501208604

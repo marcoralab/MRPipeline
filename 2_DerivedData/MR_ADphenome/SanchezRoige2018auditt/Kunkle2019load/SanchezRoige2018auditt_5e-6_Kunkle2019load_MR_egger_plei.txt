@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+05XL2M	QlHsb6	AD	AUDIT_Total	5e-6	FALSE	-0.005093181738314526	0.00595953935359805	0.39639927898949234	NA

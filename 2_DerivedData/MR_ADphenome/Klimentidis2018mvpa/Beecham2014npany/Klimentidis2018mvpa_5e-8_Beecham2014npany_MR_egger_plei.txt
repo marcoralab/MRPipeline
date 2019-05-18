@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	FALSE	0.13044827904218717	0.17030957960710635	0.451496963999357
+CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	TRUE	-0.04474399898749044	0.07879287785922835	0.5758745344921828

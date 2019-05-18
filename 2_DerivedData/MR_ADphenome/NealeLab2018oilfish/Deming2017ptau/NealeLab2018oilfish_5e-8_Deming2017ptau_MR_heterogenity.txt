@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+FNNzdV	wsGNX0	CSF_ab42	Oily_Fish_Intake	5e-8	FALSE	MR Egger	146.86251391230422	42	1.499344837323452e-13
+FNNzdV	wsGNX0	CSF_ab42	Oily_Fish_Intake	5e-8	FALSE	Inverse variance weighted	146.94576967014746	43	2.761538876230575e-13
+FNNzdV	wsGNX0	CSF_ab42	Oily_Fish_Intake	5e-8	TRUE	MR Egger	39.17545272147685	40	0.507211305498342
+FNNzdV	wsGNX0	CSF_ab42	Oily_Fish_Intake	5e-8	TRUE	Inverse variance weighted	39.55378267367454	41	0.5349433811536375

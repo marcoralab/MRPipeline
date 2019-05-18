@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+AvTyYC	p1sCQi	AD	Education	5e-8	TRUE	14	525.8711301409029	0.001

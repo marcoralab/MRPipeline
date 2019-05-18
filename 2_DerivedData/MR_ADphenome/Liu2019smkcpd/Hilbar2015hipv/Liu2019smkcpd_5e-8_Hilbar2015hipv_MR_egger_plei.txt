@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+VqW5G2	FVbqDy	Hippocampal_Volume	smkcpd	5e-8	FALSE	-2.0681055526853367	2.063557518253074	0.3295284314706225	NA

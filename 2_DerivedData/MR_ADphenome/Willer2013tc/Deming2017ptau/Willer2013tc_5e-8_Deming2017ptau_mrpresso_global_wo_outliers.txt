@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+smk1j0	pVeXRI	CSF_ab42	TC	5e-8	TRUE	3	110.6494933561845	0.169

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+TrYKXj	Emmu1e	NFT_Braak_Four	DBP	5e-6	FALSE	0	1120.1046441291574	0.65186

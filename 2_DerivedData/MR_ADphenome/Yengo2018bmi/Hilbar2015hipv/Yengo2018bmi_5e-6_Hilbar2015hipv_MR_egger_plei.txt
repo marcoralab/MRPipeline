@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+YWAn5S	il7Fi1	Hippocampal_Volume	BMI	5e-6	FALSE	-0.8829210962832734	0.409000218148798	0.031036572830905235	NA

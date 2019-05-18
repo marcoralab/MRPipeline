@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+dKN1WF	DGGByp	Hippocampal_Volume	SBP	5e-6	FALSE	-0.25261616818608734	0.44147564671875683	0.5672973592516886	NA

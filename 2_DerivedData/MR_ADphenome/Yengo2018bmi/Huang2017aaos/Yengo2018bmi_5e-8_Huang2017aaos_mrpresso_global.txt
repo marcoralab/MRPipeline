@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+k03tDw	iHKQ1H	AAOS	BMI	5e-8	FALSE	1	1449.25169637447	<2e-05

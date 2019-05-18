@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+bCD5w7	DQCSBh	AAOS	AUDIT_Total	5e-6	FALSE	0	66.47805554984188	0.1618

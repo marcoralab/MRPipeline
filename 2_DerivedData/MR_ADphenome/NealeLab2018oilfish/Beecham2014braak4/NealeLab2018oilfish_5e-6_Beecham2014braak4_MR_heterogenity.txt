@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	FALSE	MR Egger	329.79016191042797	154	7.650138757568039e-15
+YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	FALSE	Inverse variance weighted	331.307992333146	155	7.471808200066225e-15
+YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	TRUE	MR Egger	138.0831046548593	153	0.8005828587111163
+YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	TRUE	Inverse variance weighted	138.10081505022714	154	0.8161539735311502

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+pIJ66I	5r5jvX	Neuritic_Plaques_Any	Sleep_Duration	5e-8	FALSE	0.0018463544804071452	0.03786677498026338	0.9612358172146425	NA

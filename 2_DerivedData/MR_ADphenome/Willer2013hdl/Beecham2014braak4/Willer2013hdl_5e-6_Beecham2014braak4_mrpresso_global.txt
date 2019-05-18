@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+hnyzA4	dORMnp	NFT_Braak_Four	HDL	5e-6	FALSE	2	324.4636400059277	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+UNzp29	BpWdSk	CSF_ab42	Depression	5e-6	FALSE	0	120.06789923175305	0.1199

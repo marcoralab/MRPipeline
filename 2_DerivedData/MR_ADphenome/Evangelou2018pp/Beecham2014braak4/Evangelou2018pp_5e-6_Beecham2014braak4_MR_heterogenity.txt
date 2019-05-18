@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+THUMUO	B7MSvO	NFT_Braak_Four	PP	5e-6	FALSE	MR Egger	853.0680158428892	922	0.9486035555331322
+THUMUO	B7MSvO	NFT_Braak_Four	PP	5e-6	FALSE	Inverse variance weighted	854.1690468940046	923	0.9482432900984675

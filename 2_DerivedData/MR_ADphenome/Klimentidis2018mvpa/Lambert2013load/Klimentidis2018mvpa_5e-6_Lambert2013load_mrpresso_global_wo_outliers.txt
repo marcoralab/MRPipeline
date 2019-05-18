@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gDY29C	ZHBMmX	AD	MVPA	5e-6	TRUE	1	115.50857862609755	0.1888

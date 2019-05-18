@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+K4JZ3k	jqyiEI	Hippocampal_Volume	Diabetes	5e-8	FALSE	Inverse variance weighted (fixed effects)	127	0	14.471451035164243	6.6944950626210575	0.030641756313571633
+K4JZ3k	jqyiEI	Hippocampal_Volume	Diabetes	5e-8	FALSE	Weighted median	127	0	5.398625989499747	11.11531618558649	0.6271851839412254
+K4JZ3k	jqyiEI	Hippocampal_Volume	Diabetes	5e-8	FALSE	Weighted mode	127	0	0.036861022089283324	13.173134454511127	0.9977717903407171
+K4JZ3k	jqyiEI	Hippocampal_Volume	Diabetes	5e-8	FALSE	MR Egger	127	0	1.9769088046633585	16.07514433038553	0.902321060439458

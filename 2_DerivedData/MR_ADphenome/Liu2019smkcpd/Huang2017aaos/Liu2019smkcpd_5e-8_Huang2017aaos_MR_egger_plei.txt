@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+T4511w	tu8aYP	AAOS	smkcpd	5e-8	FALSE	0.017428045415130166	0.007491085769826958	0.030614748375441234	NA

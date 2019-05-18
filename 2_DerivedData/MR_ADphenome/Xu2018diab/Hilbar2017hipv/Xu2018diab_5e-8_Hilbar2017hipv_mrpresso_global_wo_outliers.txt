@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+JYgpt6	JaOhXl	Hippocampal_Volume	Diabetes	5e-8	TRUE	2	190.64957572465858	0.0011

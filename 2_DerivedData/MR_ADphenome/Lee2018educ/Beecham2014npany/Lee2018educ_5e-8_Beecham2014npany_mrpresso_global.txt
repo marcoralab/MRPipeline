@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+qQVRsG	trsUza	Neuritic_Plaques_Any	Education	5e-8	FALSE	0	433.0329705511313	0.38828

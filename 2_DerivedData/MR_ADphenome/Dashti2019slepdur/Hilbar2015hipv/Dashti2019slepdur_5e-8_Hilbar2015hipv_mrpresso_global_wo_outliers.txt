@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+d9Zeml	zYKdzt	Hippocampal_Volume	Sleep_Duration	5e-8	TRUE	3	106.04922718471003	0.0168

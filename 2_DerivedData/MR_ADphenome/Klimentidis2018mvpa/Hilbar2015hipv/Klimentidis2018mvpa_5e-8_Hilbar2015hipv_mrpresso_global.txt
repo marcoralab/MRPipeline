@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+5ItFYE	zEuCvL	Hippocampal_Volume	MVPA	5e-8	FALSE	1	55.91186744199463	<0.001

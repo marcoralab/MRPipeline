@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+UuVaJI	oqIGDL	NFT_Braak_Four	smkcpd	5e-6	FALSE	Inverse variance weighted (fixed effects)	89	0	0.30535842794522144	0.265593586594008	0.2502589511107779
+UuVaJI	oqIGDL	NFT_Braak_Four	smkcpd	5e-6	FALSE	Weighted median	89	0	0.0509809253637442	0.46122359873725627	0.9119858248900026
+UuVaJI	oqIGDL	NFT_Braak_Four	smkcpd	5e-6	FALSE	Weighted mode	89	0	0.21250423189474432	0.41597702837412565	0.6107313533955474
+UuVaJI	oqIGDL	NFT_Braak_Four	smkcpd	5e-6	FALSE	MR Egger	89	0	0.026489903799034806	0.5053085980692514	0.9583116562518115

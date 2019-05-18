@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+QENT3E	HTAdS8	AD	Alcohol_Dependence	5e-6	TRUE	0	NA	NA

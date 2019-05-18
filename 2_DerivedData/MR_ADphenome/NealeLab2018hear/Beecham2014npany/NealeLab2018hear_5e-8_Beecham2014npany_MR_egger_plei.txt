@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+jFh2Zt	bJFrjd	Neuritic_Plaques_Any	Hearing_Problems	5e-8	FALSE	-0.057697124897902095	0.04984024524644937	0.25753489815186803	NA

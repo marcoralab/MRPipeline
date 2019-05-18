@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Pk5Rwn	K05LFY	CSF_ab42	MVPA	5e-8	TRUE	1	22.210934369071424	0.368

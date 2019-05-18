@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+0C67un	GC7vGW	CSF_ab42	Education	5e-6	FALSE	-2.2523955143780716e-4	8.826058851675084e-4	0.7986332163165076	NA

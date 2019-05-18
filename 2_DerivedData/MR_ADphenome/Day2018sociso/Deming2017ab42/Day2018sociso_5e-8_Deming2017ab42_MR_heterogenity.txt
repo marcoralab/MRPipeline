@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	FALSE	MR Egger	14.769479270171896	10	0.14069497389147967
+MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	FALSE	Inverse variance weighted	20.697325754694496	11	0.036645914213753655
+MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	TRUE	MR Egger	8.228841390526515	9	0.5112593316778345
+MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	TRUE	Inverse variance weighted	11.532260657603427	10	0.31757882004997956

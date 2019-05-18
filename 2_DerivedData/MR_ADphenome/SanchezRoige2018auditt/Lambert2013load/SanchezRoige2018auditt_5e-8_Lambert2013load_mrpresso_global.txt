@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+uj28aM	mbamT2	AD	AUDIT_Total	5e-8	FALSE	1	38.70108253771161	0.001

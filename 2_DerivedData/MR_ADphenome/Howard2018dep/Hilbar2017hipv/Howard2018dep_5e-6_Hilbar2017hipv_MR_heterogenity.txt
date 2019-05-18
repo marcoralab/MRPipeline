@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+miQxVl	9uKss7	Hippocampal_Volume	Depression	5e-6	FALSE	MR Egger	110.47313539541413	112	0.5230747078949883
+miQxVl	9uKss7	Hippocampal_Volume	Depression	5e-6	FALSE	Inverse variance weighted	121.43920452835867	113	0.27690286500811334

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+5KcEdR	cXYZfL	Hippocampal_Volume	Education	5e-8	TRUE	17	509.54285372198007	0.00796

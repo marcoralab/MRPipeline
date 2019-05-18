@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+TMmIj6	tcdJVl	VBI_any	MDD	5e-6	TRUE	1	83.57799242671317	0.0362

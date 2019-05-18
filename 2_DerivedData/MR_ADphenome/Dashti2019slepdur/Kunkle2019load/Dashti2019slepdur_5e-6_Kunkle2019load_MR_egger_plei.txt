@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+WiD7oI	BCMDZe	AD	Sleep_Duration	5e-6	FALSE	0.0030338515116632415	0.00434674943780993	0.48585168534592815	NA

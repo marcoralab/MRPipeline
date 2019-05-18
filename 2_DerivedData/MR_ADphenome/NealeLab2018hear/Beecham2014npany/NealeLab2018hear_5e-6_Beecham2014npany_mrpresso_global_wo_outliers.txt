@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+ClFiBk	qn6nhD	Neuritic_Plaques_Any	Hearing_Problems	5e-6	TRUE	0	NA	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LEmzls	oEmJe8	CSF_ab42	MVPA	5e-6	FALSE	0	96.52463008574192	0.1237

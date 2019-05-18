@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	-0.029696440425211607	0.1250462958351228	0.8157218354186175	NA

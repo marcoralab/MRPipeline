@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted (fixed effects)	16	1	0.06958664152836505	0.08756613252479088	0.42680241121805135
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	Weighted median	16	1	-0.015585913997326006	0.14241889627783277	0.9128557921774291
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	Weighted mode	16	1	-0.07686150858316187	0.1736732491781367	0.6643962899032083
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	MR Egger	16	1	-0.013649112120453335	0.26304064181538694	0.9593496638007977
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	Inverse variance weighted (fixed effects)	15	1	0.01790609415416967	0.08942144960943967	0.841289884643867
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	Weighted median	15	1	-0.03948203994006977	0.1396772949884875	0.7774327847804308
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	Weighted mode	15	1	-0.035358677665338734	0.16435875686716392	0.8327675119442435
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	MR Egger	15	1	0.14691242048637093	0.2389727171463782	0.549318637073347

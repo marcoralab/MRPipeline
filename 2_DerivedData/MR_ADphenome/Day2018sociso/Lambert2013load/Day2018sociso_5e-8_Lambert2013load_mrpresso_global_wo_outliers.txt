@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+YYYp2Z	rPPETX	AD	Social_Isolation	5e-8	TRUE	1	15.192106176903257	0.364

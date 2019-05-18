@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	FALSE	1	336.73958809385715	<1e-04

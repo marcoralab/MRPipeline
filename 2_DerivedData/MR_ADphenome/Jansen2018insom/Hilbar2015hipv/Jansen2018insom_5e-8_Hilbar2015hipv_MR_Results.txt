@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	Inverse variance weighted (fixed effects)	14	0	-83.13916217176006	39.453355856296625	0.03509354771497013
+7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	Weighted median	14	0	-90.68652232007354	56.1216351513064	0.10611758446397666
+7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	Weighted mode	14	0	-132.39670632006766	79.28735244666663	0.11884044405178516
+7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	MR Egger	14	0	-136.77748488439977	185.96527500188773	0.4761653372927068

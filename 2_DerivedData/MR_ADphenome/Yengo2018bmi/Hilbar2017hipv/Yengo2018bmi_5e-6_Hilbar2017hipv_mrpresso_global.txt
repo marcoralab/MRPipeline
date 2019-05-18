@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LEyy6B	DB6pfM	Hippocampal_Volume	BMI	5e-6	FALSE	1	1727.9421970118844	<1.33333333333333e-05

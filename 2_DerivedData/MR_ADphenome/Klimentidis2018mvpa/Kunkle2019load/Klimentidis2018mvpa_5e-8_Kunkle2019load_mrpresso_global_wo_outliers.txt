@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tDB2zW	LPu8uo	AD	MVPA	5e-8	TRUE	10	6.617077235587225	0.979

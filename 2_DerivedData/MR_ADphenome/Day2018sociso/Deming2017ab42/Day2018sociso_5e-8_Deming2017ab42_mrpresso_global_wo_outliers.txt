@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	TRUE	1	14.43396522610633	0.287

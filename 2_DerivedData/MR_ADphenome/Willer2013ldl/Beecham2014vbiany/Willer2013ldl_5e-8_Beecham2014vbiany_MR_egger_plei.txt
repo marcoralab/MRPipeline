@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+MSe3L8	zBDgxr	VBI_any	LDL	5e-8	FALSE	0.008589325106022533	0.01373616833120483	0.5335716296473816	NA

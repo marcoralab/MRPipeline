@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+XkwkA2	6Xbi9L	Neuritic_Plaques_Any	HDL	5e-6	FALSE	1	250.17936557128724	<1e-04

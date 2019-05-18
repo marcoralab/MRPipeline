@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+xV3dAX	Amp6So	Hippocampal_Volume	PP	5e-6	TRUE	47	1179.9412228409808	<2e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Nb7ix4	cF4XZ6	CSF_ab42	MVPA	5e-6	TRUE	1	95.34542347940699	0.3004

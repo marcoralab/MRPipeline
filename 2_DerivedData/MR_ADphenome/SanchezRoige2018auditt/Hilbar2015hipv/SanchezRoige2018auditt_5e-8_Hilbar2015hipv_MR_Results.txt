@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+ctB9Yi	lNQo4y	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	Inverse variance weighted (fixed effects)	6	0	-22.15703313932845	202.1339786144892	0.9127142547103272
+ctB9Yi	lNQo4y	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	Weighted median	6	0	305.7904679952507	267.97277090533424	0.25381784732630536
+ctB9Yi	lNQo4y	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	Weighted mode	6	0	317.3558899076879	270.02749349896243	0.29279926082650387
+ctB9Yi	lNQo4y	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	MR Egger	6	0	502.65464122451624	488.5180749289534	0.36165634866213037

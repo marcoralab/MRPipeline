@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+bVd60y	SQ4pJW	AD	crp	5e-8	FALSE	15	5187.287127751478	<2e-04
+iXlyRx	fNFaXz	AD	crp	5e-6	FALSE	14	5105.495010982771	<1e-04
+bVd60y	SQ4pJW	AD	crp	5e-8	TRUE	18	36.96783484753078	0.3912
+iXlyRx	fNFaXz	AD	crp	5e-6	TRUE	21	104.97346802531321	0.6893

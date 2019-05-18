@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+t90Ci4	6Ol64r	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted (fixed effects)	18	0	-6.838728267581573	8.868280471008092	0.4406211155544715
+t90Ci4	6Ol64r	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	Weighted median	18	0	-9.364666055413622	12.77904920831001	0.46367188660227826
+t90Ci4	6Ol64r	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	Weighted mode	18	0	-28.465966181143898	15.883195062248282	0.09091490211285408
+t90Ci4	6Ol64r	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	MR Egger	18	0	-9.975325214633852	23.031306513670177	0.6707096082110586

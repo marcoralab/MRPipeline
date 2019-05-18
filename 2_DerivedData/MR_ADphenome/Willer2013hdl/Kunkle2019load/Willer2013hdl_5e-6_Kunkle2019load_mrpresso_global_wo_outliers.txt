@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Ds4Hsi	YnnfXJ	AD	HDL	5e-6	TRUE	4	253.20754805303022	<1e-04

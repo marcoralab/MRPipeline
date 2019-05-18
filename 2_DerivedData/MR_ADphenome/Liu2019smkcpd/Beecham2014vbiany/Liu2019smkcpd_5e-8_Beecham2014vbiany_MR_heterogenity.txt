@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+o790y8	gbmHoZ	VBI_any	smkcpd	5e-8	FALSE	MR Egger	16.924910467777824	19	0.5949550611561831
+o790y8	gbmHoZ	VBI_any	smkcpd	5e-8	FALSE	Inverse variance weighted	17.16742217847046	20	0.6420769840475824

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+aCwnE2	Ak0EQy	CSF_ab42	Hearing_Problems	5e-8	FALSE	Inverse variance weighted (fixed effects)	23	0	0.14559254949059813	0.18005379430827143	0.4187419048486863
+aCwnE2	Ak0EQy	CSF_ab42	Hearing_Problems	5e-8	FALSE	Weighted median	23	0	-0.0806082944133941	0.2501220595431586	0.7472437417926439
+aCwnE2	Ak0EQy	CSF_ab42	Hearing_Problems	5e-8	FALSE	Weighted mode	23	0	-0.15702696052127552	0.4172306928724546	0.7102580083139999
+aCwnE2	Ak0EQy	CSF_ab42	Hearing_Problems	5e-8	FALSE	MR Egger	23	0	-2.092231475554459	1.2534096440825515	0.10991273253502803

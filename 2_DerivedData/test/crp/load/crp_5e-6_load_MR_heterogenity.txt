@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+iXlyRx	fNFaXz	AD	crp	5e-6	FALSE	MR Egger	2996.4023203790853	124	0
+iXlyRx	fNFaXz	AD	crp	5e-6	FALSE	Inverse variance weighted	3604.284883265581	125	0
+iXlyRx	fNFaXz	AD	crp	5e-6	TRUE	MR Egger	102.61293733549526	110	0.6788265158258057
+iXlyRx	fNFaXz	AD	crp	5e-6	TRUE	Inverse variance weighted	103.09064141824153	111	0.6910987500210191

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	0	13.35819302186079	0.607

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+qMitNG	iH5Bgf	NFT_Braak_Four	Sleep_Duration	5e-8	FALSE	Inverse variance weighted (fixed effects)	80	0	-0.47955743086937636	0.3552880877780311	0.17708956418113408
+qMitNG	iH5Bgf	NFT_Braak_Four	Sleep_Duration	5e-8	FALSE	Weighted median	80	0	-0.8658462399564747	0.5385258721478613	0.10787722176345706
+qMitNG	iH5Bgf	NFT_Braak_Four	Sleep_Duration	5e-8	FALSE	Weighted mode	80	0	-1.7076421812850455	1.0386153307044153	0.10411866765471808
+qMitNG	iH5Bgf	NFT_Braak_Four	Sleep_Duration	5e-8	FALSE	MR Egger	80	0	-0.9290371110116624	1.3791179249418932	0.5025278167742984

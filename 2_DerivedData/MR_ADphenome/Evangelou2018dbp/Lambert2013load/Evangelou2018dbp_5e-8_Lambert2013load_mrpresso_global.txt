@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+ekKdvM	oKwalt	AD	DBP	5e-8	FALSE	1	827.9857800865645	8e-5

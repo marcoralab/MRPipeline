@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tV1HgB	Kter6j	NFT_Braak_Four	SBP	5e-6	FALSE	0	1039.3785349854686	0.93926

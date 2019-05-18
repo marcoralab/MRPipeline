@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+L8H2XF	rrEc1z	Hippocampal_Volume	AUDIT_Total	5e-6	TRUE	0	NA	NA

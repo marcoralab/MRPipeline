@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+xTLpuO	f5lmCA	CSF_ab42	AUDIT_Total	5e-6	FALSE	0.0017259485925620783	0.003698723836088995	0.643173617776901	NA

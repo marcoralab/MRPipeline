@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+C4RSNA	tVbKu2	Neuritic_Plaques_Any	PP	5e-8	FALSE	Inverse variance weighted (fixed effects)	544	0	0.03286968404668345	0.01874886610639736	0.07957526130711183
+C4RSNA	tVbKu2	Neuritic_Plaques_Any	PP	5e-8	FALSE	Weighted median	544	0	0.07356409183688908	0.030676640685288265	0.01648265381833198
+C4RSNA	tVbKu2	Neuritic_Plaques_Any	PP	5e-8	FALSE	Weighted mode	544	0	0.09623830840267811	0.06609275971668722	0.14594023423476302
+C4RSNA	tVbKu2	Neuritic_Plaques_Any	PP	5e-8	FALSE	MR Egger	544	0	0.04501568869692437	0.049585208609220416	0.36436353062499427

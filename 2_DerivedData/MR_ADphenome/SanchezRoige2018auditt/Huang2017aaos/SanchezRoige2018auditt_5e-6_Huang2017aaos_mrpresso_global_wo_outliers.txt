@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+bCD5w7	DQCSBh	AAOS	AUDIT_Total	5e-6	TRUE	0	NA	NA

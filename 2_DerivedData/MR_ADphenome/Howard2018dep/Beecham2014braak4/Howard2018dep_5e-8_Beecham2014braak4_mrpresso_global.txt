@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+nn7eur	Itkl6U	NFT_Braak_Four	Depression	5e-8	FALSE	0	18.32825869025447	0.382

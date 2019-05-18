@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+g1kDbQ	WR8FT9	Neuritic_Plaques_Any	LDL	5e-8	FALSE	-0.027158235169630937	0.018102000721602875	0.13752564734808476	NA

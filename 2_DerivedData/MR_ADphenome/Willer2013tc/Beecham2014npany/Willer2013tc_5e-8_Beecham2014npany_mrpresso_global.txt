@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+eHWNlU	Ukvhjx	Neuritic_Plaques_Any	TC	5e-8	FALSE	0	108.98923208630598	0.2404

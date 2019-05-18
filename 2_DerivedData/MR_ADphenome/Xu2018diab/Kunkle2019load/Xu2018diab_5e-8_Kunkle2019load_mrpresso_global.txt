@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+RD6FoD	yIDTVH	AD	Diabetes	5e-8	FALSE	1	216.56721652520324	<1e-04

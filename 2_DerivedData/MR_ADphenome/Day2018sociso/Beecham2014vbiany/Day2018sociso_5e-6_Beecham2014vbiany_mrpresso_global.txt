@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	0	89.96953313923547	0.5233

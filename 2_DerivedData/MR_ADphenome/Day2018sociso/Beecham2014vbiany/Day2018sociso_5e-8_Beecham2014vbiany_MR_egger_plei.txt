@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+CgTDn4	QYAsko	VBI_any	Social_Isolation	5e-8	FALSE	0.0593917447909776	0.11022762324527927	0.5991239593766647	NA

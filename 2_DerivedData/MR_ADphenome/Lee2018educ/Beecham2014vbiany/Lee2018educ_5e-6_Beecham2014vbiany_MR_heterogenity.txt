@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+FJ7805	I6hqfV	VBI_any	Education	5e-6	FALSE	MR Egger	907.5125258978773	922	0.6268840219078369
+FJ7805	I6hqfV	VBI_any	Education	5e-6	FALSE	Inverse variance weighted	907.5314353205243	923	0.6355233897329072

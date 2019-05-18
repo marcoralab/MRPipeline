@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+eoirj8	DVyjiC	CSF_ab42	LDL	5e-8	FALSE	0	94.68334326004387	0.061

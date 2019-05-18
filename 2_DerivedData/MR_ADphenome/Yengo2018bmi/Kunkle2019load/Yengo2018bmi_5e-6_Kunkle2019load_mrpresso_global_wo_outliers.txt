@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+mieUpw	cctVFJ	AD	BMI	5e-6	TRUE	36	1657.8534901659625	3.2e-4

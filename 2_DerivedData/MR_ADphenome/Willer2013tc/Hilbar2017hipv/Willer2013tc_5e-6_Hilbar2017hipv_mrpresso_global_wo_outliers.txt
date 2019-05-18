@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Yknk4M	xICS95	Hippocampal_Volume	TC	5e-6	TRUE	4	189.21158320147072	0.0121

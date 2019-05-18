@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+3jGjEs	mRx8AF	AAOS	TG	5e-6	FALSE	3	312.80549690989426	<1e-04

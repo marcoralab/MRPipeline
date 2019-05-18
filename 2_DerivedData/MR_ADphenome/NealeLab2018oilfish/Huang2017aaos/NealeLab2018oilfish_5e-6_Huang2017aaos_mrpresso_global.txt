@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Ya48Ik	cBI1Zg	AAOS	Oily_Fish_Intake	5e-6	FALSE	1	639.1256632298024	<1e-04

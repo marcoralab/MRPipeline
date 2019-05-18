@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+OE3zX4	tUmDMT	Neuritic_Plaques_Any	BMI	5e-8	FALSE	Inverse variance weighted (fixed effects)	845	0	-0.028554280008398134	0.18900971684849782	0.8799180680687322
+OE3zX4	tUmDMT	Neuritic_Plaques_Any	BMI	5e-8	FALSE	Weighted median	845	0	0.18580037167916544	0.32000540888216744	0.5614990520887075
+OE3zX4	tUmDMT	Neuritic_Plaques_Any	BMI	5e-8	FALSE	Weighted mode	845	0	0.4932031756041866	0.6446851702189658	0.44446783408671275
+OE3zX4	tUmDMT	Neuritic_Plaques_Any	BMI	5e-8	FALSE	MR Egger	845	0	0.10877235721062203	0.5554598326082889	0.8447951291345062

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+MJzcqF	Nzj0ue	VBI_any	drnkwk	5e-6	FALSE	0.0051961983138321685	0.010078288723548165	0.6069095685851238	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+oqCagS	TG5WqH	AAOS	Diabetes	5e-8	TRUE	2	191.64473276732235	5e-4

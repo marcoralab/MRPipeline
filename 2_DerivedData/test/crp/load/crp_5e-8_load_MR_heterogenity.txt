@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+bVd60y	SQ4pJW	AD	crp	5e-8	FALSE	MR Egger	2685.111293417533	47	0
+bVd60y	SQ4pJW	AD	crp	5e-8	FALSE	Inverse variance weighted	3310.8821002600644	48	0
+bVd60y	SQ4pJW	AD	crp	5e-8	TRUE	MR Egger	34.363325535501815	32	0.3551704969560382
+bVd60y	SQ4pJW	AD	crp	5e-8	TRUE	Inverse variance weighted	34.82684380556451	33	0.3810760116106775

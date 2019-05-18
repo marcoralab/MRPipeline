@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+SjkvC1	n5kTCf	Neuritic_Plaques_Any	MVPA	5e-6	FALSE	MR Egger	217.53149514597325	102	2.3261790827804808e-10
+SjkvC1	n5kTCf	Neuritic_Plaques_Any	MVPA	5e-6	FALSE	Inverse variance weighted	219.12864493507442	103	2.2221175805275282e-10
+SjkvC1	n5kTCf	Neuritic_Plaques_Any	MVPA	5e-6	TRUE	MR Egger	115.87544001640994	101	0.14786463237451145
+SjkvC1	n5kTCf	Neuritic_Plaques_Any	MVPA	5e-6	TRUE	Inverse variance weighted	116.23120399607892	102	0.158736711385409

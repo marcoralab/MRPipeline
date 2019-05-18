@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+oxB7om	XxMSnp	VBI_any	LDL	5e-6	FALSE	MR Egger	124.90738405933845	121	0.38541852310185143
+oxB7om	XxMSnp	VBI_any	LDL	5e-6	FALSE	Inverse variance weighted	126.45411907867972	122	0.3728497090653645

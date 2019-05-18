@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+9qBWmY	kWbuKh	Neuritic_Plaques_Any	HDL	5e-8	FALSE	MR Egger	177.754234282976	101	3.7577098645393e-6
+9qBWmY	kWbuKh	Neuritic_Plaques_Any	HDL	5e-8	FALSE	Inverse variance weighted	177.80925840243333	102	4.994580826365633e-6
+9qBWmY	kWbuKh	Neuritic_Plaques_Any	HDL	5e-8	TRUE	MR Egger	85.43613037673454	100	0.8500819377298823
+9qBWmY	kWbuKh	Neuritic_Plaques_Any	HDL	5e-8	TRUE	Inverse variance weighted	85.53206445035404	101	0.8647438622414922

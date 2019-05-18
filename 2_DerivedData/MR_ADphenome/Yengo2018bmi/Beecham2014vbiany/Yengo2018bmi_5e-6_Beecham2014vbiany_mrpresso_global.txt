@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Fltlk9	0lUvRW	VBI_any	BMI	5e-6	FALSE	0	1384.2390277750123	0.8512933333333333

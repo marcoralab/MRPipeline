@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+iXlyRx	fNFaXz	AD	crp	5e-6	FALSE	0.06394960226963052	0.01275020667729554	1.7851468163845776e-6
+iXlyRx	fNFaXz	AD	crp	5e-6	TRUE	0.003165163903580819	0.0045794859164567285	0.4909201688031458

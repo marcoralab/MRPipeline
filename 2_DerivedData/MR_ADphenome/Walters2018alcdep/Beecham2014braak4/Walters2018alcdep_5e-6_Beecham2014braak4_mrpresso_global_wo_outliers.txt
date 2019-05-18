@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	2	23.110236428787896	0.128

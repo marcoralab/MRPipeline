@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	MR Egger	8.82633145785562	14	0.8420122401525078
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted	8.826341399496137	15	0.8864209683712805

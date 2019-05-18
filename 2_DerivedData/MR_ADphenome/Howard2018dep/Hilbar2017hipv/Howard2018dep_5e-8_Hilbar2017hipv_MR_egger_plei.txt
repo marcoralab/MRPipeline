@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+dlGl5d	bv9NTc	Hippocampal_Volume	Depression	5e-8	FALSE	-0.04609823360071018	0.01358146719806342	0.004362927895547738	NA

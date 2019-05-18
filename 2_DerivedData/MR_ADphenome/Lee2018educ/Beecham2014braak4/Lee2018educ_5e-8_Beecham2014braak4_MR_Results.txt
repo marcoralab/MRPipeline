@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	Inverse variance weighted (fixed effects)	426	0	0.12615778696593616	0.18953889172926927	0.5056644430513806
+MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	Weighted median	426	0	0.07784560414830337	0.28138257315015336	0.7820458242639521
+MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	Weighted mode	426	0	0.1974119460877901	0.9792374534893019	0.8403277552465924
+MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	MR Egger	426	0	-0.8738208765049852	0.7616438348574859	0.25191171506809307

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	FALSE	Inverse variance weighted (fixed effects)	28	0	1.1935739744907923	1.1556409028755825	0.3016861426918464
+EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	FALSE	Weighted median	28	0	-6.960211943317085e-4	1.76731017936382	0.9996857684875708
+EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	FALSE	Weighted mode	28	0	0.17806486421713785	2.3368370065718502	0.939822532284825
+EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	FALSE	MR Egger	28	0	-1.1311787629535583	3.2790215391303748	0.732888747933472

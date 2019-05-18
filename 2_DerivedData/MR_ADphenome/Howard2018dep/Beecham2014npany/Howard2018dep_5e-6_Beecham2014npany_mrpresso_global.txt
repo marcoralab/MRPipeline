@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+01BEHK	SQ6mzF	Neuritic_Plaques_Any	Depression	5e-6	FALSE	0	122.14940222126458	0.2989

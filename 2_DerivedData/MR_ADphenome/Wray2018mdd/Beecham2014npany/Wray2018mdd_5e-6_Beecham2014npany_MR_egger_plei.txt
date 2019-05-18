@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+nfaEDF	Ts1RSD	Neuritic_Plaques_Any	MDD	5e-6	FALSE	0.005572332714925931	0.02402905980458839	0.8174050013361597	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+DkpMsh	HB0lau	AD	Depression	5e-8	TRUE	1	19.897128584537064	0.252

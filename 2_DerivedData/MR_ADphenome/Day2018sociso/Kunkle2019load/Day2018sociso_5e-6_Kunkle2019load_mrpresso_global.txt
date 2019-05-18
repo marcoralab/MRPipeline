@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9BcwC9	Rqg00s	AD	Social_Isolation	5e-6	FALSE	1	150.9192713171639	5e-4

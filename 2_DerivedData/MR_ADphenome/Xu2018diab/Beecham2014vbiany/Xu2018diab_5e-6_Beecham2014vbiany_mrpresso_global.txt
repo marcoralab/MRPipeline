@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+bOb76U	31R789	VBI_any	Diabetes	5e-6	FALSE	0	252.6972655674156	0.8864

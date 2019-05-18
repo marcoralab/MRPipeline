@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+RheSO6	Sroc4x	Neuritic_Plaques_Any	LDL	5e-6	FALSE	-0.015141792877515029	0.01307266662159478	0.24903130481678792	NA

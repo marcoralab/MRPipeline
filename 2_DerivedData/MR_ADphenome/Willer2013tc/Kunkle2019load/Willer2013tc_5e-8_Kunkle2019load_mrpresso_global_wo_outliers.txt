@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+sdV0JD	yqbPaP	AD	TC	5e-8	TRUE	8	136.5319690132955	0.005

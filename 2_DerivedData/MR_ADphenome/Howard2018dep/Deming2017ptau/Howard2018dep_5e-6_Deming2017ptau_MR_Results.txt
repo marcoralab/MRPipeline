@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+cT6r1j	UA8epx	CSF_ab42	Depression	5e-6	FALSE	Inverse variance weighted (fixed effects)	105	0	-0.23119053834757008	0.08780138406236616	0.00846074061540215
+cT6r1j	UA8epx	CSF_ab42	Depression	5e-6	FALSE	Weighted median	105	0	-0.2715662452218546	0.12449207823013238	0.029154303232667683
+cT6r1j	UA8epx	CSF_ab42	Depression	5e-6	FALSE	Weighted mode	105	0	-0.577014344276344	0.3554426850386549	0.10753809356479585
+cT6r1j	UA8epx	CSF_ab42	Depression	5e-6	FALSE	MR Egger	105	0	-0.6532460903873138	0.3728903557403662	0.0827768179550431

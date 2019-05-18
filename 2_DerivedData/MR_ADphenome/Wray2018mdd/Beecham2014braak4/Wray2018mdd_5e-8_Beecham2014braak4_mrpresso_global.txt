@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+d2m1mm	cpPjve	NFT_Braak_Four	MDD	5e-8	FALSE	0	8.033709754285928	0.513

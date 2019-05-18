@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+pGt45x	D3SKp3	Neuritic_Plaques_Any	smkint	5e-8	FALSE	0	110.1295562300167	0.1985

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+abZZ8I	tjQEED	Hippocampal_Volume	DBP	5e-8	FALSE	0	729.9209801808793	0.05832

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+YYXvVF	YuDOp1	CSF_ab42	Depression	5e-8	TRUE	0	NA	NA

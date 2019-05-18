@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+gDSF5J	RfVKsD	Hippocampal_Volume	SBP	5e-6	FALSE	MR Egger	1337.181213281246	1152	1.155297784276961e-4
+gDSF5J	RfVKsD	Hippocampal_Volume	SBP	5e-6	FALSE	Inverse variance weighted	1338.3221854633018	1153	1.1498116005182362e-4
+gDSF5J	RfVKsD	Hippocampal_Volume	SBP	5e-6	TRUE	MR Egger	1320.443349941107	1151	3.551836944928854e-4
+gDSF5J	RfVKsD	Hippocampal_Volume	SBP	5e-6	TRUE	Inverse variance weighted	1321.6956651446526	1152	3.5073541158129955e-4

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+OJYxy0	R8esHO	AD	smkint	5e-6	FALSE	MR Egger	363.9312769842041	314	0.027305200595761928
+OJYxy0	R8esHO	AD	smkint	5e-6	FALSE	Inverse variance weighted	365.08483613746563	315	0.027130920482119562

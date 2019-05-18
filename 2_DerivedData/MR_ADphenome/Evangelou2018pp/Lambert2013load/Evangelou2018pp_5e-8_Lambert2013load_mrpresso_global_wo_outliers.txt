@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+FIIXsS	Q7ntxP	AD	PP	5e-8	TRUE	33	697.8296227246423	<4e-05

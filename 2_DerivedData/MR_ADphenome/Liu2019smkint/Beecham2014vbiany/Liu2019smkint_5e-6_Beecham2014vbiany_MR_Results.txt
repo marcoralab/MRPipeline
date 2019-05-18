@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+sKiXj3	0SWCdw	VBI_any	smkint	5e-6	FALSE	Inverse variance weighted (fixed effects)	303	0	-0.2803128683985528	0.3995596799740644	0.4829570714279206
+sKiXj3	0SWCdw	VBI_any	smkint	5e-6	FALSE	Weighted median	303	0	-0.3648766334598563	0.6033701191800042	0.5453577270901934
+sKiXj3	0SWCdw	VBI_any	smkint	5e-6	FALSE	Weighted mode	303	0	-1.2779356547109408	1.761195883443511	0.46864177532368334
+sKiXj3	0SWCdw	VBI_any	smkint	5e-6	FALSE	MR Egger	303	0	-1.169178679202396	1.6675511446397377	0.48376037234773583

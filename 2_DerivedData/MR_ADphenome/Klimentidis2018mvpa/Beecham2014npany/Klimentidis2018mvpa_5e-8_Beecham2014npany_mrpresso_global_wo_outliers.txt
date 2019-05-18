@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	TRUE	1	19.51315118112245	0.762

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted (fixed effects)	16	0	-0.010735501325510667	0.11334951717289556	0.9245439936664018
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	Weighted median	16	0	-0.029160732869741905	0.1618921556848956	0.8570548809711798
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	Weighted mode	16	0	-0.02556785849044374	0.20244228910386391	0.9011741593905864
+3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	MR Egger	16	0	-0.011392809271827177	0.23729119481273028	0.9623849338661996

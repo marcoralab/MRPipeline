@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+3PqJ9R	mx6X17	AD	Depression	5e-6	FALSE	-0.004004573764440798	0.007440176557044099	0.5914451284461568	NA

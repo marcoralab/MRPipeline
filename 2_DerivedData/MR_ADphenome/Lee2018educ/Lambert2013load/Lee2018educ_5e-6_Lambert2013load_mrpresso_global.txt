@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+p4b9s3	TMOcQA	AD	Education	5e-6	FALSE	0	1168.4486886492327	<2e-05

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+THUMUO	B7MSvO	NFT_Braak_Four	PP	5e-6	TRUE	0	NA	NA

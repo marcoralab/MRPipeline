@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+QALDOk	cdz92i	Hippocampal_Volume	Social_Isolation	5e-6	FALSE	Inverse variance weighted (fixed effects)	88	0	-11.404586101187624	48.59035930915971	0.8144347383139366
+QALDOk	cdz92i	Hippocampal_Volume	Social_Isolation	5e-6	FALSE	Weighted median	88	0	-2.393677612155785	75.34901535498479	0.9746571709110924
+QALDOk	cdz92i	Hippocampal_Volume	Social_Isolation	5e-6	FALSE	Weighted mode	88	0	-42.52933988201312	177.35834046611586	0.8110545785482227
+QALDOk	cdz92i	Hippocampal_Volume	Social_Isolation	5e-6	FALSE	MR Egger	88	0	-423.63726850757314	226.00132884618102	0.06425773598907762

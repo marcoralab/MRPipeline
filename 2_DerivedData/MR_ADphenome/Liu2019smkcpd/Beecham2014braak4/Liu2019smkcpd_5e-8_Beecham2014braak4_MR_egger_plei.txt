@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+GIc0X9	F7qJon	NFT_Braak_Four	smkcpd	5e-8	FALSE	-0.010070054088451751	0.0195647950572629	0.6126964409155731	NA

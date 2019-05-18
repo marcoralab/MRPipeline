@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+nfzuSY	HMwmze	VBI_any	MVPA	5e-6	FALSE	7.445981323911815e-4	0.031275841233181494	0.9810522570070795	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+05XL2M	QlHsb6	AD	AUDIT_Total	5e-6	FALSE	0	88.91595075048014	0.0104

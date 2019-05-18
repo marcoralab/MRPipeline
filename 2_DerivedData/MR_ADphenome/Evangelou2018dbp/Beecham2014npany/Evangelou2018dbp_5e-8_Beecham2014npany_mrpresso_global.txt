@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+4XJ01T	tEPACV	Neuritic_Plaques_Any	DBP	5e-8	FALSE	0	677.5421056574074	0.56592

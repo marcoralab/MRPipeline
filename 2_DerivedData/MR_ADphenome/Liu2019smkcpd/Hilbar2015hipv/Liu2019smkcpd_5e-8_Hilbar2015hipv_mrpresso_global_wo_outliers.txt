@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+VqW5G2	FVbqDy	Hippocampal_Volume	smkcpd	5e-8	TRUE	0	NA	NA

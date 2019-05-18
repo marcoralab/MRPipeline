@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+IqMqPq	7XQQ9e	Neuritic_Plaques_Any	smkcpd	5e-6	FALSE	0	70.40318475133846	0.9289

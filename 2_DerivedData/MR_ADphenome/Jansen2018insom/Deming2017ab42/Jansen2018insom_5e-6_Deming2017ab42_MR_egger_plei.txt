@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	FALSE	-0.002754289555776433	0.003365508098021424	0.41572865813134197
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	TRUE	-0.0018493158638104757	0.003200875666049784	0.5651847333771842

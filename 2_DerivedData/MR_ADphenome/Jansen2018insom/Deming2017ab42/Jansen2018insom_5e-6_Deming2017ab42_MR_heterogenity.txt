@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	FALSE	MR Egger	100.68501395214346	75	0.025612039270505645
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	FALSE	Inverse variance weighted	101.5841418685252	76	0.026666881999816736
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	TRUE	MR Egger	89.11354586692204	74	0.11112920698111119
+H3EDj8	x3sxnC	CSF_ab42	Insomnia	5e-6	TRUE	Inverse variance weighted	89.51551859162024	75	0.12100331065649797

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+01CCTc	2C48r1	AD	MDD	5e-8	FALSE	MR Egger	4.3476193603239714	6	0.6297445504714118
+01CCTc	2C48r1	AD	MDD	5e-8	FALSE	Inverse variance weighted	8.333156309210636	7	0.30413504850312206

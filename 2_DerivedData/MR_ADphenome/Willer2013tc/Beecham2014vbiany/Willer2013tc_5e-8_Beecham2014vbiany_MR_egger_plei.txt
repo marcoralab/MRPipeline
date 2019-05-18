@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Vzxvit	eGMP7r	VBI_any	TC	5e-8	FALSE	0.008558799280156147	0.012901250134608565	0.5086589109961802	NA

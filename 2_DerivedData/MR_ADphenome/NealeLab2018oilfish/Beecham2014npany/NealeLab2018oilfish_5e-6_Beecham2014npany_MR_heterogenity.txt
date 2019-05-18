@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	MR Egger	272.65695123899224	152	6.785262748255439e-9
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	FALSE	Inverse variance weighted	273.0776375462086	153	8.336239182679051e-9
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	MR Egger	156.71575798019157	151	0.3582653545377703
+XJECZS	3B8fyy	Neuritic_Plaques_Any	Oily_Fish_Intake	5e-6	TRUE	Inverse variance weighted	156.71630825533185	152	0.379840051153282

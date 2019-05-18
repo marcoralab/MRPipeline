@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+Fltlk9	0lUvRW	VBI_any	BMI	5e-6	FALSE	MR Egger	1381.0528248146911	1437	0.8519849773577785
+Fltlk9	0lUvRW	VBI_any	BMI	5e-6	FALSE	Inverse variance weighted	1382.3439635574532	1438	0.8506063407607879

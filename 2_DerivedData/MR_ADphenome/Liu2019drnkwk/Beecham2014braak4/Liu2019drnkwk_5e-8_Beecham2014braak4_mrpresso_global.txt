@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+H1SwAp	BEzauX	NFT_Braak_Four	drnkwk	5e-8	FALSE	0	38.29359254938275	0.7434

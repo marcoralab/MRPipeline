@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+fy7BoB	ktqfIc	Hippocampal_Volume	Oily_Fish_Intake	5e-6	TRUE	0	NA	NA

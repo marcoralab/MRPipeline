@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+B31Bo6	i6Azr4	NFT_Braak_Four	MDD	5e-6	FALSE	0.02543345801340377	0.017646748968796252	0.15471167038509792	NA

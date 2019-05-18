@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+z4OiB2	RNWsce	VBI_any	Insomnia	5e-8	FALSE	MR Egger	17.482409125584553	12	0.1323338783143684
+z4OiB2	RNWsce	VBI_any	Insomnia	5e-8	FALSE	Inverse variance weighted	21.41990098641211	13	0.06502795284349953

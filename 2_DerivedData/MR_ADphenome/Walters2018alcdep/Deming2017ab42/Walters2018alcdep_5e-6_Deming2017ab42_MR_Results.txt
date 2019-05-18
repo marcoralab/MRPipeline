@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+0pjXXe	Vt0DsV	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted (fixed effects)	13	0	0.0020402674079495822	0.009890201073059294	0.8365629813651725
+0pjXXe	Vt0DsV	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	Weighted median	13	0	0.001866765357174333	0.013192224904212907	0.8874710359825557
+0pjXXe	Vt0DsV	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	Weighted mode	13	0	-0.001866217907572132	0.021777465228943665	0.9331221602833968
+0pjXXe	Vt0DsV	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	MR Egger	13	0	0.0020224469033084474	0.0287767976061996	0.9452318550209937

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+GJNske	qafIVd	NFT_Braak_Four	Diabetes	5e-8	TRUE	0	NA	NA

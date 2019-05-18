@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+jFh2Zt	bJFrjd	Neuritic_Plaques_Any	Hearing_Problems	5e-8	FALSE	0	25.402087925754014	0.662

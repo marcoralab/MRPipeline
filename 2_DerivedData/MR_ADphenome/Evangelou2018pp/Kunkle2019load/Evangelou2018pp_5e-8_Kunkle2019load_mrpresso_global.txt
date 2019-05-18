@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+3TYLB0	Uw2H1P	AD	PP	5e-8	FALSE	3	1029.8150423711932	<4e-05

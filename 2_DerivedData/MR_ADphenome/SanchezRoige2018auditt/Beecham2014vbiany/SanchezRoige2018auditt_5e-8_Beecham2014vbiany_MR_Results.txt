@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+cXHAaZ	5eFcnm	VBI_any	AUDIT_Total	5e-8	FALSE	Inverse variance weighted (fixed effects)	7	0	1.2108913782837487	2.384305632737873	0.6115521402689756
+cXHAaZ	5eFcnm	VBI_any	AUDIT_Total	5e-8	FALSE	Weighted median	7	0	3.2239902236532108	2.973731646773073	0.27829545546730877
+cXHAaZ	5eFcnm	VBI_any	AUDIT_Total	5e-8	FALSE	Weighted mode	7	0	4.070965788027067	3.643177227470403	0.3065502650903084
+cXHAaZ	5eFcnm	VBI_any	AUDIT_Total	5e-8	FALSE	MR Egger	7	0	1.5396660594646938	5.068996627932894	0.7735580631027519

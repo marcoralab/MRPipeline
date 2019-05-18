@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+2YXdc8	AFtIIE	VBI_any	PP	5e-8	FALSE	0	595.4271855189477	0.06436

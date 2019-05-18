@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	Inverse variance weighted (fixed effects)	280	0	-0.057562468105773396	0.08639646728254362	0.5052452400671947
+PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	Weighted median	280	0	-0.06355662745815945	0.16873371758595032	0.7064201900538396
+PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	Weighted mode	280	0	-0.10914556403597331	0.21784059035888023	0.6167421811688194
+PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	MR Egger	280	0	0.042045334721793164	0.20746040078185776	0.8395437219213181

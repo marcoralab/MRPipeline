@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	0	113.31233419953348	0.1151

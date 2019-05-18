@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+5fzEbK	ktdHsq	CSF_ab42	Oily_Fish_Intake	5e-8	FALSE	-9.875853010957583e-5	0.004573489714945377	0.9828821694582068	NA

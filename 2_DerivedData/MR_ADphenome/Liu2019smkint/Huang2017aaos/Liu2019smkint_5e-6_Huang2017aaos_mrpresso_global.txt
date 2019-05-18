@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LtvLS9	OwHfLP	AAOS	smkint	5e-6	FALSE	0	332.4040151731195	0.22916

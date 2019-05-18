@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+FFEmbU	qw0OSN	AD	Hearing_Problems	5e-6	FALSE	Inverse variance weighted (fixed effects)	115	0	0.28217367352585687	0.24890954291970793	0.25694582433737806
+FFEmbU	qw0OSN	AD	Hearing_Problems	5e-6	FALSE	Weighted median	115	0	0.2046543470785152	0.3593802355036431	0.5690408405727299
+FFEmbU	qw0OSN	AD	Hearing_Problems	5e-6	FALSE	Weighted mode	115	0	0.15797595940084896	0.8418430905883678	0.8514808059660303
+FFEmbU	qw0OSN	AD	Hearing_Problems	5e-6	FALSE	MR Egger	115	0	0.5567653411711655	0.7394752282511013	0.4530639981584921

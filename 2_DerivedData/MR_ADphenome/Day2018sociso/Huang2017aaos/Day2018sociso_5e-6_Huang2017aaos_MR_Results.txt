@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	Inverse variance weighted (fixed effects)	94	0	-0.14397173310583597	0.14787834655157187	0.33026400396111016
+plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	Weighted median	94	0	-0.30072034983121043	0.24144000369360866	0.21293763099552485
+plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	Weighted mode	94	0	-0.569560678316555	0.44565193684097903	0.2044163168315798
+plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	MR Egger	94	0	-0.7870669299851071	0.675027104720799	0.24663707909406793

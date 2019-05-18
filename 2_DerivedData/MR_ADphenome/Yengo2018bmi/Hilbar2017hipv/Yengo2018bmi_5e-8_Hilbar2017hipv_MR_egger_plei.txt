@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+oozTCt	m9vcqX	Hippocampal_Volume	BMI	5e-8	FALSE	-0.0011211051262855626	0.0010861858389748574	0.30229508784967013
+oozTCt	m9vcqX	Hippocampal_Volume	BMI	5e-8	TRUE	-9.425177316921121e-4	0.001078207416284919	0.3822815266600934

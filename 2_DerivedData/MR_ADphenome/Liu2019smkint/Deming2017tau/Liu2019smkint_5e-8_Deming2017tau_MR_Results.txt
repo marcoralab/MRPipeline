@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+DqmmIG	lzOYnP	CSF_ab42	smkint	5e-8	FALSE	Inverse variance weighted (fixed effects)	95	0	-0.07827581037620288	0.058194974689800366	0.17860542799576473
+DqmmIG	lzOYnP	CSF_ab42	smkint	5e-8	FALSE	Weighted median	95	0	-0.15893486978155705	0.08209242626475678	0.052861834178395864
+DqmmIG	lzOYnP	CSF_ab42	smkint	5e-8	FALSE	Weighted mode	95	0	-0.22540688710415013	0.19977650039254166	0.2620667467256927
+DqmmIG	lzOYnP	CSF_ab42	smkint	5e-8	FALSE	MR Egger	95	0	0.27246715784377956	0.27747575260544716	0.3286724231931526

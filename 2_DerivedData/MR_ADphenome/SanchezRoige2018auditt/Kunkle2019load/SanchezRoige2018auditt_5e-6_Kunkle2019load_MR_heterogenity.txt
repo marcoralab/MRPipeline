@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+05XL2M	QlHsb6	AD	AUDIT_Total	5e-6	FALSE	MR Egger	84.91422817307789	56	0.007600553852944799
+05XL2M	QlHsb6	AD	AUDIT_Total	5e-6	FALSE	Inverse variance weighted	86.0217324243364	57	0.007783966013823263

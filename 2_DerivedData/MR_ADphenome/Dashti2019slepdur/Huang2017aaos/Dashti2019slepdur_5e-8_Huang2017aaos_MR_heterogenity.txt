@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+GyHEI0	pavzL2	AAOS	Sleep_Duration	5e-8	FALSE	MR Egger	100.51537577768018	78	0.04401886791397351
+GyHEI0	pavzL2	AAOS	Sleep_Duration	5e-8	FALSE	Inverse variance weighted	107.90558784073552	79	0.017059474002584087

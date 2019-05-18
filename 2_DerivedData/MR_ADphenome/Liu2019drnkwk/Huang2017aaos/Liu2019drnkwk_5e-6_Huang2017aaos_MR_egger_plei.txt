@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+xC7M2O	iFEKKE	AAOS	drnkwk	5e-6	FALSE	2.3965971456299964e-5	0.0034867452733863434	0.9945249559567435	NA

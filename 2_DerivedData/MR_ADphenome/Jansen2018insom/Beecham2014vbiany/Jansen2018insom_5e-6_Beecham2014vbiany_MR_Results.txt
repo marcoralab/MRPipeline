@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	Inverse variance weighted (fixed effects)	95	0	0.28692149789646165	0.2403083504819049	0.23248882978803886
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	Weighted median	95	0	0.08636101831354462	0.3717912041482864	0.8163177098085784
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	Weighted mode	95	0	0.030247384640453845	0.8164172679137512	0.9705245603969292
+OeJ5py	xgPYj7	VBI_any	Insomnia	5e-6	FALSE	MR Egger	95	0	1.345706933815901	1.0161392163864185	0.18863786206917796

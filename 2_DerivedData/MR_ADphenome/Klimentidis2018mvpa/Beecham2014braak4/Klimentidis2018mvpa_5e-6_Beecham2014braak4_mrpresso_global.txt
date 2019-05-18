@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+GLdP8L	4VJotx	NFT_Braak_Four	MVPA	5e-6	FALSE	1	266.9006522342152	<1e-04

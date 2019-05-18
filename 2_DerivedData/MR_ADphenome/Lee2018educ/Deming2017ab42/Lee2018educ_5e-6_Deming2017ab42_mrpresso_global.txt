@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+lLCByj	pA3PM6	CSF_ab42	Education	5e-6	FALSE	0	876.7144009023823	0.14018

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+HEs29w	2HYPXc	AD	drnkwk	5e-8	FALSE	1	99.26177381496613	<2e-04

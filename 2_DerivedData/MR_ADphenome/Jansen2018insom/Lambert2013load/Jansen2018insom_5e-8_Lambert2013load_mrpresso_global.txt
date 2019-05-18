@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+8sUZI2	UC8ZNO	AD	Insomnia	5e-8	FALSE	1	26.49402187629758	0.043

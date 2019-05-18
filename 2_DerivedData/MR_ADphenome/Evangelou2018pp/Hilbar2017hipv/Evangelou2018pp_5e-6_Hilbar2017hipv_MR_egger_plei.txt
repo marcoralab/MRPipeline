@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+xV3dAX	Amp6So	Hippocampal_Volume	PP	5e-6	FALSE	-3.7279469275958545e-4	9.401899170112055e-4	0.6918176082117646
+xV3dAX	Amp6So	Hippocampal_Volume	PP	5e-6	TRUE	-2.8790894249686665e-4	9.314354025706954e-4	0.7573112481684037

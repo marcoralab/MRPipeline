@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	FALSE	0.01994431222171366	0.0263260987904922	0.45551006187196486	NA

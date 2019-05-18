@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Oktu7Y	2rk7XQ	CSF_ab42	DBP	5e-6	FALSE	2.85460395095466e-4	3.793606819575829e-4	0.4519428032041457	NA

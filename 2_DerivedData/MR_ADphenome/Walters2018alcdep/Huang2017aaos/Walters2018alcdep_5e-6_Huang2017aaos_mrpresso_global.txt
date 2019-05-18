@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+7jfssm	dTEgG2	AAOS	Alcohol_Dependence	5e-6	FALSE	1	47.427368991173246	<0.001

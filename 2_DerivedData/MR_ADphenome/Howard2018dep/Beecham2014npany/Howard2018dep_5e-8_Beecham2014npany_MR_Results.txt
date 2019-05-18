@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	Inverse variance weighted (fixed effects)	16	0	-1.1557043094251704	2.667627709761704	0.6648455196604633
+HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	Weighted median	16	0	-0.05589398794178102	3.9339934572399353	0.9886640763090183
+HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	Weighted mode	16	0	6.139386740440962	6.6857910454731755	0.3730057200753708
+HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	MR Egger	16	0	2.2797481538592965	14.741139294711184	0.8793030083555706

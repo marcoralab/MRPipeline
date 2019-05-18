@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+5fzEbK	ktdHsq	CSF_ab42	Oily_Fish_Intake	5e-8	FALSE	0	35.12469517391786	0.7656

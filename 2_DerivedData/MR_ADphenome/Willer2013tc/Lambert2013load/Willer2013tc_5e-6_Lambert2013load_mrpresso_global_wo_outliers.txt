@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+UVrh1o	krq5GS	AD	TC	5e-6	TRUE	9	176.61012423754332	0.0267

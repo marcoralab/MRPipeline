@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+MZ2q4n	HV4byZ	AD	Education	5e-8	FALSE	MR Egger	513.4472721301645	433	0.0046205302614673585
+MZ2q4n	HV4byZ	AD	Education	5e-8	FALSE	Inverse variance weighted	514.7977166302063	434	0.004514568804845024
+MZ2q4n	HV4byZ	AD	Education	5e-8	TRUE	MR Egger	496.1624422136156	432	0.01761563767276597
+MZ2q4n	HV4byZ	AD	Education	5e-8	TRUE	Inverse variance weighted	497.3412598972624	433	0.017471727465995134

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+BxDW0d	38ugEW	NFT_Braak_Four	AUDIT_Total	5e-8	FALSE	0	8.793648883544712	0.554

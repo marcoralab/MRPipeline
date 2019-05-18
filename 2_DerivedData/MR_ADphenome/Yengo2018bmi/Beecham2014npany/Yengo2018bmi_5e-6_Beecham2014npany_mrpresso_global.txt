@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Llr6Xm	jIjIDW	Neuritic_Plaques_Any	BMI	5e-6	FALSE	0	1406.743346618439	0.7462666666666666

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+4Dpaxj	Cdh4YV	NFT_Braak_Four	Social_Isolation	5e-6	FALSE	0	79.24336303028237	0.8037

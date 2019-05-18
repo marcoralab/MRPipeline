@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	FALSE	Inverse variance weighted (fixed effects)	47	2	0.0316671352645418	0.09395890668964435	0.7360929616977181
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	FALSE	Weighted median	47	2	0.06760095656677233	0.14634657398212828	0.644136010007952
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	FALSE	Weighted mode	47	2	0.04603816807455541	0.3029640327726168	0.8798836597061819
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	FALSE	MR Egger	47	2	0.6756801536449952	0.5676769290477702	0.24018777077832754
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	Inverse variance weighted (fixed effects)	45	2	0.14122886265022988	0.09572503494689137	0.14011585324862327
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	Weighted median	45	2	0.07861488352860295	0.1383868965794551	0.5699803760747038
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	Weighted mode	45	2	0.049433739606227434	0.3084927373973069	0.8734232297710485
+Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	MR Egger	45	2	0.6050744868375014	0.45968117927372726	0.1950498362370399

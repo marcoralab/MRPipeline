@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+fPWJx6	vA10nR	NFT_Braak_Four	LDL	5e-8	FALSE	-0.008686670177408347	0.011683782737654583	0.45936849326809703	NA
