@@ -11,3 +11,6 @@ mrbase.oauth
 *.clumped
 *.log
 Rplots.pdf
+2_DerivedData/test/*
+4_Output/test/*
+Shiny/.Rapp.history
