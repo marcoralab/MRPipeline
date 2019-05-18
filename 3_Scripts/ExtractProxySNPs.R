@@ -55,7 +55,8 @@ if(empty(proxy.dat)){
     rename(SNP = SNP_A) %>%
     mutate(ALT = ifelse(ALT.proxy == ref.proxy, ref, alt)) %>%
     mutate(REF = ifelse(REF.proxy == ref.proxy, ref, alt)) %>%
-    mutate(CHROM = as.numeric(CHROM))
+    mutate(CHROM = as.numeric(CHROM)) %>%
+    mutate(AF = as.numeric(AF))
 
   ## Outcome data
   outcome.dat <- outcome.raw %>%

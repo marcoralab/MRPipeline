@@ -14,7 +14,6 @@ kb = config['clumpkb']
 EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "CODE")
 OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "CODE")
 Pthreshold = config['Pthreshold']
-traits = config['traits']
 DataOut = config['DataOut']
 DataOutput = config['DataOutput']
 
@@ -37,13 +36,19 @@ filtered_product = filter_combinator(product, forbidden)
 
 rule all:
     input:
-        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png', ExposureCode=EXPOSURES.index.tolist()),
+        lambda wildcards: expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html",
+            filtered_product,
+            ExposureCode=EXPOSURES.index.tolist(),
+            OutcomeCode=OUTCOMES.index.tolist(),
+            Pthreshold=Pthreshold),
+        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png',
+            filtered_product,
+            ExposureCode=EXPOSURES.index.tolist()),
         DataOutput + 'All/mrpresso_MRdat.csv',
         DataOutput + 'All/global_mrpresso.txt',
         DataOutput + 'All/heterogenity.txt',
         DataOutput + 'All/pleiotropy.txt',
         DataOutput + 'All/MRresults.txt',
-        expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html", filtered_product, ExposureCode=EXPOSURES.index.tolist(), OutcomeCode=OUTCOMES.index.tolist(), Pthreshold=Pthreshold),
 
 ## Read in Exposure summar statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -113,7 +118,9 @@ rule clump:
     shell:
         """
         plink --bfile {params.ref} --keep-allele-order --allow-no-sex --clump {input.ss}  --clump-r2 {params.r2} --clump-kb {params.kb} --clump-p1 1 --clump-p2 1 --out {params.out};
-        gzip -k {output.exp_clumped}
+        #gzip -k {output.exp_clumped} --keep not working now??
+        gzip {output.exp_clumped};
+        zcat {output.exp_clumped_zipped} > {output.exp_clumped}
         """
 
 ## Extract SNPs to be used as instruments in exposure
@@ -251,6 +258,7 @@ rule MR_analysis:
 ## define list of harmonized datasets so they can be merged into a single file
 def mrpresso_MRdat_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
@@ -268,11 +276,13 @@ rule merge_mrpresso_MRdat:
 ## define list of global MR-PRESSO tests so they can be merged into a single file
 def mrpresso_global_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
 def mrpresso_global_wo_outliers_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
@@ -291,6 +301,7 @@ rule merge_mrpresso_global:
 ## define list of Heterogenity tests so they can be merged into a single file
 def MR_heterogenity_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
@@ -308,6 +319,7 @@ rule merge_heterogenity:
 ## define list of MR Egger intercept tests so they can be merged into a single file
 def MR_plei_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
@@ -325,6 +337,7 @@ rule merge_egger:
 ## define list of MR results so they can be merged into a single file
 def MR_Results_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt",
+        filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
         Pthreshold=Pthreshold)
@@ -343,7 +356,6 @@ rule merge_mrresults:
 rule html_Report:
     input:
         script = '3_Scripts/mr_report.Rmd',
-        traits = traits,
         ExposureSnps = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         ProxySnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
@@ -367,7 +379,6 @@ rule html_Report:
         "R -e 'rmarkdown::render("
         """"{input.script}", clean = TRUE, intermediates_dir = "{params.output_dir}", output_file = "{output}", output_dir = "{params.output_dir}", \
 params = list(rwd = "{params.rwd}", \
-traits = "{input.traits}", \
 exposure.snps = "{input.ExposureSnps}", \
 outcome.snps = "{input.OutcomeSnps}", \
 proxy.snps = "{input.ProxySnps}", \

@@ -1,6 +1,6 @@
 # snakemake -s mr.smk --configfile test.yaml -j 4 --keep-going --until manhattan_plot
 # snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
-# snakejob -s mr.smk --configfile test.yaml -j 400 --max-jobs-per-second 1 --keep-going --until manhattan_plot
+# snakejob -s mr.smk --configfile test.yaml -j 200 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
 DataOut: "2_DerivedData/test/"
 DataOutput: "4_Output/test/"
@@ -8,7 +8,6 @@ DataOutput: "4_Output/test/"
 REF: '1_RawData/EUR_All_Chr'
 clumpr2: 0.001
 clumpkb: 1000
-traits: '1_RawData/MRTraits.csv'
 Pthreshold: ['5e-8', '5e-6']
 
 ## LOAD as outcome
@@ -37,7 +36,7 @@ OUTCOMES:
   -
     CODE: load
     NAME: 'Late Onset Alzheimers Disease'
-    FILE: 1_RawData/GWAS/Kunkle2019_stage1.chrall.CPRA_b37.tsv.gz
+    FILE: 1_RawData/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
