@@ -10,12 +10,27 @@ clumpr2: 0.001
 clumpkb: 1000
 Pthreshold: ['5e-8', '5e-6']
 
+## Forbidden wildcard combinations
+missing: [
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"}
+ ]
+
 ## LOAD as outcome
 EXPOSURES:
   -
-    CODE: crp
-    NAME: 'C-Reactive Protein'
-    FILE: 1_RawData/GWAS/Ligthart2018crp.chrall.CPRA_b37.tsv.gz
+    CODE: Walters2018alcdep
+    NAME: 'Alcohol Dependence'
+    FILE: 1_RawData/GWAS/Walters2018alcdep.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -31,10 +46,9 @@ EXPOSURES:
       TRAIT: TRAIT
 
 
-
 OUTCOMES:
   -
-    CODE: load
+    CODE: Kunkle2019load
     NAME: 'Late Onset Alzheimers Disease'
     FILE: 1_RawData/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
@@ -50,10 +64,3 @@ OUTCOMES:
       Z: Z
       N: N
       TRAIT: TRAIT
-
-
-## Forbidden wildcard combinations
-missing : [
-   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "loadKunkle", "OutcomeCode" : "loadKunkle", "Pthreshold" : "5e-6"}
- ]

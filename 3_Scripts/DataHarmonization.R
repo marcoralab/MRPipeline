@@ -6,7 +6,9 @@ exposure.summary = args[1] # Exposure summary statistics
 outcome.summary = args[2] # Outcome Summary statistics
 proxy.snps = args[3]
 pt = args[4]
-out.harmonized = args[5] # SPECIFY THE OUTPUT FILE
+ExposureCode = args[5]
+OutcomeCode = args[6]
+out.harmonized = args[7] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 message("Loading packages  \n")
@@ -38,10 +40,11 @@ mr_exposure.dat <- format_data(exposure.dat, type = 'exposure',
                             eaf_col = "AF",
                             effect_allele_col = "ALT",
                             other_allele_col = "REF",
-                            pval_col = "P", 
-                            z_col = "Z", 
-                            samplesize_col = "N", 
+                            pval_col = "P",
+                            z_col = "Z",
+                            samplesize_col = "N",
                             phenotype_col = 'TRAIT')
+mr_exposure.dat$exposure =  ExposureCode
 
 # Format LOAD
 mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
@@ -51,10 +54,11 @@ mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
                                  eaf_col = "AF",
                                  effect_allele_col = "ALT",
                                  other_allele_col = "REF",
-                                 pval_col = "P", 
-                                z_col = "Z", 
-                                samplesize_col = "N", 
+                                 pval_col = "P",
+                                z_col = "Z",
+                                samplesize_col = "N",
                                 phenotype_col = 'TRAIT')
+mr_outcome.dat$outcome =  OutcomeCode
 
 if(empty(proxy.dat) == FALSE){
   mr_outcome.dat <- left_join(mr_outcome.dat, proxy.dat, by = 'SNP')
@@ -62,7 +66,7 @@ if(empty(proxy.dat) == FALSE){
 
 
 # harmonize LOAD
-harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat) %>% 
+harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat) %>%
   as_tibble() %>%
   mutate(pt = pt)
 

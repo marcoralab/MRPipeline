@@ -65,8 +65,6 @@ passfunc <- function(ivw.p, ivw.b, mre.p, mre.b, wme.p, wme.b, wmb.p, wmb.b){
 
 ##-------------------- Read in R datasets -------------------## 
 #dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/strict_clump/0_Summary"
-dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR"
-setwd(dir)
 
 ## Outcomes to include the results 
 outcomes = c('load', 'loadKunkle', 'aaos', 'ab42', 'ptau', 'tau', 'npany', 'nft4', 'vbiany', 'hipv', 'hipv2015')
@@ -81,15 +79,15 @@ samplesize <- tibble(trait = c('alccliu', 'smki', 'smkcpd', 'audit', 'alcd', 'oi
                      ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, NA, 620, NA, NA, 1772, NA)) 
 
 ## Files
-MR_results <- read_tsv("4_Output/MR_ADphenome/All/MRresults.txt") %>% 
+MR_results <- read_tsv(file.path(dir, 'MR_results.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-mrpresso_global_comb <- read_tsv("4_Output/MR_ADphenome/All/global_mrpresso.txt") %>% 
+mrpresso_global_comb <- read_tsv(file.path(dir, 'mrpresso_global_comb.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-MRdat <- read_csv("4_Output/MR_ADphenome/All/mrpresso_MRdat.csv", guess_max = 100000) %>% 
+MRdat <- read_tsv(file.path(dir, 'MR_mrpresso_MRdat.txt.gz'), guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) %>% 
   select(-samplesize.outcome) %>% 
@@ -98,7 +96,7 @@ MRdat <- read_csv("4_Output/MR_ADphenome/All/mrpresso_MRdat.csv", guess_max = 10
   left_join(samplesize, by = c('outcome' = 'trait')) %>% 
   rename(samplesize.outcome = samplesize, ncase.outcome = ncase, ncontrol.outcome = ncontrol, categorical.outcome = categorical)
 
-egger_comb <- read_tsv("4_Output/MR_ADphenome/All/pleiotropy.txt") %>% 
+egger_comb <- read_tsv(file.path(dir, 'egger_comb.txt.gz')) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 

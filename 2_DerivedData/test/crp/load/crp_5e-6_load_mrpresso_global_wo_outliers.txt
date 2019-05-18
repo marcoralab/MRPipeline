@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-iXlyRx	fNFaXz	AD	crp	5e-6	TRUE	21	104.97346802531321	0.6893

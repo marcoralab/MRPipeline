@@ -210,9 +210,11 @@ rule Harmonize:
     output:
         Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     params:
-        Pthreshold = '{Pthreshold}'
+        Pthreshold = '{Pthreshold}',
+        excposurecode = "{ExposureCode}",
+        outcomecode = "{OutcomeCode}"
     shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {params.Pthreshold} {output.Harmonized}'
+        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {params.Pthreshold} {params.excposurecode} {params.outcomecode} {output.Harmonized}'
 
 ## Use MR-PRESSO to conduct a global heterogenity test and
 ## outlier test to identify SNPs that are outliers
