@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-p8ijfK	ey6JeT	Hippocampal_Volume	Diabetes	5e-6	TRUE	0	NA	NA
+aoNTU4	Vo7TA6	Hilbar2015hipv	Xu2018diab	5e-6	TRUE	0	NA	NA

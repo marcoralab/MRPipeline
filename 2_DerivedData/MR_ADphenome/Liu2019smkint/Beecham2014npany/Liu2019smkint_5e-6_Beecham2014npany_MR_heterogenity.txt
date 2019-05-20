@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-4yYdEd	HSKuEU	Neuritic_Plaques_Any	smkint	5e-6	FALSE	MR Egger	314.3470608311003	301	0.28664135571631844
-4yYdEd	HSKuEU	Neuritic_Plaques_Any	smkint	5e-6	FALSE	Inverse variance weighted	319.3094839975442	302	0.23628837465974295
+yGpHfL	026oEG	Beecham2014npany	Liu2019smkint	5e-6	FALSE	MR Egger	314.3470608311003	301	0.28664135571631844
+yGpHfL	026oEG	Beecham2014npany	Liu2019smkint	5e-6	FALSE	Inverse variance weighted	319.3094839975442	302	0.23628837465974295

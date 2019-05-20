@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-gswD4t	jj8EAl	AD	Oily_Fish_Intake	5e-6	TRUE	6	175.91336375406962	0.1473
+FBrIuW	glKkeX	Lambert2013load	NealeLab2018oilfish	5e-6	TRUE	6	175.91336375406962	0.1497

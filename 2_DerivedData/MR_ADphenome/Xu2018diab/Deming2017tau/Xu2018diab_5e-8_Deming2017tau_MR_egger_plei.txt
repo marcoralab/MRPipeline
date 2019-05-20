@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-AMUmKJ	mjx0lz	CSF_ab42	Diabetes	5e-8	FALSE	7.041257089970288e-5	0.0014339182148127207	0.9609186289066983	NA
+ZKm8Fx	gBf7Ty	Deming2017tau	Xu2018diab	5e-8	FALSE	7.041257089970288e-5	0.0014339182148127207	0.9609186289066983	NA

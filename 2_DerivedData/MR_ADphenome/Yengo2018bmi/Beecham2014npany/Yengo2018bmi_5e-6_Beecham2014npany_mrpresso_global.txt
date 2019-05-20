@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Llr6Xm	jIjIDW	Neuritic_Plaques_Any	BMI	5e-6	FALSE	0	1406.743346618439	0.7462666666666666
+0oFt2u	ZgciSB	Beecham2014npany	Yengo2018bmi	5e-6	FALSE	0	1406.743346618439	0.7444133333333334

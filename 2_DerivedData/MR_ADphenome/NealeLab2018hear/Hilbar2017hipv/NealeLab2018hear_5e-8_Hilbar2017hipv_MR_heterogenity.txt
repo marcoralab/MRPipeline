@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-QRbkvf	VOdzL9	Hippocampal_Volume	Hearing_Problems	5e-8	FALSE	MR Egger	17.048956114109668	26	0.9075964860271212
-QRbkvf	VOdzL9	Hippocampal_Volume	Hearing_Problems	5e-8	FALSE	Inverse variance weighted	17.115244701782448	27	0.9282414108151151
+YEIDxD	EdwBHN	Hilbar2017hipv	NealeLab2018hear	5e-8	FALSE	MR Egger	17.048956114109668	26	0.9075964860271212
+YEIDxD	EdwBHN	Hilbar2017hipv	NealeLab2018hear	5e-8	FALSE	Inverse variance weighted	17.115244701782448	27	0.9282414108151151

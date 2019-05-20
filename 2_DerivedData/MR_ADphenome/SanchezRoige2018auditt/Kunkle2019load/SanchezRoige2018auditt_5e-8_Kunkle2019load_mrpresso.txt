@@ -9,20 +9,20 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 25.03602
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.012
+[1] 0.021
 
 
 $`MR-PRESSO results`$`Outlier Test`
          RSSobs Pvalue
 1  0.0044845106      1
-2  0.0016672173   0.11
+2  0.0016672173   0.07
 3  0.0002095324      1
 4  0.0003764487      1
 5  0.0005386709      1
 6  0.0001541429      1
 7  0.0002829010      1
-8  0.0017572963   0.22
-9  0.0021019604   0.87
+8  0.0017572963   0.21
+9  0.0021019604   0.58
 10 0.0012503327   0.28
 
 $`MR-PRESSO results`$`Distortion Test`

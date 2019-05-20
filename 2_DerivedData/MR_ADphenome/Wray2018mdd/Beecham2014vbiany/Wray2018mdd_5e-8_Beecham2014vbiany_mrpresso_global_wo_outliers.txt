@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-MsHsM0	htrGx2	VBI_any	MDD	5e-8	TRUE	0	NA	NA
+kMK9JU	hb09SJ	Beecham2014vbiany	Wray2018mdd	5e-8	TRUE	0	NA	NA

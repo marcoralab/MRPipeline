@@ -1,2 +1,3 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-sTpAwu	NUbxT4	Hippocampal_Volume	MVPA	5e-6	FALSE	-0.9145395564089289	2.9244512424856524	0.7551703782242305	NA
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+GuvaZ2	JoPoRh	Hilbar2015hipv	Klimentidis2018mvpa	5e-6	FALSE	-0.9145395564089289	2.9244512424856524	0.7551703782242305
+GuvaZ2	JoPoRh	Hilbar2015hipv	Klimentidis2018mvpa	5e-6	TRUE	-3.0026897645259365	2.8703779141314127	0.29817127114662867

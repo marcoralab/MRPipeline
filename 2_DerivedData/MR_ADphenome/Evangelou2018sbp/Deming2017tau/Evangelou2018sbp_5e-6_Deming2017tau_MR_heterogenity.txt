@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-3FrsIh	wrW1Bv	CSF_ab42	SBP	5e-6	FALSE	MR Egger	1022.601076889957	939	0.029381383120457242
-3FrsIh	wrW1Bv	CSF_ab42	SBP	5e-6	FALSE	Inverse variance weighted	1023.8120495084769	940	0.029138325456456435
+1p3yj8	b5ypto	Deming2017tau	Evangelou2018sbp	5e-6	FALSE	MR Egger	1022.601076889957	939	0.029381383120457242
+1p3yj8	b5ypto	Deming2017tau	Evangelou2018sbp	5e-6	FALSE	Inverse variance weighted	1023.8120495084769	940	0.029138325456456435

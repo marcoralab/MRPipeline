@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kXhkuP	2wmM6N	AD	Depression	5e-6	FALSE	0	133.04346119587422	0.1221
+KVblvZ	h37LV8	Lambert2013load	Howard2018dep	5e-6	FALSE	0	133.04346119587422	0.1192

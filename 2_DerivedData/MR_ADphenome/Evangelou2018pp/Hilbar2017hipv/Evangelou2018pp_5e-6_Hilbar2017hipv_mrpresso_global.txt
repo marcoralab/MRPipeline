@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xV3dAX	Amp6So	Hippocampal_Volume	PP	5e-6	FALSE	1	1204.0527895074579	<2e-05
+Ez7GcH	r8QCQd	Hilbar2017hipv	Evangelou2018pp	5e-6	FALSE	2	1204.0527895074579	<2e-05

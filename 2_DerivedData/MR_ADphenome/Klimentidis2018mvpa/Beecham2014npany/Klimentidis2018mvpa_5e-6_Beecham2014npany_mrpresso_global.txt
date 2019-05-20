@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SjkvC1	n5kTCf	Neuritic_Plaques_Any	MVPA	5e-6	FALSE	1	223.69917668807292	<1e-04
+1fa3cE	26Px1P	Beecham2014npany	Klimentidis2018mvpa	5e-6	FALSE	1	223.69917668807292	<1e-04

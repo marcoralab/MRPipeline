@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LnclQ0	zzV94V	CSF_ab42	Insomnia	5e-6	TRUE	0	NA	NA
+Pleh0k	I7ZkCo	Deming2017ptau	Jansen2018insom	5e-6	TRUE	0	NA	NA

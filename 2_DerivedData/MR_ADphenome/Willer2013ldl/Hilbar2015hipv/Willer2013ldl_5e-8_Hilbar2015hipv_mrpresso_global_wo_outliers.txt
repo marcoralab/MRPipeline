@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LDOlpP	0hMjUM	Hippocampal_Volume	LDL	5e-8	TRUE	0	NA	NA
+dD9yGU	1yo5AJ	Hilbar2015hipv	Willer2013ldl	5e-8	TRUE	0	NA	NA

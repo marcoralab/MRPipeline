@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	MR Egger	15.80590251496603	14	0.32537081492021297
-HpRHlD	YoB4DI	Neuritic_Plaques_Any	Depression	5e-8	FALSE	Inverse variance weighted	15.869575966414297	15	0.3907723387471626
+MUSV2r	MjhMzH	Beecham2014npany	Howard2018dep	5e-8	FALSE	MR Egger	15.80590251496603	14	0.32537081492021297
+MUSV2r	MjhMzH	Beecham2014npany	Howard2018dep	5e-8	FALSE	Inverse variance weighted	15.869575966414297	15	0.3907723387471626

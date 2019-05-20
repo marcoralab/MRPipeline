@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-YZWAYf	hLo5Fc	NFT_Braak_Four	Oily_Fish_Intake	5e-6	TRUE	4	139.91369328672627	0.8123
+UiZE7F	oFMt4M	Beecham2014braak4	NealeLab2018oilfish	5e-6	TRUE	4	139.91369328672627	0.8188

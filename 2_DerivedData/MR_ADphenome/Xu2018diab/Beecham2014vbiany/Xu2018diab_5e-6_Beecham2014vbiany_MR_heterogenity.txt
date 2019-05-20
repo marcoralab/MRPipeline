@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-bOb76U	31R789	VBI_any	Diabetes	5e-6	FALSE	MR Egger	250.66281039311332	278	0.8792370099104142
-bOb76U	31R789	VBI_any	Diabetes	5e-6	FALSE	Inverse variance weighted	250.98939844909495	279	0.8848322460278306
+qZpVDJ	hcLon6	Beecham2014vbiany	Xu2018diab	5e-6	FALSE	MR Egger	250.66281039311332	278	0.8792370099104142
+qZpVDJ	hcLon6	Beecham2014vbiany	Xu2018diab	5e-6	FALSE	Inverse variance weighted	250.98939844909495	279	0.8848322460278306

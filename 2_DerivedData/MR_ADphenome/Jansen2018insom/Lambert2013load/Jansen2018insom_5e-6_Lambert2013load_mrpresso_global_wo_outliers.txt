@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BgDqNk	SmCMDS	AD	Insomnia	5e-6	TRUE	0	NA	NA
+Hbq0bM	sx4HRZ	Lambert2013load	Jansen2018insom	5e-6	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-dzPpdB	z1rwdB	NFT_Braak_Four	Insomnia	5e-8	FALSE	0.008381111859223675	0.061578130515676954	0.8939946468052656	NA
+KneWfw	nvpsNd	Beecham2014braak4	Jansen2018insom	5e-8	FALSE	0.008381111859223675	0.061578130515676954	0.8939946468052656	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-SGCxr8	Ga9I7Z	NFT_Braak_Four	Depression	5e-6	FALSE	0.006770393673460005	0.02294283545657893	0.7684699738527648	NA
+g5fSvw	PMXV6c	Beecham2014braak4	Howard2018dep	5e-6	FALSE	0.006770393673460005	0.02294283545657893	0.7684699738527648	NA

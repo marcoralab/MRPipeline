@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-BxDW0d	38ugEW	NFT_Braak_Four	AUDIT_Total	5e-8	FALSE	-0.015071318235828971	0.040288301199939223	0.7194136218415267	NA
+66JNpw	h0cckw	Beecham2014braak4	SanchezRoige2018auditt	5e-8	FALSE	-0.015071318235828971	0.040288301199939223	0.7194136218415267	NA

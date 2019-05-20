@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-WqmOgE	Xih9Bb	CSF_ab42	MDD	5e-8	TRUE	0	NA	NA
+R0FwSa	LtTdqU	Deming2017ptau	Wray2018mdd	5e-8	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XKLHFz	od15yo	Neuritic_Plaques_Any	Insomnia	5e-8	TRUE	0	NA	NA
+LSf1KI	ZpRGEJ	Beecham2014npany	Jansen2018insom	5e-8	TRUE	0	NA	NA

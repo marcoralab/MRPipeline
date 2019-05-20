@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DrxRGy	Xa50k5	AAOS	SBP	5e-8	TRUE	24	767.0573186355077	0.00952
+vGJe2X	XibRCs	Huang2017aaos	Evangelou2018sbp	5e-8	TRUE	24	767.0573186355077	0.01036

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BH7h3B	7atWj5	NFT_Braak_Four	BMI	5e-6	FALSE	1	1621.0793834026122	7.333333333333333e-4
+LcykDb	T1Nqvz	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	1	1621.0793834026122	5.866666666666667e-4

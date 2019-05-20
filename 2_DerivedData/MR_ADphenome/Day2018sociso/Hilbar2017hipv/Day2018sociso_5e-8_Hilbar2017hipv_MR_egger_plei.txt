@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	-0.015024173375042879	0.013365920006612398	0.28131349380299614	NA
+Mez66l	St8rnk	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	-0.015024173375042879	0.013365920006612398	0.28131349380299614	NA

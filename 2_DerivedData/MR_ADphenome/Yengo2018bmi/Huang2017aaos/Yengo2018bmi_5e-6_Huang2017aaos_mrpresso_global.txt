@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-p2t5fQ	ZwPTjX	AAOS	BMI	5e-6	FALSE	2	2096.3593754832063	<1.33333333333333e-05
+K5DD8y	GulV3L	Huang2017aaos	Yengo2018bmi	5e-6	FALSE	1	2096.3593754832063	<1.33333333333333e-05

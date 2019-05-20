@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XYOuSq	QM0bim	AD	BMI	5e-6	TRUE	39	1635.2204607940455	4.933333333333334e-4
+4AXwCr	6ge3QA	Lambert2013load	Yengo2018bmi	5e-6	TRUE	39	1635.2204607940455	6.266666666666666e-4

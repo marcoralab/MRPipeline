@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-UKdvJ0	geUr5s	CSF_ab42	Diabetes	5e-6	TRUE	6	297.41340924965	0.0585
+QWchbK	axhjZz	Deming2017ab42	Xu2018diab	5e-6	TRUE	6	297.41340924965	0.0603

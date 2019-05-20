@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-GJNske	qafIVd	NFT_Braak_Four	Diabetes	5e-8	FALSE	0	126.53087378315729	0.5965
+A3BRb1	xr7rFt	Beecham2014braak4	Xu2018diab	5e-8	FALSE	0	126.53087378315729	0.6019

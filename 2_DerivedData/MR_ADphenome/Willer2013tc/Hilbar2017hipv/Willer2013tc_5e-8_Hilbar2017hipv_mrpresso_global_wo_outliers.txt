@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-loIyTz	XmEYAc	Hippocampal_Volume	TC	5e-8	TRUE	3	126.12604799326208	0.0397
+HFQOFs	3qbs0y	Hilbar2017hipv	Willer2013tc	5e-8	TRUE	2	137.92453216875077	0.0093

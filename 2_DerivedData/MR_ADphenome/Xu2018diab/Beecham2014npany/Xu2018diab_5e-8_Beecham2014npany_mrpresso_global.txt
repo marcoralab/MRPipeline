@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-5AkrDm	ARvISp	Neuritic_Plaques_Any	Diabetes	5e-8	FALSE	0	108.77761792862835	0.9238
+pv4RPF	NI1UQ3	Beecham2014npany	Xu2018diab	5e-8	FALSE	0	108.77761792862835	0.9196

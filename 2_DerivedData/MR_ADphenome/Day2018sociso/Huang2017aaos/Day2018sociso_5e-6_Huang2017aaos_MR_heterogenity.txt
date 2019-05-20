@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	MR Egger	107.93374190809647	92	0.12272757894134846
-plpQFu	SEusYW	AAOS	Social_Isolation	5e-6	FALSE	Inverse variance weighted	109.06209550102261	93	0.12215658985733055
+pOq3tz	u7ANKt	Huang2017aaos	Day2018sociso	5e-6	FALSE	MR Egger	107.93374190809647	92	0.12272757894134846
+pOq3tz	u7ANKt	Huang2017aaos	Day2018sociso	5e-6	FALSE	Inverse variance weighted	109.06209550102261	93	0.12215658985733055

@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-DsvitF	MKRUox	Hippocampal_Volume	Insomnia	5e-6	FALSE	Inverse variance weighted (fixed effects)	94	0	0.9843298264236711	18.916532424004746	0.9585004656337035
-DsvitF	MKRUox	Hippocampal_Volume	Insomnia	5e-6	FALSE	Weighted median	94	0	-5.243459932364905	27.35170732529594	0.8479732640095439
-DsvitF	MKRUox	Hippocampal_Volume	Insomnia	5e-6	FALSE	Weighted mode	94	0	-2.5079901620861165	75.71086946771082	0.9736451865921734
-DsvitF	MKRUox	Hippocampal_Volume	Insomnia	5e-6	FALSE	MR Egger	94	0	-96.63039916754428	68.26539690043937	0.16029516307121572
+k5xQqO	CvdpNH	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	Inverse variance weighted (fixed effects)	94	0	0.9843298264236711	18.916532424004746	0.9585004656337035
+k5xQqO	CvdpNH	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	Weighted median	94	0	-5.243459932364905	27.658080109041038	0.8496370959760325
+k5xQqO	CvdpNH	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	Weighted mode	94	0	-2.5079901620861165	66.81388656223321	0.9701373293878932
+k5xQqO	CvdpNH	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	MR Egger	94	0	-96.63039916754428	68.26539690043937	0.16029516307121572

@@ -1,5 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	MR Egger	28.459065766966795	14	0.012357771331868368
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	Inverse variance weighted	28.721802603413753	15	0.017463550935153734
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	MR Egger	20.01598362230103	13	0.09481242382630134
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	Inverse variance weighted	20.588006721043676	14	0.11266593102153849
+fyHmoC	K7DX4m	Beecham2014braak4	Walters2018alcdep	5e-6	FALSE	MR Egger	28.459065766966795	14	0.012357771331868368
+fyHmoC	K7DX4m	Beecham2014braak4	Walters2018alcdep	5e-6	FALSE	Inverse variance weighted	28.721802603413753	15	0.017463550935153734

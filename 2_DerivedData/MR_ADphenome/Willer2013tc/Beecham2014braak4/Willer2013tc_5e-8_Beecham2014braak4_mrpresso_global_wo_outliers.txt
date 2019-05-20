@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-fXTYp7	VyYBna	NFT_Braak_Four	TC	5e-8	TRUE	2	127.29752945786908	0.0317
+48u4ns	LPO5CC	Beecham2014braak4	Willer2013tc	5e-8	TRUE	2	127.29752945786908	0.0343

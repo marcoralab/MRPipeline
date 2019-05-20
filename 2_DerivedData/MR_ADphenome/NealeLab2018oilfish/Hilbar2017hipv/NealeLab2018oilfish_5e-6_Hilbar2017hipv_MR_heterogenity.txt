@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-M6OWxB	LOjcVL	Hippocampal_Volume	Oily_Fish_Intake	5e-6	FALSE	MR Egger	179.11344405796564	159	0.13123100359071838
-M6OWxB	LOjcVL	Hippocampal_Volume	Oily_Fish_Intake	5e-6	FALSE	Inverse variance weighted	181.90681729521594	160	0.11319942530247878
+4LgmzS	CRpWhb	Hilbar2017hipv	NealeLab2018oilfish	5e-6	FALSE	MR Egger	179.11344405796564	159	0.13123100359071838
+4LgmzS	CRpWhb	Hilbar2017hipv	NealeLab2018oilfish	5e-6	FALSE	Inverse variance weighted	181.90681729521594	160	0.11319942530247878

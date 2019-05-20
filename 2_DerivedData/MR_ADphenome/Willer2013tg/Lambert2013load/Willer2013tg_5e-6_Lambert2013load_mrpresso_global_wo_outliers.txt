@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-QT36YH	jDcKay	AD	TG	5e-6	TRUE	4	162.6495937671617	0.0045
+1DmDO6	uNRgOR	Lambert2013load	Willer2013tg	5e-6	TRUE	4	162.6495937671617	0.0039

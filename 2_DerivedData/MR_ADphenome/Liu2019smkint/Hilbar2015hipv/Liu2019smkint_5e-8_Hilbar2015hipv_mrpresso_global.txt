@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-jFPVlN	9MekTA	Hippocampal_Volume	smkint	5e-8	FALSE	1	133.79572558652046	0.0119
+wEkZbt	1MlkSj	Hilbar2015hipv	Liu2019smkint	5e-8	FALSE	1	133.79572558652046	0.0082

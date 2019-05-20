@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DsaBoC	jc03kc	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	0	6.884054535024014	0.727
+j23U0p	koTZcs	Hilbar2017hipv	SanchezRoige2018auditt	5e-8	FALSE	0	6.884054535024014	0.718

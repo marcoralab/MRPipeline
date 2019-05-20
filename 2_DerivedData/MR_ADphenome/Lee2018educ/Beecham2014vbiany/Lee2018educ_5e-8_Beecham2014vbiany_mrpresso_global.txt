@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CZhe8c	xjmiCG	VBI_any	Education	5e-8	FALSE	0	410.13682181961076	0.70896
+mW2MRP	LCM0mc	Beecham2014vbiany	Lee2018educ	5e-8	FALSE	0	410.13682181961076	0.71604

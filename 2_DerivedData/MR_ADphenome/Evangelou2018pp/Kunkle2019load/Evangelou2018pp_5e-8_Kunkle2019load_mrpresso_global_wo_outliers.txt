@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-3TYLB0	Uw2H1P	AD	PP	5e-8	TRUE	30	747.6891501261214	<4e-05
+LgSMLl	vIIjsH	Kunkle2019load	Evangelou2018pp	5e-8	TRUE	30	747.6891501261214	<4e-05

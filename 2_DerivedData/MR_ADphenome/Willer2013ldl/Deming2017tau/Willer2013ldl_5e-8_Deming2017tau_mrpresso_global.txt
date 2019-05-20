@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-bsqsZi	p0jF2h	CSF_ab42	LDL	5e-8	FALSE	0	86.97757506437371	0.1412
+wKuEVM	KSSPoT	Deming2017tau	Willer2013ldl	5e-8	FALSE	0	86.97757506437371	0.1522

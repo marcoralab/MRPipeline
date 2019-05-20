@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Pk5Rwn	K05LFY	CSF_ab42	MVPA	5e-8	FALSE	1	159.95552877840854	<0.001
+owFCli	x3j0q5	Deming2017ptau	Klimentidis2018mvpa	5e-8	FALSE	1	159.95552877840854	<0.001

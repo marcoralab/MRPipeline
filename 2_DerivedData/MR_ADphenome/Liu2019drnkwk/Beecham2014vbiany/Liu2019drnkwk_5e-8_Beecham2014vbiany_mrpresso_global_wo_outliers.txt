@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-UbTfiP	WCYXcr	VBI_any	drnkwk	5e-8	TRUE	0	NA	NA
+BIaweK	il3WbB	Beecham2014vbiany	Liu2019drnkwk	5e-8	TRUE	0	NA	NA

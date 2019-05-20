@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0C67un	GC7vGW	CSF_ab42	Education	5e-6	TRUE	0	NA	NA
+axdqFz	A6FRPn	Deming2017tau	Lee2018educ	5e-6	TRUE	0	NA	NA

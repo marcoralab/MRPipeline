@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-V52C3R	N9DAnt	CSF_ab42	TC	5e-6	FALSE	-0.0011686067328541719	0.0010059528386294403	0.24729617444439456
-V52C3R	N9DAnt	CSF_ab42	TC	5e-6	TRUE	5.290709835817878e-4	0.0011006322618861866	0.6314714118313027
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+1NyRVo	LZotP2	Deming2017ptau	Willer2013tc	5e-6	FALSE	-0.0011686067328541719	0.0010059528386294403	0.24729617444439456	NA

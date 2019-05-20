@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-35tRAO	ejXYDf	AAOS	Insomnia	5e-8	TRUE	0	NA	NA
+0FjHBw	RI9qZl	Huang2017aaos	Jansen2018insom	5e-8	TRUE	0	NA	NA

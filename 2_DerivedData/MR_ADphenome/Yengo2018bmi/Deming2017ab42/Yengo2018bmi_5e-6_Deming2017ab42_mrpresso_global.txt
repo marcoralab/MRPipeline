@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XpioKP	7dX4H7	CSF_ab42	BMI	5e-6	FALSE	1	1920.9592135980486	<1.33333333333333e-05
+sPoMqb	x0ETsl	Deming2017ab42	Yengo2018bmi	5e-6	FALSE	1	1920.9592135980486	<1.33333333333333e-05

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-LDOlpP	0hMjUM	Hippocampal_Volume	LDL	5e-8	FALSE	-1.6466077983461416	1.171567624233648	0.16400937595835066	NA
+dD9yGU	1yo5AJ	Hilbar2015hipv	Willer2013ldl	5e-8	FALSE	-1.6466077983461416	1.171567624233648	0.16400937595835066	NA

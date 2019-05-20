@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-6bP1uG	cnhWsT	Neuritic_Plaques_Any	drnkwk	5e-6	FALSE	-0.01188928529527476	0.012240935996984566	0.3329761625107651	NA
+HMI7aj	D7WptC	Beecham2014npany	Liu2019drnkwk	5e-6	FALSE	-0.01188928529527476	0.012240935996984566	0.3329761625107651	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-UPljax	eDoIPs	CSF_ab42	LDL	5e-6	TRUE	0	NA	NA
+hq8zy2	2QYhKY	Deming2017ab42	Willer2013ldl	5e-6	TRUE	0	NA	NA

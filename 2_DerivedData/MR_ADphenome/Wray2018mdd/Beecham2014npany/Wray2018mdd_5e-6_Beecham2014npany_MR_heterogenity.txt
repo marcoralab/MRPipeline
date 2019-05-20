@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-nfaEDF	Ts1RSD	Neuritic_Plaques_Any	MDD	5e-6	FALSE	MR Egger	67.85945828501278	60	0.22704769692619553
-nfaEDF	Ts1RSD	Neuritic_Plaques_Any	MDD	5e-6	FALSE	Inverse variance weighted	67.92028013986788	61	0.2532976376453376
+oc20Td	vzbTEz	Beecham2014npany	Wray2018mdd	5e-6	FALSE	MR Egger	67.85945828501278	60	0.22704769692619553
+oc20Td	vzbTEz	Beecham2014npany	Wray2018mdd	5e-6	FALSE	Inverse variance weighted	67.92028013986788	61	0.2532976376453376

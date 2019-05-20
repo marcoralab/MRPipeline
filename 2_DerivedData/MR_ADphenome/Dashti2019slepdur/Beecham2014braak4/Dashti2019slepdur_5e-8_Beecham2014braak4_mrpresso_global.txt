@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qMitNG	iH5Bgf	NFT_Braak_Four	Sleep_Duration	5e-8	FALSE	0	59.40414311566666	0.9661
+fVsrq3	rI8ADx	Beecham2014braak4	Dashti2019slepdur	5e-8	FALSE	0	59.40414311566666	0.9636

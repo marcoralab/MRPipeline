@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	-0.006303789615000969	0.01193668306784217	0.5978496309942072	NA
+b0EgBr	DAEswb	Beecham2014npany	Xu2018diab	5e-6	FALSE	-0.006303789615000969	0.01193668306784217	0.5978496309942072	NA

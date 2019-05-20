@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-fy7BoB	ktqfIc	Hippocampal_Volume	Oily_Fish_Intake	5e-6	FALSE	-4.724020271281046	1.8600966119196418	0.0121278224870842	NA
+DmCNsZ	0xRDta	Hilbar2015hipv	NealeLab2018oilfish	5e-6	FALSE	-4.724020271281046	1.8600966119196418	0.0121278224870842	NA

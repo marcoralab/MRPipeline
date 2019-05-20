@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-MylPlG	MHHLoj	CSF_ab42	Social_Isolation	5e-8	FALSE	1	24.896508802215017	0.041
+8CIOqp	DRWydr	Deming2017ab42	Day2018sociso	5e-8	FALSE	1	24.896508802215017	0.028

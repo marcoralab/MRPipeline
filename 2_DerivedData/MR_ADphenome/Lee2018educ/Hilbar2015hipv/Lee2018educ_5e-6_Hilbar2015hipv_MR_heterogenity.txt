@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-SFgDkP	v05eo2	Hippocampal_Volume	Education	5e-6	FALSE	MR Egger	941.7420272257955	914	0.2552812335841844
-SFgDkP	v05eo2	Hippocampal_Volume	Education	5e-6	FALSE	Inverse variance weighted	941.7600778556707	915	0.2626813549567101
+PrEU57	0sEhCN	Hilbar2015hipv	Lee2018educ	5e-6	FALSE	MR Egger	941.7420272257955	914	0.2552812335841844
+PrEU57	0sEhCN	Hilbar2015hipv	Lee2018educ	5e-6	FALSE	Inverse variance weighted	941.7600778556707	915	0.2626813549567101

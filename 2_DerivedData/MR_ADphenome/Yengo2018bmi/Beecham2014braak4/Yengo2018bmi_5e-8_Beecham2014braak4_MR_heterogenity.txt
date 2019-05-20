@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-cphek4	Sh3s2N	NFT_Braak_Four	BMI	5e-8	FALSE	MR Egger	1028.8292094961123	843	1.0868997365429628e-5
-cphek4	Sh3s2N	NFT_Braak_Four	BMI	5e-8	FALSE	Inverse variance weighted	1031.4305635311396	844	9.42073469305947e-6
-cphek4	Sh3s2N	NFT_Braak_Four	BMI	5e-8	TRUE	MR Egger	903.9500338443002	842	0.06807694557824184
-cphek4	Sh3s2N	NFT_Braak_Four	BMI	5e-8	TRUE	Inverse variance weighted	905.1944791404438	843	0.06744388888681603
+dmxFuI	Pe5Xir	Beecham2014braak4	Yengo2018bmi	5e-8	FALSE	MR Egger	1028.8292094961123	843	1.0868997365429628e-5
+dmxFuI	Pe5Xir	Beecham2014braak4	Yengo2018bmi	5e-8	FALSE	Inverse variance weighted	1031.4305635311396	844	9.42073469305947e-6
+dmxFuI	Pe5Xir	Beecham2014braak4	Yengo2018bmi	5e-8	TRUE	MR Egger	903.9500338443002	842	0.06807694557824184
+dmxFuI	Pe5Xir	Beecham2014braak4	Yengo2018bmi	5e-8	TRUE	Inverse variance weighted	905.1944791404438	843	0.06744388888681603

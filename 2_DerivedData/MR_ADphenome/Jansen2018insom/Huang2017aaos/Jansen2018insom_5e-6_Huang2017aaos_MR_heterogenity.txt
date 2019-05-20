@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-JOqGCY	YM2q3b	AAOS	Insomnia	5e-6	FALSE	MR Egger	99.86094992366432	96	0.3733599820722258
-JOqGCY	YM2q3b	AAOS	Insomnia	5e-6	FALSE	Inverse variance weighted	100.91812529535936	97	0.3724645807404918
+VblhFN	WgN3Ua	Huang2017aaos	Jansen2018insom	5e-6	FALSE	MR Egger	99.86094992366432	96	0.3733599820722258
+VblhFN	WgN3Ua	Huang2017aaos	Jansen2018insom	5e-6	FALSE	Inverse variance weighted	100.91812529535936	97	0.3724645807404918

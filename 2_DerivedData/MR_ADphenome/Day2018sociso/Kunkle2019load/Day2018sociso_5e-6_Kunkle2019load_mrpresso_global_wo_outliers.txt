@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-9BcwC9	Rqg00s	AD	Social_Isolation	5e-6	TRUE	3	110.66433588504164	0.152
+IqTLyz	i9pJDI	Kunkle2019load	Day2018sociso	5e-6	TRUE	3	110.66433588504164	0.1423

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-TS4gAu	ww0KZO	AD	Sleep_Duration	5e-8	FALSE	1	104.86420157828293	0.0413
+GcbIA3	iNRGnX	Kunkle2019load	Dashti2019slepdur	5e-8	FALSE	1	104.86420157828293	0.0404

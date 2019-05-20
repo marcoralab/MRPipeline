@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-WBwm2i	umt2YB	AD	HDL	5e-6	TRUE	5	243.75398486912735	<1e-04
+Q3dRyA	X5w6nY	Lambert2013load	Willer2013hdl	5e-6	TRUE	5	243.75398486912735	1e-4

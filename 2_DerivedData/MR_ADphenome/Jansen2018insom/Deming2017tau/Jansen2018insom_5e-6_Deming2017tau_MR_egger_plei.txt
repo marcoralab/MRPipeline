@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-7PIV7s	MG4K2d	CSF_ab42	Insomnia	5e-6	FALSE	0.005477023853301782	0.0041576295831762715	0.19173411773932877	NA
+5hQaJd	uyq5jE	Deming2017tau	Jansen2018insom	5e-6	FALSE	0.005477023853301782	0.0041576295831762715	0.19173411773932877	NA

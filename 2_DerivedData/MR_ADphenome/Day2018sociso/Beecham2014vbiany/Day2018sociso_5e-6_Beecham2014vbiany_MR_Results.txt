@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	Inverse variance weighted (fixed effects)	90	0	0.5143955685610678	0.6113677520801815	0.40013236613249104
-GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	Weighted median	90	0	0.4825249472100332	0.8950117274525811	0.5897992576433648
-GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	Weighted mode	90	0	1.2481701220980241	1.8616246147239048	0.5042920726701653
-GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	MR Egger	90	0	-1.4178315905969796	2.709283363420443	0.602064495410397
+pLlkyB	nRgSEs	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Inverse variance weighted (fixed effects)	90	0	0.5143955685610678	0.6113677520801815	0.40013236613249104
+pLlkyB	nRgSEs	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Weighted median	90	0	0.4825249472100332	0.892801811989704	0.5888788508765102
+pLlkyB	nRgSEs	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Weighted mode	90	0	1.2481701220980241	1.9151290471079119	0.5162471227952341
+pLlkyB	nRgSEs	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	MR Egger	90	0	-1.4178315905969796	2.709283363420443	0.602064495410397

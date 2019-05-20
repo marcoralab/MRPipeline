@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-njDMQ5	sdByt2	VBI_any	Depression	5e-8	FALSE	0	16.111545073313	0.531
+pNYc69	38ypvr	Beecham2014vbiany	Howard2018dep	5e-8	FALSE	0	16.111545073313	0.496

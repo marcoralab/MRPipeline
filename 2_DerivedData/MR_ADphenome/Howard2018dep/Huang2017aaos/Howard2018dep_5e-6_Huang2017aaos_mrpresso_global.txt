@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-i0dpti	8zY7Ji	AAOS	Depression	5e-6	FALSE	0	111.6461033599426	0.6569
+VIWPXu	KyxVSo	Huang2017aaos	Howard2018dep	5e-6	FALSE	0	111.6461033599426	0.6374

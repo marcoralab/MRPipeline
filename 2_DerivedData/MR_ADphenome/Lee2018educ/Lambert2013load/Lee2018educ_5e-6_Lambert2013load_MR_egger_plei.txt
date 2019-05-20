@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-p4b9s3	TMOcQA	AD	Education	5e-6	FALSE	0.006127861333788647	0.002551781215036351	0.016527617527445866	NA
+Txrn3K	Vh3UGW	Lambert2013load	Lee2018educ	5e-6	FALSE	0.006127861333788647	0.002551781215036351	0.016527617527445866	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LLbWJD	TjklnL	Hippocampal_Volume	smkint	5e-6	TRUE	14	367.400762163467	0.01524
+tRuAtP	KKzkz5	Hilbar2017hipv	Liu2019smkint	5e-6	TRUE	14	367.400762163467	0.015

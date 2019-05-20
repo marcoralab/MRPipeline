@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-MsHsM0	htrGx2	VBI_any	MDD	5e-8	FALSE	-0.1878200586268643	0.13754427328888713	0.2210640321079762	NA
+kMK9JU	hb09SJ	Beecham2014vbiany	Wray2018mdd	5e-8	FALSE	-0.1878200586268643	0.13754427328888713	0.2210640321079762	NA

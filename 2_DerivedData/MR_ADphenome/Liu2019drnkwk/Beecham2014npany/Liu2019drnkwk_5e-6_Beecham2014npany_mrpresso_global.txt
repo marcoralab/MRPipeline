@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-6bP1uG	cnhWsT	Neuritic_Plaques_Any	drnkwk	5e-6	FALSE	0	121.25738624300152	0.9739
+HMI7aj	D7WptC	Beecham2014npany	Liu2019drnkwk	5e-6	FALSE	0	121.25738624300152	0.9739

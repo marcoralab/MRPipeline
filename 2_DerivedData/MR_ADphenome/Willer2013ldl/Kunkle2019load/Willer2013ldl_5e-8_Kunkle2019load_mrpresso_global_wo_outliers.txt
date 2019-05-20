@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-sbAfes	8vtUMX	AD	LDL	5e-8	TRUE	6	105.74137076889967	0.0298
+uSYvvX	StvDz6	Kunkle2019load	Willer2013ldl	5e-8	TRUE	6	105.74137076889967	0.0282

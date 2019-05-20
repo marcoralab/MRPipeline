@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-FU1WNx	TEAchn	NFT_Braak_Four	LDL	5e-6	TRUE	0	NA	NA
+wJxZ4c	5itwQx	Beecham2014braak4	Willer2013ldl	5e-6	TRUE	0	NA	NA

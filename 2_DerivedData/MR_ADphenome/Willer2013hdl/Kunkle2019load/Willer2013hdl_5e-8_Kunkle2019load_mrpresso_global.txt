@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BMcgIL	DdLi17	AD	HDL	5e-8	FALSE	3	2862.2614466722043	<1e-04
+wNMESo	gtIQ87	Kunkle2019load	Willer2013hdl	5e-8	FALSE	3	2862.2614466722043	<1e-04

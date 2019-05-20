@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-RrEShC	kXxRc9	Neuritic_Plaques_Any	Sleep_Duration	5e-6	FALSE	Inverse variance weighted (fixed effects)	245	0	-0.7824333463338209	0.37770728543057536	0.03830895447784679
-RrEShC	kXxRc9	Neuritic_Plaques_Any	Sleep_Duration	5e-6	FALSE	Weighted median	245	0	-0.9321321424033282	0.614111387667303	0.12905091440266434
-RrEShC	kXxRc9	Neuritic_Plaques_Any	Sleep_Duration	5e-6	FALSE	Weighted mode	245	0	-1.7042932819693704	1.1330730324671172	0.13384021920105915
-RrEShC	kXxRc9	Neuritic_Plaques_Any	Sleep_Duration	5e-6	FALSE	MR Egger	245	0	-3.3812206586677105	1.2611329066288428	0.007840752240012008
+zzrinQ	DY8N41	Beecham2014npany	Dashti2019slepdur	5e-6	FALSE	Inverse variance weighted (fixed effects)	245	0	-0.7824333463338209	0.37770728543057536	0.03830895447784679
+zzrinQ	DY8N41	Beecham2014npany	Dashti2019slepdur	5e-6	FALSE	Weighted median	245	0	-0.9321321424033282	0.5913284866187755	0.11494848230929747
+zzrinQ	DY8N41	Beecham2014npany	Dashti2019slepdur	5e-6	FALSE	Weighted mode	245	0	-1.7042932819693704	1.1472744783573117	0.13869833456279063
+zzrinQ	DY8N41	Beecham2014npany	Dashti2019slepdur	5e-6	FALSE	MR Egger	245	0	-3.3812206586677105	1.2611329066288428	0.007840752240012008

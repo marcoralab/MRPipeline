@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-m3y2CV	1AT3Do	AAOS	AUDIT_Total	5e-8	TRUE	0	NA	NA
+lwGVpL	KZGBXe	Huang2017aaos	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA

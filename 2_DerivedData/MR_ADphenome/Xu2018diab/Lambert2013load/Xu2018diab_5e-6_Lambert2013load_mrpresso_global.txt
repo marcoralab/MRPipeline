@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JhaZV1	tcqH3o	AD	Diabetes	5e-6	FALSE	1	407.88616122052537	<1e-04
+Oq2Y5v	TrnNsS	Lambert2013load	Xu2018diab	5e-6	FALSE	1	407.88616122052537	<1e-04

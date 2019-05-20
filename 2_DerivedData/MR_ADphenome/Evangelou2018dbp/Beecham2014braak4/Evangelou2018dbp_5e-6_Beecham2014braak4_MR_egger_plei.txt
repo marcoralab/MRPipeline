@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-TrYKXj	Emmu1e	NFT_Braak_Four	DBP	5e-6	FALSE	-2.16565808473886e-4	0.003883514325356735	0.9555384886871101	NA
+L82Bl0	utuWYD	Beecham2014braak4	Evangelou2018dbp	5e-6	FALSE	-2.16565808473886e-4	0.003883514325356735	0.9555384886871101	NA

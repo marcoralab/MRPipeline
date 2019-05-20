@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	FALSE	0.018364616057739598	0.05108197400822816	0.7245765161804535
-8ZxWf2	gsAJkd	NFT_Braak_Four	Alcohol_Dependence	5e-6	TRUE	-0.0298640004831463	0.0489957029715412	0.5526825136886668
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+fyHmoC	K7DX4m	Beecham2014braak4	Walters2018alcdep	5e-6	FALSE	0.018364616057739598	0.05108197400822816	0.7245765161804535	NA

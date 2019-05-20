@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cT6r1j	UA8epx	CSF_ab42	Depression	5e-6	FALSE	0	111.49795648949058	0.3473
+fb9szL	TUPJW8	Deming2017ptau	Howard2018dep	5e-6	FALSE	0	111.49795648949058	0.343

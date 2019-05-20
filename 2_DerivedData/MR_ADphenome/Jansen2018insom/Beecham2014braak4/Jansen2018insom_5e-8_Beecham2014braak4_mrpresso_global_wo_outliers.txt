@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-dzPpdB	z1rwdB	NFT_Braak_Four	Insomnia	5e-8	TRUE	0	NA	NA
+KneWfw	nvpsNd	Beecham2014braak4	Jansen2018insom	5e-8	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oWoLR4	TNg1kR	CSF_ab42	HDL	5e-8	TRUE	1	109.64769925986987	0.1796
+yj5Sz4	ZAm2gu	Deming2017ab42	Willer2013hdl	5e-8	TRUE	2	96.90169777404417	0.4661

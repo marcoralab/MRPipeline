@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-CKKxxH	MUm0xj	Hippocampal_Volume	TC	5e-6	FALSE	MR Egger	143.78525535343735	137	0.3287167412701665
-CKKxxH	MUm0xj	Hippocampal_Volume	TC	5e-6	FALSE	Inverse variance weighted	145.02713926035247	138	0.32420017437935367
+p8gVmP	SyL7fJ	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	MR Egger	143.78525535343735	137	0.3287167412701665
+p8gVmP	SyL7fJ	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	Inverse variance weighted	145.02713926035247	138	0.32420017437935367

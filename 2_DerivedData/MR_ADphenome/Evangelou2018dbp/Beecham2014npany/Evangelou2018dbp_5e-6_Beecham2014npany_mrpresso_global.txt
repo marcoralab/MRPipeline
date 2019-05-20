@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CtJujo	8nhUBm	Neuritic_Plaques_Any	DBP	5e-6	FALSE	0	1138.7792672574928	0.48058
+vP1WQc	Zz333C	Beecham2014npany	Evangelou2018dbp	5e-6	FALSE	0	1138.7792672574928	0.47984

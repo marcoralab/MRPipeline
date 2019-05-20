@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DKwjPY	4p6LLU	AD	drnkwk	5e-6	TRUE	4	196.0988757039377	0.016
+uO2Kd4	STQvxn	Kunkle2019load	Liu2019drnkwk	5e-6	TRUE	4	196.0988757039377	0.0152

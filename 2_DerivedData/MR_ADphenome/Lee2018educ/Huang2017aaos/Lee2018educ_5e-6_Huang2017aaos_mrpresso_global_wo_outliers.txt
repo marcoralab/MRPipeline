@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Pi0teF	Qb25qw	AAOS	Education	5e-6	TRUE	35	1055.8587539055045	0.0155
+VyX3p0	E02rtw	Huang2017aaos	Lee2018educ	5e-6	TRUE	35	1055.8587539055045	0.01508

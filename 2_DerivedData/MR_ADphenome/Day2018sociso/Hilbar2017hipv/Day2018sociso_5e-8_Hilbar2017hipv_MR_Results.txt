@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	-0.118355050123997	0.1842237042861727	0.5205791719611804
-lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	Weighted median	15	0	-0.044003602591517255	0.2582932980132412	0.8647247248995702
-lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	Weighted mode	15	0	0.3092424589915459	0.4257966876501752	0.4796417409169641
-lNi6N3	bFXxFT	Hippocampal_Volume	Social_Isolation	5e-8	FALSE	MR Egger	15	0	0.9294649036536584	0.950199208671132	0.3458389715839034
+Mez66l	St8rnk	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	-0.118355050123997	0.1842237042861727	0.5205791719611804
+Mez66l	St8rnk	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Weighted median	15	0	-0.044003602591517255	0.25881787001736223	0.8649962665129896
+Mez66l	St8rnk	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Weighted mode	15	0	0.3092424589915459	0.45452552616715386	0.5073706679158453
+Mez66l	St8rnk	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	MR Egger	15	0	0.9294649036536584	0.950199208671132	0.3458389715839034

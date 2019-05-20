@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-01CCTc	2C48r1	AD	MDD	5e-8	TRUE	0	NA	NA
+FdTsYm	Mw66IK	Kunkle2019load	Wray2018mdd	5e-8	TRUE	0	NA	NA

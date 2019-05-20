@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-4Dpaxj	Cdh4YV	NFT_Braak_Four	Social_Isolation	5e-6	FALSE	-0.007602207293364893	0.02496364102309988	0.7614422469911685	NA
+yB8A6Y	G8OYl0	Beecham2014braak4	Day2018sociso	5e-6	FALSE	-0.007602207293364893	0.02496364102309988	0.7614422469911685	NA

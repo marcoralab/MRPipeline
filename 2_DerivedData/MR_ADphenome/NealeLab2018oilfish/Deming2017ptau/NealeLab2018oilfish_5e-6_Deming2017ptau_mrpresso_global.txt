@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2XGbsq	V7xQcq	CSF_ab42	Oily_Fish_Intake	5e-6	FALSE	2	246.96221935003652	<1e-04
+LFwAoA	llCraR	Deming2017ptau	NealeLab2018oilfish	5e-6	FALSE	1	246.96221935003652	<1e-04

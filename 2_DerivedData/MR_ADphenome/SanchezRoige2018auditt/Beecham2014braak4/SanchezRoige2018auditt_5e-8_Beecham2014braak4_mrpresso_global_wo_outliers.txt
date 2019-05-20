@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BxDW0d	38ugEW	NFT_Braak_Four	AUDIT_Total	5e-8	TRUE	0	NA	NA
+66JNpw	h0cckw	Beecham2014braak4	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA

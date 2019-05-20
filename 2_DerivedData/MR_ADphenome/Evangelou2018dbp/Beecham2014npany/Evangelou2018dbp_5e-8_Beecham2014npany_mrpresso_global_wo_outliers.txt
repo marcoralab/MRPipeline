@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-4XJ01T	tEPACV	Neuritic_Plaques_Any	DBP	5e-8	TRUE	0	NA	NA
+EfpQ69	bt8jWo	Beecham2014npany	Evangelou2018dbp	5e-8	TRUE	0	NA	NA

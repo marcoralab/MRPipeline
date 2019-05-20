@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-PgZC3G	LW15Lz	NFT_Braak_Four	TG	5e-8	FALSE	2	115.24287832834682	2e-4
+ArrLrH	XiKRii	Beecham2014braak4	Willer2013tg	5e-8	FALSE	2	115.24287832834682	<2e-04

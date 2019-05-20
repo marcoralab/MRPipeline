@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-bOb76U	31R789	VBI_any	Diabetes	5e-6	TRUE	0	NA	NA
+qZpVDJ	hcLon6	Beecham2014vbiany	Xu2018diab	5e-6	TRUE	0	NA	NA

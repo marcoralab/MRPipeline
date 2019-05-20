@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-i9q76n	Qg8uuc	Neuritic_Plaques_Any	Education	5e-6	FALSE	MR Egger	864.1849996745104	924	0.9202923186627484
-i9q76n	Qg8uuc	Neuritic_Plaques_Any	Education	5e-6	FALSE	Inverse variance weighted	864.1976505641985	925	0.9236783851225178
+ALOmC6	SCPuBn	Beecham2014npany	Lee2018educ	5e-6	FALSE	MR Egger	864.1849996745104	924	0.9202923186627484
+ALOmC6	SCPuBn	Beecham2014npany	Lee2018educ	5e-6	FALSE	Inverse variance weighted	864.1976505641985	925	0.9236783851225178

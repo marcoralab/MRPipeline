@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LEH8Wi	3jitOi	CSF_ab42	Insomnia	5e-8	FALSE	0	15.761946339234603	0.35
+xla3QG	5K5LDD	Deming2017ptau	Jansen2018insom	5e-8	FALSE	0	15.761946339234603	0.361

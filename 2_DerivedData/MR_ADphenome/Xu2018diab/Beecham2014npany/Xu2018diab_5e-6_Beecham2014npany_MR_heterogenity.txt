@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	MR Egger	241.53921837158236	278	0.9441927179207561
-PQl99a	mPFhH6	Neuritic_Plaques_Any	Diabetes	5e-6	FALSE	Inverse variance weighted	241.81811039602687	279	0.9475341061939896
+b0EgBr	DAEswb	Beecham2014npany	Xu2018diab	5e-6	FALSE	MR Egger	241.53921837158236	278	0.9441927179207561
+b0EgBr	DAEswb	Beecham2014npany	Xu2018diab	5e-6	FALSE	Inverse variance weighted	241.81811039602687	279	0.9475341061939896

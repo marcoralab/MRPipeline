@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-TRFJP0	YETGdI	CSF_ab42	Depression	5e-8	FALSE	0.011278231768593092	0.007871271357595695	0.17551269165584404	NA
+Y94Ksv	8uDkOQ	Deming2017ptau	Howard2018dep	5e-8	FALSE	0.011278231768593092	0.007871271357595695	0.17551269165584404	NA

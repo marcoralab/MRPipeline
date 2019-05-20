@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-B8mZwI	KAp4OT	Neuritic_Plaques_Any	SBP	5e-8	FALSE	0.013253931475604079	0.00879575417803167	0.13232613900346527	NA
+xPuu7l	o1dTNX	Beecham2014npany	Evangelou2018sbp	5e-8	FALSE	0.013253931475604079	0.00879575417803167	0.13232613900346527	NA

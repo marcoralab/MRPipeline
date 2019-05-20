@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-5AkrDm	ARvISp	Neuritic_Plaques_Any	Diabetes	5e-8	FALSE	0.0011484064568168639	0.016568804175575498	0.9448499424774148	NA
+pv4RPF	NI1UQ3	Beecham2014npany	Xu2018diab	5e-8	FALSE	0.0011484064568168639	0.016568804175575498	0.9448499424774148	NA

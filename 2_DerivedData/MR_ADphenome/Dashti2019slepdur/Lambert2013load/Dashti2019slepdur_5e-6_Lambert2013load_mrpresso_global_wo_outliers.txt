@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-tBOXRw	CY3OsW	AD	Sleep_Duration	5e-6	TRUE	10	288.21926648489125	0.0209
+E0SgTP	Caqk18	Lambert2013load	Dashti2019slepdur	5e-6	TRUE	11	273.7887904530742	0.0663

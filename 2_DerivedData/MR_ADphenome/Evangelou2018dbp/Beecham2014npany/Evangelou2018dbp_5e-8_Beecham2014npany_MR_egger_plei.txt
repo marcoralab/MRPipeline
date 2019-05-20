@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-4XJ01T	tEPACV	Neuritic_Plaques_Any	DBP	5e-8	FALSE	0.008329573742095203	0.008520192550391291	0.32860579316467076	NA
+EfpQ69	bt8jWo	Beecham2014npany	Evangelou2018dbp	5e-8	FALSE	0.008329573742095203	0.008520192550391291	0.32860579316467076	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-Pi0teF	Qb25qw	AAOS	Education	5e-6	FALSE	-0.003978832068029292	0.0022001682474531844	0.0708553264596721	NA
+VyX3p0	E02rtw	Huang2017aaos	Lee2018educ	5e-6	FALSE	-0.003978832068029292	0.0022001682474531844	0.0708553264596721	NA

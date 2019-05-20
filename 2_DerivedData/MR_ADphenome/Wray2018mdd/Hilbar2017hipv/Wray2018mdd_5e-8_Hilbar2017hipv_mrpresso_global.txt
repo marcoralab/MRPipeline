@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0YYkFg	mPe1z3	Hippocampal_Volume	MDD	5e-8	FALSE	0	8.113743948677412	0.554
+Ytrven	SBOTZn	Hilbar2017hipv	Wray2018mdd	5e-8	FALSE	0	8.113743948677412	0.536

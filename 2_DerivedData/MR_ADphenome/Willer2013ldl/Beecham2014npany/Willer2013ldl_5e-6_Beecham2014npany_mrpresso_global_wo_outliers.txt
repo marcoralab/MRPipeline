@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-RheSO6	Sroc4x	Neuritic_Plaques_Any	LDL	5e-6	TRUE	0	NA	NA
+3Xtpf3	tJSU4L	Beecham2014npany	Willer2013ldl	5e-6	TRUE	0	NA	NA

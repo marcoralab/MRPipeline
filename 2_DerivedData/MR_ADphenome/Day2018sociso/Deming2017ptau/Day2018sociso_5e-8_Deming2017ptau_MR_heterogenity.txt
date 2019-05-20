@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-FFbev3	Nm5KUy	CSF_ab42	Social_Isolation	5e-8	FALSE	MR Egger	17.540380303447925	10	0.06322969736509797
-FFbev3	Nm5KUy	CSF_ab42	Social_Isolation	5e-8	FALSE	Inverse variance weighted	19.476084730984255	11	0.0530649229735562
+Mtg3Sl	joMkBu	Deming2017ptau	Day2018sociso	5e-8	FALSE	MR Egger	17.540380303447925	10	0.06322969736509797
+Mtg3Sl	joMkBu	Deming2017ptau	Day2018sociso	5e-8	FALSE	Inverse variance weighted	19.476084730984255	11	0.0530649229735562

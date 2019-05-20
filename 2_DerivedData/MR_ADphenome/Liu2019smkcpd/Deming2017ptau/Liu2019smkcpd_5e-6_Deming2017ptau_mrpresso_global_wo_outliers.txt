@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ouAsXm	Nn5yDt	CSF_ab42	smkcpd	5e-6	TRUE	0	NA	NA
+aLlWwS	Qc8GbK	Deming2017ptau	Liu2019smkcpd	5e-6	TRUE	0	NA	NA

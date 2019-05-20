@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-aDjlzV	hw9TmB	Hippocampal_Volume	drnkwk	5e-6	TRUE	0	NA	NA
+mrJ2fv	lkcZtX	Hilbar2015hipv	Liu2019drnkwk	5e-6	TRUE	0	NA	NA

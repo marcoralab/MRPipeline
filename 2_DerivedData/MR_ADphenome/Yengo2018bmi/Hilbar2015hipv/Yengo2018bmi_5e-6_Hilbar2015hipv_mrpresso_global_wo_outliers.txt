@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-YWAn5S	il7Fi1	Hippocampal_Volume	BMI	5e-6	TRUE	34	1528.527523347176	0.04636
+h9hOik	dZfb7V	Hilbar2015hipv	Yengo2018bmi	5e-6	TRUE	34	1528.527523347176	0.04478666666666667

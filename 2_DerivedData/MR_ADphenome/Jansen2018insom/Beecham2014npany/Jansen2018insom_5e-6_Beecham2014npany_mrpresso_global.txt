@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vXR4g8	T8sMKY	Neuritic_Plaques_Any	Insomnia	5e-6	FALSE	0	131.08715757270468	0.0115
+a9Sx83	AEA6G6	Beecham2014npany	Jansen2018insom	5e-6	FALSE	0	131.08715757270468	0.0104

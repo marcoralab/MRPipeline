@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-s0gy7X	x7iZfA	VBI_any	Oily_Fish_Intake	5e-6	FALSE	MR Egger	165.19466212132394	154	0.25436492941520766
-s0gy7X	x7iZfA	VBI_any	Oily_Fish_Intake	5e-6	FALSE	Inverse variance weighted	165.61415678596066	155	0.2652403796252506
+LbUMuT	4Zivyz	Beecham2014vbiany	NealeLab2018oilfish	5e-6	FALSE	MR Egger	165.19466212132394	154	0.25436492941520766
+LbUMuT	4Zivyz	Beecham2014vbiany	NealeLab2018oilfish	5e-6	FALSE	Inverse variance weighted	165.61415678596066	155	0.2652403796252506

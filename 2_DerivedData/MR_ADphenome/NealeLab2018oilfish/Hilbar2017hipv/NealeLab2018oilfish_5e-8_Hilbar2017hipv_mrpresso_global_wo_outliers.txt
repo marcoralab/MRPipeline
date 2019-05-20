@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Ej1am6	HgkU74	Hippocampal_Volume	Oily_Fish_Intake	5e-8	TRUE	5	61.026235485985154	0.0808
+T4wI6G	fHSCby	Hilbar2017hipv	NealeLab2018oilfish	5e-8	TRUE	5	61.026235485985154	0.0724

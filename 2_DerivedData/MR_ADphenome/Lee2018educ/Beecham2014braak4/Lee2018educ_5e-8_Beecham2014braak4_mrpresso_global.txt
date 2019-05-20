@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-MBtwr6	PG3kWj	NFT_Braak_Four	Education	5e-8	FALSE	0	424.12349166847764	0.53288
+w1wikd	dPMHp1	Beecham2014braak4	Lee2018educ	5e-8	FALSE	0	424.12349166847764	0.52788

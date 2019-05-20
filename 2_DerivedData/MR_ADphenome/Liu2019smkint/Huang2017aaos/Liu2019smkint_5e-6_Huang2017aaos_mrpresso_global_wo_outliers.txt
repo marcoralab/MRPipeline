@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LtvLS9	OwHfLP	AAOS	smkint	5e-6	TRUE	0	NA	NA
+mQo6pD	CP124c	Huang2017aaos	Liu2019smkint	5e-6	TRUE	0	NA	NA

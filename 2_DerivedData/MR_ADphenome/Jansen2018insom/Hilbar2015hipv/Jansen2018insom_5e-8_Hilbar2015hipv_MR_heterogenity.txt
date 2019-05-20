@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	MR Egger	21.232521677033127	12	0.04707746804191517
-7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	Inverse variance weighted	21.392458577866837	13	0.06552019747393832
+Wk7iDM	dqANjQ	Hilbar2015hipv	Jansen2018insom	5e-8	FALSE	MR Egger	21.232521677033127	12	0.04707746804191517
+Wk7iDM	dqANjQ	Hilbar2015hipv	Jansen2018insom	5e-8	FALSE	Inverse variance weighted	21.392458577866837	13	0.06552019747393832

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vlFSl1	jQYadQ	AD	Social_Isolation	5e-6	FALSE	1	118.63633694332655	0.0205
+NgJzdj	1gGScN	Lambert2013load	Day2018sociso	5e-6	FALSE	1	118.63633694332655	0.0197

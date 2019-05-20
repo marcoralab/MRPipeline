@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-t90Ci4	6Ol64r	Hippocampal_Volume	Alcohol_Dependence	5e-6	FALSE	0	27.127487861379063	0.115
+HPElp9	yqxlrK	Hilbar2015hipv	Walters2018alcdep	5e-6	FALSE	0	27.127487861379063	0.119

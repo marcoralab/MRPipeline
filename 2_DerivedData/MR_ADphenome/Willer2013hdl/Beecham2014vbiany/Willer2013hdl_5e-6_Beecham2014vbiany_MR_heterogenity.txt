@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-7JYqEy	p6tc9n	VBI_any	HDL	5e-6	FALSE	MR Egger	154.4743131868812	161	0.6298308401086246
-7JYqEy	p6tc9n	VBI_any	HDL	5e-6	FALSE	Inverse variance weighted	155.10082560288126	162	0.6374634365982712
+jV8lBN	YPIt5t	Beecham2014vbiany	Willer2013hdl	5e-6	FALSE	MR Egger	154.4743131868812	161	0.6298308401086246
+jV8lBN	YPIt5t	Beecham2014vbiany	Willer2013hdl	5e-6	FALSE	Inverse variance weighted	155.10082560288126	162	0.6374634365982712

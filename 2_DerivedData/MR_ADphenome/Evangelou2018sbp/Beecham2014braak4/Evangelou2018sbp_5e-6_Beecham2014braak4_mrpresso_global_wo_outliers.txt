@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-tV1HgB	Kter6j	NFT_Braak_Four	SBP	5e-6	TRUE	0	NA	NA
+lwzVGb	wh0WPk	Beecham2014braak4	Evangelou2018sbp	5e-6	TRUE	0	NA	NA

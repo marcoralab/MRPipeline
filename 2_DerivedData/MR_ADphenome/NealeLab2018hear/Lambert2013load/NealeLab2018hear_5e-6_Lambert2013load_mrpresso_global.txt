@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-G9VDRN	IIEAwd	AD	Hearing_Problems	5e-6	FALSE	0	110.81368557408355	0.216
+IOuWwN	BweaRi	Lambert2013load	NealeLab2018hear	5e-6	FALSE	0	110.81368557408355	0.2166

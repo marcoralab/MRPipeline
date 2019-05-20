@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oxB7om	XxMSnp	VBI_any	LDL	5e-6	TRUE	0	NA	NA
+bOjLJt	oDfcdM	Beecham2014vbiany	Willer2013ldl	5e-6	TRUE	0	NA	NA

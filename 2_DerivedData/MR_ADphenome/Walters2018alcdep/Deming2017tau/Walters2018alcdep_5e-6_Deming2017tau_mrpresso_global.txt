@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-u2xQua	IWaCcW	CSF_ab42	Alcohol_Dependence	5e-6	FALSE	0	18.695400064776003	0.198
+ieXzO1	XE5dJL	Deming2017tau	Walters2018alcdep	5e-6	FALSE	0	18.695400064776003	0.196

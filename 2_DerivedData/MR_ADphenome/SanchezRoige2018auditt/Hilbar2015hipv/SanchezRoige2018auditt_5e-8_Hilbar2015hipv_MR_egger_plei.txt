@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-ctB9Yi	lNQo4y	Hippocampal_Volume	AUDIT_Total	5e-8	FALSE	-7.518430878626215	5.751617698470083	0.26122776908733064	NA
+CfM61R	lHWCZD	Hilbar2015hipv	SanchezRoige2018auditt	5e-8	FALSE	-7.518430878626215	5.751617698470083	0.26122776908733064	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DqmmIG	lzOYnP	CSF_ab42	smkint	5e-8	FALSE	0	79.29575236712367	0.8895
+zspDri	iaaA9v	Deming2017tau	Liu2019smkint	5e-8	FALSE	0	79.29575236712367	0.8896

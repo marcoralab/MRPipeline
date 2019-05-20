@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-p4b9s3	TMOcQA	AD	Education	5e-6	TRUE	28	1168.4486886492327	<2e-05
+Txrn3K	Vh3UGW	Lambert2013load	Lee2018educ	5e-6	TRUE	28	1168.4486886492327	<2e-05

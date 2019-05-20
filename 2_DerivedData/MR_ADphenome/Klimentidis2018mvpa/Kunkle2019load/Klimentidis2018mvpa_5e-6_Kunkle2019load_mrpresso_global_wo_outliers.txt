@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-KSeVjS	KIFjPI	AD	MVPA	5e-6	TRUE	3	151.1986376586913	0.0114
+i8QGOn	yJ3gK0	Kunkle2019load	Klimentidis2018mvpa	5e-6	TRUE	3	151.1986376586913	0.0109

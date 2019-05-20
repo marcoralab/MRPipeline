@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-19QuSe	4Q4kNM	Hippocampal_Volume	LDL	5e-6	FALSE	MR Egger	184.88711713494047	123	2.603906854198886e-4
-19QuSe	4Q4kNM	Hippocampal_Volume	LDL	5e-6	FALSE	Inverse variance weighted	185.0320715795066	124	3.160818220986542e-4
-19QuSe	4Q4kNM	Hippocampal_Volume	LDL	5e-6	TRUE	MR Egger	172.1385973157011	122	0.0019026780590509164
-19QuSe	4Q4kNM	Hippocampal_Volume	LDL	5e-6	TRUE	Inverse variance weighted	172.6194978493387	123	0.002131556440948767
+BV2zns	jIlVjp	Hilbar2017hipv	Willer2013ldl	5e-6	FALSE	MR Egger	184.88711713494047	123	2.603906854198886e-4
+BV2zns	jIlVjp	Hilbar2017hipv	Willer2013ldl	5e-6	FALSE	Inverse variance weighted	185.0320715795066	124	3.160818220986542e-4
+BV2zns	jIlVjp	Hilbar2017hipv	Willer2013ldl	5e-6	TRUE	MR Egger	160.00280620298346	121	0.010139499858918303
+BV2zns	jIlVjp	Hilbar2017hipv	Willer2013ldl	5e-6	TRUE	Inverse variance weighted	161.19862901118788	122	0.010072483595707199

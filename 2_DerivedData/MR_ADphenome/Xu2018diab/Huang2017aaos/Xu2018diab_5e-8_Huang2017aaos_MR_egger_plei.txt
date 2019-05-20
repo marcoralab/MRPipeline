@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-oqCagS	TG5WqH	AAOS	Diabetes	5e-8	FALSE	0.003252969858058276	0.0035239552253399182	0.35766422266569986	NA
+veFDpL	pFs3QE	Huang2017aaos	Xu2018diab	5e-8	FALSE	0.003252969858058276	0.0035239552253399182	0.35766422266569986	NA

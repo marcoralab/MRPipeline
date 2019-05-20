@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-8XLzBw	lwbkYd	CSF_ab42	Sleep_Duration	5e-6	FALSE	MR Egger	192.79297073954817	216	0.8701006426097179
-8XLzBw	lwbkYd	CSF_ab42	Sleep_Duration	5e-6	FALSE	Inverse variance weighted	193.72706889358997	217	0.8702283340367912
+fr2NDV	QPLlox	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	MR Egger	192.79297073954817	216	0.8701006426097179
+fr2NDV	QPLlox	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	Inverse variance weighted	193.72706889358997	217	0.8702283340367912

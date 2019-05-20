@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-BdKmTf	3sLY0T	AD	AUDIT_Total	5e-8	FALSE	-0.005197395148059952	0.01553363551353739	0.7465379701976838	NA
+mYDNqb	nKJKHz	Kunkle2019load	SanchezRoige2018auditt	5e-8	FALSE	-0.005197395148059952	0.01553363551353739	0.7465379701976838	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-e5964G	Zejzae	AD	smkcpd	5e-6	TRUE	0	NA	NA
+1QAaoL	9Pml4o	Lambert2013load	Liu2019smkcpd	5e-6	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-AOMrOw	vqO3Sw	VBI_any	Sleep_Duration	5e-6	FALSE	-0.002997470103382885	0.011830219439926314	0.8001934429080346	NA
+igbJHk	22b5QQ	Beecham2014vbiany	Dashti2019slepdur	5e-6	FALSE	-0.002997470103382885	0.011830219439926314	0.8001934429080346	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-i9q76n	Qg8uuc	Neuritic_Plaques_Any	Education	5e-6	TRUE	0	NA	NA
+ALOmC6	SCPuBn	Beecham2014npany	Lee2018educ	5e-6	TRUE	0	NA	NA

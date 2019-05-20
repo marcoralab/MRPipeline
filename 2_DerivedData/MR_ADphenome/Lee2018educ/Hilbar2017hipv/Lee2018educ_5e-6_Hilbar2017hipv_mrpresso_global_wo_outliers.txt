@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kAQ5zr	w0DKzq	Hippocampal_Volume	Education	5e-6	TRUE	36	1076.5288832727779	0.00266
+9dR7Yi	D3DXfJ	Hilbar2017hipv	Lee2018educ	5e-6	TRUE	36	1076.1634723209622	0.00304

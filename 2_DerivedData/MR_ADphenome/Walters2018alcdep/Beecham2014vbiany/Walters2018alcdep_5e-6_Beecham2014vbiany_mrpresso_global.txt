@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	0	9.745526911052337	0.893
+7PVPVA	YJatib	Beecham2014vbiany	Walters2018alcdep	5e-6	FALSE	0	9.745526911052337	0.891

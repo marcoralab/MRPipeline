@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-f7aQ4r	lJlWCA	AAOS	Sleep_Duration	5e-6	FALSE	0	310.05475989636733	0.0059
+BJEkwl	qEZmQL	Huang2017aaos	Dashti2019slepdur	5e-6	FALSE	0	310.05475989636733	0.0054

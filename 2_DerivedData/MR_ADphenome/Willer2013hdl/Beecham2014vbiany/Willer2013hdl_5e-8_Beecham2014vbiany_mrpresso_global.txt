@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-3H72kN	YtotAv	VBI_any	HDL	5e-8	FALSE	0	96.5480811121037	0.6831
+wzGSS8	kI2tDU	Beecham2014vbiany	Willer2013hdl	5e-8	FALSE	0	96.5480811121037	0.6917

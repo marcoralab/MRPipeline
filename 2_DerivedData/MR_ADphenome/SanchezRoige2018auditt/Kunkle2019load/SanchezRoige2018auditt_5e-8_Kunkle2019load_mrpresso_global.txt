@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BdKmTf	3sLY0T	AD	AUDIT_Total	5e-8	FALSE	0	25.036017987021346	0.012
+mYDNqb	nKJKHz	Kunkle2019load	SanchezRoige2018auditt	5e-8	FALSE	0	25.036017987021346	0.021

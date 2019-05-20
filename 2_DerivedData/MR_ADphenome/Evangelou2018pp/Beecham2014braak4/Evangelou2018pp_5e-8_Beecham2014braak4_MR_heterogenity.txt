@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-JLf72z	JBst8Z	NFT_Braak_Four	PP	5e-8	FALSE	MR Egger	505.17834251355174	542	0.8695763446605645
-JLf72z	JBst8Z	NFT_Braak_Four	PP	5e-8	FALSE	Inverse variance weighted	506.0739781219922	543	0.8700491689611383
+afSBoh	ymwKt6	Beecham2014braak4	Evangelou2018pp	5e-8	FALSE	MR Egger	505.17834251355174	542	0.8695763446605645
+afSBoh	ymwKt6	Beecham2014braak4	Evangelou2018pp	5e-8	FALSE	Inverse variance weighted	506.0739781219922	543	0.8700491689611383

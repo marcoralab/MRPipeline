@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2kON3D	aJ93ef	Neuritic_Plaques_Any	AUDIT_Total	5e-8	TRUE	0	NA	NA
+IkPwm5	CcAGU4	Beecham2014npany	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA

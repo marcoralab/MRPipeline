@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xTLpuO	f5lmCA	CSF_ab42	AUDIT_Total	5e-6	FALSE	0	48.9030127960452	0.311
+PmsUq0	eMGj7f	Deming2017ptau	SanchezRoige2018auditt	5e-6	FALSE	0	48.9030127960452	0.3258

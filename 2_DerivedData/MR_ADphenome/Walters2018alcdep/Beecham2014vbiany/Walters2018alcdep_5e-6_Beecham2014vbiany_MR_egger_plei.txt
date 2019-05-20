@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-3UTBEY	d0YZBl	VBI_any	Alcohol_Dependence	5e-6	FALSE	1.4653819390553652e-4	0.046475257732014566	0.9975287333157545	NA
+7PVPVA	YJatib	Beecham2014vbiany	Walters2018alcdep	5e-6	FALSE	1.4653819390553652e-4	0.046475257732014566	0.9975287333157545	NA

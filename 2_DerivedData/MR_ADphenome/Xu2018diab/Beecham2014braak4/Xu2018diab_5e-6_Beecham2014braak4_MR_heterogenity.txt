@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-9yCypc	23unkh	NFT_Braak_Four	Diabetes	5e-6	FALSE	MR Egger	281.5541073978316	278	0.42922876393410625
-9yCypc	23unkh	NFT_Braak_Four	Diabetes	5e-6	FALSE	Inverse variance weighted	284.99655092124055	279	0.3896486301322134
+3XfzIi	vZrbfi	Beecham2014braak4	Xu2018diab	5e-6	FALSE	MR Egger	281.5541073978316	278	0.42922876393410625
+3XfzIi	vZrbfi	Beecham2014braak4	Xu2018diab	5e-6	FALSE	Inverse variance weighted	284.99655092124055	279	0.3896486301322134

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-EIi3eR	DX6FGl	NFT_Braak_Four	Hearing_Problems	5e-8	TRUE	0	NA	NA
+wXwBtD	zYxAos	Beecham2014braak4	NealeLab2018hear	5e-8	TRUE	0	NA	NA

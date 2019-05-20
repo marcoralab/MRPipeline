@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-QRbkvf	VOdzL9	Hippocampal_Volume	Hearing_Problems	5e-8	FALSE	0	18.681533662752685	0.923
+YEIDxD	EdwBHN	Hilbar2017hipv	NealeLab2018hear	5e-8	FALSE	0	18.681533662752685	0.924

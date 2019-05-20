@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-eUpmZW	DLoYRX	VBI_any	Hearing_Problems	5e-8	FALSE	MR Egger	20.115913120271383	26	0.7860317459179089
-eUpmZW	DLoYRX	VBI_any	Hearing_Problems	5e-8	FALSE	Inverse variance weighted	20.255603338185654	27	0.819860135587481
+5qaFrf	jzZFkO	Beecham2014vbiany	NealeLab2018hear	5e-8	FALSE	MR Egger	20.115913120271383	26	0.7860317459179089
+5qaFrf	jzZFkO	Beecham2014vbiany	NealeLab2018hear	5e-8	FALSE	Inverse variance weighted	20.255603338185654	27	0.819860135587481

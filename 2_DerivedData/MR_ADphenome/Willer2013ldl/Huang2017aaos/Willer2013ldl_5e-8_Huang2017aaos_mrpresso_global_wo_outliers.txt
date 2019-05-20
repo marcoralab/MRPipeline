@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-FOSjat	amcb0r	AAOS	LDL	5e-8	TRUE	3	120.66074854812392	0.0046
+VyvRsi	rDYYTV	Huang2017aaos	Willer2013ldl	5e-8	TRUE	3	120.66074854812392	0.0047

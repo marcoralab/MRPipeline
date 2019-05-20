@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-7RD9NX	GKxzKM	Hippocampal_Volume	Insomnia	5e-8	FALSE	0	24.102263264871755	0.077
+Wk7iDM	dqANjQ	Hilbar2015hipv	Jansen2018insom	5e-8	FALSE	0	24.102263264871755	0.096

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-t4s5id	mz5DKn	CSF_ab42	smkint	5e-8	FALSE	0.0039032368587466294	0.002236612756190499	0.08426089166732696	NA
+iwN1e8	TpM97P	Deming2017ab42	Liu2019smkint	5e-8	FALSE	0.0039032368587466294	0.002236612756190499	0.08426089166732696	NA

@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	FALSE	MR Egger	113.30784488710903	23	6.544752446331824e-14
-CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	FALSE	Inverse variance weighted	116.19806352587648	24	4.589076788310347e-14
-CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	TRUE	MR Egger	17.577690919360855	22	0.7307127814692848
-CEBVYE	lUdkRT	Neuritic_Plaques_Any	MVPA	5e-8	TRUE	Inverse variance weighted	17.900165633760235	23	0.7628818469243461
+oS1rzT	8AOaqQ	Beecham2014npany	Klimentidis2018mvpa	5e-8	FALSE	MR Egger	113.30784488710903	23	6.544752446331824e-14
+oS1rzT	8AOaqQ	Beecham2014npany	Klimentidis2018mvpa	5e-8	FALSE	Inverse variance weighted	116.19806352587648	24	4.589076788310347e-14
+oS1rzT	8AOaqQ	Beecham2014npany	Klimentidis2018mvpa	5e-8	TRUE	MR Egger	17.577690919360855	22	0.7307127814692848
+oS1rzT	8AOaqQ	Beecham2014npany	Klimentidis2018mvpa	5e-8	TRUE	Inverse variance weighted	17.900165633760235	23	0.7628818469243461

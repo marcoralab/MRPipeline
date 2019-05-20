@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-1EC1Kr	aLAPGf	AAOS	DBP	5e-8	TRUE	26	812.4795017825923	0.00288
+aWOP1V	Y3wqR1	Huang2017aaos	Evangelou2018dbp	5e-8	TRUE	26	812.4795017825923	0.00288

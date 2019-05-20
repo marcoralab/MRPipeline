@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qyZLjW	6QFMIG	VBI_any	DBP	5e-6	FALSE	0	1130.852889851435	0.53888
+cJ4PX3	YiSXB3	Beecham2014vbiany	Evangelou2018dbp	5e-6	FALSE	0	1130.852889851435	0.53814

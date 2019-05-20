@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-pGt45x	D3SKp3	Neuritic_Plaques_Any	smkint	5e-8	FALSE	-0.007755707659964348	0.04231608650628732	0.8549686438091765	NA
+LsQ9KL	7iMa08	Beecham2014npany	Liu2019smkint	5e-8	FALSE	-0.007755707659964348	0.04231608650628732	0.8549686438091765	NA

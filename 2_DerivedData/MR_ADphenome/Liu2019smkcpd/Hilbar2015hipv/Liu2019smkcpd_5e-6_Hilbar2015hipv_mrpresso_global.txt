@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DWl3Xt	5oqIh3	Hippocampal_Volume	smkcpd	5e-6	FALSE	0	98.60647302412356	0.1969
+9Uifeg	0DZdiy	Hilbar2015hipv	Liu2019smkcpd	5e-6	FALSE	0	98.60647302412356	0.1968

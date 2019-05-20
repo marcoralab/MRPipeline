@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-aCwnE2	Ak0EQy	CSF_ab42	Hearing_Problems	5e-8	FALSE	0.016199313612834484	0.008965486054022044	0.08513620620740774	NA
+2K5xC9	vkuD5t	Deming2017tau	NealeLab2018hear	5e-8	FALSE	0.016199313612834484	0.008965486054022044	0.08513620620740774	NA

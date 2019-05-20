@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-HsQOR3	ymf9h7	Neuritic_Plaques_Any	Alcohol_Dependence	5e-6	TRUE	0	NA	NA
+ATaEKj	dPrkZg	Beecham2014npany	Walters2018alcdep	5e-6	TRUE	0	NA	NA

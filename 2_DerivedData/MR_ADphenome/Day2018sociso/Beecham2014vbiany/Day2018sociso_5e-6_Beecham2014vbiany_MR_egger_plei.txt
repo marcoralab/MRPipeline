@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-GnftJ6	TzXjej	VBI_any	Social_Isolation	5e-6	FALSE	0.02426452134050051	0.03314508812790216	0.4660711368708488	NA
+pLlkyB	nRgSEs	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	0.02426452134050051	0.03314508812790216	0.4660711368708488	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-UVrh1o	krq5GS	AD	TC	5e-6	FALSE	6	763.2744871513011	<1e-04
+7cLy6Y	2FY3U1	Lambert2013load	Willer2013tc	5e-6	FALSE	5	763.2744871513011	<1e-04

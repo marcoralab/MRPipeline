@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-KAFI1E	FUii4G	CSF_ab42	AUDIT_Total	5e-6	FALSE	MR Egger	37.349155031485246	38	0.4993665326068621
-KAFI1E	FUii4G	CSF_ab42	AUDIT_Total	5e-6	FALSE	Inverse variance weighted	38.785828114226284	39	0.4795369696377745
+YLj8li	AJiH6v	Deming2017ab42	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	37.349155031485246	38	0.4993665326068621
+YLj8li	AJiH6v	Deming2017ab42	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted	38.785828114226284	39	0.4795369696377745

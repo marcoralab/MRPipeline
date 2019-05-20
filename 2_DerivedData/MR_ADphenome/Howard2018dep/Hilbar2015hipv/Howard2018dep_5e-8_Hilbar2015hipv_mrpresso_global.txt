@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XimziW	Gd7j1p	Hippocampal_Volume	Depression	5e-8	FALSE	0	20.082528462273892	0.18
+EqHaQO	0xTBWt	Hilbar2015hipv	Howard2018dep	5e-8	FALSE	0	20.082528462273892	0.19

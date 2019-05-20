@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-HhN3Vp	Vy5ZWO	CSF_ab42	Social_Isolation	5e-6	FALSE	0.0036823889107149036	0.0037253644737114205	0.3262356693453886	NA
+MH9lhM	MrwiO2	Deming2017tau	Day2018sociso	5e-6	FALSE	0.0036823889107149036	0.0037253644737114205	0.3262356693453886	NA

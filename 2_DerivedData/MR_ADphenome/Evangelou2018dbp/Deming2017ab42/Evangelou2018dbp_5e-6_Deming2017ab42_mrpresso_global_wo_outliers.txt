@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Oktu7Y	2rk7XQ	CSF_ab42	DBP	5e-6	TRUE	0	NA	NA
+laBOEn	Vqx1Aj	Deming2017ab42	Evangelou2018dbp	5e-6	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0c6JDI	cImw0V	CSF_ab42	HDL	5e-8	FALSE	1	223.32030296467272	<1e-04
+ynLOHL	RP0KEF	Deming2017ptau	Willer2013hdl	5e-8	FALSE	1	223.32030296467272	<1e-04

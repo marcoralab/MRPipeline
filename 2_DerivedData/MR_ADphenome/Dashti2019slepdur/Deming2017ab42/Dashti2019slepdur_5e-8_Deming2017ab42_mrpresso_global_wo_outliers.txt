@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-h7U9Dc	VRLGzH	CSF_ab42	Sleep_Duration	5e-8	TRUE	0	NA	NA
+ROK9WN	IRVy53	Deming2017ab42	Dashti2019slepdur	5e-8	TRUE	0	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-gDSF5J	RfVKsD	Hippocampal_Volume	SBP	5e-6	TRUE	39	1324.0013366561275	3.8e-4
+hXiwi9	5HfoyL	Hilbar2017hipv	Evangelou2018sbp	5e-6	TRUE	40	1308.0559099980514	9.4e-4

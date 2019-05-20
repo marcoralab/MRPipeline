@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-5AkrDm	ARvISp	Neuritic_Plaques_Any	Diabetes	5e-8	FALSE	MR Egger	107.2239175182423	128	0.9088970210676195
-5AkrDm	ARvISp	Neuritic_Plaques_Any	Diabetes	5e-8	FALSE	Inverse variance weighted	107.22872158375283	129	0.9189516077451918
+pv4RPF	NI1UQ3	Beecham2014npany	Xu2018diab	5e-8	FALSE	MR Egger	107.2239175182423	128	0.9088970210676195
+pv4RPF	NI1UQ3	Beecham2014npany	Xu2018diab	5e-8	FALSE	Inverse variance weighted	107.22872158375283	129	0.9189516077451918

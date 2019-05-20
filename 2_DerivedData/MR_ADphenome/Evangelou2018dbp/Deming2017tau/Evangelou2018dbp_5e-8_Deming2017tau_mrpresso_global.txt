@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CXzzjM	vtmWni	CSF_ab42	DBP	5e-8	FALSE	0	642.206196496308	0.13996
+OAE6uF	F2aEhp	Deming2017tau	Evangelou2018dbp	5e-8	FALSE	0	642.206196496308	0.13904

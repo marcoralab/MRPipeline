@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-cXHAaZ	5eFcnm	VBI_any	AUDIT_Total	5e-8	FALSE	-0.004848571128714188	0.061149224593968377	0.9398769414861139	NA
+WJ91lE	4a3IQ9	Beecham2014vbiany	SanchezRoige2018auditt	5e-8	FALSE	-0.004848571128714188	0.061149224593968377	0.9398769414861139	NA

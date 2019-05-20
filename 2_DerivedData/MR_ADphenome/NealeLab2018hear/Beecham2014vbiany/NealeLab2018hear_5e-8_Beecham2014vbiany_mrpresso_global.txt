@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-eUpmZW	DLoYRX	VBI_any	Hearing_Problems	5e-8	FALSE	0	21.59702523833947	0.831
+5qaFrf	jzZFkO	Beecham2014vbiany	NealeLab2018hear	5e-8	FALSE	0	21.59702523833947	0.827

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-z75Uvo	Fu1LbB	CSF_ab42	Social_Isolation	5e-6	FALSE	0	89.7644458982247	0.1178
+mDbBni	fkIRO0	Deming2017ab42	Day2018sociso	5e-6	FALSE	0	89.7644458982247	0.119

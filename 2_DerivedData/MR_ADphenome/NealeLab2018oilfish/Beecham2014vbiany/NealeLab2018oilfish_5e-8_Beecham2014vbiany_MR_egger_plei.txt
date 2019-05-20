@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-s3E2GN	f0gclH	VBI_any	Oily_Fish_Intake	5e-8	FALSE	9.890816710220332e-4	0.04395069948783736	0.9821451418438849	NA
+Se3Azu	25mAoV	Beecham2014vbiany	NealeLab2018oilfish	5e-8	FALSE	9.890816710220332e-4	0.04395069948783736	0.9821451418438849	NA

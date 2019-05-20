@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-oxB7om	XxMSnp	VBI_any	LDL	5e-6	FALSE	0.013016791047386402	0.0106340168836059	0.22330354162799507	NA
+bOjLJt	oDfcdM	Beecham2014vbiany	Willer2013ldl	5e-6	FALSE	0.013016791047386402	0.0106340168836059	0.22330354162799507	NA

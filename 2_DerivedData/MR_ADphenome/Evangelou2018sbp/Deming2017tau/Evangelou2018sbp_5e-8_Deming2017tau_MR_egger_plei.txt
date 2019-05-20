@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-LWKTQi	LZw6GS	CSF_ab42	SBP	5e-8	FALSE	9.18701027997544e-4	7.894452000971527e-4	0.24501362245033187	NA
+m7chQB	AoZMPm	Deming2017tau	Evangelou2018sbp	5e-8	FALSE	9.18701027997544e-4	7.894452000971527e-4	0.24501362245033187	NA

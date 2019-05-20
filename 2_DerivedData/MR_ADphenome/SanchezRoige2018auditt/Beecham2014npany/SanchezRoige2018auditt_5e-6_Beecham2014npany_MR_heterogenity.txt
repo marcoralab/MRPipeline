@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-speJZM	cmVkvN	Neuritic_Plaques_Any	AUDIT_Total	5e-6	FALSE	MR Egger	63.29341635561215	56	0.23461814345178708
-speJZM	cmVkvN	Neuritic_Plaques_Any	AUDIT_Total	5e-6	FALSE	Inverse variance weighted	63.30668101222837	57	0.2636501794483435
+EK4zPh	TZpQIe	Beecham2014npany	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	63.29341635561215	56	0.23461814345178708
+EK4zPh	TZpQIe	Beecham2014npany	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted	63.30668101222837	57	0.2636501794483435

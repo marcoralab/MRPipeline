@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xTLpuO	f5lmCA	CSF_ab42	AUDIT_Total	5e-6	TRUE	0	NA	NA
+PmsUq0	eMGj7f	Deming2017ptau	SanchezRoige2018auditt	5e-6	TRUE	0	NA	NA

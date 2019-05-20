@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-bOb76U	31R789	VBI_any	Diabetes	5e-6	FALSE	-0.005464563719473251	0.009562145452850383	0.5681368415099033	NA
+qZpVDJ	hcLon6	Beecham2014vbiany	Xu2018diab	5e-6	FALSE	-0.005464563719473251	0.009562145452850383	0.5681368415099033	NA

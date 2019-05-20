@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-z8MOuv	5hIDmd	AAOS	MVPA	5e-8	TRUE	1	28.51751231594267	0.315
+572qQ6	agEKaE	Huang2017aaos	Klimentidis2018mvpa	5e-8	TRUE	2	22.786616824619305	0.582

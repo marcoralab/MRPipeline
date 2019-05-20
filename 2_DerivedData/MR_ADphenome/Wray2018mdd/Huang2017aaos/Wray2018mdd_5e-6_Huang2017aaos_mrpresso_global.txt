@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-U4VbNu	KMivBO	AAOS	MDD	5e-6	FALSE	0	60.80504626389352	0.5818
+19hMfk	8u2nzA	Huang2017aaos	Wray2018mdd	5e-6	FALSE	0	60.80504626389352	0.592

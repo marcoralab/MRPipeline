@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-rHZ8ux	qiQPpy	CSF_ab42	Sleep_Duration	5e-6	FALSE	0	220.72539823120673	0.2792
+ATQGwS	twU3hx	Deming2017ab42	Dashti2019slepdur	5e-6	FALSE	0	220.72539823120673	0.2821

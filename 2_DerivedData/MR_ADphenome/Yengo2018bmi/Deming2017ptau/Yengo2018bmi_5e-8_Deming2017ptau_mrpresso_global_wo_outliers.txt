@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Pwt2Uz	tH4TxT	CSF_ab42	BMI	5e-8	TRUE	31	849.2819902252246	0.30684
+qtZnip	nVLyJo	Deming2017ptau	Yengo2018bmi	5e-8	TRUE	31	849.2819902252246	0.3029

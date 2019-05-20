@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oozTCt	m9vcqX	Hippocampal_Volume	BMI	5e-8	TRUE	24	1046.2823381649316	<2e-05
+lrH7li	dkOgpp	Hilbar2017hipv	Yengo2018bmi	5e-8	TRUE	24	1046.2823381649316	<2e-05

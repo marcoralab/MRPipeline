@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-8sUZI2	UC8ZNO	AD	Insomnia	5e-8	FALSE	0.03369570434991824	0.023033064063288235	0.16918127003496983
-8sUZI2	UC8ZNO	AD	Insomnia	5e-8	TRUE	0.03418200183487184	0.018683293043994277	0.09452740428432481
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+YgZD6U	z886KK	Lambert2013load	Jansen2018insom	5e-8	FALSE	0.03369570434991824	0.023033064063288235	0.16918127003496983	NA

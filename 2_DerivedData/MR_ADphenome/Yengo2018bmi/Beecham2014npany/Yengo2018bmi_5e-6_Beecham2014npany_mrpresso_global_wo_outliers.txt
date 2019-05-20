@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Llr6Xm	jIjIDW	Neuritic_Plaques_Any	BMI	5e-6	TRUE	0	NA	NA
+0oFt2u	ZgciSB	Beecham2014npany	Yengo2018bmi	5e-6	TRUE	0	NA	NA

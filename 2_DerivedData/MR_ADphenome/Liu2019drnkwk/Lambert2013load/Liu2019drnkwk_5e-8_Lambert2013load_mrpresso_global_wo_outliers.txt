@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-uKdajC	fN37AA	AD	drnkwk	5e-8	TRUE	2	58.90927188028814	0.0482
+jogyp2	Cm9k31	Lambert2013load	Liu2019drnkwk	5e-8	TRUE	2	58.90927188028814	0.051

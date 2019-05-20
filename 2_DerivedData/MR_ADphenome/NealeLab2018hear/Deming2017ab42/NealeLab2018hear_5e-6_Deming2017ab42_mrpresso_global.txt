@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SHtWPF	b6MIw9	CSF_ab42	Hearing_Problems	5e-6	FALSE	1	112.2282081387324	0.0116
+SyV1lw	JpTX5p	Deming2017ab42	NealeLab2018hear	5e-6	FALSE	0	112.2282081387324	0.015

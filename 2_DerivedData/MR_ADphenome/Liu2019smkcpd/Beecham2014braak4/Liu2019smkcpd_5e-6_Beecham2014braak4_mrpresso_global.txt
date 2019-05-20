@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-UuVaJI	oqIGDL	NFT_Braak_Four	smkcpd	5e-6	FALSE	0	77.58455023762622	0.8149
+xs5G3x	eqB1Ou	Beecham2014braak4	Liu2019smkcpd	5e-6	FALSE	0	77.58455023762622	0.8194

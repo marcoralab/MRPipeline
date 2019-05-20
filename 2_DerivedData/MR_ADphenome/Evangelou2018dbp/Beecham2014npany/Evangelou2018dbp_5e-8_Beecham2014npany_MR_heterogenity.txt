@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-4XJ01T	tEPACV	Neuritic_Plaques_Any	DBP	5e-8	FALSE	MR Egger	674.7703858948634	681	0.5601060888319452
-4XJ01T	tEPACV	Neuritic_Plaques_Any	DBP	5e-8	FALSE	Inverse variance weighted	675.7261412399257	682	0.5605373808268521
+EfpQ69	bt8jWo	Beecham2014npany	Evangelou2018dbp	5e-8	FALSE	MR Egger	674.7703858948634	681	0.5601060888319452
+EfpQ69	bt8jWo	Beecham2014npany	Evangelou2018dbp	5e-8	FALSE	Inverse variance weighted	675.7261412399257	682	0.5605373808268521

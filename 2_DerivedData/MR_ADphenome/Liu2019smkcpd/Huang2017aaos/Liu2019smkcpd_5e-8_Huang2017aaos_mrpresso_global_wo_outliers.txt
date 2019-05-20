@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-T4511w	tu8aYP	AAOS	smkcpd	5e-8	TRUE	1	48.054291088418985	0.004
+IM0f1K	waFPDZ	Huang2017aaos	Liu2019smkcpd	5e-8	TRUE	1	48.054291088418985	0.011

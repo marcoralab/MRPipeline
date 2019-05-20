@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-d9Zeml	zYKdzt	Hippocampal_Volume	Sleep_Duration	5e-8	FALSE	Inverse variance weighted (fixed effects)	76	0	-29.784831965206337	37.65713444417888	0.4289743862400981
-d9Zeml	zYKdzt	Hippocampal_Volume	Sleep_Duration	5e-8	FALSE	Weighted median	76	0	24.68054680930465	58.2189934944963	0.6716197596243438
-d9Zeml	zYKdzt	Hippocampal_Volume	Sleep_Duration	5e-8	FALSE	Weighted mode	76	0	87.23754672566247	93.29644522563964	0.352759586211709
-d9Zeml	zYKdzt	Hippocampal_Volume	Sleep_Duration	5e-8	FALSE	MR Egger	76	0	170.13153690165632	169.73363409996216	0.3194437609551672
+1kacR1	NexxtU	Hilbar2015hipv	Dashti2019slepdur	5e-8	FALSE	Inverse variance weighted (fixed effects)	76	0	-29.784831965206337	37.65713444417888	0.4289743862400981
+1kacR1	NexxtU	Hilbar2015hipv	Dashti2019slepdur	5e-8	FALSE	Weighted median	76	0	24.68054680930465	57.22826022579442	0.6662756814768982
+1kacR1	NexxtU	Hilbar2015hipv	Dashti2019slepdur	5e-8	FALSE	Weighted mode	76	0	87.23754672566247	110.06021653344122	0.43049088163417193
+1kacR1	NexxtU	Hilbar2015hipv	Dashti2019slepdur	5e-8	FALSE	MR Egger	76	0	170.13153690165632	169.73363409996216	0.3194437609551672

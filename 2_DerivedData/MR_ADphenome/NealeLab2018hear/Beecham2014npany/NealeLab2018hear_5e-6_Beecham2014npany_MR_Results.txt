@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-ClFiBk	qn6nhD	Neuritic_Plaques_Any	Hearing_Problems	5e-6	FALSE	Inverse variance weighted (fixed effects)	106	0	2.7095174055512734	1.284587407135542	0.03492291297152453
-ClFiBk	qn6nhD	Neuritic_Plaques_Any	Hearing_Problems	5e-6	FALSE	Weighted median	106	0	2.49296212355904	1.9130337410288982	0.1925249473568511
-ClFiBk	qn6nhD	Neuritic_Plaques_Any	Hearing_Problems	5e-6	FALSE	Weighted mode	106	0	6.193400633286572	4.340650492125268	0.15659378157014467
-ClFiBk	qn6nhD	Neuritic_Plaques_Any	Hearing_Problems	5e-6	FALSE	MR Egger	106	0	8.732753728949435	3.409951774757786	0.011873388392726537
+JXtplP	WVSoQ8	Beecham2014npany	NealeLab2018hear	5e-6	FALSE	Inverse variance weighted (fixed effects)	106	0	2.7095174055512734	1.284587407135542	0.03492291297152453
+JXtplP	WVSoQ8	Beecham2014npany	NealeLab2018hear	5e-6	FALSE	Weighted median	106	0	2.49296212355904	1.9287594390136498	0.1961767702166947
+JXtplP	WVSoQ8	Beecham2014npany	NealeLab2018hear	5e-6	FALSE	Weighted mode	106	0	6.193400633286572	4.292166541660759	0.15200996732588248
+JXtplP	WVSoQ8	Beecham2014npany	NealeLab2018hear	5e-6	FALSE	MR Egger	106	0	8.732753728949435	3.409951774757786	0.011873388392726537

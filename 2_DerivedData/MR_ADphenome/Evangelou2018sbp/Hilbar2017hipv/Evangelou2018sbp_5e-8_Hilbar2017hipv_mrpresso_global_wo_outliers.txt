@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-1s5qgK	VMfP52	Hippocampal_Volume	SBP	5e-8	TRUE	24	801.9168636531736	5.6e-4
+42U9a6	9oW4cN	Hilbar2017hipv	Evangelou2018sbp	5e-8	TRUE	24	801.9168636531736	6.8e-4

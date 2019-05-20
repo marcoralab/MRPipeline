@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0pjXXe	Vt0DsV	CSF_ab42	Alcohol_Dependence	5e-6	TRUE	0	NA	NA
+q6bM9e	AGSEuH	Deming2017ab42	Walters2018alcdep	5e-6	TRUE	0	NA	NA

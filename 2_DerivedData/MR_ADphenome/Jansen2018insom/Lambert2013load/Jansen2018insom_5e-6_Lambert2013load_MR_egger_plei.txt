@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-BgDqNk	SmCMDS	AD	Insomnia	5e-6	FALSE	0.011713751981883869	0.007698494947506393	0.1315481447149123	NA
+Hbq0bM	sx4HRZ	Lambert2013load	Jansen2018insom	5e-6	FALSE	0.011713751981883869	0.007698494947506393	0.1315481447149123	NA

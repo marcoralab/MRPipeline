@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-NlT0pA	b41q6N	NFT_Braak_Four	HDL	5e-8	TRUE	2	94.50425213865248	0.682
+YYrZZ4	pwZ2zz	Beecham2014braak4	Willer2013hdl	5e-8	TRUE	2	94.50425213865248	0.6849
