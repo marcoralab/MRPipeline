@@ -15,14 +15,14 @@ message("\n READING IN HARMONIZED MR DATA \n")
 mrdat.raw <- read_csv(infile)
 mrdat <- filter(mrdat.raw, mr_keep == TRUE)
 
-## Data Frame of nsnps and number of iterations 
+## Data Frame of nsnps and number of iterations
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
                      NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
 
 nsnps <- nrow(mrdat)
 SignifThreshold <- 0.05
 NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
-## Bonfernoni correction, needs a crazy amount of nbdistributions for larger nsnps. 
+## Bonfernoni correction, needs a crazy amount of nbdistributions for larger nsnps.
 # SignifThreshold <- 0.05/nsnps
 # NbDistribution <- (nsnps+100)/SignifThreshold
 
@@ -40,7 +40,7 @@ mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
                                SignifThreshold = SignifThreshold)
 
 ### ===== FORMAT DATA ===== ###
-## extract RSSobs and Pvalue 
+## extract RSSobs and Pvalue
 if("Global Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
   mrpresso.p <- mrpresso.out$`MR-PRESSO results`$`Global Test`$Pvalue
   RSSobs <- mrpresso.out$`MR-PRESSO results`$`Global Test`$RSSobs
@@ -51,23 +51,24 @@ if("Global Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
 
 ## If Global test is significant, append outlier tests to mrdat
 if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
-  outliers <- mrdat %>% 
-    bind_cols(mrpresso.out$`MR-PRESSO results`$`Outlier Test`) %>% 
-    rename(mrpresso_RSSobs = RSSobs, mrpresso_pval = Pvalue) %>% 
-    mutate(mrpresso_keep = as.numeric(str_replace_all(mrpresso_pval, pattern="<", repl="")) > SignifThreshold) %>% 
-    select(SNP, mrpresso_RSSobs, mrpresso_pval, mrpresso_keep) 
-  mrdat.out <- mrdat.raw %>% 
+  outliers <- mrdat %>%
+    bind_cols(mrpresso.out$`MR-PRESSO results`$`Outlier Test`) %>%
+    rename(mrpresso_RSSobs = RSSobs, mrpresso_pval = Pvalue) %>%
+    mutate(mrpresso_keep = as.numeric(str_replace_all(mrpresso_pval, pattern="<", repl="")) > SignifThreshold) %>%
+    select(SNP, mrpresso_RSSobs, mrpresso_pval, mrpresso_keep)
+  mrdat.out <- mrdat.raw %>%
     left_join(outliers, by = 'SNP')
 } else {
-  mrdat.out <- mrdat %>% 
-    mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA, mrpresso_keep = TRUE)
+  mrdat.out <- mrdat.raw %>%
+    mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA) %>% 
+    mutate(mrpresso_keep = ifelse(mr_keep == TRUE, NA, TRUE))
 }
 
 # Write n outliers, RSSobs and Pvalue to tibble
-mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']), 
-                       id.outcome = as.character(mrdat[1,'id.outcome']), 
-                       outcome = as.character(mrdat[1,'outcome']), 
-                       exposure = as.character(mrdat[1,'exposure']), 
+mrpresso.dat <- tibble(id.exposure = as.character(mrdat[1,'id.exposure']),
+                       id.outcome = as.character(mrdat[1,'id.outcome']),
+                       outcome = as.character(mrdat[1,'outcome']),
+                       exposure = as.character(mrdat[1,'exposure']),
                        pt = mrdat.raw %>% slice(1) %>% pull(pt),
                        outliers_removed = FALSE,
                        n_outliers = sum(mrdat.out$mrpresso_keep == F, na.rm = T),
