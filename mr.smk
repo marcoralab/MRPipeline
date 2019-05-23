@@ -17,7 +17,7 @@ Pthreshold = config['Pthreshold']
 DataOut = config['DataOut']
 DataOutput = config['DataOutput']
 
-localrules: all
+localrules: all, html_Report
 
 # Filter forbidden wild card combinations
 ## https://stackoverflow.com/questions/41185567/how-to-use-expand-in-snakemake-when-some-particular-combinations-of-wildcards-ar

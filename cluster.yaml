@@ -20,8 +20,6 @@ MRPRESSO_wo_outliers:
   time: '72:00'
   mem: 16000
   cores: 2
-html_Report:
-  partition: manda
 ssimp:
   mem: 8000
   cores: 2
