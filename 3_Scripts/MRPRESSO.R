@@ -61,7 +61,7 @@ if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
 } else {
   mrdat.out <- mrdat.raw %>%
     mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA) %>% 
-    mutate(mrpresso_keep = ifelse(mr_keep == TRUE, NA, TRUE))
+    mutate(mrpresso_keep = ifelse(mr_keep == TRUE, TRUE, NA))
 }
 
 # Write n outliers, RSSobs and Pvalue to tibble
