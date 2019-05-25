@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Hbq0bM	sx4HRZ	Lambert2013load	Jansen2018insom	5e-6	TRUE	0	NA	NA
+eu16w9	Hg798g	Lambert2013load	Jansen2018insom	5e-6	TRUE	1	101.31219527462655	0.3077

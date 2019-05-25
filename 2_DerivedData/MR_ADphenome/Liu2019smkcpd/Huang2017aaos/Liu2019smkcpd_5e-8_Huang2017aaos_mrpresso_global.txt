@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-IM0f1K	waFPDZ	Huang2017aaos	Liu2019smkcpd	5e-8	FALSE	0	48.054291088418985	0.006
+dwy4sB	bwgVwi	Huang2017aaos	Liu2019smkcpd	5e-8	FALSE	2	48.054291088418985	0.008

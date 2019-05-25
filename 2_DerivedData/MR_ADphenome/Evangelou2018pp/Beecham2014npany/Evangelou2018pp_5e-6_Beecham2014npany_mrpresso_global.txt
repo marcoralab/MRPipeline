@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BDoxV4	dPCUnh	Beecham2014npany	Evangelou2018pp	5e-6	FALSE	0	894.7572127909325	0.75706
+ZhKnlw	alO8j5	Beecham2014npany	Evangelou2018pp	5e-6	FALSE	0	896.0463087234251	0.74888

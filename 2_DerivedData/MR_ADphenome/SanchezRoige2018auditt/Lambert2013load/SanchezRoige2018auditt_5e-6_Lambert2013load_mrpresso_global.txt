@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-bJxrwd	R2wquJ	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	1	88.3787553998126	0.0036
+EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	1	88.3787553998126	0.0032

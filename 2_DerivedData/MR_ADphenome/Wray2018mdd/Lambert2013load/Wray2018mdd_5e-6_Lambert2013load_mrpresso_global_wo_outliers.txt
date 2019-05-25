@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-dNOtKu	HJGvEY	Lambert2013load	Wray2018mdd	5e-6	TRUE	0	NA	NA
+SgsncJ	CfFuxK	Lambert2013load	Wray2018mdd	5e-6	TRUE	1	58.67190091852114	0.5996

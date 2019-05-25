@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Oq2Y5v	TrnNsS	Lambert2013load	Xu2018diab	5e-6	TRUE	7	390.4231938579788	<1e-04
+sUs3wA	ZVwt4c	Lambert2013load	Xu2018diab	5e-6	TRUE	8	375.520717936151	<1e-04

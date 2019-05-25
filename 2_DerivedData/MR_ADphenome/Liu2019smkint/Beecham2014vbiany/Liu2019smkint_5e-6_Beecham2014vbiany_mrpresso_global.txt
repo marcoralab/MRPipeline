@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-5Yuzdk	7vof3J	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	0	296.6947752977148	0.61016
+xPqdxy	2lXXfs	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	0	297.0348871932044	0.6016

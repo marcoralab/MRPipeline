@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-jF91Ga	lRgSAk	Deming2017tau	Howard2018dep	5e-8	FALSE	0	13.353581928812542	0.66
+GM7NJf	IGPHle	Deming2017tau	Howard2018dep	5e-8	FALSE	0	13.353581928812542	0.666

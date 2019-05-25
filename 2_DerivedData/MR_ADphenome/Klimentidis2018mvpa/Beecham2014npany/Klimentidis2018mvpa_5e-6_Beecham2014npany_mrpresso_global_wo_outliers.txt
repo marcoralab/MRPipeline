@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-1fa3cE	26Px1P	Beecham2014npany	Klimentidis2018mvpa	5e-6	TRUE	1	118.47890174193962	0.1607
+cqWTxC	RbVJeS	Beecham2014npany	Klimentidis2018mvpa	5e-6	TRUE	1	124.70847406933126	0.0805

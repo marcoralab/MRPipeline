@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-6AdzB2	joNBuz	Deming2017tau	NealeLab2018hear	5e-6	FALSE	0	84.17675564999965	0.4156
+jvu1oH	dFnsAz	Deming2017tau	NealeLab2018hear	5e-6	FALSE	0	84.17675564999965	0.4116

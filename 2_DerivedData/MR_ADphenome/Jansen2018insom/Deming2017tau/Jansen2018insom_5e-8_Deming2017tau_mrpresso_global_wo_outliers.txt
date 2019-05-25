@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ArWBgi	k4K91d	Deming2017tau	Jansen2018insom	5e-8	TRUE	0	NA	NA
+n5zLh9	lBQmyl	Deming2017tau	Jansen2018insom	5e-8	TRUE	0	NA	NA

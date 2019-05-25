@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-6oSMZJ	5q0hoq	Deming2017ptau	Walters2018alcdep	5e-6	TRUE	0	NA	NA
+aNona1	COd22O	Deming2017ptau	Walters2018alcdep	5e-6	TRUE	1	13.468078914437886	0.573

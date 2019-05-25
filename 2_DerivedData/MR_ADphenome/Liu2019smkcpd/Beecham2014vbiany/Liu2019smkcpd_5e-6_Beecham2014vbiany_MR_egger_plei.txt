@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-MIKUyy	75n7Ah	Beecham2014vbiany	Liu2019smkcpd	5e-6	FALSE	7.747384234448329e-4	0.014428299331145993	0.9573035665634436	NA
+CA7f75	LcPu4T	Beecham2014vbiany	Liu2019smkcpd	5e-6	FALSE	0.009593999747460048	0.014428299331145993	0.5078869453130505	NA

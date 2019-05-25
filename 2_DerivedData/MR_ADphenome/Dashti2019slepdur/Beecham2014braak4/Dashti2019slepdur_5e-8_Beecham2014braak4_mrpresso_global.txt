@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-fVsrq3	rI8ADx	Beecham2014braak4	Dashti2019slepdur	5e-8	FALSE	0	59.40414311566666	0.9636
+dayr3F	jnq538	Beecham2014braak4	Dashti2019slepdur	5e-8	FALSE	0	59.40414311566666	0.9627

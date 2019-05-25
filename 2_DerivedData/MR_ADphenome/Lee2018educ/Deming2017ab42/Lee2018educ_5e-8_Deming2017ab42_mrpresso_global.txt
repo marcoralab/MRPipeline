@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-N2GETt	CPbtWc	Deming2017ab42	Lee2018educ	5e-8	FALSE	0	410.28075823499574	0.217
+tY3CwJ	ZzKqq6	Deming2017ab42	Lee2018educ	5e-8	FALSE	0	410.28075823499574	0.2164

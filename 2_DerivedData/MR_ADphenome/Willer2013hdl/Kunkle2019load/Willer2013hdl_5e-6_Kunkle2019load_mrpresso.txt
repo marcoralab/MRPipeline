@@ -1,10 +1,10 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate         Sd     T-stat
 1 beta.exposure               Raw     -0.18354512 0.14881218 -1.2334012
-2 beta.exposure Outlier-corrected     -0.02338731 0.04468416 -0.5233915
-   P-value
-1 0.219191
-2 0.601426
+2 beta.exposure Outlier-corrected     -0.01773359 0.04354329 -0.4072634
+    P-value
+1 0.2191910
+2 0.6843623
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -36,12 +36,12 @@ $`MR-PRESSO results`$`Outlier Test`
 17  7.477746e-05       1
 18  7.314540e-03       1
 19  7.862187e-06       1
-20  4.138523e-03  0.7425
-21  4.073904e-03   0.759
-22  1.985796e-03  0.4455
+20  4.138523e-03   0.594
+21  4.073904e-03  0.7425
+22  1.985796e-03   0.462
 23  4.471545e-07       1
 24  1.188887e-04       1
-25  5.798767e-03  0.0825
+25  5.798767e-03  0.0495
 26  5.251350e-04       1
 27  7.890532e-04       1
 28  2.703818e-03       1
@@ -73,7 +73,7 @@ $`MR-PRESSO results`$`Outlier Test`
 54  8.585924e-07       1
 55  8.877841e-05       1
 56  1.094013e-03       1
-57  4.723516e-03  0.0165
+57  4.723516e-03 <0.0165
 58  1.616558e-04       1
 59  1.085769e-03       1
 60  1.748038e-05       1
@@ -134,7 +134,7 @@ $`MR-PRESSO results`$`Outlier Test`
 115 1.062354e-04       1
 116 1.923236e-04       1
 117 1.742122e-05       1
-118 1.671571e-03       1
+118 1.671571e-03   0.957
 119 2.594641e-05       1
 120 1.395781e-04       1
 121 1.058288e-04       1
@@ -173,7 +173,7 @@ $`MR-PRESSO results`$`Outlier Test`
 154 4.424073e-03       1
 155 1.999379e-06       1
 156 2.511168e-05       1
-157 4.830047e-03  0.3465
+157 4.830047e-03  0.3135
 158 9.745336e-04       1
 159 4.516278e-04       1
 160 6.100259e-04       1
@@ -185,11 +185,11 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 15 57 68 76
+[1] 15 25 57 68 76
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-    -684.8064 
+    -935.0139 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
 [1] "<1e-04"

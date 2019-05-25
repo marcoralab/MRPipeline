@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-EK4zPh	TZpQIe	Beecham2014npany	SanchezRoige2018auditt	5e-6	FALSE	0	65.20266499307502	0.2766
+JOXxFx	KJ7zv9	Beecham2014npany	SanchezRoige2018auditt	5e-6	FALSE	0	65.28882873063	0.2586

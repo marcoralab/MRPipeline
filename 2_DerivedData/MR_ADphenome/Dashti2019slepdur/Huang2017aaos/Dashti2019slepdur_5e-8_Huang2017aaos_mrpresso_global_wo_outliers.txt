@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-jViE5T	Pyq07B	Huang2017aaos	Dashti2019slepdur	5e-8	TRUE	4	111.70586561099702	0.0141
+LBGOg5	JHLIxZ	Huang2017aaos	Dashti2019slepdur	5e-8	TRUE	4	111.70586561099702	0.0164

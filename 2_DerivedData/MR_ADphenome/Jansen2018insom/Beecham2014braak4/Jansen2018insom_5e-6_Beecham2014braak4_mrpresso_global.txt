@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-puNS2B	XrEoF6	Beecham2014braak4	Jansen2018insom	5e-6	FALSE	0	105.17056893960628	0.2316
+bQhkYP	ydznEg	Beecham2014braak4	Jansen2018insom	5e-6	FALSE	0	105.17056893960628	0.2207

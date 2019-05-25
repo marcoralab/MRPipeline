@@ -1,10 +1,10 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate          Sd     T-stat
 1 beta.exposure               Raw    -0.001515671 0.002541961 -0.5962603
-2 beta.exposure Outlier-corrected              NA          NA         NA
+2 beta.exposure Outlier-corrected    -0.001794622 0.002518700 -0.7125189
     P-value
 1 0.5511933
-2        NA
+2 0.4763802
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 855.8081
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.00016
+[1] 4e-05
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -39,7 +39,7 @@ $`MR-PRESSO results`$`Outlier Test`
 20  3.915332e-05       1
 21  4.929224e-07       1
 22  1.429723e-05       1
-23  2.783188e-03 0.05632
+23  2.783188e-03 0.02816
 24  8.265886e-05       1
 25  7.274136e-05       1
 26  1.710879e-05       1
@@ -116,7 +116,7 @@ $`MR-PRESSO results`$`Outlier Test`
 97  6.474266e-05       1
 98  2.029488e-04       1
 99  5.123039e-05       1
-100 6.445969e-03 0.19712
+100 6.445969e-03  0.4224
 101 2.689096e-04       1
 102 1.301332e-04       1
 103 9.608180e-04       1
@@ -249,7 +249,7 @@ $`MR-PRESSO results`$`Outlier Test`
 230 3.490477e-05       1
 231 4.577643e-03       1
 232 2.608492e-04       1
-233 8.034938e-04 0.36608
+233 8.034938e-04 0.64768
 234 2.149708e-04       1
 235 3.031261e-05       1
 236 8.043589e-04       1
@@ -609,7 +609,7 @@ $`MR-PRESSO results`$`Outlier Test`
 590 1.917130e-04       1
 591 2.151388e-05       1
 592 1.656158e-03       1
-593 1.422577e-03  0.1408
+593 1.422577e-03 0.16896
 594 5.658824e-05       1
 595 1.447938e-04       1
 596 5.326677e-04       1
@@ -724,13 +724,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] "No significant outliers"
+[1] 23
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
-[1] NA
+beta.exposure 
+     15.54372 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] NA
+[1] 0.92568
 
 
 

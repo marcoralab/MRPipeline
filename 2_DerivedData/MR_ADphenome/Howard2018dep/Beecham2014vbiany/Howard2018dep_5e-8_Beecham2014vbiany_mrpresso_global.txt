@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-pNYc69	38ypvr	Beecham2014vbiany	Howard2018dep	5e-8	FALSE	0	16.111545073313	0.496
+EhUZNK	NCeASh	Beecham2014vbiany	Howard2018dep	5e-8	FALSE	0	16.172551463184373	0.497
