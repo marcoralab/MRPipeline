@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0FjHBw	RI9qZl	Huang2017aaos	Jansen2018insom	5e-8	FALSE	0	20.685769209568125	0.186
+I22Go9	fGRgQP	Huang2017aaos	Jansen2018insom	5e-8	FALSE	0	20.685769209568125	0.164

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-a9Sx83	AEA6G6	Beecham2014npany	Jansen2018insom	5e-6	TRUE	1	131.08715757270468	0.0112
+hyAF4q	ogdODe	Beecham2014npany	Jansen2018insom	5e-6	TRUE	1	131.324512729244	0.0125

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-KPY0rx	3b7mnh	Hilbar2017hipv	NealeLab2018hear	5e-6	TRUE	0	NA	NA
+ySyvNm	wrAdAm	Hilbar2017hipv	NealeLab2018hear	5e-6	TRUE	3	104.63886328046426	0.6555

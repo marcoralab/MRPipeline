@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ieXzO1	XE5dJL	Deming2017tau	Walters2018alcdep	5e-6	FALSE	0	18.695400064776003	0.196
+ElVe6c	PbM34g	Deming2017tau	Walters2018alcdep	5e-6	FALSE	0	18.695400064776003	0.202

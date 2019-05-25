@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kf6kZP	hKutDX	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	TRUE	2	139.53368553868512	0.0164
+D7GoKe	lRZfDn	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	TRUE	2	139.53368553868512	0.0161

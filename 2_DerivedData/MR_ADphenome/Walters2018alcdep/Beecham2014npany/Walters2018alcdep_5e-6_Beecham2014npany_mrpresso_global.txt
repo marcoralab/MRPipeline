@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ATaEKj	dPrkZg	Beecham2014npany	Walters2018alcdep	5e-6	FALSE	0	15.627084009655878	0.57
+0AkVhe	5RKl44	Beecham2014npany	Walters2018alcdep	5e-6	FALSE	0	15.165716913829026	0.573

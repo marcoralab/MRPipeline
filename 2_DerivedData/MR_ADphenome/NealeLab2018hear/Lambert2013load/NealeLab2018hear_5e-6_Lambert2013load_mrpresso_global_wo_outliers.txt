@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-IOuWwN	BweaRi	Lambert2013load	NealeLab2018hear	5e-6	TRUE	0	NA	NA
+JreZVz	KaMSnP	Lambert2013load	NealeLab2018hear	5e-6	TRUE	3	110.81368557408355	0.2232

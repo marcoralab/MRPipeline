@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BLgURX	LGg5K1	Deming2017tau	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA
+HTwDYz	8t5rng	Deming2017tau	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA

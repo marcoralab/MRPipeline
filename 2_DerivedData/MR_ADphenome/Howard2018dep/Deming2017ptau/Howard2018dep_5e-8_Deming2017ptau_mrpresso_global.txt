@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Y94Ksv	8uDkOQ	Deming2017ptau	Howard2018dep	5e-8	FALSE	0	11.022442436969467	0.792
+sXBpUB	IV3ARN	Deming2017ptau	Howard2018dep	5e-8	FALSE	0	11.022442436969467	0.781

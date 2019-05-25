@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-czcaZY	t8wlQ7	Lambert2013load	Willer2013ldl	5e-8	TRUE	6	107.93927166681098	0.0114
+NHPtSK	qx43fR	Lambert2013load	Willer2013ldl	5e-8	TRUE	5	119.24435347375608	0.0027

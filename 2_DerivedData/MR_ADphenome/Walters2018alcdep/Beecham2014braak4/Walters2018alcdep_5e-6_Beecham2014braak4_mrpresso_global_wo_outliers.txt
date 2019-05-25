@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-fyHmoC	K7DX4m	Beecham2014braak4	Walters2018alcdep	5e-6	TRUE	1	31.854106233204043	0.024
+aeiaX3	0UzlTM	Beecham2014braak4	Walters2018alcdep	5e-6	TRUE	1	31.854106233204043	0.025

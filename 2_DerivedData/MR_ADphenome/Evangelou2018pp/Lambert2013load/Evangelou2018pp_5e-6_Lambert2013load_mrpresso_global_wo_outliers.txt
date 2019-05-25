@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-WTkzQo	25YGVR	Lambert2013load	Evangelou2018pp	5e-6	TRUE	54	1145.4134065557453	<2e-05
+9b2Qtb	igPYJ4	Lambert2013load	Evangelou2018pp	5e-6	TRUE	54	1145.4134065557453	<2e-05
