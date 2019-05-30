@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qCwWIY	3pr0SQ	Beecham2014braak4	Willer2013tg	5e-8	FALSE	2	115.24287832834682	2e-4
+TRAHie	vEo2om	Beecham2014braak4	Willer2013tg	5e-8	FALSE	2	114.63412543237604	<2e-04

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-eWYWxi	tWV95H	Beecham2014braak4	Day2018sociso	5e-6	TRUE	2	79.24336303028237	0.8068
+BZ552l	ZnC7wm	Beecham2014braak4	Day2018sociso	5e-6	TRUE	2	79.97841338133338	0.7879
