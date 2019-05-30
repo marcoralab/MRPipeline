@@ -64,10 +64,10 @@ server <- function(input, output) {
   studies <- eventReactive(input$go, {
     input_exposure <- input$exposure
     input_outcome <- input$outcome
-    input_outcome <- if(input_exposure %nin% c('alccliu', 'audit', 'alcd', 'educ') & input_outcome %in% 'load'){
-      'loadKunkle'
-    } else if(input_exposure %in% c('alccliu', 'audit', 'alcd', 'educ') & input_outcome %in% 'hipv') {
-      'hipv2015'
+    input_outcome <- if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & input_outcome %in% 'Lambert2019load'){
+      'Kunkle2019load'
+    } else if(input_exposure %in% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & input_outcome %in% 'Hilbar2017hipv') {
+      'Hilbar2015hipv'
     } else {
       input_outcome
     }
@@ -76,7 +76,7 @@ server <- function(input, output) {
       filter(code %in% c(input_exposure, input_outcome))
     out
   })
-  
+ 
   ## Extract MR-PRESSO global results
   mr_PressoGloabl <- eventReactive(input$go, {
     input_exposure <- input$exposure
@@ -339,45 +339,45 @@ server <- function(input, output) {
                                   
                                   # Sidebar panel for inputs ----
                                   sidebarPanel(
-                                    
+
                                     # Input: Dropdown for exposure ----
                                     selectInput("exposure", label = h3("Select Exposure"), 
-                                                choices = list("Alcohol Consumption" = "alccliu", 
-                                                               "Alcohol Dependence" = "alcd", 
-                                                               "AUDIT" = "audit", 
-                                                               "Smoking Initiation" = "smki", 
-                                                               "Cigarettes per Day" = "smkcpd", 
-                                                               "Diastolic Blood Pressure" = "dbp", 
-                                                               "Depressive Symptoms" = "dep", 
-                                                               'BMI' = "bmi", 
-                                                               "Type 2 Diabetes" = "diab", 
-                                                               "Educational Attainment" = "educ", 
-                                                               "Oily Fish Intake" = "oilfish",
-                                                               "High-density lipoproteins" = "hdl", 
-                                                               "Hearing Problems" = "hear", 
-                                                               "Insomnia Symptoms" = "insom", 
-                                                               "Low-density lipoproteins" = "ldl", 
-                                                               "Major Depressive Disorder" = "mdd", 
-                                                               "Moderate-to-vigorous PA" = "mvpa",
-                                                               "Pulse Pressure" = "pp", 
-                                                               "Systolic Blood Pressure" = "sbp", 
-                                                               "Social Isolation" = "sociso", 
-                                                               "Sleep Duration" = "sleepDashti",
-                                                               "Total Cholesterol" = "tc", 
-                                                               "Triglycerides" = "trig"), 
-                                                selected = 'alccliu'),
+                                                choices = list("Alcohol Consumption" = "Liu2019drnkwk", 
+                                                               "Alcohol Dependence" = "Walters2018alcdep", 
+                                                               "AUDIT" = "SanchezRoige2018auditt", 
+                                                               "Smoking Initiation" = "Liu2019smkint", 
+                                                               "Cigarettes per Day" = "Liu2019smkcpd", 
+                                                               "Diastolic Blood Pressure" = "Evangelou2018dbp", 
+                                                               "Depressive Symptoms" = "Howard2018dep", 
+                                                               'BMI' = "Yengo2018bmi", 
+                                                               "Type 2 Diabetes" = "Xu2018diab", 
+                                                               "Educational Attainment" = "Lee2018educ", 
+                                                               "Oily Fish Intake" = "NealeLab2018oilfish",
+                                                               "High-density lipoproteins" = "Willer2013hdl", 
+                                                               "Hearing Problems" = "NealeLab2018hear", 
+                                                               "Insomnia Symptoms" = "Jansen2018insom", 
+                                                               "Low-density lipoproteins" = "Willer2013ldl", 
+                                                               "Major Depressive Disorder" = "Wray2018mdd", 
+                                                               "Moderate-to-vigorous PA" = "Klimentidis2018mvpa",
+                                                               "Pulse Pressure" = "Evangelou2018pp", 
+                                                               "Systolic Blood Pressure" = "Evangelou2018sbp", 
+                                                               "Social Isolation" = "Day2018sociso", 
+                                                               "Sleep Duration" = "Dashti2019slepdur",
+                                                               "Total Cholesterol" = "Willer2013tc", 
+                                                               "Triglycerides" = "Willer2013tg"), 
+                                                selected = 'Liu2019drnkwk'),
                                     
                                     # Input: Dropdown for outcome ----
                                     selectInput("outcome", label = h3("Select Outcome"), 
-                                                choices = list("LOAD" = "load", 
-                                                               "AAOS" = "aaos", 
-                                                               "CSF Ab42" = "ab42", 
-                                                               "CSF Tau" = "tau", 
-                                                               "CSF Ptau" = "ptau", 
-                                                               "Hippocampul Volume" = "hipv",
-                                                               "Neuritic Plaques" = "npany",
-                                                               "Neurofibrillary Tangles" = "nft4",
-                                                               "Vascular Brain Injury" = "vbiany"), 
+                                                choices = list("LOAD" = "Lambert2013load", 
+                                                               "AAOS" = "Huang2017aaos", 
+                                                               "CSF Ab42" = "Deming2017ab42", 
+                                                               "CSF Tau" = "Deming2017tau", 
+                                                               "CSF Ptau" = "Deming2017ptau", 
+                                                               "Hippocampul Volume" = "Hilbar2017hipv",
+                                                               "Neuritic Plaques" = "Beecham2014npany",
+                                                               "Neurofibrillary Tangles" = "Beecham2014braak4",
+                                                               "Vascular Brain Injury" = "Beecham2014vbiany"), 
                                                 selected = 'load'), 
                                     
                                     radioButtons("pt", label = h3("Pvalue Threshold"),
