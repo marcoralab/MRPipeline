@@ -280,9 +280,9 @@ frames <- lapply(1:nrow(frames), function(x){
 p1 <- ggplot(dat.plot) + 
   geom_raster(aes(x = exposure.name, y = outcome.name, fill = z)) + 
   geom_text(data = dat.plot, size = 4, aes(label = Signif, x = exposure.name, y = outcome.name)) +
-  #scale_fill_gradient2(low="steelblue", high="firebrick", mid = "white", na.value = "grey50") + 
+  scale_fill_gradient2(low="steelblue", high="firebrick", mid = "white", na.value = "grey50") + 
   #scale_fill_gradient2(low="#2b83ba", high="#d7191c", mid = "#ffffbf", na.value = "grey50") + 
-  scale_fill_gradient2(low="#1a9641", high="#d7191c", mid = "#ffffbf", na.value = "grey50") + 
+  #scale_fill_gradient2(low="#1a9641", high="#d7191c", mid = "#ffffbf", na.value = "grey50") + 
   coord_equal() + theme_classic() +
   geom_vline(xintercept=seq(0.5, 23.5, 1),color="white") +
   geom_hline(yintercept=seq(0.5, 11.5, 1),color="white") +
@@ -355,8 +355,12 @@ out.final <- out %>%
 
 write_csv(out.final, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/Table_2.csv')
 
-##---------------------------------------------##
-# Writen Report 
+##--------------------- Writen Report  ------------------------##
+
+## Summary of tests
+message('We conducted a total of ', nrow(mrresults.methods_presso), ' tests') 
+message('We observed ', nrow(filter(out.final, qval < 0.05)), ' tests that were significant at an FDR < 0.05') 
+message('Of these ', nrow(filter(out.final, qval < 0.05)), ' significant tests, ', nrow(filter(out.final, qval < 0.05 & pass == TRUE)), ' exposure-outcome pairs showed either no evidence of horizontal pleiotropy, or in the presence of horizontal pleiotropy the additional MR sensitivity analysis was significant')
 
 ## Generate Odds ratios
 res_odds <- mr_best %>% 
@@ -367,10 +371,12 @@ res_odds <- mr_best %>%
   filter(pass == TRUE) %>%
   select(-nsnp, -n_outliers, -Signif, -pass, -RSSobs, -egger_intercept, -egger_se) %>%
   generate_odds_ratios(.) %>% 
-  mutate(out = ifelse(outcome %in% c('Lambert2013load', 'Huang2017aaos', 'Beecham2014npany', 'Beecham2014braak4', 'Beecham2014vbiany'), 
+  mutate(out = ifelse(outcome %in% c('Lambert2013load', 'Kunkle2019load', 'Huang2017aaos', 'Beecham2014npany', 'Beecham2014braak4', 'Beecham2014vbiany'), 
                       paste0(round(or, 2), ' [', round(or_lci95, 2), ', ', round(or_uci95, 2), ']'),
                       paste0(round(b, 2), ' [', round(lo_ci, 2), ', ', round(up_ci, 2), ']'))) %>% 
-  print(n = Inf)
+  print(n = Inf) 
+
+res_odds %>% select(outcome, exposure, pt, outliers_removed, b, se, qval, lo_ci, up_ci, or, or_lci95, or_uci95, out) %>% print(n = Inf)
 
 mr_senseitivy <- function(x){
   senesetivy_p <- select(x, MR_Egger_MR.pval, Weighted_median_MR.pval, Weighted_mode_MR.pval)
@@ -460,8 +466,8 @@ written_res <- lapply(1:nrow(res_odds), function(x){
                               '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
   }
   
-})
-
+}) %>% unlist()
+written_res
 
 
 
