@@ -12,17 +12,28 @@ Pthreshold: ['5e-8', '5e-6']
 
 ## Forbidden wildcard combinations
 missing: [
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"}
  ]
 
 ## LOAD as outcome
@@ -45,6 +56,26 @@ EXPOSURES:
       N: N
       TRAIT: TRAIT
   -
+    CODE: AholaOlli2018tnfa
+    NAME: 'TNFa'
+    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/AholaOlli2018tnfa.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: AholaOlli2018tnfb
+    NAME: 'TNFb'
+    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/AholaOlli2018tnfb.chrall.CPRA_b37.tsv.gz
     CODE: Sliz2019tnfa
     NAME: 'TNFa'
     FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/Sliz2019tnfa.chrall.CPRA_b37.tsv.gz
