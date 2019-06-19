@@ -44,6 +44,23 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
+  -
+    CODE: Sliz2019tnfa
+    NAME: 'TNFa'
+    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/Sliz2019tnfa.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
 
 OUTCOMES:
   -
