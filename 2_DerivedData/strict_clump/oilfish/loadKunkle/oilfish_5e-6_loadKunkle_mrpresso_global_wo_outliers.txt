@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-rpX6yS	PqR3TB	loadKunkle	oilfish	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-YunUZc	XkrwCj	aaos	bmi	2	2123.0529511481523	<1.33333333333333e-05

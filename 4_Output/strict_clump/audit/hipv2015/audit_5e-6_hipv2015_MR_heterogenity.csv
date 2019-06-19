@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-yt83C6,PbPcxz,hipv2015,audit,MR Egger,49.034226609820365,52,0.591261802342244,2019-04-04
-yt83C6,PbPcxz,hipv2015,audit,Inverse variance weighted,49.70237980883781,53,0.6033535207548969,2019-04-04

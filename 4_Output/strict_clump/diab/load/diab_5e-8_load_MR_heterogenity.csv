@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-BIOdX5,5BKuCn,load,diab,MR Egger,198.03022786779144,129,8.960342234866184e-5,2019-04-04
-BIOdX5,5BKuCn,load,diab,Inverse variance weighted,198.6116702878689,130,1.0115142548177305e-4,2019-04-04

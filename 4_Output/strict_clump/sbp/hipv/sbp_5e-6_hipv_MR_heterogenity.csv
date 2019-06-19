@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-tabWSn,mafvit,hipv,sbp,MR Egger,1334.051128832229,1134,3.301791268791294e-5,2019-04-04
-tabWSn,mafvit,hipv,sbp,Inverse variance weighted,1335.0407772908216,1135,3.3265654922844825e-5,2019-04-04

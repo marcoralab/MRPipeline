@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-bOk9Ky	FynkSv	nft4	cpd	0	2.229862878130984	0.841

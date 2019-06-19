@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-tMlmEY	2L5WQO	hipv2015	sbp	0	695.8950292727791	0.28076

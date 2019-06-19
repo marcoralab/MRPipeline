@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ORQevb	USGDOv	nft4	hdl	1	167.86002997775833	0.3958

@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ocCwDr,VuyUSQ,loadKunkle,sleepdoherty,MR Egger,27.79042421003493,11,0.003485326782918926,2019-04-04
-ocCwDr,VuyUSQ,loadKunkle,sleepdoherty,Inverse variance weighted,28.48578944641759,12,0.004694164021770187,2019-04-04

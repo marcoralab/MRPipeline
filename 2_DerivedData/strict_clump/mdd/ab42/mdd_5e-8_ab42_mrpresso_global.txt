@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-OP6BWM	ITdPEa	ab42	mdd	0	45.48154576555836	0.2584

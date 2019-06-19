@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-lncFEE	eEkBNN	tau	trig	0	133.5306334986654	0.0934

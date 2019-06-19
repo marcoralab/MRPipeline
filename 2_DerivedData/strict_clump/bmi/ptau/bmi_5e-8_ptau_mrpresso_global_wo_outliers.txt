@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-T10M0f	AXys4D	ptau	bmi	1	870.8160617925452	0.37964

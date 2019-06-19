@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-WAPW4X	zHeOPW	tau	hdl	1	103.56581902275384	0.3072

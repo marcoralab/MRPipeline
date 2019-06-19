@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-44a4t3	JmvHQw	hipv	mdd	0	163.66890775850308	0.3618

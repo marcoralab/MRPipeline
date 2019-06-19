@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-zcKgDa,qxfjBr,loadKunkle,pp,MR Egger,1020.6359537583218,560,2.650335668466434e-29,2019-04-04
-zcKgDa,qxfjBr,loadKunkle,pp,Inverse variance weighted,1025.6746127433123,561,1.1373172831789347e-29,2019-04-04

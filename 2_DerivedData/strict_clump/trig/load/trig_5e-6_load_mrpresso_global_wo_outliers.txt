@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-JvnGad	Mer7j9	load	trig	4	150.96137821930589	0.0119

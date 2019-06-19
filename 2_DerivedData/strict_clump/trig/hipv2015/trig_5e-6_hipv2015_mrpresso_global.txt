@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-swBoqh	kaosJV	hipv2015	trig	1	160.06854005625377	0.0065

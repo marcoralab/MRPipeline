@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-cBP1kI	uzkMWA	vbiany	dep	0	106.20092523042678	0.7927

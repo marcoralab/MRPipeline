@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-e2s44v	e3i9tv	ab42	trig	1	139.9323180457661	<2e-04

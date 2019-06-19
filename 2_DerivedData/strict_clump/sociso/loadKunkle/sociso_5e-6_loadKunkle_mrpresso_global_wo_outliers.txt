@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-uSchID	SrIyAR	loadKunkle	sociso	1	112.5600838215348	0.1483

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-lHStep	i7aDsl	npany	insom	0	132.78031769200138	0.0101

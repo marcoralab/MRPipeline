@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-oGAVTA	fdoaJ3	hipv	tc	0	132.16107722591659	0.0127

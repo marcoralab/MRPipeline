@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-crXoIS,fXTf2s,tau,audit,MR Egger,43.00594486674917,38,0.26547833753105815,2019-04-04
-crXoIS,fXTf2s,tau,audit,Inverse variance weighted,43.78945222180468,39,0.27545367229899087,2019-04-04

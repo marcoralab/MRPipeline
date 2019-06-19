@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zxL4rq	friaRo	ptau	bmi	1	1628.7669666689274	0.0012133333333333334

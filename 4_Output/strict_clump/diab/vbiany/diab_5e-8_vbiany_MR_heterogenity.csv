@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-AXxwWX,SIP2GM,vbiany,diab,MR Egger,104.73997873301893,128,0.9344990783744445,2019-04-04
-AXxwWX,SIP2GM,vbiany,diab,Inverse variance weighted,105.08492197412912,129,0.9394459631762566,2019-04-04

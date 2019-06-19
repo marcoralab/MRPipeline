@@ -1,2 +1,2 @@
-id.exposure,id.outcome,outcome,exposure,egger_intercept,se,pval,date
-g5FULa,he1r9B,loadKunkle,audit,0.007595079179837294,0.005369361243415452,0.16177145041857466,2019-03-04
+id.exposure,id.outcome,outcome,exposure,method,egger_intercept,se,pval,date
+ZIgHrH,yka8xm,loadKunkle,audit,mrpresso,NA,NA,NA,2019-04-24

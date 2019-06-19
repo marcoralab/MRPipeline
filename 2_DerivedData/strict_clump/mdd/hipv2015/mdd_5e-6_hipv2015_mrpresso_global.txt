@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-FyffB4	liAboL	hipv2015	mdd	0	153.76312872858307	0.5128

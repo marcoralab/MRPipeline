@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-bxe2bg,BCS5dD,loadKunkle,insom,Inverse variance weighted (fixed effects),101,-0.03428894945907006,0.05574562414101801,0.5384908611555149,2019-04-04
-bxe2bg,BCS5dD,loadKunkle,insom,Weighted median,101,-0.11612412985008878,0.08345166507556505,0.1640697277638647,2019-04-04
-bxe2bg,BCS5dD,loadKunkle,insom,Weighted mode,101,-0.1595122661163586,0.1894963841299932,0.401925583062138,2019-04-04
-bxe2bg,BCS5dD,loadKunkle,insom,MR Egger,101,-0.34430214723846425,0.18459720541931254,0.0651214754747052,2019-04-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-eLC7un	N7fUZV	hipv	sleepdoherty	0	NA	NA

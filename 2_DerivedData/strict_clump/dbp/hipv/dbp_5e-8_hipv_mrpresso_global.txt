@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Vo0a1n	vcEVDO	hipv	dbp	1	868.9879124093198	4e-5

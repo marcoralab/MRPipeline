@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-cX67ci	frp36R	tau	tc	0	112.44633139717088	0.0993

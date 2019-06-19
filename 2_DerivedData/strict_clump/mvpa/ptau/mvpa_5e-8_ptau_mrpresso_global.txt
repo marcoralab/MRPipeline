@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-p6TMtH	c66AZX	ptau	mvpa	1	159.9555287784085	<0.001

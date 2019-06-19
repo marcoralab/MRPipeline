@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ogQQIZ,3k4AjY,ab42,oilfish,MR Egger,207.8786945783638,133,3.53782837250723e-5,2019-04-04
-ogQQIZ,3k4AjY,ab42,oilfish,Inverse variance weighted,207.89159338663887,134,4.473347731280428e-5,2019-04-04

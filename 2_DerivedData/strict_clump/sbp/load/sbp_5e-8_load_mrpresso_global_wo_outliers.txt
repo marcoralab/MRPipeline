@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-T8eW77	PR8LRL	load	sbp	2	884.2780227352757	<4e-05

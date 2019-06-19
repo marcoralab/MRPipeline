@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-bvsbfG	lY4i0l	aaos	ldl	1	160.4770064041658	0.0252

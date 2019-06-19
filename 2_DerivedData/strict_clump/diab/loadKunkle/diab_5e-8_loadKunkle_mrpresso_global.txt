@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-LkNeqC	EnT8xx	loadKunkle	diab	1	217.7111926316236	<1e-04

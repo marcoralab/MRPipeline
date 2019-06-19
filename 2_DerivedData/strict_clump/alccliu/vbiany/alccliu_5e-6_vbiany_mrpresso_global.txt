@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EIyfcm	DC1oz7	vbiany	alccliu	0	159.15934292673856	0.3993

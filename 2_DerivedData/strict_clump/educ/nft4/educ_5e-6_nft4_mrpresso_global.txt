@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-QAzY2Y	AYdq8g	nft4	educ	0	1308.9592542187281	0.3806

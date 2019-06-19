@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-PekNNu	e9dSZF	load	pp	3	849.8174727528127	<4e-05

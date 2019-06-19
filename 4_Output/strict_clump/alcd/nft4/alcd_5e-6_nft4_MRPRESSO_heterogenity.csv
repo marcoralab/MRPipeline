@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lgo3BI,EUgLn5,nft4,alcd,MR Egger,20.091311549927745,13,0.0929566939598604,2019-04-04
-lgo3BI,EUgLn5,nft4,alcd,Inverse variance weighted,20.44321571380319,14,0.11677561516573227,2019-04-04

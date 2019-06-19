@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-WtAHKP,WiZe6r,vbiany,audit,MR Egger,54.82018866808722,51,0.33182736236344973,2019-04-04
-WtAHKP,WiZe6r,vbiany,audit,Inverse variance weighted,57.02298952728569,52,0.29375579181418876,2019-04-04

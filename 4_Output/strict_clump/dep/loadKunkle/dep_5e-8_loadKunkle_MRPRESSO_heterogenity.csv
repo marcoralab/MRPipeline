@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-muSfBL,gov7yr,loadKunkle,dep,MR Egger,15.100955052899455,13,0.3010928462992682,2019-04-04
-muSfBL,gov7yr,loadKunkle,dep,Inverse variance weighted,17.395665622621703,14,0.23570523989839817,2019-04-04

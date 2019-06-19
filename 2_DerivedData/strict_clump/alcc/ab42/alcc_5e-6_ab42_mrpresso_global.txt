@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-wBydJj	7GqfPH	ab42	alcc	0	32.06134187106754	0.6072

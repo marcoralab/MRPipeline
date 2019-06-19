@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-SK6Ayh,usod4k,tau,sbp,MR Egger,669.8580579919953,581,0.006142117261145812,2019-04-04
-SK6Ayh,usod4k,tau,sbp,Inverse variance weighted,671.4155909198306,582,0.005921615957208786,2019-04-04

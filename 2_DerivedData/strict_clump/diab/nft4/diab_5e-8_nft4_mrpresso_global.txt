@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-Ki37Bt	MOwZrX	nft4	diab	0	133.09117711751762	0.4836

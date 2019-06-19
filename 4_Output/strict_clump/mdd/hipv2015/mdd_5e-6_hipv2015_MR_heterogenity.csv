@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-FyffB4,liAboL,hipv2015,mdd,MR Egger,142.8260988983513,144,0.5119816982359415,2019-04-04
-FyffB4,liAboL,hipv2015,mdd,Inverse variance weighted,144.3376935867848,145,0.49991044393697637,2019-04-04

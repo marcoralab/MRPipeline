@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-qErcTp	MfAbep	hipv2015	smkcpd	0	NA	NA

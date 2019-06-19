@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-H5OZWb	WVO9Tb	load	alccliu	2	105.12985768993435	0.0048
+ZhlaPS	dpj1mA	load	alccliu	1	58.42119339414795	0.0578

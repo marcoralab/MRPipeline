@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Svcmui,dzW3k0,hipv,insom,MR Egger,114.8834633537714,94,0.07067540200708998,2019-04-04
-Svcmui,dzW3k0,hipv,insom,Inverse variance weighted,117.2357555468202,95,0.060617600530980247,2019-04-04

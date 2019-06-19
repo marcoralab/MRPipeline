@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-1LlhSC,CClWuv,tau,oilfish,MR Egger,33.81118561458556,39,0.7051805029643916,2019-04-04
-1LlhSC,CClWuv,tau,oilfish,Inverse variance weighted,33.86735904863586,40,0.741696518276639,2019-04-04

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EwABJf	seS70G	tau	smkcpd	0	20.44131094819521	0.409

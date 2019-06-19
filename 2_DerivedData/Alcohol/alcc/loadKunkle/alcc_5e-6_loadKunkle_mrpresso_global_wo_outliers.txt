@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-6BmiJO	WhhMfy	loadKunkle	alcc	0	NA	NA
+EQcWWQ	AdmIot	loadKunkle	alcc	0	NA	NA

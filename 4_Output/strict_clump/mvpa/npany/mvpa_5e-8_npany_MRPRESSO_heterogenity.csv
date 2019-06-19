@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-Vkv63m,DixWF8,npany,mvpa,MR Egger,17.893744144763666,22,0.7122693107222497,2019-04-04
-Vkv63m,DixWF8,npany,mvpa,Inverse variance weighted,17.898244377298397,23,0.7629851720147697,2019-04-04

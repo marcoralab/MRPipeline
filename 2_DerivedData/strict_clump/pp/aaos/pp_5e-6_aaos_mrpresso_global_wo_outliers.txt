@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-1ELGYg	QIJqDG	aaos	pp	1	1086.9475053779342	0.02826

@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-Btteta,EkOFrX,npany,dep,Inverse variance weighted (fixed effects),113,1.0529535576586042,1.1741917341143395,0.36985364276557925,2019-04-04
-Btteta,EkOFrX,npany,dep,Weighted median,113,0.7820753902557291,1.740092441363161,0.6531108649002134,2019-04-04
-Btteta,EkOFrX,npany,dep,Weighted mode,113,-3.251900179240785,4.631147834800262,0.4840235443265508,2019-04-04
-Btteta,EkOFrX,npany,dep,MR Egger,113,-2.19662213480982,5.660508096404287,0.6987141549915679,2019-04-04

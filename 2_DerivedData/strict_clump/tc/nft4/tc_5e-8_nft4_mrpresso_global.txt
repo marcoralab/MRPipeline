@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-gmkeHg	v3dyvu	nft4	tc	1	133.49537137356742	0.0212

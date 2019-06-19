@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-rpX6yS,PqR3TB,loadKunkle,oilfish,MR Egger,176.65799364157203,163,0.219767813276253,2019-04-04
-rpX6yS,PqR3TB,loadKunkle,oilfish,Inverse variance weighted,176.71170422106576,164,0.2354180018278402,2019-04-04

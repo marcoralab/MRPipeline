@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-1W4t8d	7BXMng	npany	sleepDashti	0	66.5724531730504	0.9134

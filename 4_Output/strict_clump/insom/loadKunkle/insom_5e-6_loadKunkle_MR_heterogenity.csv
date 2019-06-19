@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-bxe2bg,BCS5dD,loadKunkle,insom,MR Egger,111.96089726087204,99,0.17602629921041926,2019-04-04
-bxe2bg,BCS5dD,loadKunkle,insom,Inverse variance weighted,115.51732353399898,100,0.13748038280001607,2019-04-04

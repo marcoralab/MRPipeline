@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-KaQXuM,5diHif,load,dep,MR Egger,129.21704533087865,110,0.10179771339190181,2019-04-04
-KaQXuM,5diHif,load,dep,Inverse variance weighted,129.95207063395452,111,0.10561357568953791,2019-04-04

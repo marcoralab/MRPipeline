@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-g9I48B	nOMFKD	hipv	bmi	1	1762.0261407254618	<1.33333333333333e-05

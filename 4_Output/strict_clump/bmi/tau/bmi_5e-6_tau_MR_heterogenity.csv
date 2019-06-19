@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-xeynxO,ojCoxg,tau,bmi,MR Egger,1542.176619042048,1377,0.0011736205632418486,2019-04-04
-xeynxO,ojCoxg,tau,bmi,Inverse variance weighted,1543.3933134213771,1378,0.0011627310033621796,2019-04-04

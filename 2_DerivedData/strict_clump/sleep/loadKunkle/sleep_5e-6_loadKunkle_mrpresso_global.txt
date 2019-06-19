@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-h9bYcU	BMcFES	loadKunkle	sleep	0	39.69213089069283	0.119

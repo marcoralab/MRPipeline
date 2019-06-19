@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-LbjrZF	WXKfEo	aaos	hdl	1	138.44526537820119	0.0111

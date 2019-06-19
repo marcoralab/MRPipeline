@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ktuCZm	3dt7sy	aaos	oilfish	1	211.78619110578555	0.0095

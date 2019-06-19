@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-WkjiFM,hKUnIe,npany,smkcpd,Inverse variance weighted (fixed effects),21,-0.1991416735710371,0.5763600133101041,0.7297063961554717,2019-04-04
-WkjiFM,hKUnIe,npany,smkcpd,Weighted median,21,0.2144840922707583,0.7000860050248814,0.7593243143834147,2019-04-04
-WkjiFM,hKUnIe,npany,smkcpd,Weighted mode,21,0.17508522361987033,0.715780638766923,0.8092525080494761,2019-04-04
-WkjiFM,hKUnIe,npany,smkcpd,MR Egger,21,0.48117828712821314,0.9848879271383272,0.6307434896300728,2019-04-04

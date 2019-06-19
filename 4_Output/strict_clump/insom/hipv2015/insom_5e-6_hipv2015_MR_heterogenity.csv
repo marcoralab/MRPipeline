@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-B2AzCk,a0IC5N,hipv2015,insom,MR Egger,97.6239901541831,93,0.35112158314428765,2019-04-04
-B2AzCk,a0IC5N,hipv2015,insom,Inverse variance weighted,99.71634517377713,94,0.3237819800120377,2019-04-04

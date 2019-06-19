@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-RXXFbx,i84ups,hipv2015,smkaoi,MR Egger,38.76885671707622,46,0.7663704416812804,2019-04-04
-RXXFbx,i84ups,hipv2015,smkaoi,Inverse variance weighted,38.89038325283182,47,0.7939464669621215,2019-04-04

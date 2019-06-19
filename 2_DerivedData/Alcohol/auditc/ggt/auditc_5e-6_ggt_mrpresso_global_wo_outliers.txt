@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-ounMpo	ZF5HIC	ggt	auditc	2	45.64319166309636	0.1458
+etFTNB	b67GpQ	ggt	auditc	2	41.17064502373376	0.056

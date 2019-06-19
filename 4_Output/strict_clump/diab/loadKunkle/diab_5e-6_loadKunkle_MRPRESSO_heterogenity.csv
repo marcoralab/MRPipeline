@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JtseP4,ypmYGU,loadKunkle,diab,MR Egger,361.81470540838916,278,5.245269413103594e-4,2019-04-04
-JtseP4,ypmYGU,loadKunkle,diab,Inverse variance weighted,361.8277246556995,279,6.04116105513805e-4,2019-04-04

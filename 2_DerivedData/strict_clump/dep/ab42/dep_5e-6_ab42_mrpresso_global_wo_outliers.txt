@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-8816tn	FY7cAG	ab42	dep	0	NA	NA

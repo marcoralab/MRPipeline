@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-ajXLQw	yN1Xqc	aaos	auditc	0	33.54804559665364	0.01
+1dsKKn	8HKTcj	aaos	auditc	0	11.016810507722752	0.306

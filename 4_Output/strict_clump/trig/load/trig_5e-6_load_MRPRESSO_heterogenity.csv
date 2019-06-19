@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-JvnGad,Mer7j9,load,trig,MR Egger,146.65595096942064,110,0.011181759301350156,2019-04-04
-JvnGad,Mer7j9,load,trig,Inverse variance weighted,147.9344105790908,111,0.01098003673299301,2019-04-04

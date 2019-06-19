@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-d20NIt,coMP2Q,loadKunkle,mvpa,MR Egger,6.948380687751718,16,0.9742432269312118,2019-04-04
-d20NIt,coMP2Q,loadKunkle,mvpa,Inverse variance weighted,7.477965487826562,17,0.9764743417432659,2019-04-04

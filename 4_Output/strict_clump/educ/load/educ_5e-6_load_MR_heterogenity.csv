@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-nGIXVd,oM5FOZ,load,educ,MR Egger,1449.7894841237828,1246,4.970412046187454e-5,2019-04-04
-nGIXVd,oM5FOZ,load,educ,Inverse variance weighted,1451.9840234457063,1247,4.5719942208763966e-5,2019-04-04

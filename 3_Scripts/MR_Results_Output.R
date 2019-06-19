@@ -64,22 +64,44 @@ passfunc <- function(ivw.p, ivw.b, mre.p, mre.b, wme.p, wme.b, wmb.p, wmb.b){
 }
 
 ##-------------------- Read in R datasets -------------------## 
-#dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/strict_clump/0_Summary"
 dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR"
 setwd(dir)
 
 ## Outcomes to include the results 
-outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos", "Deming2017ab42", "Deming2017ptau", "Deming2017tau", "Hilbar2017hipv", "Hilbar2015hipv", "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany")
+outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos", 
+             "Deming2017ab42", "Deming2017ptau", "Deming2017tau", 
+             "Hilbar2017hipv", "Hilbar2015hipv", 
+             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany")
 ## Exposures to include in the results
-exposures = c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt", "Yengo2018bmi", "Howard2018dep", "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish", "Willer2013hdl", "Willer2013ldl", "Willer2013tc", "Willer2013tg", "Jansen2018insom", "Dashti2019slepdur", "Wray2018mdd", "Klimentidis2018mvpa", "Liu2019smkcpd", "Liu2019smkint", "Day2018sociso", "NealeLab2018hear", "Evangelou2018dbp", "Evangelou2018sbp", "Evangelou2018pp")
+exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "Walters2018alcdep", "SanchezRoige2018auditt", 
+              "Yengo2018bmi", "Howard2018dep", "Wray2018mdd", "Day2018sociso", 
+              "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish", "NealeLab2018hear", 
+              "Willer2013hdl", "Willer2013ldl", "Willer2013tc", "Willer2013tg", 
+              "Jansen2018insom", "Dashti2019slepdur",  "Klimentidis2018mvpa", 
+              "Evangelou2018dbp", "Evangelou2018sbp", "Evangelou2018pp")
 
 ## Sample Sizes
-samplesize <- tibble(code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'NealeLab2018oilfish', 'NealeLab2018hear', 'Xu2018diab', 'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 'Willer2013hdl', 'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp', 'Howard2018dep', 'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur', 'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 'Deming2017ab42', 'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load', 'Beecham2014braak4', 'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau', 'Beecham2014vbiany', 'Klimentidis2018mvpa'),
-                     trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", "AUDIT",  "Alcohol Dependence", "Oily Fish Intake", "Hearing Problems", "Type 2 Diabetes", 'BMI', "Total Cholesterol",  "Low-density lipoproteins", "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure", "Systolic Blood Pressure", "Pulse Pressure", "Depressive Symptoms", "Major Depressive Disorder", "Insomnia Symptoms", "Sleep Duration", "Social Isolation", "Educational Attainment", "AAOS", "AB42", "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD", "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", "Vascular Brain Injury", "Moderate-to-vigorous PA"), 
-                     categorical = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
-                     samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 452302, 766345, 40255, 3146, 13688, 26814, 54162, 63926, 4914, 4914, 3146, 3146, 4914, 377234), 
-                     ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, NA, 3426, NA, NA, 992, NA), 
-                     ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, NA, 620, NA, NA, 1772, NA)) 
+samplesize <- tibble(code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 'Walters2018alcdep', 
+                              'NealeLab2018oilfish', 'NealeLab2018hear', 'Xu2018diab', 'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 
+                              'Willer2013hdl', 'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp', 'Howard2018dep', 
+                              'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur', 'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 
+                              'Deming2017ab42', 'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load', 'Beecham2014braak4', 
+                              'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau', 'Beecham2014vbiany', 'Klimentidis2018mvpa'),
+                     trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", "AUDIT",  "Alcohol Dependence", 
+                               "Oily Fish Intake", "Hearing Problems", "Type 2 Diabetes", 'BMI', "Total Cholesterol",  "Low-density lipoproteins", 
+                               "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure", "Systolic Blood Pressure", "Pulse Pressure",
+                               "Depressive Symptoms", "Major Depressive Disorder", "Insomnia Symptoms", "Sleep Duration", "Social Isolation", 
+                               "Educational Attainment", "AAOS", "AB42", "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD", 
+                               "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", "Vascular Brain Injury", "Moderate-to-vigorous PA"), 
+                     categorical = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
+                                     FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
+                     samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 188577, 188577, 188577, 757601, 
+                                    757601, 757601, 322580, 480359, 386533, 446118, 452302, 766345, 40255, 3146, 13688, 26814, 54162, 63926, 4914, 
+                                    4914, 3146, 3146, 4914, 377234), 
+                     ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 135458, 109402, NA, NA, NA, 14406, 
+                               NA, NA, NA, 17008, 21982, NA, 3426, NA, NA, 992, NA), 
+                     ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 344901, 277131, NA, NA, NA, 25849, 
+                                  NA, NA, NA, 37154, 41944, NA, 620, NA, NA, 1772, NA)) 
 
 ## Files
 MR_results <- read_tsv("4_Output/MR_ADphenome/All/MRresults.txt") %>% 

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-zrg1jF	pzEq6C	aaos	dbp	0	829.0846441199128	0.00508

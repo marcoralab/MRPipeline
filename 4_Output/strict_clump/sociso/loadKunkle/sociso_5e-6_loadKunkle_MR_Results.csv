@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-uSchID,SrIyAR,loadKunkle,sociso,Inverse variance weighted (fixed effects),96,0.028675639047351126,0.1454484212877539,0.8437075593645802,2019-04-04
-uSchID,SrIyAR,loadKunkle,sociso,Weighted median,96,-0.08212197659040939,0.2209369820011737,0.7101172348172113,2019-04-04
-uSchID,SrIyAR,loadKunkle,sociso,Weighted mode,96,-0.1578548595150373,0.4964606099239405,0.7512127800470358,2019-04-04
-uSchID,SrIyAR,loadKunkle,sociso,MR Egger,96,0.21643782709940726,0.6953600470669833,0.7562921449326206,2019-04-04

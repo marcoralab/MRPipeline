@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-choEPU	piLmcM	hipv	audit	0	NA	NA

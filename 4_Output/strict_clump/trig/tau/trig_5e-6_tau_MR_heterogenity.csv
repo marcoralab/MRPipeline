@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lncFEE,eEkBNN,tau,trig,MR Egger,130.3924601826835,110,0.08973992219418771,2019-04-04
-lncFEE,eEkBNN,tau,trig,Inverse variance weighted,130.61360275625216,111,0.09850642653401274,2019-04-04

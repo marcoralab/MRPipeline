@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-U88JjM	4g6gAc	load	educ	0	843.8611105794022	0.00236

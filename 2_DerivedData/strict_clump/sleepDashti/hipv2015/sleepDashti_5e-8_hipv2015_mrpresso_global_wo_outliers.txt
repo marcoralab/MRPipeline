@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-Ixu96t	3grGhZ	hipv2015	sleepDashti	0	NA	NA

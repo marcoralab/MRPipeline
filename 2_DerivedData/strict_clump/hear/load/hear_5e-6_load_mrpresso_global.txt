@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-lHZfyD	x36xIT	load	hear	0	114.71876098121454	0.1534
