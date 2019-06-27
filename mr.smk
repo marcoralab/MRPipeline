@@ -54,7 +54,7 @@ rule all:
 ## Formated summary stats are a temp file that is delted as the end
 rule FormatExposure:
     input:
-        script = '3_Scripts/FormatGwas.R',
+        script = 'src/FormatGwas.R',
         ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
     output:
         formated_ss = temp(DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz")
@@ -80,7 +80,7 @@ rule FormatExposure:
 ## Formated summary stats are a temp file that is delted as the end
 rule FormatOutcome:
     input:
-        script = '3_Scripts/FormatGwas.R',
+        script = 'src/FormatGwas.R',
         ss = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE'],
     output:
         formated_ss = temp(DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz")
@@ -126,7 +126,7 @@ rule clump:
 ## Extract SNPs to be used as instruments in exposure
 rule ExposureSnps:
     input:
-        script = '3_Scripts/ExposureData.R',
+        script = 'src/ExposureData.R',
         summary = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
         ExposureClump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
@@ -139,7 +139,7 @@ rule ExposureSnps:
 ## Plot manhattan plot of exposure gwas highlight instruments
 rule manhattan_plot:
     input:
-        script = '3_Scripts/manhattan_plot.R',
+        script = 'src/manhattan_plot.R',
         ingwas = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
         inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
@@ -152,7 +152,7 @@ rule manhattan_plot:
 ## Extract exposure instruments from outcome gwas
 rule OutcomeSnps:
     input:
-        script = '3_Scripts/OutcomeData.R',
+        script = 'src/OutcomeData.R',
         ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz"
     output:
@@ -188,7 +188,7 @@ rule FindProxySnps:
 ## Extract proxy SNPs from outcome gwas
 rule ExtractProxySnps:
     input:
-        script = '3_Scripts/ExtractProxySNPs.R',
+        script = 'src/ExtractProxySNPs.R',
         OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz",
         OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
@@ -203,7 +203,7 @@ rule ExtractProxySnps:
 ## Use TwoSampleMR to harmonize exposure and outcome datasets
 rule Harmonize:
     input:
-        script = '3_Scripts/DataHarmonization.R',
+        script = 'src/DataHarmonization.R',
         ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
         ProxySNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
@@ -220,7 +220,7 @@ rule Harmonize:
 ## outlier test to identify SNPs that are outliers
 rule MrPresso:
     input:
-        script = '3_Scripts/MRPRESSO.R',
+        script = 'src/MRPRESSO.R',
         mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
@@ -234,7 +234,7 @@ rule MrPresso:
 ## Conduct a second MR-PRESSO test after removing outliers
 rule MRPRESSO_wo_outliers:
     input:
-        script = '3_Scripts/MRPRESSO_wo_outliers.R',
+        script = 'src/MRPRESSO_wo_outliers.R',
         mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
     output:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
@@ -246,7 +246,7 @@ rule MRPRESSO_wo_outliers:
 ## Conduct MR analysis
 rule MR_analysis:
     input:
-        script = '3_Scripts/MR_analysis.R',
+        script = 'src/MR_analysis.R',
         mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
     output:
         DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt',
@@ -268,7 +268,7 @@ def mrpresso_MRdat_input(wildcards):
 rule merge_mrpresso_MRdat:
     input:
         dat = mrpresso_MRdat_input,
-        script = '3_Scripts/ConcatMRdat.R'
+        script = 'src/ConcatMRdat.R'
     output:
         DataOutput + 'All/mrpresso_MRdat.csv'
     shell:
@@ -293,7 +293,7 @@ rule merge_mrpresso_global:
     input:
         mrpresso_global = mrpresso_global_input,
         mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
-        #script = '3_Scripts/ConcatMRpresso.R'
+        #script = 'src/ConcatMRpresso.R'
     output:
         DataOutput + 'All/global_mrpresso.txt'
     shell:
@@ -311,7 +311,7 @@ def MR_heterogenity_input(wildcards):
 rule merge_heterogenity:
     input:
         mr_heterogenity = MR_heterogenity_input,
-        #script = '3_Scripts/ConcatHeterogenity.R'
+        #script = 'src/ConcatHeterogenity.R'
     output:
         DataOutput + 'All/heterogenity.txt'
     shell:
@@ -329,7 +329,7 @@ def MR_plei_input(wildcards):
 rule merge_egger:
     input:
         mr_pleiotropy = MR_plei_input,
-        #script = '3_Scripts/ConcatPleiotropy.R'
+        #script = 'src/ConcatPleiotropy.R'
     output:
         DataOutput + 'All/pleiotropy.txt'
     shell:
@@ -347,7 +347,7 @@ def MR_Results_input(wildcards):
 rule merge_mrresults:
     input:
         mr_results = MR_Results_input,
-        #script = '3_Scripts/ConcatMRresults.R'
+        #script = 'src/ConcatMRresults.R'
     output:
         DataOutput + 'All/MRresults.txt'
     shell:
@@ -357,7 +357,7 @@ rule merge_mrresults:
 ## Write a html Rmarkdown report
 rule html_Report:
     input:
-        script = '3_Scripts/mr_report.Rmd',
+        script = 'src/mr_report.Rmd',
         ExposureSnps = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         ProxySnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",

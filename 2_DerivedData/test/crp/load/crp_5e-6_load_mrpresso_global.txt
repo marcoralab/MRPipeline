@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XkQOKe	L6YLhN	AD	crp	5e-6	FALSE	13	5105.495010982771	<1e-04

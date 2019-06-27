@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qYL9TG	4LandA	AD	crp	5e-8	FALSE	19	5187.287127751478	<2e-04
