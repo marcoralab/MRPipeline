@@ -2,10 +2,10 @@
 ## Packages & Functions
 
 library(tidyverse)
-library(Hmisc)
 library(TwoSampleMR)
 library(gridExtra)
 library(qvalue)
+`%nin%` = Negate(`%in%`)
 
 ## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011. International Journal of Epidemiology 40 (3): 755–64.
 f_stat = function(N, K, R){
@@ -62,8 +62,8 @@ passfunc <- function(ivw.p, ivw.b, mre.p, mre.b, wme.p, wme.b, wmb.p, wmb.b){
   )) == TRUE, 
   TRUE, FALSE)
 }
-
-##-------------------- Read in R datasets -------------------## 
+## -------------------------------------------------------------------------------- ##
+##  Read in R datasets
 dir = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR"
 setwd(dir)
 
@@ -73,35 +73,46 @@ outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos",
              "Hilbar2017hipv", "Hilbar2015hipv", 
              "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany")
 ## Exposures to include in the results
-exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "Walters2018alcdep", "SanchezRoige2018auditt", 
-              "Yengo2018bmi", "Howard2018dep", "Wray2018mdd", "Day2018sociso", 
-              "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish", "NealeLab2018hear", 
-              "Willer2013hdl", "Willer2013ldl", "Willer2013tc", "Willer2013tg", 
-              "Jansen2018insom", "Dashti2019slepdur",  "Klimentidis2018mvpa", 
-              "Evangelou2018dbp", "Evangelou2018sbp", "Evangelou2018pp")
+exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "Walters2018alcdep",
+              "SanchezRoige2018auditt","Yengo2018bmi", "Howard2018dep", "Wray2018mdd",
+              "Day2018sociso", "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish",
+              "NealeLab2018hear","Willer2013hdl", "Willer2013ldl", "Willer2013tc",
+              "Willer2013tg", "Jansen2018insom", "Dashti2019slepdur",  
+              "Klimentidis2018mvpa", "Evangelou2018dbp", "Evangelou2018sbp", 
+              "Evangelou2018pp")
 
 ## Sample Sizes
-samplesize <- tibble(code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 'Walters2018alcdep', 
-                              'NealeLab2018oilfish', 'NealeLab2018hear', 'Xu2018diab', 'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 
-                              'Willer2013hdl', 'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp', 'Howard2018dep', 
-                              'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur', 'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 
-                              'Deming2017ab42', 'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load', 'Beecham2014braak4', 
-                              'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau', 'Beecham2014vbiany', 'Klimentidis2018mvpa'),
-                     trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", "AUDIT",  "Alcohol Dependence", 
-                               "Oily Fish Intake", "Hearing Problems", "Type 2 Diabetes", 'BMI', "Total Cholesterol",  "Low-density lipoproteins", 
-                               "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure", "Systolic Blood Pressure", "Pulse Pressure",
-                               "Depressive Symptoms", "Major Depressive Disorder", "Insomnia Symptoms", "Sleep Duration", "Social Isolation", 
-                               "Educational Attainment", "AAOS", "AB42", "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD", 
-                               "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", "Vascular Brain Injury", "Moderate-to-vigorous PA"), 
-                     categorical = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
-                                     FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
-                     samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 188577, 188577, 188577, 757601, 
-                                    757601, 757601, 322580, 480359, 386533, 446118, 452302, 766345, 40255, 3146, 13688, 26814, 54162, 63926, 4914, 
-                                    4914, 3146, 3146, 4914, 377234), 
-                     ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 135458, 109402, NA, NA, NA, 14406, 
-                               NA, NA, NA, 17008, 21982, NA, 3426, NA, NA, 992, NA), 
-                     ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 344901, 277131, NA, NA, NA, 25849, 
-                                  NA, NA, NA, 37154, 41944, NA, 620, NA, NA, 1772, NA)) 
+samplesize <- tibble(
+  code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 
+           'Walters2018alcdep', 'NealeLab2018oilfish', 'NealeLab2018hear', 'Xu2018diab',
+           'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 'Willer2013hdl', 
+           'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp',
+           'Howard2018dep', 'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur',
+           'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 'Deming2017ab42',
+           'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load',
+           'Beecham2014braak4', 'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau',
+           'Beecham2014vbiany', 'Klimentidis2018mvpa'),
+  trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", 
+            "AUDIT",  "Alcohol Dependence", "Oily Fish Intake", "Hearing Problems",
+            "Type 2 Diabetes", 'BMI', "Total Cholesterol", "Low-density lipoproteins",
+            "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure",
+            "Systolic Blood Pressure", "Pulse Pressure", "Depressive Symptoms", 
+            "Major Depressive Disorder", "Insomnia Symptoms", "Sleep Duration",
+            "Social Isolation", "Educational Attainment", "AAOS", "AB42", 
+            "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD",
+            "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", 
+            "Vascular Brain Injury", "Moderate-to-vigorous PA"),
+  logistic = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
+               FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
+               TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
+  samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 
+                 188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 
+                 452302, 766345, 40255, 3146, 26814, 13688, 54162, 63926, 4735, 4046, 3146, 3146, 
+                 2764, 377234),
+  ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
+            135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA),
+  ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
+               344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA)) 
 
 ## Files
 MR_results <- read_tsv("4_Output/MR_ADphenome/All/MRresults.txt") %>% 
@@ -112,7 +123,8 @@ mrpresso_global_comb <- read_tsv("4_Output/MR_ADphenome/All/global_mrpresso.txt"
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-MRdat.raw <- read_csv("4_Output/MR_ADphenome/All/mrpresso_MRdat.csv", guess_max = 100000) %>% 
+MRdat.raw <- "4_Output/MR_ADphenome/All/mrpresso_MRdat.csv" %>% 
+  read_csv(., guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures)
 
@@ -121,8 +133,16 @@ egger_comb <- read_tsv("4_Output/MR_ADphenome/All/pleiotropy.txt") %>%
   filter(exposure %in% exposures) %>% 
   rename(egger_se = se)
 
+power <- read_csv("4_Output/MR_ADphenome/All/power.csv") %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(exposure %in% exposures) %>% 
+  select(exposure, outcome, pt, outliers_removed, pve.exposure, F, Power) %>% 
+  mutate(pve.exposure = round(pve.exposure*100, 2), 
+         F = round(F, 2), 
+         Power = round(Power, 2))
 
-##------------------ Table S1 - Harmonozied datasets ---------------------## 
+## -------------------------------------------------------------------------------- ##
+## Table S1 - Harmonozied datasets 
 
 MRdat <- MRdat.raw  %>% 
   filter(!(outcome == 'Kunkle2019load' & exposure %in% c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ"))) %>%
@@ -132,33 +152,49 @@ MRdat <- MRdat.raw  %>%
   ## Merge Sample Size infor
   select(-samplesize.outcome, -samplesize.exposure) %>% 
   left_join(samplesize, by = c('exposure' = 'code')) %>% 
-  rename(samplesize.exposure = samplesize, ncase.exposure = ncase, ncontrol.exposure = ncontrol, 
-         catagorical.exposure = categorical, exposure.name = trait) %>% 
+  rename(samplesize.exposure = samplesize, ncase.exposure = ncase, 
+         ncontrol.exposure = ncontrol, logistic.exposure = logistic, 
+         exposure.name = trait) %>% 
   left_join(samplesize, by = c('outcome' = 'code')) %>% 
-  rename(samplesize.outcome = samplesize, ncase.outcome = ncase, ncontrol.outcome = ncontrol, 
-         categorical.outcome = categorical, outcome.name = trait) %>% 
+  rename(samplesize.outcome = samplesize, ncase.outcome = ncase, 
+         ncontrol.outcome = ncontrol, logistic.outcome = logistic, 
+         outcome.name = trait) %>% 
   ## Arrange traits
-  mutate(outcome.name = fct_relevel(outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau',
-                                    'Neuritic Plaques', 'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
-  mutate(exposure.name = fct_relevel(exposure.name, 'Alcohol Consumption', 'Alcohol Dependence', 'AUDIT', 'Smoking Initiation', 
-                                     'Cigarettes per Day', 'Diastolic Blood Pressure', 'Systolic Blood Pressure', 'Pulse Pressure', 
-                                     "High-density lipoproteins", "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
-                                     'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", "Hearing Problems", 
-                                     "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
-                                     "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
+  mutate(outcome.name = fct_relevel(outcome.name, 
+                                    'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau',
+                                    'Neuritic Plaques', 'Neurofibrillary Tangles',
+                                    'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
+  mutate(exposure.name = fct_relevel(exposure.name, 
+                                     'Alcohol Consumption', 'Alcohol Dependence',
+                                     'AUDIT', 'Smoking Initiation', 
+                                     'Cigarettes per Day', 'Diastolic Blood Pressure',
+                                     'Systolic Blood Pressure', 'Pulse Pressure', 
+                                     "High-density lipoproteins", 
+                                     "Low-density lipoproteins", "Total Cholesterol",
+                                     "Triglycerides", 'Educational Attainment', 
+                                     'BMI', 'Type 2 Diabetes', "Oily Fish Intake",
+                                     "Hearing Problems", "Insomnia Symptoms", 
+                                     "Sleep Duration", "Moderate-to-vigorous PA",
+                                     "Depressive Symptoms", 
+                                     'Major Depressive Disorder', "Social Isolation"))
 
 write_csv(MRdat, '~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS1.csv')
 
-##------------------ Shiny datasets ---------------------## 
+## -------------------------------------------------------------------------------- ##
+##                              Shiny datasets                                      ## 
 
 mrpresso_global_comb %>% 
   filter(!(outcome == 'Kunkle2019load' & exposure %in% c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ"))) %>%
   filter(!(outcome == 'Lambert2013load' & exposure %nin% c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ"))) %>% 
   filter(!(outcome == 'Hilbar2017hipv' & exposure %in% c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ"))) %>%
   filter(!(outcome == 'Hilbar2015hipv' & exposure %nin% c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ"))) %>%
-  write_tsv('/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/Shiny/mrpresso_global.txt')
+  write_tsv('Shiny/mrpresso_global.txt')
 
-##------------------ Merege datasets ---------------------## 
+MRdat %>% 
+  write_csv('Shiny/HarmonizedMRdat.csv')
+
+## -------------------------------------------------------------------------------- ##
+##                               Merege datasets                                    ## 
 
 MRsummary <- MR_results  %>% 
   mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
@@ -189,17 +225,20 @@ MRsummary <- MR_results  %>%
   left_join(select(samplesize, code, trait), by = c('outcome' = 'code')) %>% 
   rename(outcome.name = trait) %>% 
   ## Arrange traits
-  mutate(outcome.name = fct_relevel(outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau',
-                                    'Neuritic Plaques', 'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
-  mutate(exposure.name = fct_relevel(exposure.name, 'Alcohol Consumption', 'Alcohol Dependence', 'AUDIT', 'Smoking Initiation', 
-                                     'Cigarettes per Day', 'Diastolic Blood Pressure', 'Systolic Blood Pressure', 'Pulse Pressure', 
-                                     "High-density lipoproteins", "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
-                                     'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", "Hearing Problems", 
-                                     "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
-                                     "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
+  mutate(outcome.name = fct_relevel(
+    outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau', 'Neuritic Plaques', 
+    'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
+  mutate(exposure.name = fct_relevel(
+    exposure.name, 'Alcohol Consumption', 'Alcohol Dependence', 'AUDIT', 
+    'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
+    'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
+    "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
+    'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
+    "Hearing Problems", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
+    "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
   
-
-##-------------------- Filter results for MR-PRESSO and best PT -------------------## 
+## -------------------------------------------------------------------------------- ##
+##                      Filter results for MR-PRESSO and best PT                    ## 
 mr_best <- MRsummary %>% 
   filter(method == 'IVW') %>% 
   #filter(outcome %nin% c('Beecham2014npany', 'Beecham2014braak4', 'Beecham2014vbiany')) %>% 
@@ -222,49 +261,49 @@ mr_best <- mr_best %>%
                          symbols = c("***", "**", "*", ".", " "))) %>% 
   mutate(Signif = as.character(Signif)) 
 
-
-##---------------------- Variance Explained -----------------## 
-pve_f <- MRdat %>% 
-  filter(mr_keep == TRUE) %>% 
-  mutate(pve.exposure = snp.pve(eaf.exposure, beta.exposure, se.exposure, samplesize.exposure)) %>% 
-  group_by(exposure, outcome, pt) %>% 
-  summarise(pve.exposure = sum(pve.exposure), samplesize = max(samplesize.exposure), nsnps = n(), 
-            f = f_stat(samplesize, nsnps, pve.exposure)) %>% 
-  mutate(pve = pve.exposure*100) %>%
-  arrange(pve) 
-
+## -------------------------------------------------------------------------------- ##
 ##---------------------- Spread Results -----------------## 
 ## Spread Methods
 mrresults.methods <- MRsummary %>% 
-  mutate(b = signif(b, 2), se = signif(se, 2), MR.pval = signif(MR.pval, 2), RSSobs = round(RSSobs, 1), egger_intercept = signif(egger_intercept, 3), egger_se = signif(egger_se, 2), Egger.pval = signif(Egger.pval, 2)) %>%
+  mutate(b = signif(b, 2), 
+         se = signif(se, 2), 
+         MR.pval = signif(MR.pval, 2), 
+         RSSobs = round(RSSobs, 1), 
+         egger_intercept = signif(egger_intercept, 3), 
+         egger_se = signif(egger_se, 2), 
+         Egger.pval = signif(Egger.pval, 2)) %>%
   myspread(method, c(b, se, MR.pval)) %>% 
-  mutate(IVW_Signif = as.character(signif.num(IVW_MR.pval))) %>% 
-  mutate(MR_Egger_Signif = as.character(signif.num(MR_Egger_MR.pval))) %>% 
-  mutate(Weighted_median_Signif = as.character(signif.num(Weighted_median_MR.pval))) %>%
-  mutate(Weighted_mode_Signif = as.character(signif.num(Weighted_mode_MR.pval)))
+  mutate(IVW_Signif = as.character(signif.num(IVW_MR.pval)), 
+         MR_Egger_Signif = as.character(signif.num(MR_Egger_MR.pval)),
+         Weighted_median_Signif = as.character(signif.num(Weighted_median_MR.pval)), 
+         Weighted_mode_Signif = as.character(signif.num(Weighted_mode_MR.pval))) 
 
 ## Spread MR-PRESSO
 ## For supplemntary Table 2
 mrresults.methods_presso <- mrresults.methods %>% 
-  myspread(outliers_removed, c(nsnp, n_outliers, RSSobs, MRPRESSO.pval, egger_intercept, egger_se, Egger.pval, IVW_b, IVW_MR.pval, IVW_se, MR_Egger_b, MR_Egger_MR.pval, MR_Egger_se, Weighted_median_b, Weighted_median_MR.pval, Weighted_median_se, Weighted_mode_b, Weighted_mode_MR.pval, Weighted_mode_se, IVW_Signif, MR_Egger_Signif, Weighted_median_Signif, Weighted_mode_Signif)) %>% 
-  arrange(pt, outcome, exposure) %>% 
-  left_join(select(pve_f, exposure, outcome, pt, f, pve)) %>%
-  mutate(pve = round(pve, 2), f = round(f, 2)) %>%
+  left_join(power) %>% 
+  myspread(outliers_removed, 
+           c(nsnp, n_outliers, pve.exposure, F, Power, RSSobs, MRPRESSO.pval, egger_intercept, 
+             egger_se, Egger.pval, IVW_b, IVW_MR.pval, IVW_se, MR_Egger_b, MR_Egger_MR.pval, 
+             MR_Egger_se, Weighted_median_b, Weighted_median_MR.pval, Weighted_median_se, 
+             Weighted_mode_b, Weighted_mode_MR.pval, Weighted_mode_se, IVW_Signif, 
+             MR_Egger_Signif, Weighted_median_Signif, Weighted_mode_Signif)) %>% 
+  arrange(pt, outcome, exposure) %>%
   arrange(outcome.name, exposure.name, pt) %>% 
-  select(outcome, exposure, outcome.name, exposure.name, pt, FALSE_nsnp, pve, f, FALSE_n_outliers,
-         FALSE_IVW_b, FALSE_IVW_se, FALSE_IVW_MR.pval, FALSE_IVW_Signif,
+  select(outcome, exposure, outcome.name, exposure.name, pt, FALSE_nsnp, FALSE_pve.exposure, FALSE_F, FALSE_n_outliers,
+         FALSE_IVW_b, FALSE_IVW_se, FALSE_IVW_MR.pval, FALSE_IVW_Signif, FALSE_Power,
          FALSE_MR_Egger_b, FALSE_MR_Egger_se, FALSE_MR_Egger_MR.pval, FALSE_MR_Egger_Signif,  
          FALSE_Weighted_median_b, FALSE_Weighted_median_se, FALSE_Weighted_median_MR.pval, FALSE_Weighted_median_Signif, 
          FALSE_Weighted_mode_b, FALSE_Weighted_mode_se, FALSE_Weighted_mode_MR.pval, FALSE_Weighted_mode_Signif, 
          FALSE_RSSobs, FALSE_MRPRESSO.pval, FALSE_egger_intercept, FALSE_egger_se, FALSE_Egger.pval, 
-         TRUE_IVW_b, TRUE_IVW_se, TRUE_IVW_MR.pval, TRUE_IVW_Signif, 
+         TRUE_IVW_b, TRUE_IVW_se, TRUE_IVW_MR.pval, TRUE_IVW_Signif, TRUE_Power,
          TRUE_MR_Egger_b, TRUE_MR_Egger_se, TRUE_MR_Egger_MR.pval, TRUE_MR_Egger_Signif, 
          TRUE_Weighted_median_b, TRUE_Weighted_median_se, TRUE_Weighted_median_MR.pval, TRUE_Weighted_median_Signif, 
          TRUE_Weighted_mode_b, TRUE_Weighted_mode_se, TRUE_Weighted_mode_MR.pval, TRUE_Weighted_mode_Signif,
          TRUE_RSSobs, TRUE_MRPRESSO.pval, TRUE_egger_intercept, TRUE_egger_se, TRUE_Egger.pval)
 
 mrresults.methods_presso %>%
-write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS2.csv')
+  write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/Drafts/Manuscript/TableS2.csv')
 
 ##------------------ Heat Maps of Best Results ---------------------## 
 dat.plot <- mr_best %>%

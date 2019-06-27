@@ -4,18 +4,18 @@ library(ggplot2)     ## For plotting
 library(ggiraph)
 library(shinythemes)
 library(shiny)
-library(shinyauthr)
-library(shinyjs)
+# library(shinyauthr)
+# library(shinyjs)
 `%nin%` = Negate(`%in%`)
 
-user_base <- data.frame(
-  user = c("GoateLab"),
-  password = c("microglia"), 
-  permissions = c("admin"),
-  name = c("User One"),
-  stringsAsFactors = FALSE,
-  row.names = NULL
-)
+# user_base <- data.frame(
+#   user = c("GoateLab"),
+#   password = c("microglia"), 
+#   permissions = c("admin"),
+#   name = c("User One"),
+#   stringsAsFactors = FALSE,
+#   row.names = NULL
+# )
 
 
 # Read in Data
@@ -27,31 +27,30 @@ mrpresso_global <- read_tsv('mrpresso_global.txt')
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
-  # must turn shinyjs on
-  shinyjs::useShinyjs(),
-  # add logout button UI 
-  div(class = "pull-right", shinyauthr::logoutUI(id = "logout")),
-  # add login panel UI function
-  shinyauthr::loginUI(id = "login"),
-  # setup table output to show user info after login
-  uiOutput("testUI")
+  ## must turn shinyjs on
+  # shinyjs::useShinyjs(),
+  ## add logout button UI 
+  # div(class = "pull-right", shinyauthr::logoutUI(id = "logout")),
+  ## add login panel UI function
+  # shinyauthr::loginUI(id = "login"),
+  ## setup table output to show user info after login
+   uiOutput("testUI")
 )
 
-# Define server logic required to draw a histogram ----
 server <- function(input, output) {
   # call the logout module with reactive trigger to hide/show
-  logout_init <- callModule(shinyauthr::logout, 
-                            id = "logout", 
-                            active = reactive(credentials()$user_auth))
+  # logout_init <- callModule(shinyauthr::logout, 
+  #                           id = "logout", 
+  #                           active = reactive(credentials()$user_auth))
   
   # call login module supplying data frame, user and password cols
   # and reactive trigger
-  credentials <- callModule(shinyauthr::login, 
-                            id = "login", 
-                            data = user_base,
-                            user_col = user,
-                            pwd_col = password,
-                            log_out = reactive(logout_init()))
+  # credentials <- callModule(shinyauthr::login, 
+  #                           id = "login", 
+  #                           data = user_base,
+  #                           user_col = user,
+  #                           pwd_col = password,
+  #                           log_out = reactive(logout_init()))
   
   output$default <- renderText({
    
@@ -64,10 +63,12 @@ server <- function(input, output) {
   studies <- eventReactive(input$go, {
     input_exposure <- input$exposure
     input_outcome <- input$outcome
-    input_outcome <- if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & input_outcome %in% 'Lambert2019load'){
+    input_outcome <- if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & 
+                        input_outcome %in% 'Lambert2013load'){
       'Kunkle2019load'
-    } else if(input_exposure %in% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & input_outcome %in% 'Hilbar2017hipv') {
-      'Hilbar2015hipv'
+    } else if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & 
+              input_outcome %in% 'Hilbar2015hipv') {
+      'Hilbar2017hipv'
     } else {
       input_outcome
     }
@@ -98,6 +99,16 @@ server <- function(input, output) {
     input_exposure <- input$exposure
     input_outcome <- input$outcome
     input_pt <- ifelse(input$pt == 1, 5e-8, 5e-6)
+    input_outcome <- if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & 
+                        input_outcome %in% 'Lambert2013load'){
+      'Kunkle2019load'
+    } else if(input_exposure %nin% c('Liu2019drnkwk', 'SanchezRoige2018auditt', 'Walters2018alcdep', 'Lee2018educ') & 
+              input_outcome %in% 'Hilbar2015hipv') {
+      'Hilbar2017hipv'
+    } else {
+      input_outcome
+    }
+    
     out <- dat %>% 
       filter(exposure == input_exposure) %>% 
       filter(outcome == input_outcome) %>% 
@@ -327,7 +338,8 @@ server <- function(input, output) {
   
   output$testUI <- renderUI({
   fluidPage(
-    req(credentials()$user_auth),
+    # Uncomment for Login.
+    # req(credentials()$user_auth),
     theme = shinytheme("cerulean"),
             
             # App title ----
@@ -374,7 +386,7 @@ server <- function(input, output) {
                                                                "CSF Ab42" = "Deming2017ab42", 
                                                                "CSF Tau" = "Deming2017tau", 
                                                                "CSF Ptau" = "Deming2017ptau", 
-                                                               "Hippocampul Volume" = "Hilbar2017hipv",
+                                                               "Hippocampul Volume" = "Hilbar2015hipv",
                                                                "Neuritic Plaques" = "Beecham2014npany",
                                                                "Neurofibrillary Tangles" = "Beecham2014braak4",
                                                                "Vascular Brain Injury" = "Beecham2014vbiany"), 
@@ -427,7 +439,7 @@ server <- function(input, output) {
                                 p("Version 0.1"),
                                 h2('Background'), 
                                 p("This interactive research portal is a companion to the research paper \"Causal Relationships Undelrying 
-                                the Alzheiemr\'s Phenome\" thate explores the causal relationships between modifiabl risk selected from the 
+                                the Alzheiemr\'s Phenome\" that explores the causal relationships between modifiabl risk selected from the 
                                 observationa litrature factors and the Alzheimer's phenome"), 
                                 p("For each exposure - outcome pair, Genetic variants were included as instruments based on the following criteria:
                                 Genome-wide assocatied SNPs with a minum p-value of 5x10-8 or 5x10-6; SNPs or their proxies (minimum R2value = 0.8 
