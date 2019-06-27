@@ -1,5 +1,5 @@
-# Mendelian Randomziation in Alzheimer's Disease
-Estimating causal Association of environmental and lifestyle risk factors on risk of Alzheimer's disease and Alzheimer's endophenotypes.
+# Mendelian Randomziation Snakemake Pipeline
+A snakemake pipeline for implementing Mendelian randomization
 
 ---
 
