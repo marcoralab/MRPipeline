@@ -2,38 +2,17 @@
 # snakemake -s mr.smk --configfile test.yaml --dag | dot -Tsvg > dag_mr.svg
 # snakejob -s mr.smk --configfile test.yaml -j 200 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
-DataOut: "2_DerivedData/test/"
-DataOutput: "4_Output/test/"
+DataOut: "data/test/"
+DataOutput: "results/test/"
 
-REF: '1_RawData/EUR_All_Chr'
+REF: 'raw/EUR_All_Chr'
 clumpr2: 0.001
 clumpkb: 1000
-Pthreshold: ['5e-8', '5e-6']
+Pthreshold: ['5e-8']
 
 ## Forbidden wildcard combinations
 missing: [
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfa", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "AholaOlli2018tnfb", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"}
+   {"ExposureCode" : "x", "OutcomeCode" : "y", "Pthreshold" : "5e-8"}
  ]
 
 ## LOAD as outcome
@@ -41,44 +20,7 @@ EXPOSURES:
   -
     CODE: Okada2014rartis
     NAME: 'rheumatoid arthritis'
-    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/Okada2014rartis.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: AholaOlli2018tnfa
-    NAME: 'TNFa'
-    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/AholaOlli2018tnfa.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: AholaOlli2018tnfb
-    NAME: 'TNFb'
-    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/AholaOlli2018tnfb.chrall.CPRA_b37.tsv.gz
-    CODE: Sliz2019tnfa
-    NAME: 'TNFa'
-    FILE: /sc/orga/projects/LOAD/shea/data/sumstats_munger/output/Sliz2019tnfa.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Okada2014rartis.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -93,147 +35,12 @@ EXPOSURES:
       N: N
       TRAIT: TRAIT
 
+
 OUTCOMES:
   -
     CODE: Kunkle2019load
     NAME: LOAD
-    FILE: 1_RawData/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Huang2017aaos
-    NAME: AAOS
-    FILE: 1_RawData/GWAS/Huang2017aaos.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Deming2017ab42
-    NAME: 'CSF Ab42'
-    FILE: 1_RawData/GWAS/Deming2017ab42.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Deming2017ptau
-    NAME: 'CSF Ptau'
-    FILE: 1_RawData/GWAS/Deming2017ptau.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Deming2017tau
-    NAME: 'CSF Tau'
-    FILE: 1_RawData/GWAS/Deming2017tau.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Hilbar2017hipv
-    NAME: 'Hippocampal Volume'
-    FILE: 1_RawData/GWAS/Hilbar2017hipv.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Beecham2014npany
-    NAME: 'Any Neuritic Plaques'
-    FILE: 1_RawData/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Beecham2014braak4
-    NAME: 'Neurofibrillary Tangles'
-    FILE: 1_RawData/GWAS/Beecham2014braak4.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Beecham2014vbiany
-    NAME: 'Vascular Brain Injury'
-    FILE: 1_RawData/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
