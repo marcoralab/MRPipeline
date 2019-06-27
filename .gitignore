@@ -3,7 +3,7 @@
 .snakemake/*
 .snakejob/*
 raw/*
-doc/*
+docs/*
 Drafts*
 mrbase.oauth
 *.clumped.gz
