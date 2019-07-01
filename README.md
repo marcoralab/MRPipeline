@@ -33,13 +33,14 @@ The following R packages are also required:
 2. [rmarkdown](https://cran.r-project.org/web/packages/rmarkdown/index.html)
 3. [TwoSampleMR](https://github.com/MRCIEU/TwoSampleMR)
 4. [MR-PRESSO](https://github.com/rondolab/MR-PRESSO)
+5. [RadialMR](https://github.com/WSpiller/RadialMR)
 
 ```r
 ## Install tidyverse, rmarkdown, and devtools
-install.packages(c("tidyverse", "Hmisc", "rmarkdown", "devtools", "haploR"))
+install.packages(c("tidyverse", "rmarkdown", "devtools"))
 
 ## Install TwoSampleMR and ggforce
-devtools::install_github(c("MRCIEU/TwoSampleMR", '"rondolab/MR-PRESSO"'))
+devtools::install_github(c("MRCIEU/TwoSampleMR", '"rondolab/MR-PRESSO", "WSpiller/RadialMR"'))
 ```
 
 Once all the prerequiste software is isntalled, MitoImpute can be installed on a git-enabled machine by typeing:
